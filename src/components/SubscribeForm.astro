@@ -1,0 +1,110 @@
+---
+// Ненавязчивая форма подписки
+---
+
+<div class="subscribe-form">
+	<p class="subscribe-text">
+		Хотите получать уведомления о новых статьях?
+	</p>
+	<form class="subscribe-input-group" action="#" method="post">
+		<input 
+			type="email" 
+			placeholder="Ваш email" 
+			required
+			class="subscribe-input"
+			aria-label="Email для подписки"
+		/>
+		<button type="submit" class="subscribe-button">
+			Подписаться
+		</button>
+	</form>
+	<p class="subscribe-note">
+		Без спама. Только новые статьи.
+	</p>
+</div>
+
+<style>
+	.subscribe-form {
+		margin: 2em 0;
+		padding: 1.5em;
+		background: var(--bg-secondary);
+		border-radius: 12px;
+		text-align: center;
+		transition: box-shadow 0.3s ease;
+	}
+
+	.subscribe-form:hover {
+		box-shadow: var(--box-shadow);
+	}
+
+	.subscribe-text {
+		margin: 0 0 1em 0;
+		color: var(--text-primary);
+		font-size: 1em;
+	}
+
+	.subscribe-input-group {
+		display: flex;
+		gap: 0.5em;
+		max-width: 400px;
+		margin: 0 auto;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.subscribe-input {
+		flex: 1;
+		min-width: 200px;
+		padding: 0.75em 1em;
+		border: 2px solid var(--accent);
+		border-radius: 8px;
+		background: var(--bg-primary);
+		color: var(--text-primary);
+		font-size: 1em;
+		font-family: 'Lato', sans-serif;
+		transition: border-color 0.2s ease;
+	}
+
+	.subscribe-input:focus {
+		outline: none;
+		border-color: var(--accent-light);
+	}
+
+	.subscribe-button {
+		padding: 0.75em 1.5em;
+		background: var(--accent);
+		color: white;
+		border: 2px solid var(--accent);
+		border-radius: 8px;
+		font-size: 1em;
+		font-weight: 500;
+		font-family: 'Lato', sans-serif;
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
+
+	.subscribe-button:hover {
+		background: var(--accent-light);
+		border-color: var(--accent-light);
+		transform: translateY(-1px);
+	}
+
+	.subscribe-note {
+		margin: 0.75em 0 0 0;
+		font-size: 0.85em;
+		color: var(--text-secondary);
+		opacity: 0.7;
+	}
+
+	@media (max-width: 720px) {
+		.subscribe-input-group {
+			flex-direction: column;
+		}
+
+		.subscribe-input,
+		.subscribe-button {
+			width: 100%;
+		}
+	}
+</style>
+

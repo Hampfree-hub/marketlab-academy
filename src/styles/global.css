@@ -1,54 +1,86 @@
 /*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+  MarketLab Academy - Custom Design
+  Based on green gradient palette from screenshot
+*/
 
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow:
-		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px
-		rgba(var(--gray), 33%);
+	/* Зелёные цвета (из скриншота) */
+	--green-light: #90EE90;
+	--green-lime: #32CD32;
+	--green-forest: #228B22;
+	--green-dark: #006400;
+	--green-very-dark: #013220;
+	
+	/* Золотой (из скриншота) */
+	--gold: #FFD700;
+	--gold-orange: #FFA500;
+	--gold-dark: #B8860B;
+	
+	/* Бежевый */
+	--beige: #F5F5DC;
+	--beige-light: #FFF8DC;
+	
+	/* Серый */
+	--gray-dark: #2C2C2C;
+	--gray-very-dark: #1A1A1A;
+	--gray-medium: #3C3C3C;
+	--gray-light: #E6EDF3;
+	--gray-text: #96A3B8;
+	
+	/* Градиенты */
+	--gradient-green: linear-gradient(135deg, #90EE90 0%, #32CD32 50%, #228B22 100%);
+	--gradient-green-dark: linear-gradient(135deg, #013220 0%, #1B4332 50%, #006400 100%);
+	
+	/* Светлая тема */
+	--bg-primary: #FFFFFF;
+	--bg-secondary: #F5F5DC;
+	--text-primary: #1A1A1A;
+	--text-secondary: #2C2C2C;
+	--accent: #228B22;
+	--accent-light: #32CD32;
+	
+	/* Тени */
+	--box-shadow: 0 2px 6px rgba(34, 139, 34, 0.1), 0 8px 24px rgba(34, 139, 34, 0.15);
+	--box-shadow-hover: 0 4px 12px rgba(34, 139, 34, 0.2), 0 16px 32px rgba(34, 139, 34, 0.25);
 }
-@font-face {
-	font-family: "Atkinson";
-	src: url("/marketlab-academy/fonts/atkinson-regular.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
+
+/* Тёмная тема */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-primary: #1A1A1A;
+		--bg-secondary: #2C2C2C;
+		--text-primary: #E6EDF3;
+		--text-secondary: #C9D1D9;
+		--accent: #32CD32;
+		--accent-light: #90EE90;
+		--box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.4);
+		--box-shadow-hover: 0 4px 12px rgba(50, 205, 50, 0.2), 0 16px 32px rgba(50, 205, 50, 0.3);
+	}
 }
-@font-face {
-	font-family: "Atkinson";
-	src: url("/marketlab-academy/fonts/atkinson-bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
+
+/* Шрифт: Lato (приятный для чтения, мультиязычный) */
 body {
-	font-family: "Atkinson", sans-serif;
+	font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
+	background: var(--bg-primary);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
-	font-size: 20px;
+	color: var(--text-primary);
+	font-size: 18px;
 	line-height: 1.7;
+	font-weight: 400; /* Regular - не тонкий, не жирный */
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 main {
 	width: 720px;
 	max-width: calc(100% - 2em);
 	margin: auto;
 	padding: 3em 1em;
 }
+
 h1,
 h2,
 h3,
@@ -56,80 +88,118 @@ h4,
 h5,
 h6 {
 	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
+	color: var(--text-primary);
 	line-height: 1.2;
+	font-weight: 500; /* Medium - не жирный */
+	transition: color 0.3s ease;
 }
+
 h1 {
 	font-size: 3.052em;
 }
+
 h2 {
 	font-size: 2.441em;
 }
+
 h3 {
 	font-size: 1.953em;
 }
+
 h4 {
 	font-size: 1.563em;
 }
+
 h5 {
 	font-size: 1.25em;
 }
+
 strong,
 b {
-	font-weight: 700;
+	font-weight: 600; /* Semi-bold - не слишком жирный */
 }
+
 a {
 	color: var(--accent);
+	text-decoration: none;
+	transition: color 0.2s ease, border-color 0.2s ease;
 }
+
 a:hover {
-	color: var(--accent);
+	color: var(--accent-light);
+	text-decoration: underline;
 }
+
 p {
 	margin-bottom: 1em;
 }
+
 .prose p {
 	margin-bottom: 2em;
 }
+
 textarea {
 	width: 100%;
 	font-size: 16px;
+	font-family: inherit;
 }
+
 input {
 	font-size: 16px;
+	font-family: inherit;
 }
+
 table {
 	width: 100%;
 }
+
 img {
 	max-width: 100%;
 	height: auto;
 	border-radius: 8px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+img:hover {
+	transform: scale(1.02);
+	box-shadow: var(--box-shadow-hover);
+}
+
 code {
 	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
+	background-color: var(--bg-secondary);
 	border-radius: 2px;
+	font-family: 'JetBrains Mono', 'Courier New', monospace;
 }
+
 pre {
 	padding: 1.5em;
 	border-radius: 8px;
+	background-color: var(--bg-secondary);
+	overflow-x: auto;
 }
+
 pre > code {
 	all: unset;
 }
+
 blockquote {
 	border-left: 4px solid var(--accent);
 	padding: 0 0 0 20px;
 	margin: 0;
 	font-size: 1.333em;
+	color: var(--text-secondary);
 }
+
 hr {
 	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
+	border-top: 1px solid var(--bg-secondary);
+	margin: 2em 0;
 }
+
 @media (max-width: 720px) {
 	body {
-		font-size: 18px;
+		font-size: 16px;
 	}
 	main {
 		padding: 1em;
@@ -144,12 +214,8 @@ hr {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
 	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
 	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
 	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }

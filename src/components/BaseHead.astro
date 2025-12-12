@@ -5,6 +5,7 @@ import '../styles/global.css';
 import type { ImageMetadata } from 'astro';
 import FallbackImage from '../assets/blog-placeholder-1.jpg';
 import { SITE_TITLE } from '../consts';
+import Analytics from './Analytics.astro';
 
 interface Props {
 	title: string;
@@ -30,9 +31,10 @@ const { title, description, image = FallbackImage } = Astro.props;
 />
 <meta name="generator" content={Astro.generator} />
 
-<!-- Font preloads -->
-<link rel="preload" href={new URL('/marketlab-academy/fonts/atkinson-regular.woff', Astro.site)} as="font" type="font/woff" crossorigin />
-<link rel="preload" href={new URL('/marketlab-academy/fonts/atkinson-bold.woff', Astro.site)} as="font" type="font/woff" crossorigin />
+<!-- Google Fonts: Lato -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
@@ -55,3 +57,6 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+
+<!-- Analytics -->
+<Analytics />

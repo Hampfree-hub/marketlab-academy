@@ -2,48 +2,243 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import SubscribeForm from '../components/SubscribeForm.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
+		
+		<!-- Hero Section с градиентом (как на скриншоте) -->
+		<section class="hero">
+			<div class="hero-gradient"></div>
+			<div class="hero-content">
+				<h1>MarketLab Academy</h1>
+				<p class="hero-subtitle">Блог о трейдинге, криптовалюте и автоматизации торговли</p>
+				<div class="hero-buttons">
+					<a href="/blog" class="btn btn-primary">Читать блог</a>
+					<a href="/about" class="btn btn-secondary">О проекте</a>
+				</div>
+			</div>
+		</section>
+
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<!-- О блоге -->
+			<section class="about">
+				<h2>О MarketLab Academy</h2>
+				<p>
+					MarketLab Academy — это образовательная платформа, посвящённая трейдингу, криптовалютам и алгоритмической разработке.
+					Мы делимся знаниями, опытом и практическими решениями для тех, кто хочет развиваться в этой области.
+				</p>
+				<p>
+					Здесь вы найдёте статьи о стратегиях, техническом анализе, разработке торговых ботов и многом другом.
+				</p>
+			</section>
+
+			<!-- Последние статьи -->
+			<section class="latest-posts">
+				<h2>Последние статьи</h2>
+				<p>Скоро здесь появятся первые статьи блога.</p>
+				<a href="/blog" class="btn btn-outline">Все статьи →</a>
+			</section>
+
+			<!-- Форма подписки -->
+			<SubscribeForm />
 		</main>
+
 		<Footer />
 	</body>
 </html>
+
+<style>
+	/* Hero Section с градиентом (как на скриншоте) */
+	.hero {
+		position: relative;
+		width: 100%;
+		min-height: 400px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		margin-bottom: 4em;
+	}
+
+	.hero-gradient {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(135deg, 
+			#90EE90 0%, 
+			#7FFF00 15%, 
+			#32CD32 35%, 
+			#228B22 55%, 
+			#006400 75%, 
+			#013220 100%);
+		background-size: 200% 200%;
+		animation: gradientWave 15s ease infinite;
+		opacity: 0.9;
+	}
+
+	/* Анимация градиента (волны) */
+	@keyframes gradientWave {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 1;
+		text-align: center;
+		color: white;
+		padding: 2em;
+		max-width: 800px;
+	}
+
+	.hero h1 {
+		font-size: 3.5em;
+		margin: 0 0 0.5em 0;
+		color: white;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+		font-weight: 500;
+	}
+
+	.hero-subtitle {
+		font-size: 1.5em;
+		margin: 0 0 2em 0;
+		color: rgba(255, 255, 255, 0.95);
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	}
+
+	.hero-buttons {
+		display: flex;
+		gap: 1em;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	/* Кнопки */
+	.btn {
+		padding: 0.75em 2em;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 500;
+		transition: all 0.3s ease;
+		display: inline-block;
+		border: 2px solid transparent;
+	}
+
+	.btn-primary {
+		background: var(--gold);
+		color: var(--text-primary);
+		border-color: var(--gold);
+	}
+
+	.btn-primary:hover {
+		background: var(--gold-orange);
+		border-color: var(--gold-orange);
+		transform: translateY(-2px);
+		box-shadow: var(--box-shadow-hover);
+	}
+
+	.btn-secondary {
+		background: transparent;
+		color: white;
+		border-color: white;
+	}
+
+	.btn-secondary:hover {
+		background: rgba(255, 255, 255, 0.1);
+		transform: translateY(-2px);
+	}
+
+	.btn-outline {
+		background: transparent;
+		color: var(--accent);
+		border-color: var(--accent);
+	}
+
+	.btn-outline:hover {
+		background: var(--accent);
+		color: white;
+		transform: translateY(-2px);
+	}
+
+	/* Секции */
+	.about,
+	.latest-posts {
+		margin-bottom: 4em;
+		padding: 2em;
+		background: var(--bg-secondary);
+		border-radius: 12px;
+		box-shadow: var(--box-shadow);
+		transition: box-shadow 0.3s ease;
+	}
+
+	.about:hover,
+	.latest-posts:hover {
+		box-shadow: var(--box-shadow-hover);
+	}
+
+	.about h2,
+	.latest-posts h2 {
+		color: var(--accent);
+		margin-bottom: 1em;
+	}
+
+	.latest-posts {
+		text-align: center;
+	}
+
+	/* Тёмная тема для hero */
+	@media (prefers-color-scheme: dark) {
+		.hero-gradient {
+			background: linear-gradient(135deg, 
+				#013220 0%, 
+				#1B4332 20%, 
+				#006400 40%, 
+				#228B22 60%, 
+				#32CD32 80%, 
+				#90EE90 100%);
+		}
+	}
+
+	/* Мобильная версия */
+	@media (max-width: 720px) {
+		.hero h1 {
+			font-size: 2.5em;
+		}
+
+		.hero-subtitle {
+			font-size: 1.2em;
+		}
+
+		.hero-buttons {
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		.btn {
+			width: 100%;
+			text-align: center;
+		}
+
+		.about,
+		.latest-posts {
+			padding: 1.5em;
+		}
+	}
+</style>
