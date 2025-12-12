@@ -3,8 +3,24 @@ import type { MiddlewareHandler } from 'astro';
 /**
  * Security Headers Middleware
  * Adds security headers to all responses
+ * 
+ * Maintenance Mode: Set MAINTENANCE_MODE=true in .env to enable
  */
 export const onRequest: MiddlewareHandler = async (context, next) => {
+	// Check for maintenance mode (only in production)
+	// Локально (dev) всегда видим блог, онлайн (production) работает Maintenance Mode
+	const maintenanceMode = import.meta.env.PROD && import.meta.env.MAINTENANCE_MODE === 'true';
+	
+	if (maintenanceMode && !context.url.pathname.startsWith('/maintenance')) {
+		// Redirect to maintenance page
+		return new Response(null, {
+			status: 307,
+			headers: {
+				Location: '/marketlab-academy/maintenance',
+			},
+		});
+	}
+
 	// Get the response
 	const response = await next();
 
@@ -12,21 +28,18 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
 	response.headers.set('X-Frame-Options', 'DENY');
 	response.headers.set('X-Content-Type-Options', 'nosniff');
 	response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-	
+
 	// HSTS (HTTP Strict Transport Security)
-	// GitHub Pages already handles this, but we can reinforce it
 	response.headers.set(
 		'Strict-Transport-Security',
 		'max-age=31536000; includeSubDomains; preload'
 	);
 
 	// CSP (Content Security Policy)
-	// Basic policy - can be customized based on your needs
 	response.headers.set(
 		'Content-Security-Policy',
-		"default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self';"
+		"default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com;"
 	);
 
 	return response;
 };
-
