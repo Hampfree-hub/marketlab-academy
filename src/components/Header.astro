@@ -25,25 +25,35 @@ import HeaderLink from './HeaderLink.astro';
 			<HeaderLink href="/about">О проекте</HeaderLink>
 			<HeaderLink href="/rss.xml">RSS</HeaderLink>
 		</div>
-		<div class="social-links">
-			<a href="https://dzen.ru/hampfree_algo_trading" target="_blank" rel="noopener noreferrer" title="Дзен">
-				<span class="sr-only">Дзен</span>
-				<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-					<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-				</svg>
-			</a>
-			<a href="https://vk.com/hampfree_market_lab" target="_blank" rel="noopener noreferrer" title="VK">
-				<span class="sr-only">VK</span>
-				<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-					<path d="M12.785 16.241s.335-.039.505-.238c.098-.14.098-.401.098-.401s-.014-2.116.905-2.427c.923-.312 2.108 1.483 3.36 2.137.972.507 1.71.396 1.71.396l3.373-.05s1.765-.11.93-1.5c-.069-.11-.49-1.03-2.51-2.914-2.123-2.01-1.838-1.675.714-5.133 1.545-2.14 2.163-3.444 1.97-4.004-.183-.528-1.31-.39-1.31-.39l-3.76.024s-.279-.04-.485.085c-.21.13-.343.43-.343.43s-.616 1.648-1.433 3.05c-1.73 2.83-2.424 2.98-2.71 2.81-.65-.39-.488-1.57-.488-2.41 0-2.62.39-3.71-.763-3.99-.38-.09-.66-.15-1.63-.16-1.25-.01-2.31.01-2.91.3-.4.2-.7.64-.52.66.23.03.75.14 1.02.51.35.47.34 1.52.34 1.52s.2 2.93-.47 3.29c-.46.29-1.09-.3-2.44-2.99-.69-1.38-1.22-2.9-1.22-2.9s-.1-.3-.28-.46c-.22-.18-.53-.24-.53-.24l-3.58.02s-.54.02-.74.24c-.18.2-.01.62-.01.62s2.78 6.52 5.92 9.81c2.88 2.98 6.17 2.78 6.17 2.78h1.52s.45-.05.68-.28c.21-.2.21-.46.21-.46s-.03-1.58.67-1.81c.68-.24 1.55 1.64 2.47 2.37.68.57 1.19.75 1.19.75s.4.19.68.05c.27-.14.19-.54.19-.54s-.14-1.01.2-1.16c.2-.1.47.07.99.7.7.8 1.64 1.99 1.64 1.99s.43.6 1.01.46c.57-.14 3.05-1.78 3.43-3.4.2-.85.2-1.27.2-1.27s.01-.4.23-.55c.23-.15.53-.1.53-.1l3.4.02s1.82-.11.96-1.48c-.09-.11-1.6-1.87-3.64-3.15z"/>
-				</svg>
-			</a>
-			<a href="https://finbazar.ru/profile/Hampfree" target="_blank" rel="noopener noreferrer" title="Bazar">
-				<span class="sr-only">Bazar</span>
-				<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-					<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-				</svg>
-			</a>
+		<div class="header-right">
+			<div class="language-switcher">
+				<button class="lang-button active" aria-label="Русский">RU</button>
+				<button class="lang-button" aria-label="English">EN</button>
+				<button class="lang-button" aria-label="Español">ES</button>
+			</div>
+			<div class="social-links">
+				<a href="https://dzen.ru/hampfree_algo_trading" target="_blank" rel="noopener noreferrer" title="Дзен">
+					<span class="sr-only">Дзен</span>
+					<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+						<path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 4v8h2V6h-2zm4 0v8h2V6h-2z"/>
+					</svg>
+				</a>
+				<a href="https://vk.com/hampfree_market_lab" target="_blank" rel="noopener noreferrer" title="VK">
+					<span class="sr-only">VK</span>
+					<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+						<path d="M12.785 16.241s.335-.039.505-.238c.098-.14.098-.401.098-.401s-.014-2.116.905-2.427c.923-.312 2.108 1.483 3.36 2.137.972.507 1.71.396 1.71.396l3.373-.05s1.765-.11.93-1.5c-.069-.11-.49-1.03-2.51-2.914-2.123-2.01-1.838-1.675.714-5.133 1.545-2.14 2.163-3.444 1.97-4.004-.183-.528-1.31-.39-1.31-.39l-3.76.024s-.279-.04-.485.085c-.21.13-.343.43-.343.43s-.616 1.648-1.433 3.05c-1.73 2.83-2.424 2.98-2.71 2.81-.65-.39-.488-1.57-.488-2.41 0-2.62.39-3.71-.763-3.99-.38-.09-.66-.15-1.63-.16-1.25-.01-2.31.01-2.91.3-.4.2-.7.64-.52.66.23.03.75.14 1.02.51.35.47.34 1.52.34 1.52s.2 2.93-.47 3.29c-.46.29-1.09-.3-2.44-2.99-.69-1.38-1.22-2.9-1.22-2.9s-.1-.3-.28-.46c-.22-.18-.53-.24-.53-.24l-3.58.02s-.54.02-.74.24c-.18.2-.01.62-.01.62s2.78 6.52 5.92 9.81c2.88 2.98 6.17 2.78 6.17 2.78h1.52s.45-.05.68-.28c.21-.2.21-.46.21-.46s-.03-1.58.67-1.81c.68-.24 1.55 1.64 2.47 2.37.68.57 1.19.75 1.19.75s.4.19.68.05c.27-.14.19-.54.19-.54s-.14-1.01.2-1.16c.2-.1.47.07.99.7.7.8 1.64 1.99 1.64 1.99s.43.6 1.01.46c.57-.14 3.05-1.78 3.43-3.4.2-.85.2-1.27.2-1.27s.01-.4.23-.55c.23-.15.53-.1.53-.1l3.4.02s1.82-.11.96-1.48c-.09-.11-1.6-1.87-3.64-3.15z"/>
+					</svg>
+				</a>
+				<a href="https://finbazar.ru/profile/Hampfree" target="_blank" rel="noopener noreferrer" title="Bazar">
+					<span class="sr-only">Bazar</span>
+					<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+						<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+						<circle cx="12" cy="7" r="1.5" fill="currentColor"/>
+						<circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+						<circle cx="12" cy="17" r="1.5" fill="currentColor"/>
+					</svg>
+				</a>
+			</div>
 		</div>
 	</nav>
 </header>
@@ -174,22 +184,82 @@ import HeaderLink from './HeaderLink.astro';
 		border-bottom-color: transparent;
 	}
 
-	.social-links,
-	.social-links a {
+	.header-right {
 		display: flex;
-		gap: 0.5em;
+		align-items: center;
+		gap: 1em;
+	}
+
+	.language-switcher {
+		display: flex;
+		gap: 0;
+		background: transparent;
+		border-radius: 4px;
+		padding: 0;
+	}
+
+	.lang-button {
+		padding: 0.25em 0.5em;
+		background: transparent;
+		border: none;
+		border-radius: 0;
+		color: var(--text-secondary);
+		font-size: 0.75em;
+		font-weight: 400;
+		cursor: pointer;
+		transition: color 0.2s ease;
+		font-family: 'Lato', sans-serif;
+		position: relative;
+	}
+
+	.lang-button:not(:last-child)::after {
+		content: '';
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 1px;
+		height: 60%;
+		background: rgba(122, 122, 122, 0.2);
+	}
+
+	.lang-button:hover {
+		color: var(--accent);
+	}
+
+	.lang-button.active {
+		color: var(--accent);
+		font-weight: 600;
+	}
+
+	.social-links {
+		display: flex;
+		gap: 0.75em;
 		align-items: center;
 	}
 	
 	.social-links a {
 		color: var(--text-secondary);
-		transition: color 0.2s ease, transform 0.2s ease;
-		padding: 0.5em;
+		transition: color 0.2s ease;
+		padding: 0.25em;
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+	
+	.social-links a:not(:last-child)::after {
+		content: '';
+		position: absolute;
+		right: -0.5em;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 1px;
+		height: 12px;
+		background: rgba(122, 122, 122, 0.15);
 	}
 	
 	.social-links a:hover {
 		color: var(--accent);
-		transform: scale(1.1);
 	}
 
 	.sr-only {
@@ -206,6 +276,10 @@ import HeaderLink from './HeaderLink.astro';
 	
 	@media (max-width: 720px) {
 		.social-links {
+			display: none;
+		}
+
+		.language-switcher {
 			display: none;
 		}
 
