@@ -75,15 +75,15 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 		width: 100%;
 		height: 100%;
 		background: linear-gradient(135deg, 
-			#A8E6A8 0%, 
-			#8FD88F 15%, 
-			#6BC86B 35%, 
-			#4A9A4A 55%, 
-			#3A7A3A 75%, 
-			#2A5A2A 100%);
+			#2A5A2A 0%, 
+			#3A7A3A 15%, 
+			#4A9A4A 35%, 
+			#6BC86B 55%, 
+			#8FD88F 75%, 
+			#A8E6A8 100%);
 		background-size: 200% 200%;
 		animation: gradientWave 15s ease infinite;
-		opacity: 0.9;
+		opacity: 0.95;
 	}
 
 	/* Анимация градиента (волны) */
@@ -153,8 +153,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 		background: var(--gold-orange);
 		border-color: var(--gold-orange);
 		color: #3A2A1A; /* Ещё темнее при hover */
-		transform: translateY(-3px);
-		box-shadow: 0 4px 16px rgba(232, 200, 112, 0.4), 0 8px 24px rgba(232, 200, 112, 0.3);
+		transform: translateY(-2px);
+		box-shadow: 0 3px 10px rgba(232, 200, 112, 0.25), 0 6px 16px rgba(232, 200, 112, 0.2);
 	}
 
 	.btn-secondary {
@@ -166,8 +166,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 	.btn-secondary:hover {
 		background: rgba(255, 255, 255, 0.15);
-		transform: translateY(-3px);
-		box-shadow: 0 4px 16px rgba(255, 255, 255, 0.3);
+		transform: translateY(-2px);
+		box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2);
 	}
 
 	.btn-outline {
@@ -179,27 +179,24 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	.btn-outline:hover {
 		background: var(--accent);
 		color: white;
-		transform: translateY(-3px);
-		box-shadow: var(--box-shadow-hover);
+		transform: translateY(-2px);
+		box-shadow: 0 3px 10px rgba(74, 154, 74, 0.2), 0 6px 16px rgba(74, 154, 74, 0.15);
 	}
 
-	/* Секции - интерактивные блоки с информацией */
+	/* Секции - менее отвлекающие блоки */
 	.about,
 	.latest-posts {
-		margin-bottom: 4em;
-		padding: 3em 2.5em;
+		margin-bottom: 3em;
+		padding: 2em;
 		background: var(--bg-secondary);
-		border-radius: 16px;
+		border-radius: 12px;
 		box-shadow: var(--box-shadow);
-		transition: all 0.3s ease;
-		border: 1px solid rgba(74, 154, 74, 0.1);
+		transition: box-shadow 0.3s ease;
 	}
 
 	.about:hover,
 	.latest-posts:hover {
 		box-shadow: var(--box-shadow-hover);
-		transform: translateY(-2px);
-		border-color: rgba(74, 154, 74, 0.2);
 	}
 
 	.about h2,
