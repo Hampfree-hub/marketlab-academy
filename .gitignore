@@ -54,3 +54,34 @@ SECURITY_CHECK*.md
 SECURITY_EXPLAINED*.md
 SECURITY_SIMPLE_EXPLAINED.md
 SECURITY_WORK_PLAN.md
+
+# ⚠️ КРИТИЧЕСКИ ВАЖНО: Планы, стратегии и аудиты — НЕ коммитим в публичный репозиторий!
+# Все эти файлы должны храниться локально или в приватном репозитории
+VELES_BLOG_AUDIT_*.md
+AUDIT_*.md
+*_AUDIT_*.md
+SEO_STRATEGY_*.md
+*_STRATEGY_*.md
+FINAL_PLAN_*.md
+*_PLAN_*.md
+CONTENT_*.md
+CONTENT_MONITORING_*.md
+HAMPFREEBLOG_TAXONOMY_*.md
+TAXONOMY_*.md
+REPOSITORY_VISIBILITY_*.md
+PUBLIC_REPO_SECURITY_*.md
+AUDIT_SUMMARY_*.md
+
+# Конфигурация с секретами
+config/secrets.ts
+config/keys.ts
+config/credentials.json
+*.secret.*
+*secrets*
+
+# Environment variables (используем только .env.example как шаблон)
+.env
+.env.local
+.env.*.local
+.env.production.local
+.env.development.local
