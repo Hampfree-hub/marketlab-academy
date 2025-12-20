@@ -499,10 +499,21 @@ body.nes8bit-theme {
 /* Navigation */
 .nes8bit-nav {
 	background: var(--nes-white);
+	border: 3px solid var(--nes-black); /* Более лаконичная рамка */
+	padding: 12px 12px; /* Увеличенные отступы: 12px сверху/снизу, 12px слева/справа */
+	margin-bottom: 20px; /* Уменьшенный отступ между блоками (было 30px) */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	gap: 15px;
+	box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2); /* Унифицированная тень (как у других блоков) */
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	/* Высота автоматически: 12px padding-top + 32px кнопка + 12px padding-bottom = 56px */
+	min-height: 56px;
+	overflow: hidden; /* Предотвращаем выход кнопок за границы блока при hover/transform */
+	box-sizing: border-box; /* Учитываем border в общей ширине */
 }
 
 .nes8bit-nav-links {
@@ -523,7 +534,7 @@ body.nes8bit-theme {
 	display: flex;
 	gap: 0;
 	background: transparent;
-	border: 1px solid var(--nes-black);
+	border: 2px solid var(--nes-black);
 	border-radius: 0;
 	padding: 0;
 }
@@ -532,7 +543,7 @@ body.nes8bit-theme {
 	padding: 4px 8px;
 	background: var(--nes-white);
 	border: none;
-	border-right: 1px solid var(--nes-black);
+	border-right: 2px solid var(--nes-black);
 	border-radius: 0;
 	color: var(--nes-black);
 	font-size: 0.7rem;
@@ -541,6 +552,11 @@ body.nes8bit-theme {
 	transition: all 0.15s ease;
 	font-family: var(--nes-font);
 	position: relative;
+	height: 28px;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .nes8bit-nav-controls .lang-button:last-child {
@@ -550,6 +566,7 @@ body.nes8bit-theme {
 .nes8bit-nav-controls .lang-button:hover {
 	background: var(--nes-yellow);
 	color: var(--nes-black);
+	transform: translateY(-1px);
 }
 
 .nes8bit-nav-controls .lang-button.active {
@@ -584,26 +601,6 @@ body.nes8bit-theme {
 		justify-content: center;
 		margin-top: 10px;
 	}
-}
-
-.nes8bit-nav {
-	background: var(--nes-white);
-	border: 3px solid var(--nes-black); /* Более лаконичная рамка */
-	padding: 12px 12px; /* Увеличенные отступы: 12px сверху/снизу, 12px слева/справа */
-	margin-bottom: 20px; /* Уменьшенный отступ между блоками (было 30px) */
-	display: flex;
-	gap: 10px; /* Увеличен gap между кнопками для лучшей читаемости */
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center; /* Центрирование по вертикали */
-	box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2); /* Унифицированная тень (как у других блоков) */
-	position: sticky;
-	top: 0;
-	z-index: 100;
-	/* Высота автоматически: 12px padding-top + 32px кнопка + 12px padding-bottom = 56px */
-	min-height: 56px;
-	overflow: hidden; /* Предотвращаем выход кнопок за границы блока при hover/transform */
-	box-sizing: border-box; /* Учитываем border в общей ширине */
 }
 
 .nes8bit-nav a {
