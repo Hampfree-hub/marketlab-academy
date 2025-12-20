@@ -1,0 +1,294 @@
+---
+// Выдвигающийся 8-бит слайдер настроек (тема + язык)
+import ThemeToggle from './ThemeToggle.astro';
+---
+
+<div class="settings-slider">
+	<!-- Закладка (tab) в правом верхнем углу -->
+	<div class="settings-tab" aria-label="Настройки" title="Настройки">
+		<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<circle cx="12" cy="12" r="3"></circle>
+			<path d="M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24"></path>
+		</svg>
+	</div>
+	
+	<!-- Выдвигающаяся панель -->
+	<div class="settings-panel">
+		<div class="settings-panel-header">
+			<span class="settings-title">НАСТРОЙКИ</span>
+		</div>
+		
+		<div class="settings-controls">
+			<!-- Переключатель темы -->
+			<div class="settings-control-group">
+				<label class="settings-label">ТЕМА</label>
+				<div class="settings-toggle-wrapper">
+					<ThemeToggle />
+				</div>
+			</div>
+			
+			<!-- Переключатель языков -->
+			<div class="settings-control-group">
+				<label class="settings-label">ЯЗЫК</label>
+				<div class="language-switcher" role="group" aria-label="Выбор языка">
+					<button class="lang-button active" data-lang="ru" aria-label="Русский" aria-pressed="true">RU</button>
+					<button class="lang-button" data-lang="en" aria-label="English" aria-pressed="false">EN</button>
+					<button class="lang-button" data-lang="es" aria-label="Español" aria-pressed="false">ES</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	// Language switcher functionality
+	(function() {
+		function getCurrentLanguage() {
+			const htmlLang = document.documentElement.lang || 'ru';
+			const savedLang = localStorage.getItem('preferred-language');
+			return savedLang || htmlLang.toLowerCase().split('-')[0];
+		}
+
+		function updateActiveButton(lang) {
+			document.querySelectorAll('.lang-button').forEach(button => {
+				const buttonLang = button.getAttribute('data-lang');
+				if (buttonLang === lang) {
+					button.classList.add('active');
+					button.setAttribute('aria-pressed', 'true');
+				} else {
+					button.classList.remove('active');
+					button.setAttribute('aria-pressed', 'false');
+				}
+			});
+		}
+
+		function switchLanguage(lang) {
+			localStorage.setItem('preferred-language', lang);
+			document.documentElement.lang = lang;
+			updateActiveButton(lang);
+			document.querySelectorAll('[data-lang]').forEach(el => {
+				const elLang = el.getAttribute('data-lang');
+				if (elLang === lang) {
+					el.style.display = '';
+				} else {
+					el.style.display = 'none';
+				}
+			});
+			window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
+		}
+
+		document.addEventListener('DOMContentLoaded', () => {
+			const currentLang = getCurrentLanguage();
+			updateActiveButton(currentLang);
+			document.querySelectorAll('.lang-button').forEach(button => {
+				button.addEventListener('click', (e) => {
+					e.preventDefault();
+					const lang = button.getAttribute('data-lang');
+					switchLanguage(lang);
+				});
+			});
+		});
+	})();
+</script>
+
+<style>
+	.settings-slider {
+		position: fixed;
+		top: 20px;
+		right: 0;
+		z-index: 1000;
+		font-family: var(--nes-font, 'Press Start 2P', monospace);
+	}
+
+	/* Закладка (tab) */
+	.settings-tab {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 40px;
+		height: 40px;
+		background: var(--nes-white);
+		border: 3px solid var(--nes-black);
+		border-right: none;
+		border-top-left-radius: 8px;
+		border-bottom-left-radius: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.3);
+		transition: all 0.2s ease;
+		color: var(--nes-black);
+		z-index: 1001;
+	}
+
+	.settings-tab:hover {
+		background: var(--nes-yellow);
+		transform: translateX(-2px);
+		box-shadow: -6px 6px 0px rgba(0, 0, 0, 0.4);
+	}
+
+	.settings-tab svg {
+		width: 18px;
+		height: 18px;
+	}
+
+	/* Выдвигающаяся панель */
+	.settings-panel {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 0;
+		height: auto;
+		background: var(--nes-white);
+		border: 3px solid var(--nes-black);
+		border-right: none;
+		box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.3);
+		overflow: hidden;
+		opacity: 0;
+		transform: translateX(100%);
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		pointer-events: none;
+		min-width: 200px;
+	}
+
+	.settings-slider:hover .settings-panel {
+		width: 220px;
+		opacity: 1;
+		transform: translateX(0);
+		pointer-events: all;
+	}
+
+	.settings-panel-header {
+		background: var(--nes-blue);
+		padding: 12px 16px;
+		border-bottom: 3px solid var(--nes-black);
+		text-align: center;
+	}
+
+	.settings-title {
+		color: var(--nes-white);
+		font-size: 0.6rem;
+		text-shadow: 2px 2px 0px var(--nes-black);
+		letter-spacing: 1px;
+	}
+
+	.settings-controls {
+		padding: 16px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.settings-control-group {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.settings-label {
+		font-size: 0.5rem;
+		color: var(--nes-black);
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: 600;
+	}
+
+	.settings-toggle-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+
+	/* Переопределение стилей ThemeToggle для слайдера */
+	.settings-panel :global(.theme-toggle) {
+		width: 36px;
+		height: 36px;
+		min-width: 36px;
+		min-height: 36px;
+		border: 3px solid var(--nes-black);
+		border-radius: 0;
+		background: var(--nes-white);
+	}
+
+	.settings-panel :global(.theme-toggle:hover) {
+		background: var(--nes-yellow);
+		border-color: var(--nes-black);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 0 var(--nes-black);
+	}
+
+	/* Переключатель языков */
+	.settings-panel .language-switcher {
+		display: flex;
+		gap: 0;
+		background: transparent;
+		border: 3px solid var(--nes-black);
+		border-radius: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	.settings-panel .lang-button {
+		flex: 1;
+		padding: 8px 12px;
+		background: var(--nes-white);
+		border: none;
+		border-right: 2px solid var(--nes-black);
+		border-radius: 0;
+		color: var(--nes-black);
+		font-size: 0.6rem;
+		font-weight: 400;
+		cursor: pointer;
+		transition: all 0.15s ease;
+		font-family: var(--nes-font, 'Press Start 2P', monospace);
+		text-transform: uppercase;
+		position: relative;
+		height: 36px;
+		line-height: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.settings-panel .lang-button:last-child {
+		border-right: none;
+	}
+
+	.settings-panel .lang-button:hover {
+		background: var(--nes-yellow);
+		color: var(--nes-black);
+		transform: translateY(-1px);
+	}
+
+	.settings-panel .lang-button.active {
+		background: var(--nes-blue);
+		color: var(--nes-white);
+		font-weight: 600;
+		text-shadow: 1px 1px 0px var(--nes-black);
+	}
+
+	/* Мобильная адаптация */
+	@media (max-width: 768px) {
+		.settings-slider {
+			top: 10px;
+		}
+
+		.settings-tab {
+			width: 36px;
+			height: 36px;
+		}
+
+		.settings-tab svg {
+			width: 16px;
+			height: 16px;
+		}
+
+		.settings-slider:hover .settings-panel {
+			width: 180px;
+		}
+
+		.settings-panel {
+			min-width: 180px;
+		}
+	}
+</style>

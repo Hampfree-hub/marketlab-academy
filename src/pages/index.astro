@@ -5,7 +5,7 @@ import ArticleGrid from '../components/ArticleGrid.astro';
 import CTABlock from '../components/CTABlock.astro';
 import CookieBanner from '../components/CookieBanner.astro';
 import SocialSidebar from '../components/SocialSidebar.astro';
-import ThemeToggle from '../components/ThemeToggle.astro';
+import SettingsSlider from '../components/SettingsSlider.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
@@ -19,56 +19,6 @@ import { SITE_TITLE } from '../consts';
 		<link rel="stylesheet" href="/src/styles/nes8bit.css" />
 	</head>
 	<body class="nes8bit-theme">
-		<script>
-			// Language switcher functionality (same as Header.astro)
-			(function() {
-				function getCurrentLanguage() {
-					const htmlLang = document.documentElement.lang || 'ru';
-					const savedLang = localStorage.getItem('preferred-language');
-					return savedLang || htmlLang.toLowerCase().split('-')[0];
-				}
-
-				function updateActiveButton(lang) {
-					document.querySelectorAll('.lang-button').forEach(button => {
-						const buttonLang = button.getAttribute('data-lang');
-						if (buttonLang === lang) {
-							button.classList.add('active');
-							button.setAttribute('aria-pressed', 'true');
-						} else {
-							button.classList.remove('active');
-							button.setAttribute('aria-pressed', 'false');
-						}
-					});
-				}
-
-				function switchLanguage(lang) {
-					localStorage.setItem('preferred-language', lang);
-					document.documentElement.lang = lang;
-					updateActiveButton(lang);
-					document.querySelectorAll('[data-lang]').forEach(el => {
-						const elLang = el.getAttribute('data-lang');
-						if (elLang === lang) {
-							el.style.display = '';
-						} else {
-							el.style.display = 'none';
-						}
-					});
-					window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
-				}
-
-				document.addEventListener('DOMContentLoaded', () => {
-					const currentLang = getCurrentLanguage();
-					updateActiveButton(currentLang);
-					document.querySelectorAll('.lang-button').forEach(button => {
-						button.addEventListener('click', (e) => {
-							e.preventDefault();
-							const lang = button.getAttribute('data-lang');
-							switchLanguage(lang);
-						});
-					});
-				});
-			})();
-		</script>
 		<!-- Баннер куки -->
 		<CookieBanner />
 		
@@ -84,20 +34,10 @@ import { SITE_TITLE } from '../consts';
 			
 			<!-- NAVIGATION (sticky) -->
 			<nav class="nes8bit-nav" aria-label="Основная навигация">
-				<div class="nes8bit-nav-links">
-					<a href="#storage" aria-label="Перейти к разделу Хранилище">📦 Хранилище</a>
-					<a href="#strategies" aria-label="Перейти к разделу Стратегии">📊 Стратегии</a>
-					<a href="#analysis" aria-label="Перейти к разделу Анализ">📈 Анализ</a>
-					<a href="#experiments" aria-label="Перейти к разделу Эксперименты">⚗️ Эксперименты</a>
-				</div>
-				<div class="nes8bit-nav-controls">
-					<ThemeToggle />
-					<div class="language-switcher" role="group" aria-label="Выбор языка">
-						<button class="lang-button active" data-lang="ru" aria-label="Русский" aria-pressed="true">RU</button>
-						<button class="lang-button" data-lang="en" aria-label="English" aria-pressed="false">EN</button>
-						<button class="lang-button" data-lang="es" aria-label="Español" aria-pressed="false">ES</button>
-					</div>
-				</div>
+				<a href="#storage" aria-label="Перейти к разделу Хранилище">📦 Хранилище</a>
+				<a href="#strategies" aria-label="Перейти к разделу Стратегии">📊 Стратегии</a>
+				<a href="#analysis" aria-label="Перейти к разделу Анализ">📈 Анализ</a>
+				<a href="#experiments" aria-label="Перейти к разделу Эксперименты">⚗️ Эксперименты</a>
 			</nav>
 			
 			<!-- ЛОР АРХИВА -->
