@@ -40,9 +40,9 @@ const icon = categoryIcons[category] || categoryIcons.general;
 const gradient = categoryColors[category] || categoryColors.general;
 ---
 
-<div class="crypto-article-banner" style={`background: ${gradient};`}>
+<div class="crypto-article-banner" style={`background: ${gradient};`} role="banner" aria-label={`Article banner: ${title}`}>
 	<!-- 8-бит рамка (30% стиля) -->
-	<div class="crypto-banner-frame">
+	<div class="crypto-banner-frame" aria-hidden="true">
 		<div class="crypto-banner-corner crypto-banner-corner-tl"></div>
 		<div class="crypto-banner-corner crypto-banner-corner-tr"></div>
 		<div class="crypto-banner-corner crypto-banner-corner-bl"></div>
@@ -52,7 +52,7 @@ const gradient = categoryColors[category] || categoryColors.general;
 	<!-- Серьёзный контент (70%) -->
 	<div class="crypto-banner-content">
 		<div class="crypto-banner-header">
-			<span class="crypto-banner-icon">{icon}</span>
+			<span class="crypto-banner-icon" aria-hidden="true">{icon}</span>
 			<div class="crypto-banner-title-group">
 				<h1 class="crypto-banner-title">{title}</h1>
 				{subtitle && <p class="crypto-banner-subtitle">{subtitle}</p>}
@@ -95,6 +95,18 @@ const gradient = categoryColors[category] || categoryColors.general;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+	}
+
+	/* Focus states для доступности */
+	.crypto-article-banner:focus-within {
+		outline: 3px solid var(--nes-blue);
+		outline-offset: 2px;
+		box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3), 0 0 0 4px rgba(0, 153, 204, 0.3);
+	}
+
+	.crypto-article-banner:focus-within:not(:focus-visible) {
+		outline: none;
+		box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
 	}
 	
 	/* 8-бит рамка (30% стиля) */
