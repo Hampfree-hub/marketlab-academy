@@ -1,0 +1,95 @@
+---
+// Главная страница архива Market Lab Academy
+import ArchiveLore from '../components/ArchiveLore.astro';
+import CryptoArticleBanner from '../components/CryptoArticleBanner.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Market Lab Academy — Восстановленная лаборатория</title>
+		<link rel="stylesheet" href="/src/styles/global.css" />
+		<link rel="stylesheet" href="/src/styles/nes8bit.css" />
+	</head>
+	<body class="nes8bit-theme">
+		<div class="nes8bit-container">
+			<!-- HEADER с лором -->
+			<div class="nes8bit-header">
+				<h1>🧪 MARKET LAB ACADEMY</h1>
+				<p>Ценный архив | Восстановленные данные</p>
+			</div>
+			
+			<!-- NAVIGATION -->
+			<nav class="nes8bit-nav">
+				<a href="#storage">📦 Хранилище</a>
+				<a href="#strategies">📊 Стратегии</a>
+				<a href="#analysis">📈 Анализ</a>
+				<a href="#experiments">⚗️ Эксперименты</a>
+			</nav>
+			
+			<!-- ЛОР АРХИВА -->
+			<ArchiveLore />
+			
+			<!-- ПРИМЕР СТАТЬИ -->
+			<CryptoArticleBanner
+				title="Последние восстановленные материалы"
+				subtitle="История открытия RVI и другие эксперименты"
+				archiveNumber="0001"
+				category="rvi"
+				profit="+23.85% (проверено в 2025)"
+				successRate="73% за 12 лет"
+			/>
+			
+			<!-- СЕРЬЁЗНЫЙ КОНТЕНТ -->
+			<article class="serious-content" style="background: var(--nes-white); border: 4px solid var(--nes-black); padding: 30px; margin-bottom: 30px; box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2); max-width: 900px; margin-left: auto; margin-right: auto;">
+				<h2 style="font-family: 'Arial', sans-serif; font-size: 1.5rem; font-weight: bold; color: var(--nes-black); margin: 0 0 15px 0; border-bottom: 2px solid var(--nes-gray); padding-bottom: 10px;">
+					Результаты на реальных счётах
+				</h2>
+				
+				<p style="font-family: 'Arial', sans-serif; font-size: 0.95rem; line-height: 1.8; color: var(--nes-black); margin: 0 0 20px 0;">
+					<strong>15 августа 2013.</strong> Мы заметили странный паттерн с RVI (Relative Vigor Index). 
+					Казалось бы, стандартный осциллятор, но на маленьких таймфреймах он показывал невероятную точность.
+				</p>
+				
+				<p style="font-family: 'Arial', sans-serif; font-size: 0.95rem; line-height: 1.8; color: var(--nes-black); margin: 0 0 20px 0;">
+					После недели тестирования на исторических данных мы поняли: это не просто индикатор. 
+					Это система, которая работает независимо от рынка. Главное — дисциплина и правильные уровни входа.
+				</p>
+				
+				<div style="background: var(--crypto-bitcoin-gradient); border: 3px solid var(--nes-black); padding: 15px; margin: 20px 0; font-family: var(--nes-font); font-size: 0.8rem; text-align: center; box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);">
+					⏭️ ЧЕРЕЗ 12 ЛЕТ:<br>
+					Эмили повторила этот же тест в 2025 году.<br>
+					LAB REPORT #1: +23.85% на STRKUSDT<br><br>
+					→ <a href="https://dzen.ru/hampfree_algo_trading" target="_blank" rel="noopener noreferrer" style="color: var(--nes-black); text-decoration: underline;">Смотреть современный результат на Дзене</a>
+				</div>
+				
+				<div style="background: rgba(0, 0, 0, 0.05); border: 2px dashed var(--nes-gray); padding: 15px; margin: 20px 0;">
+					<p style="font-family: 'Arial', sans-serif; font-size: 0.9rem; line-height: 1.8; color: var(--nes-black); margin: 0 0 10px 0;">
+						<strong>🔍 Странность архива:</strong>
+					</p>
+					<p style="font-family: 'Arial', sans-serif; font-size: 0.9rem; line-height: 1.8; color: var(--nes-black); margin: 0;">
+						В оригинальном файле есть пометка:<br>
+						<em>"[ГОЛОС ИЗ РАДИОПРИЁМНИКА]: Это сработает. Повторить в 2025."</em><br><br>
+						Кто это писал? Почему знали про 2025 год?
+					</p>
+				</div>
+			</article>
+			
+			<!-- FOOTER -->
+			<footer class="nes8bit-footer">
+				<p>
+					© 2025 {SITE_TITLE} | 
+					<span class="nes8bit-pixel-icon">🧪</span> 
+					Market Lab Academy | Serious Play
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
+
+
+
+

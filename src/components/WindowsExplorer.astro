@@ -1,0 +1,419 @@
+---
+// WindowsExplorer.astro - Проводник Windows 98
+interface Props {
+	path?: string;
+	title?: string;
+}
+
+const { path = 'articles', title = 'Проводник' } = Astro.props;
+
+// Структура папок (будет связана с реальной структурой блога)
+const folderStructure: Record<string, any> = {
+	articles: {
+		name: 'Статьи',
+		type: 'folder',
+		children: {
+			trading: {
+				name: 'Трейдинг',
+				type: 'folder',
+				children: {
+					'article-1': { name: 'Анализ рынка.md', type: 'file', url: '/blog/article-1/' },
+					'article-2': { name: 'DCA стратегия.md', type: 'file', url: '/blog/article-2/' },
+				},
+			},
+			crypto: {
+				name: 'Криптовалюта',
+				type: 'folder',
+				children: {
+					'article-3': { name: 'Bitcoin ATH.md', type: 'file', url: '/blog/article-3/' },
+				},
+			},
+			automation: {
+				name: 'Автоматизация',
+				type: 'folder',
+				children: {
+					'article-4': { name: 'Настройка бота.md', type: 'file', url: '/blog/article-4/' },
+				},
+			},
+			strategies: {
+				name: 'Стратегии',
+				type: 'folder',
+				children: {
+					'article-5': { name: 'Торговая стратегия.md', type: 'file', url: '/blog/article-5/' },
+				},
+			},
+		},
+	},
+	archive: {
+		name: 'Архив',
+		type: 'folder',
+		children: {},
+	},
+	drafts: {
+		name: 'Черновики',
+		type: 'folder',
+		children: {},
+	},
+};
+---
+
+<div class="win98-window win98-explorer-window" id="explorer-window">
+	<div class="win98-titlebar">
+		<span class="win98-titlebar-text">📁 {title}</span>
+		<div class="win98-titlebar-buttons">
+			<div class="win98-button">_</div>
+			<div class="win98-button">□</div>
+			<div class="win98-button win98-button-close" onclick="this.closest('.win98-explorer-window').remove()">×</div>
+		</div>
+	</div>
+	<div class="win98-content" style="padding: 0;">
+		<!-- Панель инструментов -->
+		<div class="win98-toolbar">
+			<button class="win98-btn" id="explorer-back">← Назад</button>
+			<button class="win98-btn" id="explorer-forward">→ Вперёд</button>
+			<button class="win98-btn" id="explorer-up">↑ Вверх</button>
+			<div class="win98-separator" style="margin: 0 4px;"></div>
+			<button class="win98-btn" id="explorer-folders">📁 Папки</button>
+		</div>
+		
+		<!-- Адресная строка -->
+		<div class="win98-address-bar">
+			<span style="font-family: var(--win98-font); font-size: 11px; padding: 2px 4px;">Адрес:</span>
+			<input type="text" class="win98-input" id="explorer-address" value="C:\Блог\Статьи" style="flex: 1; margin: 0 4px;" readonly />
+			<button class="win98-btn" style="padding: 2px 8px;">Перейти</button>
+		</div>
+		
+		<!-- Основная область -->
+		<div class="win98-explorer-layout">
+			<!-- Дерево папок -->
+			<div class="win98-explorer-tree" id="explorer-tree">
+				<div class="win98-tree-item" data-path="my-computer">
+					<span class="win98-tree-icon">💻</span>
+					<span>Мой компьютер</span>
+				</div>
+				<div class="win98-tree-item expanded" data-path="disk-c">
+					<span class="win98-tree-icon">💿</span>
+					<span>Диск C: (Блог)</span>
+					<div class="win98-tree-children">
+						<div class="win98-tree-item" data-path="articles">
+							<span class="win98-tree-icon">📁</span>
+							<span>Статьи</span>
+						</div>
+						<div class="win98-tree-item" data-path="archive">
+							<span class="win98-tree-icon">📁</span>
+							<span>Архив</span>
+						</div>
+						<div class="win98-tree-item" data-path="drafts">
+							<span class="win98-tree-icon">📁</span>
+							<span>Черновики</span>
+						</div>
+					</div>
+				</div>
+				<div class="win98-tree-item" data-path="disk-d">
+					<span class="win98-tree-icon">💿</span>
+					<span>Диск D: (Игры)</span>
+					<div class="win98-tree-children">
+						<div class="win98-tree-item" data-path="games">
+							<span class="win98-tree-icon">📁</span>
+							<span>Игры</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Содержимое папки -->
+			<div class="win98-explorer-content" id="explorer-content">
+				<div class="win98-file-item" data-type="folder" data-path="trading">
+					<span class="win98-file-icon">📁</span>
+					<span class="win98-file-name">Трейдинг</span>
+				</div>
+				<div class="win98-file-item" data-type="folder" data-path="crypto">
+					<span class="win98-file-icon">📁</span>
+					<span class="win98-file-name">Криптовалюта</span>
+				</div>
+				<div class="win98-file-item" data-type="folder" data-path="automation">
+					<span class="win98-file-icon">📁</span>
+					<span class="win98-file-name">Автоматизация</span>
+				</div>
+				<div class="win98-file-item" data-type="folder" data-path="strategies">
+					<span class="win98-file-icon">📁</span>
+					<span class="win98-file-name">Стратегии</span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Строка состояния -->
+		<div class="win98-status-bar">
+			<span id="explorer-status">5 объектов</span>
+		</div>
+	</div>
+</div>
+
+<style>
+	.win98-explorer-window {
+		width: 800px;
+		height: 500px;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.win98-toolbar {
+		display: flex;
+		align-items: center;
+		padding: 4px;
+		background: var(--win98-gray-light);
+		border-bottom: 1px solid var(--win98-bevel-dark);
+		gap: 4px;
+	}
+	
+	.win98-address-bar {
+		display: flex;
+		align-items: center;
+		padding: 4px;
+		background: var(--win98-white);
+		border-bottom: 1px solid var(--win98-bevel-dark);
+		gap: 4px;
+	}
+	
+	.win98-explorer-layout {
+		display: flex;
+		flex: 1;
+		overflow: hidden;
+	}
+	
+	.win98-explorer-tree {
+		width: 200px;
+		border-right: 2px inset var(--win98-gray-light);
+		overflow-y: auto;
+		padding: 4px;
+		background: var(--win98-white);
+		font-family: var(--win98-font);
+		font-size: 11px;
+	}
+	
+	.win98-tree-item {
+		padding: 2px 4px;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		color: var(--win98-black);
+		user-select: none;
+	}
+	
+	.win98-tree-item:hover {
+		background: #000080;
+		color: white;
+	}
+	
+	.win98-tree-item.expanded > .win98-tree-children {
+		display: block;
+		margin-left: 16px;
+	}
+	
+	.win98-tree-children {
+		display: none;
+	}
+	
+	.win98-tree-icon {
+		width: 16px;
+		text-align: center;
+	}
+	
+	.win98-explorer-content {
+		flex: 1;
+		padding: 8px;
+		overflow-y: auto;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 100px);
+		gap: 8px;
+		align-content: start;
+		background: var(--win98-white);
+	}
+	
+	.win98-file-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 8px;
+		cursor: pointer;
+		border: 1px solid transparent;
+		text-align: center;
+	}
+	
+	.win98-file-item:hover {
+		background: rgba(0, 0, 128, 0.1);
+		border: 1px dotted var(--win98-blue);
+	}
+	
+	.win98-file-item.selected {
+		background: rgba(0, 0, 128, 0.2);
+		border: 1px solid var(--win98-blue);
+	}
+	
+	.win98-file-icon {
+		font-size: 32px;
+		margin-bottom: 4px;
+	}
+	
+	.win98-file-name {
+		font-family: var(--win98-font);
+		font-size: 11px;
+		color: var(--win98-black);
+		word-break: break-word;
+		max-width: 100px;
+	}
+	
+	.win98-status-bar {
+		padding: 2px 4px;
+		background: var(--win98-gray-light);
+		border-top: 1px solid var(--win98-bevel-dark);
+		font-family: var(--win98-font);
+		font-size: 11px;
+		color: var(--win98-black);
+	}
+	
+	/* Мобильная адаптация */
+	@media (max-width: 768px) {
+		.win98-explorer-window {
+			width: 95vw;
+			height: 70vh;
+		}
+		
+		.win98-explorer-layout {
+			flex-direction: column;
+		}
+		
+		.win98-explorer-tree {
+			width: 100%;
+			height: 150px;
+			border-right: none;
+			border-bottom: 2px inset var(--win98-gray-light);
+		}
+		
+		.win98-explorer-content {
+			grid-template-columns: repeat(auto-fill, 80px);
+			gap: 8px;
+		}
+		
+		.win98-file-item {
+			padding: 6px;
+		}
+		
+		.win98-file-icon {
+			font-size: 24px;
+		}
+		
+		.win98-file-name {
+			font-size: 10px;
+			max-width: 80px;
+		}
+	}
+</style>
+
+<script>
+	// Логика проводника
+	document.addEventListener('DOMContentLoaded', () => {
+		const explorerContent = document.getElementById('explorer-content');
+		const explorerTree = document.getElementById('explorer-tree');
+		const explorerAddress = document.getElementById('explorer-address');
+		
+		if (!explorerContent || !explorerTree) return;
+		
+		// Обработка кликов по файлам/папкам
+		explorerContent.addEventListener('click', (e) => {
+			const fileItem = e.target.closest('.win98-file-item');
+			if (!fileItem) return;
+			
+			const type = fileItem.getAttribute('data-type');
+			const path = fileItem.getAttribute('data-path');
+			
+			if (type === 'folder') {
+				// Открыть папку
+				openFolder(path);
+			} else if (type === 'file') {
+				// Открыть файл (статью)
+				const url = fileItem.getAttribute('data-url');
+				if (url) {
+					window.location.href = url;
+				}
+			}
+		});
+		
+		// Обработка двойного клика
+		explorerContent.addEventListener('dblclick', (e) => {
+			const fileItem = e.target.closest('.win98-file-item');
+			if (!fileItem) return;
+			
+			const type = fileItem.getAttribute('data-type');
+			const path = fileItem.getAttribute('data-path');
+			
+			if (type === 'folder') {
+				openFolder(path);
+			} else if (type === 'file') {
+				const url = fileItem.getAttribute('data-url');
+				if (url) {
+					window.location.href = url;
+				}
+			}
+		});
+		
+		// Обработка кликов по дереву
+		explorerTree.addEventListener('click', (e) => {
+			const treeItem = e.target.closest('.win98-tree-item');
+			if (!treeItem) return;
+			
+			const path = treeItem.getAttribute('data-path');
+			if (path) {
+				// Переключить expanded
+				if (treeItem.querySelector('.win98-tree-children')) {
+					treeItem.classList.toggle('expanded');
+				}
+				// Открыть папку
+				openFolder(path);
+			}
+		});
+		
+		function openFolder(path: string) {
+			// Загрузить содержимое папки
+			// Это будет связано с реальной структурой блога
+			console.log('Открыть папку:', path);
+			
+			// Обновить адресную строку
+			if (explorerAddress) {
+				explorerAddress.value = `C:\\Блог\\${path}`;
+			}
+			
+			// Обновить содержимое (заглушка)
+			if (explorerContent) {
+				explorerContent.innerHTML = `
+					<div class="win98-file-item" data-type="file" data-url="/blog/article-1/">
+						<span class="win98-file-icon">📄</span>
+						<span class="win98-file-name">Статья 1.md</span>
+					</div>
+					<div class="win98-file-item" data-type="file" data-url="/blog/article-2/">
+						<span class="win98-file-icon">📄</span>
+						<span class="win98-file-name">Статья 2.md</span>
+					</div>
+				`;
+			}
+		}
+		
+		// Кнопки навигации
+		document.getElementById('explorer-back')?.addEventListener('click', () => {
+			console.log('Назад');
+		});
+		
+		document.getElementById('explorer-forward')?.addEventListener('click', () => {
+			console.log('Вперёд');
+		});
+		
+		document.getElementById('explorer-up')?.addEventListener('click', () => {
+			console.log('Вверх');
+		});
+	});
+</script>
+
+
+
+
