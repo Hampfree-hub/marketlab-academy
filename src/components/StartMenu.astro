@@ -1,0 +1,398 @@
+---
+// StartMenu.astro - Меню "Пуск" Windows 98
+interface Props {
+	isOpen?: boolean;
+}
+
+const { isOpen = false } = Astro.props;
+---
+
+<div class="win98-start-menu" id="start-menu" style={isOpen ? 'display: block;' : 'display: none;'}>
+	<div class="win98-start-menu-header">
+		<span>Windows 98</span>
+	</div>
+	<div class="win98-start-menu-content">
+		<!-- Программы -->
+		<div class="win98-start-menu-item" data-submenu="programs">
+			<span>📁</span>
+			<span>Программы</span>
+			<span class="win98-menu-arrow">▶</span>
+		</div>
+		
+		<!-- Документы -->
+		<div class="win98-start-menu-item" data-submenu="documents">
+			<span>📄</span>
+			<span>Документы</span>
+			<span class="win98-menu-arrow">▶</span>
+		</div>
+		
+		<!-- Настройки -->
+		<div class="win98-start-menu-item" data-submenu="settings">
+			<span>⚙️</span>
+			<span>Настройки</span>
+			<span class="win98-menu-arrow">▶</span>
+		</div>
+		
+		<!-- Поиск -->
+		<div class="win98-start-menu-item" data-action="search">
+			<span>🔍</span>
+			<span>Поиск</span>
+		</div>
+		
+		<!-- Справка -->
+		<div class="win98-start-menu-item" data-action="help">
+			<span>❓</span>
+			<span>Справка</span>
+		</div>
+		
+		<div class="win98-start-menu-separator"></div>
+		
+		<!-- Завершение работы -->
+		<div class="win98-start-menu-item" data-action="shutdown">
+			<span>🚪</span>
+			<span>Завершение работы</span>
+		</div>
+	</div>
+	
+	<!-- Подменю "Программы" -->
+	<div class="win98-start-menu-submenu" id="programs-submenu">
+		<div class="win98-start-menu-submenu-header">
+			<span>← Программы</span>
+		</div>
+		<div class="win98-start-menu-submenu-content">
+			<div class="win98-start-menu-item" data-submenu="games">
+				<span>🎮</span>
+				<span>Игры</span>
+				<span class="win98-menu-arrow">▶</span>
+			</div>
+			<div class="win98-start-menu-item" data-submenu="blog">
+				<span>📝</span>
+				<span>Блог</span>
+				<span class="win98-menu-arrow">▶</span>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Подменю "Игры" -->
+	<div class="win98-start-menu-submenu" id="games-submenu">
+		<div class="win98-start-menu-submenu-header">
+			<span>← Игры</span>
+		</div>
+		<div class="win98-start-menu-submenu-content">
+			<div class="win98-start-menu-item" data-action="game" data-game="minesweeper">
+				<span>💣</span>
+				<span>Сапёр</span>
+			</div>
+			<div class="win98-start-menu-item" data-action="game" data-game="solitaire">
+				<span>🃏</span>
+				<span>Косынка</span>
+			</div>
+			<div class="win98-start-menu-item" data-action="game" data-game="freecell">
+				<span>🂱</span>
+				<span>Пасьянс</span>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Подменю "Блог" -->
+	<div class="win98-start-menu-submenu" id="blog-submenu">
+		<div class="win98-start-menu-submenu-header">
+			<span>← Блог</span>
+		</div>
+		<div class="win98-start-menu-submenu-content">
+			<div class="win98-start-menu-item" data-action="navigate" data-url="/blog/">
+				<span>📰</span>
+				<span>Все статьи</span>
+			</div>
+			<div class="win98-start-menu-item" data-action="navigate" data-url="/blog/?category=trading">
+				<span>📈</span>
+				<span>Трейдинг</span>
+			</div>
+			<div class="win98-start-menu-item" data-action="navigate" data-url="/blog/?category=crypto">
+				<span>₿</span>
+				<span>Криптовалюта</span>
+			</div>
+			<div class="win98-start-menu-item" data-action="navigate" data-url="/blog/?category=automation">
+				<span>🤖</span>
+				<span>Автоматизация</span>
+			</div>
+			<div class="win98-start-menu-item" data-action="navigate" data-url="/blog/?category=strategies">
+				<span>📊</span>
+				<span>Стратегии</span>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Подменю "Документы" -->
+	<div class="win98-start-menu-submenu" id="documents-submenu">
+		<div class="win98-start-menu-submenu-header">
+			<span>← Документы</span>
+		</div>
+		<div class="win98-start-menu-submenu-content">
+			<div class="win98-start-menu-item" data-action="explorer" data-path="articles">
+				<span>📁</span>
+				<span>Статьи</span>
+			</div>
+			<div class="win98-start-menu-item" data-action="explorer" data-path="archive">
+				<span>📦</span>
+				<span>Архив</span>
+			</div>
+			<div class="win98-start-menu-item" data-action="explorer" data-path="drafts">
+				<span>📝</span>
+				<span>Черновики</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+	/* Меню "Пуск" */
+	.win98-start-menu {
+		position: fixed;
+		bottom: 30px;
+		left: 0;
+		width: 200px;
+		background: var(--win98-gray-light);
+		border: 2px outset var(--win98-gray-light);
+		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+		z-index: 10000;
+		display: none;
+		font-family: var(--win98-font);
+		font-size: 11px;
+	}
+	
+	.win98-start-menu.show {
+		display: block;
+	}
+	
+	.win98-start-menu-header {
+		background: linear-gradient(to bottom, #000080 0%, #1084D0 100%);
+		color: white;
+		padding: 4px 8px;
+		font-weight: bold;
+		font-size: 11px;
+	}
+	
+	.win98-start-menu-content {
+		padding: 2px;
+	}
+	
+	.win98-start-menu-item {
+		padding: 4px 8px;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		color: var(--win98-black);
+		position: relative;
+	}
+	
+	.win98-start-menu-item:hover {
+		background: #000080;
+		color: white;
+	}
+	
+	.win98-menu-arrow {
+		margin-left: auto;
+		font-size: 8px;
+	}
+	
+	.win98-start-menu-separator {
+		height: 1px;
+		background: var(--win98-bevel-dark);
+		border-top: 1px solid var(--win98-bevel-light);
+		margin: 2px 0;
+	}
+	
+	/* Подменю */
+	.win98-start-menu-submenu {
+		position: fixed;
+		bottom: 30px;
+		left: 200px;
+		width: 200px;
+		background: var(--win98-gray-light);
+		border: 2px outset var(--win98-gray-light);
+		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+		z-index: 10001;
+		display: none;
+		font-family: var(--win98-font);
+		font-size: 11px;
+	}
+	
+	.win98-start-menu-submenu.show {
+		display: block;
+	}
+	
+	.win98-start-menu-submenu-header {
+		background: linear-gradient(to bottom, #000080 0%, #1084D0 100%);
+		color: white;
+		padding: 4px 8px;
+		font-weight: bold;
+		font-size: 11px;
+		cursor: pointer;
+	}
+	
+	.win98-start-menu-submenu-content {
+		padding: 2px;
+	}
+	
+	/* Мобильная адаптация */
+	@media (max-width: 768px) {
+		.win98-start-menu {
+			width: 100vw;
+			left: 0;
+			bottom: 0;
+			max-height: 70vh;
+			overflow-y: auto;
+		}
+		
+		.win98-start-menu-submenu {
+			width: 100vw;
+			left: 0;
+			bottom: 0;
+			max-height: 70vh;
+			overflow-y: auto;
+		}
+		
+		.win98-start-menu-item {
+			padding: 12px 16px;
+			font-size: 14px;
+		}
+	}
+</style>
+
+<script>
+	// Обработка кликов в меню "Пуск"
+	document.addEventListener('DOMContentLoaded', () => {
+		const startMenu = document.getElementById('start-menu');
+		if (!startMenu) return;
+		
+		// Показать/скрыть меню
+		const startButton = document.getElementById('start-button') || document.querySelector('.win98-start-button');
+		if (startButton) {
+			startButton.addEventListener('click', (e) => {
+				e.stopPropagation();
+				startMenu.classList.toggle('show');
+				hideAllSubmenus();
+			});
+		}
+		
+		// Закрыть меню при клике вне его
+		document.addEventListener('click', (e) => {
+			if (!startMenu.contains(e.target) && !startButton?.contains(e.target)) {
+				startMenu.classList.remove('show');
+				hideAllSubmenus();
+			}
+		});
+		
+		// Подменю
+		startMenu.querySelectorAll('[data-submenu]').forEach(item => {
+			item.addEventListener('mouseenter', (e) => {
+				const submenuId = item.getAttribute('data-submenu') + '-submenu';
+				const submenu = document.getElementById(submenuId);
+				if (submenu) {
+					hideAllSubmenus();
+					submenu.classList.add('show');
+				}
+			});
+		});
+		
+		// Действия
+		startMenu.querySelectorAll('[data-action]').forEach(item => {
+			item.addEventListener('click', (e) => {
+				const action = item.getAttribute('data-action');
+				
+				if (action === 'game') {
+					const gameId = item.getAttribute('data-game');
+					openGame(gameId);
+				} else if (action === 'navigate') {
+					const url = item.getAttribute('data-url');
+					window.location.href = url;
+				} else if (action === 'explorer') {
+					const path = item.getAttribute('data-path');
+					openExplorer(path);
+				} else if (action === 'search') {
+					openSearch();
+				} else if (action === 'help') {
+					openHelp();
+				} else if (action === 'shutdown') {
+					// Завершение работы (можно сделать переход на главную)
+					if (confirm('Завершить работу Windows?')) {
+						window.location.href = '/';
+					}
+				}
+				
+				startMenu.classList.remove('show');
+				hideAllSubmenus();
+			});
+		});
+		
+		function hideAllSubmenus() {
+			document.querySelectorAll('.win98-start-menu-submenu').forEach(submenu => {
+				submenu.classList.remove('show');
+			});
+		}
+		
+		function openGame(gameId) {
+			// Открыть игру в новом окне
+			const gameWindow = document.createElement('div');
+			gameWindow.className = 'win98-window-container active';
+			gameWindow.innerHTML = `
+				<div class="win98-window">
+					<div class="win98-titlebar">
+						<span class="win98-titlebar-text">🎮 ${getGameName(gameId)}</span>
+						<div class="win98-titlebar-buttons">
+							<div class="win98-button">_</div>
+							<div class="win98-button">□</div>
+							<div class="win98-button win98-button-close" onclick="this.closest('.win98-window-container').remove()">×</div>
+						</div>
+					</div>
+					<div class="win98-content">
+						<div id="game-container-${gameId}"></div>
+					</div>
+				</div>
+			`;
+			document.body.appendChild(gameWindow);
+			// Загрузить игру
+			loadGame(gameId);
+		}
+		
+		function getGameName(gameId) {
+			const names = {
+				minesweeper: 'Сапёр',
+				solitaire: 'Косынка',
+				freecell: 'Пасьянс',
+			};
+			return names[gameId] || 'Игра';
+		}
+		
+		function loadGame(gameId) {
+			// Загрузка игры будет реализована позже
+			const container = document.getElementById(`game-container-${gameId}`);
+			if (container) {
+				container.innerHTML = `<p>Игра "${getGameName(gameId)}" загружается...</p>`;
+			}
+		}
+		
+		function openExplorer(path) {
+			// Открыть проводник
+			console.log('Открыть проводник:', path);
+			// Будет реализовано позже
+		}
+		
+		function openSearch() {
+			// Открыть поиск
+			console.log('Открыть поиск');
+			// Будет реализовано позже
+		}
+		
+		function openHelp() {
+			// Открыть справку
+			window.open('/help/', '_blank');
+		}
+	});
+</script>
+
+
+
+

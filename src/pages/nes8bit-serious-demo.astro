@@ -1,0 +1,281 @@
+---
+// Демо-страница с балансом 70/30 (серьёзное + 8-бит)
+import CryptoArticleBanner from '../components/CryptoArticleBanner.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>8-Bit Serious Play — Демо</title>
+		<link rel="stylesheet" href="/src/styles/global.css" />
+		<link rel="stylesheet" href="/src/styles/nes8bit.css" />
+		<style>
+			/* Серьёзный контент на белом фоне (70%) */
+			.serious-content {
+				background: var(--nes-white);
+				border: 4px solid var(--nes-black);
+				padding: 30px;
+				margin-bottom: 30px;
+				box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+				max-width: 900px; /* Увеличена ширина текста */
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			.serious-content h2 {
+				font-family: 'Arial', sans-serif;
+				font-size: 1.5rem;
+				font-weight: bold;
+				color: var(--nes-black);
+				margin: 0 0 15px 0;
+				border-bottom: 2px solid var(--nes-gray);
+				padding-bottom: 10px;
+			}
+			
+			.serious-content p {
+				font-family: 'Arial', sans-serif;
+				font-size: 0.95rem; /* Уменьшен на 1px (было 1rem) */
+				line-height: 1.8; /* Увеличен межстрочный интервал (было 1.6) */
+				color: var(--nes-black);
+				margin: 0 0 20px 0; /* Больше воздуха между абзацами */
+			}
+			
+			/* Профессиональный график (заглушка) */
+			.chart-container {
+				background: var(--nes-white);
+				border: 2px solid var(--nes-gray);
+				padding: 20px;
+				margin: 20px 0;
+				min-height: 300px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-family: 'Arial', sans-serif;
+				color: var(--nes-gray);
+			}
+			
+			/* Данные в таблице */
+			.data-table {
+				width: 100%;
+				border-collapse: collapse;
+				margin: 20px 0;
+				font-family: 'Arial', sans-serif;
+			}
+			
+			.data-table th,
+			.data-table td {
+				border: 1px solid var(--nes-gray);
+				padding: 10px;
+				text-align: left;
+			}
+			
+			.data-table th {
+				background: var(--nes-gray);
+				color: var(--nes-white);
+				font-weight: bold;
+			}
+			
+			.data-table td {
+				background: var(--nes-white);
+			}
+			
+			/* 8-бит акценты (30% стиля) */
+			.nes8bit-accent {
+				background: var(--crypto-bitcoin-gradient);
+				border: 3px solid var(--nes-black);
+				padding: 15px;
+				margin: 20px 0;
+				font-family: var(--nes-font);
+				font-size: 0.8rem;
+				text-align: center;
+				box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+			}
+		</style>
+	</head>
+	<body class="nes8bit-theme">
+		<div class="nes8bit-container">
+			<!-- HEADER с 8-бит стилем (30%) -->
+			<div class="nes8bit-header">
+				<h1>📊 {SITE_TITLE}</h1>
+				<p>Market Lab Archive | Серьёзный анализ в ретро-стиле</p>
+			</div>
+			
+			<!-- NAVIGATION с 8-бит стилем (30%) -->
+			<nav class="nes8bit-nav">
+				<a href="#archive">📁 Архив</a>
+				<a href="#strategies">📊 Стратегии</a>
+				<a href="#signals">⚡ Сигналы</a>
+				<a href="#backtests">📈 Бектесты</a>
+			</nav>
+			
+			<!-- БАННЕР СТАТЬИ (30% стиля, 70% контента) -->
+			<CryptoArticleBanner
+				title="RVI Divergence Signal | BTC/USDT"
+				subtitle="Market Lab Archive #2847"
+				archiveNumber="2847"
+				category="rvi"
+				profit="+12.4% в 4 часа"
+				successRate="73% за 30 дней"
+			/>
+			
+			<!-- СЕРЬЁЗНЫЙ КОНТЕНТ (70%) -->
+			<article class="serious-content">
+				<h2>Анализ RVI Divergence на BTC/USDT</h2>
+				
+				<p>
+					<strong>Текущий RVI:</strong> 42.5 (Neutral Zone)<br>
+					<strong>Предыдущий сигнал:</strong> +12.4% в 4 часа<br>
+					<strong>Успешность:</strong> 73% за последние 30 дней
+				</p>
+				
+				<!-- Профессиональный график (70% страницы) -->
+				<div class="chart-container">
+					<div style="text-align: center;">
+						<p style="font-size: 1.2rem; margin-bottom: 10px;">📊 Профессиональный график RVI</p>
+						<p style="font-size: 0.9rem; color: var(--nes-gray);">
+							Здесь будет реальный график из TradingView или другой платформы
+						</p>
+						<p style="font-size: 0.9rem; color: var(--nes-gray); margin-top: 10px;">
+							BTC/USDT | 4H Timeframe | RVI(14) + Stochastic(14,3,3)
+						</p>
+					</div>
+				</div>
+				
+				<h2>Детальный анализ</h2>
+				
+				<p>
+					RVI (Relative Vigor Index) показал классический паттерн разворота на уровне 0.45. 
+					Это произошло после формирования двойного дна на графике BTC/USDT.
+				</p>
+				
+				<p>
+					<strong>Ключевые уровни:</strong>
+				</p>
+				
+				<ul style="font-family: 'Arial', sans-serif; line-height: 1.8;">
+					<li><strong>Support:</strong> $58,400 - $58,650</li>
+					<li><strong>Resistance:</strong> $61,200 - $61,500</li>
+					<li><strong>Entry:</strong> $58,400 - $58,650 (Buy)</li>
+					<li><strong>Stop Loss:</strong> $57,800</li>
+					<li><strong>Take Profit:</strong> $61,200 (первая цель), $63,000 (вторая цель)</li>
+				</ul>
+				
+				<!-- Таблица данных -->
+				<table class="data-table">
+					<thead>
+						<tr>
+							<th>Параметр</th>
+							<th>Значение</th>
+							<th>Статус</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>RVI (14)</td>
+							<td>42.5</td>
+							<td class="crypto-price-up">Neutral → Bullish</td>
+						</tr>
+						<tr>
+							<td>Stochastic (14,3,3)</td>
+							<td>28.3</td>
+							<td class="crypto-price-up">Oversold → Recovery</td>
+						</tr>
+						<tr>
+							<td>Volume</td>
+							<td>+15.2%</td>
+							<td class="crypto-price-up">Increasing</td>
+						</tr>
+						<tr>
+							<td>Previous Signal</td>
+							<td>+12.4%</td>
+							<td class="crypto-price-up">Success</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<h2>Рекомендация</h2>
+				
+				<p>
+					<strong>Buy на уровне $58,400 - $58,650</strong> с целью $61,200 (первая цель) и $63,000 (вторая цель).
+					Stop Loss установить на уровне $57,800.
+				</p>
+				
+				<p>
+					<strong>Риск-менеджмент:</strong> Не более 2% от депозита на одну сделку.
+				</p>
+				
+				<!-- 8-бит акцент (30% стиля) -->
+				<div class="nes8bit-accent">
+					⭐ LEVEL UP YOUR TRADING | ARCHIVE ENTRY #2847
+				</div>
+				
+				<!-- Источники и ссылки -->
+				<div style="margin-top: 30px; padding-top: 20px; border-top: 2px solid var(--nes-gray);">
+					<p style="font-size: 0.9rem; color: var(--nes-gray);">
+						<strong>Источники:</strong>
+					</p>
+					<ul style="font-size: 0.9rem; color: var(--nes-gray); line-height: 1.8;">
+						<li>TradingView: BTC/USDT 4H Chart</li>
+						<li>Bybit Exchange: Real-time data</li>
+						<li>Market Lab Archive: Signal #2847</li>
+					</ul>
+				</div>
+			</article>
+			
+			<!-- ВТОРАЯ СТАТЬЯ -->
+			<CryptoArticleBanner
+				title="Chaikin Oscillator Strategy"
+				subtitle="Advanced Trading Guide"
+				category="chaikin"
+				profit="+87% успешных сделок"
+			/>
+			
+			<article class="serious-content">
+				<h2>Chaikin Oscillator: Секретное оружие</h2>
+				
+				<p>
+					Большинство трейдеров игнорируют Chaikin Oscillator, но это один из лучших индикаторов 
+					для определения разворотов тренда. Вот пошаговый гайд по использованию Chaikin для криптотрейдинга.
+				</p>
+				
+				<div class="chart-container">
+					<div style="text-align: center;">
+						<p style="font-size: 1.2rem; margin-bottom: 10px;">📊 График Chaikin Oscillator</p>
+						<p style="font-size: 0.9rem; color: var(--nes-gray);">
+							Здесь будет реальный график с индикатором Chaikin
+						</p>
+					</div>
+				</div>
+				
+				<h2>Как использовать Chaikin</h2>
+				
+				<ol style="font-family: 'Arial', sans-serif; line-height: 1.8;">
+					<li><strong>Настройка:</strong> Chaikin(3,10) на графике</li>
+					<li><strong>Сигнал на покупку:</strong> Пересечение нулевой линии снизу вверх</li>
+					<li><strong>Сигнал на продажу:</strong> Пересечение нулевой линии сверху вниз</li>
+					<li><strong>Подтверждение:</strong> Объединять с Volume и Price Action</li>
+				</ol>
+				
+				<div class="nes8bit-accent">
+					⚡ ADVANCED STRATEGY | SUCCESS RATE: 87%
+				</div>
+			</article>
+			
+			<!-- FOOTER с 8-бит стилем (30%) -->
+			<footer class="nes8bit-footer">
+				<p>
+					© 2025 {SITE_TITLE} | 
+					<span class="nes8bit-pixel-icon">🎮</span> 
+					Serious Play | Market Lab Archive
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
+
+
+
+
