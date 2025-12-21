@@ -130,18 +130,30 @@ html {
 	text-size-adjust: 100%;
 }
 
+/* RESET - Убить браузерные дефолты */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0 !important;
+	padding: 0;
+}
+
 /* Шрифт: Lato (приятный для чтения, мультиязычный) */
 body {
 	font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-	margin: 0;
-	padding: 0;
+	margin: 0 !important; /* Убить браузерный margin */
+	padding: 0 !important; /* Временно, padding добавляется через container */
 	text-align: left;
 	background: var(--bg-primary);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: var(--text-primary);
 	font-size: 16px; /* Фиксированный размер (как у Bybit) */
-	line-height: 1.6; /* Оптимальное соотношение */
+	line-height: 1.5; /* Исправлено с 1.6 на 1.5 - убирает invisible gaps */
 	font-weight: 400; /* Regular - не тонкий, не жирный */
 	transition: background-color var(--transition-smooth, 0.4s cubic-bezier(0.4, 0, 0.2, 1)), 
 	            color var(--transition-smooth, 0.4s cubic-bezier(0.4, 0, 0.2, 1));

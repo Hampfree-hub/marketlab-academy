@@ -40,9 +40,9 @@ const icon = categoryIcons[category] || categoryIcons.general;
 const gradient = categoryColors[category] || categoryColors.general;
 ---
 
-<div class="crypto-article-banner" style={`background: ${gradient};`} role="banner" aria-label={`Article banner: ${title}`}>
+<div class="crypto-article-banner" style={`background: ${gradient};`}>
 	<!-- 8-бит рамка (30% стиля) -->
-	<div class="crypto-banner-frame" aria-hidden="true">
+	<div class="crypto-banner-frame">
 		<div class="crypto-banner-corner crypto-banner-corner-tl"></div>
 		<div class="crypto-banner-corner crypto-banner-corner-tr"></div>
 		<div class="crypto-banner-corner crypto-banner-corner-bl"></div>
@@ -52,7 +52,7 @@ const gradient = categoryColors[category] || categoryColors.general;
 	<!-- Серьёзный контент (70%) -->
 	<div class="crypto-banner-content">
 		<div class="crypto-banner-header">
-			<span class="crypto-banner-icon" aria-hidden="true">{icon}</span>
+			<span class="crypto-banner-icon">{icon}</span>
 			<div class="crypto-banner-title-group">
 				<h1 class="crypto-banner-title">{title}</h1>
 				{subtitle && <p class="crypto-banner-subtitle">{subtitle}</p>}
@@ -87,27 +87,14 @@ const gradient = categoryColors[category] || categoryColors.general;
 <style>
 	.crypto-article-banner {
 		position: relative;
-		border: var(--nes-border-width, 2px) solid var(--nes-black);
-		border-radius: 4px;
+		border: 4px solid var(--nes-black);
 		padding: 30px;
 		margin-bottom: 30px;
-		/* БЕЗ теней - плоские элементы */
+		box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
 		min-height: 200px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-	}
-
-	/* Focus states для доступности */
-	.crypto-article-banner:focus-within {
-		outline: 3px solid var(--nes-blue);
-		outline-offset: 2px;
-		/* БЕЗ теней - плоские элементы */
-	}
-
-	.crypto-article-banner:focus-within:not(:focus-visible) {
-		outline: none;
-		/* БЕЗ теней - плоские элементы */
 	}
 	
 	/* 8-бит рамка (30% стиля) */
@@ -124,8 +111,7 @@ const gradient = categoryColors[category] || categoryColors.general;
 		position: absolute;
 		width: 20px;
 		height: 20px;
-		border: var(--nes-border-width, 2px) solid var(--nes-black);
-		border-radius: 4px; /* Сглаженные углы */
+		border: 2px solid var(--nes-black);
 		background: var(--nes-white);
 		opacity: 0.3;
 	}
@@ -204,7 +190,6 @@ const gradient = categoryColors[category] || categoryColors.general;
 		background: rgba(0, 0, 0, 0.2);
 		padding: 4px 8px;
 		border: 1px solid rgba(255, 255, 255, 0.3);
-		border-radius: 4px; /* Сглаженные углы */
 	}
 	
 	.crypto-banner-stats {
@@ -219,7 +204,6 @@ const gradient = categoryColors[category] || categoryColors.general;
 		align-items: center;
 		gap: 8px;
 		background: rgba(255, 255, 255, 0.15);
-		border-radius: 4px; /* Сглаженные углы */
 		padding: 8px 12px;
 		border: 2px solid rgba(255, 255, 255, 0.3);
 	}
@@ -258,35 +242,6 @@ const gradient = categoryColors[category] || categoryColors.general;
 			flex-direction: column;
 			gap: 10px;
 		}
-	}
-
-	/* ТЁМНАЯ ТЕМА: CryptoArticleBanner */
-	html.dark-theme .crypto-article-banner {
-		border-color: rgba(0, 255, 65, 0.4);
-	}
-
-	html.dark-theme .crypto-banner-title {
-		color: var(--nes-neon-green, #00ff41);
-		text-shadow: 
-			0 0 10px rgba(0, 255, 65, 0.5),
-			2px 2px 0px rgba(0, 0, 0, 0.8);
-	}
-
-	html.dark-theme .crypto-banner-subtitle {
-		color: var(--nes-neon-cyan, #00ffff);
-	}
-
-	html.dark-theme .crypto-banner-archive {
-		color: var(--nes-text-muted, #999999);
-		border-color: rgba(0, 255, 65, 0.4);
-	}
-
-	html.dark-theme .crypto-stat-label {
-		color: var(--nes-text-light, #e5e5e5);
-	}
-
-	html.dark-theme .crypto-stat-value {
-		color: var(--nes-neon-green, #00ff41);
 	}
 </style>
 

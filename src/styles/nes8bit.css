@@ -23,19 +23,6 @@
 	--crypto-dark: #1A1A2E;          /* Тёмный фон */
 	--crypto-light: #F5F5F5;         /* Светлый текст */
 	
-	/* Цветовая схема для трейдинга (из гайда) */
-	--bullish-light: #228B22;       /* Зелёный (бычий тренд) - приглушённый */
-	--bullish-main: #228B22;        /* Основной зелёный */
-	--bullish-dark: #006400;        /* Тёмно-зелёный */
-	
-	--bearish-light: #E53B2C;       /* Красный (медвежий тренд) */
-	--bearish-main: #E53B2C;        /* Основной красный */
-	--bearish-dark: #CC0000;        /* Тёмно-красный */
-	
-	--neutral-light: #FFD700;       /* Жёлтый (нейтральный/флэт) */
-	--neutral-main: #FFD700;        /* Основной жёлтый */
-	--neutral-dark: #CC9900;        /* Тёмно-жёлтый */
-	
 	/* Градиенты для фонов - Приглушённые */
 	--nes-sky-gradient: linear-gradient(to bottom, #006699 0%, #004466 100%); /* Более тёмный градиент */
 	--nes-grass-gradient: linear-gradient(to bottom, #1a5a1a 0%, #003300 100%);
@@ -49,27 +36,12 @@
 	/* Шрифты 8-бит */
 	--nes-font: 'Press Start 2P', 'Courier New', monospace;
 	--nes-font-size: 8px;
-	
-	/* Единая толщина линий - унификация всех рамок, границ, разделителей */
-	/* КРИТИЧЕСКИ ВАЖНО: Все линии (border, outline, разделители) должны использовать эту переменную */
-	--nes-border-width: 2px; /* Унифицированная толщина для всех линий (beveling) */
-	
-	/* Цвета для beveling (скошенные края) - создание 3D объёма */
-	--nes-bevel-light: #FFFFFF; /* Светлый край (верхний-левый) - источник света */
-	--nes-bevel-dark: #000000; /* Тёмный край (нижний-правый) - тень */
-	
-	/* Базовые значения спейсинга (все кратны 4px) - канон 8-битного стиля */
-	--nes-spacing-xs: 4px;   /* Минимальный отступ (между иконкой и текстом) */
-	--nes-spacing-sm: 8px;   /* Малый отступ (между кнопками в группе) */
-	--nes-spacing-md: 16px;  /* Средний отступ (padding внутри карточки) */
-	--nes-spacing-lg: 24px;  /* Большой отступ (между секциями) */
-	--nes-spacing-xl: 32px;  /* Очень большой отступ (между крупными блоками) */
 }
 
 /* Импорт шрифта */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/* Body 8-Bit Theme - Приглушённые цвета (светлая тема) */
+/* Body 8-Bit Theme - Приглушённые цвета */
 body.nes8bit-theme {
 	background-color: #1a5a1a; /* Приглушённый зелёный (темнее на пол-тона) */
 	background-image: 
@@ -81,54 +53,10 @@ body.nes8bit-theme {
 			rgba(0, 0, 0, 0.15) 64px
 		);
 	font-family: var(--nes-font);
-	margin: 0;
+	margin: 0 !important; /* Убить браузерный margin */
 	padding: 30px; /* Отступы сверху и снизу 30px (как есть), по бокам 30px */
 	min-height: 100vh;
-}
-
-/* ТЁМНАЯ ТЕМА: Инверсная цветовая схема (как негатив проявленной плёнки) */
-html.dark-theme body.nes8bit-theme {
-	background-color: #0a1a0a; /* Очень тёмный зелёный (инвертированный) */
-	background-image: 
-		repeating-linear-gradient(
-			90deg, 
-			transparent, 
-			transparent 32px, 
-			rgba(34, 139, 34, 0.1) 32px, /* Неоновый зелёный (инвертированный) */
-			rgba(34, 139, 34, 0.1) 64px
-		);
-	color: #e5e5e5; /* Светло-серый текст (инвертированный) */
-}
-
-/* Тёмная тема: инвертированные beveling цвета */
-html.dark-theme {
-	--nes-bevel-light: #4a4a4a; /* Светлый край для тёмной темы (инвертированный) */
-	--nes-bevel-dark: #ffffff; /* Тёмный край для тёмной темы (инвертированный, белый на тёмном) */
-	
-	/* Инвертированные цвета фона */
-	--nes-bg-dark: #0d1a0d; /* Очень тёмный фон (почти чёрный с зелёным оттенком) */
-	--nes-bg-card: #1a2a1a; /* Тёмный фон карточек */
-	--nes-text-light: #e5e5e5; /* Светлый текст */
-	--nes-text-muted: #999999; /* Приглушённый текст */
-	
-	/* Неоновые цвета для киберпанк-эффекта (как мониторы терминалов) */
-	--nes-neon-green: #00ff41; /* Яркий неоновый зелёный */
-	--nes-neon-cyan: #00ffff; /* Неоновый циан */
-	--nes-neon-blue: #0080ff; /* Неоновый синий */
-	
-	/* Градиенты для тёмной темы */
-	--nes-sky-gradient-dark: linear-gradient(to bottom, #001122 0%, #000811 100%); /* Тёмный градиент */
-	--nes-grass-gradient-dark: linear-gradient(to bottom, #0a1a0a 0%, #050d05 100%);
-}
-
-/* Глобальное применение pixelated rendering для всех изображений в 8-битной теме */
-/* Взято из примеров: The Eight Arms 8-bit Games, NES.css */
-body.nes8bit-theme img,
-body.nes8bit-theme picture,
-body.nes8bit-theme picture img {
-	image-rendering: pixelated;
-	image-rendering: -moz-crisp-edges;
-	image-rendering: crisp-edges;
+	line-height: 1.5; /* Исправлено: убирает invisible gaps (было 1.6 или отсутствовало) */
 }
 
 /* Container */
@@ -138,11 +66,6 @@ body.nes8bit-theme picture img {
 	/* Отступы слева и справа для баланса (боковая панель справа) */
 	padding-left: 60px; /* Увеличено с 40px для более комфортного вида */
 	padding-right: 60px; /* Стандартный отступ (sidebar прилипает к краю, не отрывается) */
-}
-
-/* ТЁМНАЯ ТЕМА: Container - добавляем свечение */
-html.dark-theme .nes8bit-container {
-	color: var(--nes-text-light, #e5e5e5);
 }
 
 /* Планшеты (средние экраны) */
@@ -163,7 +86,7 @@ html.dark-theme .nes8bit-container {
 	
 	.nes8bit-nav a {
 		font-size: 0.6rem; /* Уменьшаем шрифт для компактности (было 0.7rem) */
-		padding: var(--nes-spacing-xs, 4px) var(--nes-spacing-sm, 8px); /* 4px 8px - кратно 4px */
+		padding: 5px 10px; /* Компактный padding (было 8px 14px) */
 		height: 24px; /* Компактная высота (меньше чем на десктопе 32px) */
 		margin: 0; /* Убираем margin, используем padding родителя для отступов */
 		min-width: 80px; /* Минимальная ширина для читаемости */
@@ -209,12 +132,11 @@ html.dark-theme .nes8bit-container {
 /* Header - как в NES */
 .nes8bit-header {
 	background: var(--nes-sky-gradient);
-	border: var(--nes-border-width, 2px) solid var(--nes-black);
-	border-radius: 4px;
+	border: 3px solid var(--nes-black); /* Более лаконичная рамка */
 	padding: 40px;
 	text-align: center;
 	margin-bottom: 20px; /* Уменьшенный отступ между блоками (было 30px) */
-	/* БЕЗ теней - плоские элементы */
+	box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2); /* Унифицированная тень (как у других блоков) */
 	color: var(--nes-yellow);
 	position: relative;
 }
@@ -258,28 +180,6 @@ html.dark-theme .nes8bit-container {
 	z-index: 1;
 }
 
-/* ТЁМНАЯ ТЕМА: Header */
-html.dark-theme .nes8bit-header {
-	background: var(--nes-sky-gradient-dark, linear-gradient(to bottom, #001122 0%, #000811 100%));
-	border-color: var(--nes-neon-green, #00ff41); /* Неоновая зелёная рамка */
-	color: var(--nes-neon-green, #00ff41);
-}
-
-html.dark-theme .nes8bit-header h1 {
-	color: var(--nes-neon-green, #00ff41);
-	text-shadow: 
-		0 0 10px rgba(0, 255, 65, 0.5), /* Неоновое свечение */
-		3px 3px 0px rgba(0, 0, 0, 0.8),
-		6px 6px 0px rgba(0, 0, 0, 0.4);
-}
-
-html.dark-theme .nes8bit-header p {
-	color: var(--nes-neon-cyan, #00ffff);
-	text-shadow: 
-		0 0 8px rgba(0, 255, 255, 0.4),
-		2px 2px 0px rgba(0, 0, 0, 0.8);
-}
-
 /* Content Wrapper */
 .nes8bit-content-wrapper {
 	display: grid;
@@ -302,67 +202,12 @@ html.dark-theme .nes8bit-header p {
 /* Blog Post - Улучшенная версия */
 .nes8bit-post {
 	background: var(--nes-white);
-	border: var(--nes-border-width, 2px) solid var(--nes-black);
-	border-radius: 4px;
+	border: 3px solid var(--nes-black); /* Более лаконичная рамка вместо двойной */
 	padding: 20px;
 	margin-bottom: 20px;
-	/* БЕЗ теней - плоские элементы */
+	box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
 	position: relative;
 	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* ТЁМНАЯ ТЕМА: Blog Post */
-html.dark-theme .nes8bit-post {
-	background: var(--nes-bg-card, #1a2a1a);
-	border-color: rgba(0, 255, 65, 0.3); /* Приглушённый неоновый зелёный */
-	color: var(--nes-text-light, #e5e5e5);
-}
-
-html.dark-theme .nes8bit-post h2 {
-	color: var(--nes-neon-green, #00ff41);
-	border-bottom-color: rgba(0, 255, 65, 0.4);
-}
-
-html.dark-theme .nes8bit-post p {
-	color: var(--nes-text-light, #e5e5e5);
-}
-
-html.dark-theme .nes8bit-post-date {
-	color: var(--nes-text-muted, #999999);
-}
-
-/* ТЁМНАЯ ТЕМА: Навигация */
-html.dark-theme .nes8bit-nav {
-	background: var(--nes-bg-card, #1a2a1a);
-	border-color: rgba(0, 255, 65, 0.3);
-}
-
-html.dark-theme .nes8bit-nav a {
-	background: linear-gradient(135deg, rgba(0, 255, 65, 0.2) 0%, rgba(0, 255, 255, 0.2) 100%);
-	color: var(--nes-neon-green, #00ff41);
-	border-color: rgba(0, 255, 65, 0.4);
-}
-
-html.dark-theme .nes8bit-nav a:hover {
-	background: var(--nes-neon-green, #00ff41);
-	color: var(--nes-black);
-	box-shadow: 0 0 10px rgba(0, 255, 65, 0.5); /* Неоновое свечение */
-}
-
-/* ТЁМНАЯ ТЕМА: Серьёзный контент */
-html.dark-theme .serious-content {
-	background: var(--nes-bg-card, #1a2a1a);
-	border-color: rgba(0, 255, 65, 0.3);
-	color: var(--nes-text-light, #e5e5e5);
-}
-
-html.dark-theme .serious-content h2 {
-	color: var(--nes-neon-green, #00ff41);
-	border-bottom-color: rgba(0, 255, 65, 0.4);
-}
-
-html.dark-theme .serious-content p {
-	color: var(--nes-text-light, #e5e5e5);
 }
 
 .nes8bit-post::before {
@@ -379,8 +224,8 @@ html.dark-theme .serious-content p {
 }
 
 .nes8bit-post:hover {
-	transform: translateY(-1px); /* Небольшое выдвижение вверх (как у кнопок темы и языка) */
-	/* БЕЗ теней - плоские элементы */
+	transform: translateY(-4px);
+	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
 }
 
 .nes8bit-post:hover::before {
@@ -391,7 +236,7 @@ html.dark-theme .serious-content p {
 	color: var(--nes-red);
 	margin: 0 0 10px 0;
 	font-size: 1.2rem;
-	border-bottom: var(--nes-border-width, 2px) dashed var(--nes-black);
+	border-bottom: 3px dashed var(--nes-black);
 	padding-bottom: 10px;
 	text-transform: uppercase;
 	font-family: var(--nes-font);
@@ -412,15 +257,11 @@ html.dark-theme .serious-content p {
 	font-family: var(--nes-font);
 }
 
-/* 8-Bit Button - Унифицированная версия с beveling (скошенные края для объёма) */
+/* 8-Bit Button - Улучшенная версия */
 .nes8bit-btn {
 	background: var(--crypto-bitcoin-gradient);
-	/* Beveling: светлый верхний-левый, тёмный нижний-правый для 3D объёма */
-	border-top: var(--nes-border-width, 2px) solid var(--nes-bevel-light);
-	border-left: var(--nes-border-width, 2px) solid var(--nes-bevel-light);
-	border-bottom: var(--nes-border-width, 2px) solid var(--nes-bevel-dark);
-	border-right: var(--nes-border-width, 2px) solid var(--nes-bevel-dark);
-	border-radius: 4px;
+	border: 3px solid var(--nes-black);
+	border-bottom-width: 2px; /* Нижняя граница стандартная (как у nav) */
 	padding: 12px 24px;
 	font-family: var(--nes-font);
 	font-size: 0.7rem;
@@ -430,36 +271,43 @@ html.dark-theme .serious-content p {
 	text-transform: uppercase;
 	color: var(--nes-black);
 	position: relative;
-	/* БЕЗ теней - объём создаётся через beveling */
+	box-shadow: 
+		0 2px 0 var(--nes-black), /* Стандартная тень (как у nav) */
+		0 6px 10px rgba(0, 0, 0, 0.3);
 	text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
 }
 
 .nes8bit-btn:hover {
-	background: var(--nes-yellow); /* Меняем цвет на жёлтый при hover */
-	transform: translateY(-1px); /* Чуть выезжает вверх */
-	/* Beveling сохраняется для объёма */
+	transform: translateY(-2px);
+	box-shadow: 
+		0 4px 0 var(--nes-black), /* Стандартная тень при hover (как у nav) */
+		0 8px 15px rgba(0, 0, 0, 0.4);
+	background: linear-gradient(135deg, #FFE135 0%, #FFB347 100%);
 }
 
 .nes8bit-btn:active {
-	transform: translateY(1px); /* Кнопка прожимается вниз */
-	/* Инвертируем beveling при нажатии (вдавленная кнопка) */
-	border-top: var(--nes-border-width, 2px) solid var(--nes-bevel-dark);
-	border-left: var(--nes-border-width, 2px) solid var(--nes-bevel-dark);
-	border-bottom: var(--nes-border-width, 2px) solid var(--nes-bevel-light);
-	border-right: var(--nes-border-width, 2px) solid var(--nes-bevel-light);
-	transition: transform 0.05s ease, border 0.05s ease;
+	transform: translateY(1px); /* Кнопка прожимается вниз (как у nav) */
+	box-shadow: 
+		0 1px 0 var(--nes-black), /* Нижняя тень остаётся на месте! */
+		0 2px 4px rgba(0, 0, 0, 0.2);
+	border-bottom-width: 2px; /* Сохраняем нижнюю границу */
+	transition: transform 0.05s ease, box-shadow 0.05s ease, border-bottom-width 0.05s ease;
 }
 
 /* Focus states для кнопок */
 .nes8bit-btn:focus {
-	outline: var(--nes-border-width, 2px) solid var(--nes-yellow);
+	outline: 3px solid var(--nes-yellow);
 	outline-offset: 2px;
-	/* БЕЗ теней - плоские кнопки */
+	box-shadow: 
+		0 4px 0 var(--nes-black),
+		0 0 0 4px rgba(255, 215, 0, 0.3);
 }
 
 .nes8bit-btn:focus:not(:focus-visible) {
 	outline: none;
-	/* БЕЗ теней - плоские кнопки */
+	box-shadow: 
+		0 4px 0 var(--nes-black),
+		0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 .nes8bit-btn-primary {
@@ -469,9 +317,7 @@ html.dark-theme .serious-content p {
 }
 
 .nes8bit-btn-primary:hover {
-	background: var(--nes-yellow); /* Унифицированный hover - жёлтый цвет */
-	transform: translateY(-1px); /* Чуть выезжает вверх */
-	/* БЕЗ теней - плоские кнопки */
+	background: linear-gradient(135deg, #7A8FF0 0%, #5B6FD8 100%);
 }
 
 .nes8bit-btn-success {
@@ -481,9 +327,7 @@ html.dark-theme .serious-content p {
 }
 
 .nes8bit-btn-success:hover {
-	background: var(--nes-yellow); /* Унифицированный hover - жёлтый цвет */
-	transform: translateY(-1px); /* Чуть выезжает вверх */
-	/* БЕЗ теней - плоские кнопки */
+	background: linear-gradient(135deg, #00E6B8 0%, #00C9A7 100%);
 }
 
 .nes8bit-btn-danger {
@@ -493,18 +337,15 @@ html.dark-theme .serious-content p {
 }
 
 .nes8bit-btn-danger:hover {
-	background: var(--nes-yellow); /* Унифицированный hover - жёлтый цвет */
-	transform: translateY(-1px); /* Чуть выезжает вверх */
-	/* БЕЗ теней - плоские кнопки */
+	background: linear-gradient(135deg, #FF6666 0%, #DD0000 100%);
 }
 
 /* Sidebar */
 .nes8bit-sidebar {
 	background: var(--nes-yellow);
-	border: var(--nes-border-width, 2px) solid var(--nes-black);
-	border-radius: 4px; /* Сглаженные углы */
+	border: 3px solid var(--nes-black); /* Более лаконичная рамка вместо двойной */
 	padding: 20px;
-	/* БЕЗ теней - плоские элементы */
+	box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
 	height: fit-content;
 	position: sticky;
 	top: 20px;
@@ -515,7 +356,7 @@ html.dark-theme .serious-content p {
 	color: var(--nes-red);
 	font-size: 0.9rem;
 	text-align: center;
-	border-bottom: var(--nes-border-width, 1px) solid var(--nes-black);
+	border-bottom: 3px solid var(--nes-black);
 	padding-bottom: 10px;
 	font-family: var(--nes-font);
 	text-transform: uppercase;
@@ -529,12 +370,7 @@ html.dark-theme .serious-content p {
 
 .nes8bit-sidebar li {
 	background: var(--nes-white);
-	/* Beveling для объёма */
-	border-top: var(--nes-border-width, 2px) solid var(--nes-bevel-light);
-	border-left: var(--nes-border-width, 2px) solid var(--nes-bevel-light);
-	border-bottom: var(--nes-border-width, 2px) solid var(--nes-bevel-dark);
-	border-right: var(--nes-border-width, 2px) solid var(--nes-bevel-dark);
-	border-radius: 4px; /* Сглаженные углы */
+	border: 2px solid var(--nes-black);
 	padding: 10px;
 	margin-bottom: 10px;
 	font-size: 0.7rem;
@@ -546,34 +382,25 @@ html.dark-theme .serious-content p {
 }
 
 .nes8bit-sidebar li:hover {
-	background: var(--nes-yellow); /* Унифицированный hover - жёлтый цвет */
+	background: var(--crypto-bitcoin-gradient);
 	color: var(--nes-black);
-	transform: translateY(-1px); /* Чуть выезжает вверх */
-	/* Beveling сохраняется */
-}
-
-.nes8bit-sidebar li:active {
-	transform: translateY(1px); /* Кнопка прожимается вниз */
-	/* Инвертируем beveling при нажатии */
-	border-top: var(--nes-border-width, 2px) solid var(--nes-bevel-dark);
-	border-left: var(--nes-border-width, 2px) solid var(--nes-bevel-dark);
-	border-bottom: var(--nes-border-width, 2px) solid var(--nes-bevel-light);
-	border-right: var(--nes-border-width, 2px) solid var(--nes-bevel-light);
-	transition: transform 0.05s ease, border 0.05s ease;
+	transform: translate(-3px, -3px);
+	box-shadow: 
+		3px 3px 0px var(--nes-black),
+		5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
 	.nes8bit-footer {
 		background: var(--nes-sky-gradient);
-		border: var(--nes-border-width, 2px) solid var(--nes-black);
-		border-radius: 4px;
+		border: 3px solid var(--nes-black); /* Более лаконичная рамка */
 		padding: 15px 20px 20px 20px; /* Увеличен padding-bottom для закрытия gap при hover кнопок */
 		text-align: center;
 		margin-top: 20px; /* Уменьшенный отступ между блоками (было 30px) */
 		margin-bottom: 0; /* Убираем margin-bottom - body padding-bottom уже создаёт отступ снизу */
 		color: var(--nes-yellow);
 		font-size: 0.8rem;
-		/* БЕЗ теней - плоские элементы */
+		box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
 		font-family: var(--nes-font);
 		display: flex; /* Для вертикального центрирования */
 		align-items: center; /* Вертикальное центрирование */
@@ -614,15 +441,12 @@ html.dark-theme .serious-content p {
 		width: 38px; /* Уменьшенный размер для более компактного вида (как в sidebar) */
 		height: 38px; /* Уменьшенный размер для более компактного вида (как в sidebar) */
 		background: var(--crypto-ethereum-gradient);
-		/* Beveling для объёма */
-		border-top: var(--nes-border-width, 2px) solid var(--nes-bevel-light);
-		border-left: var(--nes-border-width, 2px) solid var(--nes-bevel-light);
-		border-bottom: var(--nes-border-width, 2px) solid var(--nes-bevel-dark);
-		border-right: var(--nes-border-width, 2px) solid var(--nes-bevel-dark);
-		border-radius: 4px;
+		border: 2px solid var(--nes-black);
+		border-bottom: 2px solid var(--nes-black); /* Явно указываем чёрный border-bottom */
+		border-radius: 8px;
 		text-decoration: none;
 		transition: all 0.15s ease;
-		/* БЕЗ теней - объём создаётся через beveling */
+		box-shadow: 0 2px 0 var(--nes-black);
 		cursor: pointer;
 		font-size: 1.1rem; /* Уменьшенный размер иконки для более компактного вида (как в sidebar) */
 		position: relative; /* Для правильного позиционирования */
@@ -630,30 +454,28 @@ html.dark-theme .serious-content p {
 	}
 	
 	.footer-social-link:hover {
-		background: var(--nes-yellow); /* Унифицированный hover - жёлтый цвет */
-		transform: translateY(-1px); /* Чуть выезжает вверх */
-		/* Beveling сохраняется */
+		background: var(--crypto-bitcoin-gradient);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 0 var(--nes-black), 0 0 10px rgba(255, 215, 0, 0.4);
+		/* Явно указываем чёрный border-bottom, чтобы не было зелёной полосы */
+		border-bottom: 2px solid var(--nes-black) !important; /* Принудительно чёрный border */
 	}
 	
 	.footer-social-link:active {
-		transform: translateY(1px); /* Кнопка прожимается вниз */
-		/* Инвертируем beveling при нажатии */
-		border-top: var(--nes-border-width, 2px) solid var(--nes-bevel-dark);
-		border-left: var(--nes-border-width, 2px) solid var(--nes-bevel-dark);
-		border-bottom: var(--nes-border-width, 2px) solid var(--nes-bevel-light);
-		border-right: var(--nes-border-width, 2px) solid var(--nes-bevel-light);
-		transition: transform 0.05s ease, border 0.05s ease;
+		transform: translateY(1px);
+		box-shadow: 0 1px 0 var(--nes-black);
+		transition: transform 0.05s ease, box-shadow 0.05s ease;
 	}
 	
 	.footer-social-link:focus {
-		outline: var(--nes-border-width, 2px) solid var(--nes-yellow);
+		outline: 3px solid var(--nes-yellow);
 		outline-offset: 2px;
-		/* БЕЗ теней - объём создаётся через beveling */
+		box-shadow: 0 2px 0 var(--nes-black), 0 0 0 4px rgba(255, 215, 0, 0.3);
 	}
 	
 	.footer-social-link:focus:not(:focus-visible) {
 		outline: none;
-		/* БЕЗ теней - плоские кнопки */
+		box-shadow: 0 2px 0 var(--nes-black);
 	}
 	
 	/* Мобильная адаптация для footer */
@@ -678,8 +500,7 @@ html.dark-theme .serious-content p {
 /* Navigation */
 .nes8bit-nav {
 	background: var(--nes-white);
-	border: var(--nes-border-width, 2px) solid var(--nes-black);
-	border-radius: 4px;
+	border: 3px solid var(--nes-black); /* Более лаконичная рамка */
 	padding: 12px 12px; /* Увеличенные отступы: 12px сверху/снизу, 12px слева/справа */
 	margin-bottom: 20px; /* Уменьшенный отступ между блоками (было 30px) */
 	display: flex;
@@ -687,7 +508,7 @@ html.dark-theme .serious-content p {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center; /* Центрирование по вертикали */
-	/* БЕЗ теней - плоские элементы */
+	box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2); /* Унифицированная тень (как у других блоков) */
 	position: sticky;
 	top: 0;
 	z-index: 100;
@@ -700,12 +521,8 @@ html.dark-theme .serious-content p {
 .nes8bit-nav a {
 	background: var(--crypto-ethereum-gradient);
 	color: var(--nes-white);
-	/* Beveling для объёма */
-	border-top: var(--nes-border-width, 2px) solid var(--nes-bevel-light);
-	border-left: var(--nes-border-width, 2px) solid var(--nes-bevel-light);
-	border-bottom: var(--nes-border-width, 2px) solid var(--nes-bevel-dark);
-	border-right: var(--nes-border-width, 2px) solid var(--nes-bevel-dark);
-	border-radius: 4px;
+	border: 2px solid var(--nes-black);
+	border-bottom-width: 2px; /* Нижняя граница стандартная */
 	padding: 8px 16px; /* Увеличен padding для лучшего вида на десктопе */
 	text-decoration: none;
 	font-family: var(--nes-font);
@@ -713,7 +530,7 @@ html.dark-theme .serious-content p {
 	transition: all 0.15s ease-out;
 	text-transform: uppercase;
 	position: relative;
-	/* БЕЗ теней - объём создаётся через beveling */
+	box-shadow: 0 2px 0 var(--nes-black);
 	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
 	margin: 0; /* Убираем margin, используем padding родителя для отступов */
 	display: inline-flex; /* Используем flex для центрирования */
@@ -730,10 +547,12 @@ html.dark-theme .serious-content p {
 }
 
 	.nes8bit-nav a:hover {
-		background: var(--nes-yellow); /* Унифицированный hover - жёлтый цвет */
+		background: var(--crypto-bitcoin-gradient);
 		color: var(--nes-black);
-		transform: translateY(-1px); /* Чуть выезжает вверх */
-		/* Beveling сохраняется для объёма */
+		transform: translateY(-2px);
+		box-shadow: 
+		0 4px 0 var(--nes-black),
+		0 7px 10px rgba(0, 0, 0, 0.3);
 		text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
 		/* Сохраняем высоту чтобы не расширялась вертикально */
 		height: 32px; /* Сохраняем увеличенную высоту */
@@ -741,38 +560,34 @@ html.dark-theme .serious-content p {
 	}
 
 .nes8bit-nav a:active {
-	/* Активное состояние - прожимание вниз */
+	/* Активное состояние - прожимание вниз, нижняя полоса остаётся */
 	transform: translateY(1px);
-	/* Инвертируем beveling при нажатии (вдавленная кнопка) */
-	border-top: var(--nes-border-width, 2px) solid var(--nes-bevel-dark);
-	border-left: var(--nes-border-width, 2px) solid var(--nes-bevel-dark);
-	border-bottom: var(--nes-border-width, 2px) solid var(--nes-bevel-light);
-	border-right: var(--nes-border-width, 2px) solid var(--nes-bevel-light);
+	box-shadow: 0 1px 0 var(--nes-black); /* Нижняя тень остаётся на месте! */
+	border-bottom-width: 2px; /* Сохраняем нижнюю границу */
 	margin: 0; /* Сохраняем margin: 0, отступы через padding родителя */
-	transition: transform 0.05s ease, border 0.05s ease;
+	transition: transform 0.05s ease, box-shadow 0.05s ease, border-bottom-width 0.05s ease;
 }
 
 /* Focus states для клавиатурной навигации */
 .nes8bit-nav a:focus {
-	outline: var(--nes-border-width, 2px) solid var(--nes-yellow);
+	outline: 3px solid var(--nes-yellow);
 	outline-offset: 2px;
-	/* БЕЗ теней - плоские элементы */
+	box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.3);
 }
 
 /* Убираем outline по умолчанию, оставляем только для клавиатуры */
 .nes8bit-nav a:focus:not(:focus-visible) {
 	outline: none;
-	/* БЕЗ теней - плоские элементы */
+	box-shadow: 0 2px 0 var(--nes-black);
 }
 
 /* Card */
 .nes8bit-card {
 	background: var(--nes-white);
-	border: var(--nes-border-width, 2px) solid var(--nes-black);
-	border-radius: 4px; /* Сглаженные углы */
+	border: 3px solid var(--nes-black);
 	padding: 15px;
 	margin-bottom: 15px;
-	/* БЕЗ теней - плоские элементы */
+	box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
 .nes8bit-card h3 {
@@ -789,7 +604,6 @@ html.dark-theme .serious-content p {
 	background: var(--nes-red);
 	color: var(--nes-white);
 	border: 2px solid var(--nes-black);
-	border-radius: 4px; /* Сглаженные углы */
 	padding: 4px 8px;
 	font-family: var(--nes-font);
 	font-size: 0.6rem;
@@ -801,8 +615,7 @@ html.dark-theme .serious-content p {
 .nes8bit-progress {
 	width: 100%;
 	height: 20px;
-	border: var(--nes-border-width, 2px) solid var(--nes-black);
-	border-radius: 4px; /* Сглаженные углы */
+	border: 3px solid var(--nes-black);
 	background: var(--nes-white);
 	position: relative;
 	overflow: hidden;
@@ -813,37 +626,33 @@ html.dark-theme .serious-content p {
 	background: var(--nes-blue);
 	transition: width 0.3s ease;
 	border-right: 2px solid var(--nes-black);
-	border-radius: 0 4px 4px 0; /* Сглаженные правые углы */
 }
 
 /* Input */
 .nes8bit-input {
 	background: var(--nes-white);
-	border: var(--nes-border-width, 2px) solid var(--nes-black);
-	border-radius: 4px; /* Сглаженные углы */
+	border: 3px solid var(--nes-black);
 	padding: 10px;
 	font-family: var(--nes-font);
 	font-size: 0.7rem;
 	color: var(--nes-black);
 	width: 100%;
-	/* БЕЗ теней - плоские элементы */
+	box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
 .nes8bit-input:focus {
 	outline: none;
 	border-color: var(--nes-blue);
-	/* БЕЗ теней - плоские элементы */
+	box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.1), 0 0 0 2px var(--nes-blue);
 }
 
 /* Alert */
 .nes8bit-alert {
-	border: var(--nes-border-width, 2px) solid var(--nes-black);
-	border-radius: 4px; /* Сглаженные углы */
+	border: 4px solid var(--nes-black);
 	padding: 15px;
 	margin-bottom: 20px;
 	font-family: var(--nes-font);
 	font-size: 0.8rem;
-	/* БЕЗ теней - плоские элементы */
 }
 
 .nes8bit-alert-success {
@@ -921,22 +730,22 @@ html.dark-theme .serious-content p {
 	/* Мобильные интерактивные элементы - активное состояние при нажатии */
 	.nes8bit-nav a:active {
 		transform: translateY(1px); /* Кнопка прожимается вниз */
-		/* БЕЗ теней - плоские кнопки */
-		border-bottom-width: var(--nes-border-width, 2px); /* Сохраняем нижнюю границу */
+		box-shadow: 0 1px 0 var(--nes-black); /* Нижняя тень остаётся на месте! */
+		border-bottom-width: 2px; /* Сохраняем нижнюю границу */
 		height: 24px; /* Сохраняем компактную высоту (как в обычном состоянии) */
 		margin: 0; /* Сохраняем margin: 0, отступы через padding родителя */
-		transition: transform 0.05s ease;
+		transition: transform 0.05s ease, box-shadow 0.05s ease, border-bottom-width 0.05s ease;
 	}
 	
 	.nes8bit-btn {
-		border-bottom-width: var(--nes-border-width, 2px); /* Нижняя граница стандартная */
+		border-bottom-width: 2px; /* Нижняя граница стандартная (как у nav) */
 	}
 
 	.nes8bit-btn:active {
 		transform: translateY(1px); /* Кнопка прожимается вниз (как у nav) */
-		/* БЕЗ теней - плоские кнопки */
-		border-bottom-width: var(--nes-border-width, 2px); /* Сохраняем нижнюю границу */
-		transition: transform 0.05s ease;
+		box-shadow: 0 1px 0 var(--nes-black); /* Нижняя тень остаётся на месте! */
+		border-bottom-width: 2px; /* Сохраняем нижнюю границу */
+		transition: transform 0.05s ease, box-shadow 0.05s ease, border-bottom-width 0.05s ease;
 	}
 }
 
@@ -986,7 +795,7 @@ html.dark-theme .serious-content p {
 	font-size: 0.6rem;
 	text-transform: uppercase;
 	display: inline-block;
-	/* БЕЗ теней - плоские элементы */
+	box-shadow: 0 2px 0 var(--nes-black);
 }
 
 .crypto-badge-ethereum {
@@ -998,7 +807,7 @@ html.dark-theme .serious-content p {
 	font-size: 0.6rem;
 	text-transform: uppercase;
 	display: inline-block;
-	/* БЕЗ теней - плоские элементы */
+	box-shadow: 0 2px 0 var(--nes-black);
 }
 
 /* Улучшенные анимации */
@@ -1032,7 +841,6 @@ html.dark-theme .serious-content p {
 	background-size: 200% 100%;
 	animation: crypto-shine 3s linear infinite;
 }
-
 
 
 
