@@ -136,7 +136,7 @@ body.nes8bit-theme {
 	padding: 40px;
 	text-align: center;
 	margin-bottom: 20px; /* Уменьшенный отступ между блоками (было 30px) */
-	box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2); /* Унифицированная тень (как у других блоков) */
+	box-shadow: 0 6px 0px rgba(0, 0, 0, 0.2); /* Только вертикальная тень */
 	color: var(--nes-yellow);
 	position: relative;
 }
@@ -205,7 +205,7 @@ body.nes8bit-theme {
 	border: 3px solid var(--nes-black); /* Более лаконичная рамка вместо двойной */
 	padding: 20px;
 	margin-bottom: 20px;
-	box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 6px 0px rgba(0, 0, 0, 0.2); /* Только вертикальная тень */
 	position: relative;
 	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -225,7 +225,7 @@ body.nes8bit-theme {
 
 .nes8bit-post:hover {
 	transform: translateY(-4px);
-	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 8px 0px rgba(0, 0, 0, 0.3); /* Только вертикальная тень */
 }
 
 .nes8bit-post:hover::before {
@@ -345,7 +345,7 @@ body.nes8bit-theme {
 	background: var(--nes-yellow);
 	border: 3px solid var(--nes-black); /* Более лаконичная рамка вместо двойной */
 	padding: 20px;
-	box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 6px 0px rgba(0, 0, 0, 0.2); /* Только вертикальная тень */
 	height: fit-content;
 	position: sticky;
 	top: 20px;
@@ -400,7 +400,7 @@ body.nes8bit-theme {
 		margin-bottom: 0; /* Убираем margin-bottom - body padding-bottom уже создаёт отступ снизу */
 		color: var(--nes-yellow);
 		font-size: 0.8rem;
-		box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 6px 0px rgba(0, 0, 0, 0.2); /* Только вертикальная тень */
 		font-family: var(--nes-font);
 		display: flex; /* Для вертикального центрирования */
 		align-items: center; /* Вертикальное центрирование */
@@ -440,10 +440,13 @@ body.nes8bit-theme {
 		justify-content: center;
 		width: 38px; /* Уменьшенный размер для более компактного вида (как в sidebar) */
 		height: 38px; /* Уменьшенный размер для более компактного вида (как в sidebar) */
-		background: var(--crypto-ethereum-gradient);
+		background: #627EEA; /* Плоский цвет вместо градиента для 8-бит стиля */
 		border: 2px solid var(--nes-black);
 		border-bottom: 2px solid var(--nes-black); /* Явно указываем чёрный border-bottom */
-		border-radius: 8px;
+		border-radius: 0; /* Убираем скруглённые углы для 8-бит стиля */
+		image-rendering: pixelated; /* Пикселированная графика */
+		image-rendering: -moz-crisp-edges;
+		image-rendering: crisp-edges;
 		text-decoration: none;
 		transition: all 0.15s ease;
 		box-shadow: 0 2px 0 var(--nes-black);
@@ -454,16 +457,17 @@ body.nes8bit-theme {
 	}
 	
 	.footer-social-link:hover {
-		background: var(--crypto-bitcoin-gradient);
+		background: #FFD700; /* Плоский жёлтый цвет вместо градиента */
 		transform: translateY(-2px);
-		box-shadow: 0 4px 0 var(--nes-black), 0 0 10px rgba(255, 215, 0, 0.4);
-		/* Явно указываем чёрный border-bottom, чтобы не было зелёной полосы */
+		box-shadow: 0 4px 0 var(--nes-black); /* Убираем свечение для 8-бит стиля */
 		border-bottom: 2px solid var(--nes-black) !important; /* Принудительно чёрный border */
 	}
 	
 	.footer-social-link:active {
 		transform: translateY(1px);
 		box-shadow: 0 1px 0 var(--nes-black);
+		border: 2px solid var(--nes-black); /* Все границы чёрные */
+		background: #FFD700; /* Сохраняем жёлтый фон при активации */
 		transition: transform 0.05s ease, box-shadow 0.05s ease;
 	}
 	
@@ -508,7 +512,7 @@ body.nes8bit-theme {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center; /* Центрирование по вертикали */
-	box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2); /* Унифицированная тень (как у других блоков) */
+	box-shadow: 0 6px 0px rgba(0, 0, 0, 0.2); /* Только вертикальная тень */
 	position: sticky;
 	top: 0;
 	z-index: 100;
@@ -587,7 +591,7 @@ body.nes8bit-theme {
 	border: 3px solid var(--nes-black);
 	padding: 15px;
 	margin-bottom: 15px;
-	box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 4px 0px rgba(0, 0, 0, 0.2); /* Только вертикальная тень */
 }
 
 .nes8bit-card h3 {

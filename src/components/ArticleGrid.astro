@@ -1,201 +1,143 @@
 ---
-// ArticleGrid.astro - Плитка из последних статей блога
+// ArticleGrid.astro - Директория системных отчетов
 import { getCollection } from 'astro:content';
-import { Image } from 'astro:assets';
+import FormattedDate from './FormattedDate.astro';
 
-const posts = (await getCollection('blog'))
-	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-	.slice(0, 5); // Берём 5 последних статей
+interface Props {
+	filterCategory?: string;
+	title?: string;
+}
+
+const { filterCategory, title = "root/reports/all/" } = Astro.props;
+
+let posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+if (filterCategory) {
+	posts = posts.filter(post => post.data.category === filterCategory);
+}
+
+function getFileExtension(category: string | undefined) {
+	switch(category) {
+		case 'strategies': return '.exe';
+		case 'guides': return '.dat';
+		case 'important': return '.sys';
+		default: return '.log';
+	}
+}
+
+function getPermissions(category: string | undefined) {
+	switch(category) {
+		case 'important': return 'drwxr-xr-x';
+		case 'strategies': return '-rwxr-xr-x';
+		default: return '-rw-r--r--';
+	}
+}
 ---
 
-<section class="article-grid-section">
-	<h2 class="article-grid-title">Последние восстановленные материалы</h2>
-	<p class="article-grid-subtitle">Истории создания технических индикаторов и другие эксперименты</p>
-	
-	<div class="article-grid">
-		{posts.map((post, index) => (
-			<article class="article-card" role="article" aria-labelledby={`article-title-${index}`}>
-				<a href={`/blog/${post.id}/`} class="article-card-link" aria-label={`Читать статью: ${post.data.title}`}>
-					{post.data.heroImage && (
-						<div class="article-card-image">
-							<Image 
-								src={post.data.heroImage} 
-								alt={post.data.title}
-								width={400}
-								height={200}
-								loading="lazy"
-							/>
-						</div>
-					)}
-					<div class="article-card-content">
-						<h3 class="article-card-title" id={`article-title-${index}`}>{post.data.title}</h3>
-						{post.data.description && (
-							<p class="article-card-description">{post.data.description}</p>
-						)}
-						{post.data.pubDate && (
-							<time class="article-card-date">
-								{new Date(post.data.pubDate).toLocaleDateString('ru-RU', {
-									year: 'numeric',
-									month: 'long',
-									day: 'numeric'
-								})}
-							</time>
-						)}
-					</div>
-				</a>
-			</article>
-		))}
+<section class="system-section">
+	<div class="section-header">
+		<span class="cmd-prefix">></span> ls -la {title}
+	</div>
+
+	<div class="file-table">
+		<div class="table-header">
+			<span class="col-attr">PERMISSIONS</span>
+			<span class="col-date">DATE</span>
+			<span class="col-name">NAME</span>
+			<span class="col-status">STATUS</span>
+		</div>
+
+		{posts.length > 0 ? (
+			posts.map((post) => (
+				<div class="file-row">
+					<span class="col-attr">{getPermissions(post.data.category)}</span>
+					<span class="col-date"><FormattedDate date={post.data.pubDate} /></span>
+					<a href={`/blog/${post.id}/`} class="col-name">
+						{post.data.title.toLowerCase().replace(/\s+/g, '_')}{getFileExtension(post.data.category)}
+					</a>
+					<span class={`col-status ${post.data.category || 'public'}`}>
+						[{post.data.category?.toUpperCase() || 'PUBLIC'}]
+					</span>
+				</div>
+			))
+		) : (
+			<div class="file-row empty">
+				<span class="col-name">No files found in this directory.</span>
+			</div>
+		)}
 	</div>
 </section>
 
 <style>
-	.article-grid-section {
-		background: var(--nes-white);
-		border: 3px solid var(--nes-black); /* Более лаконичная рамка */
-		padding: 30px;
-		margin-bottom: 20px; /* Уменьшенный отступ между блоками (было 30px) */
-		box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
-		max-width: 1200px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.article-grid-title {
-		font-family: 'Arial', sans-serif;
-		font-size: 1.8rem;
-		font-weight: bold;
-		color: var(--nes-black);
-		margin: 0 0 10px 0;
-		text-align: center;
-	}
-
-	.article-grid-subtitle {
-		font-family: 'Arial', sans-serif;
-		font-size: 1rem;
-		color: var(--nes-gray);
-		margin: 0 0 25px 0;
-		text-align: center;
-	}
-
-	.article-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-		gap: 20px; /* Используем gap вместо margin для расстояния между плитками */
-		margin: 0 !important; /* Убить все margin */
-	}
-
-	.article-card {
-		background: var(--nes-white);
-		border: 3px solid var(--nes-black);
-		overflow: hidden;
-		transition: all 0.3s ease;
-		margin: 0 !important; /* Убить все margin на карточках */
-		padding: 0; /* Только внутренний padding в .article-card-content */
-		box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
-		/* Убираем скруглённые углы для единого движения */
-		border-radius: 0;
-	}
-
-	.article-card:hover {
-		transform: translateY(-4px);
-		box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
-		/* Всё двигается как единый элемент */
-	}
-
-	/* Focus states для карточек статей */
-	.article-card:focus {
-		outline: 3px solid var(--nes-blue);
-		outline-offset: 2px;
-		box-shadow: 0 0 0 4px rgba(0, 153, 204, 0.3);
-	}
-
-	.article-card:focus:not(:focus-visible) {
-		outline: none;
-		box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
-	}
-
-	.article-card-link {
-		text-decoration: none;
-		color: inherit;
-		display: block;
-	}
-
-	.article-card-image {
-		width: 100%;
-		height: 200px;
-		overflow: hidden;
-		background: var(--nes-gray);
-		/* Убираем скруглённые углы - они создают проблемы при движении */
-		border-radius: 0;
-	}
-
-	.article-card-image img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		image-rendering: pixelated;
-		image-rendering: -moz-crisp-edges;
-		image-rendering: crisp-edges;
-		/* Убираем скруглённые углы */
-		border-radius: 0;
-	}
-
-	.article-card-content {
+	.system-section {
+		margin-bottom: 40px;
+		border: 1px solid var(--term-dim);
 		padding: 15px;
+		background: rgba(0, 255, 65, 0.02);
 	}
 
-	.article-card-title {
-		font-family: 'Arial', sans-serif;
-		font-size: 1.1rem;
+	.section-header {
+		color: var(--term-amber);
+		margin-bottom: 20px;
 		font-weight: bold;
-		color: var(--nes-black);
-		margin: 0 0 10px 0;
-		line-height: 1.4;
 	}
 
-	.article-card-description {
-		font-family: 'Arial', sans-serif;
+	.cmd-prefix { color: var(--term-green); }
+
+	.file-table {
+		display: flex;
+		flex-direction: column;
 		font-size: 0.9rem;
-		color: var(--nes-gray);
-		margin: 0 0 10px 0;
-		line-height: 1.6;
-		display: -webkit-box;
-		-webkit-line-clamp: 3;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
 	}
 
-	.article-card-date {
-		font-family: var(--nes-font);
+	.table-header {
+		display: flex;
+		padding: 10px;
+		border-bottom: 1px solid var(--term-dim);
+		color: var(--term-dim);
 		font-size: 0.7rem;
-		color: var(--nes-gray);
-		display: block;
+		letter-spacing: 1px;
 	}
 
-	/* Мобильная адаптация */
-	@media (max-width: 768px) {
-		.article-grid {
-			grid-template-columns: 1fr;
-		}
-		
-		.article-grid-section {
-			padding: 20px;
-			margin-bottom: 15px; /* Уменьшенный отступ между блоками на мобильных (было 20px) */
-		}
-		
-		.article-grid-title {
-			font-size: 1.5rem;
-		}
+	.file-row {
+		display: flex;
+		align-items: center;
+		padding: 12px 10px;
+		border-bottom: 1px solid var(--term-dim);
+		transition: background 0.2s;
 	}
-	
-	/* Мобильные интерактивные элементы - активное состояние при нажатии */
+
+	.file-row:not(.empty):hover {
+		background: var(--term-dim);
+	}
+
+	.empty { opacity: 0.5; font-style: italic; }
+
+	.col-attr { width: 120px; color: var(--term-dim); font-size: 0.8rem; }
+	.col-date { width: 120px; opacity: 0.7; }
+	.col-name { 
+		flex-grow: 1; 
+		color: var(--term-green); 
+		text-decoration: none;
+		font-weight: bold;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		padding-right: 20px;
+	}
+	.col-name:hover { color: var(--term-amber); }
+	.col-status { width: 120px; text-align: right; font-size: 0.7rem; }
+
+	/* Цвета категорий для статуса */
+	.important { color: var(--term-amber); }
+	.strategies { color: var(--term-blue); }
+	.guides { color: var(--term-green); }
+	.public { color: var(--term-dim); }
+
 	@media (max-width: 768px) {
-		.article-card:active {
-			transform: translateY(-2px);
-			box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
-		}
+		.col-attr, .col-status { display: none; }
+		.col-date { width: 100px; }
 	}
 </style>
-
-
-

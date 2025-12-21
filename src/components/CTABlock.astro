@@ -1,134 +1,93 @@
 ---
-// CTABlock.astro - Блок с реферальными ссылками и копитрейдингом
+// CTABlock.astro - Системный терминал для обратной связи
 ---
 
-<section class="cta-block-section" aria-label="Призывы к действию">
-	<div class="cta-block">
-		<h3 class="cta-block-title">Реферальные ссылки</h3>
-		<div class="cta-buttons">
-			<a href="https://www.bybit.com/invite?ref=PWMD24" target="_blank" rel="noopener noreferrer" class="cta-button" aria-label="Реферальная ссылка на Bybit">
-				Bybit
-			</a>
-			<a href="https://www.bitget.com/ru/referral/register?clacCode=23EHR2VD&from=%2Fru%2Fevents%2Freferral-all-program&source=events&utmSource=PremierInviter" target="_blank" rel="noopener noreferrer" class="cta-button" aria-label="Реферальная ссылка на Bitget">
-				Bitget
-			</a>
-			<a href="https://veles.finance/invite/washmallay" target="_blank" rel="noopener noreferrer" class="cta-button" aria-label="Реферальная ссылка на Veles">
-				Veles
-			</a>
+<section class="system-section cta-terminal">
+	<div class="terminal-prompt">
+		<span class="prompt-user">root@marketlab</span>:<span class="prompt-path">~</span>$ contact --mode lab-access
+	</div>
+	
+	<div class="cta-content">
+		<p class="cta-text">Готовы подключиться к торговым алгоритмам Лаборатории?</p>
+		<div class="cta-actions">
+			<a href="https://t.me/hampfree_market_lab" class="sys-btn large">RUN connection.sh</a>
+			<a href="/guides" class="sys-btn large secondary">READ whitepaper.pdf</a>
 		</div>
 	</div>
 	
-	<div class="cta-block">
-		<h3 class="cta-block-title">Аккаунты копитрейдинга</h3>
-		<div class="cta-buttons">
-			<a href="https://bybit.onelink.me/EhY6/1ll6qnvc" target="_blank" rel="noopener noreferrer" class="cta-button" aria-label="Аккаунт копитрейдинга на Bybit">
-				Bybit
-			</a>
-			<a href="https://www.bitget.com/ru/copy-trading/trader/bdb24c7186bb3856a397/futures?clacCode=23EHR2VD" target="_blank" rel="noopener noreferrer" class="cta-button" aria-label="Аккаунт копитрейдинга на Bitget">
-				Bitget
-			</a>
-		</div>
-	</div>
+	<div class="typing-cursor">_</div>
 </section>
 
 <style>
-	.cta-block-section {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 20px;
-		margin: 20px 0; /* Уменьшенный отступ между блоками (было 30px) */
-		margin-bottom: 20px; /* Уменьшенный отступ между блоками (было 30px) */
-		max-width: 900px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.cta-block {
-		background: var(--nes-white);
-		border: 3px solid var(--nes-black); /* Более лаконичная рамка */
-		padding: 20px;
-		box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
-		text-align: center;
-	}
-
-	.cta-block-title {
-		font-family: 'Arial', sans-serif;
-		font-size: 1.2rem;
-		font-weight: bold;
-		color: var(--nes-black);
-		margin: 0 0 15px 0;
-		border-bottom: 2px solid var(--nes-gray);
-		padding-bottom: 10px;
-	}
-
-	.cta-buttons {
-		display: flex;
-		gap: 10px;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-
-	.cta-button {
-		background: var(--crypto-ethereum-gradient);
-		color: var(--nes-white);
-		border: 2px solid var(--nes-black); /* Единообразие с навигационными кнопками */
-		border-bottom-width: 2px; /* Нижняя граница стандартная (как у nav) */
-		padding: 10px 20px;
-		text-decoration: none;
-		font-family: var(--nes-font);
-		font-size: 0.7rem;
-		text-transform: uppercase;
-		transition: all 0.15s ease;
-		box-shadow: 0 2px 0 var(--nes-black); /* Стандартная тень (как у nav) */
-		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+	.system-section {
+		margin-bottom: 40px;
+		border: 1px solid var(--term-green);
+		padding: 25px;
+		background: var(--term-glow);
 		position: relative;
 	}
 
-	.cta-button:hover {
-		background: var(--crypto-bitcoin-gradient);
-		color: var(--nes-black);
-		transform: translateY(-2px);
-		box-shadow: 0 4px 0 var(--nes-black); /* Стандартная тень при hover (как у nav) */
-		text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
+	.terminal-prompt {
+		font-weight: bold;
+		margin-bottom: 20px;
 	}
 
-	.cta-button:active {
-		transform: translateY(1px); /* Кнопка прожимается вниз (как у nav) */
-		box-shadow: 0 1px 0 var(--nes-black); /* Нижняя тень остаётся на месте! */
-		border-bottom-width: 2px; /* Сохраняем нижнюю границу */
-		transition: transform 0.05s ease, box-shadow 0.05s ease, border-bottom-width 0.05s ease;
+	.prompt-user { color: var(--term-blue); }
+	.prompt-path { color: var(--term-amber); }
+
+	.cta-text {
+		font-size: 1.2rem;
+		margin-bottom: 30px;
+		color: var(--term-amber);
 	}
 
-	/* Focus states для CTA-кнопок */
-	.cta-button:focus {
-		outline: 3px solid var(--nes-yellow);
-		outline-offset: 2px;
-		box-shadow: 0 2px 0 var(--nes-black), 0 0 0 4px rgba(255, 215, 0, 0.3);
+	.cta-actions {
+		display: flex;
+		gap: 20px;
 	}
 
-	.cta-button:focus:not(:focus-visible) {
-		outline: none;
-		box-shadow: 0 2px 0 var(--nes-black);
+	.sys-btn {
+		padding: 10px 20px;
+		border: 1px solid var(--term-green);
+		color: var(--term-green);
+		text-decoration: none !important;
+		text-transform: uppercase;
+		font-size: 0.9rem;
+		transition: all 0.2s;
+		border-bottom: 1px solid var(--term-green);
 	}
 
-	/* Мобильная адаптация */
+	.sys-btn:hover {
+		background: var(--term-green);
+		color: var(--term-bg);
+		text-decoration: none !important;
+		border-bottom: 1px solid var(--term-green);
+	}
+
+	.secondary {
+		border-color: var(--term-dim);
+		color: var(--term-dim);
+		text-decoration: none !important;
+		border-bottom: 1px solid var(--term-dim);
+	}
+
+	.secondary:hover {
+		background: var(--term-dim);
+		color: var(--term-green);
+		border-bottom: 1px solid var(--term-dim);
+		text-decoration: none !important;
+	}
+
+	.typing-cursor {
+		position: absolute;
+		bottom: 10px;
+		right: 20px;
+		animation: blink 1s step-end infinite;
+	}
+
+	@keyframes blink { 50% { opacity: 0; } }
+
 	@media (max-width: 768px) {
-		.cta-block-section {
-			grid-template-columns: 1fr;
-			margin: 15px 0; /* Уменьшенный отступ между блоками на мобильных (было 20px) */
-			margin-bottom: 15px; /* Уменьшенный отступ между блоками на мобильных (было 20px) */
-		}
-	}
-	
-	/* Мобильные интерактивные элементы - активное состояние при нажатии */
-	@media (max-width: 768px) {
-		.cta-button:active {
-			transform: translateY(1px); /* Кнопка прожимается вниз (как у nav) */
-			box-shadow: 0 1px 0 var(--nes-black); /* Нижняя тень остаётся на месте! */
-			border-bottom-width: 2px;
-		}
+		.cta-actions { flex-direction: column; }
 	}
 </style>
-
-
-

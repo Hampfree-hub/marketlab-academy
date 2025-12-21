@@ -25,9 +25,9 @@ const { title, description, image = FallbackImage } = Astro.props;
 <script is:inline>
 	(function() {
 		const saved = localStorage.getItem('theme');
-		const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-		const theme = saved || (prefersDark ? 'dark' : 'light');
-		document.documentElement.classList.add(theme === 'dark' ? 'dark-theme' : 'light-theme');
+		// По умолчанию темная тема (зелено-черная)
+		const theme = saved || 'dark';
+		document.documentElement.classList.add(theme + '-theme');
 	})();
 </script>
 <!-- Favicon: правильный порядок для максимальной совместимости -->
