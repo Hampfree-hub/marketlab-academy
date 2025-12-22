@@ -1,138 +1,173 @@
 ---
-// src/pages/about.astro
-import TerminalLayout from '../layouts/TerminalLayout.astro';
+// src/pages/about.astro - Страница "О проекте"
+import Hampfree8BitLayout from '../layouts/Hampfree8BitLayout.astro';
+
+const pageTitle = 'О проекте | MarketLab Academy';
+const pageDescription = 'MarketLab Academy — профессиональная платформа для изучения алгоритмического трейдинга, криптовалют и технического анализа';
 ---
 
-<TerminalLayout title="SYSTEM INFO | About MarketLab">
-	<main class="system-info-screen">
-		<section class="info-block">
-			<h2><span class="cmd-prefix">></span> cat root/system/core_mission.txt</h2>
-			<div class="content-box">
-				<p><strong>Market Lab Academy</strong> — это не просто блог, это автономный узел в Океане Шума. В мире, где 95% трейдеров теряют рассудок и капитал под давлением эмоций, мы создаем оплот системного подхода.</p>
-				<p>Наша миссия: превращать рыночный хаос в исполняемые алгоритмы. Мы восстанавливаем архив данных 2010-2018 годов и объединяем его с современными технологиями 2025 года.</p>
-			</div>
+<Hampfree8BitLayout title={pageTitle} description={pageDescription}>
+	<main class="hampfree-content">
+		<h2 class="about-title">О ПРОЕКТЕ</h2>
+		
+		<section class="about-section">
+			<h3 class="section-title">MARKETLAB ACADEMY</h3>
+			<p class="section-text">
+				MarketLab Academy — это образовательная платформа для трейдеров и разработчиков, 
+				которые хотят изучить алгоритмический трейдинг, технический анализ и работу с криптовалютными рынками.
+			</p>
+			<p class="section-text">
+				Мы предоставляем практические материалы о торговых стратегиях, индикаторах, 
+				риск-менеджменте и психологии трейдинга. Все материалы основаны на реальном опыте и практических примерах.
+			</p>
 		</section>
 
-		<section class="info-block">
-			<h2><span class="cmd-prefix">></span> finger emily</h2>
-			<div class="content-box profile">
-				<div class="profile-header">
-					<span class="avatar">[👩‍💻]</span>
-					<div class="profile-name">
-						<strong>EMILY</strong>
-						<span class="sub">Founder / Lead Alchemist</span>
-					</div>
-				</div>
-				<p>Гениальный изобретатель и душа проекта. Эмили видит паттерны там, где другие видят шум. Она — "двигатель" Лаборатории, генерирующая гипотезы со скоростью света.</p>
-				<ul class="skills-list">
-					<li>Интуитивный анализ данных</li>
-					<li>Прототипирование стратегий</li>
-					<li>Организация хаоса</li>
-				</ul>
-			</div>
+		<section class="about-section">
+			<h3 class="section-title">НАША МИССИЯ</h3>
+			<p class="section-text">
+				Превращать рыночный хаос в исполняемые алгоритмы. Мы верим, что системный подход 
+				к трейдингу и глубокое понимание рынков помогают принимать более обоснованные решения.
+			</p>
+			<p class="section-text">
+				Наша цель — делиться знаниями о том, как работать с техническими индикаторами, 
+				тестировать стратегии на исторических данных и управлять рисками в реальной торговле.
+			</p>
 		</section>
 
-		<section class="info-block">
-			<h2><span class="cmd-prefix">></span> finger kai</h2>
-			<div class="content-box profile">
-				<div class="profile-header">
-					<span class="avatar">[🛡️]</span>
-					<div class="profile-name">
-						<strong>KAI</strong>
-						<span class="sub">Risk Manager / Sentinel</span>
-					</div>
-				</div>
-				<p>Ветеран рыночных крахов. Кай — это "тормоз" и "щит" Лаборатории. Он следит за тем, чтобы энтузиазм Эмили не привел к фатальным последствиям для капитала.</p>
-				<ul class="skills-list">
-					<li>Математика выживания</li>
-					<li>Психологическая устойчивость</li>
-					<li>Детекция аномалий</li>
-				</ul>
-			</div>
+		<section class="about-section">
+			<h3 class="section-title">ЧТО МЫ ПРЕДОСТАВЛЯЕМ</h3>
+			<ul class="features-list">
+				<li><strong>Образовательные статьи</strong> о техническом анализе, индикаторах и стратегиях</li>
+				<li><strong>Практические гайды</strong> по использованию инструментов трейдинга</li>
+				<li><strong>Анализ рынков</strong> и разбор реальных торговых ситуаций</li>
+				<li><strong>Риск-менеджмент</strong> и психология трейдинга</li>
+			</ul>
 		</section>
 
-		<section class="info-block">
-			<h2><span class="cmd-prefix">></span> help commands</h2>
-			<div class="content-box commands">
-				<div class="command-line"><code>[ FILES ]</code> - Список последних системных отчетов</div>
-				<div class="command-line"><code>[ GUIDES ]</code> - Обучающие модули для новобранцев</div>
-				<div class="command-line"><code>[ STRATEGIES ]</code> - Описание активных алгоритмов</div>
-				<div class="command-line"><code>[ SOCIAL ]</code> - Связь с внешними узлами (TG, Dzen)</div>
-			</div>
+		<section class="about-section">
+			<h3 class="section-title">EMILY COMPUTER SYSTEM</h3>
+			<p class="section-text">
+				Emily Computer — это наша внутренняя система управления экспериментами и анализа данных. 
+				Она используется для тестирования алгоритмических стратегий и обработки рыночной информации 
+				в реальном времени.
+			</p>
+		</section>
+
+		<section class="about-section disclaimer-section">
+			<h3 class="section-title">ВАЖНАЯ ИНФОРМАЦИЯ</h3>
+			<p class="section-text">
+				<strong>Disclaimer:</strong> Вся информация на этом сайте предоставляется исключительно 
+				в образовательных целях. Торговля криптовалютами и другими финансовыми инструментами 
+				сопряжена с высокими рисками. Всегда проводите собственное исследование (DYOR) и 
+				никогда не инвестируйте больше, чем можете позволить себе потерять.
+			</p>
 		</section>
 	</main>
-</TerminalLayout>
+</Hampfree8BitLayout>
 
 <style>
-	.system-info-screen {
-		display: flex;
-		flex-direction: column;
-		gap: 40px;
+	.about-title {
+		color: var(--8bit-yellow);
+		margin-bottom: 32px;
+		font-size: 1.5rem;
+		text-shadow: 3px 3px 0px #000000;
+		font-family: var(--8bit-font) !important;
 	}
 
-	.info-block h2 {
-		font-size: 1.1rem;
-		margin-bottom: 20px;
-	}
-
-	.cmd-prefix { color: var(--term-green); }
-
-	.content-box {
-		background: rgba(0, 255, 65, 0.02);
-		border: 1px solid var(--term-dim);
+	.about-section {
+		margin-bottom: 32px;
 		padding: 20px;
-		line-height: 1.6;
+		border: 4px solid var(--8bit-cyan);
+		background: var(--8bit-black);
+		box-shadow: 0 0 15px var(--8bit-cyan);
+		transition: all 0.05s linear;
 	}
 
-	.profile {
-		border-left: 4px solid var(--term-blue);
+	.about-section:hover {
+		box-shadow: 0 0 25px var(--8bit-cyan);
 	}
 
-	.profile-header {
-		display: flex;
-		align-items: center;
-		gap: 20px;
-		margin-bottom: 15px;
+	.disclaimer-section {
+		border-color: var(--8bit-yellow);
+		box-shadow: 0 0 15px var(--8bit-yellow);
+		background: rgba(255, 255, 0, 0.05);
 	}
 
-	.avatar {
-		font-size: 2rem;
-		color: var(--term-blue);
+	.disclaimer-section:hover {
+		box-shadow: 0 0 25px var(--8bit-yellow);
 	}
 
-	.profile-name {
-		display: flex;
-		flex-direction: column;
+	.section-title {
+		color: var(--8bit-lime);
+		margin-bottom: 16px;
+		font-size: 1rem;
+		text-shadow: 3px 3px 0px #000000;
+		font-family: var(--8bit-font) !important;
+		text-transform: uppercase;
 	}
 
-	.profile-name strong {
-		font-size: 1.2rem;
-		color: var(--term-amber);
+	.section-text {
+		font-size: 0.75rem;
+		line-height: 2;
+		color: var(--8bit-white);
+		margin-bottom: 16px;
+		font-family: var(--8bit-font) !important;
+		text-shadow: 1px 1px 0px #000000;
 	}
 
-	.profile-name .sub {
-		font-size: 0.8rem;
-		color: var(--term-dim);
+	.section-text:last-child {
+		margin-bottom: 0;
 	}
 
-	.skills-list {
-		margin-top: 15px;
+	.section-text strong {
+		color: var(--8bit-yellow);
+	}
+
+	.features-list {
 		list-style: none;
 		padding: 0;
+		margin: 0;
 	}
 
-	.skills-list li::before {
-		content: ">> ";
-		color: var(--term-blue);
+	.features-list li {
+		font-size: 0.75rem;
+		line-height: 2;
+		color: var(--8bit-white);
+		margin-bottom: 12px;
+		padding-left: 24px;
+		position: relative;
+		font-family: var(--8bit-font) !important;
+		text-shadow: 1px 1px 0px #000000;
 	}
 
-	.command-line {
-		margin-bottom: 10px;
-		font-size: 0.9rem;
+	.features-list li::before {
+		content: '■';
+		color: var(--8bit-cyan);
+		position: absolute;
+		left: 0;
+		font-size: 0.75rem;
 	}
 
-	.commands code {
-		color: var(--term-amber);
-		margin-right: 15px;
+	.features-list li strong {
+		color: var(--8bit-lime);
+	}
+
+	@media (max-width: 768px) {
+		.about-title {
+			font-size: 1.2rem;
+		}
+
+		.about-section {
+			padding: 16px;
+		}
+
+		.section-text {
+			font-size: 0.625rem;
+		}
+
+		.features-list li {
+			font-size: 0.625rem;
+		}
 	}
 </style>
+

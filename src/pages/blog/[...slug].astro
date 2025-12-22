@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
-import BlogPostTerminal from '../../layouts/BlogPostTerminal.astro';
+import Hampfree8BitPost from '../../layouts/Hampfree8BitPost.astro';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -15,6 +15,6 @@ const post = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BlogPostTerminal {...post.data}>
+<Hampfree8BitPost {...post.data}>
 	<Content />
-</BlogPostTerminal>
+</Hampfree8BitPost>

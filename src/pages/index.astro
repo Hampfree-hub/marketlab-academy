@@ -1,57 +1,15 @@
 ---
-// src/pages/index.astro
-import TerminalLayout from '../layouts/TerminalLayout.astro';
-import MarketLabBanner from '../components/MarketLabBanner.astro';
-import ArticleGrid from '../components/ArticleGrid.astro';
-import ArchiveLore from '../components/ArchiveLore.astro';
-import CTABlock from '../components/CTABlock.astro';
+// src/pages/index.astro - Главная страница компьютера Эмили
+import Hampfree8BitLayout from '../layouts/Hampfree8BitLayout.astro';
+import HampfreePostList from '../components/HampfreePostList.astro';
+import HampfreeSidebar from '../components/HampfreeSidebar.astro';
+import EmilySystemBanner from '../components/EmilySystemBanner.astro';
 ---
 
-<TerminalLayout title="MARKETLAB OS | Command Center">
-	<main class="os-main">
-		<section class="os-section">
-			<div class="section-label">SYS_INFO</div>
-			<MarketLabBanner />
-		</section>
-
-		<section class="os-section">
-			<div class="section-label">FILE_SYSTEM</div>
-			<ArticleGrid />
-		</section>
-
-		<section class="os-section">
-			<div class="section-label">LOG_HISTORY</div>
-			<ArchiveLore />
-		</section>
-
-		<section class="os-section">
-			<div class="section-label">SYS_PROMPT</div>
-			<CTABlock />
-		</section>
+<Hampfree8BitLayout title="Emily Computer | MarketLab OS">
+	<main class="hampfree-main">
+		<EmilySystemBanner />
+		<HampfreePostList />
+		<HampfreeSidebar />
 	</main>
-</TerminalLayout>
-
-<style>
-	.os-main {
-		display: flex;
-		flex-direction: column;
-		gap: 30px;
-	}
-
-	.os-section {
-		position: relative;
-		padding-top: 20px;
-	}
-
-	.section-label {
-		position: absolute;
-		top: 0;
-		left: 10px;
-		font-size: 9px;
-		background: var(--term-bg);
-		padding: 0 5px;
-		color: var(--term-dim);
-		z-index: 2;
-		letter-spacing: 2px;
-	}
-</style>
+</Hampfree8BitLayout>
