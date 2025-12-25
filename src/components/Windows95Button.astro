@@ -1,0 +1,110 @@
+---
+interface Props {
+	href?: string;
+	type?: 'button' | 'submit' | 'reset';
+	onclick?: string;
+	class?: string;
+	variant?: 'primary' | 'secondary';
+}
+
+const { 
+	href, 
+	type = 'button', 
+	onclick,
+	class: className = '',
+	variant = 'primary'
+} = Astro.props;
+---
+
+{href ? (
+	<a href={href} class={`windows95-button ${variant} ${className}`}>
+		<slot />
+	</a>
+) : (
+	<button type={type} onclick={onclick} class={`windows95-button ${variant} ${className}`}>
+		<slot />
+	</button>
+)}
+
+<style>
+	.windows95-button {
+		display: inline-block;
+		padding: 4px 12px;
+		background: var(--bg-primary, #AAAAAA);
+		color: var(--text-primary, #000000);
+		border: 2px outset var(--bg-primary, #AAAAAA);
+		border-top-color: var(--border-light, #FFFFFF);
+		border-left-color: var(--border-light, #FFFFFF);
+		border-bottom-color: var(--border-dark, #555555);
+		border-right-color: var(--border-dark, #555555);
+		font-family: 'Courier New', 'Courier', monospace;
+		font-size: 14px;
+		font-weight: 400;
+		text-decoration: none;
+		cursor: pointer;
+		transition: all 0.1s ease;
+		line-height: 1.4;
+		text-align: center;
+	}
+
+	/* Hover: выпячивание (outset) */
+	.windows95-button:hover {
+		border: 2px outset var(--bg-primary, #AAAAAA);
+		border-top-color: var(--border-light, #FFFFFF);
+		border-left-color: var(--border-light, #FFFFFF);
+		border-bottom-color: var(--border-dark, #555555);
+		border-right-color: var(--border-dark, #555555);
+		background: var(--bg-dark, #555555);
+		color: var(--bg-secondary, #FFFFFF);
+		transform: translate(-1px, -1px);
+		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+	}
+
+	/* Active: вдавливание (inset) */
+	.windows95-button:active {
+		border: 2px inset var(--bg-primary, #AAAAAA);
+		border-top-color: var(--border-dark, #555555);
+		border-left-color: var(--border-dark, #555555);
+		border-bottom-color: var(--border-light, #FFFFFF);
+		border-right-color: var(--border-light, #FFFFFF);
+		transform: translate(1px, 1px);
+		box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3);
+	}
+
+	.windows95-button:focus {
+		outline: 1px dotted var(--text-primary, #000000);
+		outline-offset: 2px;
+	}
+
+	/* Вариант primary (акцентный) */
+	.windows95-button.primary {
+		background: var(--accent, #00AA00);
+		color: var(--bg-secondary, #FFFFFF);
+		border-color: var(--accent-dark, #008000);
+	}
+
+	.windows95-button.primary:hover {
+		background: var(--accent-light, #55FF55);
+		border-color: var(--accent, #00AA00);
+	}
+
+	/* Вариант secondary (обычный) */
+	.windows95-button.secondary {
+		background: var(--bg-primary, #AAAAAA);
+		color: var(--text-primary, #000000);
+		border-color: var(--bg-primary, #AAAAAA);
+	}
+
+	.windows95-button.secondary:hover {
+		background: var(--bg-dark, #555555);
+		color: var(--bg-secondary, #FFFFFF);
+	}
+
+	/* Отключенное состояние */
+	.windows95-button:disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+		pointer-events: none;
+	}
+</style>
+

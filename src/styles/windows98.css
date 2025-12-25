@@ -1,0 +1,370 @@
+/*
+  Компьютер Эмили - Windows 98 / DOS стиль
+  Цветовая палитра VGA 16-color (классическая 8-бит)
+  Минималистичный винтажный интерфейс
+*/
+
+:root {
+	/* Классическая VGA 16-color палитра (строго из палитры!) */
+	
+	/* Основные цвета (только из VGA 16-color) */
+	--bg-primary: #AAAAAA;        /* Светло-серый (VGA 16-color) */
+	--bg-secondary: #FFFFFF;      /* Белый (VGA 16-color) */
+	--bg-dark: #555555;           /* Тёмно-серый (VGA 16-color) */
+	--bg-darker: #000000;         /* Чёрный (VGA 16-color) */
+	
+	/* Текст */
+	--text-primary: #000000;      /* Чёрный */
+	--text-secondary: #555555;    /* Тёмно-серый (приглушённый) */
+	--text-light: #AAAAAA;        /* Светло-серый */
+	
+	/* Границы для 3D эффекта (только из VGA 16-color) */
+	--border-light: #FFFFFF;      /* Светлая граница (outset) */
+	--border-dark: #555555;       /* Тёмная граница (outset) */
+	--border-inset-light: #AAAAAA; /* Светлая граница (inset) */
+	--border-inset-dark: #000000;  /* Тёмная граница (inset) */
+	
+	/* Акцентные цвета VGA (приглушённые) */
+	--accent: #00AA00;             /* Зелёный (приглушённый, не #00FF00) */
+	--accent-light: #55FF55;      /* Ярко-зелёный (для активных элементов) */
+	--accent-dark: #008000;       /* Тёмно-зелёный (hover) */
+	
+	/* Системные цвета VGA */
+	--link: #0000AA;              /* Синий (ссылки) */
+	--link-visited: #AA00AA;      /* Пурпурный (посещённые ссылки) */
+	--link-hover: #00AA00;        /* Зелёный (hover ссылок) */
+	--success: #00AA00;            /* Зелёный (успех) */
+	--warning: #AA5500;           /* Коричневый (предупреждения, приглушённый) */
+	--error: #AA0000;              /* Красный (ошибки, приглушённый) */
+	--info: #008080;               /* Тёмно-циан (информация) */
+	
+	/* Дополнительные VGA цвета */
+	--cyan: #00AAAA;               /* Циан */
+	--yellow: #AAAA00;             /* Жёлтый (приглушённый) */
+	--magenta: #AA00AA;            /* Пурпурный */
+}
+
+/* Тёмная тема (терминал) - по умолчанию */
+[data-theme="dark"],
+:root:not([data-theme]) {
+	--bg-primary: #000000;      /* Чёрный фон */
+	--bg-secondary: #000000;    /* Чёрный */
+	--text-primary: #00AA00;    /* Зелёный текст (приглушённый VGA) */
+	--text-secondary: #555555;  /* Тёмно-серый (VGA 16-color) */
+	--border-light: #555555;    /* Светлая граница */
+	--border-dark: #000000;     /* Тёмная граница */
+}
+
+/* Светлая тема (серо-синий BIOS Windows стиль) */
+[data-theme="light"] {
+	--bg-primary: #AAAAAA;       /* Светло-серый (VGA) */
+	--bg-secondary: #FFFFFF;     /* Белый */
+	--bg-dark: #555555;          /* Тёмно-серый */
+	--text-primary: #000000;     /* Чёрный */
+	--text-secondary: #555555;  /* Тёмно-серый */
+	--text-light: #AAAAAA;       /* Светло-серый */
+	--border-light: #FFFFFF;     /* Белая граница */
+	--border-dark: #555555;      /* Тёмно-серый */
+	--accent: #0000AA;           /* Синий (BIOS стиль) */
+	--accent-light: #5555FF;     /* Ярко-синий */
+	--link: #0000AA;             /* Синий */
+	--link-hover: #5555FF;       /* Ярко-синий */
+}
+
+/* Базовые стили Windows 98 применяются только к элементам с классом .windows98 */
+/* Это позволяет использовать Windows 98 стиль опционально */
+
+/* Глобальное правило: НИКАКИХ скруглений в Windows 98 режиме */
+.windows98,
+.windows98 * {
+	border-radius: 0 !important;
+}
+
+.windows98 html {
+	font-size: 16px; /* Фиксированный размер (как у старых систем) */
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+/* Моноширинный шрифт для основного текста (как старые системы) */
+.windows98 body {
+	font-family: 'Courier New', 'Courier', monospace;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	background: var(--bg-primary);
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	color: var(--text-primary);
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: 400;
+}
+
+/* Пиксельные шрифты для заголовков (только в Windows 98 режиме) */
+.windows98 h1, 
+.windows98 h2, 
+.windows98 h3, 
+.windows98 h4, 
+.windows98 h5, 
+.windows98 h6 {
+	font-family: 'Press Start 2P', 'Courier New', monospace;
+	margin: 0 0 0.5rem 0;
+	color: var(--text-primary);
+	line-height: 1.2;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+h4, h5, h6 {
+	font-size: 16px;
+}
+
+/* Основной контент (только в Windows 98 режиме) */
+.windows98 main {
+	width: 720px;
+	max-width: calc(100% - 2em);
+	margin: 2em auto;
+	padding: 2em 1em;
+	background: var(--bg-secondary, #FFFFFF);
+	border: 2px outset var(--bg-primary, #C0C0C0);
+}
+
+/* Ссылки */
+a {
+	color: var(--link);
+	text-decoration: underline;
+	transition: color 0.1s ease, background-color 0.1s ease;
+}
+
+a:visited {
+	color: var(--link-visited);
+}
+
+a:hover {
+	color: var(--link-hover);
+	background: var(--text-primary);
+	color: var(--bg-secondary);
+}
+
+/* Параграфы */
+p {
+	margin-bottom: 1em;
+	padding: 0;
+	line-height: 1.6;
+}
+
+/* Списки */
+ul, ol {
+	margin: 0 0 1em 0;
+	padding-left: 2em;
+	font-family: 'Courier New', monospace;
+}
+
+li {
+	margin-bottom: 0.5em;
+	line-height: 1.6;
+}
+
+/* Код */
+code, pre {
+	font-family: 'Courier New', 'Courier', monospace;
+	font-size: 14px;
+	background: var(--bg-primary);
+	padding: 2px 4px;
+	border: 1px solid var(--border-dark);
+}
+
+pre {
+	padding: 1em;
+	overflow-x: auto;
+	border: 2px inset var(--bg-primary);
+}
+
+/* Beveled 3D кнопки Windows 95 */
+.button,
+button {
+	border: 2px outset var(--bg-primary);
+	background: var(--bg-primary);
+	padding: 4px 12px;
+	cursor: pointer;
+	font-family: 'Courier New', monospace;
+	font-size: 14px;
+	color: var(--text-primary);
+	text-decoration: none;
+	display: inline-block;
+}
+
+.button:hover,
+button:hover {
+	border: 2px inset var(--bg-primary);
+	background: var(--bg-secondary);
+}
+
+.button:active,
+button:active {
+	border: 2px inset var(--bg-primary);
+	transform: translate(1px, 1px);
+}
+
+/* Windows меню-бар */
+.menu-bar {
+	display: flex;
+	gap: 1em;
+	padding: 4px 8px;
+	background: var(--bg-primary);
+	border-bottom: 1px solid var(--border-dark);
+	font-size: 14px;
+	font-family: 'Courier New', monospace;
+}
+
+.menu-item {
+	padding: 2px 8px;
+	text-decoration: underline;
+	cursor: pointer;
+	color: var(--text-primary);
+	background: transparent;
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+.menu-item:hover {
+	background: var(--text-primary);
+	color: var(--bg-secondary);
+}
+
+/* Hover эффект (инверсия цветов как в DOS) */
+.post-card,
+.card {
+	border: 1px solid var(--border-dark);
+	background: var(--bg-secondary);
+	padding: 8px 12px;
+	margin-bottom: 8px;
+	transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+.post-card:hover,
+.card:hover {
+	background: var(--text-primary);
+	color: var(--bg-secondary);
+}
+
+/* Notification bar (Windows стиль) */
+.notification-bar {
+	padding: 8px 12px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid var(--border-dark);
+	font-family: 'Courier New', monospace;
+	font-size: 14px;
+}
+
+.notification-bar.warning {
+	background: #FFFF00;
+	color: #000000;
+}
+
+.notification-bar.error {
+	background: #FF0000;
+	color: #FFFFFF;
+}
+
+.notification-bar.info {
+	background: #008080;
+	color: #FFFFFF;
+}
+
+.notification-bar .close-button {
+	background: transparent;
+	border: 1px solid currentColor;
+	padding: 2px 6px;
+	cursor: pointer;
+	font-family: 'Courier New', monospace;
+	font-size: 12px;
+}
+
+.notification-bar .close-button:hover {
+	background: currentColor;
+	color: var(--bg-secondary);
+}
+
+/* Sticky header (только в Windows 98 режиме) */
+.windows98 header {
+	position: sticky;
+	top: 0;
+	background: var(--bg-primary);
+	border-bottom: 2px solid var(--border-dark);
+	z-index: 100;
+}
+
+/* Grid layout (DOS директория) */
+.dos-directory {
+	display: grid;
+	grid-template-columns: auto 1fr auto auto;
+	gap: 1em;
+	padding: 4px 8px;
+	font-family: 'Courier New', monospace;
+	font-size: 14px;
+	border-bottom: 1px solid var(--border-dark);
+}
+
+.dos-directory:hover {
+	background: var(--text-primary);
+	color: var(--bg-secondary);
+}
+
+/* Простые анимации */
+@keyframes blink {
+	0%, 50% { opacity: 1; }
+	51%, 100% { opacity: 0; }
+}
+
+.cursor-blink {
+	animation: blink 1s infinite;
+}
+
+@keyframes color-blink {
+	0%, 50% { color: var(--text-primary); }
+	51%, 100% { color: var(--accent-light); }
+}
+
+.text-blink {
+	animation: color-blink 1s infinite;
+}
+
+/* Windows 98 стиль применяется только к элементам с классом .windows98 */
+.windows98,
+.windows98 * {
+	/* Убрать градиенты - только плоские цвета */
+	background-image: none;
+}
+
+.windows98,
+.windows98 * {
+	/* Упростить тени */
+	box-shadow: none;
+	text-shadow: none;
+}
+
+.windows98,
+.windows98 * {
+	/* Убрать скругления */
+	border-radius: 0;
+}
+

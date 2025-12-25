@@ -1,22 +1,23 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
+import Windows95Button from '../components/Windows95Button.astro';
+import Windows98Header from '../components/Windows98Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
 <!doctype html>
-<html lang="ru">
+<html lang="ru" class="windows98">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body>
-		<Header />
-		<main style="padding-top: 2.5em;">
+	<body class="windows98">
+		<Windows98Header />
+		<main>
 			<section class="hero">
 				<h1>Добро пожаловать в {SITE_TITLE}</h1>
 				<p class="subtitle">{SITE_DESCRIPTION}</p>
-				<a href="/blog/" class="cta-button">Читать блог</a>
+				<Windows95Button href="/blog/" variant="primary">Читать блог</Windows95Button>
 			</section>
 		</main>
 		<Footer />
@@ -26,50 +27,43 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 <style>
 	.hero {
 		text-align: center;
-		padding: 4em 1em;
+		padding: 3em 2em;
 		max-width: 720px;
-		margin: 0 auto;
+		margin: 2em auto;
+		background: var(--bg-secondary, #FFFFFF);
+		border: 2px outset var(--bg-primary, #AAAAAA);
 	}
 
 	.hero h1 {
-		font-size: 3.052em;
-		margin-bottom: 0.5em;
-		color: var(--text-primary);
+		font-size: 1.8em;
+		margin-bottom: 1em;
+		color: var(--text-primary, #000000);
+		font-family: 'Press Start 2P', 'Courier New', monospace;
+		line-height: 1.4;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
 	}
 
 	.hero .subtitle {
-		font-size: 1.25em;
-		color: var(--text-secondary);
+		font-size: 14px;
+		color: var(--text-secondary, #555555);
 		margin-bottom: 2em;
 		line-height: 1.6;
-	}
-
-	.cta-button {
-		display: inline-block;
-		padding: 1em 2em;
-		background: var(--green-forest);
-		color: white;
-		text-decoration: none;
-		border-radius: 8px;
-		font-weight: 600;
-		transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-	}
-
-	.cta-button:hover {
-		background: var(--accent);
-		filter: brightness(1.15);
-		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(107, 200, 107, 0.3);
+		font-family: 'Courier New', 'Courier', monospace;
 	}
 
 	@media (max-width: 720px) {
+		.hero {
+			padding: 2em 1em;
+			margin: 1em auto;
+		}
+
 		.hero h1 {
-			font-size: 2.369em;
+			font-size: 1.4em;
 		}
 
 		.hero .subtitle {
-			font-size: 1.125em;
+			font-size: 13px;
 		}
 	}
 </style>
