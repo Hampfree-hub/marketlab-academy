@@ -1,0 +1,121 @@
+---
+// Компонент переключения темы (солнце-луна)
+---
+
+<button class="theme-toggle" aria-label="Переключить тему" id="theme-toggle" type="button">
+	<span class="theme-icon sun-icon">☀</span>
+	<span class="theme-icon moon-icon">☾</span>
+</button>
+
+<script>
+	// Проверяем сохранённую тему или системные настройки
+	function getInitialTheme() {
+		if (typeof window === 'undefined') return 'dark';
+		
+		const saved = localStorage.getItem('theme');
+		if (saved) return saved;
+		
+		const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+		return prefersDark ? 'dark' : 'light';
+	}
+
+	// Применяем тему
+	function applyTheme(theme) {
+		document.documentElement.setAttribute('data-theme', theme);
+		localStorage.setItem('theme', theme);
+	}
+
+	// Инициализация
+	if (typeof window !== 'undefined') {
+		const initialTheme = getInitialTheme();
+		applyTheme(initialTheme);
+
+		// Переключение темы
+		const themeToggle = document.getElementById('theme-toggle');
+		themeToggle?.addEventListener('click', () => {
+			const currentTheme = document.documentElement.getAttribute('data-theme');
+			const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+			applyTheme(newTheme);
+		});
+	}
+</script>
+
+<style>
+	.theme-toggle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		padding: 0;
+		background: var(--bg-primary, #AAAAAA);
+		border: 2px outset var(--bg-primary, #AAAAAA);
+		border-top-color: var(--border-light, #FFFFFF);
+		border-left-color: var(--border-light, #FFFFFF);
+		border-bottom-color: var(--border-dark, #555555);
+		border-right-color: var(--border-dark, #555555);
+		cursor: pointer;
+		position: relative;
+		transition: all 0.1s ease;
+		font-family: 'Courier New', 'Courier', monospace;
+		font-size: 16px;
+		border-radius: 0 !important;
+	}
+
+	.theme-toggle:hover {
+		border: 2px outset var(--bg-primary, #AAAAAA);
+		border-top-color: var(--border-light, #FFFFFF);
+		border-left-color: var(--border-light, #FFFFFF);
+		border-bottom-color: var(--border-dark, #555555);
+		border-right-color: var(--border-dark, #555555);
+		background: var(--bg-dark, #555555);
+		transform: translate(-1px, -1px);
+		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+	}
+
+	.theme-toggle:active {
+		border: 2px inset var(--bg-primary, #AAAAAA);
+		border-top-color: var(--border-dark, #555555);
+		border-left-color: var(--border-dark, #555555);
+		border-bottom-color: var(--border-light, #FFFFFF);
+		border-right-color: var(--border-light, #FFFFFF);
+		transform: translate(1px, 1px);
+		box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3);
+	}
+
+	.theme-toggle:hover .theme-icon {
+		color: var(--bg-secondary, #FFFFFF);
+	}
+
+	.theme-icon {
+		position: absolute;
+		transition: opacity 0.1s ease, transform 0.1s ease;
+		line-height: 1;
+		color: var(--text-primary, #000000);
+	}
+
+	/* Тёмная тема: показываем солнце (переключение на светлую) */
+	[data-theme="dark"] .sun-icon {
+		opacity: 1;
+		transform: rotate(0deg);
+	}
+
+	[data-theme="dark"] .moon-icon {
+		opacity: 0;
+		transform: rotate(-90deg);
+		pointer-events: none;
+	}
+
+	/* Светлая тема: показываем луну (переключение на тёмную) */
+	[data-theme="light"] .sun-icon {
+		opacity: 0;
+		transform: rotate(90deg);
+		pointer-events: none;
+	}
+
+	[data-theme="light"] .moon-icon {
+		opacity: 1;
+		transform: rotate(0deg);
+	}
+</style>
+

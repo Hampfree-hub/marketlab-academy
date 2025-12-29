@@ -4,6 +4,7 @@
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { existsSync } from 'fs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -17,8 +18,27 @@ try {
     process.chdir(repoPath);
     console.log(`📁 Директория: ${repoPath}\n`);
 
-    // Шаг 0: Сохранить незакоммиченные изменения (stash)
-    console.log('[0/6] Сохранение незакоммиченных изменений...');
+    // Шаг 0: Проверить и прервать незавершённый rebase/merge
+    console.log('[0/7] Проверка состояния репозитория...');
+    try {
+        const gitDir = execSync('git rev-parse --git-dir', { encoding: 'utf-8' }).trim();
+        if (existsSync(`${gitDir}/rebase-merge`) || existsSync(`${gitDir}/rebase-apply`)) {
+            console.log('⚠️ Обнаружен незавершённый rebase, прерываем...');
+            execSync('git rebase --abort', { stdio: 'inherit' });
+            console.log('✅ Rebase прерван\n');
+        } else if (existsSync(`${gitDir}/MERGE_HEAD`)) {
+            console.log('⚠️ Обнаружен незавершённый merge, прерываем...');
+            execSync('git merge --abort', { stdio: 'inherit' });
+            console.log('✅ Merge прерван\n');
+        } else {
+            console.log('✅ Репозиторий в чистом состоянии\n');
+        }
+    } catch (e) {
+        console.log('✅ Репозиторий в чистом состоянии\n');
+    }
+
+    // Шаг 0.5: Сохранить незакоммиченные изменения (stash)
+    console.log('[0.5/7] Сохранение незакоммиченных изменений...');
     try {
         const status = execSync('git status --porcelain', { encoding: 'utf-8' });
         if (status.trim()) {
@@ -32,8 +52,8 @@ try {
         console.log('⚠️ Не удалось сохранить изменения\n');
     }
 
-    // Шаг 0.5: Переключиться на ветку main
-    console.log('[0.5/6] Переключение на ветку main...');
+    // Шаг 1: Переключиться на ветку main
+    console.log('[1/7] Переключение на ветку main...');
     try {
         execSync('git checkout main', { stdio: 'inherit' });
         console.log('✅ На ветке main\n');
@@ -55,17 +75,20 @@ try {
         // Если stash пустой, это нормально
     }
 
-    // Шаг 1: Получить изменения с GitHub
-    console.log('[1/6] Получение изменений с GitHub...');
+    // Шаг 2: Получить изменения с GitHub
+    console.log('[2/7] Получение изменений с GitHub...');
     try {
-        execSync('git pull github main --no-rebase', { stdio: 'inherit' });
-        console.log('✅ Изменения получены\n');
+        // Сначала fetch
+        execSync('git fetch github main', { stdio: 'inherit' });
+        // Затем reset на удалённую ветку (синхронизация)
+        execSync('git reset --hard github/main', { stdio: 'inherit' });
+        console.log('✅ Локальная ветка синхронизирована с GitHub\n');
     } catch (e) {
-        console.log('⚠️ Не удалось получить изменения (возможно, первый коммит)\n');
+        console.log('⚠️ Не удалось синхронизировать (возможно, первый коммит)\n');
     }
 
-    // Шаг 2: Проверка статуса
-    console.log('[2/6] Проверка статуса git...');
+    // Шаг 3: Проверка статуса
+    console.log('[3/7] Проверка статуса git...');
     try {
         const status = execSync('git status --short', { encoding: 'utf-8' });
         if (status.trim()) {
@@ -78,13 +101,13 @@ try {
     }
     console.log('');
 
-    // Шаг 3: Добавление изменений
-    console.log('[3/6] Добавление всех изменений...');
+    // Шаг 4: Добавление изменений
+    console.log('[4/7] Добавление всех изменений...');
     execSync('git add .', { stdio: 'inherit' });
     console.log('✅ Файлы добавлены\n');
 
-    // Шаг 4: Создание коммита
-    console.log('[4/6] Создание коммита...');
+    // Шаг 5: Создание коммита
+    console.log('[5/7] Создание коммита...');
     const commitMessage = [
         'Упрощение проекта: смягчённая палитра + светлая тема Windows',
         '',
@@ -104,14 +127,14 @@ try {
         console.log('⚠️ Коммит не создан (возможно, нет изменений или уже закоммичено)\n');
     }
 
-    // Шаг 5: Проверка remotes
-    console.log('[5/6] Проверка remotes...');
+    // Шаг 6: Проверка remotes
+    console.log('[6/7] Проверка remotes...');
     const remotes = execSync('git remote -v', { encoding: 'utf-8' });
     console.log(remotes);
     console.log('');
 
-    // Шаг 6: Push в GitHub
-    console.log('[6/6] Отправка в GitHub...');
+    // Шаг 7: Push в GitHub
+    console.log('[7/7] Отправка в GitHub...');
     const remoteList = execSync('git remote', { encoding: 'utf-8' });
     
     // Используем только github remote (origin теперь тоже GitHub)
@@ -143,4 +166,3 @@ try {
     console.error('\n❌ Ошибка:', error.message);
     process.exit(1);
 }
-
