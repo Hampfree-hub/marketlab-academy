@@ -16,16 +16,25 @@ const isAbout = currentPath.includes('/about');
 		</a>
 
 		<nav class="desktop-nav" aria-label="Основная навигация">
+			<div class="lang-switcher" aria-label="Выбор языка">
+				<button class="lang-btn active">RU</button>
+				<span class="lang-divider">|</span>
+				<button class="lang-btn">EN</button>
+			</div>
 			<a href={`${baseUrl}blog`} class="nav-link" aria-current={isArchive ? 'page' : undefined}>Архив</a>
 			<a href={`${baseUrl}about`} class="nav-link" aria-current={isAbout ? 'page' : undefined}>О проекте</a>
 			<button id="theme-toggle" class="theme-btn" aria-label="Переключить тему">
-				<span class="theme-icon">🌙</span> Тема
+				<span class="theme-icon">◑</span>
 			</button>
 		</nav>
 
 		<div class="mobile-actions">
+			<div class="lang-switcher mobile" aria-label="Выбор языка">
+				<button class="lang-btn active">RU</button>
+				<button class="lang-btn">EN</button>
+			</div>
 			<button id="theme-toggle-mobile" class="theme-btn" aria-label="Переключить тему">
-				<span class="theme-icon">🌙</span>
+				<span class="theme-icon">◑</span>
 			</button>
 			<button id="hamburger" class="hamburger" aria-label="Открыть меню">
 				<span></span>
@@ -70,10 +79,45 @@ const isAbout = currentPath.includes('/about');
 
 	.prompt {
 		color: var(--color-accent);
-		animation: blink 1s steps(2, start) infinite;
+		animation: fade-blink 2s ease-in-out infinite;
 	}
 
-	@keyframes blink { to { opacity: 0; } }
+	@keyframes fade-blink { 
+		0%, 100% { opacity: 1; } 
+		50% { opacity: 0.3; } 
+	}
+
+	.lang-switcher {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 0.8rem;
+		margin-right: 1rem;
+	}
+
+	.lang-btn {
+		background: none;
+		border: none;
+		color: var(--color-text-secondary);
+		cursor: pointer;
+		padding: 2px 4px;
+		transition: color var(--transition-fast);
+	}
+
+	.lang-btn.active {
+		color: var(--color-accent);
+		font-weight: bold;
+	}
+
+	.lang-btn:hover:not(.active) {
+		color: var(--color-text-primary);
+	}
+
+	.lang-divider {
+		color: var(--color-border);
+		opacity: 0.5;
+	}
 
 	.desktop-nav {
 		display: flex;
@@ -163,7 +207,7 @@ const isAbout = currentPath.includes('/about');
 			document.documentElement.setAttribute('data-theme', t);
 			localStorage.setItem('theme', t);
 			const icons = document.querySelectorAll('.theme-icon');
-			icons.forEach(i => i.innerText = t === 'dark' ? '🌙' : '☀️');
+			icons.forEach(i => i.innerText = t === 'dark' ? '◑' : '●');
 		};
 
 		setTheme(getTheme());
