@@ -4,62 +4,115 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<'blog'>['data'] & { headings: any[] };
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, headings } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
+	? import.meta.env.BASE_URL 
+	: import.meta.env.BASE_URL + '/';
+
+const breadcrumbItems = [
+	{ label: 'Архив', href: `${baseUrl}blog` },
+	{ label: title }
+];
 ---
 
 <html lang="ru">
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
+			.layout-grid {
+				display: grid;
+				grid-template-columns: 240px 1fr;
+				gap: 48px;
+				align-items: start;
+				margin-top: 2rem;
+			}
+
+			.toc-sticky {
+				position: sticky;
+				top: 100px;
+				font-family: 'JetBrains Mono', monospace;
+			}
+
+			.toc-title {
+				font-size: 0.8rem;
+				color: var(--color-accent);
+				margin-bottom: 1rem;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+
+			.toc-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				font-size: 0.85rem;
+				border-left: 1px solid var(--color-border);
+			}
+
+			.toc-item {
+				padding: 4px 0 4px 16px;
+			}
+
+			.toc-item a {
+				color: var(--color-text-secondary);
+			}
+
+			.toc-item a:hover {
+				color: var(--color-accent);
+			}
+
 			article {
-				padding: 48px 0;
+				max-width: var(--max-width-post);
 			}
 
 			.meta {
 				font-family: 'JetBrains Mono', monospace;
-				font-size: 0.85rem;
-				color: var(--color-accent);
-				margin-bottom: 8px;
-				text-transform: uppercase;
+				font-size: 0.8rem;
+				color: var(--color-text-secondary);
+				margin-bottom: 1rem;
 			}
 
 			h1 {
-				font-size: 2.5rem;
-				color: #fff;
-				margin-bottom: 24px;
+				font-size: 3rem;
+				line-height: 1.1;
+				margin-bottom: 2rem;
 			}
 
 			.hero-img {
 				width: 100%;
 				border: 1px solid var(--color-border);
-				margin: 32px 0;
+				margin-bottom: 3rem;
 			}
 
-			.prose {
-				color: var(--color-text-primary);
+			.scroll-top {
+				position: fixed;
+				bottom: 32px;
+				right: 32px;
+				background: var(--color-card-bg);
+				border: 1px solid var(--color-accent);
+				color: var(--color-accent);
+				width: 44px;
+				height: 44px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				z-index: 100;
+				transition: all 0.3s;
 			}
 
-			.prose :global(h2) {
-				color: #fff;
-				margin-top: 48px;
-				margin-bottom: 16px;
-				border-bottom: 1px solid var(--color-border);
-				padding-bottom: 8px;
+			.scroll-top:hover {
+				background: var(--color-accent);
+				color: var(--color-bg);
 			}
 
-			.prose :global(p) {
-				margin-bottom: 24px;
-			}
-
-			.prose :global(blockquote) {
-				border-left: 2px solid var(--color-accent);
-				padding-left: 24px;
-				margin: 32px 0;
-				color: var(--color-text-secondary);
-				font-style: italic;
+			@media (max-width: 1024px) {
+				.layout-grid { grid-template-columns: 1fr; }
+				.toc-sticky { display: none; }
 			}
 		</style>
 	</head>
@@ -67,22 +120,52 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	<body>
 		<Header />
 		<main>
-			<article>
-				<div class="meta">
-					<FormattedDate date={pubDate} />
-					{updatedDate && (
-						<span> — Обновлено <FormattedDate date={updatedDate} /></span>
-					)}
-				</div>
-				<h1>{title}</h1>
-				
-				{heroImage && <img src={heroImage} alt="" class="hero-img" />}
+			<div class="layout-grid">
+				<aside class="toc-sticky">
+					<div class="toc-title">Содержание</div>
+					<ul class="toc-list">
+						{headings?.map((heading) => (
+							<li class="toc-item" style={`padding-left: ${heading.depth * 8}px`}>
+								<a href={`#${heading.slug}`}>{heading.text}</a>
+							</li>
+						))}
+					</ul>
+				</aside>
 
-				<div class="prose">
-					<slot />
-				</div>
-			</article>
+				<article class="fade-in">
+					<Breadcrumb items={breadcrumbItems} />
+					
+					<div class="meta">
+						<FormattedDate date={pubDate} />
+						{updatedDate && <span> | UPDATED: <FormattedDate date={updatedDate} /></span>}
+					</div>
+
+					<h1>{title}</h1>
+					
+					{heroImage && <img src={heroImage} alt="" class="hero-img" />}
+
+					<div class="prose">
+						<slot />
+					</div>
+				</article>
+			</div>
+
+			<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
 		</main>
 		<Footer />
+
+		<script is:inline>
+			const scrollTopBtn = document.getElementById('scrollTop');
+			window.onscroll = function() {
+				if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+					scrollTopBtn.style.display = "flex";
+				} else {
+					scrollTopBtn.style.display = "none";
+				}
+			};
+			scrollTopBtn.onclick = function() {
+				window.scrollTo({top: 0, behavior: 'smooth'});
+			};
+		</script>
 	</body>
 </html>

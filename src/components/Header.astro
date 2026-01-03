@@ -5,26 +5,51 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 	: import.meta.env.BASE_URL + '/';
 ---
 
-<header>
-	<nav>
+<header class="main-header">
+	<div class="header-container">
 		<a href={baseUrl} class="logo">
-			{SITE_TITLE}
+			<span class="prompt">></span> {SITE_TITLE}
 		</a>
-		<div class="links">
-			<a href={`${baseUrl}blog`}>Архив</a>
-			<a href={`${baseUrl}about`}>Инфо</a>
+
+		<nav class="desktop-nav">
+			<a href={`${baseUrl}blog`} class="nav-link">Архив</a>
+			<a href={`${baseUrl}about`} class="nav-link">О проекте</a>
+			<button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+				<span class="theme-icon">🌙</span> Тема
+			</button>
+		</nav>
+
+		<div class="mobile-actions">
+			<button id="theme-toggle-mobile" class="theme-btn" aria-label="Toggle Theme">
+				<span class="theme-icon">🌙</span>
+			</button>
+			<button id="hamburger" class="hamburger" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 		</div>
-	</nav>
+	</div>
+
+	<div id="mobile-menu" class="mobile-menu">
+		<a href={`${baseUrl}blog`}>Архив</a>
+		<a href={`${baseUrl}about`}>О проекте</a>
+	</div>
 </header>
 
 <style>
-	header {
-		padding: var(--vertical-rhythm) var(--horizontal-padding);
-		max-width: var(--max-width);
-		margin: 0 auto;
+	.main-header {
+		position: sticky;
+		top: 0;
+		background: var(--color-bg);
+		border-bottom: 1px solid var(--color-border);
+		z-index: 1000;
 	}
 
-	nav {
+	.header-container {
+		max-width: var(--max-width);
+		margin: 0 auto;
+		padding: 1rem var(--horizontal-padding);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -32,24 +57,123 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 
 	.logo {
 		font-family: 'JetBrains Mono', monospace;
-		font-weight: bold;
-		color: #fff;
+		font-weight: 700;
+		color: var(--color-text-primary);
 		font-size: 1.1rem;
 		text-transform: uppercase;
+		letter-spacing: 1px;
 	}
 
-	.links {
+	.prompt {
+		color: var(--color-accent);
+		animation: blink 1s steps(2, start) infinite;
+	}
+
+	@keyframes blink { to { opacity: 0; } }
+
+	.desktop-nav {
 		display: flex;
-		gap: 24px;
+		align-items: center;
+		gap: 1.5rem;
 	}
 
-	.links a {
+	.nav-link {
 		font-family: 'JetBrains Mono', monospace;
 		font-size: 0.9rem;
-		color: var(--color-text-secondary);
+		color: var(--color-text-primary);
+		padding: 0.5rem 1rem;
+		border: 1px solid transparent;
 	}
 
-	.links a:hover {
+	.nav-link:hover {
+		color: var(--color-accent);
+		border-color: var(--color-border);
+	}
+
+	.theme-btn {
+		background: transparent;
+		border: 1px solid var(--color-border);
+		color: var(--color-text-primary);
+		padding: 6px 12px;
+		cursor: pointer;
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 0.85rem;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.theme-btn:hover {
+		border-color: var(--color-accent);
 		color: var(--color-accent);
 	}
+
+	.hamburger {
+		display: none;
+		flex-direction: column;
+		gap: 6px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 4px;
+	}
+
+	.hamburger span {
+		display: block;
+		width: 24px;
+		height: 2px;
+		background: var(--color-accent);
+		transition: 0.3s;
+	}
+
+	.mobile-menu {
+		display: none;
+		flex-direction: column;
+		background: var(--color-bg);
+		border-bottom: 1px solid var(--color-border);
+		padding: 1rem var(--horizontal-padding);
+		gap: 1.5rem;
+	}
+
+	.mobile-menu a {
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 1.2rem;
+		color: var(--color-text-primary);
+	}
+
+	@media (max-width: 768px) {
+		.desktop-nav { display: none; }
+		.mobile-actions { display: flex; gap: 1rem; align-items: center; }
+		.mobile-menu.active { display: flex; }
+	}
 </style>
+
+<script is:inline>
+	const themeToggle = () => {
+		const getTheme = () => localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		const setTheme = (t) => {
+			document.documentElement.setAttribute('data-theme', t);
+			localStorage.setItem('theme', t);
+			const icons = document.querySelectorAll('.theme-icon');
+			icons.forEach(i => i.innerText = t === 'dark' ? '🌙' : '☀️');
+		};
+
+		setTheme(getTheme());
+
+		document.querySelectorAll('#theme-toggle, #theme-toggle-mobile').forEach(btn => {
+			btn.addEventListener('click', () => {
+				const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+				setTheme(next);
+			});
+		});
+	};
+	themeToggle();
+
+	const hamburger = document.getElementById('hamburger');
+	const mobileMenu = document.getElementById('mobile-menu');
+	if (hamburger && mobileMenu) {
+		hamburger.addEventListener('click', () => {
+			mobileMenu.classList.toggle('active');
+		});
+	}
+</script>

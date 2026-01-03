@@ -3,6 +3,20 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const featuredPosts = posts.slice(0, 4);
+const categories = [
+	{ id: 'tech', label: 'ТЕХНИЧЕСКИЙ_АНАЛИЗ' },
+	{ id: 'crypto', label: 'КРИПТО' },
+	{ id: 'automation', label: 'АВТОМАТИЗАЦИЯ' },
+	{ id: 'fundamental', label: 'ФУНДАМЕНТ' }
+];
 
 const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
 	? import.meta.env.BASE_URL 
@@ -14,53 +28,226 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
+			/* Hero Section */
 			.hero {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
+				padding: 120px 0 80px;
 				text-align: center;
-				min-height: 60vh;
-				padding: 48px 0;
+				border-bottom: 1px solid var(--color-border);
 			}
 
-			h1 {
-				font-size: 3rem;
-				color: #fff;
-				margin-bottom: 16px;
+			.hero h1 {
+				font-size: 3.5rem;
+				line-height: 1;
+				margin-bottom: 1.5rem;
 				text-transform: uppercase;
+				color: var(--color-text-primary);
 			}
 
-			.description {
-				font-size: 1.2rem;
+			.hero p {
+				font-size: 1.1rem;
 				color: var(--color-text-secondary);
-				max-width: 500px;
-				margin-bottom: 48px;
+				max-width: 550px;
+				margin: 0 auto 3rem;
 			}
 
-			.cta-archive {
-				margin-top: 24px;
+			/* Categories */
+			.section-label {
+				font-family: 'JetBrains Mono', monospace;
+				color: var(--color-accent);
+				font-size: 0.85rem;
+				margin: 64px 0 24px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				display: flex;
+				align-items: center;
+				gap: 1rem;
 			}
 
-			@media (max-width: 640px) {
-				h1 { font-size: 2.2rem; }
-				.hero { min-height: 50vh; }
+			.section-label::after {
+				content: "";
+				flex: 1;
+				height: 1px;
+				background: var(--color-border);
+			}
+
+			.categories-container {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 12px;
+				margin-bottom: 80px;
+			}
+
+			/* Posts Grid */
+			.posts-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 24px;
+				margin-bottom: 80px;
+			}
+
+			.post-card-tags {
+				display: flex;
+				gap: 8px;
+				margin-top: auto;
+				padding-top: 1rem;
+			}
+
+			.mini-tag {
+				font-family: 'JetBrains Mono', monospace;
+				font-size: 0.7rem;
+				color: var(--color-text-secondary);
+				opacity: 0.7;
+			}
+
+			.post-meta {
+				display: flex;
+				justify-content: space-between;
+				font-family: 'JetBrains Mono', monospace;
+				font-size: 0.75rem;
+				color: var(--color-text-secondary);
+				margin-bottom: 0.75rem;
+			}
+
+			.read-more-link {
+				display: inline-block;
+				margin-top: 1.5rem;
+				font-family: 'JetBrains Mono', monospace;
+				font-size: 0.85rem;
+				color: var(--color-accent);
+				font-weight: bold;
+			}
+
+			/* Newsletter */
+			.newsletter-box {
+				background: var(--color-card-bg);
+				border: 1px solid var(--color-accent);
+				padding: 64px 32px;
+				text-align: center;
+				margin: 80px 0;
+			}
+
+			.newsletter-box h2 {
+				font-size: 2rem;
+				margin-bottom: 1rem;
+				color: var(--color-text-primary);
+			}
+
+			.newsletter-box p {
+				color: var(--color-text-secondary);
+				margin-bottom: 2.5rem;
+			}
+
+			.subscribe-form {
+				display: flex;
+				max-width: 580px;
+				margin: 0 auto;
+				gap: 0;
+			}
+
+			.subscribe-form input {
+				flex: 1;
+				background: var(--color-bg);
+				border: 1px solid var(--color-border);
+				padding: 14px 20px;
+				color: var(--color-text-primary);
+				font-family: 'JetBrains Mono', monospace;
+				transition: border-color var(--transition);
+			}
+
+			.subscribe-form input:focus {
+				outline: none;
+				border-color: var(--color-accent);
+			}
+
+			.subscribe-form .btn-submit {
+				background: var(--color-accent);
+				color: #FFFFFF; /* Always white on accent */
+				border: 1px solid var(--color-accent);
+				padding: 0 32px;
+				font-family: 'JetBrains Mono', monospace;
+				font-weight: bold;
+				cursor: pointer;
+				transition: all var(--transition);
+			}
+
+			.subscribe-form .btn-submit:hover {
+				background: var(--color-accent-hover);
+				border-color: var(--color-accent-hover);
+			}
+
+			@media (max-width: 768px) {
+				.posts-grid { grid-template-columns: 1fr; }
+				.hero h1 { font-size: 2.5rem; }
+				.hero { padding: 80px 0 60px; }
+			}
+
+			@media (max-width: 600px) {
+				.subscribe-form { flex-direction: column; gap: 12px; }
+				.subscribe-form input { width: 100%; }
+				.subscribe-form .btn-submit { padding: 14px; }
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
-		<main>
-			<section class="hero section">
+		<main class="container">
+			<section class="hero">
 				<h1>{SITE_TITLE}</h1>
-				<p class="description">
-					{SITE_DESCRIPTION}
-				</p>
-				<div class="cta-archive">
-					<a href={`${baseUrl}blog`} class="btn">Войти в архив</a>
+				<p>{SITE_DESCRIPTION}</p>
+				<a href={`${baseUrl}blog`} class="btn">Читать статьи</a>
+			</section>
+
+			<section>
+				<div class="section-label">КАТЕГОРИИ</div>
+				<div class="categories-container">
+					{categories.map(cat => (
+						<button class="tag-btn" data-cat={cat.id}>
+							[{cat.label}]
+						</button>
+					))}
 				</div>
+			</section>
+
+			<section>
+				<div class="section-label">ПОСЛЕДНИЕ_СТАТЬИ</div>
+				<div class="posts-grid">
+					{featuredPosts.map(post => (
+						<a href={`${baseUrl}blog/${post.slug}/`} class="post-card">
+							<div class="post-meta">
+								<span><FormattedDate date={post.data.pubDate} /></span>
+								<span>5 МИН ЧТЕНИЯ</span>
+							</div>
+							<h3>{post.data.title}</h3>
+							<p class="description">{post.data.description}</p>
+							<div class="post-card-tags">
+								<span class="mini-tag">[MARKET]</span>
+								<span class="mini-tag">[ANALYSIS]</span>
+							</div>
+							<div class="read-more-link">> Читать полностью →</div>
+						</a>
+					))}
+				</div>
+			</section>
+
+			<section class="newsletter-box">
+				<h2>Подпишись на обновления</h2>
+				<p>Получай закрытые отчеты лаборатории и торговые стратегии прямо на почту.</p>
+				<form class="subscribe-form" action="#" method="POST">
+					<input type="email" placeholder="YOUR_EMAIL@PROVIDER.COM" required name="email" />
+					<button type="submit" class="btn-submit">Подписаться</button>
+				</form>
 			</section>
 		</main>
 		<Footer />
+
+		<script is:inline>
+			// Categories active state toggle
+			document.querySelectorAll('.tag-btn').forEach(btn => {
+				btn.addEventListener('click', () => {
+					// In a real app, this would filter posts
+					btn.classList.toggle('active');
+				});
+			});
+		</script>
 	</body>
 </html>

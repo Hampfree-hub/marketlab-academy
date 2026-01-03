@@ -2,6 +2,7 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
@@ -9,6 +10,8 @@ import FormattedDate from '../../components/FormattedDate.astro';
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+const breadcrumbItems = [{ label: 'Архив' }];
 ---
 
 <!doctype html>
@@ -16,58 +19,96 @@ const posts = (await getCollection('blog')).sort(
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
-			.posts-list {
-				list-style: none;
-				padding: 48px 0;
-				margin: 0;
+			.archive-header {
+				margin-bottom: 4rem;
 			}
 
-			.post-item {
-				margin-bottom: 48px;
+			.search-bar {
+				margin: 2rem 0;
+				position: relative;
+			}
+
+			.search-bar input {
+				width: 100%;
+				background: var(--color-card-bg);
+				border: 1px solid var(--color-border);
+				padding: 1rem 1.5rem;
+				color: #fff;
+				font-family: 'JetBrains Mono', monospace;
+			}
+
+			.posts-grid {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 2rem;
+			}
+
+			.post-card {
+				padding: 2rem;
+				border: 1px solid var(--color-border);
+				transition: all var(--transition);
+				text-decoration: none;
+			}
+
+			.post-card:hover {
+				border-color: var(--color-accent);
+				transform: translateX(10px);
 			}
 
 			.date {
 				font-family: 'JetBrains Mono', monospace;
-				font-size: 0.85rem;
+				font-size: 0.8rem;
 				color: var(--color-text-secondary);
-				margin-bottom: 8px;
+				margin-bottom: 0.5rem;
 			}
 
-			h2 {
-				font-size: 1.8rem;
-				margin-bottom: 12px;
-			}
+			h2 { color: #fff; margin-bottom: 1rem; }
+			p { color: var(--color-text-secondary); }
 
-			h2 a {
-				color: #fff;
-			}
-
-			h2 a:hover {
-				color: var(--color-accent);
-				text-decoration: none;
-			}
-
-			.description {
-				color: var(--color-text-secondary);
-				font-size: 1rem;
+			@media (max-width: 768px) {
+				.post-card:hover { transform: none; }
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<ul class="posts-list">
+			<div class="archive-header">
+				<Breadcrumb items={breadcrumbItems} />
+				<h1 class="mono">> АРХИВ_ПУБЛИКАЦИЙ</h1>
+				
+				<div class="search-bar">
+					<input type="text" placeholder="ПОИСК_ПО_АРХИВУ..." id="searchInput" />
+				</div>
+			</div>
+
+			<section class="posts-grid fade-in" id="postsGrid">
 				{posts.map((post) => (
-					<li class="post-item">
+					<a href={`/marketlab-academy/blog/${post.slug}/`} class="post-card" data-title={post.data.title.toLowerCase()}>
 						<div class="date"><FormattedDate date={post.data.pubDate} /></div>
-						<h2>
-							<a href={`/marketlab-academy/blog/${post.slug}/`}>{post.data.title}</a>
-						</h2>
-						<p class="description">{post.data.description}</p>
-					</li>
+						<h2>{post.data.title}</h2>
+						<p>{post.data.description}</p>
+					</a>
 				))}
-			</ul>
+			</section>
 		</main>
 		<Footer />
+
+		<script is:inline>
+			const searchInput = document.getElementById('searchInput');
+			const posts = document.querySelectorAll('#postsGrid > a');
+
+			searchInput.addEventListener('input', (e) => {
+				const term = e.target.value.toLowerCase();
+				posts.forEach(post => {
+					const title = post.getAttribute('data-title');
+					if (title.includes(term)) {
+						post.style.display = 'block';
+					} else {
+						post.style.display = 'none';
+					}
+				});
+			});
+		</script>
 	</body>
 </html>

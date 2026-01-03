@@ -1,31 +1,45 @@
 /*
-  MARKETLAB ACADEMY — Minimalist Design System
+  MARKETLAB ACADEMY — Refined Design System
+  Dark: #32C854 | Light: #0066B2
 */
 
 :root {
-  /* Colors */
+  /* DARK THEME (Default) */
   --color-bg: #0F1419;
-  --color-text-primary: #E8E8E8;
+  --color-card-bg: #151B28;
+  --color-text-primary: #D0D0D0;
   --color-text-secondary: #8B92A3;
   --color-accent: #32C854;
+  --color-accent-hover: #28a043; /* 20% darker approx */
   --color-border: #1E2633;
+  --color-border-hover: #32C854;
+  --color-btn-text: #FFFFFF;
   
-  /* Spacing */
-  --grid-unit: 4px;
-  --vertical-rhythm: 24px;
+  --transition: 0.2s ease-out;
+  --max-width: 1200px;
+  --max-width-post: 800px;
   --horizontal-padding: 32px;
-  --max-width: 800px;
-  
-  /* Transitions */
-  --transition: 0.2s ease;
 }
 
-/* Base Reset */
+[data-theme="light"] {
+  --color-bg: #E8E8E8;
+  --color-card-bg: #F5F5F5;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #666666;
+  --color-accent: #0066B2;
+  --color-accent-hover: #004d86; /* 20% darker */
+  --color-border: #CCCCCC;
+  --color-border-hover: #0066B2;
+  --color-btn-text: #FFFFFF;
+}
+
+/* Base Styles */
 html {
   font-size: 16px;
   background-color: var(--color-bg);
   color: var(--color-text-primary);
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -33,47 +47,33 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  transition: background-color var(--transition), color var(--transition);
 }
 
 h1, h2, h3, h4, .mono {
   font-family: 'JetBrains Mono', monospace;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.02em;
-  line-height: 1.2;
   margin: 0;
+  color: var(--color-text-primary);
 }
 
 a {
   color: var(--color-accent);
   text-decoration: none;
-  transition: var(--transition);
+  transition: all var(--transition);
 }
 
-a:hover {
-  opacity: 0.8;
-}
-
-/* Layout Utilities */
-main {
+.container {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--horizontal-padding);
-}
-
-.section {
-  padding: var(--vertical-rhythm) 0;
-}
-
-.divider {
-  height: 1px;
-  background: var(--color-border);
-  margin: var(--vertical-rhythm) 0;
 }
 
 /* Buttons */
@@ -85,20 +85,78 @@ main {
   text-transform: uppercase;
   border: 1px solid var(--color-accent);
   color: var(--color-accent);
-  transition: all var(--transition);
+  background: transparent;
   cursor: pointer;
+  transition: all var(--transition);
+  text-align: center;
 }
 
 .btn:hover {
   background: var(--color-accent);
-  color: var(--color-bg);
-  box-shadow: 0 0 20px rgba(50, 200, 84, 0.2);
+  color: var(--color-btn-text);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsiveness */
-@media (max-width: 640px) {
+/* Category Tags */
+.tag-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  padding: 10px 20px;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.tag-btn:hover, .tag-btn.active {
+  background: var(--color-accent);
+  color: #FFFFFF !important;
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+/* Post Cards */
+.post-card {
+  background: var(--color-card-bg);
+  border-top: 1px solid var(--color-border);
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: 4px solid transparent;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition);
+  text-decoration: none;
+  height: 100%;
+}
+
+.post-card:hover {
+  border-left-color: var(--color-accent);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.post-card h3 {
+  color: var(--color-text-primary);
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.post-card .description {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Global Transitions */
+* {
+  transition: border-color var(--transition), background-color var(--transition), color var(--transition), transform var(--transition);
+}
+
+@media (max-width: 768px) {
   :root {
-    --horizontal-padding: 16px;
+    --horizontal-padding: 20px;
   }
-  h1 { font-size: 2rem; }
 }
