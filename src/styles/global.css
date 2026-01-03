@@ -1,233 +1,104 @@
 /*
-  MarketLab Academy - Custom Design
-  Based on green gradient palette from screenshot
+  MARKETLAB ACADEMY — Minimalist Design System
 */
 
 :root {
-	/* Зелёные цвета (сбалансированные - не слишком яркие, не слишком блеклые) */
-	--green-light: #A8E6A8;      /* Светло-зелёный */
-	--green-lime: #6BC86B;        /* Лайм */
-	--green-forest: #4A9A4A;      /* Лесной */
-	--green-dark: #3A7A3A;        /* Тёмно-зелёный */
-	--green-very-dark: #2A5A2A;   /* Очень тёмный */
-	
-	/* Золотой (сбалансированный) */
-	--gold: #F0D890;              /* Золотой */
-	--gold-orange: #E8C870;       /* Золотисто-оранжевый */
-	--gold-dark: #D4B860;         /* Тёмно-золотой */
-	
-	/* Бежевый */
-	--beige: #F5F0E8;             /* Бежевый */
-	--beige-light: #FAF5ED;       /* Светло-бежевый */
-	
-	/* Серый */
-	--gray-dark: #3A3A3A;         /* Тёмно-серый */
-	--gray-very-dark: #2A2A2A;    /* Очень тёмный */
-	--gray-medium: #5A5A5A;       /* Средне-серый */
-	--gray-light: #E0E0E0;        /* Светло-серый */
-	--gray-text: #7A7A7A;         /* Серый для текста */
-	
-	/* Градиенты */
-	--gradient-green: linear-gradient(135deg, #A8E6A8 0%, #6BC86B 50%, #4A9A4A 100%);
-	--gradient-green-dark: linear-gradient(135deg, #2A5A2A 0%, #3A7A3A 50%, #4A9A4A 100%);
-	
-	/* Светлая тема */
-	--bg-primary: #F8F8F8;         /* Едва серый (мягкий фон для всех страниц) */
-	--bg-secondary: #F5F0E8;      /* Бежевый */
-	--text-primary: #2A2A2A;       /* Тёмный (но не чёрный) */
-	--text-secondary: #5A5A5A;     /* Серый */
-	--accent: #4A9A4A;             /* Зелёный */
-	--accent-light: #6BC86B;      /* Светло-зелёный */
-	
-	/* Тени (усиленные для лучшей видимости) */
-	--box-shadow: 0 4px 12px rgba(74, 154, 74, 0.15), 0 8px 24px rgba(74, 154, 74, 0.2);
-	--box-shadow-hover: 0 6px 20px rgba(74, 154, 74, 0.25), 0 12px 32px rgba(74, 154, 74, 0.3);
+  /* Colors */
+  --color-bg: #0F1419;
+  --color-text-primary: #E8E8E8;
+  --color-text-secondary: #8B92A3;
+  --color-accent: #32C854;
+  --color-border: #1E2633;
+  
+  /* Spacing */
+  --grid-unit: 4px;
+  --vertical-rhythm: 24px;
+  --horizontal-padding: 32px;
+  --max-width: 800px;
+  
+  /* Transitions */
+  --transition: 0.2s ease;
 }
 
-/* Тёмная тема */
-@media (prefers-color-scheme: dark) {
-	:root {
-		--bg-primary: #1A1A1A;         /* Тёмный фон (как сейчас) */
-		--bg-secondary: #2F2F2F;      /* Тёмно-серый для футера (светлее чем было #2A2A2A) */
-		--text-primary: #E0E0E0;       /* Светлый */
-		--text-secondary: #B0B0B0;     /* Серый */
-		--accent: #6BC86B;             /* Зелёный */
-		--accent-light: #A8E6A8;      /* Светло-зелёный */
-		--box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.4);
-		--box-shadow-hover: 0 6px 20px rgba(107, 200, 107, 0.2), 0 12px 32px rgba(107, 200, 107, 0.3);
-	}
-}
-
-/* Базовый размер шрифта (фиксированный, как у Bybit) */
+/* Base Reset */
 html {
-	font-size: 16px; /* Фиксированный размер */
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-	text-size-adjust: 100%;
+  font-size: 16px;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  box-sizing: border-box;
 }
 
-/* Шрифт: Lato (приятный для чтения, мультиязычный) */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
-	font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-	margin: 0;
-	padding: 0;
-	text-align: left;
-	background: var(--bg-primary);
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	color: var(--text-primary);
-	font-size: 16px; /* Фиксированный размер (как у Bybit) */
-	line-height: 1.6; /* Оптимальное соотношение */
-	font-weight: 400; /* Regular - не тонкий, не жирный */
-	transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-main {
-	width: 720px;
-	max-width: calc(100% - 2em);
-	margin: auto;
-	padding: 3em 1em;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0 0 0.5rem 0;
-	color: var(--text-primary);
-	line-height: 1.2;
-	font-weight: 500; /* Medium - не жирный */
-	transition: color 0.3s ease;
-}
-
-h1 {
-	font-size: 3.052em;
-}
-
-h2 {
-	font-size: 2.441em;
-}
-
-h3 {
-	font-size: 1.953em;
-}
-
-h4 {
-	font-size: 1.563em;
-}
-
-h5 {
-	font-size: 1.25em;
-}
-
-strong,
-b {
-	font-weight: 600; /* Semi-bold - не слишком жирный */
+h1, h2, h3, h4, .mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0;
 }
 
 a {
-	color: var(--accent);
-	text-decoration: none;
-	transition: color 0.2s ease, border-color 0.2s ease;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: var(--transition);
 }
 
 a:hover {
-	color: var(--accent-light);
-	text-decoration: underline;
+  opacity: 0.8;
 }
 
-p {
-	margin-bottom: 1.5em;
-	padding: 0;
-	line-height: 1.8;
+/* Layout Utilities */
+main {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--horizontal-padding);
 }
 
-.prose p {
-	margin-bottom: 2em;
-	padding: 0;
-	line-height: 1.8;
+.section {
+  padding: var(--vertical-rhythm) 0;
 }
 
-textarea {
-	width: 100%;
-	font-size: 16px;
-	font-family: inherit;
+.divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: var(--vertical-rhythm) 0;
 }
 
-input {
-	font-size: 16px;
-	font-family: inherit;
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  transition: all var(--transition);
+  cursor: pointer;
 }
 
-table {
-	width: 100%;
+.btn:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  box-shadow: 0 0 20px rgba(50, 200, 84, 0.2);
 }
 
-img {
-	max-width: 100%;
-	height: auto;
-	border-radius: 8px;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-img:hover {
-	transform: scale(1.02);
-	box-shadow: var(--box-shadow-hover);
-}
-
-code {
-	padding: 2px 5px;
-	background-color: var(--bg-secondary);
-	border-radius: 2px;
-	font-family: 'JetBrains Mono', 'Courier New', monospace;
-}
-
-pre {
-	padding: 1.5em;
-	border-radius: 8px;
-	background-color: var(--bg-secondary);
-	overflow-x: auto;
-}
-
-pre > code {
-	all: unset;
-}
-
-blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 0;
-	font-size: 1.333em;
-	color: var(--text-secondary);
-}
-
-hr {
-	border: none;
-	border-top: 1px solid var(--bg-secondary);
-	margin: 2em 0;
-}
-
-@media (max-width: 720px) {
-	body {
-		font-size: 16px;
-	}
-	main {
-		padding: 1em;
-	}
-}
-
-.sr-only {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	clip: rect(1px 1px 1px 1px);
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	white-space: nowrap;
+/* Responsiveness */
+@media (max-width: 640px) {
+  :root {
+    --horizontal-padding: 16px;
+  }
+  h1 { font-size: 2rem; }
 }
