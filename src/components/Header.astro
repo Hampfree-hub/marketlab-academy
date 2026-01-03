@@ -3,27 +3,31 @@ import { SITE_TITLE } from '../consts';
 const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
 	? import.meta.env.BASE_URL 
 	: import.meta.env.BASE_URL + '/';
+
+const currentPath = Astro.url.pathname;
+const isArchive = currentPath.includes('/blog');
+const isAbout = currentPath.includes('/about');
 ---
 
 <header class="main-header">
 	<div class="header-container">
-		<a href={baseUrl} class="logo">
-			<span class="prompt">></span> {SITE_TITLE}
+		<a href={baseUrl} class="logo" aria-label={`${SITE_TITLE} - Главная`}>
+			<span class="prompt" aria-hidden="true">></span> {SITE_TITLE}
 		</a>
 
-		<nav class="desktop-nav">
-			<a href={`${baseUrl}blog`} class="nav-link">Архив</a>
-			<a href={`${baseUrl}about`} class="nav-link">О проекте</a>
-			<button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+		<nav class="desktop-nav" aria-label="Основная навигация">
+			<a href={`${baseUrl}blog`} class="nav-link" aria-current={isArchive ? 'page' : undefined}>Архив</a>
+			<a href={`${baseUrl}about`} class="nav-link" aria-current={isAbout ? 'page' : undefined}>О проекте</a>
+			<button id="theme-toggle" class="theme-btn" aria-label="Переключить тему">
 				<span class="theme-icon">🌙</span> Тема
 			</button>
 		</nav>
 
 		<div class="mobile-actions">
-			<button id="theme-toggle-mobile" class="theme-btn" aria-label="Toggle Theme">
+			<button id="theme-toggle-mobile" class="theme-btn" aria-label="Переключить тему">
 				<span class="theme-icon">🌙</span>
 			</button>
-			<button id="hamburger" class="hamburger" aria-label="Menu">
+			<button id="hamburger" class="hamburger" aria-label="Открыть меню">
 				<span></span>
 				<span></span>
 				<span></span>
@@ -31,9 +35,9 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 		</div>
 	</div>
 
-	<div id="mobile-menu" class="mobile-menu">
-		<a href={`${baseUrl}blog`}>Архив</a>
-		<a href={`${baseUrl}about`}>О проекте</a>
+	<div id="mobile-menu" class="mobile-menu" aria-label="Мобильное меню">
+		<a href={`${baseUrl}blog`} aria-current={isArchive ? 'page' : undefined}>Архив</a>
+		<a href={`${baseUrl}about`} aria-current={isAbout ? 'page' : undefined}>О проекте</a>
 	</div>
 </header>
 
@@ -43,7 +47,7 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 		top: 0;
 		background: var(--color-bg);
 		border-bottom: 1px solid var(--color-border);
-		z-index: 1000;
+		z-index: var(--z-index-header);
 	}
 
 	.header-container {
@@ -85,7 +89,7 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 		border: 1px solid transparent;
 	}
 
-	.nav-link:hover {
+	.nav-link:hover, .nav-link[aria-current="page"] {
 		color: var(--color-accent);
 		border-color: var(--color-border);
 	}
@@ -123,7 +127,7 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 		width: 24px;
 		height: 2px;
 		background: var(--color-accent);
-		transition: 0.3s;
+		transition: var(--transition-normal);
 	}
 
 	.mobile-menu {
@@ -139,6 +143,10 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 		font-family: 'JetBrains Mono', monospace;
 		font-size: 1.2rem;
 		color: var(--color-text-primary);
+	}
+
+	.mobile-menu a[aria-current="page"] {
+		color: var(--color-accent);
 	}
 
 	@media (max-width: 768px) {
@@ -173,7 +181,9 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 	const mobileMenu = document.getElementById('mobile-menu');
 	if (hamburger && mobileMenu) {
 		hamburger.addEventListener('click', () => {
-			mobileMenu.classList.toggle('active');
+			const isActive = mobileMenu.classList.toggle('active');
+			hamburger.setAttribute('aria-expanded', isActive);
+			hamburger.setAttribute('aria-label', isActive ? 'Закрыть меню' : 'Открыть меню');
 		});
 	}
 </script>
