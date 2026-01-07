@@ -1,43 +1,51 @@
 /*
-  MARKETLAB ACADEMY — Refined Design System
-  Dark: #32C854 | Light: #0066B2
+  ═══════════════════════════════════════════════════════════════
+  MARKETLAB ACADEMY — 8-bit NES Theme (Global Overrides)
+  ═══════════════════════════════════════════════════════════════
+  
+  NOTE: This file now imports nes8bit.css which contains the main
+  8-bit NES theme. This file only contains compatibility overrides.
+  
+  Main theme: src/styles/nes8bit.css
+  ═══════════════════════════════════════════════════════════════
 */
 
 :root {
-  /* DARK THEME (Default) */
-  --color-bg: #0F1419;
-  --color-card-bg: #151B28;
-  --color-text-primary: #D0D0D0;
-  --color-text-secondary: #8B92A3;
-  --color-accent: #32C854;
-  --color-accent-hover: #28a043;
-  --color-border: #1E2633;
-  --color-border-hover: #32C854;
-  --color-btn-text: #FFFFFF;
-  --color-error: #FF6B6B;
-  --color-success: #32C854;
+  /* Legacy variables (for compatibility with existing components) */
+  /* These map to NES palette */
+  --color-bg: var(--nes-bg-primary, #0F0F0F);
+  --color-card-bg: var(--nes-bg-secondary, #1A1A1A);
+  --color-text-primary: var(--nes-text-primary, #FCFCFC);
+  --color-text-secondary: var(--nes-text-secondary, #B0B0B0);
+  --color-accent: var(--nes-accent-green, #00D800);
+  --color-accent-hover: var(--nes-accent-green-dark, #00A800);
+  --color-border: var(--nes-border-primary, #404040);
+  --color-border-hover: var(--nes-border-accent, #00D800);
+  --color-btn-text: var(--nes-text-primary, #FCFCFC);
+  --color-error: var(--nes-accent-red, #F83800);
+  --color-success: var(--nes-accent-green, #00D800);
 
-  /* Spacing */
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-base: 16px;
-  --spacing-md: 24px;
-  --spacing-lg: 32px;
-  --spacing-xl: 48px;
+  /* Spacing (mapped to NES) */
+  --spacing-xs: var(--nes-space-xs, 4px);
+  --spacing-sm: var(--nes-space-sm, 8px);
+  --spacing-base: var(--nes-space-md, 16px);
+  --spacing-md: var(--nes-space-lg, 24px);
+  --spacing-lg: var(--nes-space-xl, 32px);
+  --spacing-xl: var(--nes-space-xxl, 48px);
   --spacing-xxl: 64px;
 
-  /* Border Radius */
-  --radius-sm: 2px;
-  --radius-md: 4px;
-  --radius-lg: 8px;
+  /* Border Radius (NO CURVES in 8-bit!) */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
 
-  /* Transitions */
-  --transition-fast: 0.2s ease-out;
-  --transition-normal: 0.3s ease-out;
+  /* Transitions (INSTANT in 8-bit) */
+  --transition-fast: none;
+  --transition-normal: none;
   
-  --max-width: 1200px;
-  --max-width-post: 800px;
-  --horizontal-padding: 32px;
+  --max-width: var(--nes-max-width, 1200px);
+  --max-width-post: var(--nes-max-width-post, 800px);
+  --horizontal-padding: var(--nes-padding-horizontal, 32px);
 
   /* Z-index */
   --z-index-header: 1000;
@@ -45,15 +53,16 @@
 }
 
 [data-theme="light"] {
-  --color-bg: #E8E8E8;
-  --color-card-bg: #F5F5F5;
-  --color-text-primary: #1A1A1A;
-  --color-text-secondary: #666666;
-  --color-accent: #0066B2;
-  --color-accent-hover: #004d86;
-  --color-border: #CCCCCC;
-  --color-border-hover: #0066B2;
-  --color-btn-text: #FFFFFF;
+  /* Game Boy palette (mapped from nes8bit.css) */
+  --color-bg: var(--nes-bg-primary, #9BBC0F);
+  --color-card-bg: var(--nes-bg-secondary, #8BAC0F);
+  --color-text-primary: var(--nes-text-primary, #0F380F);
+  --color-text-secondary: var(--nes-text-secondary, #306230);
+  --color-accent: var(--nes-accent-green, #0F380F);
+  --color-accent-hover: var(--nes-accent-green-dark, #0A2A0A);
+  --color-border: var(--nes-border-primary, #306230);
+  --color-border-hover: var(--nes-border-accent, #0F380F);
+  --color-btn-text: var(--nes-bg-primary, #9BBC0F);
 }
 
 /* Base Styles */
@@ -70,26 +79,36 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, sans-serif;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
-  transition: background-color var(--transition-fast), color var(--transition-fast);
+  -moz-osx-font-smoothing: grayscale;
+  /* NO transitions in 8-bit */
+  transition: none;
 }
 
 h1, h2, h3, h4, .mono {
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  margin: 0;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0 0 var(--spacing-base);
   color: var(--color-text-primary);
+  text-transform: uppercase;
+  line-height: 1.4;
 }
 
 a {
   color: var(--color-accent);
   text-decoration: none;
-  transition: all var(--transition-fast);
+  /* NO transitions in 8-bit */
+  transition: none;
+}
+
+a:hover {
+  color: var(--nes-accent-yellow, #FCFC00);
+  text-decoration: underline;
 }
 
 /* Focus Indicators */

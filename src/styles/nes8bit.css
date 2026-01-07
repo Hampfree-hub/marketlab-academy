@@ -1,0 +1,453 @@
+/*
+  ═══════════════════════════════════════════════════════════════
+  MARKETLAB ACADEMY — 8-bit NES Theme
+  ═══════════════════════════════════════════════════════════════
+  
+  Philosophy: 70% serious / 30% fun
+  Concept: Emily's computer from Market Lab Archive (2010-2018)
+  
+  Color Palette: Classic NES (limited 8-bit colors)
+  Typography: Press Start 2P (headings) + JetBrains Mono (text)
+  
+  Created: 2026-01-07
+  Author: Sonnet 4.5
+  ═══════════════════════════════════════════════════════════════
+*/
+
+/* ═══════════════════════════════════════════════════════════════
+   NES COLOR PALETTE (Dark Theme)
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Background (Classic CRT monitor) */
+  --nes-bg-primary: #0F0F0F;        /* Almost black */
+  --nes-bg-secondary: #1A1A1A;      /* Dark gray */
+  --nes-bg-tertiary: #2A2A2A;       /* Medium gray */
+  
+  /* Text (8-bit contrast) */
+  --nes-text-primary: #FCFCFC;      /* White (main text) */
+  --nes-text-secondary: #B0B0B0;    /* Gray (descriptions) */
+  --nes-text-tertiary: #808080;     /* Dark gray (meta) */
+  
+  /* Accents (NES palette) */
+  --nes-accent-green: #00D800;      /* Bright green (primary) */
+  --nes-accent-green-dark: #00A800; /* Dark green (hover) */
+  --nes-accent-blue: #3CBCFC;       /* NES light blue */
+  --nes-accent-red: #F83800;        /* NES red (alerts) */
+  --nes-accent-yellow: #FCFC00;     /* NES yellow (highlight) */
+  
+  /* Borders (pixel-perfect) */
+  --nes-border-primary: #404040;    /* Dark border */
+  --nes-border-secondary: #606060;  /* Medium border */
+  --nes-border-accent: #00D800;     /* Green border (active) */
+  
+  /* Shadows (8-bit glow) */
+  --nes-shadow-green: rgba(0, 216, 0, 0.4);
+  --nes-shadow-blue: rgba(60, 188, 252, 0.4);
+  
+  /* Spacing (pixel-based) */
+  --nes-space-xs: 4px;
+  --nes-space-sm: 8px;
+  --nes-space-md: 16px;
+  --nes-space-lg: 24px;
+  --nes-space-xl: 32px;
+  --nes-space-xxl: 48px;
+  
+  /* Border Radius (NO CURVES in 8-bit!) */
+  --nes-radius: 0px;
+  
+  /* Transitions (INSTANT in 8-bit, not smooth) */
+  --nes-transition: none;
+  
+  /* Layout */
+  --nes-max-width: 1200px;
+  --nes-max-width-post: 800px;
+  --nes-padding-horizontal: 32px;
+  
+  /* Z-index */
+  --nes-z-header: 1000;
+  --nes-z-overlay: 2000;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GAME BOY PALETTE (Light Theme)
+   ═══════════════════════════════════════════════════════════════ */
+
+[data-theme="light"] {
+  /* Background (Game Boy green) */
+  --nes-bg-primary: #9BBC0F;        /* Light green */
+  --nes-bg-secondary: #8BAC0F;      /* Medium green */
+  --nes-bg-tertiary: #7A9B0F;       /* Dark green */
+  
+  /* Text (Dark on light) */
+  --nes-text-primary: #0F380F;      /* Dark green */
+  --nes-text-secondary: #306230;    /* Medium green */
+  --nes-text-tertiary: #527052;     /* Light green */
+  
+  /* Accents (Game Boy palette) */
+  --nes-accent-green: #0F380F;      /* Dark green (primary) */
+  --nes-accent-green-dark: #0A2A0A; /* Darker green (hover) */
+  --nes-accent-blue: #306230;       /* Medium green (blue replacement) */
+  --nes-accent-red: #0F380F;        /* Dark green (red replacement) */
+  --nes-accent-yellow: #0F380F;     /* Dark green (yellow replacement) */
+  
+  /* Borders (Game Boy style) */
+  --nes-border-primary: #306230;    /* Medium green */
+  --nes-border-secondary: #527052;  /* Light green */
+  --nes-border-accent: #0F380F;     /* Dark green (active) */
+  
+  /* Shadows (Game Boy glow) */
+  --nes-shadow-green: rgba(15, 56, 15, 0.3);
+  --nes-shadow-blue: rgba(48, 98, 48, 0.3);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BASE STYLES (8-bit reset)
+   ═══════════════════════════════════════════════════════════════ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  background-color: var(--nes-bg-primary);
+  color: var(--nes-text-primary);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* NO transitions on body */
+  transition: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TYPOGRAPHY (8-bit style)
+   ═══════════════════════════════════════════════════════════════ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  font-weight: 400; /* Press Start 2P только в одном начертании */
+  line-height: 1.4;
+  color: var(--nes-text-primary);
+  margin-bottom: var(--nes-space-md);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+h1 {
+  font-size: 2rem; /* 32px */
+}
+
+h2 {
+  font-size: 1.5rem; /* 24px */
+}
+
+h3 {
+  font-size: 1.2rem; /* 19px */
+}
+
+h4 {
+  font-size: 1rem; /* 16px */
+}
+
+p {
+  margin-bottom: var(--nes-space-md);
+  color: var(--nes-text-secondary);
+}
+
+a {
+  color: var(--nes-accent-green);
+  text-decoration: none;
+  /* NO transitions — instant */
+  transition: none;
+}
+
+a:hover {
+  color: var(--nes-accent-yellow);
+  text-decoration: underline;
+}
+
+strong, b {
+  color: var(--nes-text-primary);
+  font-weight: 700;
+}
+
+code {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  background: var(--nes-bg-secondary);
+  padding: 2px 6px;
+  border: 2px solid var(--nes-border-primary);
+  font-size: 0.9em;
+}
+
+pre {
+  background: var(--nes-bg-secondary);
+  border: 4px solid var(--nes-border-primary);
+  padding: var(--nes-space-md);
+  overflow-x: auto;
+  margin-bottom: var(--nes-space-md);
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PIXEL-PERFECT BORDERS
+   ═══════════════════════════════════════════════════════════════ */
+
+.nes-border {
+  border: 4px solid var(--nes-border-primary);
+}
+
+.nes-border-accent {
+  border: 4px solid var(--nes-border-accent);
+}
+
+.nes-border-double {
+  border: 4px solid var(--nes-border-primary);
+  outline: 2px solid var(--nes-bg-primary);
+  outline-offset: -6px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BUTTONS (8-bit style)
+   ═══════════════════════════════════════════════════════════════ */
+
+.nes-btn {
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  font-size: 0.7rem; /* Пиксельные шрифты мелкие */
+  padding: 12px 24px;
+  background: var(--nes-bg-secondary);
+  color: var(--nes-text-primary);
+  border: 4px solid var(--nes-border-primary);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: none; /* Instant */
+  display: inline-block;
+}
+
+.nes-btn:hover {
+  background: var(--nes-accent-green);
+  color: var(--nes-bg-primary);
+  border-color: var(--nes-accent-green);
+  box-shadow: 0 0 20px var(--nes-shadow-green);
+}
+
+.nes-btn:active {
+  transform: translate(2px, 2px);
+}
+
+.nes-btn-primary {
+  background: var(--nes-accent-green);
+  color: var(--nes-bg-primary);
+  border-color: var(--nes-accent-green);
+}
+
+.nes-btn-primary:hover {
+  background: var(--nes-accent-green-dark);
+  border-color: var(--nes-accent-green-dark);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CONTAINERS (Pixel-perfect layout)
+   ═══════════════════════════════════════════════════════════════ */
+
+.nes-container {
+  max-width: var(--nes-max-width);
+  margin: 0 auto;
+  padding: 0 var(--nes-padding-horizontal);
+}
+
+.nes-container-narrow {
+  max-width: var(--nes-max-width-post);
+  margin: 0 auto;
+  padding: 0 var(--nes-padding-horizontal);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CARDS (Archive file style)
+   ═══════════════════════════════════════════════════════════════ */
+
+.nes-card {
+  background: var(--nes-bg-secondary);
+  border: 4px solid var(--nes-border-primary);
+  padding: var(--nes-space-lg);
+  margin-bottom: var(--nes-space-md);
+  transition: none;
+}
+
+.nes-card:hover {
+  border-color: var(--nes-border-accent);
+  box-shadow: 0 0 20px var(--nes-shadow-green);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DIVIDERS (Pixel lines)
+   ═══════════════════════════════════════════════════════════════ */
+
+.nes-divider {
+  width: 100%;
+  height: 2px;
+  background: var(--nes-border-primary);
+  margin: var(--nes-space-md) 0;
+}
+
+.nes-divider-thick {
+  width: 100%;
+  height: 4px;
+  background: var(--nes-border-primary);
+  margin: var(--nes-space-lg) 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ANIMATIONS (8-bit style)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Blinking cursor */
+@keyframes nes-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.nes-cursor {
+  animation: nes-blink 1s step-start infinite;
+}
+
+/* Pixel fade-in */
+@keyframes nes-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nes-fade-in {
+  animation: nes-fade-in 0.3s steps(3);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FOCUS STATES (Accessibility)
+   ═══════════════════════════════════════════════════════════════ */
+
+:focus-visible {
+  outline: 4px solid var(--nes-accent-yellow);
+  outline-offset: 4px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 4px solid var(--nes-accent-yellow);
+  outline-offset: 4px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE (Mobile-friendly 8-bit)
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  :root {
+    --nes-padding-horizontal: 16px;
+  }
+  
+  h1 {
+    font-size: 1.5rem; /* 24px */
+  }
+  
+  h2 {
+    font-size: 1.2rem; /* 19px */
+  }
+  
+  h3 {
+    font-size: 1rem; /* 16px */
+  }
+  
+  .nes-btn {
+    font-size: 0.6rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem; /* 19px */
+  }
+  
+  h2 {
+    font-size: 1rem; /* 16px */
+  }
+  
+  .nes-btn {
+    font-size: 0.5rem;
+    padding: 8px 16px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   UTILITY CLASSES
+   ═══════════════════════════════════════════════════════════════ */
+
+.nes-text-center {
+  text-align: center;
+}
+
+.nes-text-right {
+  text-align: right;
+}
+
+.nes-text-mono {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+.nes-text-pixel {
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+}
+
+.nes-text-green {
+  color: var(--nes-accent-green);
+}
+
+.nes-text-yellow {
+  color: var(--nes-accent-yellow);
+}
+
+.nes-text-red {
+  color: var(--nes-accent-red);
+}
+
+.nes-text-blue {
+  color: var(--nes-accent-blue);
+}
+
+.nes-mt-0 { margin-top: 0; }
+.nes-mt-xs { margin-top: var(--nes-space-xs); }
+.nes-mt-sm { margin-top: var(--nes-space-sm); }
+.nes-mt-md { margin-top: var(--nes-space-md); }
+.nes-mt-lg { margin-top: var(--nes-space-lg); }
+.nes-mt-xl { margin-top: var(--nes-space-xl); }
+.nes-mt-xxl { margin-top: var(--nes-space-xxl); }
+
+.nes-mb-0 { margin-bottom: 0; }
+.nes-mb-xs { margin-bottom: var(--nes-space-xs); }
+.nes-mb-sm { margin-bottom: var(--nes-space-sm); }
+.nes-mb-md { margin-bottom: var(--nes-space-md); }
+.nes-mb-lg { margin-bottom: var(--nes-space-lg); }
+.nes-mb-xl { margin-bottom: var(--nes-space-xl); }
+.nes-mb-xxl { margin-bottom: var(--nes-space-xxl); }
+
+/* ═══════════════════════════════════════════════════════════════
+   END OF NES8BIT.CSS
+   ═══════════════════════════════════════════════════════════════ */
