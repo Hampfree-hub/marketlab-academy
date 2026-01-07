@@ -24,7 +24,14 @@ const isAbout = currentPath.includes('/about');
 			<a href={`${baseUrl}blog`} class="nav-link" aria-current={isArchive ? 'page' : undefined}>Архив</a>
 			<a href={`${baseUrl}about`} class="nav-link" aria-current={isAbout ? 'page' : undefined}>О проекте</a>
 			<button id="theme-toggle" class="theme-btn" aria-label="Переключить тему">
-				<span class="theme-icon">◑</span>
+				<svg class="theme-icon" viewBox="0 0 16 16" fill="currentColor">
+					<!-- Sun icon (8-bit pixel) -->
+					<rect x="6" y="0" width="4" height="2"/>
+					<rect x="6" y="14" width="4" height="2"/>
+					<rect x="0" y="6" width="2" height="4"/>
+					<rect x="14" y="6" width="2" height="4"/>
+					<rect x="4" y="4" width="8" height="8"/>
+				</svg>
 			</button>
 		</nav>
 
@@ -34,7 +41,14 @@ const isAbout = currentPath.includes('/about');
 				<button class="lang-btn">EN</button>
 			</div>
 			<button id="theme-toggle-mobile" class="theme-btn" aria-label="Переключить тему">
-				<span class="theme-icon">◑</span>
+				<svg class="theme-icon" viewBox="0 0 16 16" fill="currentColor">
+					<!-- Sun icon (8-bit pixel) -->
+					<rect x="6" y="0" width="4" height="2"/>
+					<rect x="6" y="14" width="4" height="2"/>
+					<rect x="0" y="6" width="2" height="4"/>
+					<rect x="14" y="6" width="2" height="4"/>
+					<rect x="4" y="4" width="8" height="8"/>
+				</svg>
 			</button>
 			<button id="hamburger" class="hamburger" aria-label="Открыть меню">
 				<span></span>
@@ -126,34 +140,54 @@ const isAbout = currentPath.includes('/about');
 	}
 
 	.nav-link {
-		font-family: 'JetBrains Mono', monospace;
-		font-size: 0.9rem;
+		font-family: 'Press Start 2P', monospace;
+		font-size: 0.6rem;
 		color: var(--color-text-primary);
-		padding: 0.5rem 1rem;
-		border: 1px solid transparent;
+		padding: 8px 16px; /* Унифицированный отступ */
+		border: 2px solid transparent;
+		background: transparent;
+		text-transform: uppercase;
+		transition: none; /* 8-bit instant */
 	}
 
-	.nav-link:hover, .nav-link[aria-current="page"] {
-		color: var(--color-accent);
-		border-color: var(--color-border);
+	.nav-link:hover {
+		border: 2px solid var(--nes-accent-green);
+		background: var(--nes-bg-secondary);
+		color: var(--nes-accent-green);
+		/* NO partial fading - full instant change */
+	}
+
+	.nav-link[aria-current="page"] {
+		border: 2px solid var(--nes-accent-green);
+		color: var(--nes-accent-green);
 	}
 
 	.theme-btn {
 		background: transparent;
-		border: 1px solid var(--color-border);
+		border: 2px solid var(--nes-border-primary);
 		color: var(--color-text-primary);
-		padding: 6px 12px;
+		padding: 8px 16px; /* Унифицированный отступ */
 		cursor: pointer;
-		font-family: 'JetBrains Mono', monospace;
-		font-size: 0.85rem;
+		font-family: 'Press Start 2P', monospace;
+		font-size: 0.6rem;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: 8px;
+		min-width: 48px;
+		transition: none; /* 8-bit instant */
 	}
 
 	.theme-btn:hover {
-		border-color: var(--color-accent);
-		color: var(--color-accent);
+		border-color: var(--nes-accent-green);
+		background: var(--nes-bg-secondary);
+		color: var(--nes-accent-green);
+	}
+
+	.theme-icon {
+		width: 16px;
+		height: 16px;
+		display: block;
 	}
 
 	.hamburger {
@@ -203,11 +237,15 @@ const isAbout = currentPath.includes('/about');
 <script is:inline>
 	const themeToggle = () => {
 		const getTheme = () => localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		
+		const sunIcon = `<rect x="6" y="0" width="4" height="2"/><rect x="6" y="14" width="4" height="2"/><rect x="0" y="6" width="2" height="4"/><rect x="14" y="6" width="2" height="4"/><rect x="4" y="4" width="8" height="8"/>`;
+		const moonIcon = `<path d="M10,2 C8,2 6,4 6,6 C6,10 8,14 12,14 C10,14 8,12 8,8 C8,4 10,2 10,2"/>`;
+		
 		const setTheme = (t) => {
 			document.documentElement.setAttribute('data-theme', t);
 			localStorage.setItem('theme', t);
 			const icons = document.querySelectorAll('.theme-icon');
-			icons.forEach(i => i.innerText = t === 'dark' ? '◑' : '●');
+			icons.forEach(i => i.innerHTML = t === 'dark' ? sunIcon : moonIcon);
 		};
 
 		setTheme(getTheme());

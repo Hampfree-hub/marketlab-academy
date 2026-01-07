@@ -74,31 +74,31 @@
    ═══════════════════════════════════════════════════════════════ */
 
 [data-theme="light"] {
-  /* Background (Game Boy green) */
-  --nes-bg-primary: #9BBC0F;        /* Light green */
-  --nes-bg-secondary: #8BAC0F;      /* Medium green */
-  --nes-bg-tertiary: #7A9B0F;       /* Dark green */
+  /* Background (Приглушённый Game Boy) */
+  --nes-bg-primary: #E8F4D0;        /* Очень светлый, приглушённый */
+  --nes-bg-secondary: #D8E4C0;      /* Светлый */
+  --nes-bg-tertiary: #C8D4B0;       /* Средний */
   
-  /* Text (Dark on light) */
-  --nes-text-primary: #0F380F;      /* Dark green */
-  --nes-text-secondary: #306230;    /* Medium green */
-  --nes-text-tertiary: #527052;     /* Light green */
+  /* Text (Тёмный для контраста) */
+  --nes-text-primary: #1A2A0A;      /* Очень тёмный зелёный (читаемо) */
+  --nes-text-secondary: #2A3A1A;    /* Тёмный зелёный */
+  --nes-text-tertiary: #3A4A2A;     /* Средний зелёный */
   
-  /* Accents (Game Boy palette) */
-  --nes-accent-green: #0F380F;      /* Dark green (primary) */
-  --nes-accent-green-dark: #0A2A0A; /* Darker green (hover) */
-  --nes-accent-blue: #306230;       /* Medium green (blue replacement) */
-  --nes-accent-red: #0F380F;        /* Dark green (red replacement) */
-  --nes-accent-yellow: #0F380F;     /* Dark green (yellow replacement) */
+  /* Accents (Контрастные) */
+  --nes-accent-green: #2A5A1A;      /* Яркий тёмно-зелёный (видимо) */
+  --nes-accent-green-dark: #1A4A0A; /* Темнее (hover) */
+  --nes-accent-blue: #2A4A3A;       /* Сине-зелёный */
+  --nes-accent-red: #5A2A1A;        /* Красно-коричневый */
+  --nes-accent-yellow: #5A5A1A;     /* Жёлто-зелёный */
   
-  /* Borders (Game Boy style) */
-  --nes-border-primary: #306230;    /* Medium green */
-  --nes-border-secondary: #527052;  /* Light green */
-  --nes-border-accent: #0F380F;     /* Dark green (active) */
+  /* Borders (Видимые) */
+  --nes-border-primary: #3A4A2A;    /* Тёмный */
+  --nes-border-secondary: #4A5A3A;  /* Средний */
+  --nes-border-accent: #2A5A1A;     /* Акцент */
   
-  /* Shadows (Game Boy glow) */
-  --nes-shadow-green: rgba(15, 56, 15, 0.3);
-  --nes-shadow-blue: rgba(48, 98, 48, 0.3);
+  /* Shadows */
+  --nes-shadow-green: rgba(42, 90, 26, 0.3);
+  --nes-shadow-blue: rgba(42, 74, 58, 0.3);
 }
 
 /* ═══════════════════════════════════════════════════════════════
