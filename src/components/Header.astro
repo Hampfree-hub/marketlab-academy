@@ -521,10 +521,31 @@ const isAbout = currentPath.includes('/about');
 	const hamburger = document.getElementById('hamburger');
 	const mobileMenu = document.getElementById('mobile-menu');
 	if (hamburger && mobileMenu) {
-		hamburger.addEventListener('click', () => {
+		hamburger.addEventListener('click', (e) => {
+			e.stopPropagation(); // Prevent document click handler
 			const isActive = mobileMenu.classList.toggle('active');
 			hamburger.setAttribute('aria-expanded', isActive);
 			hamburger.setAttribute('aria-label', isActive ? 'Закрыть меню' : 'Открыть меню');
+		});
+
+		// Close menu when clicking outside
+		document.addEventListener('click', (e) => {
+			if (mobileMenu.classList.contains('active') && 
+			    !mobileMenu.contains(e.target) && 
+			    !hamburger.contains(e.target)) {
+				mobileMenu.classList.remove('active');
+				hamburger.setAttribute('aria-expanded', 'false');
+				hamburger.setAttribute('aria-label', 'Открыть меню');
+			}
+		});
+
+		// Close menu when clicking inside menu links
+		mobileMenu.querySelectorAll('a').forEach(link => {
+			link.addEventListener('click', () => {
+				mobileMenu.classList.remove('active');
+				hamburger.setAttribute('aria-expanded', 'false');
+				hamburger.setAttribute('aria-label', 'Открыть меню');
+			});
 		});
 	}
 </script>
