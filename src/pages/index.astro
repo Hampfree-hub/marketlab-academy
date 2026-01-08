@@ -29,11 +29,11 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
 			/* Hero Section */
-			.hero {
-				padding: 120px 0 80px;
-				text-align: center;
-				border-bottom: 1px solid var(--color-border);
-			}
+		.hero {
+			padding: 120px 0 80px;
+			text-align: center;
+			border-bottom: 2px solid var(--color-border);
+		}
 
 			.hero h1 {
 				font-size: 3.5rem;
@@ -117,14 +117,15 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 				font-weight: bold;
 			}
 
-			/* Newsletter */
-			.newsletter-box {
-				background: var(--color-card-bg);
-				border: 1px solid var(--color-accent);
-				padding: 64px 32px;
-				text-align: center;
-				margin: 80px 0;
-			}
+	/* Newsletter */
+	.newsletter-box {
+		background: var(--color-card-bg);
+		border: 2px solid var(--color-accent);
+		border-bottom: 4px solid var(--nes-accent-green-dark);
+		padding: 64px 32px;
+		text-align: center;
+		margin: 80px 0;
+	}
 
 			.newsletter-box h2 {
 				font-size: 2rem;
@@ -162,31 +163,33 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 				border: 0;
 			}
 
-			.subscribe-form input {
-				flex: 1;
-				background: var(--color-bg);
-				border: 1px solid var(--color-border);
-				padding: 14px 20px;
-				color: var(--color-text-primary);
-				font-family: 'JetBrains Mono', monospace;
-				transition: border-color var(--transition-fast);
-			}
+		.subscribe-form input {
+			flex: 1;
+			background: var(--color-bg);
+			border: 2px solid var(--color-border);
+			padding: 14px 20px;
+			color: var(--color-text-primary);
+			font-family: 'JetBrains Mono', monospace;
+			transition: border-color 0.15s steps(3);
+		}
 
-			.subscribe-form input:focus {
-				outline: none;
-				border-color: var(--color-accent);
-			}
+		.subscribe-form input:focus {
+			outline: none;
+			border-color: var(--color-accent);
+		}
 
-			.subscribe-form .btn-submit {
-				background: var(--color-accent);
-				color: #FFFFFF;
-				border: 1px solid var(--color-accent);
-				padding: 0 32px;
-				font-family: 'JetBrains Mono', monospace;
-				font-weight: bold;
-				cursor: pointer;
-				transition: all var(--transition-fast);
-			}
+		.subscribe-form .btn-submit {
+			background: var(--color-accent);
+			color: #FFFFFF;
+			border: 2px solid var(--color-accent);
+			border-bottom: 4px solid var(--nes-accent-green-dark);
+			padding: 0 32px;
+			font-family: 'JetBrains Mono', monospace;
+			font-weight: bold;
+			text-transform: uppercase;
+			cursor: pointer;
+			transition: border-color 0.2s steps(4);
+		}
 
 			.subscribe-form .btn-submit:hover:not(:disabled) {
 				background: var(--color-accent-hover);

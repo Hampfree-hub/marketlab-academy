@@ -41,7 +41,7 @@ const today = new Date();
 
 <style>
 	.main-footer {
-		border-top: 1px solid var(--color-border);
+		border-top: 2px solid var(--color-border);
 		background: var(--color-bg);
 		padding: 64px 0 32px;
 		margin-top: 64px;
@@ -82,18 +82,19 @@ const today = new Date();
 		color: var(--color-text-secondary);
 		font-size: 0.9rem;
 		font-family: 'JetBrains Mono', monospace;
-		transition: all var(--transition-fast);
+		/* 8-bit steps animation */
+		transition: color 0.15s steps(3);
 	}
 
 	.footer-links a:hover {
-		color: var(--color-accent);
-		transform: translateY(-2px);
+		color: var(--nes-accent-yellow);
+		/* NO transform — pure 8-bit style */
 	}
 
 	.footer-bottom {
 		margin-top: 48px;
 		padding-top: 24px;
-		border-top: 1px solid var(--color-border);
+		border-top: 2px solid var(--color-border);
 		text-align: center;
 		opacity: 0.5;
 		font-size: 0.75rem;
