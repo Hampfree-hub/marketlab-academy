@@ -281,13 +281,11 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 				<div class="posts-grid">
 					{featuredPosts.map(post => (
 						<a href={`${baseUrl}blog/${post.slug}/`} class="post-card" aria-label={`Читать статью: ${post.data.title}`}>
-						<div class="post-meta">
-							<span><FormattedDate date={post.data.pubDate} /></span>
-							<span class="meta-divider">·</span>
-							<span aria-label="Время чтения">5 МИН</span>
-							<span class="meta-divider">·</span>
-							<span class="meta-lang" aria-label="Язык статьи">[{(post.data.language || 'ru').toUpperCase()}]</span>
-						</div>
+					<div class="post-meta">
+						<span><FormattedDate date={post.data.pubDate} /></span>
+						<span class="meta-divider">·</span>
+						<span aria-label="Время чтения">5 МИН</span>
+					</div>
 							<h3>{post.data.title}</h3>
 							<p class="description">{post.data.description}</p>
 							<div class="post-card-tags" aria-label="Теги">
