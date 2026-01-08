@@ -111,6 +111,12 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Exceptions: no underline for special links */
+.read-more-link:hover,
+.post-card:hover .read-more-link {
+  text-decoration: none;
+}
+
 /* Focus Indicators */
 :focus-visible {
   outline: 2px solid var(--color-accent);
@@ -142,7 +148,9 @@ a:hover {
 .btn:hover {
   background: var(--color-accent);
   color: var(--color-btn-text);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* 8-bit glow instead of smooth shadow */
+  box-shadow: 0 0 20px var(--nes-shadow-green, rgba(0, 216, 0, 0.4));
+  text-decoration: none;
 }
 
 .btn:disabled {
@@ -166,7 +174,7 @@ a:hover {
   background: var(--color-accent);
   color: #FFFFFF !important;
   border-color: var(--color-accent);
-  transform: translateY(-2px);
+  /* NO transform - instant 8-bit */
 }
 
 /* Post Cards */
@@ -186,8 +194,9 @@ a:hover {
 
 .post-card:hover {
   border-left-color: var(--color-accent);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  /* NO transform - instant 8-bit */
+  /* 8-bit glow instead of smooth shadow */
+  box-shadow: 0 0 20px var(--nes-shadow-green, rgba(0, 216, 0, 0.4));
 }
 
 .post-card h3 {
@@ -218,10 +227,8 @@ a:hover {
   display: none;
 }
 
-/* Global Transitions */
-* {
-  transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
-}
+/* Global Transitions (DISABLED for 8-bit) */
+/* NO smooth transitions in 8-bit theme */
 
 @media (max-width: 768px) {
   :root {

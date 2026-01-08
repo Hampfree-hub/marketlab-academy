@@ -238,8 +238,11 @@ const isAbout = currentPath.includes('/about');
 	const themeToggle = () => {
 		const getTheme = () => localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
 		
+		// 8-bit pixel sun icon (symmetric cross)
 		const sunIcon = `<rect x="6" y="0" width="4" height="2"/><rect x="6" y="14" width="4" height="2"/><rect x="0" y="6" width="2" height="4"/><rect x="14" y="6" width="2" height="4"/><rect x="4" y="4" width="8" height="8"/>`;
-		const moonIcon = `<path d="M10,2 C8,2 6,4 6,6 C6,10 8,14 12,14 C10,14 8,12 8,8 C8,4 10,2 10,2"/>`;
+		
+		// 8-bit pixel moon icon (crescent made from rectangles)
+		const moonIcon = `<rect x="4" y="2" width="2" height="2"/><rect x="4" y="12" width="2" height="2"/><rect x="6" y="4" width="2" height="8"/><rect x="8" y="2" width="2" height="2"/><rect x="8" y="12" width="2" height="2"/><rect x="10" y="4" width="2" height="2"/><rect x="10" y="10" width="2" height="2"/><rect x="12" y="6" width="2" height="4"/>`;
 		
 		const setTheme = (t) => {
 			document.documentElement.setAttribute('data-theme', t);
