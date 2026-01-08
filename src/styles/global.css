@@ -139,8 +139,8 @@ a:hover {
   font-family: 'JetBrains Mono', monospace;
   font-weight: bold;
   text-transform: uppercase;
-  border: 2px solid var(--color-accent);
-  border-bottom: 4px solid var(--nes-accent-green-dark);
+  border: var(--border-structural-accent); /* 2px solid green */
+  border-bottom: var(--border-bulge); /* 4px solid dark green */
   color: var(--color-accent);
   background: transparent;
   cursor: pointer;
@@ -169,8 +169,8 @@ a:hover {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.8rem;
   padding: var(--space-1) var(--space-2); /* 8px 16px — строго кратно 8 */
-  border: 2px solid var(--color-border);
-  border-bottom: 4px solid var(--color-border);
+  border: var(--border-structural); /* 2px solid gray */
+  border-bottom: 4px solid var(--color-border); /* Bulge (серый, не зелёный) */
   color: var(--color-text-secondary);
   background: transparent;
   cursor: pointer;
@@ -190,8 +190,8 @@ a:hover {
 /* Post Cards */
 .post-card {
   background: var(--color-card-bg);
-  border: 2px solid var(--color-border);
-  border-bottom: 4px solid var(--color-border);
+  border: var(--border-structural); /* 2px solid gray */
+  border-bottom: 4px solid var(--color-border); /* Bulge (серый, не зелёный) */
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
