@@ -204,17 +204,42 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 				border-color: var(--color-accent-hover);
 			}
 
-			@media (max-width: 768px) {
-				.posts-grid { grid-template-columns: 1fr; }
-				.hero h1 { font-size: 2.5rem; }
-				.hero { padding: 80px 0 60px; }
+		/* ═══ MOBILE BREAKPOINTS ═══ */
+		@media (max-width: 767px) {
+			.posts-grid { 
+				grid-template-columns: 1fr; 
+				gap: var(--space-2); /* 16px — компактнее на mobile */
 			}
+			.hero { 
+				padding: var(--space-4) 0 var(--space-4); /* 32px 0 32px — кратно 8 */
+			}
+			.hero h1 { 
+				font-size: 2rem; /* Меньше на mobile */
+			}
+			.categories-container {
+				margin-bottom: var(--space-6); /* 48px вместо 80px */
+			}
+			.posts-grid {
+				margin-bottom: var(--space-6); /* 48px вместо 80px */
+			}
+			.newsletter-box {
+				margin: var(--space-6) 0; /* 48px вместо 80px */
+				padding: var(--space-4) var(--space-2); /* Компактнее */
+			}
+		}
 
-			@media (max-width: 600px) {
-				.form-row { flex-direction: column; gap: 12px; }
-				.subscribe-form input { width: 100%; }
-				.subscribe-form .btn-submit { padding: 14px; }
+		@media (max-width: 600px) {
+			.form-row { 
+				flex-direction: column; 
+				gap: var(--space-2); /* 16px — кратно 8 */
 			}
+			.subscribe-form input { 
+				width: 100%; 
+			}
+			.subscribe-form .btn-submit { 
+				padding: var(--space-2); /* 16px — кратно 8 */
+			}
+		}
 		</style>
 	</head>
 	<body>
