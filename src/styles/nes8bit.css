@@ -19,13 +19,13 @@
    ═══════════════════════════════════════════════════════════════ */
 
 :root {
-  /* Background (Classic CRT monitor) */
-  --nes-bg-primary: #0F0F0F;        /* Almost black */
-  --nes-bg-secondary: #1A1A1A;      /* Dark gray */
-  --nes-bg-tertiary: #2A2A2A;       /* Medium gray */
+  /* Background (Soft CRT monitor - не чисто чёрный!) */
+  --nes-bg-primary: #050608;        /* Очень тёмный серо-зелёный */
+  --nes-bg-secondary: #0F1012;      /* Тёмный серый */
+  --nes-bg-tertiary: #1A1C1E;       /* Средний серый */
   
-  /* Text (8-bit contrast) */
-  --nes-text-primary: #FCFCFC;      /* White (main text) */
+  /* Text (Мягкий контраст - не чисто белый!) */
+  --nes-text-primary: #E5E5E5;      /* Мягкий белый (main text) */
   --nes-text-secondary: #B0B0B0;    /* Gray (descriptions) */
   --nes-text-tertiary: #808080;     /* Dark gray (meta) */
   

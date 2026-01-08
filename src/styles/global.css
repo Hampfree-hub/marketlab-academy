@@ -13,9 +13,9 @@
 :root {
   /* Legacy variables (for compatibility with existing components) */
   /* These map to NES palette */
-  --color-bg: var(--nes-bg-primary, #0F0F0F);
-  --color-card-bg: var(--nes-bg-secondary, #1A1A1A);
-  --color-text-primary: var(--nes-text-primary, #FCFCFC);
+  --color-bg: var(--nes-bg-primary, #050608);
+  --color-card-bg: var(--nes-bg-secondary, #0F1012);
+  --color-text-primary: var(--nes-text-primary, #E5E5E5);
   --color-text-secondary: var(--nes-text-secondary, #B0B0B0);
   --color-accent: var(--nes-accent-green, #00D800);
   --color-accent-hover: var(--nes-accent-green-dark, #00A800);
