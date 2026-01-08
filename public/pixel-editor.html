@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8-bit Pixel Editor | MarketLab Academy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Courier New', monospace;
+      background: #0A0A0A;
+      color: #E5E5E5;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    h1 {
+      color: #00D800;
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    .editor-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .canvas-wrapper {
+      background: #1A1A1A;
+      padding: 20px;
+      border: 2px solid #00D800;
+      border-bottom: 4px solid #00A800;
+    }
+
+    #pixel-canvas {
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+      border: 1px solid #404040;
+      cursor: crosshair;
+      background: #000000;
+    }
+
+    .tools-panel {
+      background: #1A1A1A;
+      padding: 20px;
+      border: 2px solid #404040;
+      max-width: 300px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      color: #00D800;
+      font-size: 12px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .palette {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 5px;
+    }
+
+    .color-btn {
+      width: 40px;
+      height: 40px;
+      border: 2px solid #404040;
+      cursor: pointer;
+      transition: border-color 0.1s;
+    }
+
+    .color-btn.active {
+      border-color: #00D800;
+      border-width: 3px;
+    }
+
+    .color-btn:hover {
+      border-color: #FCFC00;
+    }
+
+    .tool-btn, .action-btn {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 8px;
+      background: transparent;
+      color: #E5E5E5;
+      border: 2px solid #00D800;
+      border-bottom: 4px solid #00A800;
+      cursor: pointer;
+      font-family: 'Courier New', monospace;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 12px;
+      transition: background 0.2s;
+    }
+
+    .tool-btn:hover, .action-btn:hover {
+      background: #00D800;
+      color: #FFFFFF;
+    }
+
+    .tool-btn.active {
+      background: #00D800;
+      color: #FFFFFF;
+    }
+
+    .slider-container {
+      margin-bottom: 15px;
+    }
+
+    .slider-container label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 12px;
+      color: #B0B0B0;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: #00D800;
+    }
+
+    .current-color-display {
+      width: 100%;
+      height: 60px;
+      border: 2px solid #00D800;
+      margin-top: 10px;
+    }
+
+    .info {
+      font-size: 11px;
+      color: #808080;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .editor-container {
+        flex-direction: column;
+      }
+      
+      #pixel-canvas {
+        width: 100% !important;
+        height: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>> 8-Bit Pixel Editor</h1>
+  <p style="color: #808080; text-align: center;">MarketLab Academy • NES Style Banner Creator</p>
+
+  <div class="editor-container">
+    <!-- Canvas -->
+    <div class="canvas-wrapper">
+      <canvas id="pixel-canvas" width="320" height="180"></canvas>
+      <div class="info">320x180 px • 8x8 grid</div>
+    </div>
+
+    <!-- Tools Panel -->
+    <div class="tools-panel">
+      <!-- Palette -->
+      <div class="section">
+        <div class="section-title">NES Palette</div>
+        <div class="palette" id="color-palette"></div>
+        <div class="current-color-display" id="current-color"></div>
+      </div>
+
+      <!-- Tools -->
+      <div class="section">
+        <div class="section-title">Tools</div>
+        <button class="tool-btn active" data-tool="draw">🖌️ Draw</button>
+        <button class="tool-btn" data-tool="erase">🧹 Erase</button>
+        <button class="tool-btn" data-tool="fill">🪣 Fill</button>
+        <button class="tool-btn" data-tool="picker">🎨 Color Picker</button>
+      </div>
+
+      <!-- Brush Size -->
+      <div class="section">
+        <div class="slider-container">
+          <label>Brush Size: <span id="brush-size-value">1</span>px</label>
+          <input type="range" id="brush-size" min="1" max="16" value="1" step="1">
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="section">
+        <div class="section-title">Actions</div>
+        <button class="action-btn" id="clear-btn">❌ Clear Canvas</button>
+        <button class="action-btn" id="export-btn">💾 Export PNG</button>
+        <button class="action-btn" id="save-btn">📁 Save Project</button>
+        <button class="action-btn" id="load-btn">📂 Load Project</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ════════════════════════════════════════════════════════════
+    // NES COLOR PALETTE (54 colors)
+    // ════════════════════════════════════════════════════════════
+    const nesPalette = [
+      '#000000', '#FCFCFC', '#F8F8F8', '#BCBCBC', '#7C7C7C', '#404040',
+      '#F83800', '#E45C10', '#AC7C00', '#009CE0', '#0084C4', '#006CA8',
+      '#00D800', '#00A800', '#008400', '#3CBCFC', '#0078F8', '#0058F8',
+      '#FCFC00', '#F8B800', '#F87800', '#F85898', '#D800CC', '#9400D3',
+      '#00E8D8', '#008888', '#004058', '#B8F818', '#00B800', '#007800',
+      '#F8D8F8', '#D8B8F8', '#A4E4FC', '#A4C8F8', '#B8F8D8', '#D8F878'
+    ];
+
+    // ════════════════════════════════════════════════════════════
+    // CANVAS SETUP
+    // ════════════════════════════════════════════════════════════
+    const canvas = document.getElementById('pixel-canvas');
+    const ctx = canvas.getContext('2d');
+    const pixelSize = 8;
+
+    let currentColor = '#00D800';
+    let currentTool = 'draw';
+    let brushSize = 1;
+    let isDrawing = false;
+
+    // Grid data (для undo/redo и save/load)
+    const gridWidth = canvas.width / pixelSize;
+    const gridHeight = canvas.height / pixelSize;
+    let grid = Array(gridHeight).fill().map(() => Array(gridWidth).fill('#000000'));
+
+    // ════════════════════════════════════════════════════════════
+    // PALETTE RENDERING
+    // ════════════════════════════════════════════════════════════
+    const paletteEl = document.getElementById('color-palette');
+    const currentColorEl = document.getElementById('current-color');
+
+    nesPalette.forEach((color, index) => {
+      const btn = document.createElement('button');
+      btn.className = 'color-btn';
+      btn.style.background = color;
+      btn.dataset.color = color;
+      
+      if (index === 12) btn.classList.add('active'); // Default: green
+      
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentColor = color;
+        currentColorEl.style.background = color;
+      });
+      
+      paletteEl.appendChild(btn);
+    });
+
+    currentColorEl.style.background = currentColor;
+
+    // ════════════════════════════════════════════════════════════
+    // TOOL SELECTION
+    // ════════════════════════════════════════════════════════════
+    document.querySelectorAll('.tool-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tool-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentTool = btn.dataset.tool;
+      });
+    });
+
+    // ════════════════════════════════════════════════════════════
+    // BRUSH SIZE
+    // ════════════════════════════════════════════════════════════
+    const brushSizeSlider = document.getElementById('brush-size');
+    const brushSizeValue = document.getElementById('brush-size-value');
+
+    brushSizeSlider.addEventListener('input', (e) => {
+      brushSize = parseInt(e.target.value);
+      brushSizeValue.textContent = brushSize;
+    });
+
+    // ════════════════════════════════════════════════════════════
+    // DRAWING LOGIC
+    // ════════════════════════════════════════════════════════════
+    function getGridPos(e) {
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+      const x = Math.floor(((e.clientX - rect.left) * scaleX) / pixelSize);
+      const y = Math.floor(((e.clientY - rect.top) * scaleY) / pixelSize);
+      return { x, y };
+    }
+
+    function drawPixel(x, y, color) {
+      if (x < 0 || y < 0 || x >= gridWidth || y >= gridHeight) return;
+      
+      grid[y][x] = color;
+      ctx.fillStyle = color;
+      ctx.fillRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);
+    }
+
+    function floodFill(startX, startY, targetColor, replacementColor) {
+      if (targetColor === replacementColor) return;
+      
+      const stack = [[startX, startY]];
+      
+      while (stack.length > 0) {
+        const [x, y] = stack.pop();
+        
+        if (x < 0 || y < 0 || x >= gridWidth || y >= gridHeight) continue;
+        if (grid[y][x] !== targetColor) continue;
+        
+        drawPixel(x, y, replacementColor);
+        
+        stack.push([x + 1, y]);
+        stack.push([x - 1, y]);
+        stack.push([x, y + 1]);
+        stack.push([x, y - 1]);
+      }
+    }
+
+    function handleDraw(e) {
+      const { x, y } = getGridPos(e);
+      
+      if (currentTool === 'draw') {
+        for (let dy = 0; dy < brushSize; dy++) {
+          for (let dx = 0; dx < brushSize; dx++) {
+            drawPixel(x + dx, y + dy, currentColor);
+          }
+        }
+      } else if (currentTool === 'erase') {
+        for (let dy = 0; dy < brushSize; dy++) {
+          for (let dx = 0; dx < brushSize; dx++) {
+            drawPixel(x + dx, y + dy, '#000000');
+          }
+        }
+      } else if (currentTool === 'fill') {
+        const targetColor = grid[y][x];
+        floodFill(x, y, targetColor, currentColor);
+      } else if (currentTool === 'picker') {
+        currentColor = grid[y][x];
+        currentColorEl.style.background = currentColor;
+        
+        // Update palette selection
+        document.querySelectorAll('.color-btn').forEach(btn => {
+          btn.classList.remove('active');
+          if (btn.dataset.color === currentColor) {
+            btn.classList.add('active');
+          }
+        });
+      }
+    }
+
+    // ════════════════════════════════════════════════════════════
+    // CANVAS EVENTS
+    // ════════════════════════════════════════════════════════════
+    canvas.addEventListener('mousedown', (e) => {
+      isDrawing = true;
+      handleDraw(e);
+    });
+
+    canvas.addEventListener('mousemove', (e) => {
+      if (isDrawing && (currentTool === 'draw' || currentTool === 'erase')) {
+        handleDraw(e);
+      }
+    });
+
+    canvas.addEventListener('mouseup', () => {
+      isDrawing = false;
+    });
+
+    canvas.addEventListener('mouseleave', () => {
+      isDrawing = false;
+    });
+
+    canvas.addEventListener('click', (e) => {
+      if (currentTool === 'fill' || currentTool === 'picker') {
+        handleDraw(e);
+      }
+    });
+
+    // ════════════════════════════════════════════════════════════
+    // ACTIONS
+    // ════════════════════════════════════════════════════════════
+    document.getElementById('clear-btn').addEventListener('click', () => {
+      if (confirm('Clear canvas? This cannot be undone.')) {
+        ctx.fillStyle = '#000000';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        grid = Array(gridHeight).fill().map(() => Array(gridWidth).fill('#000000'));
+      }
+    });
+
+    document.getElementById('export-btn').addEventListener('click', () => {
+      const link = document.createElement('a');
+      const timestamp = new Date().toISOString().slice(0, 10);
+      link.download = `marketlab-banner-${timestamp}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    });
+
+    document.getElementById('save-btn').addEventListener('click', () => {
+      const projectData = {
+        grid: grid,
+        width: gridWidth,
+        height: gridHeight,
+        pixelSize: pixelSize
+      };
+      
+      localStorage.setItem('pixel-editor-project', JSON.stringify(projectData));
+      alert('✅ Project saved to browser storage!');
+    });
+
+    document.getElementById('load-btn').addEventListener('click', () => {
+      const saved = localStorage.getItem('pixel-editor-project');
+      
+      if (!saved) {
+        alert('❌ No saved project found.');
+        return;
+      }
+      
+      const projectData = JSON.parse(saved);
+      grid = projectData.grid;
+      
+      // Redraw canvas
+      ctx.fillStyle = '#000000';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      for (let y = 0; y < gridHeight; y++) {
+        for (let x = 0; x < gridWidth; x++) {
+          if (grid[y][x] !== '#000000') {
+            drawPixel(x, y, grid[y][x]);
+          }
+        }
+      }
+      
+      alert('✅ Project loaded!');
+    });
+
+    // ════════════════════════════════════════════════════════════
+    // INITIAL RENDER
+    // ════════════════════════════════════════════════════════════
+    ctx.fillStyle = '#000000';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  </script>
+</body>
+</html>
