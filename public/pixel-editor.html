@@ -239,7 +239,9 @@
     // Grid data (для undo/redo и save/load)
     const gridWidth = canvas.width / pixelSize;
     const gridHeight = canvas.height / pixelSize;
-    let grid = Array(gridHeight).fill().map(() => Array(gridWidth).fill('#000000'));
+    let grid = Array.from({ length: gridHeight }, () => 
+      Array.from({ length: gridWidth }, () => '#000000')
+    );
 
     // ════════════════════════════════════════════════════════════
     // PALETTE RENDERING
@@ -396,7 +398,9 @@
       if (confirm('Clear canvas? This cannot be undone.')) {
         ctx.fillStyle = '#000000';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-        grid = Array(gridHeight).fill().map(() => Array(gridWidth).fill('#000000'));
+        grid = Array.from({ length: gridHeight }, () => 
+          Array.from({ length: gridWidth }, () => '#000000')
+        );
       }
     });
 
