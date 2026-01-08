@@ -36,10 +36,19 @@
   --nes-accent-red: #F83800;        /* NES red (alerts) */
   --nes-accent-yellow: #FCFC00;     /* NES yellow (highlight) */
   
-  /* Borders (pixel-perfect) */
+  /* ═══ BORDER SYSTEM ═══ */
+  /* Border colors */
   --nes-border-primary: #404040;    /* Dark border */
   --nes-border-secondary: #606060;  /* Medium border */
   --nes-border-accent: #00D800;     /* Green border (active) */
+  
+  /* STRUCTURAL — важные элементы (кнопки, карточки) */
+  --border-structural: 2px solid var(--nes-border-primary);
+  --border-structural-accent: 2px solid var(--nes-accent-green);
+  --border-bulge: 4px solid var(--nes-accent-green-dark); /* Нижняя "выпуклость" */
+  
+  /* DECORATIVE — вспомогательные разделители */
+  --border-decorative: 1px solid var(--nes-border-primary);
   
   /* Shadows (8-bit glow) */
   --nes-shadow-green: rgba(0, 216, 0, 0.4);
