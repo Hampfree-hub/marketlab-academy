@@ -11,11 +11,29 @@ const posts = (await getCollection('blog')).sort(
 );
 
 const featuredPosts = posts.slice(0, 4);
+
+// Категории блога (v2 - 2026-01-08)
 const categories = [
-	{ id: 'tech', label: 'ТЕХНИЧЕСКИЙ_АНАЛИЗ' },
-	{ id: 'crypto', label: 'КРИПТО' },
-	{ id: 'automation', label: 'АВТОМАТИЗАЦИЯ' },
-	{ id: 'fundamental', label: 'ФУНДАМЕНТ' }
+	{ 
+		id: 'technical-analysis', 
+		label: 'ТЕХАНАЛИЗ', 
+		full: 'Технический анализ'
+	},
+	{ 
+		id: 'crypto', 
+		label: 'КРИПТО', 
+		full: 'Криптовалюты и крипторынок'
+	},
+	{ 
+		id: 'algo-trading', 
+		label: 'АЛГО', 
+		full: 'Алготрейдинг и автоматизация'
+	},
+	{ 
+		id: 'fundamental-analysis', 
+		label: 'ФУНДАМЕНТАЛ', 
+		full: 'Фундаментальный анализ'
+	}
 ];
 
 const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
@@ -222,7 +240,12 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 				<div id="cat-label" class="section-label">КАТЕГОРИИ</div>
 				<div class="categories-container" role="group" aria-label="Фильтр по категориям">
 					{categories.map(cat => (
-						<button class="tag-btn" data-cat={cat.id} aria-pressed="false">
+						<button 
+							class="tag-btn" 
+							data-cat={cat.id} 
+							aria-pressed="false"
+							title={cat.full}
+						>
 							[{cat.label}]
 						</button>
 					))}
