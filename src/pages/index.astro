@@ -107,14 +107,23 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 				opacity: 0.7;
 			}
 
-			.post-meta {
-				display: flex;
-				justify-content: space-between;
-				font-family: 'JetBrains Mono', monospace;
-				font-size: 0.75rem;
-				color: var(--color-text-secondary);
-				margin-bottom: 0.75rem;
-			}
+		.post-meta {
+			display: flex;
+			gap: var(--space-1); /* 8px — кратно 8 */
+			font-family: 'JetBrains Mono', monospace;
+			font-size: 0.75rem;
+			color: var(--color-text-secondary);
+			margin-bottom: var(--space-2); /* 16px — кратно 8 */
+		}
+		
+		.meta-divider {
+			opacity: 0.5;
+		}
+		
+		.meta-lang {
+			font-weight: 600;
+			color: var(--color-accent); /* Выделяется зелёным! */
+		}
 
 			.read-more-link {
 				display: inline-block;
@@ -272,10 +281,13 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 				<div class="posts-grid">
 					{featuredPosts.map(post => (
 						<a href={`${baseUrl}blog/${post.slug}/`} class="post-card" aria-label={`Читать статью: ${post.data.title}`}>
-							<div class="post-meta">
-								<span><FormattedDate date={post.data.pubDate} /></span>
-								<span aria-label="Время чтения">5 МИН ЧТЕНИЯ</span>
-							</div>
+						<div class="post-meta">
+							<span><FormattedDate date={post.data.pubDate} /></span>
+							<span class="meta-divider">·</span>
+							<span aria-label="Время чтения">5 МИН</span>
+							<span class="meta-divider">·</span>
+							<span class="meta-lang" aria-label="Язык статьи">[{(post.data.language || 'ru').toUpperCase()}]</span>
+						</div>
 							<h3>{post.data.title}</h3>
 							<p class="description">{post.data.description}</p>
 							<div class="post-card-tags" aria-label="Теги">
