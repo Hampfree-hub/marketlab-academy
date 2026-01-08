@@ -20,6 +20,8 @@ const isAbout = currentPath.includes('/about');
 				<button class="lang-btn active">RU</button>
 				<span class="lang-divider">|</span>
 				<button class="lang-btn">EN</button>
+				<span class="lang-divider">|</span>
+				<button class="lang-btn">ES</button>
 			</div>
 			<a href={`${baseUrl}blog`} class="nav-link" aria-current={isArchive ? 'page' : undefined}>Архив</a>
 			<a href={`${baseUrl}about`} class="nav-link" aria-current={isAbout ? 'page' : undefined}>О проекте</a>
@@ -39,6 +41,7 @@ const isAbout = currentPath.includes('/about');
 			<div class="lang-switcher mobile" aria-label="Выбор языка">
 				<button class="lang-btn active">RU</button>
 				<button class="lang-btn">EN</button>
+				<button class="lang-btn">ES</button>
 			</div>
 			<button id="theme-toggle-mobile" class="theme-btn" aria-label="Переключить тему">
 				<svg class="theme-icon" viewBox="0 0 16 16" fill="currentColor">
@@ -69,7 +72,7 @@ const isAbout = currentPath.includes('/about');
 		position: sticky;
 		top: 0;
 		background: var(--color-bg);
-		border-bottom: 1px solid var(--color-border);
+		border-bottom: 2px solid var(--color-border);
 		z-index: var(--z-index-header);
 	}
 
@@ -111,21 +114,32 @@ const isAbout = currentPath.includes('/about');
 	}
 
 	.lang-btn {
-		background: none;
-		border: none;
+		background: transparent;
+		border: 2px solid var(--color-border); /* Видимая рамка */
+		border-bottom: 4px solid var(--color-border); /* Видимый bulge */
 		color: var(--color-text-secondary);
 		cursor: pointer;
-		padding: 2px 4px;
-		transition: color var(--transition-fast);
+		padding: 8px 16px;
+		font-family: 'JetBrains Mono', monospace;
+		/* 8-bit steps animation */
+		transition: color 0.15s steps(3),
+		            border-color 0.15s steps(3),
+		            background 0.15s steps(3);
 	}
 
 	.lang-btn.active {
-		color: var(--color-accent);
+		color: #FFFFFF;
 		font-weight: bold;
+		background: var(--color-accent);
+		border-color: var(--color-accent);
+		border-bottom-color: var(--nes-accent-green-dark);
 	}
 
 	.lang-btn:hover:not(.active) {
-		color: var(--color-text-primary);
+		color: #FFFFFF;
+		background: var(--color-accent);
+		border-color: var(--color-accent);
+		border-bottom-color: var(--nes-accent-green-dark);
 	}
 
 	.lang-divider {
@@ -145,43 +159,55 @@ const isAbout = currentPath.includes('/about');
 		color: var(--color-text-primary);
 		padding: 8px 16px; /* Унифицированный отступ */
 		border: 2px solid transparent;
+		border-bottom: 4px solid transparent;
 		background: transparent;
 		text-transform: uppercase;
-		transition: none; /* 8-bit instant */
+		/* 8-bit steps animation */
+		transition: border-color 0.15s steps(3),
+		            background 0.15s steps(3),
+		            color 0.15s steps(3);
 	}
 
 	.nav-link:hover {
 		border: 2px solid var(--nes-accent-green);
+		border-bottom-color: var(--nes-accent-green-dark);
 		background: var(--nes-bg-secondary);
 		color: var(--nes-accent-green);
-		/* NO partial fading - full instant change */
 	}
 
 	.nav-link[aria-current="page"] {
 		border: 2px solid var(--nes-accent-green);
+		border-bottom-color: var(--nes-accent-green-dark);
 		color: var(--nes-accent-green);
 	}
 
 	.theme-btn {
 		background: transparent;
 		border: 2px solid var(--nes-border-primary);
+		border-bottom: 4px solid var(--nes-border-primary);
 		color: var(--color-text-primary);
-		padding: 8px 16px; /* Унифицированный отступ */
+		padding: 10px; /* Квадратная кнопка */
 		cursor: pointer;
 		font-family: 'Press Start 2P', monospace;
 		font-size: 0.6rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 8px;
+		gap: 0;
 		min-width: 48px;
-		transition: none; /* 8-bit instant */
+		width: 48px;
+		height: 48px;
+		/* 8-bit steps animation */
+		transition: border-color 0.15s steps(3),
+		            background 0.15s steps(3),
+		            color 0.15s steps(3);
 	}
 
 	.theme-btn:hover {
 		border-color: var(--nes-accent-green);
-		background: var(--nes-bg-secondary);
-		color: var(--nes-accent-green);
+		border-bottom-color: var(--nes-accent-green-dark);
+		background: var(--nes-accent-green);
+		color: #FFFFFF;
 	}
 
 	.theme-icon {
@@ -212,7 +238,7 @@ const isAbout = currentPath.includes('/about');
 		display: none;
 		flex-direction: column;
 		background: var(--color-bg);
-		border-bottom: 1px solid var(--color-border);
+		border-bottom: 2px solid var(--color-border);
 		padding: 1rem var(--horizontal-padding);
 		gap: 1.5rem;
 	}

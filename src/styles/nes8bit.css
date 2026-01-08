@@ -82,6 +82,11 @@
   /* Text (Тёмный для контраста) */
   --nes-text-primary: #1A2A0A;      /* Очень тёмный зелёный (читаемо) */
   --nes-text-secondary: #2A3A1A;    /* Тёмный зелёный */
+  
+  /* ВАЖНО: Borders и accent должны быть одинаковыми на обеих темах! */
+  --nes-border-primary: #3A4A2A;
+  --nes-accent-green: #2A5A1A;
+  --nes-accent-green-dark: #1A4A0A;
   --nes-text-tertiary: #3A4A2A;     /* Средний зелёный */
   
   /* Accents (Контрастные) */
@@ -165,15 +170,15 @@ p {
 a {
   color: var(--nes-accent-green);
   text-decoration: none;
-  border-bottom: 2px solid transparent; /* Reserve space for underline */
-  padding-bottom: 2px; /* Distance from text */
-  transition: border-color 0.15s steps(3), 
-              color 0.15s steps(3);
+  transition: color 0.15s steps(3);
 }
 
 a:hover {
   color: var(--nes-accent-yellow);
-  border-bottom-color: var(--nes-accent-yellow);
+  text-decoration: underline;
+  text-decoration-color: var(--nes-accent-yellow);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
 }
 
 strong, b {
