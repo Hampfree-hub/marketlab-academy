@@ -46,12 +46,12 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
-			/* Hero Section */
-		.hero {
-			padding: 120px 0 80px;
-			text-align: center;
-			border-bottom: 2px solid var(--color-border);
-		}
+		/* Hero Section */
+	.hero {
+		padding: var(--space-10) 0 var(--space-8); /* 80px 0 64px — строго кратно 8 */
+		text-align: center;
+		border-bottom: 2px solid var(--color-border);
+	}
 
 			.hero h1 {
 				font-size: 3.5rem;
@@ -73,25 +73,25 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 			font-family: 'JetBrains Mono', monospace;
 			color: var(--color-accent);
 			font-size: 0.85rem;
-			margin: 64px 0 24px;
+			margin: var(--space-8) 0 var(--space-3); /* 64px 0 24px — строго кратно 8 */
 			text-transform: uppercase;
 			letter-spacing: 2px;
 		}
 
-			.categories-container {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 12px;
-				margin-bottom: 80px;
-			}
+		.categories-container {
+			display: flex;
+			flex-wrap: wrap;
+			gap: var(--space-2); /* 16px — строго кратно 8 (было 12px) */
+			margin-bottom: var(--space-10); /* 80px — строго кратно 8 */
+		}
 
-			/* Posts Grid */
-			.posts-grid {
-				display: grid;
-				grid-template-columns: repeat(2, 1fr);
-				gap: 24px;
-				margin-bottom: 80px;
-			}
+		/* Posts Grid */
+		.posts-grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: var(--space-3); /* 24px — строго кратно 8 */
+			margin-bottom: var(--space-10); /* 80px — строго кратно 8 */
+		}
 
 			.post-card-tags {
 				display: flex;

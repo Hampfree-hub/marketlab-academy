@@ -135,7 +135,7 @@ a:hover {
 /* Buttons */
 .btn {
   display: inline-block;
-  padding: 12px 32px;
+  padding: var(--space-2) var(--space-4); /* 16px 32px — строго кратно 8 */
   font-family: 'JetBrains Mono', monospace;
   font-weight: bold;
   text-transform: uppercase;
@@ -168,7 +168,7 @@ a:hover {
 .tag-btn {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.8rem;
-  padding: 10px 20px;
+  padding: var(--space-1) var(--space-2); /* 8px 16px — строго кратно 8 */
   border: 2px solid var(--color-border);
   border-bottom: 4px solid var(--color-border);
   color: var(--color-text-secondary);

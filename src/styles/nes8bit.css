@@ -45,13 +45,24 @@
   --nes-shadow-green: rgba(0, 216, 0, 0.4);
   --nes-shadow-blue: rgba(60, 188, 252, 0.4);
   
-  /* Spacing (pixel-based) */
-  --nes-space-xs: 4px;
-  --nes-space-sm: 8px;
-  --nes-space-md: 16px;
-  --nes-space-lg: 24px;
-  --nes-space-xl: 32px;
-  --nes-space-xxl: 48px;
+  /* ═══ SPACING SYSTEM (строго кратно 8px) ═══ */
+  /* Базовый ритм: 16px, все значения кратны 8px для аутентичного 8-bit grid */
+  --space-0: 0;
+  --space-1: 8px;    /* 0.5 × 16 — минимальный gap (иконки, компактные элементы) */
+  --space-2: 16px;   /* 1 × 16 — БАЗОВЫЙ ШАГ! (margin, padding основных элементов) */
+  --space-3: 24px;   /* 1.5 × 16 — gap между элементами в ряду */
+  --space-4: 32px;   /* 2 × 16 — margin между компонентами */
+  --space-6: 48px;   /* 3 × 16 — margin между секциями */
+  --space-8: 64px;   /* 4 × 16 — padding крупных секций (hero) */
+  --space-10: 80px;  /* 5 × 16 — padding топ-секций (hero top) */
+  
+  /* Legacy variables (для совместимости) */
+  --nes-space-xs: var(--space-1);
+  --nes-space-sm: var(--space-1);
+  --nes-space-md: var(--space-2);
+  --nes-space-lg: var(--space-3);
+  --nes-space-xl: var(--space-4);
+  --nes-space-xxl: var(--space-6);
   
   /* Border Radius (NO CURVES in 8-bit!) */
   --nes-radius: 0px;
@@ -233,7 +244,7 @@ pre code {
 .nes-btn {
   font-family: 'Press Start 2P', 'Courier New', monospace;
   font-size: 0.7rem; /* Пиксельные шрифты мелкие */
-  padding: 12px 24px;
+  padding: var(--space-2) var(--space-3); /* 16px 24px — строго кратно 8 */
   background: var(--nes-bg-secondary);
   color: var(--nes-text-primary);
   border: 4px solid var(--nes-border-primary);
@@ -383,7 +394,7 @@ button:focus-visible {
   
   .nes-btn {
     font-size: 0.6rem;
-    padding: 10px 20px;
+    padding: var(--space-1) var(--space-2); /* 8px 16px — строго кратно 8 */
   }
 }
 
