@@ -165,13 +165,15 @@ p {
 a {
   color: var(--nes-accent-green);
   text-decoration: none;
-  /* NO transitions — instant */
-  transition: none;
+  border-bottom: 2px solid transparent; /* Reserve space for underline */
+  padding-bottom: 2px; /* Distance from text */
+  transition: border-color 0.15s steps(3), 
+              color 0.15s steps(3);
 }
 
 a:hover {
   color: var(--nes-accent-yellow);
-  text-decoration: underline;
+  border-bottom-color: var(--nes-accent-yellow);
 }
 
 strong, b {
@@ -240,11 +242,11 @@ pre code {
   background: var(--nes-accent-green);
   color: var(--nes-bg-primary);
   border-color: var(--nes-accent-green);
-  box-shadow: 0 0 20px var(--nes-shadow-green);
+  /* NO box-shadow in 8-bit */
 }
 
 .nes-btn:active {
-  transform: translate(2px, 2px);
+  /* NO transform in 8-bit */
 }
 
 .nes-btn-primary {
@@ -288,7 +290,7 @@ pre code {
 
 .nes-card:hover {
   border-color: var(--nes-border-accent);
-  box-shadow: 0 0 20px var(--nes-shadow-green);
+  /* NO box-shadow in 8-bit */
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -327,11 +329,10 @@ pre code {
 @keyframes nes-fade-in {
   from {
     opacity: 0;
-    transform: translateY(-8px);
+    /* NO transform in 8-bit */
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
