@@ -234,7 +234,7 @@ p {
 a {
   color: var(--nes-accent-green);
   text-decoration: none;
-  transition: color 0.15s steps(3);
+  transition: color 0.10s steps(3);  /* ✅ VARIANT F */
 }
 
 a:hover {

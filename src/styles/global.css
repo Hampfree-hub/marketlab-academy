@@ -102,7 +102,7 @@ h1, h2, h3, h4, .mono {
 a {
   color: var(--color-accent);
   text-decoration: none;
-  transition: color 0.15s steps(3);
+  transition: color 0.10s steps(3);  /* ✅ VARIANT F */
 }
 
 a:hover {
@@ -198,7 +198,7 @@ a:hover {
   text-decoration: none;
   height: 100%;
   /* 8-bit steps animation */
-  transition: border-bottom-color 0.15s steps(3);  /* ОТКАТ: было лучше */
+  transition: border-bottom-color 0.10s steps(3);  /* ✅ VARIANT F: golden middle */
 }
 
 .post-card:hover {
@@ -211,7 +211,7 @@ a:hover {
   margin: var(--spacing-sm) 0;
   font-size: 1.5rem;
   line-height: 1.2;
-  transition: color 0.15s steps(3);  /* ОТКАТ: было лучше */
+  transition: color 0.10s steps(3);  /* ✅ VARIANT F: golden middle */
 }
 
 .post-card:hover h3 {
@@ -223,7 +223,7 @@ a:hover {
   color: var(--color-text-secondary);
   font-size: 0.95rem;
   margin-bottom: var(--spacing-base);
-  transition: color 0.15s steps(3);  /* ОТКАТ: было лучше */
+  transition: color 0.10s steps(3);  /* ✅ VARIANT F: golden middle */
 }
 
 .post-card:hover .description {
