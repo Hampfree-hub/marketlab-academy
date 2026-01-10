@@ -1,0 +1,475 @@
+/*
+  ═══════════════════════════════════════════════════════════════
+  MARKETLAB ACADEMY — 8-bit NES Theme (BASE STYLES)
+  ═══════════════════════════════════════════════════════════════
+  
+  Reset + Typography + Utility classes.
+  Импортируется после tokens.css.
+  
+  Created: 2026-01-09
+  ═══════════════════════════════════════════════════════════════
+*/
+
+/* ═══════════════════════════════════════════════════════════════
+   BASE STYLES (8-bit reset)
+   ═══════════════════════════════════════════════════════════════ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  background-color: var(--nes-bg-primary);
+  color: var(--nes-text-primary);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* NO transitions on body */
+  transition: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TEXT SELECTION (исправление артефактов для pixelated шрифтов)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ✅ ИСПРАВЛЕНИЕ: Для обычного текста (JetBrains Mono) - убираем text-shadow при выделении */
+::selection {
+  background-color: var(--nes-accent-green);
+  color: #FFFFFF;
+  /* ✅ КРИТИЧНО: Принудительно убираем text-shadow для ровного выделения без артефактов */
+  text-shadow: none !important;
+  /* ✅ ДОПОЛНИТЕЛЬНО: Отключаем все эффекты, которые могут создавать артефакты */
+  -webkit-text-stroke: none !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  /* Убираем разрывы в выделении */
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  user-select: text;
+}
+
+::-moz-selection {
+  background-color: var(--nes-accent-green);
+  color: #FFFFFF;
+  /* ✅ КРИТИЧНО: Принудительно убираем text-shadow для Firefox */
+  text-shadow: none !important;
+  -webkit-text-stroke: none !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
+/* Для pixelated шрифтов (Press Start 2P) - улучшаем выделение */
+h1, h2, h3, h4, h5, h6,
+[style*="Press Start 2P"],
+.font-pixelated {
+  /* Позволяем выделение всего блока текста, не только отдельных пикселей */
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  user-select: text;
+  /* ✅ ИСПРАВЛЕНИЕ: Улучшаем рендеринг шрифта для ровного выделения */
+  text-rendering: optimizeSpeed; /* Для pixelated шрифтов - быстрый рендеринг */
+  -webkit-font-smoothing: none; /* Отключаем сглаживание для pixelated */
+  -moz-osx-font-smoothing: unset;
+}
+
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection {
+  background-color: var(--nes-accent-green);
+  color: #FFFFFF;
+  /* ✅ КРИТИЧНО: Принудительно убираем text-shadow (убирает тонкие невыделенные полоски сверху) */
+  text-shadow: none !important;
+  /* ✅ ИСПРАВЛЕНИЕ: Отключаем все эффекты, которые могут создавать артефакты */
+  -webkit-text-stroke: none !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  /* ⚠️ ПРИМЕЧАНИЕ: padding не работает в ::selection, но text-shadow: none !important должно помочь */
+}
+
+h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection {
+  background-color: var(--nes-accent-green);
+  color: #FFFFFF;
+  /* ✅ КРИТИЧНО: Принудительно убираем text-shadow для Firefox */
+  text-shadow: none !important;
+  -webkit-text-stroke: none !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
+/* ✅ ДОПОЛНИТЕЛЬНОЕ ИСПРАВЛЕНИЕ: Для параграфов и обычного текста */
+p::selection, span::selection, div::selection, article::selection, section::selection {
+  text-shadow: none !important;
+  -webkit-text-stroke: none !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
+p::-moz-selection, span::-moz-selection, div::-moz-selection, article::-moz-selection, section::-moz-selection {
+  text-shadow: none !important;
+  -webkit-text-stroke: none !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
+/* Для кнопок и интерактивных элементов - отключаем выделение (чтобы не было артефактов) */
+button, .btn, .nav-link, .lang-btn, .theme-btn, .hamburger,
+.mobile-menu a, .lang-btn-mobile, .theme-btn-mobile {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TYPOGRAPHY (8-bit style)
+   ═══════════════════════════════════════════════════════════════ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  font-weight: 400; /* Press Start 2P только в одном начертании */
+  line-height: 1.4;
+  color: var(--nes-text-primary);
+  margin-bottom: var(--nes-space-md);
+  /* text-transform и letter-spacing применяются через классы! */
+  /* ✅ КРИТИЧНО: Отключаем сглаживание для pixelated шрифтов (избегаем артефактов при выделении) */
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  font-smooth: never;
+  /* ✅ ИСПРАВЛЕНИЕ: Улучшаем рендеринг для ровного выделения */
+  text-rendering: optimizeSpeed;
+  position: relative; /* Для корректного позиционирования выделения */
+}
+
+/* ═══ H1 HEADING STYLES ═══ */
+/* h1 БЕЗ класса — нейтральный (НЕ трогаем text-transform!) */
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: var(--space-2);
+  /* НЕТ text-transform и letter-spacing! */
+}
+
+/* .brutal — для коротких заголовков (2-5 слов, CAPS) */
+h1.brutal {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+}
+
+/* .long — для длинных заголовков (5+ слов, обычный вид) */
+h1.long {
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+
+/* H2-H6 остаются с uppercase (как и было) */
+h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+h2 {
+  font-size: 1.5rem; /* 24px */
+}
+
+h3 {
+  font-size: 1.2rem; /* 19px */
+}
+
+h4 {
+  font-size: 1rem; /* 16px */
+}
+
+p {
+  margin-bottom: var(--nes-space-md);
+  color: var(--nes-text-secondary);
+}
+
+a {
+  color: var(--nes-accent-green);
+  text-decoration: none;
+  transition: color 0.10s steps(3);  /* ✅ VARIANT F */
+}
+
+a:hover {
+  color: var(--nes-accent-yellow);
+  text-decoration: underline;
+  text-decoration-color: var(--nes-accent-yellow);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+strong, b {
+  color: var(--nes-text-primary);
+  font-weight: 700;
+}
+
+code {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  background: var(--nes-bg-secondary);
+  padding: 2px 6px;
+  border: 2px solid var(--nes-border-primary);
+  font-size: 0.9em;
+}
+
+pre {
+  background: var(--nes-bg-secondary);
+  border: 4px solid var(--nes-border-primary);
+  padding: var(--nes-space-md);
+  overflow-x: auto;
+  margin-bottom: var(--nes-space-md);
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PIXEL-PERFECT BORDERS
+   ═══════════════════════════════════════════════════════════════ */
+
+.nes-border {
+  border: 4px solid var(--nes-border-primary);
+}
+
+.nes-border-accent {
+  border: 4px solid var(--nes-border-accent);
+}
+
+.nes-border-double {
+  border: 4px solid var(--nes-border-primary);
+  outline: 2px solid var(--nes-bg-primary);
+  outline-offset: -6px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BUTTONS (8-bit style)
+   ═══════════════════════════════════════════════════════════════ */
+
+.nes-btn {
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  font-size: 0.7rem; /* Пиксельные шрифты мелкие */
+  padding: var(--space-2) var(--space-3); /* 16px 24px — строго кратно 8 */
+  background: var(--nes-bg-secondary);
+  color: var(--nes-text-primary);
+  border: 4px solid var(--nes-border-primary);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: none; /* Instant */
+  display: inline-block;
+}
+
+.nes-btn:hover {
+  background: var(--nes-accent-green);
+  color: var(--nes-bg-primary);
+  border-color: var(--nes-accent-green);
+  /* NO box-shadow in 8-bit */
+}
+
+.nes-btn:active {
+  /* NO transform in 8-bit */
+}
+
+.nes-btn-primary {
+  background: var(--nes-accent-green);
+  color: var(--nes-bg-primary);
+  border-color: var(--nes-accent-green);
+}
+
+.nes-btn-primary:hover {
+  background: var(--nes-accent-green-dark);
+  border-color: var(--nes-accent-green-dark);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CONTAINERS (Pixel-perfect layout)
+   ═══════════════════════════════════════════════════════════════ */
+
+.nes-container {
+  max-width: var(--nes-max-width);
+  margin: 0 auto;
+  padding: 0 var(--nes-padding-horizontal);
+}
+
+.nes-container-narrow {
+  max-width: var(--nes-max-width-post);
+  margin: 0 auto;
+  padding: 0 var(--nes-padding-horizontal);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CARDS (Archive file style)
+   ═══════════════════════════════════════════════════════════════ */
+
+.nes-card {
+  background: var(--nes-bg-secondary);
+  border: 4px solid var(--nes-border-primary);
+  padding: var(--nes-space-lg);
+  margin-bottom: var(--nes-space-md);
+  transition: none;
+}
+
+.nes-card:hover {
+  border-color: var(--nes-border-accent);
+  /* NO box-shadow in 8-bit */
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DIVIDERS (Pixel lines)
+   ═══════════════════════════════════════════════════════════════ */
+
+.nes-divider {
+  width: 100%;
+  height: 2px;
+  background: var(--nes-border-primary);
+  margin: var(--nes-space-md) 0;
+}
+
+.nes-divider-thick {
+  width: 100%;
+  height: 4px;
+  background: var(--nes-border-primary);
+  margin: var(--nes-space-lg) 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ANIMATIONS (8-bit style)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Blinking cursor */
+@keyframes nes-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.nes-cursor {
+  animation: nes-blink 1s step-start infinite;
+}
+
+/* Pixel fade-in */
+@keyframes nes-fade-in {
+  from {
+    opacity: 0;
+    /* NO transform in 8-bit */
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.nes-fade-in {
+  animation: nes-fade-in 0.3s steps(3);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FOCUS STATES (Accessibility)
+   ═══════════════════════════════════════════════════════════════ */
+
+:focus-visible {
+  outline: 4px solid var(--nes-accent-yellow);
+  outline-offset: 4px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 4px solid var(--nes-accent-yellow);
+  outline-offset: 4px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   UTILITY CLASSES
+   ═══════════════════════════════════════════════════════════════ */
+
+.nes-text-center {
+  text-align: center;
+}
+
+.nes-text-right {
+  text-align: right;
+}
+
+.nes-text-mono {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+.nes-text-pixel {
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+}
+
+.nes-text-green {
+  color: var(--nes-accent-green);
+}
+
+.nes-text-yellow {
+  color: var(--nes-accent-yellow);
+}
+
+.nes-text-red {
+  color: var(--nes-accent-red);
+}
+
+.nes-text-blue {
+  color: var(--nes-accent-blue);
+}
+
+.nes-mt-0 { margin-top: 0; }
+.nes-mt-xs { margin-top: var(--nes-space-xs); }
+.nes-mt-sm { margin-top: var(--nes-space-sm); }
+.nes-mt-md { margin-top: var(--nes-space-md); }
+.nes-mt-lg { margin-top: var(--nes-space-lg); }
+.nes-mt-xl { margin-top: var(--nes-space-xl); }
+.nes-mt-xxl { margin-top: var(--nes-space-xxl); }
+
+.nes-mb-0 { margin-bottom: 0; }
+.nes-mb-xs { margin-bottom: var(--nes-space-xs); }
+.nes-mb-sm { margin-bottom: var(--nes-space-sm); }
+.nes-mb-md { margin-bottom: var(--nes-space-md); }
+.nes-mb-lg { margin-bottom: var(--nes-space-lg); }
+.nes-mb-xl { margin-bottom: var(--nes-space-xl); }
+.nes-mb-xxl { margin-bottom: var(--nes-space-xxl); }
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE (Mobile-friendly 8-bit)
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  :root {
+    --nes-padding-horizontal: 16px;
+  }
+  
+  h1 {
+    font-size: 1.5rem; /* 24px */
+  }
+  
+  h2 {
+    font-size: 1.2rem; /* 19px */
+  }
+  
+  h3 {
+    font-size: 1rem; /* 16px */
+  }
+  
+  .nes-btn {
+    font-size: 0.6rem;
+    padding: var(--space-1) var(--space-2); /* 8px 16px — строго кратно 8 */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem; /* 19px */
+  }
+  
+  h2 {
+    font-size: 1rem; /* 16px */
+  }
+  
+  .nes-btn {
+    font-size: 0.5rem;
+    padding: 8px 16px;
+  }
+}
