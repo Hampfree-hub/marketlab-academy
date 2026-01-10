@@ -1,0 +1,145 @@
+/*
+  ═══════════════════════════════════════════════════════════════
+  MARKETLAB ACADEMY — 8-bit NES Theme (TOKENS ONLY)
+  ═══════════════════════════════════════════════════════════════
+  
+  ТОЛЬКО CSS переменные (tokens) для Cursor оптимизации.
+  Все цвета, spacing, borders — в одном месте.
+  
+  Philosophy: 70% serious / 30% fun
+  Concept: Emily's computer from Market Lab Archive (2010-2018)
+  
+  Created: 2026-01-09
+  ═══════════════════════════════════════════════════════════════
+*/
+
+/* ═══════════════════════════════════════════════════════════════
+   NES COLOR PALETTE (Dark Theme)
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Background (Soft CRT monitor - не чисто чёрный!) */
+  --nes-bg-primary: #050608;        /* Очень тёмный серо-зелёный */
+  --nes-bg-secondary: #0F1012;      /* Тёмный серый */
+  --nes-bg-tertiary: #1A1C1E;       /* Средний серый */
+  
+  /* Text (Мягкий контраст - не чисто белый!) */
+  --nes-text-primary: #E5E5E5;      /* Мягкий белый (main text) */
+  --nes-text-secondary: #B0B0B0;    /* Gray (descriptions) */
+  --nes-text-tertiary: #808080;     /* Dark gray (meta) */
+  
+  /* Accents (NES palette) */
+  --nes-accent-green: #00D800;      /* Bright green (primary) */
+  --nes-accent-green-dark: #00A800; /* Dark green (hover) */
+  --nes-accent-blue: #3CBCFC;       /* NES light blue */
+  --nes-accent-red: #F83800;        /* NES red (alerts) */
+  --nes-accent-yellow: #FCFC00;     /* NES yellow (highlight) */
+  
+  /* ═══ SEMANTIC COLORS (для контента) ═══ */
+  /* Trading colors */
+  --color-bullish: #10B981;         /* Зелёный (рост) 📈 */
+  --color-bearish: #EF4444;         /* Красный (падение) 📉 */
+  --color-neutral: #6B7280;         /* Серый (нейтраль) ━ */
+  
+  /* Standard semantic */
+  --color-success: #10B981;         /* Успех ✓ */
+  --color-error: #EF4444;           /* Ошибка ✗ */
+  --color-warning: #F59E0B;         /* Предупреждение ⚠️ */
+  --color-info: #3B82F6;            /* Информация ℹ️ */
+  
+  /* ═══ BORDER SYSTEM ═══ */
+  /* Border colors */
+  --nes-border-primary: #404040;    /* Dark border */
+  --nes-border-secondary: #606060;  /* Medium border */
+  --nes-border-accent: #00D800;     /* Green border (active) */
+  
+  /* STRUCTURAL — важные элементы (кнопки, карточки) */
+  --border-structural: 2px solid var(--nes-border-primary);
+  --border-structural-accent: 2px solid var(--nes-accent-green);
+  --border-bulge: 4px solid var(--nes-accent-green-dark); /* Нижняя "выпуклость" */
+  
+  /* DECORATIVE — вспомогательные разделители */
+  --border-decorative: 1px solid var(--nes-border-primary);
+  
+  /* Shadows (8-bit glow) */
+  --nes-shadow-green: rgba(0, 216, 0, 0.4);
+  --nes-shadow-blue: rgba(60, 188, 252, 0.4);
+  
+  /* ═══ SPACING SYSTEM (8-pt grid) ═══ */
+  /* Базовый шаг: 8px — всё кратно 8 для аутентичного 8-bit NES стиля */
+  --space-0: 0;
+  --space-1: 8px;    /* 1 × 8 — БАЗОВЫЙ ШАГ! (минимальный gap, иконки) */
+  --space-2: 16px;   /* 2 × 8 — стандартный padding (кнопки, элементы) */
+  --space-3: 24px;   /* 3 × 8 — gap между элементами в ряду */
+  --space-4: 32px;   /* 4 × 8 — margin между компонентами */
+  --space-6: 48px;   /* 6 × 8 — margin между секциями */
+  --space-8: 64px;   /* 8 × 8 — padding крупных секций (hero) */
+  --space-10: 80px;  /* 10 × 8 — padding топ-секций (hero top) */
+  
+  /* Legacy variables (для совместимости) */
+  --nes-space-xs: var(--space-1);
+  --nes-space-sm: var(--space-1);
+  --nes-space-md: var(--space-2);
+  --nes-space-lg: var(--space-3);
+  --nes-space-xl: var(--space-4);
+  --nes-space-xxl: var(--space-6);
+  
+  /* Border Radius (NO CURVES in 8-bit!) */
+  --nes-radius: 0px;
+  
+  /* Transitions (INSTANT in 8-bit, not smooth) */
+  --nes-transition: none;
+  
+  /* Layout */
+  --nes-max-width: 1200px;
+  --nes-max-width-post: 800px;
+  --nes-padding-horizontal: 32px;
+  
+  /* Z-index */
+  --nes-z-header: 1000;
+  --nes-z-overlay: 2000;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LIGHT THEME (Тёплая бумага — профессиональная палитра)
+   ═══════════════════════════════════════════════════════════════ */
+
+[data-theme="light"] {
+  /* Background (Тёплая бумага — комфортная для глаз) */
+  --nes-bg-primary: #F8F8F6;        /* Очень светлый, тёплый (не белый!) */
+  --nes-bg-secondary: #F0F0EE;      /* Светлый серый */
+  --nes-bg-tertiary: #E8E8E6;       /* Средний серый */
+  
+  /* Text (Тёмный для контраста) */
+  --nes-text-primary: #1A1A1A;      /* Почти чёрный (читаемо) */
+  --nes-text-secondary: #666666;    /* Средний серый */
+  --nes-text-tertiary: #999999;     /* Светлый серый */
+  
+  /* Accents (Мягкий зелёный — не салатный!) */
+  --nes-accent-green: #2A5A1A;      /* Мягкий зелёный (NES, но приглушённый) */
+  --nes-accent-green-dark: #1A4A0A; /* Тёмный зелёный (hover) */
+  --nes-accent-blue: #2A4A5A;       /* Сине-серый */
+  --nes-accent-red: #D32F2F;        /* Красный (ошибки) */
+  --nes-accent-yellow: #F57C00;     /* Оранжевый (предупреждения) */
+  
+  /* Borders (Нейтральные серые — не зелёные!) */
+  --nes-border-primary: #C8C8C0;    /* Светлый серый */
+  --nes-border-secondary: #D8D8D0;  /* Очень светлый серый */
+  --nes-border-accent: #2A5A1A;     /* Зелёный (акцент) */
+  
+  /* Shadows */
+  --nes-shadow-green: rgba(42, 90, 26, 0.2);
+  --nes-shadow-blue: rgba(42, 74, 90, 0.2);
+  
+  /* ═══ SEMANTIC COLORS (адаптированы для светлой темы) ═══ */
+  /* Trading colors */
+  --color-bullish: #059669;         /* Зелёный (рост) 📈 — темнее для контраста */
+  --color-bearish: #DC2626;         /* Красный (падение) 📉 — темнее для контраста */
+  --color-neutral: #4B5563;         /* Серый (нейтраль) ━ — темнее для контраста */
+  
+  /* Standard semantic */
+  --color-success: #059669;         /* Успех ✓ */
+  --color-error: #DC2626;           /* Ошибка ✗ */
+  --color-warning: #D97706;         /* Предупреждение ⚠️ */
+  --color-info: #2563EB;            /* Информация ℹ️ */
+}

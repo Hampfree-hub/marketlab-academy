@@ -1,46 +1,24 @@
 ---
-import { SITE_TITLE } from '../consts';
-const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
-	? import.meta.env.BASE_URL 
-	: import.meta.env.BASE_URL + '/';
-
-const currentPath = Astro.url.pathname;
-const isArchive = currentPath.includes('/blog');
-const isAbout = currentPath.includes('/about');
+import Logo from './header/Logo.astro';
+import Navigation from './header/Navigation.astro';
+import LanguageSwitcher from './header/LanguageSwitcher.astro';
+import ThemeToggle from './header/ThemeToggle.astro';
+import MobileMenu from './header/MobileMenu.astro';
+import '../styles/components/header.css';
 ---
 
 <header class="main-header">
 	<div class="header-container">
 		<!-- LEFT: Logo + Navigation -->
 		<div class="header-left">
-			<a href={baseUrl} class="logo" aria-label={`${SITE_TITLE} - Главная`}>
-				<span class="prompt" aria-hidden="true">></span> {SITE_TITLE}
-			</a>
-			<nav class="main-nav" aria-label="Основная навигация">
-				<a href={`${baseUrl}blog`} class="nav-link" aria-current={isArchive ? 'page' : undefined}>[АРХИВ]</a>
-				<a href={`${baseUrl}about`} class="nav-link" aria-current={isAbout ? 'page' : undefined}>[О_ПРОЕКТЕ]</a>
-			</nav>
+			<Logo />
+			<Navigation />
 		</div>
 
 		<!-- RIGHT: Utilities (Languages + Theme) -->
 		<div class="header-right">
-			<div class="lang-switcher" aria-label="Выбор языка">
-				<button class="lang-btn active">RU</button>
-				<span class="lang-divider">|</span>
-				<button class="lang-btn">EN</button>
-				<span class="lang-divider">|</span>
-				<button class="lang-btn">ES</button>
-			</div>
-			<button id="theme-toggle" class="theme-btn" aria-label="Переключить тему">
-				<svg class="theme-icon" viewBox="0 0 16 16" fill="currentColor">
-					<!-- Sun icon (8-bit pixel) -->
-					<rect x="6" y="0" width="4" height="2"/>
-					<rect x="6" y="14" width="4" height="2"/>
-					<rect x="0" y="6" width="2" height="4"/>
-					<rect x="14" y="6" width="2" height="4"/>
-					<rect x="4" y="4" width="8" height="8"/>
-				</svg>
-			</button>
+			<LanguageSwitcher />
+			<ThemeToggle />
 		</div>
 
 		<!-- MOBILE: Hamburger -->
@@ -51,478 +29,32 @@ const isAbout = currentPath.includes('/about');
 		</button>
 	</div>
 
-	<!-- MOBILE MENU -->
-	<div id="mobile-menu" class="mobile-menu" aria-label="Мобильное меню">
-		<a href={`${baseUrl}blog`} aria-current={isArchive ? 'page' : undefined}>[АРХИВ]</a>
-		<a href={`${baseUrl}about`} aria-current={isAbout ? 'page' : undefined}>[О_ПРОЕКТЕ]</a>
-		
-		<!-- Mobile: Languages -->
-		<div class="mobile-lang-switcher">
-			<span class="mobile-menu-label">ЯЗЫК / LANGUAGE:</span>
-			<div class="mobile-lang-buttons">
-				<button class="lang-btn-mobile active">RU</button>
-				<button class="lang-btn-mobile">EN</button>
-				<button class="lang-btn-mobile">ES</button>
-			</div>
-		</div>
-		
-		<!-- Mobile: Theme -->
-		<div class="mobile-theme-switcher">
-			<button id="theme-toggle-mobile" class="theme-btn-mobile" aria-label="Переключить тему">
-				<svg class="theme-icon-mobile" viewBox="0 0 16 16" fill="currentColor">
-					<!-- Sun icon (8-bit pixel) -->
-					<rect x="6" y="0" width="4" height="2"/>
-					<rect x="6" y="14" width="4" height="2"/>
-					<rect x="0" y="6" width="2" height="4"/>
-					<rect x="14" y="6" width="2" height="4"/>
-					<rect x="4" y="4" width="8" height="8"/>
-				</svg>
-				<span class="theme-label">СМЕНИТЬ ТЕМУ</span>
-			</button>
-		</div>
-	</div>
+	<MobileMenu />
 </header>
 
-<style>
-	.main-header {
-		position: sticky;
-		top: 0;
-		background: var(--color-bg);
-		border-bottom: 2px solid var(--color-border);
-		z-index: var(--z-index-header);
-	}
-
-	.header-container {
-		max-width: var(--max-width);
-		margin: 0 auto;
-		padding: 0.75rem var(--horizontal-padding);
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		gap: 2rem;
-	}
-
-	/* LEFT SIDE: Logo + Navigation */
-	.header-left {
-		display: flex;
-		align-items: center;
-		gap: 1.5rem;
-	}
-
-	.logo {
-		font-family: 'JetBrains Mono', monospace;
-		font-weight: 700;
-		color: var(--color-text-primary);
-		font-size: 1.1rem;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		white-space: nowrap;
-	}
-
-	.prompt {
-		color: var(--color-accent);
-		animation: fade-blink 2s ease-in-out infinite;
-	}
-
-	@keyframes fade-blink { 
-		0%, 100% { opacity: 1; } 
-		50% { opacity: 0.3; } 
-	}
-
-	.main-nav {
-		display: flex;
-		align-items: center;
-		gap: 0.75rem;
-	}
-
-	/* RIGHT SIDE: Languages + Theme */
-	.header-right {
-		display: flex; /* ✅ DEFAULT: VISIBLE */
-		align-items: center;
-		gap: 0.75rem;
-	}
-
-	.lang-switcher {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		font-family: 'JetBrains Mono', monospace;
-	}
-
-	.lang-btn {
-		background: transparent;
-		border: 2px solid var(--color-border); /* Видимая рамка */
-		border-bottom: 4px solid var(--color-border); /* Видимый bulge */
-		color: var(--color-text-secondary);
-		cursor: pointer;
-		padding: 6px 12px; /* Компактнее для 8-bit */
-		font-size: 0.75rem; /* Чуть меньше */
-		font-family: 'JetBrains Mono', monospace;
-		/* 8-bit steps animation */
-		transition: color 0.10s steps(3),
-		            border-color 0.10s steps(3),
-		            background 0.10s steps(3);
-	}
-
-	.lang-btn.active {
-		color: #FFFFFF;
-		font-weight: bold;
-		background: var(--color-accent);
-		border-color: var(--color-accent);
-		border-bottom-color: var(--nes-accent-green-dark);
-	}
-
-	.lang-btn:hover:not(.active) {
-		color: #FFFFFF;
-		background: var(--color-accent);
-		border-color: var(--color-accent);
-		border-bottom-color: var(--nes-accent-green-dark);
-	}
-
-	.lang-divider {
-		color: var(--color-border);
-		opacity: 0.5;
-	}
-
-	.nav-link {
-		font-family: 'JetBrains Mono', monospace;
-		font-size: 0.75rem;
-		font-weight: bold;
-		color: var(--color-text-secondary);
-		padding: 6px 12px;
-		border: 2px solid var(--color-border);
-		border-bottom: 4px solid var(--color-border);
-		background: transparent;
-		text-decoration: none;
-		/* 8-bit steps animation */
-		transition: border-color 0.10s steps(3),
-		            background 0.10s steps(3),
-		            color 0.10s steps(3);
-	}
-
-	.nav-link:hover {
-		background: var(--color-accent);
-		color: #FFFFFF;
-		border-color: var(--color-accent);
-		border-bottom-color: var(--nes-accent-green-dark);
-	}
-
-	.nav-link[aria-current="page"] {
-		background: var(--color-accent);
-		color: #FFFFFF;
-		border-color: var(--color-accent);
-		border-bottom-color: var(--nes-accent-green-dark);
-	}
-
-	.theme-btn {
-		background: transparent;
-		border: 2px solid var(--nes-border-primary);
-		border-bottom: 4px solid var(--nes-border-primary);
-		color: var(--color-text-primary);
-		padding: 8px; /* Компактнее */
-		cursor: pointer;
-		font-family: 'Press Start 2P', monospace;
-		font-size: 0.55rem;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0;
-		min-width: 36px; /* Меньше для компактности */
-		width: 36px;
-		height: 36px;
-		/* 8-bit steps animation */
-		transition: border-color 0.10s steps(3),
-		            background 0.10s steps(3),
-		            color 0.10s steps(3);
-	}
-
-	.theme-btn:hover {
-		border-color: var(--nes-accent-green);
-		border-bottom-color: var(--nes-accent-green-dark);
-		background: var(--nes-accent-green);
-		color: #FFFFFF;
-	}
-
-	.theme-icon {
-		width: 14px; /* Чуть меньше */
-		height: 14px;
-		display: block;
-	}
-
-	/* HAMBURGER (mobile only) */
-	.hamburger {
-		display: none; /* HIDDEN by default on desktop */
-		flex-direction: column;
-		gap: 5px;
-		background: transparent;
-		border: 2px solid var(--color-border);
-		border-bottom: 4px solid var(--color-border);
-		cursor: pointer;
-		padding: 8px;
-		width: 36px;
-		height: 36px;
-		justify-content: center;
-		align-items: center;
-		transition: border-color 0.10s steps(3),
-		            background 0.10s steps(3);
-	}
-
-	.hamburger:hover {
-		background: var(--color-accent);
-		border-color: var(--color-accent);
-		border-bottom-color: var(--nes-accent-green-dark);
-	}
-
-	.hamburger:hover span {
-		background: #FFFFFF; /* Белые полоски на зелёном фоне */
-	}
-
-	.hamburger span {
-		display: block;
-		width: 16px;
-		height: 2px;
-		background: var(--color-accent);
-	}
-
-	.mobile-menu {
-		display: none;
-		flex-direction: column;
-		background: var(--color-bg);
-		border-bottom: 2px solid var(--color-border);
-		padding: 1rem var(--horizontal-padding);
-		gap: 0.75rem;
-	}
-
-	.mobile-menu a {
-		font-family: 'JetBrains Mono', monospace;
-		font-size: 0.85rem;
-		font-weight: bold;
-		color: var(--color-text-primary);
-		padding: 10px 16px;
-		border: 2px solid var(--color-border);
-		border-bottom: 4px solid var(--color-border);
-		text-align: center;
-		text-decoration: none; /* Убираем подчёркивание */
-		transition: border-color 0.10s steps(3),
-		            background 0.10s steps(3),
-		            color 0.10s steps(3);
-	}
-
-	.mobile-menu a:hover {
-		background: var(--color-accent);
-		color: #FFFFFF;
-		border-color: var(--color-accent);
-		border-bottom-color: var(--nes-accent-green-dark);
-		text-decoration: none; /* Убираем подчёркивание при hover */
-	}
-
-	.mobile-menu a[aria-current="page"] {
-		background: var(--color-accent);
-		color: #FFFFFF;
-		border-color: var(--color-accent);
-		border-bottom-color: var(--nes-accent-green-dark);
-	}
-
-	.mobile-menu.active {
-		display: flex;
-	}
-
-	/* MOBILE: Languages in menu */
-	.mobile-lang-switcher {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		padding: 0.75rem 0 0.5rem;
-	}
-
-	.mobile-menu-label {
-		font-family: 'JetBrains Mono', monospace;
-		font-size: 0.65rem;
-		color: var(--color-text-secondary);
-		text-align: center;
-		opacity: 0.6;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-	}
-
-	.mobile-lang-buttons {
-		display: flex;
-		gap: 0.5rem;
-		justify-content: center;
-	}
-
-	.lang-btn-mobile {
-		background: transparent;
-		border: 2px solid var(--color-border);
-		border-bottom: 4px solid var(--color-border);
-		color: var(--color-text-secondary);
-		cursor: pointer;
-		padding: 8px 20px;
-		font-size: 0.8rem;
-		font-family: 'JetBrains Mono', monospace;
-		font-weight: bold;
-		min-width: 60px;
-		transition: color 0.10s steps(3),
-		            border-color 0.10s steps(3),
-		            background 0.10s steps(3);
-	}
-
-	.lang-btn-mobile.active {
-		color: #FFFFFF;
-		background: var(--color-accent);
-		border-color: var(--color-accent);
-		border-bottom-color: var(--nes-accent-green-dark);
-	}
-
-	.lang-btn-mobile:hover:not(.active) {
-		color: #FFFFFF;
-		background: var(--color-accent);
-		border-color: var(--color-accent);
-		border-bottom-color: var(--nes-accent-green-dark);
-	}
-
-	/* MOBILE: Theme in menu */
-	.mobile-theme-switcher {
-		display: flex;
-		justify-content: center;
-		padding: 0.5rem 0 0.25rem;
-	}
-
-	.theme-btn-mobile {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.75rem;
-		background: transparent;
-		border: 2px solid var(--color-border);
-		border-bottom: 4px solid var(--color-border);
-		color: var(--color-text-primary);
-		padding: 10px 20px;
-		cursor: pointer;
-		font-family: 'JetBrains Mono', monospace;
-		font-size: 0.75rem;
-		font-weight: bold;
-		width: 100%;
-		max-width: 280px;
-		transition: border-color 0.10s steps(3),
-		            background 0.10s steps(3),
-		            color 0.10s steps(3);
-	}
-
-	.theme-btn-mobile:hover {
-		border-color: var(--color-accent);
-		border-bottom-color: var(--nes-accent-green-dark);
-		background: var(--color-accent);
-		color: #FFFFFF;
-	}
-
-	.theme-icon-mobile {
-		width: 16px;
-		height: 16px;
-		display: block;
-	}
-
-	.theme-label {
-		text-transform: uppercase;
-		letter-spacing: 1px;
-	}
-
-	/* ========================================
-	   RESPONSIVE BREAKPOINTS
-	   ======================================== */
-
-	/* MOBILE FIRST: ≤768px */
-	@media (max-width: 768px) {
-		.header-left {
-			gap: 0;
-		}
-		.main-nav {
-			display: none !important; /* Hide nav, show in hamburger */
-		}
-		.header-right {
-			display: none !important; /* Hide utilities on mobile */
-		}
-		.hamburger {
-			display: flex !important; /* Show hamburger */
-		}
-	}
-
-	/* DESKTOP & TABLET: ≥769px */
-	@media (min-width: 769px) {
-		/* Force show utilities and nav */
-		.hamburger {
-			display: none !important;
-		}
-		.header-right {
-			display: flex !important;
-		}
-		.main-nav {
-			display: flex !important;
-		}
-	}
-
-	/* TABLET COMPACT: 769px – 1199px */
-	@media (min-width: 769px) and (max-width: 1199px) {
-		.header-container {
-			gap: 1rem;
-		}
-		.header-left {
-			gap: 1rem;
-		}
-		.lang-switcher {
-			gap: 0.25rem;
-		}
-		.lang-btn {
-			padding: 4px 8px;
-			font-size: 0.7rem;
-		}
-	}
-
-</style>
-
-<script is:inline>
-	// Theme Toggle (Desktop + Mobile)
-	const themeToggle = () => {
-		const getTheme = () => localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+<script>
+	// Hamburger Menu initialization
+	// Note: Using regular script (not is:inline) so it runs after DOM is ready
+	const initHamburgerMenu = () => {
+		const hamburger = document.getElementById('hamburger');
+		const mobileMenu = document.getElementById('mobile-menu');
 		
-		const sunIcon = `<rect x="6" y="0" width="4" height="2"/><rect x="6" y="14" width="4" height="2"/><rect x="0" y="6" width="2" height="4"/><rect x="14" y="6" width="2" height="4"/><rect x="4" y="4" width="8" height="8"/>`;
-		const moonIcon = `<rect x="4" y="2" width="2" height="2"/><rect x="4" y="12" width="2" height="2"/><rect x="6" y="4" width="2" height="8"/><rect x="8" y="2" width="2" height="2"/><rect x="8" y="12" width="2" height="2"/><rect x="10" y="4" width="2" height="2"/><rect x="10" y="10" width="2" height="2"/><rect x="12" y="6" width="2" height="4"/>`;
-		
-		const setTheme = (t) => {
-			document.documentElement.setAttribute('data-theme', t);
-			localStorage.setItem('theme', t);
-			const icons = document.querySelectorAll('.theme-icon, .theme-icon-mobile');
-			icons.forEach(i => i.innerHTML = t === 'dark' ? sunIcon : moonIcon);
+		if (!hamburger || !mobileMenu) {
+			// Retry if elements not ready yet
+			setTimeout(initHamburgerMenu, 100);
+			return;
+		}
+
+		// Функция закрытия меню
+		const closeMenu = () => {
+			mobileMenu.classList.remove('active');
+			hamburger.setAttribute('aria-expanded', 'false');
+			hamburger.setAttribute('aria-label', 'Открыть меню');
 		};
 
-		setTheme(getTheme());
-
-		// Desktop theme button
-		const btn = document.getElementById('theme-toggle');
-		if (btn) {
-			btn.addEventListener('click', () => {
-				const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-				setTheme(next);
-			});
-		}
-
-		// Mobile theme button
-		const btnMobile = document.getElementById('theme-toggle-mobile');
-		if (btnMobile) {
-			btnMobile.addEventListener('click', () => {
-				const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-				setTheme(next);
-			});
-		}
-	};
-	themeToggle();
-
-	// Hamburger Menu
-	const hamburger = document.getElementById('hamburger');
-	const mobileMenu = document.getElementById('mobile-menu');
-	if (hamburger && mobileMenu) {
+		// Toggle menu on hamburger click
 		hamburger.addEventListener('click', (e) => {
-			e.stopPropagation(); // Prevent document click handler
+			e.stopPropagation();
 			const isActive = mobileMenu.classList.toggle('active');
 			hamburger.setAttribute('aria-expanded', isActive);
 			hamburger.setAttribute('aria-label', isActive ? 'Закрыть меню' : 'Открыть меню');
@@ -533,19 +65,56 @@ const isAbout = currentPath.includes('/about');
 			if (mobileMenu.classList.contains('active') && 
 			    !mobileMenu.contains(e.target) && 
 			    !hamburger.contains(e.target)) {
-				mobileMenu.classList.remove('active');
-				hamburger.setAttribute('aria-expanded', 'false');
-				hamburger.setAttribute('aria-label', 'Открыть меню');
+				closeMenu();
 			}
 		});
 
 		// Close menu when clicking inside menu links
-		mobileMenu.querySelectorAll('a').forEach(link => {
-			link.addEventListener('click', () => {
-				mobileMenu.classList.remove('active');
-				hamburger.setAttribute('aria-expanded', 'false');
-				hamburger.setAttribute('aria-label', 'Открыть меню');
+		mobileMenu.querySelectorAll('a, button').forEach(element => {
+			element.addEventListener('click', () => {
+				closeMenu();
 			});
 		});
+
+		// ✅ ИСПРАВЛЕНИЕ: Закрывать меню при изменении размера окна (разворачивании экрана)
+		let resizeTimer;
+		const handleResize = () => {
+			// Дебаунс resize события
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(() => {
+				// Если экран стал ≥769px (desktop), закрываем меню
+				if (window.innerWidth >= 769) {
+					closeMenu();
+				}
+			}, 100);
+		};
+
+		// Используем matchMedia для более точного отслеживания breakpoint
+		const mediaQuery = window.matchMedia('(min-width: 769px)');
+		
+		const handleMediaChange = (e) => {
+			if (e.matches && mobileMenu.classList.contains('active')) {
+				// Экран стал desktop, закрываем меню
+				closeMenu();
+			}
+		};
+
+		// Подписываемся на изменение media query (современный способ)
+		if (mediaQuery.addEventListener) {
+			mediaQuery.addEventListener('change', handleMediaChange);
+		} else {
+			// Fallback для старых браузеров
+			mediaQuery.addListener(handleMediaChange);
+		}
+
+		// Также слушаем resize (fallback, если matchMedia не сработает)
+		window.addEventListener('resize', handleResize);
+	};
+
+	// Initialize when DOM is ready
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initHamburgerMenu);
+	} else {
+		initHamburgerMenu();
 	}
 </script>

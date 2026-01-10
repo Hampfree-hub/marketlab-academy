@@ -3,12 +3,21 @@
   MARKETLAB ACADEMY — 8-bit NES Theme (Global Overrides)
   ═══════════════════════════════════════════════════════════════
   
-  NOTE: This file now imports nes8bit.css which contains the main
-  8-bit NES theme. This file only contains compatibility overrides.
+  NOTE: This file imports tokens.css (variables) and base.css (reset + typography).
+  This file contains compatibility overrides for legacy components.
   
-  Main theme: src/styles/nes8bit.css
+  Structure:
+  - tokens.css: CSS variables only (colors, spacing, borders)
+  - base.css: Reset + Typography + Utility classes
+  - components/*.css: Component-specific styles
   ═══════════════════════════════════════════════════════════════
 */
+
+/* Import tokens (variables) first */
+@import './tokens.css';
+
+/* Import base (reset + typography) */
+@import './base.css';
 
 :root {
   /* Legacy variables (for compatibility with existing components) */
