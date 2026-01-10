@@ -1,0 +1,57 @@
+---
+
+---
+
+<button id="theme-toggle" class="theme-btn" aria-label="Переключить тему">
+	<svg class="theme-icon" viewBox="0 0 16 16" fill="currentColor">
+		<!-- Sun icon (8-bit pixel) -->
+		<rect x="6" y="0" width="4" height="2"/>
+		<rect x="6" y="14" width="4" height="2"/>
+		<rect x="0" y="6" width="2" height="4"/>
+		<rect x="14" y="6" width="2" height="4"/>
+		<rect x="4" y="4" width="8" height="8"/>
+	</svg>
+</button>
+
+<script is:inline>
+	// Theme Toggle logic (shared between desktop and mobile)
+	const themeToggle = () => {
+		const getTheme = () => localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		
+		const sunIcon = `<rect x="6" y="0" width="4" height="2"/><rect x="6" y="14" width="4" height="2"/><rect x="0" y="6" width="2" height="4"/><rect x="14" y="6" width="2" height="4"/><rect x="4" y="4" width="8" height="8"/>`;
+		const moonIcon = `<rect x="4" y="2" width="2" height="2"/><rect x="4" y="12" width="2" height="2"/><rect x="6" y="4" width="2" height="8"/><rect x="8" y="2" width="2" height="2"/><rect x="8" y="12" width="2" height="2"/><rect x="10" y="4" width="2" height="2"/><rect x="10" y="10" width="2" height="2"/><rect x="12" y="6" width="2" height="4"/>`;
+		
+		const setTheme = (t) => {
+			document.documentElement.setAttribute('data-theme', t);
+			localStorage.setItem('theme', t);
+			const icons = document.querySelectorAll('.theme-icon, .theme-icon-mobile');
+			icons.forEach(i => i.innerHTML = t === 'dark' ? sunIcon : moonIcon);
+		};
+
+		setTheme(getTheme());
+
+		// Desktop theme button
+		const btn = document.getElementById('theme-toggle');
+		if (btn) {
+			btn.addEventListener('click', () => {
+				const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+				setTheme(next);
+			});
+		}
+
+		// Mobile theme button
+		const btnMobile = document.getElementById('theme-toggle-mobile');
+		if (btnMobile) {
+			btnMobile.addEventListener('click', () => {
+				const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+				setTheme(next);
+			});
+		}
+	};
+	
+	// Initialize only once
+	if (!window.themeToggleInitialized) {
+		themeToggle();
+		window.themeToggleInitialized = true;
+	}
+</script>

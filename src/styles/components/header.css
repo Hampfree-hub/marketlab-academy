@@ -1,0 +1,445 @@
+/*
+  ═══════════════════════════════════════════════════════════════
+  HEADER COMPONENT STYLES
+  ═══════════════════════════════════════════════════════════════
+  
+  Extracted from Header.astro for better Cursor performance.
+  All header-related styles in one place.
+*/
+
+.main-header {
+	position: sticky;
+	top: 0;
+	background: var(--color-bg);
+	border-bottom: 2px solid var(--color-border);
+	z-index: var(--z-index-header);
+}
+
+.header-container {
+	max-width: var(--max-width);
+	margin: 0 auto;
+	padding: 0.75rem var(--horizontal-padding);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+}
+
+/* LEFT SIDE: Logo + Navigation */
+.header-left {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.logo {
+	font-family: 'JetBrains Mono', monospace;
+	font-weight: 700;
+	color: var(--color-text-primary);
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	white-space: nowrap;
+}
+
+.prompt {
+	color: var(--color-accent);
+	animation: fade-blink 2s ease-in-out infinite;
+}
+
+@keyframes fade-blink { 
+	0%, 100% { opacity: 1; } 
+	50% { opacity: 0.3; } 
+}
+
+.main-nav {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+/* RIGHT SIDE: Languages + Theme */
+.header-right {
+	display: flex; /* ✅ DEFAULT: VISIBLE */
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.lang-switcher {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-family: 'JetBrains Mono', monospace;
+}
+
+.lang-btn {
+	background: transparent;
+	border: 2px solid var(--color-border); /* Видимая рамка */
+	border-bottom: 4px solid var(--color-border); /* Видимый bulge (серый по умолчанию) */
+	color: var(--color-text-secondary);
+	cursor: pointer;
+	padding: 6px 12px; /* Унифицированный padding */
+	font-size: 0.75rem;
+	font-family: 'JetBrains Mono', monospace;
+	font-weight: 400; /* Одинаковый вес для всех */
+	min-height: 32px; /* Унифицированная высота */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* 8-bit steps animation */
+	transition: color 0.10s steps(3),
+	            border-color 0.10s steps(3),
+	            background 0.10s steps(3);
+}
+
+.lang-btn.active {
+	color: #FFFFFF;
+	font-weight: 700; /* Более выраженный вес для активной */
+	background: var(--color-accent);
+	border-color: var(--color-accent);
+	border-bottom-color: var(--nes-accent-green-dark); /* Тёмно-зелёный bulge (НЕ оранжевый!) */
+}
+
+.lang-btn:hover:not(.active) {
+	color: #FFFFFF;
+	background: var(--color-accent);
+	border-color: var(--color-accent);
+	border-bottom-color: var(--nes-accent-green-dark);
+}
+
+.lang-divider {
+	color: var(--color-border);
+	opacity: 0.5;
+}
+
+.nav-link {
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 0.75rem;
+	font-weight: 400; /* Одинаковый вес для всех навигационных кнопок */
+	color: var(--color-text-secondary);
+	padding: 6px 12px; /* Унифицированный padding */
+	border: 2px solid var(--color-border);
+	border-bottom: 4px solid var(--color-border); /* Видимый bulge (серый по умолчанию, НЕ оранжевый!) */
+	background: transparent;
+	text-decoration: none;
+	min-height: 32px; /* Унифицированная высота */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* 8-bit steps animation */
+	transition: border-color 0.10s steps(3),
+	            background 0.10s steps(3),
+	            color 0.10s steps(3);
+}
+
+.nav-link:hover {
+	background: var(--color-accent);
+	color: #FFFFFF;
+	border-color: var(--color-accent);
+	border-bottom-color: var(--nes-accent-green-dark);
+}
+
+.nav-link[aria-current="page"] {
+	background: var(--color-accent);
+	color: #FFFFFF;
+	border-color: var(--color-accent);
+	border-bottom-color: var(--nes-accent-green-dark); /* Тёмно-зелёный bulge (НЕ оранжевый!) */
+	font-weight: 700; /* Более выраженный вес для активной */
+}
+
+.theme-btn {
+	background: transparent;
+	border: 2px solid var(--nes-border-primary);
+	border-bottom: 4px solid var(--nes-border-primary); /* Видимый bulge (серый по умолчанию) */
+	color: var(--color-text-primary);
+	padding: 6px 12px; /* Унифицированный padding как у lang-btn */
+	cursor: pointer;
+	font-family: 'Press Start 2P', monospace;
+	font-size: 0.55rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0;
+	min-width: 32px; /* Унифицированная минимальная ширина */
+	min-height: 32px; /* Унифицированная высота как у lang-btn */
+	/* 8-bit steps animation */
+	transition: border-color 0.10s steps(3),
+	            background 0.10s steps(3),
+	            color 0.10s steps(3);
+}
+
+.theme-btn:hover {
+	border-color: var(--nes-accent-green);
+	border-bottom-color: var(--nes-accent-green-dark); /* Тёмно-зелёный bulge (НЕ оранжевый!) */
+	background: var(--nes-accent-green);
+	color: #FFFFFF;
+}
+
+.theme-icon {
+	width: 14px; /* Чуть меньше */
+	height: 14px;
+	display: block;
+}
+
+/* HAMBURGER (mobile only) */
+.hamburger {
+	display: none; /* HIDDEN by default on desktop */
+	flex-direction: column;
+	gap: 5px;
+	background: transparent;
+	border: 2px solid var(--color-border);
+	border-bottom: 4px solid var(--color-border);
+	cursor: pointer;
+	padding: 8px;
+	width: 36px;
+	height: 36px;
+	justify-content: center;
+	align-items: center;
+	transition: border-color 0.10s steps(3),
+	            background 0.10s steps(3);
+}
+
+.hamburger:hover {
+	background: var(--color-accent);
+	border-color: var(--color-accent);
+	border-bottom-color: var(--nes-accent-green-dark);
+}
+
+.hamburger:hover span {
+	background: #FFFFFF; /* Белые полоски на зелёном фоне */
+}
+
+.hamburger span {
+	display: block;
+	width: 16px;
+	height: 2px;
+	background: var(--color-accent);
+}
+
+.mobile-menu {
+	display: none;
+	flex-direction: column;
+	background: var(--color-bg);
+	border-bottom: 2px solid var(--color-border);
+	padding: 1rem var(--horizontal-padding);
+	gap: 0.75rem;
+	/* ✅ ИСПРАВЛЕНИЕ: Скрываем меню на desktop, даже если класс active есть */
+}
+
+@media (min-width: 769px) {
+	.mobile-menu {
+		display: none !important; /* Принудительно скрываем на desktop */
+	}
+}
+
+.mobile-menu a {
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 0.75rem; /* Унифицированный размер (было 0.85rem) */
+	font-weight: 400; /* Одинаковый вес (было bold) */
+	color: var(--color-text-primary);
+	padding: 10px 20px; /* Унифицированный padding (было 10px 16px) */
+	border: 2px solid var(--color-border);
+	border-bottom: 4px solid var(--color-border);
+	text-align: center;
+	text-decoration: none; /* Убираем подчёркивание */
+	min-height: 40px; /* Унифицированная высота как у lang-btn-mobile */
+	display: flex; /* Для выравнивания */
+	align-items: center;
+	justify-content: center;
+	transition: border-color 0.10s steps(3),
+	            background 0.10s steps(3),
+	            color 0.10s steps(3);
+}
+
+.mobile-menu a:hover {
+	background: var(--color-accent);
+	color: #FFFFFF;
+	border-color: var(--color-accent);
+	border-bottom-color: var(--nes-accent-green-dark);
+	text-decoration: none; /* Убираем подчёркивание при hover */
+}
+
+.mobile-menu a[aria-current="page"] {
+	background: var(--color-accent);
+	color: #FFFFFF;
+	border-color: var(--color-accent);
+	border-bottom-color: var(--nes-accent-green-dark);
+	font-weight: 700; /* Более выраженный вес для активной */
+}
+
+.mobile-menu.active {
+	display: flex;
+}
+
+/* MOBILE: Languages in menu */
+.mobile-lang-switcher {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding: 0.75rem 0 0.5rem;
+	align-items: center; /* Центрируем контент */
+	width: 100%; /* На всю ширину для выравнивания */
+}
+
+.mobile-menu-label {
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 0.65rem;
+	color: var(--color-text-secondary);
+	text-align: center;
+	opacity: 0.6;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.mobile-lang-buttons {
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+	align-items: center; /* Выравнивание по центру по вертикали */
+	flex-wrap: wrap; /* Если кнопки не помещаются, переносим на новую строку */
+}
+
+.lang-btn-mobile {
+	background: transparent;
+	border: 2px solid var(--color-border);
+	border-bottom: 4px solid var(--color-border); /* Видимый bulge (серый по умолчанию) */
+	color: var(--color-text-secondary);
+	cursor: pointer;
+	padding: 10px 20px; /* Унифицированный padding */
+	font-size: 0.75rem; /* Унифицированный размер */
+	font-family: 'JetBrains Mono', monospace;
+	font-weight: 400; /* Одинаковый вес для всех (не bold!) */
+	min-width: 70px; /* Унифицированная минимальная ширина */
+	min-height: 40px; /* Унифицированная высота для всех кнопок */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: color 0.10s steps(3),
+	            border-color 0.10s steps(3),
+	            background 0.10s steps(3);
+}
+
+.lang-btn-mobile.active {
+	color: #FFFFFF;
+	background: var(--color-accent);
+	border-color: var(--color-accent);
+	border-bottom-color: var(--nes-accent-green-dark); /* Тёмно-зелёный bulge (НЕ оранжевый!) */
+	font-weight: 700; /* Более выраженный вес для активной */
+	/* НЕ меняем min-height - должна быть такая же высота! */
+}
+
+.lang-btn-mobile:hover:not(.active) {
+	color: #FFFFFF;
+	background: var(--color-accent);
+	border-color: var(--color-accent);
+	border-bottom-color: var(--nes-accent-green-dark);
+}
+
+/* MOBILE: Theme in menu */
+.mobile-theme-switcher {
+	display: flex;
+	justify-content: center;
+	align-items: center; /* Выравнивание по центру */
+	padding: 0.5rem 0 0.25rem;
+	width: 100%; /* На всю ширину для выравнивания */
+}
+
+.theme-btn-mobile {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.75rem;
+	background: transparent;
+	border: 2px solid var(--color-border);
+	border-bottom: 4px solid var(--color-border); /* Видимый bulge (серый по умолчанию) */
+	color: var(--color-text-primary);
+	padding: 10px 20px; /* Унифицированный padding как у lang-btn-mobile */
+	cursor: pointer;
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 0.75rem; /* Унифицированный размер */
+	font-weight: 400; /* Одинаковый вес как у lang-btn-mobile (не bold!) */
+	width: auto; /* НЕ 100%, чтобы была такая же ширина как у навигационных кнопок */
+	min-width: 200px; /* Минимальная ширина для читаемости */
+	max-width: 280px; /* Максимальная ширина */
+	min-height: 40px; /* Унифицированная высота как у lang-btn-mobile */
+	transition: border-color 0.10s steps(3),
+	            background 0.10s steps(3),
+	            color 0.10s steps(3);
+}
+
+.theme-btn-mobile:hover {
+	border-color: var(--color-accent);
+	border-bottom-color: var(--nes-accent-green-dark); /* Тёмно-зелёный bulge (НЕ оранжевый!) */
+	background: var(--color-accent);
+	color: #FFFFFF;
+}
+
+.theme-icon-mobile {
+	width: 16px;
+	height: 16px;
+	display: block;
+}
+
+.theme-label {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* MOBILE FIRST: ≤768px */
+@media (max-width: 768px) {
+	.header-left {
+		gap: 0;
+	}
+	.main-nav {
+		display: none !important; /* Hide nav, show in hamburger */
+	}
+	.header-right {
+		display: none !important; /* Hide utilities on mobile */
+	}
+	.hamburger {
+		display: flex !important; /* Show hamburger */
+	}
+}
+
+/* DESKTOP & TABLET: ≥769px */
+@media (min-width: 769px) {
+	/* Force show utilities and nav */
+	.hamburger {
+		display: none !important;
+	}
+	.header-right {
+		display: flex !important;
+	}
+	.main-nav {
+		display: flex !important;
+	}
+	/* ✅ ИСПРАВЛЕНИЕ: Принудительно скрываем мобильное меню на desktop */
+	.mobile-menu {
+		display: none !important;
+	}
+}
+
+/* TABLET COMPACT: 769px – 1199px */
+@media (min-width: 769px) and (max-width: 1199px) {
+	.header-container {
+		gap: 1rem;
+	}
+	.header-left {
+		gap: 1rem;
+	}
+	.lang-switcher {
+		gap: 0.25rem;
+	}
+	.lang-btn {
+		padding: 6px 12px; /* Унифицированный padding (не уменьшаем) */
+		font-size: 0.75rem; /* Унифицированный размер (не уменьшаем) */
+		min-height: 32px; /* Сохраняем унифицированную высоту */
+	}
+	.theme-btn {
+		min-height: 32px; /* Унифицированная высота как у lang-btn */
+	}
+}

@@ -1,0 +1,11 @@
+---
+import { SITE_TITLE } from '../../consts';
+
+const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
+	? import.meta.env.BASE_URL 
+	: import.meta.env.BASE_URL + '/';
+---
+
+<a href={baseUrl} class="logo" aria-label={`${SITE_TITLE} - Главная`}>
+	<span class="prompt" aria-hidden="true">></span> {SITE_TITLE}
+</a>
