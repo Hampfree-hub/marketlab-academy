@@ -1,0 +1,40 @@
+---
+const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
+	? import.meta.env.BASE_URL 
+	: import.meta.env.BASE_URL + '/';
+
+const currentPath = Astro.url.pathname;
+const isArchive = currentPath.includes('/blog');
+const isAbout = currentPath.includes('/about');
+---
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="mobile-menu" aria-label="Мобильное меню">
+	<a href={`${baseUrl}blog`} aria-current={isArchive ? 'page' : undefined}>[АРХИВ]</a>
+	<a href={`${baseUrl}about`} aria-current={isAbout ? 'page' : undefined}>[О_ПРОЕКТЕ]</a>
+	
+	<!-- Mobile: Languages -->
+	<div class="mobile-lang-switcher">
+		<span class="mobile-menu-label">ЯЗЫК / LANGUAGE:</span>
+		<div class="mobile-lang-buttons">
+			<button class="lang-btn-mobile active">RU</button>
+			<button class="lang-btn-mobile">EN</button>
+			<button class="lang-btn-mobile">ES</button>
+		</div>
+	</div>
+	
+	<!-- Mobile: Theme -->
+	<div class="mobile-theme-switcher">
+		<button id="theme-toggle-mobile" class="theme-btn-mobile" aria-label="Переключить тему">
+			<svg class="theme-icon-mobile" viewBox="0 0 16 16" fill="currentColor">
+				<!-- Sun icon (8-bit pixel) -->
+				<rect x="6" y="0" width="4" height="2"/>
+				<rect x="6" y="14" width="4" height="2"/>
+				<rect x="0" y="6" width="2" height="4"/>
+				<rect x="14" y="6" width="2" height="4"/>
+				<rect x="4" y="4" width="8" height="8"/>
+			</svg>
+			<span class="theme-label">СМЕНИТЬ ТЕМУ</span>
+		</button>
+	</div>
+</div>
