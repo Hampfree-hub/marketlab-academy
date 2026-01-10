@@ -42,13 +42,17 @@ body {
 
 /* ✅ ИСПРАВЛЕНИЕ: Для обычного текста (JetBrains Mono) - убираем text-shadow при выделении */
 ::selection {
-  background-color: var(--nes-accent-green);
-  color: #FFFFFF;
+  background-color: var(--nes-accent-green) !important;
+  color: #FFFFFF !important;
   /* ✅ КРИТИЧНО: Принудительно убираем text-shadow для ровного выделения без артефактов */
   text-shadow: none !important;
   /* ✅ ДОПОЛНИТЕЛЬНО: Отключаем все эффекты, которые могут создавать артефакты */
   -webkit-text-stroke: none !important;
   -webkit-text-fill-color: #FFFFFF !important;
+  /* ✅ ДОПОЛНИТЕЛЬНО: Отключаем все эффекты рендеринга при выделении */
+  text-rendering: auto !important;
+  -webkit-font-smoothing: auto !important;
+  -moz-osx-font-smoothing: auto !important;
   /* Убираем разрывы в выделении */
   -webkit-user-select: text;
   -moz-user-select: text;
@@ -79,14 +83,19 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection {
-  background-color: var(--nes-accent-green);
-  color: #FFFFFF;
+  background-color: var(--nes-accent-green) !important;
+  color: #FFFFFF !important;
   /* ✅ КРИТИЧНО: Принудительно убираем text-shadow (убирает тонкие невыделенные полоски сверху) */
   text-shadow: none !important;
   /* ✅ ИСПРАВЛЕНИЕ: Отключаем все эффекты, которые могут создавать артефакты */
   -webkit-text-stroke: none !important;
   -webkit-text-fill-color: #FFFFFF !important;
+  /* ✅ ДОПОЛНИТЕЛЬНО: Отключаем все эффекты рендеринга при выделении для pixelated шрифтов */
+  text-rendering: auto !important;
+  -webkit-font-smoothing: auto !important;
+  -moz-osx-font-smoothing: auto !important;
   /* ⚠️ ПРИМЕЧАНИЕ: padding не работает в ::selection, но text-shadow: none !important должно помочь */
+  /* ⚠️ ВАЖНО: Если тонкие невыделенные полоски всё ещё остаются - это ограничение браузеров */
 }
 
 h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection {
