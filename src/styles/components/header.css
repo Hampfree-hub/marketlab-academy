@@ -78,7 +78,7 @@
 	border-bottom: 4px solid var(--color-border); /* Видимый bulge (серый по умолчанию) */
 	color: var(--color-text-secondary);
 	cursor: pointer;
-	padding: 6px 12px; /* Унифицированный padding */
+	padding: 8px 16px; /* ✅ Issue #52: Исправлено на кратно 8px (было 6px 12px) */
 	font-size: 0.75rem;
 	font-family: 'JetBrains Mono', monospace;
 	font-weight: 400; /* Одинаковый вес для всех */
@@ -117,7 +117,7 @@
 	font-size: 0.75rem;
 	font-weight: 400; /* Одинаковый вес для всех навигационных кнопок */
 	color: var(--color-text-secondary);
-	padding: 6px 12px; /* Унифицированный padding */
+	padding: 8px 16px; /* ✅ Issue #52: Исправлено на кратно 8px (было 6px 12px) */
 	border: 2px solid var(--color-border);
 	border-bottom: 4px solid var(--color-border); /* Видимый bulge (серый по умолчанию, НЕ оранжевый!) */
 	background: transparent;
@@ -152,7 +152,7 @@
 	border: 2px solid var(--nes-border-primary);
 	border-bottom: 4px solid var(--nes-border-primary); /* Видимый bulge (серый по умолчанию) */
 	color: var(--color-text-primary);
-	padding: 6px 12px; /* Унифицированный padding как у lang-btn */
+	padding: 8px 16px; /* ✅ Issue #52: Исправлено на кратно 8px (было 6px 12px) */
 	cursor: pointer;
 	font-family: 'Press Start 2P', monospace;
 	font-size: 0.55rem;
@@ -185,7 +185,7 @@
 .hamburger {
 	display: none; /* HIDDEN by default on desktop */
 	flex-direction: column;
-	gap: 5px;
+	gap: 8px; /* ✅ Issue #52: Кратно 8px (2 полоски по 2px + gap 8px = 12px, помещается в 20px) */
 	background: transparent;
 	border: 2px solid var(--color-border);
 	border-bottom: 4px solid var(--color-border);
@@ -237,7 +237,7 @@
 	font-size: 0.75rem; /* Унифицированный размер (было 0.85rem) */
 	font-weight: 400; /* Одинаковый вес (было bold) */
 	color: var(--color-text-primary);
-	padding: 10px 20px; /* Унифицированный padding (было 10px 16px) */
+	padding: 8px 16px; /* ✅ Issue #52: Исправлено на кратно 8px (было 10px 20px) */
 	border: 2px solid var(--color-border);
 	border-bottom: 4px solid var(--color-border);
 	text-align: center;
@@ -305,7 +305,7 @@
 	border-bottom: 4px solid var(--color-border); /* Видимый bulge (серый по умолчанию) */
 	color: var(--color-text-secondary);
 	cursor: pointer;
-	padding: 10px 20px; /* Унифицированный padding */
+	padding: 8px 16px; /* ✅ Issue #52: Исправлено на кратно 8px (было 10px 20px) */
 	font-size: 0.75rem; /* Унифицированный размер */
 	font-family: 'JetBrains Mono', monospace;
 	font-weight: 400; /* Одинаковый вес для всех (не bold!) */
@@ -353,7 +353,7 @@
 	border: 2px solid var(--color-border);
 	border-bottom: 4px solid var(--color-border); /* Видимый bulge (серый по умолчанию) */
 	color: var(--color-text-primary);
-	padding: 10px 20px; /* Унифицированный padding как у lang-btn-mobile */
+	padding: 8px 16px; /* ✅ Issue #52: Исправлено на кратно 8px (было 10px 20px) */
 	cursor: pointer;
 	font-family: 'JetBrains Mono', monospace;
 	font-size: 0.75rem; /* Унифицированный размер */
@@ -435,7 +435,7 @@
 		gap: 0.25rem;
 	}
 	.lang-btn {
-		padding: 6px 12px; /* Унифицированный padding (не уменьшаем) */
+		padding: 8px 16px; /* ✅ Issue #52: Исправлено на кратно 8px (было 6px 12px) */
 		font-size: 0.75rem; /* Унифицированный размер (не уменьшаем) */
 		min-height: 32px; /* Сохраняем унифицированную высоту */
 	}
