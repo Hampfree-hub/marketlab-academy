@@ -38,7 +38,7 @@
 }
 
 .toc-item {
-	padding: 4px 0 4px 16px;
+	padding: 0px 0 0px 16px; /* ✅ Issue #52: Исправлено на кратно 8px (было 4px 0 4px 16px) */
 }
 
 .toc-item a {
@@ -62,8 +62,11 @@ article {
 
 h1 {
 	font-size: 3rem;
-	line-height: 1.1;
+	line-height: 1.8; /* ✅ ИСПРАВЛЕНИЕ: Увеличен с 1.6 до 1.8 для большего пространства между строками при выделении */
 	margin-bottom: 2rem;
+	/* ✅ ИСПРАВЛЕНИЕ: Убираем text-decoration и border-bottom */
+	text-decoration: none;
+	border-bottom: none;
 }
 
 .hero-img {
@@ -100,5 +103,16 @@ h1 {
 	}
 	.toc-sticky { 
 		display: none; 
+	}
+	/* ✅ ИСПРАВЛЕНИЕ: Сохраняем увеличенный line-height для планшетов */
+	h1 {
+		line-height: 1.8 !important;
+	}
+}
+
+@media (max-width: 768px) {
+	/* ✅ ИСПРАВЛЕНИЕ: Сохраняем увеличенный line-height для мобильных */
+	h1 {
+		line-height: 1.8 !important;
 	}
 }
