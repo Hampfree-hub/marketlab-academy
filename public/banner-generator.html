@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8-bit Banner Generator | MarketLab Academy</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;700&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'JetBrains Mono', 'Courier New', monospace;
+      background: #050608;
+      color: #E5E5E5;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .container {
+      max-width: 1600px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 400px; /* Preview слева, Settings справа */
+      gap: 20px;
+    }
+    
+    .preview-panel {
+      background: #0F1012;
+      padding: 20px;
+      border: 2px solid #404040;
+      border-radius: 0;
+    }
+    
+    .editor-panel {
+      background: #0F1012;
+      padding: 20px;
+      border: 2px solid #00D800;
+      border-radius: 0;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+    }
+    
+    h1 {
+      color: #00D800;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .form-group {
+      margin-bottom: 16px;
+    }
+    
+    label {
+      display: block;
+      color: #00D800;
+      font-size: 10px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      background: #050608;
+      border: 2px solid #404040;
+      color: #E5E5E5;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+    }
+    
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: #00D800;
+    }
+    
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 20px;
+    }
+    
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #00D800;
+      border: 2px solid #00A800;
+      color: #000;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: none;
+    }
+    
+    button:hover {
+      background: #00A800;
+      border-color: #008400;
+    }
+    
+    button.secondary {
+      background: #404040;
+      border-color: #7C7C7C;
+      color: #E5E5E5;
+    }
+    
+    button.secondary:hover {
+      background: #7C7C7C;
+    }
+    
+    /* Banner Preview */
+    #banner-preview {
+      width: 100%;
+      background: #1A1C1E;
+      border: 2px solid #00D800;
+      position: relative;
+      overflow: hidden;
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+    }
+    
+    .banner-content {
+      width: 100%;
+      height: 100%;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    
+    .banner-title {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 48px;
+      color: #00D800;
+      line-height: 1.3;
+      word-wrap: break-word;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    
+    .banner-subtitle {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 28px;
+      color: #3CBCFC;
+      letter-spacing: 0.5px;
+    }
+    
+    .banner-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 2px solid #00D800;
+      padding-top: 16px;
+      margin-top: auto;
+    }
+    
+    .banner-rubric {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 14px;
+      color: #00D800;
+    }
+    
+    .banner-watermark {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: #808080;
+      opacity: 0.6;
+    }
+    
+    /* Background Patterns */
+    .bg-pattern-solid {
+      background: #1A1C1E;
+    }
+    
+    .bg-pattern-grid {
+      background: 
+        repeating-linear-gradient(0deg, transparent, transparent 8px, rgba(0, 216, 0, 0.05) 8px, rgba(0, 216, 0, 0.05) 16px),
+        #1A1C1E;
+    }
+    
+    .bg-pattern-gradient {
+      background: 
+        linear-gradient(135deg, #1A1C1E 0%, #0F1012 100%);
+    }
+    
+    .bg-pattern-crypto {
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(0, 216, 0, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(60, 188, 252, 0.08) 0%, transparent 40%),
+        #1A1C1E;
+    }
+    
+    .bg-pattern-custom {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    
+    .info {
+      background: #0F1012;
+      padding: 12px;
+      border: 2px solid #404040;
+      font-size: 9px;
+      line-height: 1.5;
+      color: #B0B0B0;
+      margin-top: 16px;
+    }
+    
+    .info strong {
+      color: #00D800;
+    }
+    
+    .file-input-wrapper {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      width: 100%;
+    }
+    
+    .file-input-wrapper input[type=file] {
+      position: absolute;
+      left: -9999px;
+    }
+    
+    .file-input-label {
+      display: block;
+      padding: 8px;
+      background: #404040;
+      border: 2px solid #7C7C7C;
+      color: #E5E5E5;
+      text-align: center;
+      cursor: pointer;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+    
+    .file-input-label:hover {
+      background: #7C7C7C;
+    }
+    
+    .file-name {
+      font-size: 9px;
+      color: #808080;
+      margin-top: 4px;
+      word-break: break-all;
+    }
+    
+    @media (max-width: 1200px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      
+      .editor-panel {
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎮 8-bit Banner Generator</h1>
+  
+  <div class="container">
+    <div class="preview-panel">
+      <h1>👁️ Preview</h1>
+      <div id="banner-preview" class="bg-pattern-solid" style="aspect-ratio: 1200/630;">
+        <div class="banner-content">
+          <div>
+            <div class="banner-title" id="preview-title">RSI Technical Analysis</div>
+            <div class="banner-subtitle" id="preview-subtitle">MARKETLAB</div>
+          </div>
+          <div class="banner-footer">
+            <div class="banner-rubric" id="preview-rubric">ТЕХАНАЛИЗ</div>
+            <div class="banner-watermark" id="preview-watermark">MARKETLAB ACADEMY</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="editor-panel">
+      <h1>⚙️ Settings</h1>
+      
+      <div class="form-group">
+        <label>Banner Size (Размер)</label>
+        <select id="banner-size">
+          <option value="og">OG Preview (1200×630) — для соцсетей</option>
+          <option value="article">Article Banner (1200×400) — для статей</option>
+          <option value="preview">Preview (600×400) — превью статьи</option>
+          <option value="telegram">Telegram (1080×1080) — квадрат для Telegram</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label>Title (Заголовок)</label>
+        <input type="text" id="title" placeholder="RSI Technical Analysis" value="RSI Technical Analysis">
+      </div>
+      
+      <div class="form-group">
+        <label>Subtitle (Подзаголовок)</label>
+        <input type="text" id="subtitle" placeholder="MARKETLAB" value="MARKETLAB">
+      </div>
+      
+      <div class="form-group">
+        <label>Rubric (Рубрика)</label>
+        <select id="rubric">
+          <option value="ТЕХАНАЛИЗ">ТЕХАНАЛИЗ</option>
+          <option value="КРИПТО">КРИПТО</option>
+          <option value="АЛГО">АЛГО</option>
+          <option value="ФУНДАМЕНТАЛ">ФУНДАМЕНТАЛ</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label>Watermark</label>
+        <input type="text" id="watermark" placeholder="MARKETLAB ACADEMY" value="MARKETLAB ACADEMY">
+      </div>
+      
+      <div class="form-group">
+        <label>Background (Фон)</label>
+        <select id="bg-pattern">
+          <option value="solid">Solid Dark (Однотонный)</option>
+          <option value="grid">Grid Lines (Сетка)</option>
+          <option value="gradient">Gradient (Градиент)</option>
+          <option value="crypto">Crypto Theme (Крипто-тема)</option>
+          <option value="custom">Custom Image (Своя картинка)</option>
+        </select>
+      </div>
+      
+      <div class="form-group" id="custom-image-group" style="display: none;">
+        <label>Upload Image (Загрузить картинку)</label>
+        <div class="file-input-wrapper">
+          <input type="file" id="custom-image" accept="image/*">
+          <label for="custom-image" class="file-input-label">Выбрать файл</label>
+        </div>
+        <div class="file-name" id="file-name"></div>
+      </div>
+      
+      <div class="button-group">
+        <button id="update-btn" onclick="updatePreview()">🔄 Update Preview</button>
+        <button class="secondary" id="download-btn" onclick="downloadBanner()">💾 Download PNG</button>
+      </div>
+      
+      <div class="info">
+        <strong>💡 Как использовать:</strong><br>
+        1. Выберите размер баннера<br>
+        2. Заполните поля<br>
+        3. Нажмите "Update Preview"<br>
+        4. Нажмите "Download PNG"<br>
+        5. Используйте файл как heroImage в frontmatter статьи
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    let customImageData = null;
+    const bannerSizes = {
+      og: { width: 1200, height: 630, ratio: 1200/630 },
+      article: { width: 1200, height: 400, ratio: 1200/400 },
+      preview: { width: 600, height: 400, ratio: 600/400 },
+      telegram: { width: 1080, height: 1080, ratio: 1080/1080 }
+    };
+    
+    // Font sizes based on banner size (best practices: Title 48-72px, Subtitle 24-48px for 1200x630)
+    const fontSizes = {
+      og: { title: 56, subtitle: 32 },
+      article: { title: 48, subtitle: 28 },
+      preview: { title: 32, subtitle: 20 },
+      telegram: { title: 64, subtitle: 36 }
+    };
+    
+    // Preload fonts
+    const fontLoader = new Promise((resolve) => {
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(() => {
+          // Additional check for Press Start 2P
+          const testFont = new FontFace('Press Start 2P', 'url(https://fonts.gstatic.com/s/pressstart2p/v14/e3t4euO8T-267oIAQAu6jDQyK3nVivM4B4.woff2)');
+          testFont.load().then(() => resolve()).catch(() => resolve());
+        });
+      } else {
+        setTimeout(resolve, 1000);
+      }
+    });
+    
+    // Wait for DOM to be ready
+    document.addEventListener('DOMContentLoaded', function() {
+      // Update preview on input change
+      const titleInput = document.getElementById('title');
+      const subtitleInput = document.getElementById('subtitle');
+      const rubricSelect = document.getElementById('rubric');
+      const watermarkInput = document.getElementById('watermark');
+      
+      if (titleInput) titleInput.addEventListener('input', updatePreview);
+      if (subtitleInput) subtitleInput.addEventListener('input', updatePreview);
+      if (rubricSelect) rubricSelect.addEventListener('change', updatePreview);
+      if (watermarkInput) watermarkInput.addEventListener('input', updatePreview);
+      document.getElementById('bg-pattern').addEventListener('change', function() {
+        const customGroup = document.getElementById('custom-image-group');
+        if (this.value === 'custom') {
+          customGroup.style.display = 'block';
+        } else {
+          customGroup.style.display = 'none';
+          customImageData = null;
+        }
+        updatePreview();
+      });
+      document.getElementById('banner-size').addEventListener('change', updatePreview);
+      document.getElementById('custom-image').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+          document.getElementById('file-name').textContent = file.name;
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            customImageData = e.target.result;
+            updatePreview();
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+      
+      // Initial preview
+      updatePreview();
+    });
+    
+    function updatePreview() {
+      try {
+        const title = document.getElementById('title').value || 'Title';
+        const subtitle = document.getElementById('subtitle').value || 'SUBTITLE';
+        const rubric = document.getElementById('rubric').value;
+        const watermark = document.getElementById('watermark').value || 'MARKETLAB ACADEMY';
+        const bgPattern = document.getElementById('bg-pattern').value;
+        const bannerSize = document.getElementById('banner-size').value;
+        const size = bannerSizes[bannerSize];
+        const fonts = fontSizes[bannerSize];
+        
+        // Update preview size
+        const preview = document.getElementById('banner-preview');
+        if (!preview) return;
+        
+        preview.style.aspectRatio = `${size.width}/${size.height}`;
+        
+        // Update font sizes in preview
+        const previewTitle = document.getElementById('preview-title');
+        const previewSubtitle = document.getElementById('preview-subtitle');
+        if (previewTitle) previewTitle.style.fontSize = fonts.title + 'px';
+        if (previewSubtitle) previewSubtitle.style.fontSize = fonts.subtitle + 'px';
+        
+        // Update text
+        if (previewTitle) previewTitle.textContent = title.toUpperCase();
+        if (previewSubtitle) previewSubtitle.textContent = subtitle.toUpperCase();
+        const previewRubric = document.getElementById('preview-rubric');
+        const previewWatermark = document.getElementById('preview-watermark');
+        if (previewRubric) previewRubric.textContent = rubric;
+        if (previewWatermark) previewWatermark.textContent = watermark.toUpperCase();
+        
+        // Update background - ВАЖНО: сначала очищаем все классы и стили
+        preview.className = '';
+        preview.style.backgroundImage = 'none';
+        preview.style.backgroundSize = '';
+        preview.style.backgroundPosition = '';
+        preview.style.backgroundRepeat = '';
+        
+        if (bgPattern === 'custom' && customImageData) {
+          preview.style.backgroundImage = `url(${customImageData})`;
+          preview.style.backgroundSize = 'cover';
+          preview.style.backgroundPosition = 'center';
+          preview.style.backgroundRepeat = 'no-repeat';
+        } else {
+          // Применяем класс паттерна
+          preview.classList.add(`bg-pattern-${bgPattern}`);
+        }
+      } catch (error) {
+        console.error('Error in updatePreview:', error);
+      }
+    }
+    
+    function wrapText(ctx, text, maxWidth, x, y, lineHeight) {
+      const words = text.split(' ');
+      let line = '';
+      let currentY = y;
+      
+      for (let i = 0; i < words.length; i++) {
+        const testLine = line + words[i] + ' ';
+        const metrics = ctx.measureText(testLine);
+        
+        if (metrics.width > maxWidth && i > 0) {
+          ctx.fillText(line.trim(), x, currentY);
+          line = words[i] + ' ';
+          currentY += lineHeight;
+        } else {
+          line = testLine;
+        }
+      }
+      ctx.fillText(line.trim(), x, currentY);
+      return currentY;
+    }
+    
+    function downloadBanner() {
+      const bannerSize = document.getElementById('banner-size').value;
+      const size = bannerSizes[bannerSize];
+      const fonts = fontSizes[bannerSize];
+      const canvas = document.createElement('canvas');
+      canvas.width = size.width;
+      canvas.height = size.height;
+      const ctx = canvas.getContext('2d');
+      
+      // Set background
+      const bgPattern = document.getElementById('bg-pattern').value;
+      
+      if (bgPattern === 'custom' && customImageData) {
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.onload = function() {
+          ctx.drawImage(img, 0, 0, size.width, size.height);
+          renderText(ctx, size, fonts);
+        };
+        img.onerror = function() {
+          // Fallback if image fails to load
+          ctx.fillStyle = '#1A1C1E';
+          ctx.fillRect(0, 0, size.width, size.height);
+          renderText(ctx, size, fonts);
+        };
+        img.src = customImageData;
+        return;
+      } else {
+        // Render background patterns
+        if (bgPattern === 'solid') {
+          ctx.fillStyle = '#1A1C1E';
+          ctx.fillRect(0, 0, size.width, size.height);
+        } else if (bgPattern === 'grid') {
+          ctx.fillStyle = '#1A1C1E';
+          ctx.fillRect(0, 0, size.width, size.height);
+          ctx.strokeStyle = 'rgba(0, 216, 0, 0.05)';
+          ctx.lineWidth = 1;
+          const gridStep = Math.max(8, size.height / 40);
+          for (let i = 0; i < size.height; i += gridStep) {
+            ctx.beginPath();
+            ctx.moveTo(0, i);
+            ctx.lineTo(size.width, i);
+            ctx.stroke();
+          }
+        } else if (bgPattern === 'gradient') {
+          const grad = ctx.createLinearGradient(0, 0, size.width, size.height);
+          grad.addColorStop(0, '#1A1C1E');
+          grad.addColorStop(1, '#0F1012');
+          ctx.fillStyle = grad;
+          ctx.fillRect(0, 0, size.width, size.height);
+        } else if (bgPattern === 'crypto') {
+          ctx.fillStyle = '#1A1C1E';
+          ctx.fillRect(0, 0, size.width, size.height);
+          const grad1 = ctx.createRadialGradient(size.width * 0.2, size.height * 0.3, 0, size.width * 0.2, size.height * 0.3, size.width * 0.4);
+          grad1.addColorStop(0, 'rgba(0, 216, 0, 0.08)');
+          grad1.addColorStop(1, 'transparent');
+          ctx.fillStyle = grad1;
+          ctx.fillRect(0, 0, size.width, size.height);
+          const grad2 = ctx.createRadialGradient(size.width * 0.8, size.height * 0.7, 0, size.width * 0.8, size.height * 0.7, size.width * 0.4);
+          grad2.addColorStop(0, 'rgba(60, 188, 252, 0.08)');
+          grad2.addColorStop(1, 'transparent');
+          ctx.fillStyle = grad2;
+          ctx.fillRect(0, 0, size.width, size.height);
+        }
+        
+        renderText(ctx, size, fonts);
+      }
+    }
+    
+    function renderText(ctx, size, fonts) {
+      // Wait for fonts to be ready
+      fontLoader.then(() => {
+        // Border
+        ctx.strokeStyle = '#00D800';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(0, 0, size.width, size.height);
+        
+        const padding = Math.max(32, size.width * 0.032);
+        let y = padding;
+        
+        // Title
+        ctx.fillStyle = '#00D800';
+        ctx.font = `bold ${fonts.title}px "Press Start 2P"`;
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'top';
+        const title = document.getElementById('title').value.toUpperCase() || 'TITLE';
+        const titleMaxWidth = size.width - (padding * 2);
+        const titleLineHeight = fonts.title * 1.3;
+        y = wrapText(ctx, title, titleMaxWidth, padding, y, titleLineHeight) + 16;
+        
+        // Subtitle
+        ctx.fillStyle = '#3CBCFC';
+        ctx.font = `${fonts.subtitle}px "Press Start 2P"`;
+        const subtitle = document.getElementById('subtitle').value.toUpperCase() || 'SUBTITLE';
+        ctx.fillText(subtitle, padding, y);
+        
+        // Footer
+        const footerY = size.height - 40;
+        ctx.strokeStyle = '#00D800';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(padding, footerY);
+        ctx.lineTo(size.width - padding, footerY);
+        ctx.stroke();
+        
+        // Rubric
+        ctx.fillStyle = '#00D800';
+        ctx.font = '14px "Press Start 2P"';
+        const rubric = document.getElementById('rubric').value;
+        ctx.fillText(rubric, padding, footerY + 16);
+        
+        // Watermark
+        ctx.fillStyle = '#808080';
+        ctx.font = '10px "JetBrains Mono"';
+        const watermark = document.getElementById('watermark').value.toUpperCase() || 'MARKETLAB ACADEMY';
+        const watermarkWidth = ctx.measureText(watermark).width;
+        ctx.fillText(watermark, size.width - watermarkWidth - padding, footerY + 16);
+        
+        // Download
+        canvas.toBlob(function(blob) {
+          if (blob) {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            const sizeName = document.getElementById('banner-size').value;
+            a.download = `banner-${sizeName}-${Date.now()}.png`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+          } else {
+            alert('Ошибка при создании изображения. Попробуйте еще раз.');
+          }
+        }, 'image/png');
+      }).catch(() => {
+        // Fallback: render without waiting for fonts
+        alert('Предупреждение: шрифты могут не загрузиться. Попробуйте обновить страницу и повторить.');
+      });
+    }
+  </script>
+</body>
+</html>
