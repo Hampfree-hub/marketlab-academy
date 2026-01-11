@@ -2,7 +2,7 @@
 title: 'Bitcoin Basics'
 description: 'Основы Bitcoin: что такое первая криптовалюта, как она работает, и почему она изменила финансовый мир навсегда'
 pubDate: '2026-01-10'
-# heroImage: './assets/banner.png'  # Будет добавлен после генерации баннера
+heroImage: './assets/banner.png'
 language: 'ru'
 ---
 

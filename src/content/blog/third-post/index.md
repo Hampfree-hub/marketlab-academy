@@ -2,7 +2,7 @@
 title: 'Trading Bots Guide'
 description: 'Руководство по торговым ботам: как автоматизировать торговлю криптовалютами, выбрать стратегию и настроить бота для максимальной прибыли'
 pubDate: '2026-01-10'
-# heroImage: './assets/banner.png'  # Будет добавлен после генерации баннера
+heroImage: './assets/banner.png'
 language: 'ru'
 ---
 
