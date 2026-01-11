@@ -3,9 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title>8-bit Banner Generator | MarketLab Academy</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;700&display=swap');
+    
+    /* Preload fonts for better performance */
+    @font-face {
+      font-family: 'Press Start 2P';
+      font-display: swap;
+    }
+    
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-display: swap;
+    }
     
     * {
       margin: 0;
@@ -185,26 +199,57 @@
     }
     
     /* Background Patterns */
-    .bg-pattern-solid {
-      background: #1A1C1E;
+    #banner-preview.bg-pattern-solid {
+      background: #1A1C1E !important;
+      background-image: none !important;
     }
     
-    .bg-pattern-grid {
+    #banner-preview.bg-pattern-grid {
       background: 
-        repeating-linear-gradient(0deg, transparent, transparent 8px, rgba(0, 216, 0, 0.05) 8px, rgba(0, 216, 0, 0.05) 16px),
-        #1A1C1E;
+        repeating-linear-gradient(0deg, transparent, transparent 8px, rgba(0, 216, 0, 0.15) 8px, rgba(0, 216, 0, 0.15) 16px),
+        repeating-linear-gradient(90deg, transparent, transparent 8px, rgba(0, 216, 0, 0.1) 8px, rgba(0, 216, 0, 0.1) 16px),
+        #1A1C1E !important;
+      background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 8px, rgba(0, 216, 0, 0.15) 8px, rgba(0, 216, 0, 0.15) 16px),
+        repeating-linear-gradient(90deg, transparent, transparent 8px, rgba(0, 216, 0, 0.1) 8px, rgba(0, 216, 0, 0.1) 16px) !important;
     }
     
-    .bg-pattern-gradient {
+    #banner-preview.bg-pattern-gradient {
       background: 
-        linear-gradient(135deg, #1A1C1E 0%, #0F1012 100%);
+        linear-gradient(135deg, #1A1C1E 0%, #0F1012 50%, #1A1C1E 100%) !important;
+      background-image: linear-gradient(135deg, #1A1C1E 0%, #0F1012 50%, #1A1C1E 100%) !important;
     }
     
-    .bg-pattern-crypto {
+    #banner-preview.bg-pattern-crypto {
       background: 
-        radial-gradient(circle at 20% 30%, rgba(0, 216, 0, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(60, 188, 252, 0.08) 0%, transparent 40%),
-        #1A1C1E;
+        radial-gradient(circle at 20% 30%, rgba(0, 216, 0, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(60, 188, 252, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(252, 252, 0, 0.05) 0%, transparent 60%),
+        #1A1C1E !important;
+      background-image: 
+        radial-gradient(circle at 20% 30%, rgba(0, 216, 0, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(60, 188, 252, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(252, 252, 0, 0.05) 0%, transparent 60%) !important;
+    }
+    
+    #banner-preview.bg-pattern-bitcoin {
+      background: 
+        repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(247, 147, 26, 0.1) 20px, rgba(247, 147, 26, 0.1) 40px),
+        radial-gradient(circle at 30% 40%, rgba(247, 147, 26, 0.15) 0%, transparent 40%),
+        #1A1C1E !important;
+      background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(247, 147, 26, 0.1) 20px, rgba(247, 147, 26, 0.1) 40px),
+        radial-gradient(circle at 30% 40%, rgba(247, 147, 26, 0.15) 0%, transparent 40%) !important;
+    }
+    
+    #banner-preview.bg-pattern-blockchain {
+      background: 
+        repeating-linear-gradient(0deg, transparent, transparent 16px, rgba(0, 216, 0, 0.1) 16px, rgba(0, 216, 0, 0.1) 32px),
+        repeating-linear-gradient(90deg, transparent, transparent 16px, rgba(60, 188, 252, 0.1) 16px, rgba(60, 188, 252, 0.1) 32px),
+        #1A1C1E !important;
+      background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 16px, rgba(0, 216, 0, 0.1) 16px, rgba(0, 216, 0, 0.1) 32px),
+        repeating-linear-gradient(90deg, transparent, transparent 16px, rgba(60, 188, 252, 0.1) 16px, rgba(60, 188, 252, 0.1) 32px) !important;
     }
     
     .bg-pattern-custom {
@@ -338,6 +383,8 @@
           <option value="grid">Grid Lines (Сетка)</option>
           <option value="gradient">Gradient (Градиент)</option>
           <option value="crypto">Crypto Theme (Крипто-тема)</option>
+          <option value="bitcoin">Bitcoin Theme (Биткоин)</option>
+          <option value="blockchain">Blockchain (Блокчейн)</option>
           <option value="custom">Custom Image (Своя картинка)</option>
         </select>
       </div>
@@ -384,16 +431,28 @@
       telegram: { title: 64, subtitle: 36 }
     };
     
-    // Preload fonts
+    // Preload fonts with better error handling
     const fontLoader = new Promise((resolve) => {
       if (document.fonts && document.fonts.ready) {
         document.fonts.ready.then(() => {
-          // Additional check for Press Start 2P
-          const testFont = new FontFace('Press Start 2P', 'url(https://fonts.gstatic.com/s/pressstart2p/v14/e3t4euO8T-267oIAQAu6jDQyK3nVivM4B4.woff2)');
-          testFont.load().then(() => resolve()).catch(() => resolve());
+          // Check if fonts are actually loaded
+          const checkFont = (fontName) => {
+            return document.fonts.check(`12px "${fontName}"`);
+          };
+          
+          // Wait a bit more if fonts aren't ready
+          if (checkFont('Press Start 2P') && checkFont('JetBrains Mono')) {
+            resolve();
+          } else {
+            setTimeout(() => resolve(), 500);
+          }
+        }).catch(() => {
+          // Fallback: resolve after timeout
+          setTimeout(() => resolve(), 1000);
         });
       } else {
-        setTimeout(resolve, 1000);
+        // Fallback for browsers without Font Loading API
+        setTimeout(() => resolve(), 1500);
       }
     });
     
@@ -409,16 +468,26 @@
       if (subtitleInput) subtitleInput.addEventListener('input', updatePreview);
       if (rubricSelect) rubricSelect.addEventListener('change', updatePreview);
       if (watermarkInput) watermarkInput.addEventListener('input', updatePreview);
-      document.getElementById('bg-pattern').addEventListener('change', function() {
-        const customGroup = document.getElementById('custom-image-group');
-        if (this.value === 'custom') {
-          customGroup.style.display = 'block';
-        } else {
-          customGroup.style.display = 'none';
-          customImageData = null;
-        }
-        updatePreview();
-      });
+      
+      const bgPatternSelect = document.getElementById('bg-pattern');
+      if (bgPatternSelect) {
+        bgPatternSelect.addEventListener('change', function(e) {
+          console.log('bg-pattern changed to:', this.value); // Debug
+          const customGroup = document.getElementById('custom-image-group');
+          if (this.value === 'custom') {
+            if (customGroup) customGroup.style.display = 'block';
+          } else {
+            if (customGroup) customGroup.style.display = 'none';
+            customImageData = null;
+          }
+          // Принудительно обновляем preview
+          setTimeout(() => updatePreview(), 10);
+        });
+        // Также добавляем обработчик на input для совместимости
+        bgPatternSelect.addEventListener('input', function() {
+          updatePreview();
+        });
+      }
       document.getElementById('banner-size').addEventListener('change', updatePreview);
       document.getElementById('custom-image').addEventListener('change', function(e) {
         const file = e.target.files[0];
@@ -439,12 +508,24 @@
     
     function updatePreview() {
       try {
-        const title = document.getElementById('title').value || 'Title';
-        const subtitle = document.getElementById('subtitle').value || 'SUBTITLE';
-        const rubric = document.getElementById('rubric').value;
-        const watermark = document.getElementById('watermark').value || 'MARKETLAB ACADEMY';
-        const bgPattern = document.getElementById('bg-pattern').value;
-        const bannerSize = document.getElementById('banner-size').value;
+        const titleEl = document.getElementById('title');
+        const subtitleEl = document.getElementById('subtitle');
+        const rubricEl = document.getElementById('rubric');
+        const watermarkEl = document.getElementById('watermark');
+        const bgPatternEl = document.getElementById('bg-pattern');
+        const bannerSizeEl = document.getElementById('banner-size');
+        
+        if (!bgPatternEl) {
+          console.error('bg-pattern element not found');
+          return;
+        }
+        
+        const title = titleEl ? titleEl.value || 'Title' : 'Title';
+        const subtitle = subtitleEl ? subtitleEl.value || 'SUBTITLE' : 'SUBTITLE';
+        const rubric = rubricEl ? rubricEl.value : '';
+        const watermark = watermarkEl ? watermarkEl.value || 'MARKETLAB ACADEMY' : 'MARKETLAB ACADEMY';
+        const bgPattern = bgPatternEl.value;
+        const bannerSize = bannerSizeEl ? bannerSizeEl.value : 'og';
         const size = bannerSizes[bannerSize];
         const fonts = fontSizes[bannerSize];
         
@@ -469,20 +550,28 @@
         if (previewWatermark) previewWatermark.textContent = watermark.toUpperCase();
         
         // Update background - ВАЖНО: сначала очищаем все классы и стили
-        preview.className = '';
-        preview.style.backgroundImage = 'none';
-        preview.style.backgroundSize = '';
-        preview.style.backgroundPosition = '';
-        preview.style.backgroundRepeat = '';
+        // Удаляем все классы паттернов
+        preview.classList.remove('bg-pattern-solid', 'bg-pattern-grid', 'bg-pattern-gradient', 
+                                 'bg-pattern-crypto', 'bg-pattern-bitcoin', 'bg-pattern-blockchain', 
+                                 'bg-pattern-custom');
+        
+        // Очищаем все inline стили background
+        preview.style.removeProperty('background');
+        preview.style.removeProperty('background-image');
+        preview.style.removeProperty('background-size');
+        preview.style.removeProperty('background-position');
+        preview.style.removeProperty('background-repeat');
+        preview.style.removeProperty('background-color');
         
         if (bgPattern === 'custom' && customImageData) {
           preview.style.backgroundImage = `url(${customImageData})`;
           preview.style.backgroundSize = 'cover';
           preview.style.backgroundPosition = 'center';
           preview.style.backgroundRepeat = 'no-repeat';
-        } else {
+        } else if (bgPattern) {
           // Применяем класс паттерна
-          preview.classList.add(`bg-pattern-${bgPattern}`);
+          const patternClass = `bg-pattern-${bgPattern}`;
+          preview.classList.add(patternClass);
         }
       } catch (error) {
         console.error('Error in updatePreview:', error);
@@ -490,23 +579,43 @@
     }
     
     function wrapText(ctx, text, maxWidth, x, y, lineHeight) {
-      const words = text.split(' ');
+      // Разбиваем на слова, учитывая пробелы и дефисы
+      const words = text.split(/(\s+|-)/).filter(w => w.length > 0);
       let line = '';
       let currentY = y;
+      let lastWordIndex = 0;
       
       for (let i = 0; i < words.length; i++) {
-        const testLine = line + words[i] + ' ';
+        const testLine = line + words[i];
         const metrics = ctx.measureText(testLine);
         
-        if (metrics.width > maxWidth && i > 0) {
-          ctx.fillText(line.trim(), x, currentY);
-          line = words[i] + ' ';
-          currentY += lineHeight;
+        // Если строка превышает maxWidth и это не первое слово
+        if (metrics.width > maxWidth && lastWordIndex > 0) {
+          // Рисуем предыдущую строку (без последнего слова)
+          const lineToDraw = line.trim();
+          if (lineToDraw) {
+            ctx.fillText(lineToDraw, x, currentY);
+            currentY += lineHeight;
+          }
+          // Начинаем новую строку с текущего слова
+          line = words[i];
+          lastWordIndex = i;
         } else {
           line = testLine;
+          // Обновляем индекс последнего слова, если это не пробел
+          if (words[i].trim()) {
+            lastWordIndex = i;
+          }
         }
       }
-      ctx.fillText(line.trim(), x, currentY);
+      
+      // Рисуем последнюю строку
+      const finalLine = line.trim();
+      if (finalLine) {
+        ctx.fillText(finalLine, x, currentY);
+        currentY += lineHeight;
+      }
+      
       return currentY;
     }
     
@@ -545,34 +654,86 @@
         } else if (bgPattern === 'grid') {
           ctx.fillStyle = '#1A1C1E';
           ctx.fillRect(0, 0, size.width, size.height);
-          ctx.strokeStyle = 'rgba(0, 216, 0, 0.05)';
+          // Horizontal lines
+          ctx.strokeStyle = 'rgba(0, 216, 0, 0.15)';
           ctx.lineWidth = 1;
-          const gridStep = Math.max(8, size.height / 40);
-          for (let i = 0; i < size.height; i += gridStep) {
+          for (let i = 0; i < size.height; i += 16) {
             ctx.beginPath();
             ctx.moveTo(0, i);
             ctx.lineTo(size.width, i);
             ctx.stroke();
           }
+          // Vertical lines
+          ctx.strokeStyle = 'rgba(0, 216, 0, 0.1)';
+          for (let i = 0; i < size.width; i += 16) {
+            ctx.beginPath();
+            ctx.moveTo(i, 0);
+            ctx.lineTo(i, size.height);
+            ctx.stroke();
+          }
         } else if (bgPattern === 'gradient') {
           const grad = ctx.createLinearGradient(0, 0, size.width, size.height);
           grad.addColorStop(0, '#1A1C1E');
-          grad.addColorStop(1, '#0F1012');
+          grad.addColorStop(0.5, '#0F1012');
+          grad.addColorStop(1, '#1A1C1E');
           ctx.fillStyle = grad;
           ctx.fillRect(0, 0, size.width, size.height);
         } else if (bgPattern === 'crypto') {
           ctx.fillStyle = '#1A1C1E';
           ctx.fillRect(0, 0, size.width, size.height);
           const grad1 = ctx.createRadialGradient(size.width * 0.2, size.height * 0.3, 0, size.width * 0.2, size.height * 0.3, size.width * 0.4);
-          grad1.addColorStop(0, 'rgba(0, 216, 0, 0.08)');
+          grad1.addColorStop(0, 'rgba(0, 216, 0, 0.2)');
           grad1.addColorStop(1, 'transparent');
           ctx.fillStyle = grad1;
           ctx.fillRect(0, 0, size.width, size.height);
           const grad2 = ctx.createRadialGradient(size.width * 0.8, size.height * 0.7, 0, size.width * 0.8, size.height * 0.7, size.width * 0.4);
-          grad2.addColorStop(0, 'rgba(60, 188, 252, 0.08)');
+          grad2.addColorStop(0, 'rgba(60, 188, 252, 0.2)');
           grad2.addColorStop(1, 'transparent');
           ctx.fillStyle = grad2;
           ctx.fillRect(0, 0, size.width, size.height);
+          const grad3 = ctx.createRadialGradient(size.width * 0.5, size.height * 0.5, 0, size.width * 0.5, size.height * 0.5, size.width * 0.6);
+          grad3.addColorStop(0, 'rgba(252, 252, 0, 0.05)');
+          grad3.addColorStop(1, 'transparent');
+          ctx.fillStyle = grad3;
+          ctx.fillRect(0, 0, size.width, size.height);
+        } else if (bgPattern === 'bitcoin') {
+          ctx.fillStyle = '#1A1C1E';
+          ctx.fillRect(0, 0, size.width, size.height);
+          // Diagonal stripes
+          ctx.strokeStyle = 'rgba(247, 147, 26, 0.1)';
+          ctx.lineWidth = 1;
+          for (let i = -size.height; i < size.width + size.height; i += 40) {
+            ctx.beginPath();
+            ctx.moveTo(i, 0);
+            ctx.lineTo(i + size.height, size.height);
+            ctx.stroke();
+          }
+          // Radial gradient
+          const grad = ctx.createRadialGradient(size.width * 0.3, size.height * 0.4, 0, size.width * 0.3, size.height * 0.4, size.width * 0.4);
+          grad.addColorStop(0, 'rgba(247, 147, 26, 0.15)');
+          grad.addColorStop(1, 'transparent');
+          ctx.fillStyle = grad;
+          ctx.fillRect(0, 0, size.width, size.height);
+        } else if (bgPattern === 'blockchain') {
+          ctx.fillStyle = '#1A1C1E';
+          ctx.fillRect(0, 0, size.width, size.height);
+          // Horizontal lines
+          ctx.strokeStyle = 'rgba(0, 216, 0, 0.1)';
+          ctx.lineWidth = 1;
+          for (let i = 0; i < size.height; i += 16) {
+            ctx.beginPath();
+            ctx.moveTo(0, i);
+            ctx.lineTo(size.width, i);
+            ctx.stroke();
+          }
+          // Vertical lines
+          ctx.strokeStyle = 'rgba(60, 188, 252, 0.1)';
+          for (let i = 0; i < size.width; i += 16) {
+            ctx.beginPath();
+            ctx.moveTo(i, 0);
+            ctx.lineTo(i, size.height);
+            ctx.stroke();
+          }
         }
         
         renderText(ctx, size, fonts);
