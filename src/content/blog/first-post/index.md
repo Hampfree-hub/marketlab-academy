@@ -2,7 +2,7 @@
 title: 'RSI Technical Analysis'
 description: 'Полное руководство по индикатору RSI: как использовать Relative Strength Index для определения точек входа и выхода на рынке криптовалют'
 pubDate: '2026-01-10'
-# heroImage: './assets/banner.png'  # Будет добавлен после генерации баннера
+heroImage: './assets/banner.png'
 language: 'ru'
 ---
 
