@@ -1,8 +1,8 @@
 ---
-title: 'RSI Technical Analysis'
-description: 'Полное руководство по индикатору RSI: как использовать Relative Strength Index для определения точек входа и выхода на рынке криптовалют'
+title: 'Bitcoin Basics'
+description: 'Основы Bitcoin: что такое первая криптовалюта, как она работает, и почему она изменила финансовый мир навсегда'
 pubDate: '2026-01-10'
-heroImage: './assets/banner.png'
+# heroImage: './assets/banner.png'  # Будет добавлен после генерации баннера
 language: 'ru'
 ---
 
