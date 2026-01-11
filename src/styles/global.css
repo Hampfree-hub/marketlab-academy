@@ -105,7 +105,7 @@ h1, h2, h3, h4, .mono {
   margin: 0 0 var(--spacing-base);
   color: var(--color-text-primary);
   text-transform: uppercase;
-  line-height: 1.4;
+  line-height: 1.8; /* ✅ ИСПРАВЛЕНИЕ: Увеличен с 1.4 до 1.8 для видимого пространства между строками при выделении */
 }
 
 a {
@@ -219,7 +219,7 @@ a:hover {
   color: var(--color-text-primary);
   margin: var(--spacing-sm) 0;
   font-size: 1.5rem;
-  line-height: 1.2;
+  line-height: 1.8; /* ✅ ИСПРАВЛЕНИЕ: Увеличен с 1.2 до 1.8 для видимого пространства между строками при выделении */
   transition: color 0.10s steps(3);  /* ✅ VARIANT F: golden middle */
 }
 
@@ -259,6 +259,6 @@ a:hover {
 
 @media (max-width: 768px) {
   :root {
-    --horizontal-padding: 20px;
+    --horizontal-padding: 16px; /* ✅ Issue #52: Исправлено на кратно 8px (было 20px) */
   }
 }

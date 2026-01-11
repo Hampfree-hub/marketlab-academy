@@ -42,7 +42,7 @@
 .footer-links {
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	gap: 8px; /* ✅ Issue #52: Исправлено на кратно 8px (было 10px) */
 }
 
 .footer-links a {

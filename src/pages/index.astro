@@ -93,6 +93,14 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 			margin-bottom: var(--space-10); /* 80px — строго кратно 8 */
 		}
 
+		/* ✅ ИСПРАВЛЕНИЕ: Карточки постов должны иметь одинаковую ширину */
+		.post-card {
+			min-width: 0; /* Убираем минимальную ширину для равномерного распределения */
+			width: 100%; /* Принудительно 100% ширины контейнера */
+			max-width: 100%; /* Ограничиваем максимальную ширину */
+			box-sizing: border-box; /* Учитываем padding и border в ширине */
+		}
+
 			.post-card-tags {
 				display: flex;
 				gap: 8px;
