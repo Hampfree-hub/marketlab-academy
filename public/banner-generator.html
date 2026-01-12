@@ -189,58 +189,43 @@
       opacity: 0.6;
     }
     
-    /* Background Patterns */
-    #banner-preview.bg-pattern-solid {
-      background: #1A1C1E !important;
+    /* Background Patterns - New Semantic Names */
+    #banner-preview.bg-pattern-solid-dark {
+      background: #0A0B0D !important;
       background-image: none !important;
     }
     
     #banner-preview.bg-pattern-grid {
       background: 
-        repeating-linear-gradient(0deg, transparent, transparent 8px, rgba(0, 216, 0, 0.15) 8px, rgba(0, 216, 0, 0.15) 16px),
-        repeating-linear-gradient(90deg, transparent, transparent 8px, rgba(0, 216, 0, 0.1) 8px, rgba(0, 216, 0, 0.1) 16px),
-        #1A1C1E !important;
-      background-image: 
-        repeating-linear-gradient(0deg, transparent, transparent 8px, rgba(0, 216, 0, 0.15) 8px, rgba(0, 216, 0, 0.15) 16px),
-        repeating-linear-gradient(90deg, transparent, transparent 8px, rgba(0, 216, 0, 0.1) 8px, rgba(0, 216, 0, 0.1) 16px) !important;
+        repeating-linear-gradient(0deg, transparent, transparent 8px, rgba(0, 216, 0, 0.1) 8px, rgba(0, 216, 0, 0.1) 16px),
+        repeating-linear-gradient(90deg, transparent, transparent 8px, rgba(0, 216, 0, 0.05) 8px, rgba(0, 216, 0, 0.05) 16px),
+        #0A0B0D !important;
     }
     
-    #banner-preview.bg-pattern-gradient {
-      background: 
-        linear-gradient(135deg, #1A1C1E 0%, #0F1012 50%, #1A1C1E 100%) !important;
-      background-image: linear-gradient(135deg, #1A1C1E 0%, #0F1012 50%, #1A1C1E 100%) !important;
+    /* ═══ SEMANTIC GRADIENTS (соответствуют лору и NES палитре) ═══ */
+    #banner-preview.bg-pattern-gradient-electric {
+      /* Crypto Default: NES Blue + Purple (технологичность) */
+      background: linear-gradient(135deg, #0F1012 0%, rgba(60, 188, 252, 0.2) 50%, #0F1012 100%) !important;
     }
     
-    #banner-preview.bg-pattern-crypto {
-      background: 
-        radial-gradient(circle at 20% 30%, rgba(0, 216, 0, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(60, 188, 252, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(252, 252, 0, 0.05) 0%, transparent 60%),
-        #1A1C1E !important;
-      background-image: 
-        radial-gradient(circle at 20% 30%, rgba(0, 216, 0, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(60, 188, 252, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(252, 252, 0, 0.05) 0%, transparent 60%) !important;
+    #banner-preview.bg-pattern-gradient-bullish {
+      /* Bullish: NES Green (рост, прибыль) - соответствует --nes-accent-green */
+      background: linear-gradient(135deg, #0F1012 0%, rgba(0, 216, 0, 0.15) 50%, #0F1012 100%) !important;
     }
     
-    #banner-preview.bg-pattern-bitcoin {
-      background: 
-        repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(247, 147, 26, 0.1) 20px, rgba(247, 147, 26, 0.1) 40px),
-        radial-gradient(circle at 30% 40%, rgba(247, 147, 26, 0.15) 0%, transparent 40%),
-        #1A1C1E !important;
-      background-image: 
-        repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(247, 147, 26, 0.1) 20px, rgba(247, 147, 26, 0.1) 40px),
-        radial-gradient(circle at 30% 40%, rgba(247, 147, 26, 0.15) 0%, transparent 40%) !important;
+    #banner-preview.bg-pattern-gradient-bearish {
+      /* Bearish: NES Red (падение, риск) - соответствует --nes-accent-red */
+      background: linear-gradient(135deg, #0F1012 0%, rgba(248, 56, 0, 0.15) 50%, #0F1012 100%) !important;
     }
     
-    #banner-preview.bg-pattern-blockchain {
-      background: 
-        repeating-linear-gradient(0deg, transparent, transparent 16px, rgba(0, 216, 0, 0.1) 16px, rgba(0, 216, 0, 0.1) 32px),
-        repeating-linear-gradient(90deg, transparent, transparent 16px, rgba(60, 188, 252, 0.1) 16px, rgba(60, 188, 252, 0.1) 32px),
-        #1A1C1E !important;
-      background-image: 
-        repeating-linear-gradient(0deg, transparent, transparent 16px, rgba(0, 216, 0, 0.1) 16px, rgba(0, 216, 0, 0.1) 32px),
-        repeating-linear-gradient(90deg, transparent, transparent 16px, rgba(60, 188, 252, 0.1) 16px, rgba(60, 188, 252, 0.1) 32px) !important;
+    #banner-preview.bg-pattern-gradient-analysis {
+      /* Technical Analysis: NES Blue (аналитика, данные) - соответствует --nes-accent-blue */
+      background: linear-gradient(135deg, #0F1012 0%, rgba(60, 188, 252, 0.1) 50%, #0F1012 100%) !important;
+    }
+    
+    #banner-preview.bg-pattern-gradient-premium {
+      /* Premium Research: Purple (премиум контент) */
+      background: linear-gradient(135deg, #0F1012 0%, rgba(252, 252, 0, 0.05) 50%, #0F1012 100%) !important;
     }
     
     .bg-pattern-custom {
@@ -333,50 +318,60 @@
       <h1>⚙️ Settings</h1>
       
       <div class="form-group">
-        <label>Banner Size (Размер)</label>
+        <label id="label-banner-size">Banner Size (Размер)</label>
         <select id="banner-size">
-          <option value="og">OG Preview (1200×630) — для соцсетей</option>
-          <option value="article">Article Banner (1200×400) — для статей</option>
-          <option value="preview">Preview (600×400) — превью статьи</option>
-          <option value="telegram">Telegram (1080×1080) — квадрат для Telegram</option>
+          <option value="preview" selected>🖼️ Preview (350×220) — для плитки статей</option>
+          <option value="og">🌐 Social Media / OG (1200×630) — 1.91:1</option>
+          <option value="article">📄 Article Banner (1200×400) — 3:1</option>
+          <option value="telegram">📱 Telegram / Square (1080×1080) — 1:1</option>
         </select>
       </div>
       
       <div class="form-group">
-        <label>Title (Заголовок)</label>
+        <label id="label-title">Title (Заголовок)</label>
         <input type="text" id="title" placeholder="RSI Technical Analysis" value="RSI Technical Analysis">
       </div>
       
       <div class="form-group">
-        <label>Subtitle (Подзаголовок)</label>
+        <label id="label-subtitle">Subtitle (Подзаголовок)</label>
         <input type="text" id="subtitle" placeholder="MARKETLAB" value="MARKETLAB">
       </div>
       
       <div class="form-group">
-        <label>Rubric (Рубрика)</label>
+        <label id="label-rubric">Rubric (Рубрика)</label>
         <select id="rubric">
-          <option value="ТЕХАНАЛИЗ">ТЕХАНАЛИЗ</option>
-          <option value="КРИПТО">КРИПТО</option>
-          <option value="АЛГО">АЛГО</option>
-          <option value="ФУНДАМЕНТАЛ">ФУНДАМЕНТАЛ</option>
+          <option value="ТЕХАНАЛИЗ">ТЕХАНАЛИЗ / TECHNICAL</option>
+          <option value="КРИПТО">КРИПТО / CRYPTO</option>
+          <option value="АЛГО">АЛГО / ALGO</option>
+          <option value="ФУНДАМЕНТАЛ">ФУНДАМЕНТАЛ / FUNDAMENTAL</option>
         </select>
       </div>
       
       <div class="form-group">
-        <label>Watermark</label>
+        <label id="label-watermark">Watermark</label>
         <input type="text" id="watermark" placeholder="MARKETLAB ACADEMY" value="MARKETLAB ACADEMY">
       </div>
       
       <div class="form-group">
-        <label>Background (Фон)</label>
+        <label id="label-background">Background (Фон)</label>
         <select id="bg-pattern">
-          <option value="solid">Solid Dark (Однотонный)</option>
-          <option value="grid">Grid Lines (Сетка)</option>
-          <option value="gradient">Gradient (Градиент)</option>
-          <option value="crypto">Crypto Theme (Крипто-тема)</option>
-          <option value="bitcoin">Bitcoin Theme (Биткоин)</option>
-          <option value="blockchain">Blockchain (Блокчейн)</option>
-          <option value="custom">Custom Image (Своя картинка)</option>
+          <option value="grid">Classic Grid (8-bit) — для ТЕХАНАЛИЗ</option>
+          <option value="gradient-electric">Crypto Default (NES Blue) — для КРИПТО</option>
+          <option value="gradient-bullish">Trend Bullish (NES Green) — для роста</option>
+          <option value="gradient-bearish">Trend Bearish (NES Red) — для падения</option>
+          <option value="gradient-analysis">Technical Analysis (NES Blue) — для АЛГО</option>
+          <option value="solid-dark">News & Articles (Dark) — для ФУНДАМЕНТАЛ</option>
+          <option value="gradient-premium">Premium Research (NES Yellow) — премиум</option>
+          <option value="custom">Custom Image Upload</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label id="label-language">INTERFACE LANGUAGE</label>
+        <select id="interface-language">
+          <option value="ru">Русский (RU)</option>
+          <option value="en" selected>English (EN)</option>
+          <option value="es">Español (ES)</option>
         </select>
       </div>
       
@@ -412,20 +407,111 @@
   <script>
     let customImageData = null;
     const bannerSizes = {
-      og: { width: 1200, height: 630, ratio: 1200/630 },
-      article: { width: 1200, height: 400, ratio: 1200/400 },
-      preview: { width: 600, height: 400, ratio: 600/400 },
-      telegram: { width: 1080, height: 1080, ratio: 1080/1080 }
+      preview: { width: 350, height: 220, ratio: 350/220 }, // Для плитки статей (≈1.59:1)
+      og: { width: 1200, height: 630, ratio: 1200/630 }, // Open Graph (1.91:1)
+      article: { width: 1200, height: 400, ratio: 3/1 }, // Article Banner (3:1)
+      telegram: { width: 1080, height: 1080, ratio: 1/1 } // Telegram/Square (1:1)
     };
     
-    // Font sizes based on banner size (best practices: Title 48-72px, Subtitle 24-48px for 1200x630)
-    const fontSizes = {
-      og: { title: 56, subtitle: 32 },
-      article: { title: 48, subtitle: 28 },
-      preview: { title: 32, subtitle: 20 },
-      telegram: { title: 64, subtitle: 36 }
+    const translations = {
+      ru: {
+        labelBannerSize: "РАЗМЕР БАННЕРА",
+        labelTitle: "ЗАГОЛОВОК",
+        labelSubtitle: "ПОДЗАГОЛОВОК",
+        labelRubric: "РУБРИКА",
+        labelWatermark: "WATERMARK",
+        labelBackground: "ФОН (BACKGROUND)",
+        labelLanguage: "ЯЗЫК ИНТЕРФЕЙСА",
+        updateBtn: "🔄 ОБНОВИТЬ ПРЕВЬЮ",
+        downloadBtn: "💾 СКАЧАТЬ PNG",
+        fontStatusReady: "✅ Шрифты загружены. Готов к работе!",
+        fontStatusLoading: "⏳ Загрузка шрифтов...",
+        fontStatusError: "⚠️ Ошибка загрузки шрифтов",
+        rubrics: {
+          "ТЕХАНАЛИЗ": "ТЕХАНАЛИЗ",
+          "КРИПТО": "КРИПТО",
+          "АЛГО": "АЛГО",
+          "ФУНДАМЕНТАЛ": "ФУНДАМЕНТАЛ"
+        }
+      },
+      en: {
+        labelBannerSize: "BANNER SIZE",
+        labelTitle: "TITLE",
+        labelSubtitle: "SUBTITLE",
+        labelRubric: "CATEGORY",
+        labelWatermark: "WATERMARK",
+        labelBackground: "BACKGROUND",
+        labelLanguage: "INTERFACE LANGUAGE",
+        updateBtn: "🔄 UPDATE PREVIEW",
+        downloadBtn: "💾 DOWNLOAD PNG",
+        fontStatusReady: "✅ Fonts loaded. Ready to go!",
+        fontStatusLoading: "⏳ Loading fonts...",
+        fontStatusError: "⚠️ Font loading error",
+        rubrics: {
+          "ТЕХАНАЛИЗ": "TECHNICAL",
+          "КРИПТО": "CRYPTO",
+          "АЛГО": "ALGO",
+          "ФУНДАМЕНТАЛ": "FUNDAMENTAL"
+        }
+      },
+      es: {
+        labelBannerSize: "TAMAÑO DEL BANNER",
+        labelTitle: "TÍTULO",
+        labelSubtitle: "SUBTÍTULO",
+        labelRubric: "RÚBRICA",
+        labelWatermark: "MARCA DE AGUA",
+        labelBackground: "FONDO",
+        labelLanguage: "IDIOMA DE LA INTERFAZ",
+        updateBtn: "🔄 ACTUALIZAR VISTA",
+        downloadBtn: "💾 DESCARGAR PNG",
+        fontStatusReady: "✅ Fuentes cargadas. ¡Listo!",
+        fontStatusLoading: "⏳ Cargando fuentes...",
+        fontStatusError: "⚠️ Error al cargar fuentes",
+        rubrics: {
+          "ТЕХАНАЛИЗ": "TÉCNICO",
+          "КРИПТО": "CRIPTO",
+          "АЛГО": "ALGO",
+          "ФУНДАМЕНТАЛ": "FUNDAMENTAL"
+        }
+      }
     };
-    
+
+    function updateUILanguage(lang) {
+      const t = translations[lang];
+      
+      // Update labels
+      for (const [id, text] of Object.entries(t)) {
+        if (id === 'rubrics') continue; // Skip rubrics object
+        const el = document.getElementById(id) || document.getElementById(`label-${id.replace('label', '').toLowerCase()}`);
+        if (el) {
+          if (el.tagName === 'BUTTON') el.textContent = text;
+          else if (el.tagName === 'LABEL') el.textContent = text;
+          else if (id.startsWith('fontStatus')) continue; // Handled separately
+        }
+      }
+      
+      // Update buttons specifically
+      document.getElementById('update-btn').textContent = t.updateBtn;
+      document.getElementById('download-btn').textContent = t.downloadBtn;
+      
+      // Update rubric select options
+      const rubricSelect = document.getElementById('rubric');
+      if (rubricSelect && t.rubrics) {
+        const currentValue = rubricSelect.value;
+        rubricSelect.innerHTML = '';
+        for (const [key, value] of Object.entries(t.rubrics)) {
+          const option = document.createElement('option');
+          option.value = key; // Keep original key for internal use
+          option.textContent = value;
+          if (key === currentValue) option.selected = true;
+          rubricSelect.appendChild(option);
+        }
+      }
+      
+      const statusEl = document.getElementById('font-status');
+      if (statusEl && statusEl.textContent.includes('✅')) statusEl.innerHTML = `<strong>${t.fontStatusReady}</strong>`;
+    }
+
     // Preload fonts - простая и надёжная версия
     const fontLoader = document.fonts && document.fonts.ready 
       ? document.fonts.ready 
@@ -434,22 +520,31 @@
     // Update font status
     fontLoader.then(() => {
       const statusEl = document.getElementById('font-status');
+      const lang = document.getElementById('interface-language').value;
       if (statusEl) {
-        statusEl.innerHTML = '<strong>✅ Шрифты загружены. Готов к генерации!</strong>';
+        statusEl.innerHTML = `<strong>${translations[lang].fontStatusReady}</strong>`;
         statusEl.style.background = 'rgba(0, 216, 0, 0.1)';
         statusEl.style.color = '#00D800';
-      }
-    }).catch(() => {
-      const statusEl = document.getElementById('font-status');
-      if (statusEl) {
-        statusEl.innerHTML = '<strong>⚠️ Шрифты не загрузились, но можно продолжить</strong>';
-        statusEl.style.background = 'rgba(252, 188, 60, 0.1)';
-        statusEl.style.color = '#FCBC3C';
       }
     });
     
     // Wait for DOM to be ready
     document.addEventListener('DOMContentLoaded', function() {
+      const langSelect = document.getElementById('interface-language');
+      langSelect.addEventListener('change', (e) => {
+        updateUILanguage(e.target.value);
+        localStorage.setItem('preferredLanguage', e.target.value);
+      });
+
+      // Restore preference
+      const savedLang = localStorage.getItem('preferredLanguage');
+      if (savedLang) {
+        langSelect.value = savedLang;
+        updateUILanguage(savedLang);
+      } else {
+        updateUILanguage('en');
+      }
+
       // Update preview on input change
       const titleInput = document.getElementById('title');
       const subtitleInput = document.getElementById('subtitle');
@@ -464,7 +559,6 @@
       const bgPatternSelect = document.getElementById('bg-pattern');
       if (bgPatternSelect) {
         bgPatternSelect.addEventListener('change', function(e) {
-          console.log('bg-pattern changed to:', this.value); // Debug
           const customGroup = document.getElementById('custom-image-group');
           if (this.value === 'custom') {
             if (customGroup) customGroup.style.display = 'block';
@@ -472,12 +566,7 @@
             if (customGroup) customGroup.style.display = 'none';
             customImageData = null;
           }
-          // Принудительно обновляем preview
           setTimeout(() => updatePreview(), 10);
-        });
-        // Также добавляем обработчик на input для совместимости
-        bgPatternSelect.addEventListener('input', function() {
-          updatePreview();
         });
       }
       document.getElementById('banner-size').addEventListener('change', updatePreview);
@@ -494,7 +583,6 @@
         }
       });
       
-      // Initial preview
       updatePreview();
     });
     
@@ -507,63 +595,95 @@
         const bgPatternEl = document.getElementById('bg-pattern');
         const bannerSizeEl = document.getElementById('banner-size');
         
-        if (!bgPatternEl) {
-          console.error('bg-pattern element not found');
-          return;
-        }
-        
         const title = titleEl ? titleEl.value || 'Title' : 'Title';
         const subtitle = subtitleEl ? subtitleEl.value || 'SUBTITLE' : 'SUBTITLE';
         const rubric = rubricEl ? rubricEl.value : '';
         const watermark = watermarkEl ? watermarkEl.value || 'MARKETLAB ACADEMY' : 'MARKETLAB ACADEMY';
         const bgPattern = bgPatternEl.value;
-        const bannerSize = bannerSizeEl ? bannerSizeEl.value : 'og';
+        const bannerSize = bannerSizeEl ? bannerSizeEl.value : 'preview';
         const size = bannerSizes[bannerSize];
-        const fonts = fontSizes[bannerSize];
         
-        // Update preview size
+        // Smart scaling: учитываем и ширину, и высоту баннера
+        // Оптимизировано для всех размеров: Preview (350×220), OG (1200×630), Article (1200×400), Telegram (1080×1080)
+        const aspectRatio = size.width / size.height;
+        let baseTitleSize;
+        
+        if (size.width < 500) {
+          // Маленькие баннеры (Preview 350×220): более агрессивное масштабирование
+          baseTitleSize = Math.min(size.width * 0.08, size.height * 0.18); // 8% ширины или 18% высоты
+        } else if (aspectRatio > 2.5) {
+          // Узкие баннеры (Article 1200×400): уменьшаем шрифт
+          baseTitleSize = Math.min(size.width * 0.05, size.height * 0.15); // 5% ширины или 15% высоты
+        } else {
+          // Обычные баннеры (OG, Telegram): стандартное масштабирование
+          baseTitleSize = Math.min(size.width * 0.06, size.height * 0.12); // 6% ширины или 12% высоты
+        }
+        
+        // Минимум зависит от размера баннера
+        const minTitleSize = size.width < 500 ? 18 : 32; // Для Preview минимум 18px, для остальных 32px
+        const titleFontSize = Math.max(minTitleSize, Math.floor(baseTitleSize));
+        const subtitleFontSize = Math.max(size.width < 500 ? 10 : 16, Math.floor(titleFontSize * 0.5)); // 50% от заголовка
+        
         const preview = document.getElementById('banner-preview');
         if (!preview) return;
         
         preview.style.aspectRatio = `${size.width}/${size.height}`;
         
-        // Update font sizes in preview
-        const previewTitle = document.getElementById('preview-title');
-        const previewSubtitle = document.getElementById('preview-subtitle');
-        if (previewTitle) previewTitle.style.fontSize = fonts.title + 'px';
-        if (previewSubtitle) previewSubtitle.style.fontSize = fonts.subtitle + 'px';
+        // Используем requestAnimationFrame для правильного масштабирования после рендера
+        requestAnimationFrame(() => {
+          const previewRect = preview.getBoundingClientRect();
+          if (previewRect.width === 0 || previewRect.height === 0) {
+            // Если элемент еще не отрендерился, используем фиксированный scale
+            const previewTitle = document.getElementById('preview-title');
+            const previewSubtitle = document.getElementById('preview-subtitle');
+            // Адаптивный максимум для превью
+            const maxPreviewTitle = size.width < 500 ? 24 : 48;
+            const maxPreviewSubtitle = size.width < 500 ? 12 : 24;
+            if (previewTitle) {
+              previewTitle.style.fontSize = Math.min(titleFontSize, maxPreviewTitle) + 'px';
+              previewTitle.textContent = title.toUpperCase();
+            }
+            if (previewSubtitle) {
+              previewSubtitle.style.fontSize = Math.min(subtitleFontSize, maxPreviewSubtitle) + 'px';
+              previewSubtitle.textContent = subtitle.toUpperCase();
+            }
+            return;
+          }
+          
+          const scaleX = previewRect.width / size.width;
+          const scaleY = previewRect.height / size.height;
+          const scale = Math.min(scaleX, scaleY);
+          
+          const previewTitle = document.getElementById('preview-title');
+          const previewSubtitle = document.getElementById('preview-subtitle');
+          if (previewTitle) {
+            previewTitle.style.fontSize = (titleFontSize * scale) + 'px';
+            previewTitle.textContent = title.toUpperCase();
+          }
+          if (previewSubtitle) {
+            previewSubtitle.style.fontSize = (subtitleFontSize * scale) + 'px';
+            previewSubtitle.textContent = subtitle.toUpperCase();
+          }
+        });
         
-        // Update text
-        if (previewTitle) previewTitle.textContent = title.toUpperCase();
-        if (previewSubtitle) previewSubtitle.textContent = subtitle.toUpperCase();
         const previewRubric = document.getElementById('preview-rubric');
         const previewWatermark = document.getElementById('preview-watermark');
-        if (previewRubric) previewRubric.textContent = rubric;
+        if (previewRubric) {
+          // Отображаем переведённое значение рубрики
+          const lang = document.getElementById('interface-language').value;
+          const translatedRubric = translations[lang]?.rubrics?.[rubric] || rubric;
+          previewRubric.textContent = translatedRubric;
+        }
         if (previewWatermark) previewWatermark.textContent = watermark.toUpperCase();
         
-        // Update background - ВАЖНО: сначала очищаем все классы и стили
-        // Удаляем все классы паттернов
-        preview.classList.remove('bg-pattern-solid', 'bg-pattern-grid', 'bg-pattern-gradient', 
-                                 'bg-pattern-crypto', 'bg-pattern-bitcoin', 'bg-pattern-blockchain', 
-                                 'bg-pattern-custom');
-        
-        // Очищаем все inline стили background
-        preview.style.removeProperty('background');
-        preview.style.removeProperty('background-image');
-        preview.style.removeProperty('background-size');
-        preview.style.removeProperty('background-position');
-        preview.style.removeProperty('background-repeat');
-        preview.style.removeProperty('background-color');
+        preview.className = '';
+        preview.classList.add(`bg-pattern-${bgPattern}`);
         
         if (bgPattern === 'custom' && customImageData) {
           preview.style.backgroundImage = `url(${customImageData})`;
           preview.style.backgroundSize = 'cover';
-          preview.style.backgroundPosition = 'center';
-          preview.style.backgroundRepeat = 'no-repeat';
-        } else if (bgPattern) {
-          // Применяем класс паттерна
-          const patternClass = `bg-pattern-${bgPattern}`;
-          preview.classList.add(patternClass);
+        } else {
+          preview.style.backgroundImage = '';
         }
       } catch (error) {
         console.error('Error in updatePreview:', error);
@@ -571,7 +691,6 @@
     }
     
     function wrapText(ctx, text, maxWidth, x, y, lineHeight) {
-      // Разбиваем на слова, учитывая пробелы и дефисы
       const words = text.split(/(\s+|-)/).filter(w => w.length > 0);
       let line = '';
       let currentY = y;
@@ -580,47 +699,57 @@
       for (let i = 0; i < words.length; i++) {
         const testLine = line + words[i];
         const metrics = ctx.measureText(testLine);
-        
-        // Если строка превышает maxWidth и это не первое слово
         if (metrics.width > maxWidth && lastWordIndex > 0) {
-          // Рисуем предыдущую строку (без последнего слова)
           const lineToDraw = line.trim();
           if (lineToDraw) {
             ctx.fillText(lineToDraw, x, currentY);
             currentY += lineHeight;
           }
-          // Начинаем новую строку с текущего слова
           line = words[i];
           lastWordIndex = i;
         } else {
           line = testLine;
-          // Обновляем индекс последнего слова, если это не пробел
-          if (words[i].trim()) {
-            lastWordIndex = i;
-          }
+          if (words[i].trim()) lastWordIndex = i;
         }
       }
-      
-      // Рисуем последнюю строку
       const finalLine = line.trim();
       if (finalLine) {
         ctx.fillText(finalLine, x, currentY);
         currentY += lineHeight;
       }
-      
       return currentY;
     }
     
     function downloadBanner() {
       const bannerSize = document.getElementById('banner-size').value;
       const size = bannerSizes[bannerSize];
-      const fonts = fontSizes[bannerSize];
+      
+      // Та же логика масштабирования, что и в preview
+      const aspectRatio = size.width / size.height;
+      let baseTitleSize;
+      
+      if (size.width < 500) {
+        // Маленькие баннеры (Preview 350×220): более агрессивное масштабирование
+        baseTitleSize = Math.min(size.width * 0.08, size.height * 0.18);
+      } else if (aspectRatio > 2.5) {
+        // Узкие баннеры (Article 1200×400): уменьшаем шрифт
+        baseTitleSize = Math.min(size.width * 0.05, size.height * 0.15);
+      } else {
+        // Обычные баннеры (OG, Telegram): стандартное масштабирование
+        baseTitleSize = Math.min(size.width * 0.06, size.height * 0.12);
+      }
+      
+      // Минимум зависит от размера баннера
+      const minTitleSize = size.width < 500 ? 18 : 32;
+      const titleFontSize = Math.max(minTitleSize, Math.floor(baseTitleSize));
+      const subtitleFontSize = Math.max(size.width < 500 ? 10 : 16, Math.floor(titleFontSize * 0.5));
+      const fonts = { title: titleFontSize, subtitle: subtitleFontSize };
+
       const canvas = document.createElement('canvas');
       canvas.width = size.width;
       canvas.height = size.height;
       const ctx = canvas.getContext('2d');
       
-      // Set background
       const bgPattern = document.getElementById('bg-pattern').value;
       
       if (bgPattern === 'custom' && customImageData) {
@@ -628,192 +757,134 @@
         img.crossOrigin = 'anonymous';
         img.onload = function() {
           ctx.drawImage(img, 0, 0, size.width, size.height);
-          renderText(ctx, size, fonts);
-        };
-        img.onerror = function() {
-          // Fallback if image fails to load
-          ctx.fillStyle = '#1A1C1E';
-          ctx.fillRect(0, 0, size.width, size.height);
-          renderText(ctx, size, fonts);
+          renderText(canvas, ctx, size, fonts);
         };
         img.src = customImageData;
-        return;
       } else {
-        // Render background patterns
-        if (bgPattern === 'solid') {
-          ctx.fillStyle = '#1A1C1E';
+        // Render patterns on Canvas
+        ctx.fillStyle = '#0A0B0D';
+        ctx.fillRect(0, 0, size.width, size.height);
+        
+        if (bgPattern.startsWith('gradient-')) {
+          // Используем NES палитру из tokens.css для соответствия лору
+          ctx.fillStyle = '#0F1012'; // --nes-bg-secondary
+          ctx.fillRect(0, 0, size.width, size.height);
+          
+          const grad = ctx.createLinearGradient(0, 0, size.width, size.height);
+          if (bgPattern === 'gradient-electric') {
+            // Crypto Default: NES Blue (#3CBCFC)
+            grad.addColorStop(0, 'rgba(15, 16, 18, 0.8)');
+            grad.addColorStop(0.5, 'rgba(60, 188, 252, 0.2)');
+            grad.addColorStop(1, 'rgba(15, 16, 18, 0.8)');
+          } else if (bgPattern === 'gradient-bullish') {
+            // Bullish: NES Green (#00D800)
+            grad.addColorStop(0, 'rgba(15, 16, 18, 0.8)');
+            grad.addColorStop(0.5, 'rgba(0, 216, 0, 0.15)');
+            grad.addColorStop(1, 'rgba(15, 16, 18, 0.8)');
+          } else if (bgPattern === 'gradient-bearish') {
+            // Bearish: NES Red (#F83800)
+            grad.addColorStop(0, 'rgba(15, 16, 18, 0.8)');
+            grad.addColorStop(0.5, 'rgba(248, 56, 0, 0.15)');
+            grad.addColorStop(1, 'rgba(15, 16, 18, 0.8)');
+          } else if (bgPattern === 'gradient-analysis') {
+            // Technical Analysis: NES Blue (#3CBCFC)
+            grad.addColorStop(0, 'rgba(15, 16, 18, 0.9)');
+            grad.addColorStop(0.5, 'rgba(60, 188, 252, 0.1)');
+            grad.addColorStop(1, 'rgba(15, 16, 18, 0.9)');
+          } else if (bgPattern === 'gradient-premium') {
+            // Premium: NES Yellow (#FCFC00) - subtle
+            grad.addColorStop(0, 'rgba(15, 16, 18, 0.95)');
+            grad.addColorStop(0.5, 'rgba(252, 252, 0, 0.05)');
+            grad.addColorStop(1, 'rgba(15, 16, 18, 0.95)');
+          }
+          ctx.fillStyle = grad;
           ctx.fillRect(0, 0, size.width, size.height);
         } else if (bgPattern === 'grid') {
-          ctx.fillStyle = '#1A1C1E';
-          ctx.fillRect(0, 0, size.width, size.height);
-          // Horizontal lines
-          ctx.strokeStyle = 'rgba(0, 216, 0, 0.15)';
-          ctx.lineWidth = 1;
-          for (let i = 0; i < size.height; i += 16) {
-            ctx.beginPath();
-            ctx.moveTo(0, i);
-            ctx.lineTo(size.width, i);
-            ctx.stroke();
-          }
-          // Vertical lines
           ctx.strokeStyle = 'rgba(0, 216, 0, 0.1)';
-          for (let i = 0; i < size.width; i += 16) {
-            ctx.beginPath();
-            ctx.moveTo(i, 0);
-            ctx.lineTo(i, size.height);
-            ctx.stroke();
-          }
-        } else if (bgPattern === 'gradient') {
-          const grad = ctx.createLinearGradient(0, 0, size.width, size.height);
-          grad.addColorStop(0, '#1A1C1E');
-          grad.addColorStop(0.5, '#0F1012');
-          grad.addColorStop(1, '#1A1C1E');
-          ctx.fillStyle = grad;
-          ctx.fillRect(0, 0, size.width, size.height);
-        } else if (bgPattern === 'crypto') {
-          ctx.fillStyle = '#1A1C1E';
-          ctx.fillRect(0, 0, size.width, size.height);
-          const grad1 = ctx.createRadialGradient(size.width * 0.2, size.height * 0.3, 0, size.width * 0.2, size.height * 0.3, size.width * 0.4);
-          grad1.addColorStop(0, 'rgba(0, 216, 0, 0.2)');
-          grad1.addColorStop(1, 'transparent');
-          ctx.fillStyle = grad1;
-          ctx.fillRect(0, 0, size.width, size.height);
-          const grad2 = ctx.createRadialGradient(size.width * 0.8, size.height * 0.7, 0, size.width * 0.8, size.height * 0.7, size.width * 0.4);
-          grad2.addColorStop(0, 'rgba(60, 188, 252, 0.2)');
-          grad2.addColorStop(1, 'transparent');
-          ctx.fillStyle = grad2;
-          ctx.fillRect(0, 0, size.width, size.height);
-          const grad3 = ctx.createRadialGradient(size.width * 0.5, size.height * 0.5, 0, size.width * 0.5, size.height * 0.5, size.width * 0.6);
-          grad3.addColorStop(0, 'rgba(252, 252, 0, 0.05)');
-          grad3.addColorStop(1, 'transparent');
-          ctx.fillStyle = grad3;
-          ctx.fillRect(0, 0, size.width, size.height);
-        } else if (bgPattern === 'bitcoin') {
-          ctx.fillStyle = '#1A1C1E';
-          ctx.fillRect(0, 0, size.width, size.height);
-          // Diagonal stripes
-          ctx.strokeStyle = 'rgba(247, 147, 26, 0.1)';
-          ctx.lineWidth = 1;
-          for (let i = -size.height; i < size.width + size.height; i += 40) {
-            ctx.beginPath();
-            ctx.moveTo(i, 0);
-            ctx.lineTo(i + size.height, size.height);
-            ctx.stroke();
-          }
-          // Radial gradient
-          const grad = ctx.createRadialGradient(size.width * 0.3, size.height * 0.4, 0, size.width * 0.3, size.height * 0.4, size.width * 0.4);
-          grad.addColorStop(0, 'rgba(247, 147, 26, 0.15)');
-          grad.addColorStop(1, 'transparent');
-          ctx.fillStyle = grad;
-          ctx.fillRect(0, 0, size.width, size.height);
-        } else if (bgPattern === 'blockchain') {
-          ctx.fillStyle = '#1A1C1E';
-          ctx.fillRect(0, 0, size.width, size.height);
-          // Horizontal lines
-          ctx.strokeStyle = 'rgba(0, 216, 0, 0.1)';
-          ctx.lineWidth = 1;
-          for (let i = 0; i < size.height; i += 16) {
-            ctx.beginPath();
-            ctx.moveTo(0, i);
-            ctx.lineTo(size.width, i);
-            ctx.stroke();
-          }
-          // Vertical lines
-          ctx.strokeStyle = 'rgba(60, 188, 252, 0.1)';
-          for (let i = 0; i < size.width; i += 16) {
-            ctx.beginPath();
-            ctx.moveTo(i, 0);
-            ctx.lineTo(i, size.height);
-            ctx.stroke();
-          }
+          for (let i = 0; i < size.width; i += 20) { ctx.beginPath(); ctx.moveTo(i, 0); ctx.lineTo(i, size.height); ctx.stroke(); }
+          for (let i = 0; i < size.height; i += 20) { ctx.beginPath(); ctx.moveTo(0, i); ctx.lineTo(size.width, i); ctx.stroke(); }
         }
         
-        renderText(ctx, size, fonts);
+        renderText(canvas, ctx, size, fonts);
       }
     }
     
-    function renderText(ctx, size, fonts) {
-      // Wait for fonts to be ready
-      fontLoader.then(() => {
-        // Border
+    function renderText(canvas, ctx, size, fonts) {
+      const draw = () => {
         ctx.strokeStyle = '#00D800';
-        ctx.lineWidth = 2;
+        ctx.lineWidth = size.width * 0.005;
         ctx.strokeRect(0, 0, size.width, size.height);
         
-        const padding = Math.max(32, size.width * 0.032);
+        // Адаптивный padding: меньше для маленьких баннеров
+        const padding = size.width < 500 
+          ? Math.max(8, size.width * 0.03)  // Для Preview: минимум 8px, 3% ширины
+          : Math.max(20, size.width * 0.04); // Для остальных: минимум 20px, 4% ширины
         let y = padding;
         
-        // Title
         ctx.fillStyle = '#00D800';
-        ctx.font = `bold ${fonts.title}px "Press Start 2P"`;
+        ctx.font = `bold ${fonts.title}px "Press Start 2P", "Courier New", monospace`;
         ctx.textAlign = 'left';
         ctx.textBaseline = 'top';
-        const title = document.getElementById('title').value.toUpperCase() || 'TITLE';
-        const titleMaxWidth = size.width - (padding * 2);
-        const titleLineHeight = fonts.title * 1.3;
-        y = wrapText(ctx, title, titleMaxWidth, padding, y, titleLineHeight) + 16;
+        const titleVal = document.getElementById('title').value.toUpperCase() || 'TITLE';
+        // Адаптивный межстрочный интервал и максимальная высота
+        const titleLineHeight = fonts.title * (size.width < 500 ? 1.2 : 1.3); // Меньше для маленьких баннеров
+        const maxTitleHeight = size.height * (size.width < 500 ? 0.6 : 0.5); // Больше места для маленьких баннеров
+        y = wrapText(ctx, titleVal, size.width - (padding * 2), padding, y, titleLineHeight);
         
-        // Subtitle
+        // Проверяем, не вышли ли за пределы
+        if (y > maxTitleHeight) {
+          y = maxTitleHeight; // Ограничиваем высоту
+        }
+        
+        // Адаптивный отступ перед подзаголовком
+        y += size.width < 500 
+          ? Math.max(8, size.height * 0.02)  // Для Preview: меньше отступ
+          : Math.max(16, size.height * 0.03); // Для остальных: стандартный отступ
+        
         ctx.fillStyle = '#3CBCFC';
-        ctx.font = `${fonts.subtitle}px "Press Start 2P"`;
-        const subtitle = document.getElementById('subtitle').value.toUpperCase() || 'SUBTITLE';
-        ctx.fillText(subtitle, padding, y);
+        ctx.font = `${fonts.subtitle}px "Press Start 2P", "Courier New", monospace`;
+        const subtitleVal = document.getElementById('subtitle').value.toUpperCase() || 'SUBTITLE';
+        ctx.fillText(subtitleVal, padding, y);
         
-        // Footer
-        const footerY = size.height - 40;
+        // Адаптивный footer: меньше для маленьких баннеров
+        const footerY = size.height - (size.height * (size.width < 500 ? 0.12 : 0.1));
         ctx.strokeStyle = '#00D800';
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.moveTo(padding, footerY);
-        ctx.lineTo(size.width - padding, footerY);
-        ctx.stroke();
+        ctx.lineWidth = size.width < 500 ? 1 : 2; // Тоньше линия для маленьких баннеров
+        ctx.beginPath(); ctx.moveTo(padding, footerY); ctx.lineTo(size.width - padding, footerY); ctx.stroke();
         
-        // Rubric
+        // Размер шрифта рубрики адаптивный
+        const rubricFontSize = size.width < 500 
+          ? Math.floor(size.height * 0.025)  // Для Preview: меньше шрифт
+          : Math.floor(size.height * 0.03);   // Для остальных: стандартный
         ctx.fillStyle = '#00D800';
-        ctx.font = '14px "Press Start 2P"';
-        const rubric = document.getElementById('rubric').value;
-        ctx.fillText(rubric, padding, footerY + 16);
+        ctx.font = `${rubricFontSize}px "Press Start 2P"`;
+        // Отображаем переведённое значение рубрики в Canvas
+        const rubricKey = document.getElementById('rubric').value;
+        const lang = document.getElementById('interface-language').value;
+        const translatedRubric = translations[lang]?.rubrics?.[rubricKey] || rubricKey;
+        const rubricOffset = size.width < 500 ? 8 : 15; // Меньше отступ для маленьких баннеров
+        ctx.fillText(translatedRubric, padding, footerY + rubricOffset);
         
-        // Watermark
+        // Размер шрифта watermark адаптивный
+        const watermarkFontSize = size.width < 500 
+          ? Math.floor(size.height * 0.015)  // Для Preview: меньше шрифт
+          : Math.floor(size.height * 0.02);   // Для остальных: стандартный
         ctx.fillStyle = '#808080';
-        ctx.font = '10px "JetBrains Mono"';
-        const watermark = document.getElementById('watermark').value.toUpperCase() || 'MARKETLAB ACADEMY';
-        const watermarkWidth = ctx.measureText(watermark).width;
-        ctx.fillText(watermark, size.width - watermarkWidth - padding, footerY + 16);
+        ctx.font = `${watermarkFontSize}px "JetBrains Mono"`;
+        const wm = document.getElementById('watermark').value.toUpperCase();
+        ctx.fillText(wm, size.width - ctx.measureText(wm).width - padding, footerY + rubricOffset);
         
-        // Download
-        canvas.toBlob(function(blob) {
-          if (blob) {
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            const sizeName = document.getElementById('banner-size').value;
-            a.download = `banner-${sizeName}-${Date.now()}.png`;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-          } else {
-            alert('Ошибка при создании изображения. Попробуйте еще раз.');
-          }
+        canvas.toBlob(blob => {
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = `banner-${Date.now()}.png`;
+          a.click();
         }, 'image/png');
-      }).catch((err) => {
-        console.error('Font loading error:', err);
-        // Если шрифты не загрузились, всё равно пытаемся скачать
-        canvas.toBlob(function(blob) {
-          if (blob) {
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            const sizeName = document.getElementById('banner-size').value;
-            a.download = `banner-${sizeName}-${Date.now()}.png`;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-          }
-        }, 'image/png');
-      });
+      };
+
+      const fontTimeout = new Promise(resolve => setTimeout(resolve, 500));
+      Promise.race([fontLoader, fontTimeout]).then(draw);
     }
   </script>
 </body>
