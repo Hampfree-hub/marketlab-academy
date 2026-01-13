@@ -19,6 +19,10 @@
 /* Import base (reset + typography) */
 @import './base.css';
 
+/* Import component-specific styles globally to ensure reliable loading */
+@import './components/header.css';
+@import './components/blog-post.css';
+
 :root {
   /* Legacy variables (for compatibility with existing components) */
   /* These map to NES palette */
