@@ -148,7 +148,7 @@ button, .btn, .nav-link, .lang-btn, .theme-btn, .hamburger,
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Press Start 2P', 'Courier New', monospace;
   font-weight: 400;
-  line-height: 1.4; /* ✅ Reduced from 1.8 for better appearance */
+  line-height: 1.4;
   color: var(--nes-text-primary);
   margin-bottom: var(--nes-space-md);
   -webkit-font-smoothing: none;
@@ -159,6 +159,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   text-decoration: none;
   border-bottom: none;
+  scroll-margin-top: 100px; /* ✅ Offset for sticky header */
 }
 
 /* ═══ H1 HEADING STYLES ═══ */
