@@ -65,13 +65,23 @@
 
 h2 { 
 	color: var(--color-text-primary); 
-	margin-bottom: 1rem; 
+	margin-bottom: 1rem;
+	font-size: 1.5rem;
 }
 
 p { 
-	color: var(--color-text-secondary); 
+	color: var(--color-text-secondary);
+	font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
-	/* Mobile styles */
+	.post-card {
+		padding: 1.5rem;
+	}
+	h2 {
+		font-size: 1.25rem;
+	}
+	.archive-header h1 {
+		font-size: 1.25rem;
+	}
 }

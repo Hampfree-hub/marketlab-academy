@@ -1,8 +1,9 @@
 ---
-title: 'Trading Bots Guide'
-description: 'Руководство по торговым ботам: как автоматизировать торговлю криптовалютами, выбрать стратегию и настроить бота для максимальной прибыли'
+title: 'Bitcoin Basics'
+description: 'Bitcoin Basics: what is the first cryptocurrency, how it works, and why it changed the financial world forever'
 pubDate: '2026-01-10'
-# heroImage: './assets/banner.png'  # Будет добавлен после генерации баннера
+bannerImage: './assets/banner.png'
+previewImage: './assets/preview.png'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
