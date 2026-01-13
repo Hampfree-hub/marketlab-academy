@@ -147,56 +147,51 @@ button, .btn, .nav-link, .lang-btn, .theme-btn, .hamburger,
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Press Start 2P', 'Courier New', monospace;
-  font-weight: 400; /* Press Start 2P только в одном начертании */
-  line-height: 1.8; /* ✅ ИСПРАВЛЕНИЕ: Увеличен с 1.6 до 1.8 для большего пространства между строками при выделении */
+  font-weight: 400;
+  line-height: 1.4;
   color: var(--nes-text-primary);
   margin-bottom: var(--nes-space-md);
-  /* text-transform и letter-spacing применяются через классы! */
-  /* ✅ КРИТИЧНО: Отключаем сглаживание для pixelated шрифтов (избегаем артефактов при выделении) */
   -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: unset;
-  font-smooth: never;
-  /* ✅ ИСПРАВЛЕНИЕ: Улучшаем рендеринг для ровного выделения */
   text-rendering: optimizeSpeed;
-  position: relative; /* Для корректного позиционирования выделения */
-  /* ✅ ИСПРАВЛЕНИЕ: Убираем padding и margin для чистоты */
+  position: relative;
   padding: 0;
   margin-top: 0;
-  /* ✅ ИСПРАВЛЕНИЕ: Убираем text-decoration (если есть подчёркивание) */
   text-decoration: none;
-  /* ✅ ИСПРАВЛЕНИЕ: Отключаем border-bottom (если есть подчёркивание через border) */
   border-bottom: none;
+  scroll-margin-top: 100px; /* ✅ Offset for sticky header */
 }
 
 /* ═══ H1 HEADING STYLES ═══ */
-/* h1 БЕЗ класса — нейтральный (НЕ трогаем text-transform!) */
 h1 {
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 1.8; /* ✅ ИСПРАВЛЕНИЕ: Увеличен с 1.6 до 1.8 для большего пространства между строками при выделении */
-  margin-bottom: var(--space-2);
-  /* НЕТ text-transform и letter-spacing! */
-  /* ✅ ИСПРАВЛЕНИЕ: Убираем text-decoration и border-bottom */
+  font-size: 2.5rem; /* ✅ Better rem-based size */
+  line-height: 1.4;
+  margin-bottom: var(--space-4);
   text-decoration: none;
   border-bottom: none;
+}
+
+@media (max-width: 1024px) {
+  h1 { font-size: 2rem; }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
 }
 
 /* .brutal — для коротких заголовков (2-5 слов, CAPS) */
 h1.brutal {
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  line-height: 1.7; /* ✅ ИСПРАВЛЕНИЕ: Увеличен с 1.5 до 1.7 для большего пространства между строками при выделении */
-  text-decoration: none;
-  border-bottom: none;
+  line-height: 1.4; /* ✅ Reduced from 1.7 */
 }
 
 /* .long — для длинных заголовков (5+ слов, обычный вид) */
 h1.long {
   text-transform: none;
   letter-spacing: 0;
-  line-height: 1.9; /* ✅ ИСПРАВЛЕНИЕ: Увеличен с 1.7 до 1.9 для большего пространства между строками при выделении */
-  text-decoration: none;
-  border-bottom: none;
+  line-height: 1.4; /* ✅ Reduced from 1.9 */
 }
 
 /* H2-H6 остаются с uppercase (как и было) */
