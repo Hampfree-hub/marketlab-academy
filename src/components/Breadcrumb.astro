@@ -1,4 +1,8 @@
 ---
+interface Props {
+	items: Array<{ label: string; href?: string }>;
+}
+
 const { items } = Astro.props;
 const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
 	? import.meta.env.BASE_URL 
@@ -11,7 +15,7 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 		{items.map((item, index) => (
 			<li>
 				<span class="separator">/</span>
-				{index === items.length - 1 ? (
+				{index === items.length - 1 || !item.href ? (
 					<span class="current">{item.label}</span>
 				) : (
 					<a href={item.href}>{item.label}</a>

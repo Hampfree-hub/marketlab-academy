@@ -1,0 +1,134 @@
+---
+/*
+  ═══════════════════════════════════════════════════════════════
+  RELATED POSTS COMPONENT (Topic Clusters)
+  ═══════════════════════════════════════════════════════════════
+  
+  Компонент для отображения связанных статей.
+  Используется для создания Topic Clusters (тематических кластеров).
+  
+  Created: 2026-01-13
+  ═══════════════════════════════════════════════════════════════
+*/
+
+import { getRelatedPosts } from '../utils/blog';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+	currentPostId: string;
+	category?: string;
+	limit?: number;
+}
+
+const { currentPostId, category, limit = 3 } = Astro.props;
+
+const relatedPosts = await getRelatedPosts(currentPostId, category, limit);
+
+const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
+	? import.meta.env.BASE_URL 
+	: import.meta.env.BASE_URL + '/';
+---
+
+{relatedPosts.length > 0 && (
+	<section class="related-posts" aria-labelledby="related-posts-title">
+		<h2 id="related-posts-title" class="related-posts-title">[ RELATED_DATA ]</h2>
+		<div class="related-posts-grid">
+			{relatedPosts.map((post) => (
+				<a 
+					href={`${baseUrl}library/${post.id}/`} 
+					class="related-post-card"
+					aria-label={`Читать статью: ${post.data.title}`}
+				>
+					<h3 class="related-post-title">{post.data.title}</h3>
+					{post.data.description && (
+						<p class="related-post-description">{post.data.description}</p>
+					)}
+					<div class="related-post-meta">
+						{('category' in post.data && (post.data as any).category) && (
+							<span class="related-post-category">[{(post.data as any).category.toUpperCase()}]</span>
+						)}
+					</div>
+				</a>
+			))}
+		</div>
+	</section>
+)}
+
+<style>
+	.related-posts {
+		margin-top: 4rem;
+		padding-top: 3rem;
+		border-top: 2px solid var(--color-border);
+	}
+
+	.related-posts-title {
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 0.875rem;
+		color: var(--color-accent);
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-bottom: 1.5rem;
+		font-weight: 700;
+	}
+
+	.related-posts-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.related-post-card {
+		display: block;
+		padding: 1.5rem;
+		border: 1px solid var(--color-border);
+		border-bottom: 3px solid var(--color-border);
+		background: var(--nes-bg-secondary);
+		text-decoration: none;
+		color: inherit;
+		transition: all 0.15s steps(3);
+	}
+
+	.related-post-card:hover {
+		border-color: var(--color-accent);
+		background: var(--nes-bg-primary);
+		transform: translateY(-2px);
+	}
+
+	.related-post-title {
+		font-size: 1.125rem;
+		font-weight: 700;
+		margin-bottom: 0.75rem;
+		color: var(--color-text);
+		line-height: 1.4;
+	}
+
+	.related-post-description {
+		font-size: 0.875rem;
+		color: var(--color-text-secondary);
+		line-height: 1.6;
+		margin-bottom: 1rem;
+	}
+
+	.related-post-meta {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 0.75rem;
+	}
+
+	.related-post-category {
+		color: var(--color-accent);
+		font-weight: 700;
+	}
+
+	@media (max-width: 768px) {
+		.related-posts-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.related-post-card {
+			padding: 1.25rem;
+		}
+	}
+</style>

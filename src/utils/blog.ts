@@ -20,10 +20,31 @@ import type { CollectionEntry } from 'astro:content';
  * Note: Astro Content Collections не поддерживает draft в schema,
  * поэтому фильтрация по draft не применяется
  */
-export async function getPosts(): Promise<CollectionEntry<'blog'>[]> {
-	const posts = await getCollection('blog');
+export async function getPosts(): Promise<CollectionEntry<'blog-ru'>[]> {
+	const ruPosts = await getCollection('blog-ru');
+	const enPosts = await getCollection('blog-en');
+	const esPosts = await getCollection('blog-es');
 	
-	return posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+	const allPosts = [...ruPosts, ...enPosts, ...esPosts];
+	
+	return allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+}
+
+/**
+ * Получить отранжированные посты для главной страницы
+ * Сначала идут pinned: true, затем остальные по дате
+ */
+export async function getRankedPosts(): Promise<CollectionEntry<'blog-ru'>[]> {
+	const posts = await getPosts();
+	
+	return posts.sort((a, b) => {
+		// Сначала сравниваем по pinned
+		if (a.data.pinned && !b.data.pinned) return -1;
+		if (!a.data.pinned && b.data.pinned) return 1;
+		
+		// Если оба pinned или оба не pinned, сравниваем по дате
+		return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+	});
 }
 
 /**
@@ -70,4 +91,33 @@ export function estimateReadTime(content: string, wordsPerMinute: number = 200):
 export async function getLatestPosts(limit: number = 5): Promise<CollectionEntry<'blog'>[]> {
 	const posts = await getPosts();
 	return posts.slice(0, limit);
+}
+
+/**
+ * Получить связанные статьи (Topic Clusters)
+ * Сначала пытается найти статьи из той же категории, затем - последние статьи
+ * @param currentPostId - ID текущей статьи (будет исключена из результатов)
+ * @param category - Категория текущей статьи (опционально)
+ * @param limit - Количество статей (по умолчанию 3)
+ */
+export async function getRelatedPosts(
+	currentPostId: string,
+	category?: string,
+	limit: number = 3
+): Promise<CollectionEntry<'blog-ru'>[]> {
+	const posts = await getPosts();
+	
+	// Исключаем текущую статью
+	const filteredPosts = posts.filter(post => post.id !== currentPostId);
+	
+	// Если есть категория, пытаемся найти статьи из той же категории
+	if (category) {
+		const sameCategoryPosts = filteredPosts.filter(post => post.data.category === category);
+		if (sameCategoryPosts.length > 0) {
+			return sameCategoryPosts.slice(0, limit);
+		}
+	}
+	
+	// Если нет категории или не нашли статьи из той же категории, возвращаем последние
+	return filteredPosts.slice(0, limit);
 }

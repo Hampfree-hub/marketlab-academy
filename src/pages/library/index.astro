@@ -1,0 +1,179 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getPosts } from '../../utils/blog';
+import FormattedDate from '../../components/FormattedDate.astro';
+import ScrollTop from '../../components/ScrollTop.astro';
+import '../../styles/components/blog-index.css';
+
+const posts = await getPosts();
+
+const categories = [
+	{ 
+		id: 'technical-analysis', 
+		label: 'ТЕХАНАЛИЗ', 
+		full: 'Технический анализ'
+	},
+	{ 
+		id: 'crypto', 
+		label: 'КРИПТО', 
+		full: 'Криптовалюты и крипторынок'
+	},
+	{ 
+		id: 'algo-trading', 
+		label: 'АЛГО', 
+		full: 'Алготрейдинг и автоматизация'
+	},
+	{ 
+		id: 'fundamental-analysis', 
+		label: 'ФУНДАМЕНТАЛ', 
+		full: 'Фундаментальный анализ'
+	}
+];
+
+const breadcrumbItems = [{ label: 'Библиотека' }];
+---
+
+<!doctype html>
+<html lang="ru">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main class="container">
+			<div class="archive-header">
+				<Breadcrumb items={breadcrumbItems} />
+				<h1 class="mono">> БИБЛИОТЕКА_ЗНАНИЙ</h1>
+				
+				<div class="search-bar">
+					<input type="text" placeholder="ПОИСК_ПО_БАЗЕ..." id="searchInput" />
+				</div>
+
+				<div class="categories-filter">
+					<div class="section-label" style="margin-top: 3rem; margin-bottom: 1.5rem;">ФИЛЬТР_ПО_КАТЕГОРИЯМ:</div>
+					<div class="categories-container" role="group" style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem;">
+						{categories.map(cat => (
+							<button 
+								class="tag-btn" 
+								data-cat={cat.id} 
+								aria-pressed="false"
+								title={cat.full}
+							>
+								[{cat.label}]
+							</button>
+						))}
+					</div>
+				</div>
+			</div>
+
+			<section class="posts-grid fade-in" id="postsGrid">
+				{posts.map((post) => (
+					<a 
+						href={`/marketlab-academy/library/${post.id}/`} 
+						class="post-card" 
+						data-title={post.data.title.toLowerCase()}
+						data-description={post.data.description.toLowerCase()}
+						data-category={post.data.category || ''}
+					>
+						<div class="post-meta">
+							<span><FormattedDate date={post.data.pubDate} /></span>
+						</div>
+						<h3>{post.data.title}</h3>
+						<p class="description">{post.data.description}</p>
+						<div class="read-more-link" aria-hidden="true">> Читать полностью</div>
+					</a>
+				))}
+			</section>
+			
+			<div id="noResults" style="display: none; text-align: center; padding: 3rem 0; color: var(--color-text-secondary); font-family: 'JetBrains Mono', monospace;">
+				> НИЧЕГО_НЕ_НАЙДЕНО_ПО_ВАШЕМУ_ЗАПРОСУ
+			</div>
+			<ScrollTop />
+		</main>
+		<Footer />
+
+		<script>
+			import Fuse from 'fuse.js';
+
+			const searchInput = document.getElementById('searchInput');
+			const postsGrid = document.getElementById('postsGrid');
+			const postCards = document.querySelectorAll('.post-card');
+			const noResults = document.getElementById('noResults');
+			const categoryButtons = document.querySelectorAll('.tag-btn[data-cat]');
+
+			// Prepare data for Fuse
+			const postsData = Array.from(postCards).map(card => ({
+				id: card.getAttribute('href'),
+				title: card.querySelector('h3').innerText,
+				description: card.querySelector('.description').innerText,
+				category: card.getAttribute('data-category'),
+				element: card
+			}));
+
+			const fuse = new Fuse(postsData, {
+				keys: ['title', 'description'],
+				threshold: 0.3
+			});
+
+			let activeCategory = null;
+			let searchTerm = '';
+
+			function updateDisplay() {
+				let filtered = postsData;
+
+				// Filter by category
+				if (activeCategory) {
+					filtered = filtered.filter(p => p.category === activeCategory);
+				}
+
+				// Filter by search
+				if (searchTerm) {
+					const results = fuse.search(searchTerm);
+					const resultIds = new Set(results.map(r => r.item.id));
+					filtered = filtered.filter(p => resultIds.has(p.id));
+				}
+
+				// Update visibility
+				let visibleCount = 0;
+				postCards.forEach(card => {
+					const id = card.getAttribute('href');
+					const isVisible = filtered.some(p => p.id === id);
+					card.style.display = isVisible ? 'flex' : 'none';
+					if (isVisible) visibleCount++;
+				});
+
+				noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+			}
+
+			searchInput.addEventListener('input', (e) => {
+				searchTerm = e.target.value;
+				updateDisplay();
+			});
+
+			categoryButtons.forEach(btn => {
+				btn.addEventListener('click', () => {
+					const cat = btn.getAttribute('data-cat');
+					
+					if (activeCategory === cat) {
+						activeCategory = null;
+						btn.classList.remove('active');
+						btn.setAttribute('aria-pressed', 'false');
+					} else {
+						categoryButtons.forEach(b => {
+							b.classList.remove('active');
+							b.setAttribute('aria-pressed', 'false');
+						});
+						activeCategory = cat;
+						btn.classList.add('active');
+						btn.setAttribute('aria-pressed', 'true');
+					}
+					updateDisplay();
+				});
+			});
+		</script>
+	</body>
+</html>

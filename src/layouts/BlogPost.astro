@@ -3,6 +3,8 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import ScrollTop from '../components/ScrollTop.astro';
+import RelatedPosts from '../components/RelatedPosts.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 
 interface Props {
@@ -11,10 +13,15 @@ interface Props {
 	pubDate?: Date;
 	updatedDate?: Date;
 	heroImage?: string;
+	bannerImage?: string;
+	category?: string;
+	postId?: string;
 	headings?: { depth: number; slug: string; text: string }[];
+	customBreadcrumbs?: { label: string; href?: string }[];
 }
 
-const { title, description, pubDate, updatedDate, heroImage, headings } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, bannerImage, category, postId, headings, customBreadcrumbs } = Astro.props;
+const displayImage = heroImage || bannerImage;
 const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
 	? import.meta.env.BASE_URL 
     : import.meta.env.BASE_URL + '/';
@@ -22,15 +29,32 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 const titleWords = title.split(/\s+/).length;
 const headingClass = titleWords <= 5 ? 'brutal' : 'long';
 
-const breadcrumbItems = [
-	{ label: 'Архив', href: `${baseUrl}blog` },
-	{ label: title }
-];
+// Маппинг категорий для хлебных крошек
+const categoryLabels: Record<string, string> = {
+	'technical-analysis': 'Теханализ',
+	'crypto': 'Крипто',
+	'algo-trading': 'Алго',
+	'fundamental-analysis': 'Фундаментал',
+};
+
+const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrumbs || (() => {
+	const items: Array<{ label: string; href?: string }> = [
+		{ label: 'Библиотека', href: `${baseUrl}library` }
+	];
+	
+	// Добавляем категорию в хлебные крошки, если она указана
+	if (category && categoryLabels[category]) {
+		items.push({ label: categoryLabels[category] });
+	}
+	
+	items.push({ label: title });
+	return items;
+})();
 ---
 
 <html lang="ru">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} image={displayImage} />
 	</head>
 
 	<body>
@@ -60,30 +84,24 @@ const breadcrumbItems = [
 
 					<h1 class={headingClass}>{title}</h1>
 					
-					{heroImage && <img src={heroImage} alt="" class="hero-img" />}
+					{displayImage && <img src={displayImage} alt="" class="hero-img" />}
 
 					<div class="prose">
 						<slot />
 					</div>
+
+					{postId && (
+						<RelatedPosts currentPostId={postId} category={category} />
+					)}
 				</article>
 			</div>
 
-			<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+			<ScrollTop />
 		</main>
 		<Footer />
 
 		<script is:inline>
-			const scrollTopBtn = document.getElementById('scrollTop');
-			window.onscroll = function() {
-				if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-					scrollTopBtn.style.display = "flex";
-				} else {
-					scrollTopBtn.style.display = "none";
-				}
-			};
-			scrollTopBtn.onclick = function() {
-				window.scrollTo({top: 0, behavior: 'smooth'});
-			};
+			// Scroll logic moved to component
 		</script>
 	</body>
 </html>
