@@ -66,9 +66,9 @@ article {
 
 .meta {
 	font-family: 'JetBrains Mono', monospace;
-	font-size: 0.75rem; /* ✅ Reduced from 0.8rem */
+	font-size: 0.75rem;
 	color: var(--color-text-secondary);
-	margin-bottom: 1rem;
+	margin-bottom: 0.5rem;
 }
 
 h1 {
@@ -82,7 +82,8 @@ h1 {
 .hero-img {
 	width: 100%;
 	border: 1px solid var(--color-border);
-	margin-bottom: 3rem;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
 }
 
 .scroll-top {
