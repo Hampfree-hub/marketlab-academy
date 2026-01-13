@@ -48,16 +48,16 @@ const breadcrumbItems = [
 				<article class="fade-in">
 					<Breadcrumb items={breadcrumbItems} />
 					
-					<div class="meta">
+					<div class="meta" style="margin-bottom: 0;">
 						<FormattedDate date={pubDate} />
 						{updatedDate && <span> | UPDATED: <FormattedDate date={updatedDate} /></span>}
 					</div>
 
-					<h1 class={headingClass}>{title}</h1>
+					<h1 class={headingClass} style="margin-bottom: 1rem;">{title}</h1>
 					
 					{heroImage && <img src={heroImage} alt="" class="hero-img" />}
 
-					<div class="prose">
+					<div class="prose" style="margin-top: 0;">
 						<slot />
 					</div>
 				</article>
