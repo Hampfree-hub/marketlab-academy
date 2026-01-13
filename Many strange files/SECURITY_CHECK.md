@@ -1,6 +1,6 @@
-# ✅ ПРОВЕРКА БЕЗОПАСНОСТИ КОММИТОВ — 2026-01-09
+# ✅ ПРОВЕРКА БЕЗОПАСНОСТИ КОММИТОВ — 2026-01-13
 
-**Дата:** 2026-01-09  
+**Дата:** 2026-01-13  
 **Статус:** ✅ **БЕЗОПАСНО**
 
 ---
@@ -9,9 +9,9 @@
 
 ### **Сегодняшние коммиты:**
 
-1. ✅ `c544056` — fix: улучшение выделения текста (дополнительные стили для устранения артефактов)
-   - **Файлы:** `src/styles/base.css`, `TEXT_SELECTION_IMPROVED.md`, `COMMIT_COMPLETE.md`
-   - **Проверка:** ✅ Нет секретов (только CSS и документация)
+1. ✅ `f328cdc` — fix: critical CSS loading and layout stabilization
+   - **Файлы:** `src/components/Header.astro`, `src/layouts/BlogPost.astro`, `src/pages/about.astro`, `src/styles/components/header.css`, `src/styles/global.css`
+   - **Проверка:** ✅ Нет секретов (только CSS, Astro компоненты и текст страницы «О проекте»)
 
 2. ✅ `bac40a2` — fix: исправление выделения текста, мобильного меню и унификация кнопок
    - **Файлы:** `src/styles/base.css`, `src/components/Header.astro`, `src/styles/components/header.css`, документация
