@@ -64,6 +64,37 @@ article {
 	min-width: 0;
 }
 
+/* Убираем возможные артефакты (точки) перед контентом */
+.prose {
+	list-style: none;
+}
+
+.prose > * {
+	list-style: inherit;
+}
+
+/* Специфические отступы для мобильных */
+@media (max-width: 768px) {
+	.layout-grid {
+		grid-template-columns: 1fr;
+		gap: 24px;
+		padding: 0 16px;
+	}
+	
+	.toc-sticky {
+		position: static;
+		max-height: none;
+		margin-bottom: 2rem;
+		padding-right: 0;
+	}
+}
+
+@media (max-width: 480px) {
+	.layout-grid {
+		padding: 0 8px;
+	}
+}
+
 .meta {
 	font-family: 'JetBrains Mono', monospace;
 	font-size: 0.75rem;
@@ -86,27 +117,8 @@ h1 {
 	margin-bottom: 2rem;
 }
 
-.scroll-top {
-	position: fixed;
-	bottom: 32px;
-	right: 32px;
-	background: var(--color-card-bg);
-	border: 1px solid var(--color-accent);
-	color: var(--color-accent);
-	width: 44px;
-	height: 44px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-	z-index: 100;
-	transition: all var(--transition-normal);
-}
+/* Scroll top moved to global component */
 
-.scroll-top:hover {
-	background: var(--color-accent);
-	color: var(--color-bg);
-}
 
 @media (max-width: 1200px) {
 	.layout-grid { 

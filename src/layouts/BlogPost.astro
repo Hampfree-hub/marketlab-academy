@@ -84,7 +84,7 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 
 					<h1 class={headingClass}>{title}</h1>
 					
-					{displayImage && <img src={displayImage} alt="" class="hero-img" />}
+					{displayImage && <img src={displayImage} alt="" class="hero-img" loading="eager" />}
 
 					<div class="prose">
 						<slot />

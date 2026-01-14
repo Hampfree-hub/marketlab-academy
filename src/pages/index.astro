@@ -3,14 +3,12 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { getCollection } from 'astro:content';
+import { getRankedPosts } from '../utils/blog';
 import FormattedDate from '../components/FormattedDate.astro';
+import ScrollTop from '../components/ScrollTop.astro';
 import '../styles/components/home-index.css';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
-
+const posts = await getRankedPosts();
 const featuredPosts = posts.slice(0, 4);
 
 // Категории блога (v2 - 2026-01-08)
@@ -53,30 +51,14 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 		<section class="hero" aria-labelledby="hero-title">
 			<h1 id="hero-title" class="brutal">{SITE_TITLE}</h1>
 			<p>{SITE_DESCRIPTION}</p>
-			<a href={`${baseUrl}blog`} class="btn">Читать статьи</a>
-			</section>
-
-			<section aria-labelledby="cat-label">
-				<div id="cat-label" class="section-label">КАТЕГОРИИ</div>
-				<div class="categories-container" role="group" aria-label="Фильтр по категориям">
-					{categories.map(cat => (
-						<button 
-							class="tag-btn" 
-							data-cat={cat.id} 
-							aria-pressed="false"
-							title={cat.full}
-						>
-							[{cat.label}]
-						</button>
-					))}
-				</div>
+			<a href={`${baseUrl}library`} class="btn">Читать статьи</a>
 			</section>
 
 			<section aria-labelledby="recent-label">
 				<div id="recent-label" class="section-label">ПОСЛЕДНИЕ_СТАТЬИ</div>
-				<div class="posts-grid">
+					<div class="posts-grid">
 					{featuredPosts.map(post => (
-						<a href={`${baseUrl}blog/${post.slug}/`} class="post-card" aria-label={`Читать статью: ${post.data.title}`}>
+						<a href={`${baseUrl}library/${post.id}/`} class="post-card" aria-label={`Читать статью: ${post.data.title}`}>
 					<div class="post-meta">
 						<span><FormattedDate date={post.data.pubDate} /></span>
 						<span class="meta-divider">·</span>
@@ -114,19 +96,11 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 					<p id="form-success" class="success-text" role="status">Спасибо за подписку! Проверьте вашу почту.</p>
 				</form>
 			</section>
+			<ScrollTop />
 		</main>
 		<Footer />
 
 		<script is:inline>
-			// Categories active state toggle
-			document.querySelectorAll('.tag-btn').forEach(btn => {
-				btn.addEventListener('click', () => {
-					const isPressed = btn.getAttribute('aria-pressed') === 'true';
-					btn.setAttribute('aria-pressed', !isPressed);
-					btn.classList.toggle('active');
-				});
-			});
-
 			// Newsletter Validation
 			const form = document.getElementById('newsletter-form');
 			const errorMsg = document.getElementById('form-error');

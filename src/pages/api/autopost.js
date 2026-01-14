@@ -30,7 +30,7 @@ export async function POST({ request }) {
     const postData = {
       title: latestPost.data.title,
       description: latestPost.data.description,
-      link: `/marketlab-academy/blog/${latestPost.id}/`,
+      link: `/marketlab-academy/library/${latestPost.id}/`,
       pubDate: latestPost.data.pubDate,
       content: latestPost.body
     };
