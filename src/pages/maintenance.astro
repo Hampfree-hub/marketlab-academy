@@ -1,167 +1,147 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 import { SITE_TITLE } from '../consts';
+import { ui } from '../i18n/ui';
 ---
 
 <!doctype html>
 <html lang="ru">
 	<head>
-		<BaseHead title="Блог временно недоступен" description="Блог на техническом обслуживании" />
+		<BaseHead title="MAINTENANCE / ОБСЛУЖИВАНИЕ" description="System reboot in progress" />
 	</head>
 	<body>
-		<div class="maintenance-wrapper">
-			<div class="maintenance-container">
-				<div class="maintenance-content">
-				<div class="maintenance-icon">
-					<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.78 1.31a2 2 0 0 0 .73 2.73l.15.08a2 2 0 0 1 1 1.73v.56a2 2 0 0 1-1 1.73l-.15.08a2 2 0 0 0-.73 2.73l.78 1.31a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.78-1.31a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.73v-.56a2 2 0 0 1 1-1.73l.15-.08a2 2 0 0 0 .73-2.73l-.78-1.31a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2-0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
-						<circle cx="12" cy="12" r="3"/>
-					</svg>
-				</div>
-					<h1>Блог временно недоступен</h1>
-					<p>Мы проводим техническое обслуживание</p>
-					<p class="subtitle">Скоро вернёмся!</p>
+		<Header />
+		<main class="container">
+			<div class="maintenance-wrapper">
+				<div class="nes-container is-dark with-title is-centered">
+					<p class="title">SYSTEM_STATUS: OFFLINE</p>
+					
+					<div class="maintenance-icon">
+						<!-- Pixel Gear -->
+						<svg width="100" height="100" viewBox="0 0 24 24" fill="currentColor">
+							<path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+							<path d="M22 12c0-.55-.45-1-1-1h-2.09c-.11-.37-.25-.72-.41-1.06l1.48-1.48c.39-.39.39-1.02 0-1.41l-1.41-1.41c-.39-.39-1.02-.39-1.41 0l-1.48 1.48c-.34-.16-.69-.3-1.06-.41V4c0-.55-.45-1-1-1h-2c-.55 0-1 .45-1 1v2.09c-.37.11-.72.25-1.06.41L7.9 5.02c-.39-.39-1.02-.39-1.41 0L5.08 6.43c-.39.39-.39 1.02 0 1.41l1.48 1.48c-.16.34-.3.69-.41 1.06H4c-.55 0-1 .45-1 1v2c0 .55.45 1 1 1h2.09c.11.37.25.72.41 1.06l-1.48 1.48c-.39.39-.39 1.02 0 1.41l1.41 1.41c.39.39 1.02.39 1.41 0l1.48-1.48c.34.16.69.3 1.06.41V20c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-2.09c.37-.11.72-.25 1.06-.41l1.48 1.48c.39.39 1.02.39 1.41 0l1.41-1.41c.39-.39.39-1.02 0-1.41l-1.48-1.48c.16-.34.3-.69.41-1.06H20c.55 0 1-.45 1-1v-2z"/>
+						</svg>
+					</div>
+
+					<div class="lang-block">
+						<h1 class="mono">{ui.ru['maintenance.title']}</h1>
+						<p>{ui.ru['maintenance.message']}</p>
+						<p class="subtitle">{ui.ru['maintenance.subtitle']}</p>
+					</div>
+
+					<div class="divider">---</div>
+
+					<div class="lang-block">
+						<h1 class="mono">{ui.en['maintenance.title']}</h1>
+						<p>{ui.en['maintenance.message']}</p>
+						<p class="subtitle">{ui.en['maintenance.subtitle']}</p>
+					</div>
+
+					<div class="divider">---</div>
+
+					<div class="lang-block">
+						<h1 class="mono">{ui.es['maintenance.title']}</h1>
+						<p>{ui.es['maintenance.message']}</p>
+						<p class="subtitle">{ui.es['maintenance.subtitle']}</p>
+					</div>
+					
+					<div class="maintenance-status">
+						<span class="status-code">ERROR_CODE: 503_SERVICE_UNAVAILABLE</span>
+						<span class="status-msg">SYSTEM_REBOOT_IN_PROGRESS...</span>
+					</div>
 				</div>
 			</div>
-			<Footer />
-		</div>
+		</main>
+		<Footer />
+
+		<style>
+			.maintenance-wrapper {
+				min-height: 60vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 4rem 0;
+			}
+
+			.nes-container {
+				max-width: 800px;
+				width: 100%;
+				padding: 3rem;
+				border: 4px solid var(--nes-border-primary);
+				background-color: var(--nes-bg-secondary);
+			}
+
+			.maintenance-icon {
+				color: var(--nes-accent-yellow);
+				margin-bottom: 3rem;
+				animation: rotate 4s steps(8) infinite;
+			}
+
+			@keyframes rotate {
+				from { transform: rotate(0deg); }
+				to { transform: rotate(360deg); }
+			}
+
+			.lang-block {
+				margin-bottom: 2rem;
+			}
+
+			h1 {
+				font-size: 1.2rem;
+				line-height: 1.6;
+				margin-bottom: 1rem;
+				color: var(--nes-accent-green);
+			}
+
+			p {
+				font-size: 0.9rem;
+				margin-bottom: 0.5rem;
+			}
+
+			.subtitle {
+				font-family: 'Press Start 2P', monospace;
+				font-size: 0.8rem;
+				color: var(--color-text-primary);
+			}
+
+			.divider {
+				color: var(--nes-border-primary);
+				margin-bottom: 2rem;
+				letter-spacing: 4px;
+			}
+
+			.maintenance-status {
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+				font-family: 'JetBrains Mono', monospace;
+				font-size: 0.75rem;
+				color: var(--color-text-secondary);
+				background: rgba(0, 0, 0, 0.3);
+				padding: 1rem;
+				border-left: 4px solid var(--nes-accent-red);
+				text-align: left;
+				margin-top: 3rem;
+			}
+
+			.status-code {
+				color: var(--nes-accent-red);
+			}
+
+			@media (max-width: 768px) {
+				.nes-container {
+					padding: 1.5rem;
+				}
+				h1 {
+					font-size: 1rem;
+				}
+				.subtitle {
+					font-size: 0.7rem;
+				}
+			}
+		</style>
 	</body>
 </html>
-
-<style>
-	body {
-		margin: 0;
-		padding: 0;
-		font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
-		/* Вариант 1: Едва серый фон (9/10) — лучший баланс */
-		background: #F8F8F8;
-		min-height: 100vh;
-	}
-
-	.maintenance-wrapper {
-		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
-	}
-
-	.maintenance-container {
-		flex: 1;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 2em;
-	}
-
-	.maintenance-content {
-		text-align: center;
-		color: white;
-		/* Зелёный градиент для карточки */
-		background: linear-gradient(135deg, 
-			#6BC86B 0%,    /* Лайм (средний зелёный) */
-			#4A9A4A 50%,   /* Лесной зелёный */
-			#3A7A3A 100%   /* Тёмно-зелёный */
-		);
-		border-radius: 24px;
-		padding: 3.5em 2.5em;
-		/* Усиленная многослойная тень для depth */
-		box-shadow: 
-			0 16px 48px rgba(0, 0, 0, 0.15), 
-			0 8px 24px rgba(0, 0, 0, 0.12), 
-			0 4px 12px rgba(0, 0, 0, 0.08);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		max-width: 600px;
-		width: 100%;
-	}
-
-	.maintenance-icon {
-		width: 64px;
-		height: 64px;
-		margin: 0 auto 2em auto;
-		color: #F0D890;
-		animation: rotate 3s linear infinite;
-	}
-
-	@keyframes rotate {
-		from {
-			transform: rotate(0deg);
-		}
-		to {
-			transform: rotate(360deg);
-		}
-	}
-
-	h1 {
-		font-size: 2.5em;
-		margin: 0 0 0.5em 0;
-		font-weight: 500;
-		color: #FFFFFF;
-		/* Объёмные многослойные тени - слегка усилены для глубины */
-		text-shadow: 
-			0 2px 3px rgba(0, 0, 0, 0.35),
-			0 3px 6px rgba(0, 0, 0, 0.3),
-			0 6px 12px rgba(0, 0, 0, 0.25),
-			0 0 16px rgba(0, 0, 0, 0.2);
-		letter-spacing: -0.02em; /* Лёгкое уплотнение для лучшей читаемости */
-	}
-
-	p {
-		font-size: 1.2em;
-		margin: 0.5em 0;
-		line-height: 1.6;
-		color: #FFFFFF;
-		/* Объёмные многослойные тени - слегка усилены */
-		text-shadow: 
-			0 1px 3px rgba(0, 0, 0, 0.35),
-			0 2px 6px rgba(0, 0, 0, 0.25),
-			0 0 10px rgba(0, 0, 0, 0.15);
-	}
-
-	.subtitle {
-		font-size: 1em;
-		color: #FFFFFF; /* Явно белый, как и остальной текст */
-		margin-top: 1em;
-		/* Объёмные многослойные тени (как у основного текста) */
-		text-shadow: 
-			0 1px 3px rgba(0, 0, 0, 0.35),
-			0 2px 6px rgba(0, 0, 0, 0.25),
-			0 0 10px rgba(0, 0, 0, 0.15);
-	}
-
-	/* Footer стилизация для maintenance page */
-	:global(footer) {
-		background: var(--bg-secondary, #F5F0E8);
-		border-top: 1px solid rgba(0, 0, 0, 0.05);
-	}
-
-	:global(.footer-copyright p) {
-		color: rgba(255, 255, 255, 0.8);
-	}
-
-	:global(.footer-section h3) {
-		color: #F0D890;
-	}
-
-	:global(.footer-section a) {
-		color: rgba(255, 255, 255, 0.7);
-	}
-
-	:global(.footer-section a:hover) {
-		color: #F0D890;
-	}
-
-	@media (max-width: 720px) {
-		h1 {
-			font-size: 2em;
-		}
-
-		.maintenance-content {
-			padding: 2.5em 1.5em;
-		}
-
-		p {
-			font-size: 1.1em;
-		}
-	}
-</style>
-

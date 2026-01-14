@@ -1,7 +1,14 @@
 ---
-const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
-	? import.meta.env.BASE_URL 
-	: import.meta.env.BASE_URL + '/';
+/*
+  MobileMenu Component
+  Includes navigation links, language switcher and theme toggle for mobile view.
+*/
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../../i18n/utils';
+import { languages } from '../../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 
 const currentPath = Astro.url.pathname;
 const isLibrary = currentPath.includes('/library');
@@ -9,32 +16,64 @@ const isAbout = currentPath.includes('/about');
 ---
 
 <!-- MOBILE MENU -->
-<div id="mobile-menu" class="mobile-menu" aria-label="Мобильное меню">
-	<a href={`${baseUrl}library`} aria-current={isLibrary ? 'page' : undefined}>[БИБЛИОТЕКА]</a>
-	<a href={`${baseUrl}about`} aria-current={isAbout ? 'page' : undefined}>[О_ПРОЕКТЕ]</a>
+<div id="mobile-menu" class="mobile-menu" aria-label={t('mobile.menu_aria_label')}>
+	<nav class="mobile-nav-links">
+		<a href={translatePath('library')} class={isLibrary ? 'active' : ''} aria-current={isLibrary ? 'page' : undefined}>[{t('nav.library')}]</a>
+		<a href={translatePath('about')} class={isAbout ? 'active' : ''} aria-current={isAbout ? 'page' : undefined}>[{t('nav.about')}]</a>
+	</nav>
 	
 	<!-- Mobile: Languages -->
 	<div class="mobile-lang-switcher">
-		<span class="mobile-menu-label">ЯЗЫК / LANGUAGE:</span>
+		<span class="mobile-menu-label">{t('mobile.lang_label')}</span>
 		<div class="mobile-lang-buttons">
-			<button class="lang-btn-mobile active">RU</button>
-			<button class="lang-btn-mobile">EN</button>
-			<button class="lang-btn-mobile">ES</button>
+			{Object.keys(languages).map((l) => (
+				<button 
+					class={`lang-btn-mobile ${lang === l ? 'active' : ''}`} 
+					data-lang={l}
+						onclick={`
+							const currentPath = window.location.pathname;
+							const pathParts = currentPath.split('/');
+							const langIndex = pathParts.findIndex(p => p === 'marketlab-academy') + 1;
+							
+							// Keep menu open after reload
+							const suffix = '?menu=open';
+							
+							if (langIndex > 0 && langIndex < pathParts.length) {
+								pathParts[langIndex] = '${l}';
+								// Ensure trailing slash
+								let newPath = pathParts.join('/');
+								if (!newPath.endsWith('/')) newPath += '/';
+								window.location.href = newPath + suffix;
+							} else {
+								window.location.href = '/marketlab-academy/${l}/' + suffix;
+							}
+						`}
+				>
+					{l.toUpperCase()}
+				</button>
+			))}
 		</div>
 	</div>
 	
 	<!-- Mobile: Theme -->
 	<div class="mobile-theme-switcher">
-		<button id="theme-toggle-mobile" class="theme-btn-mobile" aria-label="Переключить тему">
+		<button id="theme-toggle-mobile" class="theme-btn-mobile" aria-label={t('theme.toggle')}>
 			<svg class="theme-icon-mobile" viewBox="0 0 16 16" fill="currentColor">
-				<!-- Sun icon (8-bit pixel) -->
 				<rect x="6" y="0" width="4" height="2"/>
 				<rect x="6" y="14" width="4" height="2"/>
 				<rect x="0" y="6" width="2" height="4"/>
 				<rect x="14" y="6" width="2" height="4"/>
 				<rect x="4" y="4" width="8" height="8"/>
 			</svg>
-			<span class="theme-label">СМЕНИТЬ ТЕМУ</span>
+			<span class="theme-label">{t('mobile.theme_label')}</span>
 		</button>
 	</div>
 </div>
+
+<style>
+	.mobile-nav-links {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+</style>

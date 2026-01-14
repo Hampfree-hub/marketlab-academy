@@ -239,6 +239,12 @@ a {
 
 a:hover {
   color: var(--nes-accent-yellow);
+  text-decoration: none;
+  transition: color 0.10s steps(3);  /* ✅ VARIANT F */
+}
+
+/* Underline only for links in text blocks */
+p a:hover, .prose a:hover, article a:hover, .toc-item a:hover {
   text-decoration: underline;
   text-decoration-color: var(--nes-accent-yellow);
   text-decoration-thickness: 2px;

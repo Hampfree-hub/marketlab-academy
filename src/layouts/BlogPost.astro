@@ -6,6 +6,7 @@ import Header from '../components/Header.astro';
 import ScrollTop from '../components/ScrollTop.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
 
 interface Props {
 	title: string;
@@ -22,29 +23,32 @@ interface Props {
 
 const { title, description, pubDate, updatedDate, heroImage, bannerImage, category, postId, headings, customBreadcrumbs } = Astro.props;
 const displayImage = heroImage || bannerImage;
-const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
-	? import.meta.env.BASE_URL 
-    : import.meta.env.BASE_URL + '/';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 
 const titleWords = title.split(/\s+/).length;
 const headingClass = titleWords <= 5 ? 'brutal' : 'long';
 
-// Маппинг категорий для хлебных крошек
-const categoryLabels: Record<string, string> = {
-	'technical-analysis': 'Теханализ',
-	'crypto': 'Крипто',
-	'algo-trading': 'Алго',
-	'fundamental-analysis': 'Фундаментал',
-};
+// Содержание на разных языках
+const tocTitle = {
+	ru: 'Содержание',
+	en: 'Table of Contents',
+	es: 'Tabla de Contenidos'
+}[lang] || 'Содержание';
 
 const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrumbs || (() => {
 	const items: Array<{ label: string; href?: string }> = [
-		{ label: 'Библиотека', href: `${baseUrl}library` }
+		{ label: t('nav.library'), href: translatePath('library') }
 	];
 	
 	// Добавляем категорию в хлебные крошки, если она указана
-	if (category && categoryLabels[category]) {
-		items.push({ label: categoryLabels[category] });
+	if (category) {
+		const catLabel = t(`cat.${category}` as any);
+		if (catLabel) {
+			items.push({ label: catLabel, href: `${translatePath('library')}?cat=${category}` });
+		}
 	}
 	
 	items.push({ label: title });
@@ -52,17 +56,17 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 })();
 ---
 
-<html lang="ru">
+<html lang={lang}>
 	<head>
 		<BaseHead title={title} description={description} image={displayImage} />
 	</head>
 
 	<body>
 		<Header />
-		<main>
+		<main class="container">
 			<div class="layout-grid">
 				<aside class="toc-sticky">
-					<div class="toc-title">Содержание</div>
+					<div class="toc-title">{tocTitle}</div>
 					<ul class="toc-list">
 						{headings?.map((heading) => (
 							<li class="toc-item" style={`padding-left: ${heading.depth * 8}px`}>
@@ -99,9 +103,5 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 			<ScrollTop />
 		</main>
 		<Footer />
-
-		<script is:inline>
-			// Scroll logic moved to component
-		</script>
 	</body>
 </html>

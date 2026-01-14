@@ -3,16 +3,10 @@
   ═══════════════════════════════════════════════════════════════
   RELATED POSTS COMPONENT (Topic Clusters)
   ═══════════════════════════════════════════════════════════════
-  
-  Компонент для отображения связанных статей.
-  Используется для создания Topic Clusters (тематических кластеров).
-  
-  Created: 2026-01-13
-  ═══════════════════════════════════════════════════════════════
 */
 
 import { getRelatedPosts } from '../utils/blog';
-import type { CollectionEntry } from 'astro:content';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 interface Props {
 	currentPostId: string;
@@ -22,34 +16,53 @@ interface Props {
 
 const { currentPostId, category, limit = 3 } = Astro.props;
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const relatedPosts = await getRelatedPosts(currentPostId, category, limit);
 
 const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
 	? import.meta.env.BASE_URL 
 	: import.meta.env.BASE_URL + '/';
+
+// Related header translations
+const relatedHeader = {
+	ru: '[ ПОХОЖИЕ МАТЕРИАЛЫ ]',
+	en: '[ RELATED MATERIALS ]',
+	es: '[ MATERIALES RELACIONADOS ]'
+}[lang] || '[ RELATED_DATA ]';
+
+const readMoreText = {
+	ru: 'Читать полностью',
+	en: 'Read more',
+	es: 'Leer más'
+}[lang] || 'Читать полностью';
 ---
 
 {relatedPosts.length > 0 && (
 	<section class="related-posts" aria-labelledby="related-posts-title">
-		<h2 id="related-posts-title" class="related-posts-title">[ RELATED_DATA ]</h2>
+		<h2 id="related-posts-title" class="related-posts-title">{relatedHeader}</h2>
 		<div class="related-posts-grid">
-			{relatedPosts.map((post) => (
-				<a 
-					href={`${baseUrl}library/${post.id}/`} 
-					class="related-post-card"
-					aria-label={`Читать статью: ${post.data.title}`}
-				>
-					<h3 class="related-post-title">{post.data.title}</h3>
-					{post.data.description && (
-						<p class="related-post-description">{post.data.description}</p>
-					)}
-					<div class="related-post-meta">
-						{('category' in post.data && (post.data as any).category) && (
-							<span class="related-post-category">[{(post.data as any).category.toUpperCase()}]</span>
+			{relatedPosts.map((post) => {
+				// We stay within the same language for related posts
+				return (
+					<a 
+						href={`${baseUrl}${lang}/library/${post.id}/`} 
+						class="related-post-card"
+						aria-label={`${readMoreText}: ${post.data.title}`}
+					>
+						<h3 class="related-post-title">{post.data.title}</h3>
+						{post.data.description && (
+							<p class="related-post-description">{post.data.description}</p>
 						)}
-					</div>
-				</a>
-			))}
+						<div class="related-post-meta">
+							{('category' in post.data && (post.data as any).category) && (
+								<span class="related-post-category">[{t(`cat.${(post.data as any).category}` as any) || (post.data as any).category.toUpperCase()}]</span>
+							)}
+						</div>
+					</a>
+				);
+			})}
 		</div>
 	</section>
 )}

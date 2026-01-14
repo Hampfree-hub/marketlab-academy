@@ -1,11 +1,11 @@
 ---
 import { SITE_TITLE } from '../../consts';
+import { getLangFromUrl, useTranslatedPath } from '../../i18n/utils';
 
-const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
-	? import.meta.env.BASE_URL 
-	: import.meta.env.BASE_URL + '/';
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
 ---
 
-<a href={baseUrl} class="logo" aria-label={`${SITE_TITLE} - Главная`}>
+<a href={translatePath('')} class="logo" aria-label={`${SITE_TITLE} - Home`}>
 	<span class="prompt" aria-hidden="true">></span> {SITE_TITLE}
 </a>

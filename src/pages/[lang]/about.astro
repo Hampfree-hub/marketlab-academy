@@ -1,0 +1,145 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { SITE_TITLE } from '../../consts';
+import { ui } from '../../i18n/ui';
+import { useTranslations, useTranslatedPath } from '../../i18n/utils';
+import '../../styles/components/blog-index.css';
+import '../../styles/components/blog-post.css';
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'ru' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } },
+  ];
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang as keyof typeof ui);
+const translatePath = useTranslatedPath(lang as keyof typeof ui);
+
+// Home in breadcrumbs now points to the language root
+const breadcrumbItems = [
+	{ label: t('nav.about') }
+];
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<BaseHead title={`${SITE_TITLE} - ${t('nav.about')}`} description={t('home.hero_description')} />
+	</head>
+	<body>
+		<Header />
+		<main class="container">
+			<div class="library-header">
+				<Breadcrumb items={breadcrumbItems} />
+				<h1 class="mono responsive-title">> {t('nav.about')}</h1>
+			</div>
+			
+			<article class="fade-in">
+				<section class="about-content" style="line-height: 1.8; margin-top: 0;">
+					{lang === 'ru' ? (
+						<>
+							<p style="margin-bottom: 2rem; font-size: 1.1rem; margin-top: 0;">
+								<strong>MarketLab Academy</strong> — блог о трейдинге, где главное — люди и их опыт.
+							</p>
+
+							<h2 id="why" style="margin-top: 3rem; margin-bottom: 1.5rem;">ЗАЧЕМ МЫ ЗДЕСЬ</h2>
+							<p style="margin-bottom: 1rem;">Чтобы:</p>
+							<ul style="margin-bottom: 2rem; list-style-type: square; padding-left: 1.5rem;">
+								<li style="margin-bottom: 0.5rem;">не оставаться один на один с рынком;</li>
+								<li style="margin-bottom: 0.5rem;">обсуждать, а не слепо следовать;</li>
+								<li style="margin-bottom: 0.5rem;">помогать, а не конкурировать;</li>
+								<li style="margin-bottom: 0.5rem;">искать своё, а не копировать чужое.</li>
+							</ul>
+
+							<h2 id="principles" style="margin-top: 3rem; margin-bottom: 1.5rem;">НАШИ ПРИНЦИПЫ</h2>
+							<ul style="margin-bottom: 2.5rem; list-style-type: square; padding-left: 1.5rem;">
+								<li style="margin-bottom: 1rem;"><strong>ЧЕСТНОСТЬ:</strong> говорим о провалах так же открыто, как об успехах.</li>
+								<li style="margin-bottom: 1rem;"><strong>ВЗАИМОПОМОЩЬ:</strong> если можешь — поделись, если не знаешь — спроси.</li>
+								<li style="margin-bottom: 1rem;"><strong>ОСОЗНАННОСТЬ:</strong> разбираем механизмы, а не даём готовых решений.</li>
+								<li style="margin-bottom: 1rem;"><strong>ДОЛГОСРОЧНОСТЬ:</strong> строим систему, а не гонимся за мгновенной прибылью.</li>
+							</ul>
+						</>
+					) : lang === 'en' ? (
+						<>
+							<p style="margin-bottom: 2rem; font-size: 1.1rem; margin-top: 0;">
+								<strong>MarketLab Academy</strong> — a trading blog where people and their experience come first.
+							</p>
+
+							<h2 id="why" style="margin-top: 3rem; margin-bottom: 1.5rem;">WHY WE ARE HERE</h2>
+							<p style="margin-bottom: 1rem;">To:</p>
+							<ul style="margin-bottom: 2rem; list-style-type: square; padding-left: 1.5rem;">
+								<li style="margin-bottom: 0.5rem;">not stay alone with the market;</li>
+								<li style="margin-bottom: 0.5rem;">discuss, not follow blindly;</li>
+								<li style="margin-bottom: 0.5rem;">help, not compete;</li>
+								<li style="margin-bottom: 0.5rem;">search for your own, not copy others.</li>
+							</ul>
+
+							<h2 id="principles" style="margin-top: 3rem; margin-bottom: 1.5rem;">OUR PRINCIPLES</h2>
+							<ul style="margin-bottom: 2.5rem; list-style-type: square; padding-left: 1.5rem;">
+								<li style="margin-bottom: 1rem;"><strong>HONESTY:</strong> we talk about failures as openly as about successes.</li>
+								<li style="margin-bottom: 1rem;"><strong>MUTUAL AID:</strong> if you can — share, if you don't know — ask.</li>
+								<li style="margin-bottom: 1rem;"><strong>AWARENESS:</strong> we analyze mechanisms, not give ready-made solutions.</li>
+								<li style="margin-bottom: 1rem;"><strong>LONG-TERM:</strong> we build a system, not chase instant profit.</li>
+							</ul>
+						</>
+					) : (
+						<>
+							<p style="margin-bottom: 2rem; font-size: 1.1rem; margin-top: 0;">
+								<strong>MarketLab Academy</strong> — un blog de trading donde las personas y su experiencia son lo primero.
+							</p>
+
+							<h2 id="why" style="margin-top: 3rem; margin-bottom: 1.5rem;">POR QUE ESTAMOS AQUI</h2>
+							<p style="margin-bottom: 1rem;">Para:</p>
+							<ul style="margin-bottom: 2rem; list-style-type: square; padding-left: 1.5rem;">
+								<li style="margin-bottom: 0.5rem;">no quedarse solo con el mercado;</li>
+								<li style="margin-bottom: 0.5rem;">discutir, no seguir ciegamente;</li>
+								<li style="margin-bottom: 0.5rem;">ayudar, no competir;</li>
+								<li style="margin-bottom: 0.5rem;">buscar lo propio, no copiar a otros.</li>
+							</ul>
+
+							<h2 id="principles" style="margin-top: 3rem; margin-bottom: 1.5rem;">NUESTROS PRINCIPIOS</h2>
+							<ul style="margin-bottom: 2.5rem; list-style-type: square; padding-left: 1.5rem;">
+								<li style="margin-bottom: 1rem;"><strong>HONESTIDAD:</strong> hablamos de los fracasos tan abiertamente como de los exitos.</li>
+								<li style="margin-bottom: 1rem;"><strong>AYUDA MUTUA:</strong> si puedes — comparte, si no sabes — pregunta.</li>
+								<li style="margin-bottom: 1rem;"><strong>CONCIENCIA:</strong> analizamos mecanismos, no damos soluciones preparadas.</li>
+								<li style="margin-bottom: 1rem;"><strong>LARGO PLAZO:</strong> construimos un sistema, no buscamos ganancias instantaneas.</li>
+							</ul>
+						</>
+					)}
+
+					<p style="font-style: italic; border-left: 4px solid var(--nes-accent-green); padding-left: 1rem; margin-top: 2rem;">
+						{lang === 'ru' ? 'Здесь нет учителей. Есть только те, кто идёт своим путём и готов делиться опытом.' : 
+						 lang === 'en' ? 'There are no teachers here. Only those who go their own way and are ready to share experience.' : 
+						 'Aqui no hay maestros. Solo aquellos que siguen su propio camino y estan listos para compartir su experiencia.'}
+					</p>
+				</section>
+			</article>
+		</main>
+		<Footer />
+		<style>
+			.responsive-title {
+				font-size: clamp(1.5rem, 5vw, 2.5rem);
+				word-break: break-word;
+				line-height: 1.2;
+			}
+			@media (max-width: 480px) {
+				.responsive-title {
+					font-size: 1.25rem;
+				}
+			}
+			.about-content {
+				color: var(--color-text-primary);
+			}
+			h2 {
+				color: var(--nes-accent-green);
+				font-size: 1.2rem;
+			}
+		</style>
+	</body>
+</html>

@@ -1,0 +1,194 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../../components/BaseHead.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import { SITE_TITLE } from '../../../consts';
+import FormattedDate from '../../../components/FormattedDate.astro';
+import ScrollTop from '../../../components/ScrollTop.astro';
+import '../../../styles/components/blog-index.css';
+import { ui } from '../../../i18n/ui';
+import { useTranslations, useTranslatedPath } from '../../../i18n/utils';
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'ru' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } },
+  ];
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang as keyof typeof ui);
+const translatePath = useTranslatedPath(lang as keyof typeof ui);
+
+// Fetch only posts for current language
+const collectionName = `blog-${lang}` as 'blog-ru' | 'blog-en' | 'blog-es';
+const posts = await getCollection(collectionName);
+const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const categories = [
+	{ id: 'technical-analysis', label: t('cat.technical-analysis'), full: t('cat.technical-analysis.full') },
+	{ id: 'crypto', label: t('cat.crypto'), full: t('cat.crypto.full') },
+	{ id: 'algo-trading', label: t('cat.algo-trading'), full: t('cat.algo-trading.full') },
+	{ id: 'fundamental-analysis', label: t('cat.fundamental-analysis'), full: t('cat.fundamental-analysis.full') }
+];
+
+const breadcrumbItems = [
+	{ label: t('nav.library') }
+];
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<BaseHead title={`${SITE_TITLE} - ${t('nav.library')}`} description={t('home.hero_description')} />
+	</head>
+	<body>
+		<Header />
+		<main class="container">
+			<div class="library-header">
+				<Breadcrumb items={breadcrumbItems} />
+				<h1 class="mono responsive-title">> {t('library.title')}</h1>
+			</div>
+			
+			<section class="posts-grid fade-in" id="postsGrid">
+				<div class="search-and-filter">
+					<div class="search-bar">
+						<input type="text" placeholder={t('library.search')} id="searchInput" />
+					</div>
+
+					<div class="categories-filter">
+						<div class="section-label" style="margin-top: 2rem; margin-bottom: 1rem;">{t('library.filter')}</div>
+						<div class="categories-container" role="group" style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+							{categories.map(cat => (
+								<button 
+									class="tag-btn" 
+									data-cat={cat.id} 
+									aria-pressed="false"
+									title={cat.full}
+								>
+									[{cat.label}]
+								</button>
+							))}
+						</div>
+					</div>
+				</div>
+				{sortedPosts.map((post) => (
+					<a 
+						href={`/marketlab-academy/${lang}/library/${post.id}/`} 
+						class="post-card" 
+						data-title={post.data.title.toLowerCase()}
+						data-description={post.data.description.toLowerCase()}
+						data-category={post.data.category || ''}
+					>
+						<div class="post-meta">
+							<span><FormattedDate date={post.data.pubDate} /></span>
+						</div>
+						<h3>{post.data.title}</h3>
+						<p class="description">{post.data.description}</p>
+						<div class="read-more-link" aria-hidden="true">> {t('library.read_more')}</div>
+					</a>
+				))}
+			</section>
+			
+			<div id="noResults" style="display: none; text-align: center; padding: 3rem 0; color: var(--color-text-secondary); font-family: 'JetBrains Mono', monospace;">
+				> {t('library.no_results')}
+			</div>
+			<ScrollTop />
+		</main>
+		<Footer />
+
+		<script>
+			import Fuse from 'fuse.js';
+
+			const searchInput = document.getElementById('searchInput') as HTMLInputElement;
+			const postCards = document.querySelectorAll('.post-card') as NodeListOf<HTMLElement>;
+			const noResults = document.getElementById('noResults');
+			const categoryButtons = document.querySelectorAll('.tag-btn[data-cat]');
+
+			const postsData = Array.from(postCards).map(card => ({
+				id: card.getAttribute('href'),
+				title: card.querySelector('h3').innerText,
+				description: card.querySelector('.description').innerText,
+				category: card.getAttribute('data-category'),
+				element: card
+			}));
+
+			const fuse = new Fuse(postsData, {
+				keys: ['title', 'description'],
+				threshold: 0.3
+			});
+
+			let activeCategory = null;
+			let searchTerm = '';
+
+			function updateDisplay() {
+				let filtered = postsData;
+
+				if (activeCategory) {
+					filtered = filtered.filter(p => p.category === activeCategory);
+				}
+
+				if (searchTerm) {
+					const results = fuse.search(searchTerm);
+					const resultIds = new Set(results.map(r => r.item.id));
+					filtered = filtered.filter(p => resultIds.has(p.id));
+				}
+
+				let visibleCount = 0;
+				postCards.forEach(card => {
+					const cardHref = card.getAttribute('href');
+					const isVisible = filtered.some(p => p.id === cardHref);
+					card.style.display = isVisible ? 'flex' : 'none';
+					if (isVisible) visibleCount++;
+				});
+
+				if (noResults) noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+			}
+
+			searchInput?.addEventListener('input', (e) => {
+				searchTerm = (e.target as HTMLInputElement).value;
+				updateDisplay();
+			});
+
+			// Handle category filter from URL
+			const urlParams = new URLSearchParams(window.location.search);
+			const catParam = urlParams.get('cat');
+			if (catParam) {
+				activeCategory = catParam;
+				const btn = document.querySelector(`.tag-btn[data-cat="${catParam}"]`);
+				if (btn) btn.classList.add('active');
+				updateDisplay();
+			}
+
+			categoryButtons.forEach(btn => {
+				btn.addEventListener('click', () => {
+					const cat = btn.getAttribute('data-cat');
+					if (activeCategory === cat) {
+						activeCategory = null;
+						btn.classList.remove('active');
+					} else {
+						categoryButtons.forEach(b => b.classList.remove('active'));
+						activeCategory = cat;
+						btn.classList.add('active');
+					}
+					updateDisplay();
+				});
+			});
+		</script>
+<style>
+	.responsive-title {
+		font-size: clamp(1.5rem, 5vw, 2.5rem);
+		word-break: break-word;
+		line-height: 1.2;
+	}
+	@media (max-width: 480px) {
+		.responsive-title {
+			font-size: 1.25rem;
+		}
+	}
+</style>
+	</body>
+</html>
