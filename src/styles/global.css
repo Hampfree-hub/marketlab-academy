@@ -65,6 +65,19 @@
   --z-index-overlay: 2000;
 }
 
+/* Responsive padding variables */
+@media (max-width: 768px) {
+  :root {
+    --horizontal-padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --horizontal-padding: 8px;
+  }
+}
+
 [data-theme="light"] {
   /* Приглушённая Game Boy палитра (читаемая) */
   --color-bg: var(--nes-bg-primary, #E8F4D0);

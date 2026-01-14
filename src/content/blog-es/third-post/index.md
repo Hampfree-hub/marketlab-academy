@@ -1,6 +1,6 @@
 ---
-title: 'Trading Bots Guide'
-description: 'Guía de bots de trading: cómo automatizar el trading de criptomonedas, elegir una estrategia и configurar tu bot para obtener el máximo beneficio'
+title: 'Guía de Bots de Trading'
+description: 'Guía de bots de trading: cómo automatizar el trading de criptomonedas, elegir una estrategia y configurar tu bot para obtener el máximo beneficio'
 pubDate: '2026-01-10'
 bannerImage: './assets/banner.png'
 previewImage: './assets/preview.png'

@@ -4,13 +4,13 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 	: import.meta.env.BASE_URL + '/';
 
 const currentPath = Astro.url.pathname;
-const isArchive = currentPath.includes('/blog');
+const isLibrary = currentPath.includes('/library');
 const isAbout = currentPath.includes('/about');
 ---
 
 <!-- MOBILE MENU -->
 <div id="mobile-menu" class="mobile-menu" aria-label="Мобильное меню">
-	<a href={`${baseUrl}blog`} aria-current={isArchive ? 'page' : undefined}>[АРХИВ]</a>
+	<a href={`${baseUrl}library`} aria-current={isLibrary ? 'page' : undefined}>[БИБЛИОТЕКА]</a>
 	<a href={`${baseUrl}about`} aria-current={isAbout ? 'page' : undefined}>[О_ПРОЕКТЕ]</a>
 	
 	<!-- Mobile: Languages -->
