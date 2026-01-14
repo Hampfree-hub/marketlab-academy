@@ -4,6 +4,10 @@ import Navigation from './header/Navigation.astro';
 import LanguageSwitcher from './header/LanguageSwitcher.astro';
 import ThemeToggle from './header/ThemeToggle.astro';
 import MobileMenu from './header/MobileMenu.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <header class="main-header">
@@ -21,7 +25,13 @@ import MobileMenu from './header/MobileMenu.astro';
 		</div>
 
 		<!-- MOBILE: Hamburger -->
-		<button id="hamburger" class="hamburger" aria-label="Открыть меню">
+		<button 
+			id="hamburger" 
+			class="hamburger" 
+			aria-label={t('header.open_menu')}
+			data-open-label={t('header.open_menu')}
+			data-close-label={t('header.close_menu')}
+		>
 			<span></span>
 			<span></span>
 		</button>
@@ -32,87 +42,91 @@ import MobileMenu from './header/MobileMenu.astro';
 
 <script>
 	// Hamburger Menu initialization
-	// Note: Using regular script (not is:inline) so it runs after DOM is ready
 	const initHamburgerMenu = () => {
 		const hamburger = document.getElementById('hamburger');
 		const mobileMenu = document.getElementById('mobile-menu');
 		
 		if (!hamburger || !mobileMenu) {
-			// Retry if elements not ready yet
 			setTimeout(initHamburgerMenu, 100);
 			return;
 		}
 
-		// Функция закрытия меню
+		const openLabel = hamburger.getAttribute('data-open-label') || 'Open menu';
+		const closeLabel = hamburger.getAttribute('data-close-label') || 'Close menu';
+
+		const openMenu = () => {
+			mobileMenu.classList.add('active');
+			hamburger.setAttribute('aria-expanded', 'true');
+			hamburger.setAttribute('aria-label', closeLabel);
+		};
+
 		const closeMenu = () => {
 			mobileMenu.classList.remove('active');
 			hamburger.setAttribute('aria-expanded', 'false');
-			hamburger.setAttribute('aria-label', 'Открыть меню');
+			hamburger.setAttribute('aria-label', openLabel);
 		};
 
-		// Toggle menu on hamburger click
+		// CHECK IF MENU SHOULD BE OPEN ON LOAD (e.g. after language switch)
+		const urlParams = new URLSearchParams(window.location.search);
+		if (urlParams.get('menu') === 'open') {
+			openMenu();
+			// Remove the param without reloading to keep URL clean
+			const newUrl = window.location.pathname + window.location.search.replace(/[?&]menu=open/, '').replace(/^&/, '?');
+			window.history.replaceState({}, '', newUrl);
+		}
+
 		hamburger.addEventListener('click', (e) => {
 			e.stopPropagation();
-			const isActive = mobileMenu.classList.toggle('active');
-			hamburger.setAttribute('aria-expanded', isActive);
-			hamburger.setAttribute('aria-label', isActive ? 'Закрыть меню' : 'Открыть меню');
+			const isActive = mobileMenu.classList.contains('active');
+			if (isActive) closeMenu();
+			else openMenu();
 		});
 
-		// Close menu when clicking outside
 		document.addEventListener('click', (e) => {
 			if (mobileMenu.classList.contains('active') && 
-			    !mobileMenu.contains(e.target) && 
-			    !hamburger.contains(e.target)) {
+			    !mobileMenu.contains(e.target as Node) && 
+			    !hamburger.contains(e.target as Node)) {
 				closeMenu();
 			}
 		});
 
-		// Close menu when clicking inside menu links
 		mobileMenu.querySelectorAll('a, button').forEach(element => {
-			element.addEventListener('click', () => {
+			element.addEventListener('click', (e) => {
+				const target = e.target as HTMLElement;
+				// DON'T CLOSE if clicking lang or theme buttons
+				if (target.closest('.mobile-lang-switcher') || 
+				    target.closest('.mobile-theme-switcher') || 
+				    target.classList.contains('lang-btn-mobile') || 
+				    target.id === 'theme-toggle-mobile') {
+					return;
+				}
 				closeMenu();
 			});
 		});
 
-		// ✅ ИСПРАВЛЕНИЕ: Закрывать меню при изменении размера окна (разворачивании экрана)
-		let resizeTimer;
+		let resizeTimer: number;
 		const handleResize = () => {
-			// Дебаунс resize события
 			clearTimeout(resizeTimer);
-			resizeTimer = setTimeout(() => {
-				// Если экран стал ≥769px (desktop), закрываем меню
+			resizeTimer = window.setTimeout(() => {
 				if (window.innerWidth >= 769) {
 					closeMenu();
 				}
 			}, 100);
 		};
 
-		// Используем matchMedia для более точного отслеживания breakpoint
 		const mediaQuery = window.matchMedia('(min-width: 769px)');
-		
-		const handleMediaChange = (e) => {
+		const handleMediaChange = (e: MediaQueryListEvent | MediaQueryList) => {
 			if (e.matches && mobileMenu.classList.contains('active')) {
-				// Экран стал desktop, закрываем меню
 				closeMenu();
 			}
 		};
 
-		// Подписываемся на изменение media query (современный способ)
-		if (mediaQuery.addEventListener) {
-			mediaQuery.addEventListener('change', handleMediaChange);
-		} else {
-			// Fallback для старых браузеров
-			mediaQuery.addListener(handleMediaChange);
-		}
+		if (mediaQuery.addEventListener) mediaQuery.addEventListener('change', handleMediaChange);
+		else (mediaQuery as any).addListener(handleMediaChange);
 
-		// Также слушаем resize (fallback, если matchMedia не сработает)
 		window.addEventListener('resize', handleResize);
 	};
 
-	// Initialize when DOM is ready
-	if (document.readyState === 'loading') {
-		document.addEventListener('DOMContentLoaded', initHamburgerMenu);
-	} else {
-		initHamburgerMenu();
-	}
+	if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initHamburgerMenu);
+	else initHamburgerMenu();
 </script>

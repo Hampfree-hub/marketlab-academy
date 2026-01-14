@@ -1,11 +1,72 @@
 ---
+/*
+  LanguageSwitcher Component
+  Handles switching between RU, EN, ES via URL path.
+*/
+import { languages, ui } from '../../i18n/ui';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<div class="lang-switcher" aria-label="Выбор языка">
-	<button class="lang-btn active">RU</button>
-	<span class="lang-divider">|</span>
-	<button class="lang-btn">EN</button>
-	<span class="lang-divider">|</span>
-	<button class="lang-btn">ES</button>
+<div class="lang-switcher" aria-label={t('mobile.lang_label')}>
+	{Object.keys(languages).map((l, index) => (
+		<>
+			<button 
+				class={`lang-btn ${lang === l ? 'active' : ''}`} 
+				data-lang={l}
+					onclick={`
+						const currentPath = window.location.pathname;
+						const pathParts = currentPath.split('/');
+						const langIndex = pathParts.findIndex(p => p === 'marketlab-academy') + 1;
+						
+						// Keep menu open after reload
+						const suffix = '?menu=open';
+						
+						if (langIndex > 0 && langIndex < pathParts.length) {
+							pathParts[langIndex] = '${l}';
+							// Ensure trailing slash
+							let newPath = pathParts.join('/');
+							if (!newPath.endsWith('/')) newPath += '/';
+							window.location.href = newPath + suffix;
+						} else {
+							window.location.href = '/marketlab-academy/${l}/' + suffix;
+						}
+					`}
+			>
+				{l.toUpperCase()}
+			</button>
+			{index < Object.keys(languages).length - 1 && <span class="lang-divider">|</span>}
+		</>
+	))}
 </div>
+
+<style>
+	.lang-switcher {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		font-family: 'Press Start 2P', monospace;
+		font-size: 0.75rem;
+	}
+	.lang-btn {
+		background: transparent;
+		border: none;
+		color: var(--color-text-secondary);
+		cursor: pointer;
+		padding: 4px 8px;
+		transition: color 0.2s steps(3);
+	}
+	.lang-btn:hover {
+		color: var(--nes-accent-green);
+	}
+	.lang-btn.active {
+		color: var(--nes-accent-green);
+		font-weight: bold;
+	}
+	.lang-divider {
+		color: var(--nes-border-primary);
+		opacity: 0.5;
+	}
+</style>

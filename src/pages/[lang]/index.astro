@@ -1,0 +1,146 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE } from '../../consts';
+import FormattedDate from '../../components/FormattedDate.astro';
+import ScrollTop from '../../components/ScrollTop.astro';
+import '../../styles/components/home-index.css';
+import { ui } from '../../i18n/ui';
+import { useTranslations, useTranslatedPath } from '../../i18n/utils';
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'ru' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } },
+  ];
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang as keyof typeof ui);
+const translatePath = useTranslatedPath(lang as keyof typeof ui);
+
+// Fetch only posts for current language
+const collectionName = `blog-${lang}` as 'blog-ru' | 'blog-en' | 'blog-es';
+const posts = await getCollection(collectionName).catch(() => []);
+const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const featuredPosts = sortedPosts.slice(0, 4);
+
+const categories = [
+	{ id: 'technical-analysis', label: t('cat.technical-analysis'), full: t('cat.technical-analysis.full') },
+	{ id: 'crypto', label: t('cat.crypto'), full: t('cat.crypto.full') },
+	{ id: 'algo-trading', label: t('cat.algo-trading'), full: t('cat.algo-trading.full') },
+	{ id: 'fundamental-analysis', label: t('cat.fundamental-analysis'), full: t('cat.fundamental-analysis.full') }
+];
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<BaseHead title={SITE_TITLE} description={t('home.hero_description')} />
+	</head>
+	<body>
+		<Header />
+		<main class="container">
+			<section class="hero" aria-labelledby="hero-title">
+				<h1 id="hero-title" class="brutal">{t('home.hero_title')}</h1>
+				<p>{t('home.hero_description')}</p>
+				<a href={translatePath('library')} class="btn">{t('home.hero_cta')}</a>
+			</section>
+
+			<section aria-labelledby="cat-label">
+				<div id="cat-label" class="section-label">{t('home.categories_label')}</div>
+				<div class="categories-container" role="group" aria-label={t('library.filter')}>
+					{categories.map(cat => (
+						<a 
+							href={`${translatePath('library')}?cat=${cat.id}`}
+							class="tag-btn" 
+							title={cat.full}
+							style="text-decoration: none;"
+						>
+							[{cat.label}]
+						</a>
+					))}
+				</div>
+			</section>
+
+			<section aria-labelledby="recent-label">
+				<div id="recent-label" class="section-label">{t('home.recent_label')}</div>
+				<div class="posts-grid">
+					{featuredPosts.map(post => (
+						<a href={translatePath(`library/${post.id}`)} class="post-card" aria-label={`${t('library.read_more')}: ${post.data.title}`}>
+							<div class="post-meta">
+								<span><FormattedDate date={post.data.pubDate} /></span>
+							</div>
+							<h3>{post.data.title}</h3>
+							<p class="description">{post.data.description}</p>
+							<div class="read-more-link" aria-hidden="true">> {t('library.read_more')}</div>
+						</a>
+					))}
+				</div>
+			</section>
+
+			<section class="newsletter-box" aria-labelledby="newsletter-title">
+				<h2 id="newsletter-title">{t('home.newsletter_title')}</h2>
+				<p>{t('home.newsletter_desc')}</p>
+				<form id="newsletter-form" class="subscribe-form" aria-label={t('home.newsletter_title')}>
+					<div class="form-row">
+						<label for="newsletter-email" class="visually-hidden">Email</label>
+						<input 
+							id="newsletter-email" 
+							type="email" 
+							placeholder={t('home.newsletter_placeholder')} 
+							required 
+							name="email"
+							autocomplete="email"
+						/>
+						<button type="submit" class="btn-submit" aria-label={t('home.newsletter_button')}>{t('home.newsletter_button')}</button>
+					</div>
+					<p id="form-error" class="error-text" role="alert" style="display: none; color: var(--nes-accent-red); margin-top: 1rem;">{t('home.newsletter_error')}</p>
+					<p id="form-success" class="success-text" role="status" style="display: none; color: var(--nes-accent-green); margin-top: 1rem;">{t('home.newsletter_success')}</p>
+				</form>
+			</section>
+			<ScrollTop />
+		</main>
+		<Footer />
+
+		<script is:inline define:vars={{ sendingMsg: t('home.newsletter_sending'), buttonMsg: t('home.newsletter_button') }}>
+			// Newsletter Validation
+			const form = document.getElementById('newsletter-form');
+			const errorMsg = document.getElementById('form-error');
+			const successMsg = document.getElementById('form-success');
+			const submitBtn = form?.querySelector('.btn-submit');
+
+			form?.addEventListener('submit', async (e) => {
+				e.preventDefault();
+				if (errorMsg) errorMsg.style.display = 'none';
+				if (successMsg) successMsg.style.display = 'none';
+				
+				const email = form.email.value;
+				const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+				if (!emailPattern.test(email)) {
+					if (errorMsg) errorMsg.style.display = 'block';
+					return;
+				}
+
+				if (submitBtn) {
+					submitBtn.disabled = true;
+					submitBtn.innerText = sendingMsg;
+				}
+
+				// Simulation for Brevo integration
+				setTimeout(() => {
+					if (successMsg) successMsg.style.display = 'block';
+					form.reset();
+					if (submitBtn) {
+						submitBtn.disabled = false;
+						submitBtn.innerText = buttonMsg;
+					}
+				}, 1000);
+			});
+		</script>
+	</body>
+</html>

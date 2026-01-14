@@ -1,6 +1,9 @@
 ---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
-<button id="theme-toggle" class="theme-btn" aria-label="Переключить тему">
+<button id="theme-toggle" class="theme-btn" aria-label={t('theme.toggle')}>
 	<svg class="theme-icon" viewBox="0 0 16 16" fill="currentColor">
 		<!-- Sun icon (8-bit pixel) -->
 		<rect x="6" y="0" width="4" height="2"/>
@@ -26,32 +29,38 @@
 			icons.forEach(i => i.innerHTML = t === 'dark' ? sunIcon : moonIcon);
 		};
 
-		setTheme(getTheme());
+		const currentTheme = getTheme();
+		setTheme(currentTheme);
 
-		// Desktop theme button
-		const btn = document.getElementById('theme-toggle');
-		if (btn) {
-			btn.addEventListener('click', () => {
-				const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-				setTheme(next);
-			});
-		}
+		const attachListeners = () => {
+			const btn = document.getElementById('theme-toggle');
+			if (btn && !btn.hasListener) {
+				btn.addEventListener('click', () => {
+					const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+					setTheme(next);
+				});
+				btn.hasListener = true;
+			}
 
-		// Mobile theme button
-		const btnMobile = document.getElementById('theme-toggle-mobile');
-		if (btnMobile) {
-			btnMobile.addEventListener('click', () => {
-				const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-				setTheme(next);
-			});
-		}
+			const btnMobile = document.getElementById('theme-toggle-mobile');
+			if (btnMobile && !btnMobile.hasListener) {
+				btnMobile.addEventListener('click', () => {
+					const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+					setTheme(next);
+				});
+				btnMobile.hasListener = true;
+			}
+		};
+
+		attachListeners();
+		
+		// Re-attach listeners on DOM changes (for Astro's static transitions if any)
+		document.addEventListener('astro:page-load', attachListeners);
+		document.addEventListener('DOMContentLoaded', attachListeners);
 	};
 	
-	// Initialize only once
-	if (!window.themeToggleInitialized) {
-		themeToggle();
-		window.themeToggleInitialized = true;
-	}
+	// Initialize
+	themeToggle();
 </script>
 
 <style>
