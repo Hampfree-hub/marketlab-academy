@@ -20,7 +20,7 @@ import type { CollectionEntry } from 'astro:content';
  * Note: Astro Content Collections не поддерживает draft в schema,
  * поэтому фильтрация по draft не применяется
  */
-export async function getPosts(): Promise<CollectionEntry<'blog-ru'>[]> {
+export async function getPosts(): Promise<CollectionEntry<'blog-ru' | 'blog-en' | 'blog-es'>[]> {
 	const ruPosts = await getCollection('blog-ru');
 	const enPosts = await getCollection('blog-en');
 	const esPosts = await getCollection('blog-es');
@@ -34,7 +34,7 @@ export async function getPosts(): Promise<CollectionEntry<'blog-ru'>[]> {
  * Получить отранжированные посты для главной страницы
  * Сначала идут pinned: true, затем остальные по дате
  */
-export async function getRankedPosts(): Promise<CollectionEntry<'blog-ru'>[]> {
+export async function getRankedPosts(): Promise<CollectionEntry<'blog-ru' | 'blog-en' | 'blog-es'>[]> {
 	const posts = await getPosts();
 	
 	return posts.sort((a, b) => {
@@ -54,7 +54,7 @@ export async function getRankedPosts(): Promise<CollectionEntry<'blog-ru'>[]> {
  * Note: Category field не добавлен в schema, поэтому функция возвращает все посты
  * Добавь category в src/content/config.ts если нужна фильтрация
  */
-export async function getPostsByCategory(category: string): Promise<CollectionEntry<'blog'>[]> {
+export async function getPostsByCategory(category: string): Promise<CollectionEntry<'blog-ru' | 'blog-en' | 'blog-es'>[]> {
 	const posts = await getPosts();
 	// TODO: Добавить category в schema если нужна фильтрация
 	// return posts.filter(post => post.data.category === category);
@@ -88,7 +88,7 @@ export function estimateReadTime(content: string, wordsPerMinute: number = 200):
  * Получить последние N постов
  * @param limit - Количество постов (по умолчанию 5)
  */
-export async function getLatestPosts(limit: number = 5): Promise<CollectionEntry<'blog'>[]> {
+export async function getLatestPosts(limit: number = 5): Promise<CollectionEntry<'blog-ru' | 'blog-en' | 'blog-es'>[]> {
 	const posts = await getPosts();
 	return posts.slice(0, limit);
 }
@@ -104,7 +104,7 @@ export async function getRelatedPosts(
 	currentPostId: string,
 	category?: string,
 	limit: number = 3
-): Promise<CollectionEntry<'blog-ru'>[]> {
+): Promise<CollectionEntry<'blog-ru' | 'blog-en' | 'blog-es'>[]> {
 	const posts = await getPosts();
 	
 	// Исключаем текущую статью
