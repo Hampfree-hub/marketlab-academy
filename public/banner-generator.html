@@ -161,9 +161,8 @@
     }
     
     .banner-subtitle {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 24px;
-      font-weight: 700;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 28px;
       color: #3CBCFC;
       line-height: 1.4;
       word-wrap: break-word;
@@ -633,8 +632,8 @@
             ctx.font = `bold ${fSize}px "Press Start 2P"`;
             const titleH = getTextHeight(ctx, txt.toUpperCase(), maxWidth, fSize, titleLH);
             
-            ctx.font = `bold ${fSize * 0.6}px "JetBrains Mono"`;
-            const subH = getTextHeight(ctx, subTxt.toUpperCase(), maxWidth, fSize * 0.6, subLH);
+            ctx.font = `${fSize * 0.5}px "Press Start 2P"`;
+            const subH = getTextHeight(ctx, subTxt.toUpperCase(), maxWidth, fSize * 0.5, subLH);
             
             return (titleH + gap + subH) <= maxHeight;
           };
@@ -648,7 +647,7 @@
         const initialBaseSize = size.width < 500 ? 24 : 48;
         const minBaseSize = size.width < 500 ? 8 : 16;
         const titleFontSize = calculateSizes(title, subtitle, initialBaseSize, minBaseSize);
-        const subtitleFontSize = Math.max(size.width < 500 ? 10 : 20, Math.floor(titleFontSize * 0.6));
+        const subtitleFontSize = Math.max(size.width < 500 ? 8 : 16, Math.floor(titleFontSize * 0.5));
 
         requestAnimationFrame(() => {
           const previewRect = preview.getBoundingClientRect();
@@ -896,7 +895,7 @@
         y += fonts.title * 0.2; // Small gap
         
         ctx.fillStyle = '#3CBCFC';
-        ctx.font = `bold ${fonts.subtitle}px "JetBrains Mono", monospace`;
+        ctx.font = `${fonts.subtitle}px "Press Start 2P", "Courier New", monospace`;
         const subtitleVal = (document.getElementById('subtitle').value || 'SUBTITLE').toUpperCase();
         const subtitleLineHeight = fonts.subtitle * 1.4;
         y = wrapText(ctx, subtitleVal, size.width - (padding * 2), padding, y, subtitleLineHeight);
