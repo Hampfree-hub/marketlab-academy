@@ -13,21 +13,269 @@
   ═══════════════════════════════════════════════════════════════
 */
 
-/* === DESIGN SYSTEM === */
-@import './design-tokens.css';
-@import './typography.css';
-@import './components.css';
-@import './layout.css';
-@import './fixes.css';
+/* Import tokens (variables) first */
+@import './tokens.css';
 
-/* === RESET === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Import base (reset + typography) */
+@import './base.css';
+
+/* Import component-specific styles globally to ensure reliable loading */
+@import './components/header.css';
+@import './components/blog-post.css';
+
+:root {
+  /* Legacy variables (for compatibility with existing components) */
+  /* These map to NES palette */
+  --color-bg: var(--nes-bg-primary, #050608);
+  --color-card-bg: var(--nes-bg-secondary, #0F1012);
+  --color-text-primary: var(--nes-text-primary, #E5E5E5);
+  --color-text-secondary: var(--nes-text-secondary, #B0B0B0);
+  --color-accent: var(--nes-accent-green, #00D800);
+  --color-accent-hover: var(--nes-accent-green-dark, #00A800);
+  --color-border: var(--nes-border-primary, #404040);
+  --color-border-hover: var(--nes-border-accent, #00D800);
+  --color-btn-text: var(--nes-text-primary, #FCFCFC);
+  --color-error: var(--nes-accent-red, #F83800);
+  --color-success: var(--nes-accent-green, #00D800);
+
+  /* Spacing (mapped to NES) */
+  --spacing-xs: var(--nes-space-xs, 4px);
+  --spacing-sm: var(--nes-space-sm, 8px);
+  --spacing-base: var(--nes-space-md, 16px);
+  --spacing-md: var(--nes-space-lg, 24px);
+  --spacing-lg: var(--nes-space-xl, 32px);
+  --spacing-xl: var(--nes-space-xxl, 48px);
+  --spacing-xxl: 64px;
+
+  /* Border Radius (NO CURVES in 8-bit!) */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+
+  /* Transitions (INSTANT in 8-bit) */
+  --transition-fast: none;
+  --transition-normal: none;
+  
+  --max-width: var(--nes-max-width, 1200px);
+  --max-width-post: var(--nes-max-width-post, 800px);
+  --horizontal-padding: var(--nes-padding-horizontal, 32px);
+
+  /* Z-index */
+  --z-index-header: 1000;
+  --z-index-overlay: 2000;
 }
 
-html, body {
+/* Responsive padding variables */
+@media (max-width: 768px) {
+  :root {
+    --horizontal-padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --horizontal-padding: 8px;
+  }
+}
+
+[data-theme="light"] {
+  /* Приглушённая Game Boy палитра (читаемая) */
+  --color-bg: var(--nes-bg-primary, #E8F4D0);
+  --color-card-bg: var(--nes-bg-secondary, #D8E4C0);
+  --color-text-primary: var(--nes-text-primary, #1A2A0A);
+  --color-text-secondary: var(--nes-text-secondary, #2A3A1A);
+  --color-accent: var(--nes-accent-green, #2A5A1A);
+  --color-accent-hover: var(--nes-accent-green-dark, #1A4A0A);
+  --color-border: var(--nes-border-primary, #3A4A2A);
+  --color-border-hover: var(--nes-border-accent, #2A5A1A);
+  --color-btn-text: var(--nes-text-primary, #1A2A0A);
+}
+
+/* Base Styles */
+html {
+  font-size: 16px;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* NO transitions in 8-bit */
+  transition: none;
+}
+
+h1, h2, h3, h4, .mono {
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0 0 var(--spacing-base);
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  line-height: 1.8; /* ✅ ИСПРАВЛЕНИЕ: Увеличен с 1.4 до 1.8 для видимого пространства между строками при выделении */
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.10s steps(3);  /* ✅ VARIANT F */
+}
+
+a:hover {
+  color: var(--nes-accent-yellow, #FCFC00);
+  text-decoration: underline;
+  text-decoration-color: var(--nes-accent-yellow, #FCFC00);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+/* Exceptions: no underline for button-style links */
+.read-more-link:hover,
+.post-card:hover .read-more-link {
+  text-decoration: none;
+}
+
+/* Focus Indicators */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.container {
   width: 100%;
-  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--horizontal-padding);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4); /* 16px 32px — строго кратно 8 */
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: var(--border-structural-accent); /* 2px solid green */
+  border-bottom: var(--border-bulge); /* 4px solid dark green */
+  color: var(--color-accent);
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+  /* 8-bit steps animation */
+  transition: background 0.2s steps(4), 
+              border-color 0.2s steps(4),
+              color 0.2s steps(4);
+}
+
+.btn:hover {
+  background: var(--color-accent);
+  color: #FFFFFF !important; /* Чисто белый для читаемости */
+  border-color: var(--color-accent);
+  border-bottom-color: var(--nes-accent-green-dark); /* Сохраняем видимый bulge */
+  text-decoration: none;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Category Tags */
+.tag-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  padding: var(--space-1) var(--space-2); /* 8px 16px — строго кратно 8 */
+  border: var(--border-structural); /* 2px solid gray */
+  border-bottom: 4px solid var(--color-border); /* Bulge (серый, не зелёный) */
+  color: var(--color-text-secondary);
+  background: transparent;
+  cursor: pointer;
+  /* 8-bit steps animation */
+  transition: background 0.2s steps(4),
+              border-color 0.2s steps(4),
+              color 0.2s steps(4);
+}
+
+.tag-btn:hover, .tag-btn.active {
+  background: var(--color-accent);
+  color: #FFFFFF !important;
+  border-color: var(--color-accent);
+  border-bottom-color: var(--nes-accent-green-dark);
+}
+
+/* Post Cards */
+.post-card {
+  background: var(--color-card-bg);
+  border: var(--border-structural); /* 2px solid gray */
+  border-bottom: 4px solid var(--color-border); /* Bulge (серый, не зелёный) */
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  height: 100%;
+  /* 8-bit steps animation */
+  transition: border-bottom-color 0.10s steps(3);  /* ✅ VARIANT F: golden middle */
+}
+
+.post-card:hover {
+  border-bottom-color: var(--nes-accent-green-dark);
+  /* Только нижняя выпуклость меняется на тёмно-зелёную */
+}
+
+.post-card h3 {
+  color: var(--color-text-primary);
+  margin: var(--spacing-sm) 0;
+  font-size: 1.5rem;
+  line-height: 1.8; /* ✅ ИСПРАВЛЕНИЕ: Увеличен с 1.2 до 1.8 для видимого пространства между строками при выделении */
+  transition: color 0.10s steps(3);  /* ✅ VARIANT F: golden middle */
+}
+
+.post-card:hover h3 {
+  color: var(--nes-accent-yellow);
+  text-decoration: none;
+}
+
+.post-card .description {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: var(--spacing-base);
+  transition: color 0.10s steps(3);  /* ✅ VARIANT F: golden middle */
+}
+
+.post-card:hover .description {
+  color: var(--color-text-primary);
+}
+
+/* Form Helper Classes */
+.error-text {
+  color: var(--color-error);
+  font-size: 0.85rem;
+  margin-top: var(--spacing-sm);
+  display: none;
+}
+
+.success-text {
+  color: var(--color-success);
+  font-size: 0.85rem;
+  margin-top: var(--spacing-sm);
+  display: none;
+}
+
+/* Global Transitions (DISABLED for 8-bit) */
+/* NO smooth transitions in 8-bit theme */
+
+@media (max-width: 768px) {
+  :root {
+    --horizontal-padding: 16px; /* ✅ Issue #52: Исправлено на кратно 8px (было 20px) */
+  }
 }

@@ -13,6 +13,20 @@ const translatePath = useTranslatedPath(lang);
 const currentPath = Astro.url.pathname;
 const isLibrary = currentPath.includes('/library');
 const isAbout = currentPath.includes('/about');
+
+// Utility to switch language in current URL
+const getSwitchPath = (targetLang: string) => {
+	const pathParts = currentPath.split('/');
+	const langIndex = pathParts.findIndex(p => p === 'marketlab-academy') + 1;
+	
+	if (langIndex > 0 && langIndex < pathParts.length) {
+		pathParts[langIndex] = targetLang;
+		let newPath = pathParts.join('/');
+		if (!newPath.endsWith('/')) newPath += '/';
+		return newPath;
+	}
+	return `/marketlab-academy/${targetLang}/`;
+};
 ---
 
 <!-- MOBILE MENU -->
@@ -27,30 +41,13 @@ const isAbout = currentPath.includes('/about');
 		<span class="mobile-menu-label">{t('mobile.lang_label')}</span>
 		<div class="mobile-lang-buttons">
 			{Object.keys(languages).map((l) => (
-				<button 
+				<a 
+					href={getSwitchPath(l) + '?menu=open'}
 					class={`lang-btn-mobile ${lang === l ? 'active' : ''}`} 
 					data-lang={l}
-						onclick={`
-							const currentPath = window.location.pathname;
-							const pathParts = currentPath.split('/');
-							const langIndex = pathParts.findIndex(p => p === 'marketlab-academy') + 1;
-							
-							// Keep menu open after reload
-							const suffix = '?menu=open';
-							
-							if (langIndex > 0 && langIndex < pathParts.length) {
-								pathParts[langIndex] = '${l}';
-								// Ensure trailing slash
-								let newPath = pathParts.join('/');
-								if (!newPath.endsWith('/')) newPath += '/';
-								window.location.href = newPath + suffix;
-							} else {
-								window.location.href = '/marketlab-academy/${l}/' + suffix;
-							}
-						`}
 				>
 					{l.toUpperCase()}
-				</button>
+				</a>
 			))}
 		</div>
 	</div>
