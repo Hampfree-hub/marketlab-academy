@@ -164,6 +164,11 @@
       font-family: 'Press Start 2P', monospace;
       font-size: 28px;
       color: #3CBCFC;
+      line-height: 1.4;
+      word-wrap: break-word;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      text-transform: uppercase;
       letter-spacing: 0.5px;
     }
     
@@ -843,8 +848,9 @@
         
         ctx.fillStyle = '#3CBCFC';
         ctx.font = `${fonts.subtitle}px "Press Start 2P", "Courier New", monospace`;
-        const subtitleVal = document.getElementById('subtitle').value.toUpperCase() || 'SUBTITLE';
-        ctx.fillText(subtitleVal, padding, y);
+        const subtitleVal = (document.getElementById('subtitle').value || 'SUBTITLE').toUpperCase();
+        const subtitleLineHeight = fonts.subtitle * 1.4;
+        y = wrapText(ctx, subtitleVal, size.width - (padding * 2), padding, y, subtitleLineHeight);
         
         // Адаптивный footer: меньше для маленьких баннеров
         const footerY = size.height - (size.height * (size.width < 500 ? 0.12 : 0.1));
