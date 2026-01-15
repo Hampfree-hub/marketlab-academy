@@ -10,44 +10,44 @@
 .main-header {
 	position: sticky;
 	top: 0;
-	background: var(--color-bg);
-	border-bottom: 2px solid var(--color-border);
+	background: var(--color-bg-secondary);
+	border-bottom: var(--border-thick) double var(--color-surface-1);
 	z-index: var(--z-index-header);
 }
 
 .header-container {
-	max-width: var(--max-width);
+	max-width: var(--container-max-width);
 	margin: 0 auto;
-	padding: 1.25rem var(--horizontal-padding);
+	padding: var(--space-2) var(--space-3);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	gap: 1rem;
+	gap: var(--space-2);
 }
 
 /* LEFT SIDE: Logo + Navigation */
 .header-left {
 	display: flex;
 	align-items: center;
-	gap: 1.5rem;
+	gap: var(--space-4);
 	min-width: 0;
 }
 
 .logo {
 	display: flex;
 	align-items: center;
-	gap: 0.5rem;
-	font-family: 'Press Start 2P', monospace;
-	font-size: 0.875rem;
-	color: var(--nes-accent-green);
+	gap: var(--space-1);
+	font-family: var(--font-pixel);
+	font-size: var(--text-sm);
+	color: var(--color-accent-green);
 	text-decoration: none;
 	white-space: nowrap;
 	flex-shrink: 0;
-	transition: color 0.1s steps(3);
+	transition: color var(--transition-fast);
 }
 
 .logo:hover {
-	color: var(--nes-accent-yellow);
+	color: var(--color-accent-yellow);
 	text-decoration: none !important;
 }
 
@@ -65,134 +65,69 @@
 .desktop-nav {
 	display: flex;
 	align-items: center;
-	gap: 1rem;
+	gap: var(--space-2);
 	min-width: 0;
 }
 
 .desktop-nav a {
-	font-family: 'Press Start 2P', monospace;
-	font-size: 0.7rem;
+	font-family: var(--font-pixel);
+	font-size: var(--text-xs);
 	color: var(--color-text-secondary);
-	padding: 0.5rem 0.75rem;
+	padding: var(--space-1) var(--space-2);
 	text-decoration: none;
-	transition: all 0.1s steps(3);
-	border: 2px solid transparent;
+	transition: all var(--transition-fast);
+	border: var(--border-thin) solid transparent;
 }
 
 .desktop-nav a:hover {
-	color: var(--nes-accent-green);
-	background-color: var(--color-card-bg);
+	color: var(--color-accent-green);
+	background-color: var(--color-bg-elevated);
 	text-decoration: none !important;
 }
 
 .desktop-nav a.active {
-	color: var(--color-bg);
-	background-color: var(--nes-accent-green);
-	border-color: var(--nes-accent-green);
+	color: var(--color-bg-primary);
+	background-color: var(--color-accent-green);
+	border-color: var(--color-accent-green);
 }
 
 /* RIGHT SIDE: Languages + Theme */
 .header-right {
 	display: flex;
 	align-items: center;
-	gap: 1rem;
+	gap: var(--space-2);
 	flex-shrink: 0;
 }
 
-.lang-switcher {
-	display: flex;
-	align-items: center;
-	gap: 4px;
-	font-family: 'Press Start 2P', monospace;
-	font-size: 0.75rem;
-}
-
-.lang-btn {
-	background: transparent;
-	border: none;
-	color: var(--color-text-secondary);
-	cursor: pointer;
-	padding: 4px 8px;
-	transition: color 0.2s steps(3);
-}
-
-.lang-btn:hover {
-	color: var(--nes-accent-green);
-}
-
-.lang-btn.active {
-	color: var(--nes-accent-green);
-	font-weight: bold;
-}
-
-.lang-divider {
-	color: var(--nes-border-primary);
-	opacity: 0.5;
-}
-
-/* Theme Toggle */
-.theme-btn {
-	background: transparent;
-	border: 2px solid var(--nes-border-primary);
-	border-bottom: 4px solid var(--nes-border-primary);
-	color: var(--color-text-primary);
-	padding: 6px 10px;
-	cursor: pointer;
-	font-family: 'Press Start 2P', monospace;
-	font-size: 0.5rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-width: 32px;
-	min-height: 32px;
-	transition: all 0.1s steps(3);
-}
-
-.theme-btn:hover {
-	border-color: var(--nes-accent-green);
-	border-bottom-color: var(--nes-accent-green-dark);
-	background: var(--nes-accent-green);
-	color: #FFFFFF;
-}
-
-.theme-icon {
-	width: 14px;
-	height: 14px;
-	display: block;
-}
+/* The lang switcher and theme toggle styles are now in fixes.css */
 
 /* HAMBURGER (mobile only) */
 .hamburger {
 	display: none;
 	flex-direction: column;
-	gap: 8px;
+	gap: 6px;
 	background: transparent;
-	border: 2px solid var(--color-border);
-	border-bottom: 4px solid var(--color-border);
+	border: var(--border-normal) solid var(--color-surface-1);
+	border-bottom-width: var(--border-thick);
 	cursor: pointer;
-	padding: 8px;
-	width: 40px;
-	height: 40px;
+	padding: 10px;
+	width: 44px;
+	height: 44px;
 	justify-content: center;
 	align-items: center;
-	transition: all 0.1s steps(3);
+	transition: all var(--transition-fast);
 }
 
 .hamburger:hover {
-	background: var(--color-accent);
-	border-color: var(--color-accent);
-	border-bottom-color: var(--nes-accent-green-dark);
-}
-
-.hamburger:hover span {
-	background: #FFFFFF;
+	background: rgba(57, 255, 20, 0.05);
+	border-color: var(--color-accent-green);
 }
 
 .hamburger span {
 	display: block;
-	width: 16px;
-	height: 2px;
-	background: var(--color-accent);
+	width: 18px;
+	height: 3px;
+	background: var(--color-accent-green);
 	flex-shrink: 0;
 }
 
@@ -200,35 +135,34 @@
 .mobile-menu {
 	display: none;
 	flex-direction: column;
-	background: var(--color-bg);
-	border-bottom: 2px solid var(--color-border);
-	padding: 1.5rem var(--horizontal-padding);
-	gap: 1rem;
+	background: var(--color-bg-secondary);
+	border-bottom: var(--border-thick) double var(--color-surface-1);
+	padding: var(--space-4) var(--space-3);
+	gap: var(--space-3);
 	max-height: 90vh;
 	overflow-y: auto;
 }
 
 .mobile-menu a {
-	font-family: 'Press Start 2P', monospace;
-	font-size: 0.7rem;
+	font-family: var(--font-pixel);
+	font-size: var(--text-sm);
 	color: var(--color-text-primary);
-	padding: 0.75rem 1rem;
-	border: 2px solid var(--color-border);
-	border-bottom: 4px solid var(--color-border);
+	padding: var(--space-3);
+	border: var(--border-thin) solid var(--color-surface-1);
+	border-bottom-width: var(--border-thick);
 	text-align: center;
 	text-decoration: none;
 	min-height: 48px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	transition: all 0.1s steps(3);
+	transition: all var(--transition-fast);
 }
 
 .mobile-menu a:hover, .mobile-menu a.active {
-	background: var(--color-accent);
-	color: #FFFFFF;
-	border-color: var(--color-accent);
-	border-bottom-color: var(--nes-accent-green-dark);
+	background: var(--color-accent-green);
+	color: var(--color-bg-primary);
+	border-color: var(--color-accent-green);
 }
 
 .mobile-menu.active {
@@ -238,94 +172,35 @@
 .mobile-lang-switcher {
 	display: flex;
 	flex-direction: column;
-	gap: 0.75rem;
-	padding: 1rem 0;
+	gap: var(--space-2);
+	padding: var(--space-2) 0;
 	align-items: center;
 }
 
 .mobile-menu-label {
-	font-family: 'Press Start 2P', monospace;
-	font-size: 0.6rem;
-	color: var(--color-text-secondary);
-	opacity: 0.6;
+	font-family: var(--font-pixel);
+	font-size: 10px;
+	color: var(--color-text-tertiary);
 	text-transform: uppercase;
 }
 
 .mobile-lang-buttons {
 	display: flex;
-	gap: 0.5rem;
+	gap: var(--space-1);
 	justify-content: center;
 	flex-wrap: wrap;
 }
 
-.lang-btn-mobile {
-	background: transparent;
-	border: 2px solid var(--color-border);
-	border-bottom: 4px solid var(--color-border);
-	color: var(--color-text-secondary);
-	cursor: pointer;
-	padding: 0.5rem 1rem;
-	font-size: 0.75rem;
-	font-family: 'Press Start 2P', monospace;
-	min-width: 80px;
-	min-height: 48px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: all 0.1s steps(3);
-}
-
-.lang-btn-mobile.active, .lang-btn-mobile:hover {
-	color: #FFFFFF;
-	background: var(--color-accent);
-	border-color: var(--color-accent);
-	border-bottom-color: var(--nes-accent-green-dark);
-}
-
-.mobile-theme-switcher {
-	display: flex;
-	justify-content: center;
-	padding: 0.5rem 0;
-}
-
-.theme-btn-mobile {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 1rem;
-	background: transparent;
-	border: 2px solid var(--color-border);
-	border-bottom: 4px solid var(--color-border);
-	color: var(--color-text-primary);
-	padding: 0.75rem 1.5rem;
-	cursor: pointer;
-	font-family: 'Press Start 2P', monospace;
-	font-size: 0.7rem;
-	min-width: 240px;
-	min-height: 48px;
-	transition: all 0.1s steps(3);
-}
-
-.theme-btn-mobile:hover {
-	border-color: var(--color-accent);
-	border-bottom-color: var(--nes-accent-green-dark);
-	background: var(--color-accent);
-	color: #FFFFFF;
-}
-
-.theme-icon-mobile {
-	width: 16px;
-	height: 16px;
-}
+/* Mobile specific lang/theme classes are using components.css/fixes.css logic */
 
 /* RESPONSIVE */
 @media (max-width: 992px) {
 	.desktop-nav {
-		gap: 0.5rem;
+		gap: var(--space-1);
 	}
 	.desktop-nav a {
-		font-size: 0.6rem;
-		padding: 0.4rem 0.6rem;
+		font-size: 10px;
+		padding: 4px 8px;
 	}
 }
 
@@ -337,7 +212,7 @@
 		display: flex !important;
 	}
 	.header-container {
-		padding: 0.5rem var(--horizontal-padding);
+		padding: var(--space-1) var(--space-2);
 	}
 }
 

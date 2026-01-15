@@ -41,32 +41,3 @@ const t = useTranslations(lang);
 		</>
 	))}
 </div>
-
-<style>
-	.lang-switcher {
-		display: flex;
-		align-items: center;
-		gap: 4px;
-		font-family: 'Press Start 2P', monospace;
-		font-size: 0.75rem;
-	}
-	.lang-btn {
-		background: transparent;
-		border: none;
-		color: var(--color-text-secondary);
-		cursor: pointer;
-		padding: 4px 8px;
-		transition: color 0.2s steps(3);
-	}
-	.lang-btn:hover {
-		color: var(--nes-accent-green);
-	}
-	.lang-btn.active {
-		color: var(--nes-accent-green);
-		font-weight: bold;
-	}
-	.lang-divider {
-		color: var(--nes-border-primary);
-		opacity: 0.5;
-	}
-</style>

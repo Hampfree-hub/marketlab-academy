@@ -8,22 +8,22 @@
 */
 
 .main-footer {
-	border-top: var(--border-decorative); /* 1px — decorative divider */
-	background: var(--color-bg);
-	padding: 64px 0 32px;
-	margin-top: 64px;
+	border-top: var(--border-thick) double var(--color-surface-1);
+	background: var(--color-bg-secondary);
+	padding: var(--space-8) 0 var(--space-5);
+	margin-top: var(--space-8);
 }
 
 .footer-container {
-	max-width: var(--max-width);
+	max-width: var(--container-max-width);
 	margin: 0 auto;
-	padding: 0 var(--horizontal-padding);
+	padding: 0 var(--space-3);
 }
 
 .footer-grid {
 	display: flex;
 	justify-content: center;
-	gap: 4rem;
+	gap: var(--space-6);
 }
 
 .footer-column {
@@ -32,41 +32,42 @@
 }
 
 .footer-column h3 {
-	font-size: 0.85rem;
-	color: var(--color-accent);
-	margin-bottom: 1.5rem;
+	font-family: var(--font-pixel);
+	font-size: var(--text-xs);
+	color: var(--color-accent-green);
+	margin-bottom: var(--space-3);
+	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-family: 'JetBrains Mono', monospace;
 }
 
 .footer-links {
 	display: flex;
 	flex-direction: column;
-	gap: 8px; /* ✅ Issue #52: Исправлено на кратно 8px (было 10px) */
+	gap: var(--space-1);
 }
 
 .footer-links a {
 	color: var(--color-text-secondary);
-	font-size: 0.9rem;
-	font-family: 'JetBrains Mono', monospace;
-	/* 8-bit steps animation */
-	transition: color 0.10s steps(3);
+	font-family: var(--font-mono);
+	font-size: var(--text-sm);
+	transition: color var(--transition-fast);
+	display: block;
+	padding: 4px 0;
 }
 
 .footer-links a:hover {
-	color: var(--nes-accent-yellow);
-	/* NO transform — pure 8-bit style */
+	color: var(--color-accent-yellow);
 }
 
 .footer-bottom {
-	margin-top: 48px;
-	padding-top: 24px;
-	border-top: var(--border-decorative); /* 1px — decorative divider */
+	margin-top: var(--space-8);
+	padding-top: var(--space-4);
+	border-top: var(--border-normal) solid var(--color-surface-1);
 	text-align: center;
-	opacity: 0.5;
-	font-size: 0.75rem;
-	font-family: 'JetBrains Mono', monospace;
-	color: var(--color-text-secondary);
+	font-family: var(--font-pixel);
+	font-size: var(--text-xs);
+	color: var(--color-text-muted);
+	letter-spacing: 1px;
 }
 
 @media (max-width: 640px) {
