@@ -8,10 +8,10 @@
 */
 
 .main-footer {
-	border-top: var(--border-decorative); /* 1px — decorative divider */
+	border-top: 4px solid var(--color-border);
 	background: var(--color-bg);
-	padding: 64px 0 32px;
-	margin-top: 64px;
+	padding: var(--space-10) 0 var(--space-6);
+	margin-top: var(--space-10);
 }
 
 .footer-container {

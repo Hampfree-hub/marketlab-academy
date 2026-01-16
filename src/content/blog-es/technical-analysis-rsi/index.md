@@ -6,7 +6,6 @@ category: 'technical-analysis'
 bannerImage: './assets/banner.png'
 ---
 
-# Analisis Tecnico RSI
 
 El Indice de Fuerza Relativa (RSI) es un oscilador que mide la velocidad y el cambio de los movimientos de precios. Oscila entre 0 y 100 y se utiliza tradicionalmente para identificar condiciones de sobrecompra o sobreventa.
 

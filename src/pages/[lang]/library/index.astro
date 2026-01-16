@@ -7,6 +7,8 @@ import Breadcrumb from '../../../components/Breadcrumb.astro';
 import { SITE_TITLE } from '../../../consts';
 import FormattedDate from '../../../components/FormattedDate.astro';
 import ScrollTop from '../../../components/ScrollTop.astro';
+import Banner from '../../../components/Banner.astro';
+import PixelIcon from '../../../components/ui/PixelIcon.astro';
 import '../../../styles/components/blog-index.css';
 import { ui } from '../../../i18n/ui';
 import { useTranslations, useTranslatedPath } from '../../../i18n/utils';
@@ -68,29 +70,37 @@ const breadcrumbItems = [
 									data-cat={cat.id} 
 									aria-pressed="false"
 									title={cat.full}
+									style="display: inline-flex; align-items: center; gap: 8px;"
 								>
+									<PixelIcon icon={cat.id === 'technical-analysis' ? 'analysis' : cat.id === 'crypto' ? 'crypto' : cat.id === 'algo-trading' ? 'algo' : 'fundamental'} size={12} color="currentColor" />
 									[{cat.label}]
 								</button>
 							))}
 						</div>
 					</div>
 				</div>
-				{sortedPosts.map((post) => (
-					<a 
-						href={`/marketlab-academy/${lang}/library/${post.id}/`} 
-						class="post-card" 
-						data-title={post.data.title.toLowerCase()}
-						data-description={post.data.description.toLowerCase()}
-						data-category={post.data.category || ''}
-					>
-						<div class="post-meta">
-							<span><FormattedDate date={post.data.pubDate} /></span>
-						</div>
-						<h3>{post.data.title}</h3>
-						<p class="description">{post.data.description}</p>
-						<div class="read-more-link" aria-hidden="true">> {t('library.read_more')}</div>
-					</a>
-				))}
+					{sortedPosts.map((post) => (
+						<a 
+							href={`/marketlab-academy/${lang}/library/${post.id}/`} 
+							class="post-card" 
+							data-title={post.data.title.toLowerCase()}
+							data-description={post.data.description.toLowerCase()}
+							data-category={post.data.category || ''}
+						>
+							<Banner 
+								title={post.data.title} 
+								subtitle={post.data.description}
+								category={post.data.category} 
+								type="preview" 
+							/>
+							<div class="post-meta-wrap">
+								<div class="post-meta">
+									<span><FormattedDate date={post.data.pubDate} /></span>
+								</div>
+							</div>
+							<div class="read-more-link" aria-hidden="true">> {t('library.read_more')}</div>
+						</a>
+					))}
 			</section>
 			
 			<div id="noResults" style="display: none; text-align: center; padding: 3rem 0; color: var(--color-text-secondary); font-family: 'JetBrains Mono', monospace;">
@@ -153,13 +163,23 @@ const breadcrumbItems = [
 				updateDisplay();
 			});
 
-			// Handle category filter from URL
+			// Handle search/category filter from URL
 			const urlParams = new URLSearchParams(window.location.search);
 			const catParam = urlParams.get('cat');
+			const searchParam = urlParams.get('search');
+
 			if (catParam) {
 				activeCategory = catParam;
 				const btn = document.querySelector(`.tag-btn[data-cat="${catParam}"]`);
 				if (btn) btn.classList.add('active');
+			}
+
+			if (searchParam) {
+				searchTerm = searchParam;
+				if (searchInput) searchInput.value = searchParam;
+			}
+
+			if (catParam || searchParam) {
 				updateDisplay();
 			}
 
@@ -177,6 +197,9 @@ const breadcrumbItems = [
 					updateDisplay();
 				});
 			});
+
+			// Initial run to ensure correct state
+			updateDisplay();
 		</script>
 <style>
 	.responsive-title {
