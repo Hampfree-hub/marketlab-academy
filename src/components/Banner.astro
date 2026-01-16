@@ -1,0 +1,258 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+interface Props {
+	title: string;
+	subtitle?: string;
+	category?: string;
+	type?: 'preview' | 'full';
+	className?: string;
+}
+
+const { 
+	title, 
+	subtitle = 'MARKETLAB', 
+	category = 'general', 
+	type = 'preview',
+	className = '' 
+} = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Map category to NES background pattern
+const bgPatterns: Record<string, string> = {
+	'crypto': 'gradient-electric',
+	'technical-analysis': 'grid',
+	'algo-trading': 'gradient-analysis',
+	'fundamental-analysis': 'solid-dark',
+	'general': 'solid-dark'
+};
+
+const pattern = bgPatterns[category] || 'solid-dark';
+
+// SEO Cleanup: Remove trailing dot from subtitle
+const cleanSubtitle = subtitle?.endsWith('.') ? subtitle.slice(0, -1) : subtitle;
+
+// Force translation of category if possible
+const rawCat = category || 'general';
+const catKey = rawCat.toLowerCase().trim();
+const rubric = t(`cat.${catKey}` as any) || rawCat.toUpperCase();
+
+// Dynamic font size logic for subtitle
+const subtitleLength = cleanSubtitle?.length || 0;
+const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80 ? 'text-sm' : 'text-base';
+---
+
+<div class={`code-banner banner-${type} bg-pattern-${pattern} ${className}`}>
+	<div class="banner-inner">
+		<div class="banner-top">
+			<div class="banner-title-wrap">
+				{title && <h2 class="banner-title glitch-text" data-text={title}>{title}</h2>}
+				{cleanSubtitle && <p class={`banner-subtitle ${subtitleSizeClass}`}>{cleanSubtitle}</p>}
+			</div>
+		</div>
+		<div class="banner-bottom">
+			<span class={`banner-rubric glow-${category}`}>[{rubric}]</span>
+			<span class="banner-watermark">MARKETLAB ACADEMY</span>
+		</div>
+	</div>
+</div>
+
+<style>
+	.code-banner {
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		border-bottom: 2px solid var(--color-border);
+		image-rendering: pixelated;
+		background-color: var(--nes-bg-primary);
+	}
+
+	.banner-preview {
+		height: 180px;
+	}
+
+	.banner-full {
+		aspect-ratio: 3/1;
+		min-height: 200px;
+	}
+
+	.banner-inner {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 2rem;
+		position: relative; /* REQUIRED for z-index to work */
+		z-index: 2; /* ABOVE the scanlines ::after */
+	}
+
+	.banner-title {
+		font-family: 'Press Start 2P', monospace;
+		font-size: 1.25rem;
+		color: var(--nes-accent-green);
+		margin: 0 0 0.5rem 0;
+		line-height: 1.4;
+		text-transform: uppercase;
+		word-break: break-word;
+	}
+
+	.banner-preview .banner-title {
+		font-size: 0.85rem;
+		line-height: 1.6;
+	}
+
+	.banner-subtitle {
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 0.75rem;
+		font-weight: bold;
+		color: var(--nes-accent-blue);
+		margin: 0;
+		opacity: 0.9;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		line-height: 1.5;
+	}
+
+	.banner-subtitle.text-xs { font-size: 0.6rem; -webkit-line-clamp: 4; }
+	.banner-subtitle.text-sm { font-size: 0.7rem; -webkit-line-clamp: 3; }
+	.banner-subtitle.text-base { font-size: 0.85rem; -webkit-line-clamp: 2; }
+
+	.banner-preview .banner-subtitle {
+		-webkit-line-clamp: 3;
+	}
+
+	.banner-preview .banner-subtitle.text-xs { font-size: 0.55rem; }
+	.banner-preview .banner-subtitle.text-sm { font-size: 0.65rem; }
+	.banner-preview .banner-subtitle.text-base { font-size: 0.75rem; }
+
+	.banner-bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		padding-top: 1rem;
+		border-top: 4px solid rgba(0, 216, 0, 0.05);
+		font-family: 'Press Start 2P', monospace;
+	}
+
+	.banner-rubric {
+		font-family: 'Press Start 2P', monospace;
+		font-size: 0.6rem;
+		padding: 6px 12px;
+		background-color: var(--nes-accent-green);
+		color: var(--nes-bg-primary);
+		border: 3px solid var(--nes-bg-primary);
+		box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+		text-transform: uppercase;
+		display: inline-block;
+		margin-left: 4px;
+	}
+
+	.banner-preview .banner-rubric {
+		font-size: 0.5rem;
+		padding: 4px 8px;
+		box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+	}
+
+	.banner-watermark {
+		color: var(--nes-text-tertiary);
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 0.5rem;
+		opacity: 0.5;
+	}
+
+	/* --- Background Patterns --- */
+	.bg-pattern-grid {
+		background: 
+			repeating-linear-gradient(0deg, transparent, transparent 15px, rgba(0, 216, 0, 0.02) 15px, rgba(0, 216, 0, 0.02) 16px),
+			repeating-linear-gradient(90deg, transparent, transparent 15px, rgba(0, 216, 0, 0.02) 15px, rgba(0, 216, 0, 0.02) 16px),
+			var(--nes-bg-primary);
+	}
+
+	.bg-pattern-gradient-electric {
+		background: linear-gradient(135deg, var(--nes-bg-primary) 0%, rgba(60, 188, 252, 0.05) 50%, var(--nes-bg-primary) 100%);
+	}
+
+	.bg-pattern-gradient-analysis {
+		background: linear-gradient(135deg, var(--nes-bg-primary) 0%, rgba(0, 216, 0, 0.05) 50%, var(--nes-bg-primary) 100%);
+	}
+
+	.bg-pattern-solid-dark {
+		background-color: var(--nes-bg-primary);
+	}
+
+	/* scanline effect overlay */
+	.code-banner::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: repeating-linear-gradient(
+			rgba(0, 0, 0, 0.05),
+			rgba(0, 0, 0, 0.05) 1px,
+			transparent 1px,
+			transparent 4px
+		);
+		pointer-events: none;
+		z-index: 1;
+	}
+
+	.code-banner:hover .banner-title {
+		color: var(--nes-accent-yellow);
+	}
+
+	/* --- Glitch Effect --- */
+	.glitch-text {
+		position: relative;
+	}
+
+	/* Only enable glitch on devices that support hover to avoid tap issues */
+	@media (hover: hover) {
+		.code-banner:hover .glitch-text::before,
+		.code-banner:hover .glitch-text::after {
+			content: attr(data-text);
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0.8;
+		}
+
+		.code-banner:hover .glitch-text::before {
+			color: #ff00ff;
+			z-index: -1;
+			animation: glitch 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+		}
+
+		.code-banner:hover .glitch-text::after {
+			color: #00ffff;
+			z-index: -2;
+			animation: glitch 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+		}
+	}
+
+	@keyframes glitch {
+		0% { transform: translate(0); }
+		1% { transform: translate(-2px, 2px); }
+		2% { transform: translate(-2px, -2px); }
+		3% { transform: translate(2px, 2px); }
+		4% { transform: translate(2px, -2px); }
+		5% { transform: translate(0); }
+		100% { transform: translate(0); }
+	}
+
+	/* --- 8-bit Categories (Solid Backgrounds) --- */
+	.glow-crypto { background-color: var(--cat-fundamentals); }
+	.glow-technical-analysis { background-color: var(--cat-architecture); }
+	.glow-algo-trading { background-color: var(--cat-practice); }
+	.glow-fundamental-analysis { background-color: var(--cat-dynamics); }
+	.glow-general { background-color: var(--nes-accent-green); }
+</style>

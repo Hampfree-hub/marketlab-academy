@@ -1,0 +1,146 @@
+---
+interface Props {
+	icon: 'crypto' | 'analysis' | 'algo' | 'fundamental' | 'about' | 'library' | 'heart' | 'star';
+	size?: number;
+	color?: string;
+	className?: string;
+}
+
+const { icon, size = 16, color = 'currentColor', className = '' } = Astro.props;
+
+/**
+ * Pixel data for icons (16x16 grid)
+ * Each string represents a row of pixels.
+ * ' ' = transparent, '#' = colored pixel
+ */
+const ICON_DATA: Record<string, string[]> = {
+	heart: [
+		"      ####      ",
+		"    ########    ",
+		"   ##########   ",
+		"  ############  ",
+		" ############## ",
+		" ############## ",
+		" ############## ",
+		"  ############  ",
+		"   ##########   ",
+		"    ########    ",
+		"     ######     ",
+		"      ####      ",
+		"       ##       "
+	],
+	star: [
+		"       ##       ",
+		"      ####      ",
+		"     ######     ",
+		"################",
+		" ############## ",
+		"  ############  ",
+		"   ##########   ",
+		"  ############  ",
+		" ############## ",
+		"################",
+		"     ######     ",
+		"      ####      ",
+		"       ##       "
+	],
+	crypto: [ // Bitcoin-ish
+		"      ######    ",
+		"     ########   ",
+		"    ##  ##  ##  ",
+		"    ##  ##  ##  ",
+		"    ##########  ",
+		"    ##      ##  ",
+		"    ##      ##  ",
+		"    ##########  ",
+		"    ##      ##  ",
+		"    ##      ##  ",
+		"    ##########  ",
+		"    ##  ##  ##  ",
+		"    ##  ##  ##  ",
+		"     ########   ",
+		"      ######    "
+	],
+	analysis: [ // Chart
+		"                ",
+		"             ## ",
+		"             ## ",
+		"          ## ## ",
+		"          ## ## ",
+		"       ## ## ## ",
+		"       ## ## ## ",
+		"    ## ## ## ## ",
+		"    ## ## ## ## ",
+		" ## ## ## ## ## ",
+		" ## ## ## ## ## ",
+		" ############## ",
+		"                "
+	],
+	algo: [ // Robot
+		"      ####      ",
+		"     ######     ",
+		"    ## ## ##    ",
+		"    ########    ",
+		"      ####      ",
+		"   ##########   ",
+		"  ############  ",
+		"  ##  ####  ##  ",
+		"  ##  ####  ##  ",
+		"  ############  ",
+		"   ##########   ",
+		"    ##    ##    ",
+		"    ##    ##    "
+	],
+	fundamental: [ // Newspaper/Document
+		" ############   ",
+		" #         ##   ",
+		" #  #####  ##   ",
+		" #         ##   ",
+		" #  #####  ##   ",
+		" #         ##   ",
+		" #  #####  ##   ",
+		" #         ##   ",
+		" ##########     "
+	],
+	library: [ // Books
+		"  ##  ##  ##    ",
+		"  ##  ##  ##    ",
+		"  ##  ##  ##    ",
+		"  ##  ##  ##    ",
+		"  ##  ##  ##    ",
+		"  ##  ##  ##    ",
+		"  ##  ##  ##    ",
+		"  ##########    "
+	],
+	about: [ // Info 'i'
+		"      ##        ",
+		"      ##        ",
+		"                ",
+		"      ##        ",
+		"      ##        ",
+		"      ##        ",
+		"      ##        ",
+		"      ##        ",
+		"    ######      "
+	]
+};
+
+const rows = ICON_DATA[icon] || [];
+const shadowParts = rows.flatMap((row, y) => 
+	row.split('').map((char, x) => char === '#' ? `${x + 1}px ${y + 1}px ${color}` : null)
+).filter(Boolean);
+
+const shadow = shadowParts.join(', ');
+---
+
+<div 
+	class={`pixel-icon ${className}`} 
+	style={`box-shadow: ${shadow}; width: 1px; height: 1px; transform: scale(${size/16}); margin-right: ${size}px; margin-bottom: ${size}px;`}
+></div>
+
+<style>
+	.pixel-icon {
+		display: inline-block;
+		image-rendering: pixelated;
+	}
+</style>

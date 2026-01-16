@@ -22,6 +22,7 @@
 /* Import component-specific styles globally to ensure reliable loading */
 @import './components/header.css';
 @import './components/blog-post.css';
+@import './components/nes-ui.css';
 
 :root {
   /* Legacy variables (for compatibility with existing components) */
@@ -143,6 +144,11 @@ a:hover {
 .read-more-link:hover,
 .post-card:hover .read-more-link {
   text-decoration: none;
+}
+
+/* Fix post-card padding in global if any */
+.post-card {
+  padding: var(--space-6) !important;
 }
 
 /* Focus Indicators */

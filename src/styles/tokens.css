@@ -35,6 +35,13 @@
   --nes-accent-red: #F83800;        /* NES red (alerts) */
   --nes-accent-yellow: #FCFC00;     /* NES yellow (highlight) */
   
+  /* Category colors (Inspired by Veles Almanac) */
+  --cat-fundamentals: #F97316;      /* Orange - crypto from scratch */
+  --cat-architecture: #14B8A6;      /* Teal - technical-analysis */
+  --cat-dynamics: #EF4444;          /* Red - market-dynamics (future) */
+  --cat-practice: #EAB308;          /* Gold - algo-trading */
+  --cat-regulation: #8B5CF6;        /* Purple - regulation (future) */
+  
   /* ═══ SEMANTIC COLORS (для контента) ═══ */
   /* Trading colors */
   --color-bullish: #10B981;         /* Зелёный (рост) 📈 */

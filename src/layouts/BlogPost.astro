@@ -6,6 +6,9 @@ import Header from '../components/Header.astro';
 import ScrollTop from '../components/ScrollTop.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
+import Banner from '../components/Banner.astro';
+import FAQ from '../components/FAQ.astro';
+import Disclaimer from '../components/Disclaimer.astro';
 import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
 
 interface Props {
@@ -16,12 +19,14 @@ interface Props {
 	heroImage?: string;
 	bannerImage?: string;
 	category?: string;
+	tags?: string[];
+	faq?: { q: string; a: string }[];
 	postId?: string;
 	headings?: { depth: number; slug: string; text: string }[];
 	customBreadcrumbs?: { label: string; href?: string }[];
 }
 
-const { title, description, pubDate, updatedDate, heroImage, bannerImage, category, postId, headings, customBreadcrumbs } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, bannerImage, category, tags, faq, postId, headings, customBreadcrumbs } = Astro.props;
 const displayImage = heroImage || bannerImage;
 
 const lang = getLangFromUrl(Astro.url);
@@ -66,14 +71,16 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 		<main class="container">
 			<div class="layout-grid">
 				<aside class="toc-sticky">
-					<div class="toc-title">{tocTitle}</div>
-					<ul class="toc-list">
-						{headings?.map((heading) => (
-							<li class="toc-item" style={`padding-left: ${heading.depth * 8}px`}>
-								<a href={`#${heading.slug}`}>{heading.text}</a>
-							</li>
-						))}
-					</ul>
+					<div class="nes-container with-title">
+						<p class="title">{tocTitle}</p>
+						<ul class="toc-list">
+							{headings?.map((heading) => (
+								<li class="toc-item" style={`padding-left: ${heading.depth * 8}px`}>
+									<a href={`#${heading.slug}`}>{heading.text}</a>
+								</li>
+							))}
+						</ul>
+					</div>
 				</aside>
 
 				<article class="fade-in">
@@ -82,26 +89,89 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 					{pubDate && (
 						<div class="meta" style="margin-bottom: 0.5rem;">
 							<FormattedDate date={pubDate} />
-							{updatedDate && <span> | UPDATED: <FormattedDate date={updatedDate} /></span>}
+							{updatedDate && <span> • UPDATED: <FormattedDate date={updatedDate} /></span>}
 						</div>
 					)}
 
-					<h1 class={headingClass}>{title}</h1>
-					
-					{displayImage && <img src={displayImage} alt="" class="hero-img" loading="eager" />}
+					<Banner 
+						title={title} 
+						subtitle={description}
+						category={category} 
+						type="full" 
+						className="hero-img"
+					/>
 
 					<div class="prose">
 						<slot />
 					</div>
 
-					{postId && (
-						<RelatedPosts currentPostId={postId} category={category} />
+					<div style="margin-top: 5rem;">
+						<Disclaimer />
+					</div>
+
+					{faq && faq.length > 0 && (
+						<FAQ items={faq} />
 					)}
+
+					<div class="article-footer" style="margin-top: 4rem; display: flex; flex-direction: column; gap: 3rem;">
+						{tags && tags.length > 0 && (
+							<div class="tags-section">
+								<div class="section-label" style="margin-bottom: 1rem;">{t('library.filter') || 'TAGS:'}</div>
+								<div class="tags-container" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+									{tags.map(tag => (
+										<a href={`${translatePath('library')}?search=${tag}`} class="tag-btn" style="text-decoration: none;">
+											#{tag}
+										</a>
+									))}
+								</div>
+							</div>
+						)}
+
+						{postId && (
+							<div class="nes-container with-title">
+								<p class="title">{t('home.recent_label') || 'RELATED'}</p>
+								<RelatedPosts currentPostId={postId} category={category} />
+							</div>
+						)}
+					</div>
 				</article>
 			</div>
 
 			<ScrollTop />
 		</main>
 		<Footer />
+
+		<script is:inline>
+			// Interactive TOC Highlighting
+			const observerOptions = {
+				root: null,
+				rootMargin: '0px 0px -80% 0px',
+				threshold: 0
+			};
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						const id = entry.target.getAttribute('id');
+						if (id) {
+							// Remove active class from all links
+							document.querySelectorAll('.toc-item a').forEach(link => {
+								link.classList.remove('active');
+							});
+							// Add active class to current link
+							const activeLink = document.querySelector(`.toc-item a[href="#${id}"]`);
+							if (activeLink) {
+								activeLink.classList.add('active');
+							}
+						}
+					}
+				});
+			}, observerOptions);
+
+			// Observe all headers inside .prose
+			document.querySelectorAll('.prose h2, .prose h3').forEach((header) => {
+				observer.observe(header);
+			});
+		</script>
 	</body>
 </html>
