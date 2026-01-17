@@ -123,7 +123,7 @@
 
 ### **Способ 1: Через скрипт (рекомендуется):**
 ```bash
-cd D:\Projects\HampfreeBlog-Private\scripts
+cd [приватный-репозиторий]/scripts
 node git-commit-safe.js "fix: исправление выделения текста, мобильного меню и унификация кнопок" "issues #50, #54, #55"
 ```
 
