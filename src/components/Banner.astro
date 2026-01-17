@@ -139,6 +139,7 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		padding-top: 1.5rem;
 		border-top: 2px solid rgba(255, 255, 255, 0.05); /* Changed from green to subtle white */
 		font-family: 'Press Start 2P', monospace;
+		width: 100%;
 	}
 
 	.banner-rubric {
@@ -154,13 +155,15 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		position: relative;
 		z-index: 10; /* Ensure visibility */
 		margin-bottom: 12px; /* Safety margin for shadow */
-		margin-left: 8px; /* Move away from edge */
+		margin-left: 0; /* Aligned to left edge with text */
+		align-self: flex-start; /* Align to top of flex container */
 	}
 
 	.banner-preview .banner-rubric {
 		font-size: 0.5rem;
 		padding: 4px 8px;
 		box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+		margin-left: 0; /* Ensure left alignment in preview too */
 	}
 
 	.banner-watermark {
@@ -168,6 +171,8 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		font-family: 'JetBrains Mono', monospace;
 		font-size: 0.5rem;
 		opacity: 0.5;
+		align-self: flex-end; /* Align to right edge */
+		margin-left: auto; /* Push to right */
 	}
 
 	/* --- Background Patterns --- */
@@ -259,4 +264,53 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 	.glow-algo-trading { background-color: var(--cat-practice); }
 	.glow-fundamental-analysis { background-color: var(--cat-dynamics); }
 	.glow-general { background-color: var(--nes-accent-green); }
+
+	/* --- Responsive Design --- */
+	@media (max-width: 768px) {
+		.banner-inner {
+			padding: 1.5rem;
+		}
+
+		.banner-bottom {
+			flex-wrap: wrap;
+			gap: 1rem;
+			padding-top: 1rem;
+		}
+
+		.banner-rubric {
+			margin-left: 0;
+			margin-bottom: 0;
+		}
+
+		.banner-watermark {
+			margin-left: auto;
+			align-self: flex-end;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.banner-inner {
+			padding: 1rem;
+		}
+
+		.banner-bottom {
+			padding-top: 0.75rem;
+		}
+
+		.banner-rubric {
+			font-size: 0.5rem;
+			padding: 4px 8px;
+		}
+
+		.banner-watermark {
+			font-size: 0.4rem;
+		}
+	}
+
+	/* --- Dark/Light Theme Support --- */
+	@media (prefers-color-scheme: light) {
+		.banner-watermark {
+			opacity: 0.4;
+		}
+	}
 </style>
