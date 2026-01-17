@@ -300,7 +300,7 @@ const issues = [
 
 ### Референс:
 
-- **n8n Image Generator:** \`D:/Projects/AutomationHub/n8n/image-generator/server.js\`
+- **n8n Image Generator:** Внешний источник (структура не раскрывается)
 - **Puppeteer + Chart.js:** Генерация графиков
 - **8-bit эстетика:** Пиксельные шрифты, NES палитра
 
