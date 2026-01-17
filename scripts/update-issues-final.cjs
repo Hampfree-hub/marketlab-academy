@@ -1,6 +1,14 @@
 const https = require('https');
 const fs = require('fs');
-const token = fs.readFileSync('D:/Projects/HampfreeBlog-Private/.github-token', 'utf8').trim();
+// Используем переменную окружения для безопасности
+const tokenPath = process.env.GITHUB_TOKEN_PATH || null;
+const token = process.env.GITHUB_TOKEN || (tokenPath && fs.existsSync(tokenPath) ? fs.readFileSync(tokenPath, 'utf8').trim() : null);
+
+if (!token) {
+  console.error('❌ GITHUB_TOKEN не найден!');
+  console.error('Установите переменную окружения GITHUB_TOKEN или GITHUB_TOKEN_PATH');
+  process.exit(1);
+}
 
 async function api(method, path, body) {
   return new Promise((resolve) => {

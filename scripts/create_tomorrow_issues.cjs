@@ -12,8 +12,8 @@ const REPO_OWNER = 'Hampfree-hub';
 const REPO_NAME = 'marketlab-academy';
 
 function readTokenFromFile() {
-  const tokenPath = path.join(__dirname, '../../HampfreeBlog-Private/.github-token');
-  if (fs.existsSync(tokenPath)) {
+  const tokenPath = process.env.GITHUB_TOKEN_PATH || null;
+  if (tokenPath && fs.existsSync(tokenPath)) {
     return fs.readFileSync(tokenPath, 'utf-8').trim();
   }
   return null;
@@ -23,6 +23,7 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN || readTokenFromFile();
 
 if (!GITHUB_TOKEN) {
   console.error('❌ GITHUB_TOKEN не найден!');
+  console.error('Установите переменную окружения GITHUB_TOKEN или GITHUB_TOKEN_PATH');
   process.exit(1);
 }
 

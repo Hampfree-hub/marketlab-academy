@@ -16,7 +16,7 @@
 
 - **Источник контента:** `D:/Projects/Veles Blog/website/src/content/blog-ru/`
 - **Целевой проект:** `D:/Projects/HampfreeBlog/src/content/blog-ru/`
-- **План миграции:** `D:/Projects/HampfreeBlog-Private/CONTENT_MIGRATION_PLAN.md`
+- **План миграции:** Хранится в приватном репозитории
 - **SEO стратегия:** 2-3 статьи в неделю (Pillar Content)
 
 ---
