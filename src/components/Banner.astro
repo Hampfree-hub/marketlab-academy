@@ -72,7 +72,8 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 	}
 
 	.banner-preview {
-		height: 180px;
+		min-height: 180px;
+		height: auto;
 	}
 
 	.banner-full {
@@ -136,7 +137,7 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		justify-content: space-between;
 		align-items: flex-end;
 		padding-top: 1rem;
-		border-top: 2px solid rgba(0, 216, 0, 0.05);
+		border-top: 2px solid rgba(255, 255, 255, 0.05); /* Changed from green to subtle white */
 		font-family: 'Press Start 2P', monospace;
 	}
 
@@ -151,7 +152,9 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		text-transform: uppercase;
 		display: inline-block;
 		position: relative;
-		z-index: 3;
+		z-index: 5; /* Ensure visibility */
+		margin-bottom: 4px; /* Move up from bottom edge */
+		margin-left: 4px; /* Move away from left edge */
 	}
 
 	.banner-preview .banner-rubric {

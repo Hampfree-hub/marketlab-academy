@@ -70,19 +70,6 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 		<Header />
 		<main class="container">
 			<div class="layout-grid">
-				<aside class="toc-sticky">
-					<div class="nes-container with-title">
-						<p class="title">{tocTitle}</p>
-						<ul class="toc-list">
-							{headings?.map((heading) => (
-								<li class="toc-item" style={`padding-left: ${heading.depth * 8}px`}>
-									<a href={`#${heading.slug}`}>{heading.text}</a>
-								</li>
-							))}
-						</ul>
-					</div>
-				</aside>
-
 				<article class="fade-in">
 					<Breadcrumb items={breadcrumbItems} />
 					
@@ -135,6 +122,19 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 						)}
 					</div>
 				</article>
+
+				<aside class="toc-sticky">
+					<div class="nes-container with-title">
+						<p class="title">{tocTitle}</p>
+						<ul class="toc-list">
+							{headings?.map((heading) => (
+								<li class="toc-item" style={`padding-left: ${heading.depth * 8}px`}>
+									<a href={`#${heading.slug}`}>{heading.text}</a>
+								</li>
+							))}
+						</ul>
+					</div>
+				</aside>
 			</div>
 
 			<ScrollTop />

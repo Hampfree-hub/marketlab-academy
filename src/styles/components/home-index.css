@@ -159,7 +159,7 @@
 .subscribe-form {
 	display: flex;
 	flex-direction: column;
-	max-width: 580px;
+	max-width: 640px; /* Slightly wider */
 	margin: 0 auto;
 	text-align: left;
 }
@@ -167,6 +167,7 @@
 .form-row {
 	display: flex;
 	gap: 0;
+	align-items: stretch;
 }
 
 .visually-hidden {
@@ -183,9 +184,10 @@
 
 .subscribe-form input {
 	flex: 1;
+	min-width: 0; /* Allow shrinking */
 	background: var(--color-bg);
 	border: var(--border-structural); /* 2px solid gray */
-	padding: 14px 20px; /* ⚠️ TODO: Привести к кратно 8px */
+	padding: 12px 16px; /* Unified padding кратно 8 (approx) */
 	color: var(--color-text-primary);
 	font-family: 'JetBrains Mono', monospace;
 	transition: border-color 0.10s steps(3);
@@ -197,21 +199,22 @@
 }
 
 .subscribe-form .btn-submit {
-	background: var(--color-accent);
+	white-space: nowrap; /* Prevent text wrapping inside button */
+	background: var(--nes-accent-green);
 	color: #FFFFFF;
-	border: var(--border-structural-accent); /* 2px solid green */
-	border-bottom: var(--border-bulge); /* 4px solid dark green */
+	border: 2px solid var(--nes-border-primary); /* Changed from green accent to primary border */
+	border-bottom: 4px solid var(--nes-border-primary); /* Changed to primary border */
 	padding: 0 var(--space-4); /* 0 32px — кратно 8 */
 	font-family: 'JetBrains Mono', monospace;
 	font-weight: bold;
 	text-transform: uppercase;
 	cursor: pointer;
-	transition: border-color 0.2s steps(4);
+	transition: all 0.2s steps(4);
 }
 
 .subscribe-form .btn-submit:hover:not(:disabled) {
-	background: var(--color-accent-hover);
-	border-color: var(--color-accent-hover);
+	background: var(--nes-accent-green-dark);
+	border-color: var(--nes-accent-green-dark);
 }
 
 /* ═══ MOBILE BREAKPOINTS ═══ */
