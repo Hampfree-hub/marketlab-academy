@@ -9,6 +9,8 @@ const blogSchema = ({ image }) =>
 		updatedDate: z.coerce.date().optional(),
 		bannerImage: z.string().optional(),
 		previewImage: z.string().optional(),
+		category: z.string().optional(),
+		tags: z.array(z.string()).optional(),
 		heroImage: image().optional(), // Оставляем для совместимости со старыми темами
 	});
 

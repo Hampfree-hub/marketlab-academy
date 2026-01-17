@@ -120,8 +120,8 @@ const breadcrumbItems = [
 
 			const postsData = Array.from(postCards).map(card => ({
 				id: card.getAttribute('href'),
-				title: card.querySelector('h3').innerText,
-				description: card.querySelector('.description').innerText,
+				title: card.getAttribute('data-title'),
+				description: card.getAttribute('data-description'),
 				category: card.getAttribute('data-category'),
 				element: card
 			}));
