@@ -3,40 +3,40 @@
   LanguageSwitcher Component
   Handles switching between RU, EN, ES via URL path.
 */
-import { languages, ui } from '../../i18n/ui';
+import { languages } from '../../i18n/ui';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+// Utility to switch language in current URL
+const getSwitchPath = (targetLang: string) => {
+	const currentPath = Astro.url.pathname;
+	const pathParts = currentPath.split('/');
+	// URL format: /marketlab-academy/[lang]/...
+	// index 0: "", index 1: "marketlab-academy", index 2: "[lang]"
+	const langIndex = pathParts.findIndex(p => p === 'marketlab-academy') + 1;
+	
+	if (langIndex > 0 && langIndex < pathParts.length) {
+		pathParts[langIndex] = targetLang;
+		let newPath = pathParts.join('/');
+		if (!newPath.endsWith('/')) newPath += '/';
+		return newPath;
+	}
+	return `/marketlab-academy/${targetLang}/`;
+};
 ---
 
 <div class="lang-switcher" aria-label={t('mobile.lang_label')}>
 	{Object.keys(languages).map((l, index) => (
 		<>
-			<button 
+			<a 
+				href={getSwitchPath(l)}
 				class={`lang-btn ${lang === l ? 'active' : ''}`} 
 				data-lang={l}
-					onclick={`
-						const currentPath = window.location.pathname;
-						const pathParts = currentPath.split('/');
-						const langIndex = pathParts.findIndex(p => p === 'marketlab-academy') + 1;
-						
-						// Keep menu open after reload
-						const suffix = '?menu=open';
-						
-						if (langIndex > 0 && langIndex < pathParts.length) {
-							pathParts[langIndex] = '${l}';
-							// Ensure trailing slash
-							let newPath = pathParts.join('/');
-							if (!newPath.endsWith('/')) newPath += '/';
-							window.location.href = newPath + suffix;
-						} else {
-							window.location.href = '/marketlab-academy/${l}/' + suffix;
-						}
-					`}
 			>
 				{l.toUpperCase()}
-			</button>
+			</a>
 			{index < Object.keys(languages).length - 1 && <span class="lang-divider">|</span>}
 		</>
 	))}

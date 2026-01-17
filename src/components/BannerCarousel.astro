@@ -1,5 +1,8 @@
 ---
 // Простая карусель баннеров (можно отключить через env переменную)
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const showBanners = import.meta.env.PUBLIC_SHOW_BANNERS !== 'false';
 ---
 
@@ -8,11 +11,11 @@ const showBanners = import.meta.env.PUBLIC_SHOW_BANNERS !== 'false';
 		<div class="banner-wrapper">
 			<div class="banner-item">
 				<a href="/library/" class="banner-link">
-					<span>Новые материалы по трейдингу и криптовалютам</span>
+					<span>{t('banner.new_materials')}</span>
 				</a>
 			</div>
 		</div>
-		<button class="banner-close" aria-label="Скрыть баннеры" title="Скрыть баннеры">
+		<button class="banner-close" aria-label={t('banner.close')} title={t('banner.close')}>
 			<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
 				<path d="M12 4L4 12M4 4l8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
 			</svg>

@@ -6,7 +6,6 @@ category: 'technical-analysis'
 bannerImage: './assets/banner.png'
 ---
 
-# RSI Technical Analysis
 
 Relative Strength Index (RSI) is an oscillator that measures the speed and change of price movements. It ranges from 0 to 100 and is traditionally used to identify overbought or oversold conditions.
 

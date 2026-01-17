@@ -7,6 +7,8 @@ import Breadcrumb from '../../../components/Breadcrumb.astro';
 import { SITE_TITLE } from '../../../consts';
 import FormattedDate from '../../../components/FormattedDate.astro';
 import ScrollTop from '../../../components/ScrollTop.astro';
+import Banner from '../../../components/Banner.astro';
+import PixelIcon from '../../../components/ui/PixelIcon.astro';
 import '../../../styles/components/blog-index.css';
 import { ui } from '../../../i18n/ui';
 import { useTranslations, useTranslatedPath } from '../../../i18n/utils';
@@ -68,30 +70,45 @@ const breadcrumbItems = [
 									data-cat={cat.id} 
 									aria-pressed="false"
 									title={cat.full}
+									style="display: inline-flex; align-items: center; gap: 8px;"
 								>
+									<PixelIcon icon={cat.id === 'technical-analysis' ? 'analysis' : cat.id === 'crypto' ? 'crypto' : cat.id === 'algo-trading' ? 'algo' : 'fundamental'} size={12} color="currentColor" />
 									[{cat.label}]
 								</button>
 							))}
 						</div>
 					</div>
 				</div>
-				{sortedPosts.map((post) => (
-					<a 
-						href={`/marketlab-academy/${lang}/library/${post.id}/`} 
-						class="post-card" 
-						data-title={post.data.title.toLowerCase()}
-						data-description={post.data.description.toLowerCase()}
-						data-category={post.data.category || ''}
-					>
-						<div class="post-meta">
-							<span><FormattedDate date={post.data.pubDate} /></span>
-						</div>
-						<h3>{post.data.title}</h3>
-						<p class="description">{post.data.description}</p>
-						<div class="read-more-link" aria-hidden="true">> {t('library.read_more')}</div>
-					</a>
-				))}
+				<div id="postsList" style="display: contents;">
+					{sortedPosts.map((post) => (
+						<a 
+							href={`/marketlab-academy/${lang}/library/${post.id}/`} 
+							class="post-card" 
+							data-title={post.data.title.toLowerCase()}
+							data-description={post.data.description.toLowerCase()}
+							data-category={post.data.category || ''}
+							data-tags={post.data.tags?.join(',').toLowerCase() || ''}
+						>
+							<Banner 
+								title={post.data.title} 
+								subtitle={post.data.description}
+								category={post.data.category} 
+								type="preview" 
+							/>
+							<div class="post-meta-wrap">
+								<div class="post-meta">
+									<span><FormattedDate date={post.data.pubDate} /></span>
+								</div>
+							</div>
+							<div class="read-more-link" aria-hidden="true">> {t('library.read_more')}</div>
+						</a>
+					))}
+				</div>
 			</section>
+
+			<div class="pagination-container" id="pagination" style="display: flex; justify-content: center; gap: 1rem; margin-top: 3rem; margin-bottom: 4rem;">
+				<!-- Buttons will be injected by script -->
+			</div>
 			
 			<div id="noResults" style="display: none; text-align: center; padding: 3rem 0; color: var(--color-text-secondary); font-family: 'JetBrains Mono', monospace;">
 				> {t('library.no_results')}
@@ -110,19 +127,28 @@ const breadcrumbItems = [
 
 			const postsData = Array.from(postCards).map(card => ({
 				id: card.getAttribute('href'),
-				title: card.querySelector('h3').innerText,
-				description: card.querySelector('.description').innerText,
+				title: card.getAttribute('data-title'),
+				description: card.getAttribute('data-description'),
 				category: card.getAttribute('data-category'),
+				tags: card.getAttribute('data-tags'),
 				element: card
 			}));
 
 			const fuse = new Fuse(postsData, {
-				keys: ['title', 'description'],
-				threshold: 0.3
+				keys: [
+					{ name: 'title', weight: 0.6 },
+					{ name: 'description', weight: 0.3 },
+					{ name: 'tags', weight: 0.1 }
+				],
+				threshold: 0.4,
+				distance: 100,
+				ignoreLocation: true
 			});
 
 			let activeCategory = null;
 			let searchTerm = '';
+			let currentPage = 1;
+			const postsPerPage = 6;
 
 			function updateDisplay() {
 				let filtered = postsData;
@@ -137,29 +163,78 @@ const breadcrumbItems = [
 					filtered = filtered.filter(p => resultIds.has(p.id));
 				}
 
+				const totalPages = Math.ceil(filtered.length / postsPerPage);
+				if (currentPage > totalPages) currentPage = Math.max(1, totalPages);
+
+				const startIdx = (currentPage - 1) * postsPerPage;
+				const endIdx = startIdx + postsPerPage;
+				const pagedPosts = filtered.slice(startIdx, endIdx);
+				const pagedIds = new Set(pagedPosts.map(p => p.id));
+
 				let visibleCount = 0;
 				postCards.forEach(card => {
 					const cardHref = card.getAttribute('href');
-					const isVisible = filtered.some(p => p.id === cardHref);
+					const isVisible = pagedIds.has(cardHref);
 					card.style.display = isVisible ? 'flex' : 'none';
 					if (isVisible) visibleCount++;
 				});
 
-				if (noResults) noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+				renderPagination(totalPages);
+
+				if (noResults) noResults.style.display = filtered.length === 0 ? 'block' : 'none';
+			}
+
+			function renderPagination(totalPages) {
+				const container = document.getElementById('pagination');
+				if (!container) return;
+				
+				if (totalPages <= 1) {
+					container.innerHTML = '';
+					return;
+				}
+
+				let html = '';
+				for (let i = 1; i <= totalPages; i++) {
+					html += `
+						<button class="tag-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">
+							${i}
+						</button>
+					`;
+				}
+				container.innerHTML = html;
+
+				container.querySelectorAll('[data-page]').forEach(btn => {
+					btn.addEventListener('click', () => {
+						currentPage = parseInt(btn.getAttribute('data-page'));
+						updateDisplay();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+					});
+				});
 			}
 
 			searchInput?.addEventListener('input', (e) => {
 				searchTerm = (e.target as HTMLInputElement).value;
+				currentPage = 1;
 				updateDisplay();
 			});
 
-			// Handle category filter from URL
+			// Handle search/category filter from URL
 			const urlParams = new URLSearchParams(window.location.search);
 			const catParam = urlParams.get('cat');
+			const searchParam = urlParams.get('search');
+
 			if (catParam) {
 				activeCategory = catParam;
 				const btn = document.querySelector(`.tag-btn[data-cat="${catParam}"]`);
 				if (btn) btn.classList.add('active');
+			}
+
+			if (searchParam) {
+				searchTerm = searchParam;
+				if (searchInput) searchInput.value = searchParam;
+			}
+
+			if (catParam || searchParam) {
 				updateDisplay();
 			}
 
@@ -174,15 +249,23 @@ const breadcrumbItems = [
 						activeCategory = cat;
 						btn.classList.add('active');
 					}
+					currentPage = 1;
 					updateDisplay();
 				});
 			});
+
+			// Initial run to ensure correct state
+			updateDisplay();
 		</script>
 <style>
 	.responsive-title {
 		font-size: clamp(1.5rem, 5vw, 2.5rem);
 		word-break: break-word;
 		line-height: 1.2;
+	}
+	body {
+		font-family: 'VT323', monospace !important;
+		font-size: 1.25rem;
 	}
 	@media (max-width: 480px) {
 		.responsive-title {
