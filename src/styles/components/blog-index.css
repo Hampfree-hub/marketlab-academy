@@ -9,16 +9,17 @@
 
 .library-header {
 	margin-top: var(--space-8);
-	margin-bottom: var(--space-10);
+	margin-bottom: var(--space-4); /* Reduced from space-10 (80px) to space-4 (32px) */
 }
 
 .library-header h1 {
-	margin-top: var(--space-4);
+	margin-top: 0; /* Removed - breadcrumb already provides spacing */
+	margin-bottom: var(--space-4); /* Add bottom margin instead */
 	font-size: 2rem;
 }
 
 .search-bar {
-	margin-top: var(--space-4);
+	margin-top: 0; /* Removed - header already provides spacing */
 	position: relative;
 }
 
@@ -53,7 +54,7 @@
 
 .search-and-filter {
 	grid-column: 1 / -1;
-	margin-bottom: var(--space-6);
+	margin-bottom: var(--space-4); /* Reduced from space-6 (48px) to space-4 (32px) */
 }
 
 /* Section Label - единый стиль для всех меток */
@@ -61,7 +62,7 @@
 	font-family: 'JetBrains Mono', monospace;
 	color: var(--color-accent);
 	font-size: 0.85rem;
-	margin: var(--space-4) 0 var(--space-3);
+	margin: var(--space-3) 0 var(--space-2); /* Reduced: 24px top, 16px bottom (was 32px/24px) */
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
