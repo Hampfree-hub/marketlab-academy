@@ -329,20 +329,8 @@
 	}
 }
 
-@media (max-width: 768px) {
-	.desktop-nav, .header-right {
-		display: none !important;
-	}
-	.hamburger {
-		display: flex !important;
-	}
-	.header-container {
-		padding: 0.5rem var(--horizontal-padding);
-	}
-}
-
-/* DESKTOP & TABLET: ≥769px */
-@media (min-width: 769px) {
+/* DESKTOP & TABLET: ≥1025px */
+@media (min-width: 1025px) {
 	/* Force show utilities and nav */
 	.hamburger {
 		display: none !important;
@@ -355,5 +343,17 @@
 	}
 	.mobile-menu {
 		display: none !important;
+	}
+}
+
+@media (max-width: 1024px) {
+	.desktop-nav, .header-right {
+		display: none !important;
+	}
+	.hamburger {
+		display: flex !important;
+	}
+	.header-container {
+		padding: 0.5rem var(--horizontal-padding);
 	}
 }

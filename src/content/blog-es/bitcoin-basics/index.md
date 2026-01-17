@@ -6,7 +6,6 @@ category: 'crypto'
 bannerImage: './assets/banner.png'
 ---
 
-# Fundamentos de Bitcoin
 
 Bitcoin es la primera y más conocida criptomoneda del mundo. Creado por un desarrollador anónimo bajo el seudónimo de Satoshi Nakamoto en 2009, presentó al mundo la tecnología blockchain.
 

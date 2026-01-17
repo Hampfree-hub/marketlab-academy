@@ -7,6 +7,7 @@
 
 import { getRelatedPosts } from '../utils/blog';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import Banner from './Banner.astro';
 
 interface Props {
 	currentPostId: string;
@@ -41,7 +42,6 @@ const readMoreText = {
 
 {relatedPosts.length > 0 && (
 	<section class="related-posts" aria-labelledby="related-posts-title">
-		<h2 id="related-posts-title" class="related-posts-title">{relatedHeader}</h2>
 		<div class="related-posts-grid">
 			{relatedPosts.map((post) => {
 				// We stay within the same language for related posts
@@ -51,11 +51,13 @@ const readMoreText = {
 						class="related-post-card"
 						aria-label={`${readMoreText}: ${post.data.title}`}
 					>
-						<h3 class="related-post-title">{post.data.title}</h3>
-						{post.data.description && (
-							<p class="related-post-description">{post.data.description}</p>
-						)}
-						<div class="related-post-meta">
+						<Banner 
+							title={post.data.title} 
+							subtitle={post.data.description}
+							category={(post.data as any).category} 
+							type="preview" 
+						/>
+						<div class="related-post-meta" style="margin-top: 1rem;">
 							{('category' in post.data && (post.data as any).category) && (
 								<span class="related-post-category">[{t(`cat.${(post.data as any).category}` as any) || (post.data as any).category.toUpperCase()}]</span>
 							)}
@@ -69,9 +71,7 @@ const readMoreText = {
 
 <style>
 	.related-posts {
-		margin-top: 4rem;
-		padding-top: 3rem;
-		border-top: 2px solid var(--color-border);
+		margin-top: 1rem;
 	}
 
 	.related-posts-title {

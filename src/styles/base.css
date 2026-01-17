@@ -162,22 +162,19 @@ h1, h2, h3, h4, h5, h6 {
   scroll-margin-top: 100px; /* ✅ Offset for sticky header */
 }
 
-/* ═══ H1 HEADING STYLES ═══ */
-h1 {
-  font-size: 2.5rem; /* ✅ Better rem-based size */
-  line-height: 1.4;
-  margin-bottom: var(--space-4);
-  text-decoration: none;
-  border-bottom: none;
-}
+/* ═══ Fibonacci Scaling ═══ */
+h1 { font-size: var(--fs-3xl); } /* 48px base */
+h2 { font-size: var(--fs-lg); }  /* 24px */
+h3 { font-size: var(--fs-md); }  /* 20px */
+h4 { font-size: var(--fs-base); } /* 16px */
 
 @media (max-width: 1024px) {
-  h1 { font-size: 2rem; }
+  h1 { font-size: var(--fs-2xl); }
 }
 
 @media (max-width: 768px) {
-  h1 { font-size: 1.5rem; }
-  h2 { font-size: 1.25rem; }
+  h1 { font-size: var(--fs-xl); }
+  h2 { font-size: var(--fs-md); }
 }
 
 /* .brutal — для коротких заголовков (2-5 слов, CAPS) */

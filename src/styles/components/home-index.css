@@ -29,6 +29,26 @@
 	margin: 0 auto 3rem;
 }
 
+.hero-actions {
+	display: flex;
+	gap: var(--space-3);
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 1rem;
+}
+
+.btn-outline {
+	background: transparent;
+	color: var(--color-text-secondary);
+	border-color: var(--color-border);
+}
+
+.btn-outline:hover {
+	background: var(--color-card-bg);
+	color: var(--color-text-primary) !important;
+	border-color: var(--color-text-primary);
+}
+
 /* Categories */
 .section-label {
 	font-family: 'JetBrains Mono', monospace;
@@ -50,8 +70,15 @@
 .posts-grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: var(--space-3); /* 24px — строго кратно 8 */
-	margin-bottom: var(--space-10); /* 80px — строго кратно 8 */
+	gap: var(--space-6); /* Increase gap for more breathing room */
+	margin-bottom: var(--space-12); 
+	padding-bottom: var(--space-12); 
+	position: relative;
+}
+
+.post-card {
+	padding: var(--space-6); /* Unified padding */
+	border-width: 4px; /* Stronger borders */
 }
 
 /* ✅ ИСПРАВЛЕНИЕ: Карточки постов должны иметь одинаковую ширину */
@@ -61,6 +88,18 @@
 	max-width: 100%;
 	box-sizing: border-box;
 }
+
+/* Category Badges */
+.category-badge {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-left: auto;
+}
+
+.cat-crypto { color: var(--cat-fundamentals); }
+.cat-technical-analysis { color: var(--cat-architecture); }
+.cat-algo-trading { color: var(--cat-practice); }
+.cat-fundamental-analysis { color: var(--cat-dynamics); }
 
 .post-card-tags {
 	display: flex;
@@ -74,6 +113,10 @@
 	font-size: 0.7rem;
 	color: var(--color-text-secondary);
 	opacity: 0.7;
+}
+
+.post-meta-wrap {
+	margin-top: var(--space-3);
 }
 
 .post-meta {
@@ -99,19 +142,13 @@
 }
 
 /* Newsletter */
-.newsletter-box {
-	background: var(--color-card-bg);
-	border: var(--border-structural-accent); /* 2px solid green */
-	border-bottom: var(--border-bulge); /* 4px solid dark green */
-	padding: var(--space-8) var(--space-4); /* 64px 32px — кратно 8 */
+.newsletter-box.nes-container {
 	text-align: center;
-	margin: var(--space-10) 0; /* 80px — кратно 8 */
+	margin: var(--space-10) 0;
 }
 
-.newsletter-box h2 {
-	font-size: 2rem;
-	margin-bottom: 1rem;
-	color: var(--color-text-primary);
+.newsletter-box.nes-container .title {
+	font-size: 1rem;
 }
 
 .newsletter-box p {
@@ -122,7 +159,7 @@
 .subscribe-form {
 	display: flex;
 	flex-direction: column;
-	max-width: 580px;
+	max-width: 640px;
 	margin: 0 auto;
 	text-align: left;
 }
@@ -130,6 +167,8 @@
 .form-row {
 	display: flex;
 	gap: 0;
+	align-items: stretch;
+	height: 56px;
 }
 
 .visually-hidden {
@@ -146,9 +185,10 @@
 
 .subscribe-form input {
 	flex: 1;
+	min-width: 0; /* Allow shrinking */
 	background: var(--color-bg);
 	border: var(--border-structural); /* 2px solid gray */
-	padding: 14px 20px; /* ⚠️ TODO: Привести к кратно 8px */
+	padding: 12px 16px; /* Unified padding кратно 8 (approx) */
 	color: var(--color-text-primary);
 	font-family: 'JetBrains Mono', monospace;
 	transition: border-color 0.10s steps(3);
@@ -160,21 +200,26 @@
 }
 
 .subscribe-form .btn-submit {
-	background: var(--color-accent);
+	white-space: nowrap;
+	background: var(--nes-accent-green);
 	color: #FFFFFF;
-	border: var(--border-structural-accent); /* 2px solid green */
-	border-bottom: var(--border-bulge); /* 4px solid dark green */
-	padding: 0 var(--space-4); /* 0 32px — кратно 8 */
+	border: 2px solid var(--nes-border-primary);
+	border-bottom: 4px solid var(--nes-border-primary);
+	padding: 0 var(--space-4);
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	font-family: 'JetBrains Mono', monospace;
 	font-weight: bold;
 	text-transform: uppercase;
 	cursor: pointer;
-	transition: border-color 0.2s steps(4);
+	transition: all 0.2s steps(4);
 }
 
 .subscribe-form .btn-submit:hover:not(:disabled) {
-	background: var(--color-accent-hover);
-	border-color: var(--color-accent-hover);
+	background: var(--nes-accent-green-dark);
+	border-color: var(--nes-accent-green-dark);
 }
 
 /* ═══ MOBILE BREAKPOINTS ═══ */

@@ -57,6 +57,7 @@ const t = useTranslations(lang);
 		// Re-attach listeners on DOM changes (for Astro's static transitions if any)
 		document.addEventListener('astro:page-load', attachListeners);
 		document.addEventListener('DOMContentLoaded', attachListeners);
+		document.addEventListener('astro:after-swap', attachListeners);
 	};
 	
 	// Initialize

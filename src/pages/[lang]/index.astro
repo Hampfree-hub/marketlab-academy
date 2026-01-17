@@ -6,6 +6,8 @@ import Footer from '../../components/Footer.astro';
 import { SITE_TITLE } from '../../consts';
 import FormattedDate from '../../components/FormattedDate.astro';
 import ScrollTop from '../../components/ScrollTop.astro';
+import Banner from '../../components/Banner.astro';
+import PixelIcon from '../../components/ui/PixelIcon.astro';
 import '../../styles/components/home-index.css';
 import { ui } from '../../i18n/ui';
 import { useTranslations, useTranslatedPath } from '../../i18n/utils';
@@ -47,7 +49,9 @@ const categories = [
 			<section class="hero" aria-labelledby="hero-title">
 				<h1 id="hero-title" class="brutal">{t('home.hero_title')}</h1>
 				<p>{t('home.hero_description')}</p>
-				<a href={translatePath('library')} class="btn">{t('home.hero_cta')}</a>
+				<div class="hero-actions">
+					<a href={translatePath('library')} class="btn">{t('home.hero_cta')}</a>
+				</div>
 			</section>
 
 			<section aria-labelledby="cat-label">
@@ -58,8 +62,9 @@ const categories = [
 							href={`${translatePath('library')}?cat=${cat.id}`}
 							class="tag-btn" 
 							title={cat.full}
-							style="text-decoration: none;"
+							style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px;"
 						>
+							<PixelIcon icon={cat.id === 'technical-analysis' ? 'analysis' : cat.id === 'crypto' ? 'crypto' : cat.id === 'algo-trading' ? 'algo' : 'fundamental'} size={12} color="currentColor" />
 							[{cat.label}]
 						</a>
 					))}
@@ -71,19 +76,25 @@ const categories = [
 				<div class="posts-grid">
 					{featuredPosts.map(post => (
 						<a href={translatePath(`library/${post.id}`)} class="post-card" aria-label={`${t('library.read_more')}: ${post.data.title}`}>
-							<div class="post-meta">
-								<span><FormattedDate date={post.data.pubDate} /></span>
+							<Banner 
+								title={post.data.title} 
+								subtitle={post.data.description}
+								category={post.data.category} 
+								type="preview" 
+							/>
+							<div class="post-meta-wrap">
+								<div class="post-meta">
+									<span><FormattedDate date={post.data.pubDate} /></span>
+								</div>
 							</div>
-							<h3>{post.data.title}</h3>
-							<p class="description">{post.data.description}</p>
 							<div class="read-more-link" aria-hidden="true">> {t('library.read_more')}</div>
 						</a>
 					))}
 				</div>
 			</section>
 
-			<section class="newsletter-box" aria-labelledby="newsletter-title">
-				<h2 id="newsletter-title">{t('home.newsletter_title')}</h2>
+			<section class="newsletter-box nes-container with-title" aria-labelledby="newsletter-title">
+				<p class="title" id="newsletter-title">{t('home.newsletter_title')}</p>
 				<p>{t('home.newsletter_desc')}</p>
 				<form id="newsletter-form" class="subscribe-form" aria-label={t('home.newsletter_title')}>
 					<div class="form-row">
@@ -95,8 +106,9 @@ const categories = [
 							required 
 							name="email"
 							autocomplete="email"
+							class="nes-input"
 						/>
-						<button type="submit" class="btn-submit" aria-label={t('home.newsletter_button')}>{t('home.newsletter_button')}</button>
+						<button type="submit" class="btn btn-submit" aria-label={t('home.newsletter_button')}>{t('home.newsletter_button')}</button>
 					</div>
 					<p id="form-error" class="error-text" role="alert" style="display: none; color: var(--nes-accent-red); margin-top: 1rem;">{t('home.newsletter_error')}</p>
 					<p id="form-success" class="success-text" role="status" style="display: none; color: var(--nes-accent-green); margin-top: 1rem;">{t('home.newsletter_success')}</p>

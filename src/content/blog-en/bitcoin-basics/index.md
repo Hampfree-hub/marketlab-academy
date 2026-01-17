@@ -6,7 +6,6 @@ category: 'crypto'
 bannerImage: './assets/banner.png'
 ---
 
-# Bitcoin Basics
 
 Bitcoin is the first and most well-known cryptocurrency in the world. Created by an anonymous developer under the pseudonym Satoshi Nakamoto in 2009, it introduced blockchain technology to the world.
 

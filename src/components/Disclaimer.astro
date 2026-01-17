@@ -1,75 +1,61 @@
 ---
-// Компонент дисклеймера (Вариант 2, доработанный)
+// Компонент дисклеймера
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<div class="disclaimer">
-	<p class="disclaimer-title"><strong>Disclaimer</strong></p>
-	<p>
-		Этот блог носит исключительно информационный характер. 
-		Не является финансовой рекомендацией или инвестиционным советом.
-	</p>
-	<p>
-		Торговля криптовалютами и другими финансовыми инструментами 
-		сопряжена с высокими рисками. Можете потерять все средства.
-	</p>
-	<p>
-		Автор не несёт ответственности за любые финансовые потери, 
-		возникшие в результате использования информации из блога.
-	</p>
-	<p class="disclaimer-humor">
-		P.S. Информация основана на личном опыте и анализе рынка. 
-		Каждый трейдер принимает решения самостоятельно.
-	</p>
-	<p class="disclaimer-footer">
-		Все решения принимаются вами самостоятельно на свой страх и риск.
-	</p>
+<div class="disclaimer nes-dialog is-rounded">
+	<p class="disclaimer-title"><strong>{t('disclaimer.title')}</strong></p>
+	<div class="disclaimer-content">
+		<p>{t('disclaimer.p1')}</p>
+		<p>{t('disclaimer.p2')}</p>
+		<p>{t('disclaimer.p3')}</p>
+	</div>
 </div>
 
 <style>
 	.disclaimer {
-		margin: 3em 0;
-		padding: 2em 2.5em;
-		background: var(--bg-secondary);
-		border: 2px solid var(--accent);
-		border-bottom: 4px solid var(--accent);
-		font-size: 0.95em;
+		margin: 4rem 0;
+		font-size: 0.9rem;
 		line-height: 1.8;
-		color: var(--text-primary);
-		/* NO border-radius, NO box-shadow in 8-bit */
+		color: var(--color-text-primary);
+		z-index: 1;
+	}
+
+	.disclaimer-content {
+		position: relative;
+		z-index: 2;
 	}
 
 	.disclaimer-title {
-		margin: 0 0 0.5em 0;
-		color: var(--accent);
+		margin: 0 0 1rem 0;
+		color: var(--nes-accent-red);
 		font-weight: 700;
+		position: relative;
+		z-index: 2;
+		font-family: 'Press Start 2P', monospace;
+		font-size: 0.75rem;
 	}
 
 	.disclaimer p {
-		margin: 1em 0;
+		margin: 1rem 0;
 		padding: 0;
 	}
 
 	.disclaimer-humor {
-		margin-top: 1.5em;
-		padding-top: 1.5em;
-		border-top: 1px solid rgba(74, 154, 74, 0.2);
+		margin-top: 1.5rem;
+		padding-top: 1.5rem;
+		border-top: 2px solid rgba(0, 216, 0, 0.1);
 		font-style: italic;
-		opacity: 0.85;
-		color: var(--text-secondary);
+		opacity: 0.8;
+		color: var(--color-text-secondary);
 	}
 
 	.disclaimer-footer {
-		margin-top: 1.5em;
-		font-size: 0.95em;
-		font-weight: 600;
-		color: var(--text-primary);
-	}
-
-	@media (prefers-color-scheme: dark) {
-		.disclaimer {
-			background: var(--bg-secondary);
-			border-left-color: var(--accent-light);
-		}
+		margin-top: 1.5rem;
+		font-weight: bold;
+		color: var(--color-text-primary);
 	}
 </style>
 

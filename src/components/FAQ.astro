@@ -1,0 +1,28 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+interface Props {
+	items: { q: string; a: string }[];
+}
+
+const { items } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="faq-section" style="margin-top: 6rem; margin-bottom: 4rem;">
+	<div class="section-label" style="margin-bottom: 2rem; color: var(--nes-accent-green); font-size: 1.25rem;">[ FAQ ]</div>
+	<div class="faq-list" style="display: flex; flex-direction: column; gap: 2.5rem;">
+		{items.map((item) => (
+			<div class="faq-item" style="border-left: 4px solid var(--nes-accent-green); padding-left: 2rem; position: relative;">
+				<div style="position: absolute; left: -10px; top: 0; width: 16px; height: 16px; background: var(--nes-accent-green); clip-path: polygon(0 0, 100% 50%, 0 100%);"></div>
+				<p class="faq-question" style="color: var(--nes-accent-green); font-family: 'Press Start 2P', monospace; font-size: 0.75rem; margin-bottom: 1rem; line-height: 1.5;">
+					{item.q}
+				</p>
+				<p class="faq-answer" style="color: var(--color-text-primary); line-height: 1.8; font-size: 0.95rem;">
+					{item.a}
+				</p>
+			</div>
+		))}
+	</div>
+</section>
