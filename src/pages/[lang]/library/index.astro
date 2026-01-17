@@ -62,7 +62,7 @@ const breadcrumbItems = [
 					</div>
 
 					<div class="categories-filter">
-						<div class="section-label" style="margin-top: 2rem; margin-bottom: 1rem;">{t('library.filter')}</div>
+						<div class="section-label">{t('library.filter')}</div>
 						<div class="categories-container" role="group" style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
 							{categories.map(cat => (
 								<button 
@@ -262,10 +262,6 @@ const breadcrumbItems = [
 		font-size: clamp(1.5rem, 5vw, 2.5rem);
 		word-break: break-word;
 		line-height: 1.2;
-	}
-	body {
-		font-family: 'VT323', monospace !important;
-		font-size: 1.25rem;
 	}
 	@media (max-width: 480px) {
 		.responsive-title {

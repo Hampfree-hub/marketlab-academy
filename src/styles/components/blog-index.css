@@ -18,7 +18,7 @@
 }
 
 .search-bar {
-	margin-top: var(--space-6);
+	margin-top: var(--space-4);
 	position: relative;
 }
 
@@ -54,6 +54,16 @@
 .search-and-filter {
 	grid-column: 1 / -1;
 	margin-bottom: var(--space-6);
+}
+
+/* Section Label - единый стиль для всех меток */
+.section-label {
+	font-family: 'JetBrains Mono', monospace;
+	color: var(--color-accent);
+	font-size: 0.85rem;
+	margin: var(--space-4) 0 var(--space-3);
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }
 
 .tag-btn {
