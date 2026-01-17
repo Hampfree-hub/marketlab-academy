@@ -75,7 +75,7 @@
    - Комментарий: "✅ Выполнено: box-shadow удалён из всех элементов..."
    - Статус: **ЗАКРЫТ**
 
-**Использован скрипт:** `update-github-issue.js` из `D:\Projects\HampfreeBlog-Private\scripts\`
+**Использован скрипт:** `update-github-issue.js` (из приватного репозитория)
 
 ---
 
