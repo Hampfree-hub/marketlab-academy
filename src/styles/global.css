@@ -234,7 +234,7 @@ a:hover {
 }
 
 .post-card:hover {
-  border-bottom-color: var(--nes-border-accent);
+  border-bottom-color: var(--nes-accent-yellow);
 }
 
 .post-card h3 {

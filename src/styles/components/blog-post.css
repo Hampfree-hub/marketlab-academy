@@ -9,8 +9,8 @@
 
 .layout-grid {
 	display: grid;
-	grid-template-columns: 240px 1fr;
-	gap: 48px;
+	grid-template-columns: 1fr 280px; /* Swapped and slightly wider sidebar */
+	gap: 64px; /* More space between content and TOC */
 	align-items: start;
 	margin-top: var(--space-8);
 	margin-bottom: var(--space-10);
@@ -18,53 +18,45 @@
 
 .toc-sticky {
 	position: sticky;
-	top: 120px;
+	top: 100px;
 	font-family: 'JetBrains Mono', monospace;
-	max-height: calc(100vh - 140px);
+	max-height: calc(100vh - 120px);
 	overflow-y: auto;
-	padding-right: 1rem;
-}
-
-.toc-title {
-	font-size: 0.75rem;
-	color: var(--color-accent);
-	margin-bottom: 1rem;
-	text-transform: uppercase;
-	letter-spacing: 1px;
+	padding-left: 1rem;
+	border-left: 4px solid var(--nes-bg-secondary);
 }
 
 .toc-list {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	font-size: 0.75rem;
-	border-left: 1px solid var(--color-border);
+	font-size: 0.7rem; /* Slightly smaller for cleaner look */
+	line-height: 1.6;
 }
 
 .toc-item {
-	padding: 4px 0 4px 16px;
+	padding: 6px 0 6px 12px;
+	border-bottom: 1px dashed var(--nes-bg-secondary);
+}
+
+.toc-item:last-child {
+	border-bottom: none;
 }
 
 .toc-item a {
 	color: var(--color-text-secondary);
 	text-decoration: none;
-	transition: color 0.1s steps(3);
+	transition: all 0.1s steps(3);
 }
 
 .toc-item a:hover {
-	color: var(--color-accent);
-	text-decoration: underline;
-	text-decoration-color: var(--nes-accent-yellow);
-	text-decoration-thickness: 2px;
-	text-underline-offset: 2px;
+	color: var(--nes-accent-green);
+	text-decoration: none;
 }
 
 .toc-item a.active {
 	color: var(--nes-accent-green);
 	font-weight: bold;
-	border-left: 4px solid var(--nes-accent-green);
-	padding-left: 8px;
-	margin-left: -16px;
 }
 
 article {
@@ -77,13 +69,14 @@ article {
 }
 
 .prose h2 {
-	margin-top: 4rem;
-	margin-bottom: 2rem;
+	margin-top: var(--space-12);
+	margin-bottom: var(--space-6);
 	color: var(--nes-accent-green);
-	font-size: 1.5rem;
-	border-bottom: 4px solid var(--color-border);
+	font-size: 24px; /* --fs-lg */
+	border-bottom: 4px solid var(--nes-bg-secondary);
 	padding-bottom: 0.5rem;
 	position: relative;
+	text-transform: none; /* Reduce caps for better readability */
 }
 
 /* Automated Style for Markdown-based FAQ */
@@ -126,24 +119,27 @@ article {
 }
 
 .prose h3 {
-	margin-top: 2.5rem;
-	margin-bottom: 1.25rem;
+	margin-top: var(--space-8);
+	margin-bottom: var(--space-4);
 	color: var(--nes-accent-green);
-	font-size: 1.25rem;
+	font-size: 20px; /* --fs-md */
+	text-transform: none; /* Reduce caps */
 }
 
 .prose p {
-	margin-bottom: 2rem;
-	line-height: 1.8;
+	margin-bottom: var(--space-4);
+	line-height: 1.6;
+	font-size: 16px; /* --fs-base */
+	max-width: 75ch; /* Optimal line length */
 }
 
 .prose ul, .prose ol {
-	margin-bottom: 2rem;
+	margin-bottom: var(--space-6);
 	padding-left: 2.5rem;
 }
 
 .prose li {
-	margin-bottom: 1rem;
+	margin-bottom: 0.5rem;
 }
 
 .prose img {
@@ -197,9 +193,9 @@ article {
 
 h1 {
 	font-family: 'Press Start 2P', monospace;
-	font-size: 2.25rem;
-	line-height: 1.4;
-	margin-bottom: 2rem;
+	font-size: 32px; /* --fs-xl from guidelines */
+	line-height: 1.2;
+	margin-bottom: var(--space-8);
 	text-transform: uppercase;
 }
 
