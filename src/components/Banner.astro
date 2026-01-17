@@ -86,7 +86,7 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		padding: 2rem;
+		padding: 2.5rem;
 		position: relative; /* REQUIRED for z-index to work */
 		z-index: 2; /* ABOVE the scanlines ::after */
 	}
@@ -135,8 +135,8 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 	.banner-bottom {
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-end;
-		padding-top: 1rem;
+		align-items: center;
+		padding-top: 1.5rem;
 		border-top: 2px solid rgba(255, 255, 255, 0.05); /* Changed from green to subtle white */
 		font-family: 'Press Start 2P', monospace;
 	}
@@ -144,7 +144,7 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 	.banner-rubric {
 		font-family: 'Press Start 2P', monospace;
 		font-size: 0.65rem;
-		padding: 6px 12px;
+		padding: 8px 12px;
 		background-color: var(--nes-accent-green);
 		color: var(--nes-bg-primary);
 		border: 2px solid var(--nes-bg-primary);
@@ -152,9 +152,9 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		text-transform: uppercase;
 		display: inline-block;
 		position: relative;
-		z-index: 5; /* Ensure visibility */
-		margin-bottom: 4px; /* Move up from bottom edge */
-		margin-left: 4px; /* Move away from left edge */
+		z-index: 10; /* Ensure visibility */
+		margin-bottom: 12px; /* Safety margin for shadow */
+		margin-left: 8px; /* Move away from edge */
 	}
 
 	.banner-preview .banner-rubric {

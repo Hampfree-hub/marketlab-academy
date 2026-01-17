@@ -159,7 +159,7 @@
 .subscribe-form {
 	display: flex;
 	flex-direction: column;
-	max-width: 640px; /* Slightly wider */
+	max-width: 640px;
 	margin: 0 auto;
 	text-align: left;
 }
@@ -168,6 +168,7 @@
 	display: flex;
 	gap: 0;
 	align-items: stretch;
+	height: 56px;
 }
 
 .visually-hidden {
@@ -199,12 +200,16 @@
 }
 
 .subscribe-form .btn-submit {
-	white-space: nowrap; /* Prevent text wrapping inside button */
+	white-space: nowrap;
 	background: var(--nes-accent-green);
 	color: #FFFFFF;
-	border: 2px solid var(--nes-border-primary); /* Changed from green accent to primary border */
-	border-bottom: 4px solid var(--nes-border-primary); /* Changed to primary border */
-	padding: 0 var(--space-4); /* 0 32px — кратно 8 */
+	border: 2px solid var(--nes-border-primary);
+	border-bottom: 4px solid var(--nes-border-primary);
+	padding: 0 var(--space-4);
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	font-family: 'JetBrains Mono', monospace;
 	font-weight: bold;
 	text-transform: uppercase;
