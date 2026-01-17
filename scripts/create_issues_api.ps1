@@ -2,7 +2,15 @@
 # Репозиторий: Hampfree-hub/marketlab-academy
 # Дата: 2026-01-13
 
-$token = Get-Content 'D:\Projects\HampfreeBlog-Private\.github-token' -Raw | ForEach-Object { $_.Trim() }
+# Token должен быть в переменной окружения GITHUB_TOKEN или в файле, указанном в .env
+$tokenPath = if ($env:GITHUB_TOKEN_PATH) { $env:GITHUB_TOKEN_PATH } else { $null }
+$token = if ($env:GITHUB_TOKEN) { 
+    $env:GITHUB_TOKEN 
+} elseif ($tokenPath -and (Test-Path $tokenPath)) { 
+    Get-Content $tokenPath -Raw | ForEach-Object { $_.Trim() }
+} else { 
+    $null 
+}
 
 if (-not $token -or $token -eq 'ghp_your-token-here') {
     Write-Host "❌ Токен не найден или не настроен!" -ForegroundColor Red
