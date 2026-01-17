@@ -8,8 +8,14 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-# Путь к приватному репозиторию
-$PrivateRepoPath = "D:\Projects\HampfreeBlog-Private"
+# Путь к приватному репозиторию (из переменной окружения или конфига)
+$PrivateRepoPath = if ($env:PRIVATE_REPO_PATH) { 
+    $env:PRIVATE_REPO_PATH 
+} else { 
+    Write-Host "❌ PRIVATE_REPO_PATH не установлен!" -ForegroundColor Red
+    Write-Host "💡 Установите переменную окружения PRIVATE_REPO_PATH" -ForegroundColor Yellow
+    exit 1
+}
 
 if (-not (Test-Path $PrivateRepoPath)) {
     Write-Host "❌ Приватный репозиторий не найден: $PrivateRepoPath" -ForegroundColor Red
@@ -18,7 +24,12 @@ if (-not (Test-Path $PrivateRepoPath)) {
 }
 
 # Путь к публичному репозиторию (текущий)
-$PublicRepoPath = "D:\Projects\HampfreeBlog"
+$PublicRepoPath = if ($env:PUBLIC_REPO_PATH) { 
+    $env:PUBLIC_REPO_PATH 
+} else { 
+    # Fallback: текущая директория
+    (Get-Location).Path
+}
 
 Write-Host "📦 Отправка файлов в приватный репозиторий..." -ForegroundColor Cyan
 
