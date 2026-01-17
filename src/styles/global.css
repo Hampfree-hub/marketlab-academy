@@ -234,8 +234,7 @@ a:hover {
 }
 
 .post-card:hover {
-  border-bottom-color: var(--nes-accent-green-dark);
-  /* Только нижняя выпуклость меняется на тёмно-зелёную */
+  border-bottom-color: var(--nes-border-accent);
 }
 
 .post-card h3 {

@@ -43,21 +43,7 @@
 	gap: var(--space-6);
 	margin-bottom: var(--space-12);
 	padding-bottom: var(--space-12);
-	border-bottom: 8px solid var(--color-border);
 	position: relative;
-}
-
-.posts-grid::after {
-	content: " KNOWLEDGE_BASE_END ";
-	position: absolute;
-	bottom: -12px;
-	left: 50%;
-	transform: translateX(-50%);
-	background: var(--color-bg);
-	padding: 0 1rem;
-	font-family: 'Press Start 2P', monospace;
-	font-size: 0.5rem;
-	color: var(--color-border);
 }
 
 .post-card {

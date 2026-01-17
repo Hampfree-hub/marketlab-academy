@@ -33,7 +33,7 @@
 	font-size: 0.75rem;
 	text-transform: uppercase;
 	color: var(--nes-accent-green);
-	z-index: 2; /* ABOVE the pseudo-borders */
+	z-index: 5; /* HIGHER than pseudo-borders */
 }
 
 /* NES-style border (Corners logic) */

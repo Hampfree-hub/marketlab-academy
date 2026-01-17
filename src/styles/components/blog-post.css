@@ -101,22 +101,28 @@ article {
 	position: relative;
 	display: block;
 	width: fit-content;
+	box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.prose h2[id*="faq"]::after,
-.prose h2[id*="часто-задаваемые-вопросы"]::after,
-.prose h2[id*="preguntas-frecuentes"]::after {
-	content: " [ CLICK TO EXPAND ]"; /* Retro style hint */
-	font-size: 0.6rem;
-	opacity: 0.7;
+.prose h2[id*="faq"]::before,
+.prose h2[id*="часто-задаваемые-вопросы"]::before,
+.prose h2[id*="preguntas-frecuentes"]::before {
+	content: "> ";
 }
 
 /* Style questions and answers after FAQ header */
 .prose h2[id*="faq"] ~ p > strong,
-.prose h2[id*="faq"] ~ p:has(strong) {
+.prose h2[id*="faq"] ~ p:has(strong),
+.prose h2[id*="часто-задаваемые-вопросы"] ~ p > strong,
+.prose h2[id*="preguntas-frecuentes"] ~ p > strong {
 	color: var(--nes-accent-green);
-	margin-top: 2rem;
+	margin-top: 3rem;
 	display: block;
+	font-family: 'Press Start 2P', monospace;
+	font-size: 0.75rem;
+	line-height: 1.6;
+	border-left: 4px solid var(--nes-accent-green);
+	padding-left: 1rem;
 }
 
 .prose h3 {

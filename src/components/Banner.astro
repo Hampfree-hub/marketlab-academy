@@ -136,21 +136,22 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		justify-content: space-between;
 		align-items: flex-end;
 		padding-top: 1rem;
-		border-top: 4px solid rgba(0, 216, 0, 0.05);
+		border-top: 2px solid rgba(0, 216, 0, 0.05);
 		font-family: 'Press Start 2P', monospace;
 	}
 
 	.banner-rubric {
 		font-family: 'Press Start 2P', monospace;
-		font-size: 0.6rem;
+		font-size: 0.65rem;
 		padding: 6px 12px;
 		background-color: var(--nes-accent-green);
 		color: var(--nes-bg-primary);
-		border: 3px solid var(--nes-bg-primary);
-		box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+		border: 2px solid var(--nes-bg-primary);
+		box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
 		text-transform: uppercase;
 		display: inline-block;
-		margin-left: 4px;
+		position: relative;
+		z-index: 3;
 	}
 
 	.banner-preview .banner-rubric {
