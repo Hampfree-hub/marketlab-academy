@@ -1,192 +1,213 @@
 ---
-// Ненавязчивая форма подписки
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+interface Props {
+	withContainer?: boolean;
+	title?: string;
+}
+
+const { withContainer = true, title } = Astro.props;
+
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const formTitle = title || t('home.newsletter_title');
 ---
 
-<div class="subscribe-form">
-	<p class="subscribe-text">
-		{t('home.newsletter_title')}
-	</p>
-	<p class="subscribe-note" style="margin-bottom: 1.5rem;">
-		{t('home.newsletter_desc')}
-	</p>
-	<form id="newsletter-form" class="subscribe-input-group" action="#" method="post">
-		<input 
-			type="email" 
-			placeholder={t('home.newsletter_placeholder')} 
-			required
-			name="email"
-			class="subscribe-input"
-			aria-label={t('home.newsletter_placeholder')}
-		/>
-		<button type="submit" class="subscribe-button btn-submit">
-			{t('home.newsletter_button')}
-		</button>
+<div class={`newsletter-wrapper ${withContainer ? 'nes-container with-title' : ''}`}>
+	{withContainer && <p class="title">{formTitle}</p>}
+	{!withContainer && <p class="newsletter-simple-title">{formTitle}</p>}
+	
+	<p class="newsletter-desc">{t('home.newsletter_desc')}</p>
+	
+	<form id="newsletter-form-component" class="subscribe-form-component">
+		<div class="form-row">
+			<input 
+				type="email" 
+				placeholder={t('home.newsletter_placeholder')} 
+				required 
+				name="email"
+				class="newsletter-input"
+			/>
+			<button type="submit" class="btn-submit">
+				{t('home.newsletter_button')}
+			</button>
+		</div>
+		<p id="form-error-comp" class="error-text" style="display: none; color: var(--nes-accent-red); margin-top: 1rem;">
+			{t('home.newsletter_error')}
+		</p>
+		<p id="form-success-comp" class="success-text" style="display: none; color: var(--nes-accent-green); margin-top: 1rem;">
+			{t('home.newsletter_success')}
+		</p>
 	</form>
-	<p id="form-error" class="error-text" role="alert" style="display: none; color: var(--color-error); margin-top: 1rem;">{t('home.newsletter_error')}</p>
-	<p id="form-success" class="success-text" role="status" style="display: none; color: var(--color-success); margin-top: 1rem;">{t('home.newsletter_success')}</p>
-	<p class="subscribe-note">
-		{t('newsletter.no_spam')}
-	</p>
 </div>
 
 <script is:inline define:vars={{ sendingMsg: t('home.newsletter_sending'), buttonMsg: t('home.newsletter_button') }}>
-	// Newsletter Validation
-	const initNewsletter = () => {
-		try {
-			const form = document.getElementById('newsletter-form');
-			const errorMsg = document.getElementById('form-error');
-			const successMsg = document.getElementById('form-success');
-			const submitBtn = form?.querySelector('.btn-submit');
+	function initForm() {
+		const form = document.getElementById('newsletter-form-component');
+		if (!form) return;
 
-			if (!form) return;
+		const errorMsg = document.getElementById('form-error-comp');
+		const successMsg = document.getElementById('form-success-comp');
+		const submitBtn = form.querySelector('.btn-submit');
 
-			form.addEventListener('submit', async (e) => {
-				e.preventDefault();
-				if (errorMsg) errorMsg.style.display = 'none';
-				if (successMsg) successMsg.style.display = 'none';
-				
-				const email = form.email.value;
-				const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		form.addEventListener('submit', async (e) => {
+			e.preventDefault();
+			if (errorMsg) errorMsg.style.display = 'none';
+			if (successMsg) successMsg.style.display = 'none';
+			
+			const email = form.email.value;
+			const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-				if (!emailPattern.test(email)) {
-					if (errorMsg) errorMsg.style.display = 'block';
-					return;
-				}
+			if (!emailPattern.test(email)) {
+				if (errorMsg) errorMsg.style.display = 'block';
+				return;
+			}
 
+			if (submitBtn) {
+				submitBtn.disabled = true;
+				submitBtn.dataset.originalText = submitBtn.innerText;
+				submitBtn.innerText = sendingMsg;
+			}
+
+			setTimeout(() => {
+				if (successMsg) successMsg.style.display = 'block';
+				form.reset();
 				if (submitBtn) {
-					submitBtn.disabled = true;
-					submitBtn.innerText = sendingMsg;
+					submitBtn.disabled = false;
+					submitBtn.innerText = buttonMsg;
 				}
+			}, 1000);
+		});
+	}
 
-				// Simulation for Brevo integration
-				setTimeout(() => {
-					if (successMsg) successMsg.style.display = 'block';
-					form.reset();
-					if (submitBtn) {
-						submitBtn.disabled = false;
-						submitBtn.innerText = buttonMsg;
-					}
-				}, 1000);
-			});
-		} catch (err) {
-			console.error('Newsletter error:', err);
-		}
-	};
-
-	initNewsletter();
-	document.addEventListener('astro:page-load', initNewsletter);
-	document.addEventListener('astro:after-swap', initNewsletter);
+	initForm();
+	document.addEventListener('astro:page-load', initForm);
 </script>
 
 <style>
-	/* 8-bit NES Subscribe Form */
-	.subscribe-form {
-		margin: 3em 0;
-		padding: 2em;
-		background: var(--color-card-bg);
-		border: 2px solid var(--color-border);
-		border-bottom: 4px solid var(--color-border);
+	.newsletter-wrapper {
+		margin: var(--space-4) 0;
 		text-align: center;
-		/* NO border-radius, NO box-shadow, NO smooth transitions */
-		transition: border-bottom-color 0.10s steps(3);
 	}
 
-	.subscribe-form:hover {
-		border-bottom-color: var(--nes-accent-green-dark);
-	}
-
-	.subscribe-text {
-		margin: 0 0 1.5em 0;
-		color: var(--color-text-primary);
+	.newsletter-simple-title {
+		font-family: 'Press Start 2P', monospace;
 		font-size: 1rem;
-		font-family: 'JetBrains Mono', monospace;
-		line-height: 1.6;
+		margin-bottom: var(--space-2);
+		color: var(--nes-accent-green);
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	.newsletter-desc {
+		color: var(--color-text-secondary);
+		margin-bottom: var(--space-4);
+		margin-top: var(--space-4);
+		font-size: 0.9rem;
+		text-align: center;
+	}
+
+	/* Если контейнер с title, добавляем дополнительный отступ сверху */
+	.newsletter-wrapper.nes-container.with-title > .newsletter-desc {
+		margin-top: var(--space-4);
+	}
+
+	.subscribe-form-component {
+		max-width: 600px;
+		margin: 0 auto var(--space-4) auto;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.form-row {
+		display: flex;
+		height: 56px;
+		gap: 0;
+		align-items: stretch;
+		width: 100%;
+		box-sizing: border-box;
+		margin: 0;
 		padding: 0;
 	}
 
-	.subscribe-input-group {
-		display: flex;
-		gap: 0.5em;
-		max-width: 500px;
-		margin: 0 auto;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-
-	.subscribe-input {
-		flex: 1;
-		min-width: 200px;
-		padding: 12px 16px;
-		border: 2px solid var(--color-border);
-		background: var(--color-bg);
-		color: var(--color-text-primary);
-		font-size: 0.95rem;
+	/* Инпут - строго кратно 8px, правильные отступы для текста */
+	.newsletter-input {
+		flex: 1 1 0;
+		min-width: 0;
+		height: 56px;
+		border: 4px solid var(--nes-border-primary);
+		background-color: var(--nes-bg-secondary);
+		padding: var(--space-1) var(--space-2);
+		margin: 0;
 		font-family: 'JetBrains Mono', monospace;
-		/* 8-bit steps animation */
-		transition: border-color 0.10s steps(3);
-	}
-
-	.subscribe-input:focus {
+		font-size: 0.9rem;
+		color: var(--color-text-primary);
+		box-sizing: border-box;
+		line-height: 1.6;
 		outline: none;
-		border-color: var(--nes-accent-green);
 	}
 
-	.subscribe-input::placeholder {
+	.newsletter-input::placeholder {
 		color: var(--color-text-secondary);
 		opacity: 0.7;
 	}
 
-	.subscribe-button {
-		display: inline-block;
-		padding: 12px 32px;
-		font-family: 'JetBrains Mono', monospace;
-		font-weight: bold;
+	.newsletter-input:focus {
+		border-color: var(--nes-accent-green);
+		outline: none;
+	}
+
+	/* Кнопка - строго кратно 8px, идеально выровнена */
+	.btn-submit {
+		flex: 0 0 auto;
+		height: 56px;
+		min-height: 56px;
+		max-height: 56px;
+		padding: 0 var(--space-4);
+		margin: 0;
+		background-color: var(--nes-accent-green);
+		color: var(--nes-bg-primary);
+		border: 4px solid var(--nes-border-primary);
+		border-left: none;
+		font-family: 'Press Start 2P', monospace;
+		font-size: 0.7rem;
 		text-transform: uppercase;
-		border: 2px solid var(--color-accent);
-		border-bottom: 4px solid var(--nes-accent-green-dark);
-		color: var(--color-accent);
-		background: transparent;
 		cursor: pointer;
-		text-align: center;
-		/* 8-bit steps animation */
-		transition: background 0.2s steps(4),
-		            border-color 0.2s steps(4),
-		            color 0.2s steps(4);
+		box-sizing: border-box;
+		white-space: nowrap;
+		transition: background-color 0.1s steps(3);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		line-height: 1;
 	}
 
-	.subscribe-button:hover {
-		background: var(--color-accent);
-		color: #FFFFFF !important; /* Чисто белый для читаемости */
-		border-color: var(--color-accent);
-		border-bottom-color: var(--nes-accent-green-dark); /* Сохраняем видимый bulge */
-		text-decoration: none;
+	.btn-submit:hover:not(:disabled) {
+		background-color: var(--nes-accent-green-dark);
+		color: #ffffff;
 	}
 
-	.subscribe-note {
-		margin: 1em 0 0 0;
-		font-size: 0.85rem;
-		color: var(--color-text-secondary);
-		font-family: 'JetBrains Mono', monospace;
-		line-height: 1.6;
-		padding: 0;
+	.btn-submit:disabled {
+		opacity: 0.7;
+		cursor: not-allowed;
 	}
 
-	@media (max-width: 720px) {
-		.subscribe-form {
-			padding: 1.5em;
-		}
-
-		.subscribe-input-group {
+	@media (max-width: 600px) {
+		.form-row {
 			flex-direction: column;
+			height: auto;
+			gap: var(--space-2);
 		}
-
-		.subscribe-input,
-		.subscribe-button {
+		.newsletter-input {
 			width: 100%;
+			height: 56px;
+			border-left: 4px solid var(--nes-border-primary);
+		}
+		.btn-submit {
+			width: 100%;
+			height: 56px;
+			border-left: 4px solid var(--nes-border-primary);
 		}
 	}
 </style>
-
