@@ -49,3 +49,7 @@ secrets/
 *.env.local
 *.key
 *-api.json
+
+# КРИТИЧЕСКИ ВАЖНО: Конфиденциальные инструкции для AI
+.cursorrules*
+.cursorrules-*
