@@ -88,15 +88,17 @@ npm run preview
 ```markdown
 ---
 title: "Заголовок"
-description: "Описание"
-pubDate: 2026-01-15
+description: "Описание (150-160 символов для SEO)"
+pubDate: '2026-01-15'
 category: 'crypto'
-bannerImage: './assets/banner.png'
+tags: ['bitcoin', 'basics']  # опционально, 1-3 тега
 ---
 
 # Заголовок статьи
 
 Контент статьи...
+
+**Примечание:** Баннеры генерируются автоматически через компонент `<Banner>`. Поле `bannerImage` больше не используется.
 ```
 
 ---
