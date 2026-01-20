@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OG Banner</title>
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		:root {
+			--nes-bg-primary: #050608;
+			--nes-bg-secondary: #0F1012;
+			--nes-text-primary: #E5E5E5;
+			--nes-text-secondary: #B0B0B0;
+			--nes-text-tertiary: #808080;
+			--nes-accent-green: #00D800;
+			--nes-accent-blue: #3CBCFC;
+			--nes-accent-yellow: #F8E800;
+			--nes-border-primary: #404040;
+			--space-1: 8px;
+			--space-2: 16px;
+			--space-3: 24px;
+			--space-4: 32px;
+			--space-5: 40px;
+			--space-6: 48px;
+		}
+
+		body {
+			width: 1200px;
+			height: 630px;
+			margin: 0;
+			padding: 0;
+			font-family: 'Press Start 2P', monospace;
+			background: var(--nes-bg-primary);
+			overflow: hidden;
+		}
+
+		.code-banner {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			background-color: var(--nes-bg-primary);
+			image-rendering: pixelated;
+		}
+
+		.banner-inner {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: var(--space-5);
+			padding-bottom: var(--space-6);
+			padding-right: var(--space-6);
+			position: relative;
+			z-index: 2;
+		}
+
+		.banner-top {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+
+		.banner-title {
+			font-family: 'Press Start 2P', monospace;
+			font-size: 2.5rem;
+			color: var(--nes-accent-green);
+			margin: 0 0 var(--space-1) 0;
+			line-height: 1.4;
+			text-transform: uppercase;
+			word-break: break-word;
+		}
+
+		.banner-subtitle {
+			font-family: 'JetBrains Mono', monospace;
+			font-size: 1.2rem;
+			font-weight: bold;
+			color: var(--nes-accent-blue);
+			margin: 0;
+			opacity: 0.9;
+			line-height: 1.5;
+			max-width: 900px;
+		}
+
+		.banner-bottom {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			gap: var(--space-4);
+			padding-top: var(--space-3);
+			margin-top: var(--space-2);
+			border-top: 2px solid rgba(255, 255, 255, 0.05);
+			width: 100%;
+		}
+
+		.banner-rubric {
+			font-family: 'Press Start 2P', monospace;
+			font-size: 1rem;
+			padding: var(--space-1) var(--space-2);
+			background-color: var(--rubric-color, var(--nes-accent-green));
+			color: var(--nes-bg-primary);
+			border: 2px solid var(--nes-bg-primary);
+			box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+			text-transform: uppercase;
+			display: inline-block;
+			white-space: nowrap;
+		}
+
+		.banner-watermark {
+			color: var(--nes-text-tertiary);
+			font-family: 'JetBrains Mono', monospace;
+			font-size: 0.9rem;
+			opacity: 0.9;
+			font-weight: 600;
+			white-space: nowrap;
+		}
+
+		/* Background Patterns */
+		.bg-pattern-grid {
+			background: 
+				repeating-linear-gradient(0deg, transparent, transparent 15px, rgba(0, 216, 0, 0.02) 15px, rgba(0, 216, 0, 0.02) 16px),
+				repeating-linear-gradient(90deg, transparent, transparent 15px, rgba(0, 216, 0, 0.02) 15px, rgba(0, 216, 0, 0.02) 16px),
+				var(--nes-bg-primary);
+		}
+
+		.bg-pattern-gradient-electric {
+			background: linear-gradient(135deg, var(--nes-bg-primary) 0%, rgba(60, 188, 252, 0.05) 50%, var(--nes-bg-primary) 100%);
+		}
+
+		.bg-pattern-gradient-analysis {
+			background: linear-gradient(135deg, var(--nes-bg-primary) 0%, rgba(0, 216, 0, 0.05) 50%, var(--nes-bg-primary) 100%);
+		}
+
+		.bg-pattern-solid-dark {
+			background-color: var(--nes-bg-primary);
+		}
+
+		/* Scanline effect */
+		.code-banner::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: repeating-linear-gradient(
+				rgba(0, 0, 0, 0.05),
+				rgba(0, 0, 0, 0.05) 1px,
+				transparent 1px,
+				transparent 4px
+			);
+			pointer-events: none;
+			z-index: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="code-banner bg-pattern-{{PATTERN}}" id="banner">
+		<div class="banner-inner">
+			<div class="banner-top">
+				<h2 class="banner-title">{{TITLE}}</h2>
+				<p class="banner-subtitle">{{SUBTITLE}}</p>
+			</div>
+			<div class="banner-bottom">
+				<span class="banner-rubric">[{{RUBRIC}}]</span>
+				<span class="banner-watermark">MARKETLAB ACADEMY</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
