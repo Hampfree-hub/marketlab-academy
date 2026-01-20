@@ -3,7 +3,6 @@ title: 'Fundamentos de Bitcoin'
 description: 'Qué es la primera criptomoneda, cómo funciona и por qué ha cambiado el mundo financiero para siempre'
 pubDate: '2026-01-10'
 category: 'crypto'
-bannerImage: './assets/banner.png'
 ---
 
 

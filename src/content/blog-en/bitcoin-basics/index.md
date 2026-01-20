@@ -3,7 +3,6 @@ title: 'Bitcoin Basics'
 description: 'What is the first cryptocurrency, how it works and why it changed the financial world forever'
 pubDate: '2026-01-10'
 category: 'crypto'
-bannerImage: './assets/banner.png'
 ---
 
 

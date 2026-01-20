@@ -58,3 +58,10 @@ secrets/
 # scripts/*.ps1
 # scripts/*.cjs
 # scripts/*.js
+
+# Временные файлы с датами (можно удалить после коммита)
+*_2026_01_*.md
+*_FIX_*.md
+*_COMPLETE_*.md
+*COMMIT_PLAN*.md
+*INTEGRATION_COMPLETE*.md

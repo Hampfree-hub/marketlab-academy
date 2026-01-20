@@ -3,7 +3,6 @@ title: 'RSI Technical Analysis'
 description: 'Full guide to RSI indicator: how to use Relative Strength Index for entries and exits in crypto market'
 pubDate: '2026-01-10'
 category: 'technical-analysis'
-bannerImage: './assets/banner.png'
 ---
 
 

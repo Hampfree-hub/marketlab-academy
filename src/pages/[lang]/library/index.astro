@@ -146,14 +146,20 @@ const breadcrumbItems = [
 					return;
 				}
 
-				const postsData = Array.from(postCards).map(card => ({
-					id: card.getAttribute('href'),
-					title: card.getAttribute('data-title') || '',
-					description: card.getAttribute('data-description') || '',
-					category: card.getAttribute('data-category') || '',
-					tags: card.getAttribute('data-tags') || '',
-					element: card
-				}));
+				// Нормализуем данные для поиска (все в нижнем регистре, убираем лишние пробелы)
+				const postsData = Array.from(postCards).map(card => {
+					const title = (card.getAttribute('data-title') || '').toLowerCase().trim();
+					const description = (card.getAttribute('data-description') || '').toLowerCase().trim();
+					const tags = (card.getAttribute('data-tags') || '').toLowerCase().trim();
+					return {
+						id: card.getAttribute('href'),
+						title: title,
+						description: description,
+						category: card.getAttribute('data-category') || '',
+						tags: tags,
+						element: card
+					};
+				});
 
 				const fuse = new Fuse(postsData, {
 					keys: [
@@ -161,7 +167,7 @@ const breadcrumbItems = [
 						{ name: 'description', weight: 0.3 },
 						{ name: 'tags', weight: 0.1 }
 					],
-					threshold: 0.4,
+					threshold: 0.2, // Более низкий порог для лучшего поиска коротких запросов
 					distance: 100,
 					ignoreLocation: true,
 					// Поддержка кириллицы и других языков
@@ -185,19 +191,32 @@ const breadcrumbItems = [
 					}
 
 					if (searchTerm && searchTerm.trim()) {
-						try {
-							const results = fuse.search(searchTerm.trim());
-							const resultIds = new Set(results.map(r => r.item.id));
-							filtered = filtered.filter(p => resultIds.has(p.id));
-						} catch (error) {
-							console.error('Search error:', error);
-							// Fallback: простой поиск по подстроке
-							const searchLower = searchTerm.toLowerCase();
-							filtered = filtered.filter(p => 
-								p.title.toLowerCase().includes(searchLower) ||
-								p.description.toLowerCase().includes(searchLower) ||
-								p.tags.toLowerCase().includes(searchLower)
-							);
+						const searchLower = searchTerm.toLowerCase().trim();
+						
+						// Сначала пробуем точный поиск по подстроке (быстрее и точнее для коротких запросов)
+						const exactMatches = filtered.filter(p => 
+							p.title.includes(searchLower) ||
+							p.description.includes(searchLower) ||
+							p.tags.includes(searchLower)
+						);
+						
+						// Если точных совпадений нет или их мало, используем Fuse.js для нечёткого поиска
+						if (exactMatches.length > 0) {
+							filtered = exactMatches;
+						} else {
+							try {
+								const results = fuse.search(searchLower);
+								const resultIds = new Set(results.map(r => r.item.id));
+								filtered = filtered.filter(p => resultIds.has(p.id));
+							} catch (error) {
+								console.error('Search error:', error);
+								// Fallback: простой поиск по подстроке
+								filtered = filtered.filter(p => 
+									p.title.includes(searchLower) ||
+									p.description.includes(searchLower) ||
+									p.tags.includes(searchLower)
+								);
+							}
 						}
 					}
 

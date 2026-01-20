@@ -12,14 +12,14 @@ $ErrorActionPreference = "Stop"
 $PrivateRepoPath = if ($env:PRIVATE_REPO_PATH) { 
     $env:PRIVATE_REPO_PATH 
 } else { 
-    Write-Host "❌ PRIVATE_REPO_PATH не установлен!" -ForegroundColor Red
-    Write-Host "💡 Установите переменную окружения PRIVATE_REPO_PATH" -ForegroundColor Yellow
+    Write-Host "[ERROR] PRIVATE_REPO_PATH not set!" -ForegroundColor Red
+    Write-Host "[INFO] Set PRIVATE_REPO_PATH environment variable" -ForegroundColor Yellow
     exit 1
 }
 
 if (-not (Test-Path $PrivateRepoPath)) {
-    Write-Host "❌ Приватный репозиторий не найден: $PrivateRepoPath" -ForegroundColor Red
-    Write-Host "💡 Отправьте файлы вручную" -ForegroundColor Yellow
+    Write-Host "[ERROR] Private repository not found: $PrivateRepoPath" -ForegroundColor Red
+    Write-Host "[INFO] Send files manually" -ForegroundColor Yellow
     exit 1
 }
 
@@ -31,7 +31,7 @@ $PublicRepoPath = if ($env:PUBLIC_REPO_PATH) {
     (Get-Location).Path
 }
 
-Write-Host "📦 Отправка файлов в приватный репозиторий..." -ForegroundColor Cyan
+Write-Host "[INFO] Sending files to private repository..." -ForegroundColor Cyan
 
 foreach ($file in $BlockedFiles) {
     # Убираем кавычки, если есть
@@ -41,7 +41,7 @@ foreach ($file in $BlockedFiles) {
     $sourceFile = Join-Path $PublicRepoPath $file
     
     if (-not (Test-Path $sourceFile)) {
-        Write-Host "⚠️  Файл не найден: $file" -ForegroundColor Yellow
+        Write-Host "[WARN] File not found: $file" -ForegroundColor Yellow
         continue
     }
     
@@ -57,23 +57,23 @@ foreach ($file in $BlockedFiles) {
     # Копируем файл
     try {
         Copy-Item -Path $sourceFile -Destination $destFile -Force
-        Write-Host "✅ Скопирован: $file" -ForegroundColor Green
+        Write-Host "[OK] Copied: $file" -ForegroundColor Green
         
         # Добавляем в git приватного репозитория
         Push-Location $PrivateRepoPath
         try {
             git add $file 2>&1 | Out-Null
-            Write-Host "   → Добавлен в staging приватного репозитория" -ForegroundColor Gray
+            Write-Host "   -> Added to private repo staging" -ForegroundColor Gray
         } catch {
-            Write-Host "   ⚠️  Ошибка при добавлении в git: $_" -ForegroundColor Yellow
+            Write-Host "   [WARN] Error adding to git: $_" -ForegroundColor Yellow
         }
         Pop-Location
         
     } catch {
-        Write-Host "❌ Ошибка при копировании $file : $_" -ForegroundColor Red
+        Write-Host "[ERROR] Error copying $file : $_" -ForegroundColor Red
     }
 }
 
 Write-Host ""
-Write-Host "✅ Файлы отправлены в приватный репозиторий" -ForegroundColor Green
-Write-Host "💡 Не забудьте закоммитить их в приватном репозитории" -ForegroundColor Yellow
+Write-Host "[OK] Files sent to private repository" -ForegroundColor Green
+Write-Host "[INFO] Remember to commit them in private repository" -ForegroundColor Yellow
