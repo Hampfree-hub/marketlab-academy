@@ -1,9 +1,9 @@
 import { ui, defaultLang } from './ui';
 
 export function getLangFromUrl(url: URL) {
-  const [, , lang] = url.pathname.split('/');
-  // pathname is /marketlab-academy/[lang]/...
-  // index 0: "", index 1: "marketlab-academy", index 2: "[lang]"
+  const [, lang] = url.pathname.split('/');
+  // pathname is /[lang]/...
+  // index 0: "", index 1: "[lang]"
   if (lang in ui) return lang as keyof typeof ui;
   return defaultLang;
 }

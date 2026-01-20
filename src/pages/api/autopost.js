@@ -32,11 +32,15 @@ export async function POST({ request }) {
       });
     }
 
+    // Определяем язык поста из коллекции
+    const lang = latestPost.collection === 'blog-ru' ? 'ru' : 
+                 latestPost.collection === 'blog-en' ? 'en' : 'es';
+
     // Формируем данные для автопостинга
     const postData = {
       title: latestPost.data.title,
       description: latestPost.data.description,
-      link: `/marketlab-academy/library/${latestPost.id}/`,
+      link: `/${lang}/library/${latestPost.id}/`,
       pubDate: latestPost.data.pubDate,
       content: latestPost.body
     };

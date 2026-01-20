@@ -25,7 +25,7 @@ export async function GET(context) {
 			            post.collection === 'blog-en' ? 'en' : 'es';
 			return {
 				...post.data,
-				link: `/marketlab-academy/${lang}/library/${post.id}/`,
+				link: `/${lang}/library/${post.id}/`,
 			};
 		}),
 	});

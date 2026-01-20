@@ -12,18 +12,18 @@ const t = useTranslations(lang);
 // Utility to switch language in current URL
 const getSwitchPath = (targetLang: string) => {
 	const currentPath = Astro.url.pathname;
-	const pathParts = currentPath.split('/');
-	// URL format: /marketlab-academy/[lang]/...
-	// index 0: "", index 1: "marketlab-academy", index 2: "[lang]"
-	const langIndex = pathParts.findIndex(p => p === 'marketlab-academy') + 1;
+	const pathParts = currentPath.split('/').filter(Boolean);
+	// URL format: /[lang]/...
+	// index 0: "[lang]", index 1: "library" or "about", etc.
+	const langIndex = 0;
 	
-	if (langIndex > 0 && langIndex < pathParts.length) {
+	if (pathParts.length > 0 && ['ru', 'en', 'es'].includes(pathParts[langIndex])) {
 		pathParts[langIndex] = targetLang;
-		let newPath = pathParts.join('/');
+		let newPath = '/' + pathParts.join('/');
 		if (!newPath.endsWith('/')) newPath += '/';
 		return newPath;
 	}
-	return `/marketlab-academy/${targetLang}/`;
+	return `/${targetLang}/`;
 };
 ---
 
