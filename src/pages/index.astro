@@ -1,4 +1,18 @@
 ---
-// Redirect to default language home
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
-<meta http-equiv="refresh" content="0;url=/marketlab-academy/ru/" />
+<!doctype html>
+<html lang="ru">
+	<head>
+		<BaseHead 
+			title={SITE_TITLE} 
+			description={SITE_DESCRIPTION} 
+			image="/marketlab-academy-og.png" 
+		/>
+		<meta http-equiv="refresh" content="0;url=/marketlab-academy/ru/" />
+	</head>
+	<body>
+		<p>Redirecting...</p>
+	</body>
+</html>
