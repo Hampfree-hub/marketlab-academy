@@ -44,13 +44,14 @@ const bgPatterns = {
 	'general': 'solid-dark'
 };
 
-// Map category to rubric color
+// Map category to rubric color (matching Banner.astro CSS variables)
+// Colors from tokens.css: --cat-fundamentals, --cat-architecture, etc.
 const rubricColors = {
-	'crypto': '#3CBCFC',
-	'technical-analysis': '#00D800',
-	'algo-trading': '#00D800',
-	'fundamental-analysis': '#F8E800',
-	'general': '#00D800'
+	'crypto': '#F97316',              // --cat-fundamentals (оранжевый)
+	'technical-analysis': '#14B8A6',  // --cat-architecture (бирюзовый)
+	'algo-trading': '#EAB308',        // --cat-practice (жёлтый)
+	'fundamental-analysis': '#EF4444', // --cat-dynamics (красный)
+	'general': '#00D800'              // --nes-accent-green (зелёный)
 };
 
 // Generate OG image using Puppeteer
@@ -143,7 +144,7 @@ async function getBlogPosts() {
 							const yaml = frontmatter[1];
 							const titleMatch = yaml.match(/title:\s*['"](.*?)['"]/);
 							const descMatch = yaml.match(/description:\s*['"](.*?)['"]/);
-							const catMatch = yaml.match(/category:\s*['"]?(\w+)['"]?/);
+							const catMatch = yaml.match(/category:\s*['"]?([\w-]+)['"]?/);
 
 							posts.push({
 								lang,
