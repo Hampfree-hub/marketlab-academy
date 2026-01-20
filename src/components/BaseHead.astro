@@ -54,11 +54,14 @@ if (imageProp) {
 	// Проверяем, это статья (library/[lang]/[...slug]) или главная
 	if (pathname.includes('/library/')) {
 		// Извлекаем lang и slug из пути
+		// Формат пути: /marketlab-academy/ru/library/what-is-digital-currency-in-simple-terms/
 		const pathParts = pathname.split('/').filter(Boolean);
-		const langIndex = pathParts.indexOf('library');
-		if (langIndex >= 0 && pathParts[langIndex + 1]) {
-			const lang = pathParts[langIndex + 1];
-			const slugParts = pathParts.slice(langIndex + 2);
+		const libraryIndex = pathParts.indexOf('library');
+		if (libraryIndex >= 0 && libraryIndex > 0) {
+			// lang это элемент ПЕРЕД 'library'
+			const lang = pathParts[libraryIndex - 1];
+			// slug это все элементы ПОСЛЕ 'library'
+			const slugParts = pathParts.slice(libraryIndex + 1);
 			const slug = slugParts.length > 0 ? slugParts.join('-') : 'homepage';
 			ogImageUrl = new URL(`/marketlab-academy/og/${lang}-${slug}.png`, Astro.site);
 		} else {
