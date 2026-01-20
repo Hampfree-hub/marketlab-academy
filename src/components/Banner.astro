@@ -63,7 +63,7 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 	.code-banner {
 		width: 100%;
 		position: relative;
-		overflow: hidden;
+		overflow: hidden; /* Keep hidden for scanlines effect */
 		display: flex;
 		flex-direction: column;
 		border-bottom: 2px solid var(--color-border);
@@ -72,8 +72,8 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 	}
 
 	.banner-preview {
-		height: 200px; /* Фиксированная высота для синхронизации */
-		min-height: 200px;
+		min-height: 200px; /* Минимальная высота для синхронизации */
+		height: auto; /* Изменили с фиксированной на auto для размещения тегов */
 	}
 
 	.banner-full {
@@ -86,16 +86,19 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		padding: 2.5rem;
+		padding: var(--space-5); /* 40px = 5 × 8px — строго кратно 8 */
+		padding-bottom: var(--space-6); /* 48px — достаточное пространство для тега и водяной марки снизу */
+		padding-right: var(--space-6); /* 48px — достаточное пространство справа для водяной марки */
 		position: relative; /* REQUIRED for z-index to work */
 		z-index: 2; /* ABOVE the scanlines ::after */
+		min-height: 0; /* Prevent flex shrink issues */
 	}
 
 	.banner-title {
 		font-family: 'Press Start 2P', monospace;
 		font-size: 1.25rem;
 		color: var(--nes-accent-green);
-		margin: 0 0 0.5rem 0;
+		margin: 0 0 var(--space-1) 0; /* 8px — строго кратно 8 (заменено 0.5rem) */
 		line-height: 1.4;
 		text-transform: uppercase;
 		word-break: break-word;
@@ -134,9 +137,11 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 
 	.banner-bottom {
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding-top: 1.5rem;
+		justify-content: space-between; /* Размещаем тег слева, марку справа */
+		align-items: flex-start; /* Changed from center to flex-start for proper tag alignment */
+		gap: var(--space-4); /* 32px — минимальный отступ между тегом и водяной маркой при их сближении */
+		padding-top: var(--space-3); /* 24px — кратно 8 */
+		margin-top: var(--space-2); /* 16px — дополнительный отступ для тега */
 		border-top: 2px solid rgba(255, 255, 255, 0.05); /* Changed from green to subtle white */
 		font-family: 'Press Start 2P', monospace;
 		width: 100%;
@@ -145,7 +150,7 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 	.banner-rubric {
 		font-family: 'Press Start 2P', monospace;
 		font-size: 0.65rem;
-		padding: 8px 12px;
+		padding: var(--space-1) var(--space-2); /* 8px 16px — кратно 8 */
 		background-color: var(--nes-accent-green);
 		color: var(--nes-bg-primary);
 		border: 2px solid var(--nes-bg-primary);
@@ -154,25 +159,36 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		display: inline-block;
 		position: relative;
 		z-index: 10; /* Ensure visibility */
-		margin-bottom: 12px; /* Safety margin for shadow */
-		margin-left: 0; /* Aligned to left edge with text */
-		align-self: flex-start; /* Align to top of flex container */
+		margin: 0; /* Reset margins for consistent alignment */
+		margin-right: var(--space-4); /* 32px — минимальный отступ справа для водяной марки */
+		white-space: nowrap; /* Предотвращаем перенос тега */
+		flex-shrink: 0; /* Предотвращаем сжатие тега */
 	}
 
 	.banner-preview .banner-rubric {
 		font-size: 0.5rem;
-		padding: 4px 8px;
+		padding: var(--space-1); /* 8px — кратно 8 */
 		box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
-		margin-left: 0; /* Ensure left alignment in preview too */
+		margin: 0; /* Reset top/bottom margins */
+		margin-right: var(--space-4); /* 32px — минимальный отступ справа для водяной марки */
 	}
 
 	.banner-watermark {
 		color: var(--nes-text-tertiary);
 		font-family: 'JetBrains Mono', monospace;
-		font-size: 0.5rem;
-		opacity: 0.5;
-		align-self: flex-end; /* Align to right edge */
-		margin-left: auto; /* Push to right */
+		font-size: 0.6rem; /* Увеличили с 0.5rem до 0.6rem для лучшей видимости */
+		opacity: 0.9; /* Увеличена видимость с 0.5 до 0.9 */
+		flex-shrink: 0; /* Предотвращаем сжатие водяной марки */
+		position: relative; /* Для правильного позиционирования */
+		z-index: 10; /* Обеспечиваем видимость */
+		white-space: nowrap; /* Предотвращаем перенос текста */
+		font-weight: 600; /* Добавили font-weight для лучшей видимости */
+		margin-left: auto; /* Push to right edge через justify-content: space-between в .banner-bottom */
+	}
+
+	/* Для preview баннеров уменьшаем размер шрифта водяной марки */
+	.banner-preview .banner-watermark {
+		font-size: 0.5rem; /* Уменьшили с 0.6rem до 0.5rem для preview */
 	}
 
 	/* --- Background Patterns --- */
@@ -268,18 +284,17 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 	/* --- Responsive Design --- */
 	@media (max-width: 768px) {
 		.banner-inner {
-			padding: 1.5rem;
+			padding: var(--space-3); /* 24px = 3 × 8px — строго кратно 8 */
 		}
 
 		.banner-bottom {
 			flex-wrap: wrap;
-			gap: 1rem;
-			padding-top: 1rem;
+			gap: var(--space-2); /* 16px — кратно 8 */
+			padding-top: var(--space-2); /* 16px — кратно 8 */
 		}
 
 		.banner-rubric {
-			margin-left: 0;
-			margin-bottom: 0;
+			margin: 0; /* Reset margins for consistent alignment */
 		}
 
 		.banner-watermark {
@@ -290,16 +305,16 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 
 	@media (max-width: 480px) {
 		.banner-inner {
-			padding: 1rem;
+			padding: var(--space-2); /* 16px = 2 × 8px — строго кратно 8 */
 		}
 
 		.banner-bottom {
-			padding-top: 0.75rem;
+			padding-top: var(--space-2); /* 16px — кратно 8 */
 		}
 
 		.banner-rubric {
 			font-size: 0.5rem;
-			padding: 4px 8px;
+			padding: var(--space-1); /* 8px — кратно 8 */
 		}
 
 		.banner-watermark {

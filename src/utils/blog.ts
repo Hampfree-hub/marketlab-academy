@@ -13,6 +13,11 @@
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
+// Helper: получить коллекцию по языку
+function getCollectionByLang(lang: 'ru' | 'en' | 'es'): 'blog-ru' | 'blog-en' | 'blog-es' {
+	return `blog-${lang}` as 'blog-ru' | 'blog-en' | 'blog-es';
+}
+
 /**
  * Получить все посты из коллекции blog
  * Сортирует по дате (новые сначала)
@@ -50,15 +55,10 @@ export async function getRankedPosts(): Promise<CollectionEntry<'blog-ru' | 'blo
 /**
  * Получить посты по категории
  * @param category - Категория поста
- * 
- * Note: Category field не добавлен в schema, поэтому функция возвращает все посты
- * Добавь category в src/content/config.ts если нужна фильтрация
  */
 export async function getPostsByCategory(category: string): Promise<CollectionEntry<'blog-ru' | 'blog-en' | 'blog-es'>[]> {
 	const posts = await getPosts();
-	// TODO: Добавить category в schema если нужна фильтрация
-	// return posts.filter(post => post.data.category === category);
-	return posts; // Пока возвращаем все посты
+	return posts.filter(post => post.data.category === category);
 }
 
 /**
@@ -99,13 +99,22 @@ export async function getLatestPosts(limit: number = 5): Promise<CollectionEntry
  * @param currentPostId - ID текущей статьи (будет исключена из результатов)
  * @param category - Категория текущей статьи (опционально)
  * @param limit - Количество статей (по умолчанию 3)
+ * @param lang - Язык для фильтрации (обязательно)
  */
 export async function getRelatedPosts(
 	currentPostId: string,
 	category?: string,
-	limit: number = 3
+	limit: number = 3,
+	lang?: 'ru' | 'en' | 'es'
 ): Promise<CollectionEntry<'blog-ru' | 'blog-en' | 'blog-es'>[]> {
-	const posts = await getPosts();
+	// Получаем посты только для текущего языка
+	const collectionName = lang ? `blog-${lang}` as 'blog-ru' | 'blog-en' | 'blog-es' : null;
+	if (!collectionName) {
+		console.warn('getRelatedPosts: lang not provided, returning empty array');
+		return [];
+	}
+	
+	const posts = await getCollection(collectionName);
 	
 	// Исключаем текущую статью
 	const filteredPosts = posts.filter(post => post.id !== currentPostId);

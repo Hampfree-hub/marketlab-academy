@@ -10,19 +10,66 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="faq-section" style="margin-top: 6rem; margin-bottom: 4rem;">
-	<div class="section-label" style="margin-bottom: 2rem; color: var(--nes-accent-green); font-size: 1.25rem;">[ FAQ ]</div>
-	<div class="faq-list" style="display: flex; flex-direction: column; gap: 2.5rem;">
+<section class="faq-section">
+	<h2 class="faq-title">FAQ</h2>
+	<div class="faq-list">
 		{items.map((item) => (
-			<div class="faq-item" style="border-left: 4px solid var(--nes-accent-green); padding-left: 2rem; position: relative;">
-				<div style="position: absolute; left: -10px; top: 0; width: 16px; height: 16px; background: var(--nes-accent-green); clip-path: polygon(0 0, 100% 50%, 0 100%);"></div>
-				<p class="faq-question" style="color: var(--nes-accent-green); font-family: 'Press Start 2P', monospace; font-size: 0.75rem; margin-bottom: 1rem; line-height: 1.5;">
-					{item.q}
+			<div class="faq-item">
+				<p class="faq-question">
+					• {item.q}
 				</p>
-				<p class="faq-answer" style="color: var(--color-text-primary); line-height: 1.8; font-size: 0.95rem;">
+				<p class="faq-answer">
 					{item.a}
 				</p>
 			</div>
 		))}
 	</div>
 </section>
+
+<style>
+	.faq-section {
+		margin-top: var(--space-10);
+		margin-bottom: var(--space-6);
+	}
+
+	.faq-title {
+		margin-top: var(--space-12);
+		margin-bottom: var(--space-6);
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0;
+		color: var(--nes-accent-green);
+		font-family: 'Press Start 2P', monospace;
+		font-size: 24px; /* 24px — как .prose h2 */
+		font-weight: 400; /* Press Start 2P не имеет bold */
+		text-transform: none; /* Как .prose h2 — без uppercase для лучшей читаемости */
+		border-bottom: 4px solid var(--nes-bg-secondary);
+		padding-bottom: 0.5rem; /* Как .prose h2 */
+		position: relative; /* Как .prose h2 */
+	}
+
+	.faq-list {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-6);
+	}
+
+	.faq-question {
+		color: var(--nes-accent-green);
+		font-family: 'Press Start 2P', monospace;
+		font-size: 0.75rem;
+		font-weight: bold; /* Press Start 2P будет выделяться через другие стили */
+		margin-bottom: 0;
+		line-height: 1.6;
+	}
+
+	.faq-answer {
+		color: var(--color-text-primary);
+		font-family: 'JetBrains Mono', monospace;
+		font-weight: normal;
+		line-height: 1.8;
+		font-size: 0.95rem;
+		margin-top: 1em; /* 1 строка от вопроса */
+		padding-left: var(--space-2);
+	}
+</style>

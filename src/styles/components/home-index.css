@@ -17,7 +17,7 @@
 .hero h1 {
 	font-size: 3.5rem;
 	line-height: 1;
-	margin-bottom: 1.5rem;
+	margin-bottom: var(--space-3); /* 24px — кратно 8 */
 	text-transform: uppercase;
 	color: var(--color-text-primary);
 }
@@ -26,7 +26,7 @@
 	font-size: 1.1rem;
 	color: var(--color-text-secondary);
 	max-width: 550px;
-	margin: 0 auto 3rem;
+	margin: 0 auto var(--space-6); /* 48px — кратно 8 */
 }
 
 .hero-actions {
@@ -34,7 +34,7 @@
 	gap: var(--space-3);
 	justify-content: center;
 	flex-wrap: wrap;
-	margin-top: 1rem;
+	margin-top: var(--space-2); /* 16px — кратно 8 */
 }
 
 .btn-outline {
@@ -54,7 +54,7 @@
 	font-family: 'JetBrains Mono', monospace;
 	color: var(--color-accent);
 	font-size: 0.85rem;
-	margin: var(--space-4) 0 var(--space-3); /* Reduced from space-8 (64px) to space-4 (32px) — строго кратно 8 */
+	margin: var(--space-2) 0 var(--space-1); /* Reduced: 16px top, 8px bottom — строго кратно 8 */
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
@@ -63,7 +63,15 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: var(--space-2); /* 16px — строго кратно 8 */
-	margin-bottom: var(--space-6); /* Reduced from space-10 (80px) to space-6 (48px) — строго кратно 8 */
+	margin-bottom: var(--space-4); /* 32px — унифицировано с библиотекой, кратно 8 */
+}
+
+/* Tag button with icon alignment */
+.tag-btn-with-icon {
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	gap: var(--space-1); /* 8px — кратно 8 */
 }
 
 /* Posts Grid */
@@ -71,14 +79,20 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: var(--space-6); /* Increase gap for more breathing room */
-	margin-bottom: var(--space-12); 
-	padding-bottom: var(--space-12); 
+	margin-bottom: var(--space-10); /* 80px — достаточный отступ от следующей секции */
+	padding-bottom: 0; /* Убрали padding-bottom — используется margin-bottom секции */
 	position: relative;
+}
+
+/* Section wrapper для ПОСЛЕДНИЕ_СТАТЬИ */
+section[aria-labelledby*="recent"] {
+	margin-bottom: var(--space-10); /* 80px — единственный отступ снизу секции */
 }
 
 .post-card {
 	padding: var(--space-6); /* Unified padding */
 	border-width: 4px; /* Stronger borders */
+	margin-bottom: var(--space-2); /* 16px — отступ снизу, чтобы превью не прилипало к нижней границе рамки */
 }
 
 /* ✅ ИСПРАВЛЕНИЕ: Карточки постов должны иметь одинаковую ширину */
@@ -105,7 +119,7 @@
 	display: flex;
 	gap: var(--space-1); /* 8px — кратно 8 */
 	margin-top: auto;
-	padding-top: 1rem;
+	padding-top: var(--space-2); /* 16px — кратно 8 */
 }
 
 .mini-tag {
@@ -134,7 +148,7 @@
 
 .read-more-link {
 	display: inline-block;
-	margin-top: 1.5rem;
+	margin-top: var(--space-3); /* 24px — кратно 8 */
 	font-family: 'JetBrains Mono', monospace;
 	font-size: 0.85rem;
 	color: var(--color-accent);
@@ -153,7 +167,7 @@
 
 .newsletter-box p {
 	color: var(--color-text-secondary);
-	margin-bottom: 2.5rem;
+	margin-bottom: var(--space-6); /* 48px — кратно 8 */
 }
 
 .subscribe-form {
@@ -188,7 +202,7 @@
 	min-width: 0; /* Allow shrinking */
 	background: var(--color-bg);
 	border: var(--border-structural); /* 2px solid gray */
-	padding: 12px 16px; /* Unified padding кратно 8 (approx) */
+	padding: var(--space-2) var(--space-2); /* 16px 16px — строго кратно 8 */
 	color: var(--color-text-primary);
 	font-family: 'JetBrains Mono', monospace;
 	transition: border-color 0.10s steps(3);
@@ -235,7 +249,7 @@
 		font-size: 2rem; /* Меньше на mobile */
 	}
 	.categories-container {
-		margin-bottom: var(--space-6); /* 48px вместо 80px */
+		margin-bottom: var(--space-4); /* 32px — унифицировано, кратно 8 */
 	}
 	.posts-grid {
 		margin-bottom: var(--space-6); /* 48px вместо 80px */
