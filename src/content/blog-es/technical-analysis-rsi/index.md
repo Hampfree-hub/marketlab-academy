@@ -3,7 +3,6 @@ title: 'Analisis Tecnico RSI'
 description: 'Guia completa del indicador RSI: como usar el Relative Strength Index para entradas y salidas en el mercado cripto'
 pubDate: '2026-01-10'
 category: 'technical-analysis'
-bannerImage: './assets/banner.png'
 ---
 
 

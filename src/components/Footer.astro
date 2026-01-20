@@ -14,7 +14,19 @@ const t = useTranslations(lang);
 			<div class="footer-column">
 				<h3>{t('footer.content')}</h3>
 				<div class="footer-links">
-					<a href="https://dzen.ru/hampfree_algo_trading" target="_blank">> Dzen</a>
+					{lang === 'ru' ? (
+						<>
+							<a href="https://coinmarketcap.com/community/ru/profile/Hampfree/" target="_blank" rel="noopener noreferrer">> CoinMarketCap</a>
+							<a href="https://t.me/hampfree_market_lab" target="_blank" rel="noopener noreferrer">> Telegram</a>
+							<a href="https://dzen.ru/hampfree_algo_trading" target="_blank" rel="noopener noreferrer">> Dzen</a>
+						</>
+					) : (
+						<>
+							<a href="https://coinmarketcap.com/community/profile/Hampfree/?type=Posts" target="_blank" rel="noopener noreferrer">> CoinMarketCap</a>
+							<a href="https://paragraph.com/@hampfree" target="_blank" rel="noopener noreferrer">> Paragraph</a>
+							<a href="https://t.me/hampfree_market_lab_global" target="_blank" rel="noopener noreferrer">> Telegram</a>
+						</>
+					)}
 				</div>
 			</div>
 

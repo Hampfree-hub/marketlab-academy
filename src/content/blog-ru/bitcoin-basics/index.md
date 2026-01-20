@@ -3,7 +3,6 @@ title: 'Основы Биткоина'
 description: 'Что такое первая криптовалюта, как она работает и почему она навсегда изменила финансовый мир'
 pubDate: '2026-01-10'
 category: 'crypto'
-bannerImage: './assets/banner.png'
 previewImage: './assets/banner.png'
 ---
 
