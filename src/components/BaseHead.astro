@@ -46,15 +46,15 @@ if (imageProp) {
 	}
 } else {
 	// Автоматически определяем путь к сгенерированному OG изображению
-	// Формат: /marketlab-academy/og/{lang}-{slug}.png для статей
-	// Или /marketlab-academy/og/homepage.png для главной
+	// Формат: /og/{lang}-{slug}.png для статей
+	// Или /og/homepage.png для главной
 	
 	const pathname = Astro.url.pathname;
 	
 	// Проверяем, это статья (library/[lang]/[...slug]) или главная
 	if (pathname.includes('/library/')) {
 		// Извлекаем lang и slug из пути
-		// Формат пути: /marketlab-academy/ru/library/what-is-digital-currency-in-simple-terms/
+		// Формат пути: /ru/library/what-is-digital-currency-in-simple-terms/
 		const pathParts = pathname.split('/').filter(Boolean);
 		const libraryIndex = pathParts.indexOf('library');
 		if (libraryIndex >= 0 && libraryIndex > 0) {
@@ -63,14 +63,14 @@ if (imageProp) {
 			// slug это все элементы ПОСЛЕ 'library'
 			const slugParts = pathParts.slice(libraryIndex + 1);
 			const slug = slugParts.length > 0 ? slugParts.join('-') : 'homepage';
-			ogImageUrl = new URL(`/marketlab-academy/og/${lang}-${slug}.png`, Astro.site);
+			ogImageUrl = new URL(`/og/${lang}-${slug}.png`, Astro.site);
 		} else {
 			// Fallback для неожиданных путей
 			ogImageUrl = new URL(FallbackImage.src, Astro.site);
 		}
-	} else if (pathname === '/marketlab-academy/' || pathname === '/marketlab-academy/ru/' || pathname === '/marketlab-academy/en/' || pathname === '/marketlab-academy/es/') {
+	} else if (pathname === '/' || pathname === '/ru/' || pathname === '/en/' || pathname === '/es/') {
 		// Главная страница
-		ogImageUrl = new URL('/marketlab-academy/og/homepage.png', Astro.site);
+		ogImageUrl = new URL('/og/homepage.png', Astro.site);
 	} else {
 		// Fallback для других страниц
 		ogImageUrl = new URL(FallbackImage.src, Astro.site);
