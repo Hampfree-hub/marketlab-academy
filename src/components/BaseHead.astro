@@ -21,30 +21,56 @@ const { title, description: descriptionProp, image: imageProp } = Astro.props;
 // Автоматическая генерация description, если не указан
 const description = descriptionProp || SITE_DESCRIPTION;
 
-// Обработка изображения: поддержка строк (путей) и ImageMetadata
+// Определяем путь к OG изображению
+// Приоритет: 1) явно указанное изображение, 2) автоматически сгенерированное OG изображение, 3) fallback
 let ogImageUrl: URL;
-if (!imageProp) {
-	ogImageUrl = new URL(FallbackImage.src, Astro.site);
-} else if (typeof imageProp === 'string') {
-	// Если строка - это путь относительно статьи, строим URL относительно текущей страницы
-	let imagePath = imageProp;
-	if (imagePath.startsWith('./')) {
-		imagePath = imagePath.slice(2);
-	}
-	// Если путь начинается с "/", используем как есть, иначе добавляем к пути текущей страницы
-	if (imagePath.startsWith('/')) {
-		ogImageUrl = new URL(imagePath, Astro.site);
+
+if (imageProp) {
+	// Если изображение явно указано, используем его
+	if (typeof imageProp === 'string') {
+		let imagePath = imageProp;
+		if (imagePath.startsWith('./')) {
+			imagePath = imagePath.slice(2);
+		}
+		if (imagePath.startsWith('/')) {
+			ogImageUrl = new URL(imagePath, Astro.site);
+		} else {
+			const currentPath = Astro.url.pathname.endsWith('/') 
+				? Astro.url.pathname.slice(0, -1) 
+				: Astro.url.pathname;
+			ogImageUrl = new URL(currentPath + '/' + imagePath, Astro.site);
+		}
 	} else {
-		// Путь относительно текущей страницы (например, library/slug/assets/banner.png)
-		// Убираем trailing slash из pathname и добавляем путь к изображению
-		const currentPath = Astro.url.pathname.endsWith('/') 
-			? Astro.url.pathname.slice(0, -1) 
-			: Astro.url.pathname;
-		ogImageUrl = new URL(currentPath + '/' + imagePath, Astro.site);
+		// ImageMetadata
+		ogImageUrl = new URL(imageProp.src, Astro.site);
 	}
 } else {
-	// ImageMetadata
-	ogImageUrl = new URL(imageProp.src, Astro.site);
+	// Автоматически определяем путь к сгенерированному OG изображению
+	// Формат: /marketlab-academy/og/{lang}-{slug}.png для статей
+	// Или /marketlab-academy/og/homepage.png для главной
+	
+	const pathname = Astro.url.pathname;
+	
+	// Проверяем, это статья (library/[lang]/[...slug]) или главная
+	if (pathname.includes('/library/')) {
+		// Извлекаем lang и slug из пути
+		const pathParts = pathname.split('/').filter(Boolean);
+		const langIndex = pathParts.indexOf('library');
+		if (langIndex >= 0 && pathParts[langIndex + 1]) {
+			const lang = pathParts[langIndex + 1];
+			const slug = pathParts.slice(langIndex + 2).join('-') || 'homepage';
+			ogImageUrl = new URL(`/marketlab-academy/og/${lang}-${slug}.png`, Astro.site);
+		} else {
+			// Fallback для неожиданных путей
+			ogImageUrl = new URL(FallbackImage.src, Astro.site);
+		}
+	} else if (pathname === '/marketlab-academy/' || pathname === '/marketlab-academy/ru/' || pathname === '/marketlab-academy/en/' || pathname === '/marketlab-academy/es/') {
+		// Главная страница
+		ogImageUrl = new URL('/marketlab-academy/og/homepage.png', Astro.site);
+	} else {
+		// Fallback для других страниц
+		ogImageUrl = new URL(FallbackImage.src, Astro.site);
+	}
 }
 ---
 

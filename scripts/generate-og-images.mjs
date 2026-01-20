@@ -62,10 +62,15 @@ async function generateOGImage(data, browser, outputPath) {
 			if (translations && translations[catKey]) {
 				return translations[catKey];
 			}
+			// Fallback: если перевод не найден, используем английский вариант
+			const enTranslations = categoryTranslations['en'];
+			if (enTranslations && enTranslations[catKey]) {
+				return enTranslations[catKey];
+			}
 			return data.category?.toUpperCase() || 'GENERAL';
 		})();
 
-		console.log(`[OG Images] Generating image for: ${data.slug} (${data.lang})`);
+		console.log(`[OG Images] Generating image for: ${data.slug} (${data.lang}), category: ${data.category}, rubric: ${rubric}`);
 
 		// Read HTML template
 		const templatePath = path.join(__dirname, 'og-banner-template.html');
