@@ -208,18 +208,32 @@ async function loadFonts() {
 
 	try {
 		console.log('[OG Images] Loading Press Start 2P font...');
-		const pressStart2PResponse = await fetch('https://fonts.gstatic.com/s/pressstart2p/v14/e3t4euO8T-267oIAQAu6jDQyK3nVivM.ttf');
-		if (pressStart2PResponse.ok) {
-			const fontData = await pressStart2PResponse.arrayBuffer();
-			fonts.push({
-				name: 'Press Start 2P',
-				data: Buffer.from(fontData),
-				weight: 400,
-				style: 'normal',
-			});
-			console.log('[OG Images] Press Start 2P loaded successfully');
+		// Try to get TTF from Google Fonts CSS first
+		const cssResponse = await fetch('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+		if (cssResponse.ok) {
+			const cssText = await cssResponse.text();
+			// Extract TTF URL from CSS
+			const ttfMatch = cssText.match(/url\(([^)]+\.ttf[^)]*)\)/);
+			if (ttfMatch && ttfMatch[1]) {
+				const ttfUrl = ttfMatch[1].replace(/['"]/g, '');
+				const fontResponse = await fetch(ttfUrl);
+				if (fontResponse.ok) {
+					const fontData = await fontResponse.arrayBuffer();
+					fonts.push({
+						name: 'Press Start 2P',
+						data: Buffer.from(fontData),
+						weight: 400,
+						style: 'normal',
+					});
+					console.log('[OG Images] Press Start 2P loaded successfully');
+				} else {
+					console.warn(`[OG Images] Press Start 2P TTF response not OK: ${fontResponse.status}`);
+				}
+			} else {
+				console.warn('[OG Images] Could not extract TTF URL from CSS');
+			}
 		} else {
-			console.warn(`[OG Images] Press Start 2P response not OK: ${pressStart2PResponse.status}`);
+			console.warn(`[OG Images] Press Start 2P CSS response not OK: ${cssResponse.status}`);
 		}
 	} catch (error) {
 		console.warn('[OG Images] Error loading Press Start 2P:', error.message);
@@ -227,18 +241,32 @@ async function loadFonts() {
 
 	try {
 		console.log('[OG Images] Loading JetBrains Mono font...');
-		const jetbrainsMonoResponse = await fetch('https://fonts.gstatic.com/s/jetbrainsmono/v18/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOlOV.woff2');
-		if (jetbrainsMonoResponse.ok) {
-			const fontData = await jetbrainsMonoResponse.arrayBuffer();
-			fonts.push({
-				name: 'JetBrains Mono',
-				data: Buffer.from(fontData),
-				weight: 400,
-				style: 'normal',
-			});
-			console.log('[OG Images] JetBrains Mono loaded successfully');
+		// Get TTF from Google Fonts CSS
+		const cssResponse = await fetch('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+		if (cssResponse.ok) {
+			const cssText = await cssResponse.text();
+			// Extract TTF URL from CSS (prefer TTF over WOFF2)
+			const ttfMatch = cssText.match(/url\(([^)]+\.ttf[^)]*)\)/);
+			if (ttfMatch && ttfMatch[1]) {
+				const ttfUrl = ttfMatch[1].replace(/['"]/g, '');
+				const fontResponse = await fetch(ttfUrl);
+				if (fontResponse.ok) {
+					const fontData = await fontResponse.arrayBuffer();
+					fonts.push({
+						name: 'JetBrains Mono',
+						data: Buffer.from(fontData),
+						weight: 400,
+						style: 'normal',
+					});
+					console.log('[OG Images] JetBrains Mono loaded successfully');
+				} else {
+					console.warn(`[OG Images] JetBrains Mono TTF response not OK: ${fontResponse.status}`);
+				}
+			} else {
+				console.warn('[OG Images] Could not extract TTF URL from CSS for JetBrains Mono');
+			}
 		} else {
-			console.warn(`[OG Images] JetBrains Mono response not OK: ${jetbrainsMonoResponse.status}`);
+			console.warn(`[OG Images] JetBrains Mono CSS response not OK: ${cssResponse.status}`);
 		}
 	} catch (error) {
 		console.warn('[OG Images] Error loading JetBrains Mono:', error.message);
