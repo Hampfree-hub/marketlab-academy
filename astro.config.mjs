@@ -6,7 +6,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://hampfree-hub.github.io',
-	base: '/marketlab-academy',
+	site: 'https://marketlab-academy.org',
+	base: '/',
 	integrations: [mdx(), sitemap()],
 });
