@@ -27,7 +27,7 @@
 	width: 100%;
 	background: var(--color-bg);
 	border: var(--border-structural);
-	padding: 1rem 1.5rem;
+	padding: var(--space-2) var(--space-3); /* 16px 24px — строго кратно 8 */
 	color: var(--color-text-primary);
 	font-family: 'JetBrains Mono', monospace;
 	transition: border-color 0.15s steps(3);
@@ -54,7 +54,7 @@
 
 .search-and-filter {
 	grid-column: 1 / -1;
-	margin-bottom: var(--space-4); /* Reduced from space-6 (48px) to space-4 (32px) */
+	margin-bottom: 0; /* Убираем отступ, так как он уже есть в .categories-container-with-margin */
 }
 
 /* Section Label - единый стиль для всех меток */
@@ -62,31 +62,77 @@
 	font-family: 'JetBrains Mono', monospace;
 	color: var(--color-accent);
 	font-size: 0.85rem;
-	margin: var(--space-3) 0 var(--space-2); /* Reduced: 24px top, 16px bottom (was 32px/24px) */
+	margin: var(--space-2) 0 var(--space-1); /* Reduced: 16px top, 8px bottom — строго кратно 8 */
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
 
 .tag-btn {
 	background: transparent;
-	border: 2px solid var(--color-border);
+	border: var(--border-structural); /* 2px solid gray - унифицировано с global.css */
+	border-bottom: 4px solid var(--color-border); /* Bulge эффект - унифицировано с global.css */
 	color: var(--color-text-secondary);
-	padding: 0.5rem 1rem;
+	padding: var(--space-1) var(--space-2); /* 8px 16px — строго кратно 8 */
 	font-family: 'JetBrains Mono', monospace;
 	font-size: 0.8rem;
 	cursor: pointer;
-	transition: all 0.15s steps(3);
+	/* 8-bit steps animation - унифицировано с global.css */
+	transition: background 0.2s steps(4),
+	            border-color 0.2s steps(4),
+	            color 0.2s steps(4);
 }
 
 .tag-btn:hover {
+	background: var(--color-accent);
+	color: #FFFFFF !important;
 	border-color: var(--color-accent);
-	color: var(--color-accent);
+	border-bottom-color: var(--nes-accent-green-dark);
 }
 
 .tag-btn.active {
 	background: var(--color-accent);
 	color: #FFFFFF;
 	border-color: var(--color-accent);
+	border-bottom-color: var(--nes-accent-green-dark);
+}
+
+/* Tag button with icon alignment */
+.tag-btn-with-icon {
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	gap: var(--space-1); /* 8px — кратно 8 */
+}
+
+/* Categories container with proper spacing */
+.categories-container-with-margin {
+	display: flex;
+	gap: var(--space-2); /* 16px — кратно 8 */
+	flex-wrap: wrap;
+	margin-bottom: var(--space-4); /* 32px — кратно 8 */
+}
+
+/* Posts list display */
+.posts-list {
+	display: contents;
+}
+
+/* Pagination container */
+.pagination-container {
+	display: flex;
+	justify-content: center;
+	gap: var(--space-2); /* 16px — кратно 8 */
+	margin-top: var(--space-6); /* 48px — кратно 8 */
+	margin-bottom: var(--space-6); /* 48px — кратно 8 */
+}
+
+/* No results message */
+.no-results {
+	display: none;
+	text-align: center;
+	padding: var(--space-6) 0; /* 48px — кратно 8 */
+	color: var(--color-text-secondary);
+	font-family: 'JetBrains Mono', monospace;
 }
 
 /* Category Badges */
@@ -120,7 +166,7 @@
 
 .read-more-link {
 	display: inline-block;
-	margin-top: 1.5rem;
+	margin-top: var(--space-3); /* 24px — кратно 8 */
 	font-family: 'JetBrains Mono', monospace;
 	font-size: 0.85rem;
 	color: var(--color-accent);

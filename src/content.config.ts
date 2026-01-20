@@ -11,6 +11,7 @@ const blogSchema = ({ image }) =>
 		previewImage: z.string().optional(),
 		category: z.string().optional(),
 		tags: z.array(z.string()).optional(),
+		pinned: z.boolean().optional(),
 		heroImage: image().optional(), // Оставляем для совместимости со старыми темами
 	});
 

@@ -8,6 +8,7 @@ import FormattedDate from '../../components/FormattedDate.astro';
 import ScrollTop from '../../components/ScrollTop.astro';
 import Banner from '../../components/Banner.astro';
 import PixelIcon from '../../components/ui/PixelIcon.astro';
+import SubscribeForm from '../../components/SubscribeForm.astro';
 import '../../styles/components/home-index.css';
 import { ui } from '../../i18n/ui';
 import { useTranslations, useTranslatedPath } from '../../i18n/utils';
@@ -26,9 +27,17 @@ const translatePath = useTranslatedPath(lang as keyof typeof ui);
 
 // Fetch only posts for current language
 const collectionName = `blog-${lang}` as 'blog-ru' | 'blog-en' | 'blog-es';
-const posts = await getCollection(collectionName).catch(() => []);
+const posts = await getCollection(collectionName).catch((err) => {
+	console.error(`Error loading posts for ${collectionName}:`, err);
+	return [];
+});
 const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const featuredPosts = sortedPosts.slice(0, 4);
+
+// Debug: Log posts count
+if (import.meta.env.DEV) {
+	console.log(`[${lang}] Loaded ${posts.length} posts, showing ${featuredPosts.length} featured`);
+}
 
 const categories = [
 	{ id: 'technical-analysis', label: t('cat.technical-analysis'), full: t('cat.technical-analysis.full') },
@@ -60,9 +69,8 @@ const categories = [
 					{categories.map(cat => (
 						<a 
 							href={`${translatePath('library')}?cat=${cat.id}`}
-							class="tag-btn" 
+							class="tag-btn tag-btn-with-icon" 
 							title={cat.full}
-							style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px;"
 						>
 							<PixelIcon icon={cat.id === 'technical-analysis' ? 'analysis' : cat.id === 'crypto' ? 'crypto' : cat.id === 'algo-trading' ? 'algo' : 'fundamental'} size={12} color="currentColor" />
 							[{cat.label}]
@@ -73,86 +81,35 @@ const categories = [
 
 			<section aria-labelledby="recent-label">
 				<div id="recent-label" class="section-label">{t('home.recent_label')}</div>
-				<div class="posts-grid">
-					{featuredPosts.map(post => (
-						<a href={translatePath(`library/${post.id}`)} class="post-card" aria-label={`${t('library.read_more')}: ${post.data.title}`}>
-							<Banner 
-								title={post.data.title} 
-								subtitle={post.data.description}
-								category={post.data.category} 
-								type="preview" 
-							/>
-							<div class="post-meta-wrap">
-								<div class="post-meta">
-									<span><FormattedDate date={post.data.pubDate} /></span>
+				{featuredPosts.length > 0 ? (
+					<div class="posts-grid">
+						{featuredPosts.map(post => (
+							<a href={translatePath(`library/${post.id}`)} class="post-card" aria-label={`${t('library.read_more')}: ${post.data.title}`}>
+								<Banner 
+									title={post.data.title} 
+									subtitle={post.data.description}
+									category={post.data.category} 
+									type="preview" 
+								/>
+								<div class="post-meta-wrap">
+									<div class="post-meta">
+										<span><FormattedDate date={post.data.pubDate} /></span>
+									</div>
 								</div>
-							</div>
-							<div class="read-more-link" aria-hidden="true">> {t('library.read_more')}</div>
-						</a>
-					))}
-				</div>
+								<div class="read-more-link" aria-hidden="true">> {t('library.read_more')}</div>
+							</a>
+						))}
+					</div>
+				) : (
+					<div class="no-posts" style="padding: var(--space-6); text-align: center; color: var(--color-text-secondary);">
+						<p>Статьи не найдены. Проверьте консоль браузера для диагностики.</p>
+					</div>
+				)}
 			</section>
 
-			<section class="newsletter-box nes-container with-title" aria-labelledby="newsletter-title">
-				<p class="title" id="newsletter-title">{t('home.newsletter_title')}</p>
-				<p>{t('home.newsletter_desc')}</p>
-				<form id="newsletter-form" class="subscribe-form" aria-label={t('home.newsletter_title')}>
-					<div class="form-row">
-						<label for="newsletter-email" class="visually-hidden">Email</label>
-						<input 
-							id="newsletter-email" 
-							type="email" 
-							placeholder={t('home.newsletter_placeholder')} 
-							required 
-							name="email"
-							autocomplete="email"
-							class="nes-input"
-						/>
-						<button type="submit" class="btn btn-submit" aria-label={t('home.newsletter_button')}>{t('home.newsletter_button')}</button>
-					</div>
-					<p id="form-error" class="error-text" role="alert" style="display: none; color: var(--nes-accent-red); margin-top: 1rem;">{t('home.newsletter_error')}</p>
-					<p id="form-success" class="success-text" role="status" style="display: none; color: var(--nes-accent-green); margin-top: 1rem;">{t('home.newsletter_success')}</p>
-				</form>
-			</section>
+			<SubscribeForm withContainer={true} />
 			<ScrollTop />
 		</main>
 		<Footer />
-
-		<script is:inline define:vars={{ sendingMsg: t('home.newsletter_sending'), buttonMsg: t('home.newsletter_button') }}>
-			// Newsletter Validation
-			const form = document.getElementById('newsletter-form');
-			const errorMsg = document.getElementById('form-error');
-			const successMsg = document.getElementById('form-success');
-			const submitBtn = form?.querySelector('.btn-submit');
-
-			form?.addEventListener('submit', async (e) => {
-				e.preventDefault();
-				if (errorMsg) errorMsg.style.display = 'none';
-				if (successMsg) successMsg.style.display = 'none';
-				
-				const email = form.email.value;
-				const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-				if (!emailPattern.test(email)) {
-					if (errorMsg) errorMsg.style.display = 'block';
-					return;
-				}
-
-				if (submitBtn) {
-					submitBtn.disabled = true;
-					submitBtn.innerText = sendingMsg;
-				}
-
-				// Simulation for Brevo integration
-				setTimeout(() => {
-					if (successMsg) successMsg.style.display = 'block';
-					form.reset();
-					if (submitBtn) {
-						submitBtn.disabled = false;
-						submitBtn.innerText = buttonMsg;
-					}
-				}, 1000);
-			});
-		</script>
 	</body>
 </html>

@@ -20,7 +20,9 @@ const { currentPostId, category, limit = 3 } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const relatedPosts = await getRelatedPosts(currentPostId, category, limit);
+// КРИТИЧНО: Передаём язык для фильтрации постов только текущего языка
+const langCode = lang as 'ru' | 'en' | 'es';
+const relatedPosts = await getRelatedPosts(currentPostId, category, limit, langCode);
 
 const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
 	? import.meta.env.BASE_URL 

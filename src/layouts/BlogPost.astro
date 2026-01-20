@@ -74,7 +74,7 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 					<Breadcrumb items={breadcrumbItems} />
 					
 					{pubDate && (
-						<div class="meta" style="margin-bottom: 0.5rem;">
+						<div class="meta" style="margin-bottom: var(--space-1);">
 							<FormattedDate date={pubDate} />
 							{updatedDate && <span> • UPDATED: <FormattedDate date={updatedDate} /></span>}
 						</div>
@@ -92,7 +92,7 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 						<slot />
 					</div>
 
-					<div style="margin-top: 5rem;">
+					<div style="margin-top: var(--space-10);">
 						<Disclaimer />
 					</div>
 
@@ -100,11 +100,11 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 						<FAQ items={faq} />
 					)}
 
-					<div class="article-footer" style="margin-top: 4rem; display: flex; flex-direction: column; gap: 3rem;">
+					<div class="article-footer" style="margin-top: var(--space-6); display: flex; flex-direction: column; gap: var(--space-6);">
 						{tags && tags.length > 0 && (
 							<div class="tags-section">
-								<div class="section-label" style="margin-bottom: 1rem;">{t('library.filter') || 'TAGS:'}</div>
-								<div class="tags-container" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+								<div class="section-label" style="margin-bottom: var(--space-2);">{t('library.filter') || 'TAGS:'}</div>
+								<div class="tags-container" style="display: flex; gap: var(--space-2); flex-wrap: wrap;">
 									{tags.map(tag => (
 										<a href={`${translatePath('library')}?search=${tag}`} class="tag-btn" style="text-decoration: none;">
 											#{tag}
@@ -126,13 +126,21 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 				<aside class="toc-sticky">
 					<div class="nes-container with-title">
 						<p class="title">{tocTitle}</p>
-						<ul class="toc-list">
-							{headings?.map((heading) => (
-								<li class="toc-item" style={`padding-left: ${heading.depth * 8}px`}>
+					<ul class="toc-list">
+						{headings?.map((heading) => {
+							// Используем CSS переменные для отступов (кратно 8px)
+							// depth=2: 32px (--space-4), depth=3: 40px (--space-5), depth=4: 48px (--space-6)
+							const paddingLeft = heading.depth === 2 ? 'var(--space-4)' : 
+							                   heading.depth === 3 ? 'var(--space-5)' : 
+							                   heading.depth === 4 ? 'var(--space-6)' : 
+							                   `calc(var(--space-2) * ${heading.depth})`;
+							return (
+								<li class="toc-item" style={`padding-left: ${paddingLeft}`}>
 									<a href={`#${heading.slug}`}>{heading.text}</a>
 								</li>
-							))}
-						</ul>
+							);
+						})}
+					</ul>
 					</div>
 				</aside>
 			</div>

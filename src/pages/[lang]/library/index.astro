@@ -27,8 +27,16 @@ const translatePath = useTranslatedPath(lang as keyof typeof ui);
 
 // Fetch only posts for current language
 const collectionName = `blog-${lang}` as 'blog-ru' | 'blog-en' | 'blog-es';
-const posts = await getCollection(collectionName);
+const posts = await getCollection(collectionName).catch((err) => {
+	console.error(`Error loading posts for ${collectionName}:`, err);
+	return [];
+});
 const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// Debug: Log posts count
+if (import.meta.env.DEV) {
+	console.log(`[${lang}] Loaded ${posts.length} posts for library`);
+}
 
 const categories = [
 	{ id: 'technical-analysis', label: t('cat.technical-analysis'), full: t('cat.technical-analysis.full') },
@@ -63,14 +71,14 @@ const breadcrumbItems = [
 
 					<div class="categories-filter">
 						<div class="section-label">{t('library.filter')}</div>
-						<div class="categories-container" role="group" style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: var(--space-4);">
+						<div class="categories-container categories-container-with-margin" role="group">
 							{categories.map(cat => (
 								<button 
-									class="tag-btn" 
+									class="tag-btn tag-btn-with-icon" 
 									data-cat={cat.id} 
 									aria-pressed="false"
 									title={cat.full}
-									style="display: inline-flex; align-items: center; gap: 8px;"
+									type="button"
 								>
 									<PixelIcon icon={cat.id === 'technical-analysis' ? 'analysis' : cat.id === 'crypto' ? 'crypto' : cat.id === 'algo-trading' ? 'algo' : 'fundamental'} size={12} color="currentColor" />
 									[{cat.label}]
@@ -79,38 +87,44 @@ const breadcrumbItems = [
 						</div>
 					</div>
 				</div>
-				<div id="postsList" style="display: contents;">
-					{sortedPosts.map((post) => (
-						<a 
-							href={`/marketlab-academy/${lang}/library/${post.id}/`} 
-							class="post-card" 
-							data-title={post.data.title.toLowerCase()}
-							data-description={post.data.description.toLowerCase()}
-							data-category={post.data.category || ''}
-							data-tags={post.data.tags?.join(',').toLowerCase() || ''}
-						>
-							<Banner 
-								title={post.data.title} 
-								subtitle={post.data.description}
-								category={post.data.category} 
-								type="preview" 
-							/>
-							<div class="post-meta-wrap">
-								<div class="post-meta">
-									<span><FormattedDate date={post.data.pubDate} /></span>
+				{sortedPosts.length > 0 ? (
+					<div id="postsList" class="posts-list">
+						{sortedPosts.map((post) => (
+							<a 
+								href={`/marketlab-academy/${lang}/library/${post.id}/`} 
+								class="post-card" 
+								data-title={post.data.title.toLowerCase()}
+								data-description={post.data.description.toLowerCase()}
+								data-category={post.data.category || ''}
+								data-tags={post.data.tags?.join(',').toLowerCase() || ''}
+							>
+								<Banner 
+									title={post.data.title} 
+									subtitle={post.data.description}
+									category={post.data.category} 
+									type="preview" 
+								/>
+								<div class="post-meta-wrap">
+									<div class="post-meta">
+										<span><FormattedDate date={post.data.pubDate} /></span>
+									</div>
 								</div>
-							</div>
-							<div class="read-more-link" aria-hidden="true">> {t('library.read_more')}</div>
-						</a>
-					))}
-				</div>
+								<div class="read-more-link" aria-hidden="true">> {t('library.read_more')}</div>
+							</a>
+						))}
+					</div>
+				) : (
+					<div class="no-posts" style="padding: var(--space-6); text-align: center; color: var(--color-text-secondary);">
+						<p>Статьи не найдены. Проверьте консоль браузера для диагностики.</p>
+					</div>
+				)}
 			</section>
 
-			<div class="pagination-container" id="pagination" style="display: flex; justify-content: center; gap: 1rem; margin-top: 3rem; margin-bottom: 4rem;">
+			<div class="pagination-container" id="pagination">
 				<!-- Buttons will be injected by script -->
 			</div>
 			
-			<div id="noResults" style="display: none; text-align: center; padding: 3rem 0; color: var(--color-text-secondary); font-family: 'JetBrains Mono', monospace;">
+			<div id="noResults" class="no-results">
 				> {t('library.no_results')}
 			</div>
 			<ScrollTop />
@@ -120,142 +134,167 @@ const breadcrumbItems = [
 		<script>
 			import Fuse from 'fuse.js';
 
-			const searchInput = document.getElementById('searchInput') as HTMLInputElement;
-			const postCards = document.querySelectorAll('.post-card') as NodeListOf<HTMLElement>;
-			const noResults = document.getElementById('noResults');
-			const categoryButtons = document.querySelectorAll('.tag-btn[data-cat]');
+			// Ждём загрузки DOM
+			document.addEventListener('DOMContentLoaded', () => {
+				const searchInput = document.getElementById('searchInput') as HTMLInputElement;
+				const postCards = document.querySelectorAll('.post-card') as NodeListOf<HTMLElement>;
+				const noResults = document.getElementById('noResults');
+				const categoryButtons = document.querySelectorAll('.tag-btn[data-cat]');
 
-			const postsData = Array.from(postCards).map(card => ({
-				id: card.getAttribute('href'),
-				title: card.getAttribute('data-title'),
-				description: card.getAttribute('data-description'),
-				category: card.getAttribute('data-category'),
-				tags: card.getAttribute('data-tags'),
-				element: card
-			}));
-
-			const fuse = new Fuse(postsData, {
-				keys: [
-					{ name: 'title', weight: 0.6 },
-					{ name: 'description', weight: 0.3 },
-					{ name: 'tags', weight: 0.1 }
-				],
-				threshold: 0.4,
-				distance: 100,
-				ignoreLocation: true
-			});
-
-			let activeCategory = null;
-			let searchTerm = '';
-			let currentPage = 1;
-			const postsPerPage = 6;
-
-			function updateDisplay() {
-				let filtered = postsData;
-
-				if (activeCategory) {
-					filtered = filtered.filter(p => p.category === activeCategory);
-				}
-
-				if (searchTerm) {
-					const results = fuse.search(searchTerm);
-					const resultIds = new Set(results.map(r => r.item.id));
-					filtered = filtered.filter(p => resultIds.has(p.id));
-				}
-
-				const totalPages = Math.ceil(filtered.length / postsPerPage);
-				if (currentPage > totalPages) currentPage = Math.max(1, totalPages);
-
-				const startIdx = (currentPage - 1) * postsPerPage;
-				const endIdx = startIdx + postsPerPage;
-				const pagedPosts = filtered.slice(startIdx, endIdx);
-				const pagedIds = new Set(pagedPosts.map(p => p.id));
-
-				let visibleCount = 0;
-				postCards.forEach(card => {
-					const cardHref = card.getAttribute('href');
-					const isVisible = pagedIds.has(cardHref);
-					card.style.display = isVisible ? 'flex' : 'none';
-					if (isVisible) visibleCount++;
-				});
-
-				renderPagination(totalPages);
-
-				if (noResults) noResults.style.display = filtered.length === 0 ? 'block' : 'none';
-			}
-
-			function renderPagination(totalPages) {
-				const container = document.getElementById('pagination');
-				if (!container) return;
-				
-				if (totalPages <= 1) {
-					container.innerHTML = '';
+				if (!postCards.length) {
+					console.warn('No post cards found');
 					return;
 				}
 
-				let html = '';
-				for (let i = 1; i <= totalPages; i++) {
-					html += `
-						<button class="tag-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">
-							${i}
-						</button>
-					`;
-				}
-				container.innerHTML = html;
+				const postsData = Array.from(postCards).map(card => ({
+					id: card.getAttribute('href'),
+					title: card.getAttribute('data-title') || '',
+					description: card.getAttribute('data-description') || '',
+					category: card.getAttribute('data-category') || '',
+					tags: card.getAttribute('data-tags') || '',
+					element: card
+				}));
 
-				container.querySelectorAll('[data-page]').forEach(btn => {
-					btn.addEventListener('click', () => {
-						currentPage = parseInt(btn.getAttribute('data-page'));
-						updateDisplay();
-						window.scrollTo({ top: 0, behavior: 'smooth' });
-					});
+				const fuse = new Fuse(postsData, {
+					keys: [
+						{ name: 'title', weight: 0.6 },
+						{ name: 'description', weight: 0.3 },
+						{ name: 'tags', weight: 0.1 }
+					],
+					threshold: 0.4,
+					distance: 100,
+					ignoreLocation: true,
+					// Поддержка кириллицы и других языков
+					includeScore: true,
+					minMatchCharLength: 1,
+					// Включаем поиск по подстрокам для лучшей работы с кириллицей
+					findAllMatches: false,
+					shouldSort: true
 				});
-			}
 
-			searchInput?.addEventListener('input', (e) => {
-				searchTerm = (e.target as HTMLInputElement).value;
-				currentPage = 1;
-				updateDisplay();
-			});
+				let activeCategory = null;
+				let searchTerm = '';
+				let currentPage = 1;
+				const postsPerPage = 6;
 
-			// Handle search/category filter from URL
-			const urlParams = new URLSearchParams(window.location.search);
-			const catParam = urlParams.get('cat');
-			const searchParam = urlParams.get('search');
+				function updateDisplay() {
+					let filtered = postsData;
 
-			if (catParam) {
-				activeCategory = catParam;
-				const btn = document.querySelector(`.tag-btn[data-cat="${catParam}"]`);
-				if (btn) btn.classList.add('active');
-			}
-
-			if (searchParam) {
-				searchTerm = searchParam;
-				if (searchInput) searchInput.value = searchParam;
-			}
-
-			if (catParam || searchParam) {
-				updateDisplay();
-			}
-
-			categoryButtons.forEach(btn => {
-				btn.addEventListener('click', () => {
-					const cat = btn.getAttribute('data-cat');
-					if (activeCategory === cat) {
-						activeCategory = null;
-						btn.classList.remove('active');
-					} else {
-						categoryButtons.forEach(b => b.classList.remove('active'));
-						activeCategory = cat;
-						btn.classList.add('active');
+					if (activeCategory) {
+						filtered = filtered.filter(p => p.category === activeCategory);
 					}
+
+					if (searchTerm && searchTerm.trim()) {
+						try {
+							const results = fuse.search(searchTerm.trim());
+							const resultIds = new Set(results.map(r => r.item.id));
+							filtered = filtered.filter(p => resultIds.has(p.id));
+						} catch (error) {
+							console.error('Search error:', error);
+							// Fallback: простой поиск по подстроке
+							const searchLower = searchTerm.toLowerCase();
+							filtered = filtered.filter(p => 
+								p.title.toLowerCase().includes(searchLower) ||
+								p.description.toLowerCase().includes(searchLower) ||
+								p.tags.toLowerCase().includes(searchLower)
+							);
+						}
+					}
+
+					const totalPages = Math.ceil(filtered.length / postsPerPage);
+					if (currentPage > totalPages) currentPage = Math.max(1, totalPages);
+
+					const startIdx = (currentPage - 1) * postsPerPage;
+					const endIdx = startIdx + postsPerPage;
+					const pagedPosts = filtered.slice(startIdx, endIdx);
+					const pagedIds = new Set(pagedPosts.map(p => p.id));
+
+					let visibleCount = 0;
+					postCards.forEach(card => {
+						const cardHref = card.getAttribute('href');
+						const isVisible = pagedIds.has(cardHref);
+						card.style.display = isVisible ? 'flex' : 'none';
+						if (isVisible) visibleCount++;
+					});
+
+					renderPagination(totalPages);
+
+					if (noResults) noResults.style.display = filtered.length === 0 ? 'block' : 'none';
+				}
+
+				function renderPagination(totalPages) {
+					const container = document.getElementById('pagination');
+					if (!container) return;
+					
+					if (totalPages <= 1) {
+						container.innerHTML = '';
+						return;
+					}
+
+					let html = '';
+					for (let i = 1; i <= totalPages; i++) {
+						html += `
+							<button class="tag-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">
+								${i}
+							</button>
+						`;
+					}
+					container.innerHTML = html;
+
+					container.querySelectorAll('[data-page]').forEach(btn => {
+						btn.addEventListener('click', () => {
+							currentPage = parseInt(btn.getAttribute('data-page') || '1');
+							updateDisplay();
+							window.scrollTo({ top: 0, behavior: 'smooth' });
+						});
+					});
+				}
+
+				searchInput?.addEventListener('input', (e) => {
+					searchTerm = (e.target as HTMLInputElement).value;
 					currentPage = 1;
 					updateDisplay();
 				});
-			});
 
-			// Initial run to ensure correct state
-			updateDisplay();
+				// Handle search/category filter from URL
+				const urlParams = new URLSearchParams(window.location.search);
+				const catParam = urlParams.get('cat');
+				const searchParam = urlParams.get('search');
+
+				if (catParam) {
+					activeCategory = catParam;
+					const btn = document.querySelector(`.tag-btn[data-cat="${catParam}"]`);
+					if (btn) btn.classList.add('active');
+				}
+
+				if (searchParam) {
+					searchTerm = searchParam;
+					if (searchInput) searchInput.value = searchParam;
+				}
+
+				if (catParam || searchParam) {
+					updateDisplay();
+				}
+
+				categoryButtons.forEach(btn => {
+					btn.addEventListener('click', () => {
+						const cat = btn.getAttribute('data-cat');
+						if (activeCategory === cat) {
+							activeCategory = null;
+							btn.classList.remove('active');
+						} else {
+							categoryButtons.forEach(b => b.classList.remove('active'));
+							activeCategory = cat;
+							btn.classList.add('active');
+						}
+						currentPage = 1;
+						updateDisplay();
+					});
+				});
+
+				// Initial run to ensure correct state
+				updateDisplay();
+			});
 		</script>
 <style>
 	.responsive-title {

@@ -21,10 +21,19 @@
 	top: 100px;
 	font-family: 'JetBrains Mono', monospace;
 	max-height: calc(100vh - 120px);
-	overflow-y: auto;
+	overflow-y: auto; /* Скроллинг только внутри TOC, не всей страницы */
 	overflow-x: hidden; /* Prevent horizontal scrollbar */
-	padding-left: 1rem;
-	border-left: 4px solid var(--nes-bg-secondary);
+	padding: 0; /* Убрали все padding — nes-container уже имеет padding */
+	border-left: none; /* Убрали border — используется nes-container */
+	width: 100%; /* Полная ширина для правильного выравнивания */
+}
+
+/* Переопределяем padding nes-container для TOC - унифицированные отступы */
+.toc-sticky .nes-container {
+	padding: var(--space-2); /* 16px — унифицированный padding для всех сторон */
+	margin: 0; /* Убираем margin nes-container для TOC */
+	width: 100%; /* Полная ширина для правильного выравнивания */
+	box-sizing: border-box; /* Включаем padding в ширину */
 }
 
 .toc-list {
@@ -36,8 +45,10 @@
 }
 
 .toc-item {
-	padding: 6px 0 6px 12px;
+	padding: var(--space-1) 0; /* 8px сверху и снизу — отступ слева задаётся inline style */
+	padding-left: 0; /* Сбрасываем padding-left — он задаётся через inline style */
 	border-bottom: 1px dashed var(--nes-bg-secondary);
+	text-align: left; /* Выравниваем текст влево */
 }
 
 .toc-item:last-child {
@@ -84,24 +95,26 @@ article {
 .prose h2[id*="faq"],
 .prose h2[id*="часто-задаваемые-вопросы"],
 .prose h2[id*="preguntas-frecuentes"] {
-	background: var(--nes-bg-secondary);
-	padding: 1.5rem 2rem;
-	border: 4px solid var(--nes-accent-green);
+	background: transparent; /* Убрали фон */
+	padding: 0; /* Убрали padding */
+	border: none; /* Убрали рамку */
 	color: var(--nes-accent-green);
-	font-family: 'Press Start 2P', monospace;
-	font-size: 1rem;
-	margin-top: 6rem;
-	margin-bottom: 3rem;
+	font-family: 'JetBrains Mono', monospace; /* Изменили с Press Start 2P на более легкий шрифт */
+	font-size: 1.25rem;
+	font-weight: normal; /* Не жирный */
+	margin-top: var(--space-10); /* 80px — кратно 8px */
+	margin-bottom: var(--space-4); /* 32px — кратно 8px */
 	position: relative;
 	display: block;
-	width: fit-content;
-	box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+	width: 100%;
+	box-shadow: none; /* Убрали тень */
+	text-transform: uppercase;
 }
 
 .prose h2[id*="faq"]::before,
 .prose h2[id*="часто-задаваемые-вопросы"]::before,
 .prose h2[id*="preguntas-frecuentes"]::before {
-	content: "> ";
+	content: ""; /* Убрали "> " */
 }
 
 /* Style questions and answers after FAQ header */
@@ -110,13 +123,15 @@ article {
 .prose h2[id*="часто-задаваемые-вопросы"] ~ p > strong,
 .prose h2[id*="preguntas-frecuentes"] ~ p > strong {
 	color: var(--nes-accent-green);
-	margin-top: 3rem;
+	margin-top: var(--space-6); /* 48px — кратно 8px (было 3rem) */
+	margin-bottom: var(--space-2); /* 16px — добавим снизу */
 	display: block;
-	font-family: 'Press Start 2P', monospace;
-	font-size: 0.75rem;
+	font-family: 'JetBrains Mono', monospace; /* Изменили с Press Start 2P на более легкий шрифт */
+	font-size: 0.875rem; /* 14px — легче читается */
+	font-weight: normal; /* Не жирный */
 	line-height: 1.6;
-	border-left: 4px solid var(--nes-accent-green);
-	padding-left: 1rem;
+	border-left: none; /* Убрали левую границу */
+	padding-left: 0; /* Убрали padding */
 }
 
 .prose h3 {
@@ -128,7 +143,7 @@ article {
 }
 
 .prose p {
-	margin-bottom: var(--space-4);
+	margin-bottom: var(--space-2); /* 16px — унифицировано, кратно 8px (было 32px) */
 	line-height: 1.6;
 	font-size: 16px; /* --fs-base */
 	max-width: 75ch; /* Optimal line length */
