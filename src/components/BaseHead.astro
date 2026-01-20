@@ -58,7 +58,8 @@ if (imageProp) {
 		const langIndex = pathParts.indexOf('library');
 		if (langIndex >= 0 && pathParts[langIndex + 1]) {
 			const lang = pathParts[langIndex + 1];
-			const slug = pathParts.slice(langIndex + 2).join('-') || 'homepage';
+			const slugParts = pathParts.slice(langIndex + 2);
+			const slug = slugParts.length > 0 ? slugParts.join('-') : 'homepage';
 			ogImageUrl = new URL(`/marketlab-academy/og/${lang}-${slug}.png`, Astro.site);
 		} else {
 			// Fallback для неожиданных путей
@@ -109,17 +110,20 @@ if (imageProp) {
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:url" content={Astro.url.href} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={ogImageUrl} />
+<meta property="og:image" content={ogImageUrl.href} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/png" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:url" content={Astro.url.href} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={ogImageUrl} />
+<meta property="twitter:image" content={ogImageUrl.href} />
 
 <!-- Analytics -->
 <Analytics />
