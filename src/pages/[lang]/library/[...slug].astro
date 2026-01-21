@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import Layout from '../../../layouts/BlogPost.astro';
+import { estimateReadTime } from '../../../utils/blog';
 
 export async function getStaticPaths() {
 	const langs = ['ru', 'en', 'es'];
@@ -25,8 +26,11 @@ type Props = CollectionEntry<'blog-ru' | 'blog-en' | 'blog-es'>;
 
 const post = Astro.props;
 const { Content, headings } = await render(post);
+
+// Вычисляем время чтения из сырого контента статьи
+const readingTime = post.body ? estimateReadTime(post.body) : undefined;
 ---
 
-<Layout {...post.data} postId={post.id} headings={headings} category={post.data.category}>
+<Layout {...post.data} readingTime={readingTime} postId={post.id} headings={headings} category={post.data.category}>
 	<Content />
 </Layout>
