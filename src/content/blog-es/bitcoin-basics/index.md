@@ -49,8 +49,6 @@ El objetivo era crear un sistema libre de la influencia de bancos y gobiernos. E
 
 **Crecimiento del Interés:** A partir de 2012, Bitcoin comenzó a ser visto como un instrumento de inversión. Se formaron grandes exchanges como Coinbase y Kraken, simplificando el acceso a la criptomoneda para usuarios comunes.
 
-![Gráfico de crecimiento del precio de Bitcoin de 2009 a 2026](./assets/bitcoin-price-chart.webp)
-
 ## Cómo Funciona Bitcoin
 
 Bitcoin opera sobre un blockchain: una cadena continua de bloques que contienen datos sobre todas las transacciones. Cada bloque contiene información sobre varias transacciones y está vinculado al bloque anterior a través de un hash criptográfico.
@@ -65,8 +63,6 @@ Un blockchain es una secuencia de bloques. Cada bloque está conectado al anteri
 
 **Descentralización:** Los datos se almacenan en miles de computadoras (nodos) en todo el mundo. Cada nodo almacena una copia completa del blockchain, garantizando la tolerancia a fallos del sistema.
 
-![Esquema del blockchain de Bitcoin con bloques y transacciones](./assets/blockchain-scheme.webp)
-
 ### Transacciones
 
 Una transacción es el proceso de transferir fondos entre usuarios de la red Bitcoin. Cada transacción debe ser confirmada por la red antes de ser agregada al blockchain.
@@ -76,8 +72,6 @@ Una transacción es el proceso de transferir fondos entre usuarios de la red Bit
 **Clave Pública:** Una dirección a la que se pueden enviar Bitcoins. La clave pública se genera a partir de la clave privada, pero la conversión inversa es imposible.
 
 **Mempool:** Una cola de transacciones esperando confirmación. Una transacción entra al mempool hasta que se incluye en un bloque. Los mineros seleccionan transacciones del mempool para incluir en un nuevo bloque.
-
-![Ejemplo de una transacción de Bitcoin en el blockchain con remitente y receptor](./assets/transaction-example.webp)
 
 ### Minería
 
@@ -128,8 +122,6 @@ Usar Bitcoin comienza con crear una billetera para almacenar la criptomoneda. Un
 **Billeteras Móviles (Trust Wallet, Electrum):** Conveniencia para operaciones diarias. Las billeteras móviles permiten enviar y recibir Bitcoins rápidamente, pero requieren precaución al almacenar grandes cantidades.
 
 **Billeteras de Exchange:** Almacenamiento en cuentas de plataformas de trading. Las billeteras de exchange son convenientes para el trading pero menos seguras, ya que las claves privadas se almacenan en el exchange. Se recomienda almacenar grandes cantidades en sus propias billeteras.
-
-![Comparación de billeteras de hardware, móviles y de exchange para Bitcoin](./assets/wallet-types-comparison.webp)
 
 ### Compra y Venta
 

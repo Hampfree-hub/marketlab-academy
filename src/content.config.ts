@@ -5,6 +5,7 @@ const blogSchema = ({ image }) =>
 	z.object({
 		title: z.string(),
 		description: z.string(),
+		metaOgTitle: z.string().optional(), // OG заголовок для соцсетей (опционально, до 100 символов)
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
 		bannerImage: z.string().optional(),

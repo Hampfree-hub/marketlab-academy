@@ -14,6 +14,8 @@ import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/util
 interface Props {
 	title: string;
 	description: string;
+	metaOgTitle?: string; // OG заголовок для соцсетей (опционально)
+	readingTime?: number; // Время чтения в минутах (вычисляется автоматически)
 	pubDate?: Date;
 	updatedDate?: Date;
 	heroImage?: string;
@@ -26,7 +28,7 @@ interface Props {
 	customBreadcrumbs?: { label: string; href?: string }[];
 }
 
-const { title, description, pubDate, updatedDate, heroImage, bannerImage, category, tags, faq, postId, headings, customBreadcrumbs } = Astro.props;
+const { title, description, metaOgTitle, readingTime, pubDate, updatedDate, heroImage, bannerImage, category, tags, faq, postId, headings, customBreadcrumbs } = Astro.props;
 const displayImage = heroImage || bannerImage;
 
 const lang = getLangFromUrl(Astro.url);
@@ -63,7 +65,7 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 
 <html lang={lang}>
 	<head>
-		<BaseHead title={title} description={description} image={displayImage} />
+		<BaseHead title={title} description={description} metaOgTitle={metaOgTitle} image={displayImage} />
 	</head>
 
 	<body>
@@ -74,9 +76,12 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 					<Breadcrumb items={breadcrumbItems} />
 					
 					{pubDate && (
-						<div class="meta" style="margin-bottom: var(--space-1);">
+						<div class="meta" style="margin-bottom: var(--space-1); display: flex; gap: var(--space-2); align-items: center; flex-wrap: wrap;">
 							<FormattedDate date={pubDate} />
 							{updatedDate && <span> • UPDATED: <FormattedDate date={updatedDate} /></span>}
+							{readingTime && readingTime > 0 && (
+								<span> • {readingTime} {lang === 'ru' ? 'мин' : lang === 'en' ? 'min' : 'min'} {lang === 'ru' ? 'чтения' : lang === 'en' ? 'read' : 'lectura'}</span>
+							)}
 						</div>
 					)}
 
@@ -136,7 +141,7 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 							                   `calc(var(--space-2) * ${heading.depth})`;
 							return (
 								<li class="toc-item" style={`padding-left: ${paddingLeft}`}>
-									<a href={`#${heading.slug}`}>{heading.text}</a>
+									<a href={`#${heading.slug}`} data-text={heading.text}>{heading.text}</a>
 								</li>
 							);
 						})}
@@ -150,30 +155,62 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 		<Footer />
 
 		<script is:inline>
-			// Interactive TOC Highlighting
+			// Interactive TOC Highlighting - оптимизировано для предотвращения дёргания
 			const observerOptions = {
 				root: null,
 				rootMargin: '0px 0px -80% 0px',
-				threshold: 0
+				threshold: [0, 0.1, 0.5, 1]
+			};
+
+			let currentActiveLink = null;
+			let rafId = null;
+
+			const updateActiveLink = (id) => {
+				if (rafId) {
+					cancelAnimationFrame(rafId);
+				}
+				
+				rafId = requestAnimationFrame(() => {
+					const activeLink = document.querySelector(`.toc-item a[href="#${id}"]`);
+					
+					// Обновляем только если активная ссылка изменилась
+					if (activeLink && activeLink !== currentActiveLink) {
+						// Удаляем класс у предыдущей активной ссылки
+						if (currentActiveLink) {
+							currentActiveLink.classList.remove('active');
+						}
+						// Добавляем класс к новой активной ссылке
+						activeLink.classList.add('active');
+						currentActiveLink = activeLink;
+					}
+					
+					rafId = null;
+				});
 			};
 
 			const observer = new IntersectionObserver((entries) => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						const id = entry.target.getAttribute('id');
-						if (id) {
-							// Remove active class from all links
-							document.querySelectorAll('.toc-item a').forEach(link => {
-								link.classList.remove('active');
-							});
-							// Add active class to current link
-							const activeLink = document.querySelector(`.toc-item a[href="#${id}"]`);
-							if (activeLink) {
-								activeLink.classList.add('active');
-							}
-						}
+				// Находим первый видимый заголовок (ближайший к верху viewport)
+				const visibleHeaders = entries
+					.filter(entry => entry.isIntersecting)
+					.map(entry => ({
+						element: entry.target,
+						top: entry.boundingClientRect.top,
+						intersectionRatio: entry.intersectionRatio
+					}))
+					.sort((a, b) => {
+						// Сначала по позиции (ближе к верху = выше приоритет)
+						if (Math.abs(a.top - 100) < Math.abs(b.top - 100)) return -1;
+						if (Math.abs(a.top - 100) > Math.abs(b.top - 100)) return 1;
+						// Затем по intersection ratio
+						return b.intersectionRatio - a.intersectionRatio;
+					});
+
+				if (visibleHeaders.length > 0) {
+					const id = visibleHeaders[0].element.getAttribute('id');
+					if (id) {
+						updateActiveLink(id);
 					}
-				});
+				}
 			}, observerOptions);
 
 			// Observe all headers inside .prose
