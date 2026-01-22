@@ -34,6 +34,8 @@ dist/
 docs/8BIT_NES_IMPLEMENTATION_PLAN.md
 docs/MARKETLAB_CHARACTERS_PLAN.md
 docs/CATEGORIES_FINAL_DECISION.md
+docs/ARTICLES_WORK_PLAN.md
+docs/SEO_STRATEGY_SUMMARY.md
 
 # Полный лор персонажей
 docs/characters/
@@ -65,3 +67,7 @@ secrets/
 *_COMPLETE_*.md
 *COMMIT_PLAN*.md
 *INTEGRATION_COMPLETE*.md
+
+# Локальные архивы (НЕ отправлять в GitHub!)
+**/_archive/
+../_archive/

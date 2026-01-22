@@ -2,8 +2,8 @@
 # Используется в pre-commit hook
 
 param(
-    [Parameter(ValueFromRemainingArguments=$true)]
-    [string[]]$BlockedFiles
+    [Parameter(ValueFromPipeline=$false, ValueFromRemainingArguments=$true)]
+    [string[]]$BlockedFiles = @()
 )
 
 $ErrorActionPreference = "Stop"
