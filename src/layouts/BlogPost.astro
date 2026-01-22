@@ -141,7 +141,7 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 							                   `calc(var(--space-2) * ${heading.depth})`;
 							return (
 								<li class="toc-item" style={`padding-left: ${paddingLeft}`}>
-									<a href={`#${heading.slug}`} data-text={heading.text}>{heading.text}</a>
+									<a href={`#${heading.slug}`}>{heading.text}</a>
 								</li>
 							);
 						})}
@@ -159,7 +159,7 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 			const observerOptions = {
 				root: null,
 				rootMargin: '0px 0px -80% 0px',
-				threshold: [0, 0.1, 0.5, 1]
+				threshold: 0
 			};
 
 			let currentActiveLink = null;
@@ -194,16 +194,9 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 					.filter(entry => entry.isIntersecting)
 					.map(entry => ({
 						element: entry.target,
-						top: entry.boundingClientRect.top,
-						intersectionRatio: entry.intersectionRatio
+						top: entry.boundingClientRect.top
 					}))
-					.sort((a, b) => {
-						// Сначала по позиции (ближе к верху = выше приоритет)
-						if (Math.abs(a.top - 100) < Math.abs(b.top - 100)) return -1;
-						if (Math.abs(a.top - 100) > Math.abs(b.top - 100)) return 1;
-						// Затем по intersection ratio
-						return b.intersectionRatio - a.intersectionRatio;
-					});
+					.sort((a, b) => a.top - b.top);
 
 				if (visibleHeaders.length > 0) {
 					const id = visibleHeaders[0].element.getAttribute('id');

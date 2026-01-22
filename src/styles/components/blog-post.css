@@ -49,10 +49,10 @@
 	padding-left: 0; /* Сбрасываем padding-left — он задаётся через inline style */
 	border-bottom: 1px dashed var(--nes-bg-secondary);
 	text-align: left; /* Выравниваем текст влево */
-	/* Фиксированная высота для предотвращения дёргания при изменении font-weight */
-	height: 1.8em;
+	/* Минимальная высота, но может расширяться для длинных текстов */
+	min-height: 1.8em;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	box-sizing: border-box;
 }
 
@@ -66,25 +66,13 @@
 	transition: color 0.1s steps(3);
 	display: block;
 	width: 100%;
-	/* Фиксированный line-height и высота - font-weight не будет менять высоту */
-	line-height: 1.8em;
-	min-height: 1.8em;
-	/* Используем псевдоэлемент для жирного текста, чтобы высота не менялась */
-	position: relative;
-}
-
-/* Псевдоэлемент с жирным текстом для предотвращения изменения высоты */
-.toc-item a::after {
-	content: attr(data-text);
-	font-weight: bold;
-	opacity: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	pointer-events: none;
-	visibility: hidden;
+	/* Разрешаем перенос текста - НЕ обрезаем! */
+	line-height: 1.6;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	/* Убираем все ограничения на высоту */
+	white-space: normal;
+	overflow: visible;
 }
 
 .toc-item a:hover {
@@ -96,8 +84,7 @@
 	color: var(--nes-accent-green);
 	font-weight: bold;
 	/* Та же высота и line-height - не будет дёргания */
-	line-height: 1.8em;
-	min-height: 1.8em;
+	line-height: 1.6;
 }
 
 article {
