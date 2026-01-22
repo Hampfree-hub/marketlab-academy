@@ -297,13 +297,14 @@ src/content/blog-ru/money-flow-index/
 
 ## 6. SEO оптимизация
 
+**Важно:** При сомнениях по frontmatter и формату сверяться с **актуальными** оптимизированными статьями (`bitcoin-basics`, `technical-analysis-rsi`), а не со старыми планами или предыдущими версиями гайда.
+
 ### Meta данные (frontmatter):
 
 ```yaml
 ---
 title: 'Основной ключевой запрос (до 100 символов)'
 description: 'SEO описание (150-160 символов)'
-metaOgTitle: 'OG заголовок для соцсетей (опционально, до 100 символов)'
 pubDate: '2026-01-20'  # Формат: YYYY-MM-DD
 category: 'technical-analysis'  # Одна из 4 категорий
 ---
@@ -316,10 +317,11 @@ category: 'technical-analysis'  # Одна из 4 категорий
 - `category` — одна из 4 категорий
 
 **Опциональные поля:**
-- `metaOgTitle` — OG заголовок для соцсетей (если не указан, используется `title`)
 - `updatedDate` — дата обновления (YYYY-MM-DD)
 - `bannerImage` — баннер (создаётся автоматически через компонент `<Banner>`)
 - `pinned` — закрепить статью (boolean)
+
+**Не используем:** `metaOgTitle` — для OG и соцсетей везде используется `title`. В новые статьи не добавлять. Сверяться с актуальными статьями (bitcoin-basics, technical-analysis-rsi), а не со старыми планами.
 
 **Автоматические поля:**
 - `readingTime` — время чтения (вычисляется автоматически: слова / 200)
@@ -574,7 +576,6 @@ marketlab-academy.org/ru/library/money-flow-index
 ### SEO:
 
 - [ ] Title: до 100 символов с primary keyword ✅
-- [ ] MetaOgTitle: опционально, до 100 символов (если указан)
 - [ ] Description: 150-160 символов ✅
 - [ ] URL slug: короткий, с дефисами ✅
 - [ ] Primary keyword в первых 100 словах ✅
