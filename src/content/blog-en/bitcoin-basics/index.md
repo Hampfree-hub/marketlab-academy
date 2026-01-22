@@ -49,6 +49,8 @@ The goal was to create a system free from the influence of banks and governments
 
 **Growing Interest:** From 2012, Bitcoin began to be viewed as an investment instrument. Major exchanges such as Coinbase and Kraken were formed, simplifying access to cryptocurrency for ordinary users.
 
+![Bitcoin price growth chart from 2009 to 2026](./assets/bitcoin-price-chart.png)
+
 ## How Bitcoin Works
 
 Bitcoin operates on a blockchain—a continuous chain of blocks containing data about all transactions. Each block contains information about several transactions and is linked to the previous block through a cryptographic hash.
@@ -63,6 +65,8 @@ A blockchain is a sequence of blocks. Each block is connected to the previous on
 
 **Decentralization:** Data is stored on thousands of computers (nodes) worldwide. Each node stores a complete copy of the blockchain, ensuring system fault tolerance.
 
+![Bitcoin blockchain scheme with blocks and transactions](./assets/blockchain-scheme.png)
+
 ### Transactions
 
 A transaction is the process of transferring funds between Bitcoin network users. Each transaction must be confirmed by the network before being added to the blockchain.
@@ -72,6 +76,8 @@ A transaction is the process of transferring funds between Bitcoin network users
 **Public Key:** An address to which Bitcoins can be sent. The public key is generated from the private key, but reverse conversion is impossible.
 
 **Mempool:** A queue of transactions awaiting confirmation. A transaction enters the mempool until it is included in a block. Miners select transactions from the mempool to include in a new block.
+
+![Example of a Bitcoin transaction in the blockchain with sender and receiver](./assets/transaction-example.png)
 
 ### Mining
 
@@ -122,6 +128,8 @@ Using Bitcoin begins with creating a wallet to store the cryptocurrency. A walle
 **Mobile Wallets (Trust Wallet, Electrum):** Convenience for everyday operations. Mobile wallets allow quick sending and receiving of Bitcoins but require caution when storing large amounts.
 
 **Exchange Wallets:** Storage on trading platform accounts. Exchange wallets are convenient for trading but less secure, as private keys are stored on the exchange. It is recommended to store large amounts in your own wallets.
+
+![Comparison of hardware, mobile, and exchange wallets for Bitcoin](./assets/wallet-types-comparison.png)
 
 ### Buying and Selling
 

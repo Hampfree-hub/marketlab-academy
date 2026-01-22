@@ -69,6 +69,8 @@ Similarly to the overbought zone, on strong downtrends, RSI can remain below 30 
 
 The centerline (50) plays a special role. RSI crossing the 50 level from below upward may indicate strengthening bullish momentum, while crossing from above downward indicates strengthening bearish momentum.
 
+![RSI chart with overbought zone 70 and oversold zone 30 on cryptocurrency market](./assets/rsi-zones.png)
+
 ## RSI Divergences
 
 Divergence is one of the strongest RSI signals. It occurs when the direction of price movement does not match the direction of indicator movement.
@@ -77,9 +79,13 @@ Divergence is one of the strongest RSI signals. It occurs when the direction of 
 
 Bullish divergence is considered a buy signal, especially if it forms in the oversold zone. The larger the time interval between price lows, the stronger the signal.
 
+![Example of bullish RSI divergence with indicator forming higher low while price falls](./assets/rsi-bullish-divergence.png)
+
 **Bearish Divergence:** Price forms a new high, while RSI shows a lower high. This indicates weakening bullish momentum and a possible downward reversal.
 
 Bearish divergence is considered a sell signal, especially if it forms in the overbought zone. Like bullish divergence, bearish divergence becomes stronger with increasing time intervals between highs.
+
+![Example of bearish RSI divergence with indicator forming lower high while price rises](./assets/rsi-bearish-divergence.png)
 
 RSI divergences are particularly effective in the cryptocurrency market, where volatility allows such patterns to be clearly seen. However, it is important to confirm divergence signals with other indicators, support/resistance levels, or [candlestick patterns](/en/library/what-are-doji-candles/), such as doji or engulfing patterns.
 
@@ -94,6 +100,8 @@ The cryptocurrency market is characterized by high volatility and specific chara
 **Trending and Sideways Markets:** In sideways trends, RSI effectively shows overbought and oversold conditions. In strong trends, the indicator can remain in extreme zones for extended periods, requiring additional signal filtering.
 
 **Signal Confirmation:** In the cryptocurrency market, it is especially important to confirm RSI signals with other indicators. For example, combining RSI with the [Money Flow Index (MFI)](/en/library/money-flow-index/) can increase the reliability of trading signals, as MFI accounts for trading volumes.
+
+![Comparison of RSI and Money Flow Index MFI charts on the same timeframe](./assets/rsi-vs-mfi-comparison.png)
 
 ## How to Use RSI in Trading Strategies
 
@@ -114,6 +122,8 @@ This strategy is particularly effective for confirming trend strength. Combined 
 **Multi-Timeframe Strategy:** Using RSI on different timeframes to confirm signals. For example, if RSI on a daily chart shows oversold conditions, and on an hourly chart a bullish divergence is forming, this strengthens the buy signal.
 
 Multi-timeframe analysis increases the reliability of trading decisions and helps avoid false signals characteristic of short timeframes.
+
+![Example of using RSI on different timeframes to confirm trading signals](./assets/rsi-timeframes.png)
 
 ## Advantages and Disadvantages of RSI
 

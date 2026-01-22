@@ -69,6 +69,8 @@ Similar a la zona de sobrecompra, en tendencias bajistas fuertes, RSI puede perm
 
 La línea central (50) juega un papel especial. RSI cruzando el nivel 50 de abajo hacia arriba puede indicar un fortalecimiento del momentum alcista, mientras que cruzar de arriba hacia abajo indica un fortalecimiento del momentum bajista.
 
+![Gráfico RSI con zona de sobrecompra 70 y zona de sobreventa 30 en el mercado de criptomonedas](./assets/rsi-zones.png)
+
 ## Divergencias RSI
 
 La divergencia es una de las señales más fuertes de RSI. Ocurre cuando la dirección del movimiento del precio no coincide con la dirección del movimiento del indicador.
@@ -77,9 +79,13 @@ La divergencia es una de las señales más fuertes de RSI. Ocurre cuando la dire
 
 La divergencia alcista se considera una señal de compra, especialmente si se forma en la zona de sobreventa. Cuanto mayor sea el intervalo de tiempo entre los mínimos del precio, más fuerte será la señal.
 
+![Ejemplo de divergencia alcista RSI con el indicador formando un mínimo más alto mientras el precio cae](./assets/rsi-bullish-divergence.png)
+
 **Divergencia Bajista:** El precio forma un nuevo máximo, mientras que RSI muestra un máximo más bajo. Esto indica un debilitamiento del momentum alcista y una posible reversión a la baja.
 
 La divergencia bajista se considera una señal de venta, especialmente si se forma en la zona de sobrecompra. Al igual que la divergencia alcista, la divergencia bajista se vuelve más fuerte con el aumento del intervalo de tiempo entre máximos.
+
+![Ejemplo de divergencia bajista RSI con el indicador formando un máximo más bajo mientras el precio sube](./assets/rsi-bearish-divergence.png)
 
 Las divergencias RSI son particularmente efectivas en el mercado de criptomonedas, donde la volatilidad permite ver claramente tales patrones. Sin embargo, es importante confirmar las señales de divergencia con otros indicadores, niveles de soporte/resistencia o [patrones de velas](/es/library/what-are-doji-candles/), como doji o patrones de engullimiento.
 
@@ -94,6 +100,8 @@ El mercado de criptomonedas se caracteriza por alta volatilidad y característic
 **Mercados con Tendencia y Laterales:** En tendencias laterales, RSI muestra efectivamente condiciones de sobrecompra y sobreventa. En tendencias fuertes, el indicador puede permanecer en zonas extremas durante períodos prolongados, requiriendo filtrado adicional de señales.
 
 **Confirmación de Señales:** En el mercado de criptomonedas, es especialmente importante confirmar las señales RSI con otros indicadores. Por ejemplo, combinar RSI con el [Índice de Flujo de Dinero (MFI)](/es/library/money-flow-index/) puede aumentar la confiabilidad de las señales de trading, ya que MFI tiene en cuenta los volúmenes de trading.
+
+![Comparación de gráficos RSI e Índice de Flujo de Dinero MFI en el mismo marco temporal](./assets/rsi-vs-mfi-comparison.png)
 
 ## Cómo Usar RSI en Estrategias de Trading
 
@@ -114,6 +122,8 @@ Esta estrategia es particularmente efectiva para confirmar la fuerza de la tende
 **Estrategia Multi-Marco Temporal:** Usar RSI en diferentes marcos temporales para confirmar señales. Por ejemplo, si RSI en un gráfico diario muestra condiciones de sobreventa, y en un gráfico horario se está formando una divergencia alcista, esto fortalece la señal de compra.
 
 El análisis multi-marco temporal aumenta la confiabilidad de las decisiones de trading y ayuda a evitar señales falsas características de marcos temporales cortos.
+
+![Ejemplo de uso de RSI en diferentes marcos temporales para confirmar señales de trading](./assets/rsi-timeframes.png)
 
 ## Ventajas y Desventajas de RSI
 
