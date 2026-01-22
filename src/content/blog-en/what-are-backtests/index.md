@@ -7,7 +7,7 @@ category: 'algo-trading'
 
 Backtests are the foundation of any robust trading system. Without testing on historical data, it is impossible to objectively assess a strategy’s effectiveness before risking real capital. Professional traders and algorithmic systems rely on backtesting as a mandatory step in developing and optimizing strategies.
 
-This article explains what backtesting is, how to do it correctly, which tools to use, and what pitfalls to avoid. You will also learn why backtest results do not guarantee future profits yet remain essential for any serious trader.
+The article explains what backtesting is, how to do it correctly, which tools to use, and what pitfalls to avoid. It also covers why backtest results do not guarantee future profits yet remain essential for any serious trader.
 
 ## What Is a Backtest
 
@@ -18,7 +18,7 @@ Testing helps identify strengths and weaknesses and optimize parameters (e.g. st
 ### Main Goals of Backtesting
 
 1. **Evaluate strategy performance** — Did the strategy profit in the past? How stable was it?
-2. **Optimize parameters** — Find better settings for indicators, stops, and targets. For example, with the [RSI indicator](/en/library/technical-analysis-rsi) you can test different periods and overbought/oversold levels.
+2. **Optimize parameters** — Find better settings for indicators, stops, and targets. For example, with the [RSI indicator](/en/library/technical-analysis-rsi) traders can test different periods and overbought/oversold levels.
 3. **Assess risk** — Max drawdown, losing streaks, and volatility of returns. Crucial for capital management.
 4. **Check robustness** — Does the strategy work across trending, sideways, volatile, and calm markets?
 5. **Compare strategies** — Objectively compare different approaches.
@@ -34,7 +34,7 @@ Testing helps identify strengths and weaknesses and optimize parameters (e.g. st
 
 ### 1. TradingView
 
-TradingView uses **Pine Script** to define entry/exit logic. The Strategy Tester computes profitability, max drawdown, profit factor, and trade count. Good for visual, quick checks. You can test strategies based on [candlestick patterns](/en/library/what-are-doji-candles) such as doji together with other signals.
+TradingView uses **Pine Script** to define entry/exit logic. The Strategy Tester computes profitability, max drawdown, profit factor, and trade count. Good for visual, quick checks. Strategies based on [candlestick patterns](/en/library/what-are-doji-candles) such as doji can be tested together with other signals.
 
 ### 2. Python (Backtrader, VectorBT, etc.)
 
@@ -50,7 +50,7 @@ Parameters are tuned from test results. The goal is not only maximum profit but 
 
 ### Overfitting Risk
 
-**Overfitting** means the strategy is fitted too closely to history and fails live. Avoid it by: using walk‑forward tests, testing on different periods and assets, not optimizing too many parameters at once, and validating on out‑of‑sample data. If you use a strategy based on the [MFI indicator](/en/library/money-flow-index), test various periods and overbought/oversold levels.
+**Overfitting** means the strategy is fitted too closely to history and fails live. Avoid it by: using walk‑forward tests, testing on different periods and assets, not optimizing too many parameters at once, and validating on out‑of‑sample data. For strategies based on the [MFI indicator](/en/library/money-flow-index), test various periods and overbought/oversold levels.
 
 ## Limitations of Backtests
 
@@ -90,7 +90,7 @@ Nevertheless, trading without any backtest is trading blind. Backtests provide a
 
 **Profitability vs stability?** For most traders, stability matters more: steady ~15% per year can be better than erratic 50%. Lower drawdowns and predictability usually beat peak returns.
 
-**Should I backtest even if my strategy already works?** Yes. Backtesting helps you understand when it works best, optimize parameters, assess risk, and document logic.
+**Should I backtest even if my strategy already works?** Yes. Backtesting helps clarify when it works best, optimize parameters, assess risk, and document logic.
 
 ---
 
