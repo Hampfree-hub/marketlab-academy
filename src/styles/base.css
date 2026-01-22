@@ -24,7 +24,8 @@ html {
   font-size: 16px;
   background-color: var(--nes-bg-primary);
   color: var(--nes-text-primary);
-  scroll-behavior: smooth;
+  /* Убираем smooth scroll - может вызывать дёргание */
+  scroll-behavior: auto;
 }
 
 body {

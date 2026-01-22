@@ -14,6 +14,9 @@
 	align-items: start;
 	margin-top: var(--space-8);
 	margin-bottom: var(--space-10);
+	/* Предотвращаем дёргание при скролле */
+	will-change: auto;
+	transform: translateZ(0);
 }
 
 .toc-sticky {
@@ -26,6 +29,12 @@
 	padding: 0; /* Убрали все padding — nes-container уже имеет padding */
 	border-left: none; /* Убрали border — используется nes-container */
 	width: 100%; /* Полная ширина для правильного выравнивания */
+	/* Предотвращаем дёргание при скролле */
+	will-change: auto;
+	transform: translateZ(0);
+	/* Оптимизация скролла */
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: thin;
 }
 
 /* Переопределяем padding nes-container для TOC - унифицированные отступы */
@@ -92,8 +101,19 @@ article {
 	min-width: 0;
 }
 
+.article-footer {
+	/* Предотвращаем прилипание карточек к нижней границе */
+	margin-bottom: var(--space-10) !important;
+	padding-bottom: var(--space-4);
+}
+
 .prose {
 	list-style: none;
+	/* Предотвращаем дёргание при скролле */
+	will-change: auto;
+	transform: translateZ(0);
+	/* Стабильность при скролле */
+	contain: layout style;
 }
 
 .prose h2 {
