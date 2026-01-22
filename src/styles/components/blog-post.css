@@ -23,8 +23,9 @@
 	position: sticky;
 	top: 100px;
 	font-family: 'JetBrains Mono', monospace;
-	max-height: calc(100vh - 80px); /* Увеличено до максимума - скролл появится только если TOC очень длинный */
-	overflow-y: auto; /* Скроллинг только внутри TOC, не всей страницы - появляется только если содержимое не помещается */
+	/* Убираем max-height - TOC будет растягиваться по содержимому, скролл появится только если весь контент не помещается на экран */
+	max-height: none;
+	overflow-y: visible; /* Убираем скролл внутри TOC - пусть растягивается естественно */
 	overflow-x: hidden; /* Prevent horizontal scrollbar */
 	padding: 0; /* Убрали все padding — nes-container уже имеет padding */
 	border-left: none; /* Убрали border — используется nes-container */
@@ -32,11 +33,6 @@
 	/* Предотвращаем дёргание при скролле */
 	will-change: auto;
 	transform: translateZ(0);
-	/* Оптимизация скролла */
-	-webkit-overflow-scrolling: touch;
-	scrollbar-width: thin;
-	/* Скрываем скроллбар, если содержимое помещается */
-	scrollbar-gutter: stable;
 }
 
 /* Переопределяем padding nes-container для TOC - унифицированные отступы */
