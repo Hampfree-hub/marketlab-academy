@@ -68,6 +68,14 @@ secrets/
 *COMMIT_PLAN*.md
 *INTEGRATION_COMPLETE*.md
 
+# Планы, стратегии, статусы, аудиты — ТОЛЬКО ПРИВАТНЫЙ РЕПО!
+ARTICLES_OPTIMIZATION_STATUS.md
+ARTICLES_OPTIMIZATION_PLAN*.md
+OPTIMIZATION_GUIDELINES_SUMMARY.md
+IMAGES_REQUIRED.md
+docs/REPO_SYNC_AND_AUDIT.md
+.analysys_and_optimization
+
 # Локальные архивы (НЕ отправлять в GitHub!)
 **/_archive/
 ../_archive/
