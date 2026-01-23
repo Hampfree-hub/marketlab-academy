@@ -18,7 +18,7 @@
 .header-container {
 	max-width: var(--max-width);
 	margin: 0 auto;
-	padding: 1.25rem var(--horizontal-padding);
+	padding: 1.5rem var(--horizontal-padding); /* ✅ Issue #52: Исправлено на кратно 8px (было 1.25rem = 20px) */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -73,7 +73,7 @@
 	font-family: 'Press Start 2P', monospace;
 	font-size: 0.7rem;
 	color: var(--color-text-secondary);
-	padding: 0.5rem 0.75rem;
+	padding: 8px 16px; /* ✅ Issue #52: Исправлено на кратно 8px (было 0.5rem 0.75rem = 8px 12px) */
 	text-decoration: none;
 	transition: all 0.1s steps(3);
 	border: 2px solid transparent;
@@ -102,7 +102,7 @@
 .lang-switcher {
 	display: flex;
 	align-items: center;
-	gap: 4px;
+	gap: 8px; /* ✅ Issue #52: Исправлено на кратно 8px (было 4px) */
 	font-family: 'Press Start 2P', monospace;
 	font-size: 0.75rem;
 }
@@ -112,7 +112,7 @@
 	border: none;
 	color: var(--color-text-secondary);
 	cursor: pointer;
-	padding: 4px 8px;
+	padding: 0px 8px; /* ✅ Issue #52: Исправлено на кратно 8px (было 4px 8px) */
 	transition: color 0.2s steps(3);
 }
 
@@ -136,7 +136,7 @@
 	border: 2px solid var(--nes-border-primary);
 	border-bottom: 4px solid var(--nes-border-primary);
 	color: var(--color-text-primary);
-	padding: 6px 10px;
+	padding: 8px 8px; /* ✅ Issue #52: Исправлено на кратно 8px (было 6px 10px) */
 	cursor: pointer;
 	font-family: 'Press Start 2P', monospace;
 	font-size: 0.5rem;
@@ -212,7 +212,7 @@
 	font-family: 'Press Start 2P', monospace;
 	font-size: 0.7rem;
 	color: var(--color-text-primary);
-	padding: 0.75rem 1rem;
+	padding: 8px 16px; /* ✅ Issue #52: Исправлено на кратно 8px (было 0.75rem 1rem = 12px 16px) */
 	border: 2px solid var(--color-border);
 	border-bottom: 4px solid var(--color-border);
 	text-align: center;
@@ -238,7 +238,7 @@
 .mobile-lang-switcher {
 	display: flex;
 	flex-direction: column;
-	gap: 0.75rem;
+	gap: 8px; /* ✅ Issue #52: Исправлено на кратно 8px (было 0.75rem = 12px) */
 	padding: 1rem 0;
 	align-items: center;
 }
@@ -297,7 +297,7 @@
 	border: 2px solid var(--color-border);
 	border-bottom: 4px solid var(--color-border);
 	color: var(--color-text-primary);
-	padding: 0.75rem 1.5rem;
+	padding: 8px 24px; /* ✅ Issue #52: Исправлено на кратно 8px (было 0.75rem 1.5rem = 12px 24px) */
 	cursor: pointer;
 	font-family: 'Press Start 2P', monospace;
 	font-size: 0.7rem;
@@ -325,7 +325,7 @@
 	}
 	.desktop-nav a {
 		font-size: 0.6rem;
-		padding: 0.4rem 0.6rem;
+		padding: 8px 8px; /* ✅ Issue #52: Исправлено на кратно 8px (было 0.4rem 0.6rem = 6.4px 9.6px) */
 	}
 }
 

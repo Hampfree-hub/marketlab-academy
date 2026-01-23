@@ -19,7 +19,7 @@
 }
 
 .search-bar {
-	margin-top: 0; /* Removed - header already provides spacing */
+	margin-top: var(--space-4); /* ✅ Добавлен отступ после заголовка (32px) */
 	position: relative;
 }
 
@@ -62,7 +62,7 @@
 	font-family: 'JetBrains Mono', monospace;
 	color: var(--color-accent);
 	font-size: 0.85rem;
-	margin: var(--space-2) 0 var(--space-1); /* Reduced: 16px top, 8px bottom — строго кратно 8 */
+	margin: var(--space-4) 0 var(--space-2); /* ✅ Увеличен отступ: 32px сверху (после поиска), 16px снизу — строго кратно 8 */
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
@@ -109,7 +109,7 @@
 	display: flex;
 	gap: var(--space-2); /* 16px — кратно 8 */
 	flex-wrap: wrap;
-	margin-bottom: var(--space-4); /* 32px — кратно 8 */
+	margin-bottom: var(--space-6); /* ✅ Увеличен отступ перед карточками: 48px (было 32px) — строго кратно 8 */
 }
 
 /* Posts list display */
