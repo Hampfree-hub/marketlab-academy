@@ -262,7 +262,7 @@ strong, b {
 code {
   font-family: 'JetBrains Mono', 'Courier New', monospace;
   background: var(--nes-bg-secondary);
-  padding: 2px 6px;
+  padding: 0px 8px; /* ✅ Issue #52: Исправлено на кратно 8px (было 2px 6px) */
   border: 2px solid var(--nes-border-primary);
   font-size: 0.9em;
 }
