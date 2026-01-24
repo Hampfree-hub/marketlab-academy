@@ -32,27 +32,38 @@ const posts = await getCollection(collectionName).catch((err) => {
 	return [];
 });
 
-// 🔒 УБИРАЕМ ДУБЛИКАТЫ: если есть несколько записей с одинаковым id, оставляем только первую
+// 🔒 УБИРАЕМ ДУБЛИКАТЫ: нормализуем post.id и убираем дубликаты
+// Нормализуем post.id (убираем /index в конце, если есть)
+const normalizePostId = (id: string) => id.replace(/\/index$/, '').replace(/\/$/, '');
+
 const seenIds = new Set<string>();
 const uniquePosts = posts.filter(post => {
-	if (seenIds.has(post.id)) {
+	// Нормализуем ID перед проверкой
+	const normalizedId = normalizePostId(post.id);
+	
+	if (seenIds.has(normalizedId)) {
 		if (import.meta.env.DEV) {
-			console.warn(`[${lang}] Duplicate post ID detected: ${post.id}. Skipping duplicate.`);
+			console.warn(`[${lang}] Duplicate post ID detected: ${post.id} (normalized: ${normalizedId}). Skipping duplicate.`);
 		}
 		return false;
 	}
-	seenIds.add(post.id);
+	seenIds.add(normalizedId);
+	// Обновляем post.id на нормализованный для использования в href
+	post.id = normalizedId;
 	return true;
 });
 
 const sortedPosts = uniquePosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-// Debug: Log posts count
+// Debug: Log posts count (работает и в PROD через встроенный скрипт)
+const duplicateCount = posts.length - uniquePosts.length;
+if (duplicateCount > 0) {
+	console.warn(`[${lang}] Removed ${duplicateCount} duplicate posts (${posts.length} → ${uniquePosts.length})`);
+}
+// Логируем все post.id для диагностики (только в DEV)
 if (import.meta.env.DEV) {
 	console.log(`[${lang}] Loaded ${posts.length} posts, ${uniquePosts.length} unique posts for library`);
-	if (posts.length !== uniquePosts.length) {
-		console.warn(`[${lang}] Removed ${posts.length - uniquePosts.length} duplicate posts`);
-	}
+	console.log(`[${lang}] Post IDs:`, uniquePosts.map(p => p.id));
 }
 
 const categories = [
@@ -164,7 +175,7 @@ const breadcrumbItems = [
 				}
 
 				// Нормализуем данные для поиска (все в нижнем регистре, убираем лишние пробелы)
-				const postsData = Array.from(postCards).map(card => {
+				const postsDataRaw = Array.from(postCards).map(card => {
 					const title = (card.getAttribute('data-title') || '').toLowerCase().trim();
 					const description = (card.getAttribute('data-description') || '').toLowerCase().trim();
 					const tags = (card.getAttribute('data-tags') || '').toLowerCase().trim();
@@ -177,6 +188,23 @@ const breadcrumbItems = [
 						element: card
 					};
 				});
+				
+				// 🔒 ДЕДУПЛИКАЦИЯ НА КЛИЕНТЕ: убираем дубликаты по id (href)
+				const seenHrefs = new Set<string>();
+				const postsData = postsDataRaw.filter(p => {
+					if (seenHrefs.has(p.id)) {
+						console.warn(`[Client] Duplicate card detected: ${p.id}. Hiding duplicate.`);
+						// Скрываем дубликат сразу
+						if (p.element) p.element.style.display = 'none';
+						return false;
+					}
+					seenHrefs.add(p.id);
+					return true;
+				});
+				
+				if (postsDataRaw.length !== postsData.length) {
+					console.warn(`[Client] Removed ${postsDataRaw.length - postsData.length} duplicate cards from DOM`);
+				}
 
 				const fuse = new Fuse(postsData, {
 					keys: [
