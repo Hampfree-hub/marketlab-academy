@@ -1,0 +1,102 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { SITE_TITLE } from '../../consts';
+import { ui } from '../../i18n/ui';
+import { useTranslations, useTranslatedPath } from '../../i18n/utils';
+import '../../styles/components/blog-index.css';
+import '../../styles/components/blog-post.css';
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'ru' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } },
+  ];
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang as keyof typeof ui);
+const translatePath = useTranslatedPath(lang as keyof typeof ui);
+
+const breadcrumbItems = [
+  { label: t('nav.privacy') }
+];
+
+const content = {
+  ru: {
+    title: 'Политика конфиденциальности',
+    intro: 'MarketLab Academy уважает вашу конфиденциальность. Ниже — что мы собираем, зачем и какие у вас права.',
+    ga4Title: 'Google Analytics 4 и cookies',
+    ga4Body: 'Мы используем Google Analytics 4 (GA4) для понимания посещаемости и поведения на сайте. Данные обезличены: мы не передаём в GA email, телефоны, логины или иные персональные данные. Включена анонимизация IP. Срок хранения данных в GA4 — 2 месяца (настраивается в админке GA4). Используются cookies, необходимые для работы аналитики. Вы можете отказаться от cookies через баннер согласия на сайте («Отклонить»).',
+    dataTitle: 'Какие данные мы собираем',
+    dataBody: 'Агрегированные данные о просмотрах страниц, переходах по ссылкам, времени на сайте и скролле. Никаких форм с email/телефонами мы не отправляем в GA. UTM-метки в ссылках используются только для анализа источников трафика, без персональных данных.',
+    rightsTitle: 'Ваши права (GDPR)',
+    rightsBody: 'Вы имеете право на доступ к своим данным, исправление, удаление и ограничение обработки. При возникновении вопросов или жалоб — свяжитесь с нами (например, через Telegram) или обратитесь в надзорный орган по защите данных.',
+    contactTitle: 'Контакты',
+    contactBody: 'По вопросам конфиденциальности: Telegram @Hampfree.',
+  },
+  en: {
+    title: 'Privacy Policy',
+    intro: 'MarketLab Academy respects your privacy. Below is what we collect, why, and your rights.',
+    ga4Title: 'Google Analytics 4 and cookies',
+    ga4Body: 'We use Google Analytics 4 (GA4) to understand site traffic and behaviour. Data is anonymised: we do not send email, phone numbers, logins or other personal data to GA. IP anonymisation is enabled. Data retention in GA4 is set to 2 months (configurable in GA4 Admin). We use cookies necessary for analytics. You can opt out via the consent banner on the site (“Reject”).',
+    dataTitle: 'What data we collect',
+    dataBody: 'Aggregated data on page views, link clicks, time on site and scroll. We do not send any form data (email, phone) to GA. UTM parameters in links are used only to analyse traffic sources, without personal data.',
+    rightsTitle: 'Your rights (GDPR)',
+    rightsBody: 'You have the right to access, rectify, erase and restrict processing of your data. For questions or complaints, contact us (e.g. via Telegram) or your data protection supervisory authority.',
+    contactTitle: 'Contact',
+    contactBody: 'Privacy enquiries: Telegram @Hampfree.',
+  },
+  es: {
+    title: 'Política de privacidad',
+    intro: 'MarketLab Academy respeta tu privacidad. A continuación, qué recogemos, para qué y tus derechos.',
+    ga4Title: 'Google Analytics 4 y cookies',
+    ga4Body: 'Usamos Google Analytics 4 (GA4) para entender el tráfico y el comportamiento en el sitio. Los datos se anonimizan: no enviamos a GA email, teléfonos, logins ni otros datos personales. La anonimización de IP está activada. La retención de datos en GA4 es de 2 meses (configurable en GA4 Admin). Usamos cookies necesarias para la analítica. Puedes rechazarlas mediante el banner de consentimiento (“Rechazar”).',
+    dataTitle: 'Qué datos recogemos',
+    dataBody: 'Datos agregados sobre visitas a páginas, clics en enlaces, tiempo en el sitio y scroll. No enviamos datos de formularios (email, teléfono) a GA. Los parámetros UTM en enlaces se usan solo para analizar fuentes de tráfico, sin datos personales.',
+    rightsTitle: 'Tus derechos (RGPD)',
+    rightsBody: 'Tienes derecho de acceso, rectificación, supresión y limitación del tratamiento. Para dudas o reclamaciones, contacta con nosotros (p. ej. por Telegram) o con tu autoridad de protección de datos.',
+    contactTitle: 'Contacto',
+    contactBody: 'Consultas sobre privacidad: Telegram @Hampfree.',
+  },
+};
+const c = content[lang as keyof typeof content] || content.en;
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<BaseHead title={`${SITE_TITLE} - ${c.title}`} description={c.intro} />
+	</head>
+	<body>
+		<Header />
+		<main class="container">
+			<div class="library-header">
+				<Breadcrumb items={breadcrumbItems} />
+				<h1 class="mono responsive-title">> {c.title}</h1>
+			</div>
+			<article class="fade-in">
+				<section class="privacy-content prose" style="line-height: 1.8;">
+					<p>{c.intro}</p>
+					<h2>{c.ga4Title}</h2>
+					<p>{c.ga4Body}</p>
+					<h2>{c.dataTitle}</h2>
+					<p>{c.dataBody}</p>
+					<h2>{c.rightsTitle}</h2>
+					<p>{c.rightsBody}</p>
+					<h2>{c.contactTitle}</h2>
+					<p>{c.contactBody}</p>
+				</section>
+			</article>
+		</main>
+		<Footer />
+		<style>
+			.responsive-title { font-size: clamp(1.5rem, 5vw, 2.5rem); word-break: break-word; line-height: 1.2; }
+			.privacy-content { color: var(--color-text-primary); }
+			.privacy-content h2 { color: var(--nes-accent-green); font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+		</style>
+	</body>
+</html>

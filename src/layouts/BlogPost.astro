@@ -66,6 +66,69 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 <html lang={lang}>
 	<head>
 		<BaseHead title={title} description={description} metaOgTitle={metaOgTitle} image={displayImage} />
+		
+		{/* Schema.org Article */}
+		{pubDate && (() => {
+			const articleSchema = {
+				"@context": "https://schema.org",
+				"@type": "Article",
+				"headline": title,
+				"description": description,
+				"author": {
+					"@type": "Person",
+					"name": "Hampfree"
+				},
+				"datePublished": pubDate.toISOString(),
+				"dateModified": updatedDate ? updatedDate.toISOString() : pubDate.toISOString(),
+				"publisher": {
+					"@type": "Organization",
+					"name": "MarketLab Academy",
+					"url": Astro.site?.href || "https://marketlab-academy.org",
+					"logo": {
+						"@type": "ImageObject",
+						"url": new URL("/favicon-96x96.png", Astro.site || "https://marketlab-academy.org").href
+					}
+				},
+				"mainEntityOfPage": {
+					"@type": "WebPage",
+					"@id": Astro.url.href
+				}
+			};
+			
+			if (displayImage) {
+				articleSchema.image = {
+					"@type": "ImageObject",
+					"url": typeof displayImage === 'string' 
+						? new URL(displayImage, Astro.site || "https://marketlab-academy.org").href
+						: new URL(displayImage.src, Astro.site || "https://marketlab-academy.org").href
+				};
+			}
+			
+			return (
+				<script type="application/ld+json" set:html={JSON.stringify(articleSchema, null, 0)} />
+			);
+		})()}
+		
+		{/* Schema.org BreadcrumbList */}
+		{breadcrumbItems.length > 0 && (() => {
+			const breadcrumbSchema = {
+				"@context": "https://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": breadcrumbItems.map((item, index) => ({
+					"@type": "ListItem",
+					"position": index + 1,
+					"name": item.label,
+					"item": item.href 
+						? new URL(item.href, Astro.site || "https://marketlab-academy.org").href
+						: Astro.url.href
+				}))
+			};
+			
+			const breadcrumbJson = JSON.stringify(breadcrumbSchema, null, 0);
+			return (
+				<script type="application/ld+json" set:html={breadcrumbJson} />
+			);
+		})()}
 	</head>
 
 	<body>

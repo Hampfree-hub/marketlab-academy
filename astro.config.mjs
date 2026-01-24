@@ -9,4 +9,8 @@ export default defineConfig({
 	site: 'https://marketlab-academy.org',
 	base: '/',
 	integrations: [mdx(), sitemap()],
+	vite: {
+		// Кэш вне node_modules — меньше конфликтов с IDE/антивирусом на Windows
+		cacheDir: '.vite',
+	},
 });

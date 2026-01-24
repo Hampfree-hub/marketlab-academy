@@ -132,5 +132,25 @@ if (imageProp) {
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={ogImageUrl.href} />
 
+<!-- Schema.org Organization -->
+{(() => {
+	const orgSchema = {
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"name": "MarketLab Academy",
+		"url": Astro.site?.href || "https://marketlab-academy.org",
+		"logo": {
+			"@type": "ImageObject",
+			"url": new URL("/favicon-96x96.png", Astro.site || "https://marketlab-academy.org").href
+		},
+		"description": SITE_DESCRIPTION,
+		"sameAs": [
+			"https://t.me/Hampfree"
+		]
+	};
+	const orgJson = JSON.stringify(orgSchema, null, 0);
+	return <script type="application/ld+json" set:html={orgJson} />;
+})()}
+
 <!-- Analytics -->
 <Analytics />
