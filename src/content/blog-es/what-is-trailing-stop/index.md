@@ -15,6 +15,8 @@ En mercados cripto volátiles, salir bien puede importar tanto o más que entrar
 
 A diferencia de un stop fijo, que se queda en un nivel, el trailing stop se mueve con el precio. Cuando el activo sube, el stop sube. Si el precio gira, el stop se mantiene y acaba activándose, cerrando la operación cerca del máximo.
 
+![Gráfico del trailing stop: precio sube, stop sigue; beneficio bloqueado en el giro](./assets/what-is-trailing-stop.png)
+
 ## Cómo funciona el trailing stop
 
 La diferencia clave con un stop normal es el comportamiento: el stop fijo no se mueve; el trailing stop sigue al precio, manteniendo una distancia definida pero sin limitar la subida. Eso lo hace útil para gestión del riesgo y protección de beneficios.

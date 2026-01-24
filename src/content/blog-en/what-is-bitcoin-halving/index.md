@@ -27,6 +27,8 @@ The next reward halving is expected in 2028. The precise day can be estimated us
 
 ## Bitcoin Halving History by Year
 
+![Bitcoin halving history chart and miner reward changes by year](./assets/what-is-bitcoin-halving.png)
+
 ### First Halving (2012)
 
 This was Bitcoin’s first halving, when the asset still attracted far less attention than today. The block reward dropped from 50 BTC to 25 BTC.

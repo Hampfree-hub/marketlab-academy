@@ -27,6 +27,8 @@ El próximo halving de la recompensa se espera en 2028. El día concreto puede e
 
 ## Historia del halving de Bitcoin por años
 
+![Gráfico de la historia del halving de Bitcoin y cambios de recompensa de mineros](./assets/what-is-bitcoin-halving.png)
+
 ### Primer halving (2012)
 
 Fue el primero en la historia de Bitcoin, cuando el activo atraía mucho menos atención que hoy. La recompensa por bloque pasó de 50 BTC a 25 BTC.

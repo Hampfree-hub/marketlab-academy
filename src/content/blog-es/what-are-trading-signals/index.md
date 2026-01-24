@@ -35,6 +35,8 @@ Con el algo trading al alcance de más usuarios, las señales automáticas ganan
 
 La estructura suele ser similar y combina inputs técnicos y fundamentales.
 
+![Ejemplo de señal de trading en el gráfico: entrada, stop-loss y objetivos](./assets/what-are-trading-signals.png)
+
 ### Entrada, stop-loss y objetivos
 
 Una señal sólida define una entrada: precio o rango en el que abrir la posición. Se basa en el contexto de mercado, incluyendo datos técnicos y fundamentales.
