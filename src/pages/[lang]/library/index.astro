@@ -35,17 +35,26 @@ const posts = await getCollection(collectionName).catch((err) => {
 // 🔒 УБИРАЕМ ДУБЛИКАТЫ: нормализуем post.id и убираем дубликаты
 const normalizePostId = (id: string) => id.replace(/\/index$/, '').replace(/\/+$/, '');
 
-// Дедупликация: используем Set для отслеживания нормализованных ID
+// Дедупликация: по нормализованному ID И по title+category (двойная защита)
 const seenIds = new Set<string>();
+const seenTitleCategory = new Set<string>();
 const uniquePosts = posts.filter(post => {
 	const normalizedId = normalizePostId(post.id);
+	const titleCategoryKey = `${post.data.title}|${post.data.category || ''}`;
 	
+	// Проверяем по ID
 	if (seenIds.has(normalizedId)) {
 		return false;
 	}
 	
+	// Проверяем по title+category (на случай если ID одинаковые, но это разные объекты)
+	if (seenTitleCategory.has(titleCategoryKey)) {
+		return false;
+	}
+	
 	seenIds.add(normalizedId);
-	// Модифицируем post.id напрямую (это безопасно, т.к. мы работаем с копией из getCollection)
+	seenTitleCategory.add(titleCategoryKey);
+	// Модифицируем post.id напрямую
 	Object.assign(post, { id: normalizedId });
 	return true;
 });
