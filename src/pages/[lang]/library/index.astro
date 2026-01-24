@@ -35,24 +35,19 @@ const posts = await getCollection(collectionName).catch((err) => {
 // 🔒 УБИРАЕМ ДУБЛИКАТЫ: нормализуем post.id и убираем дубликаты
 const normalizePostId = (id: string) => id.replace(/\/index$/, '').replace(/\/+$/, '');
 
-// Дедупликация: используем Map для гарантированной уникальности
-const seenIds = new Map<string, number>();
-const uniquePosts: typeof posts = [];
-
-posts.forEach((post, index) => {
+// Дедупликация: используем Set для отслеживания нормализованных ID
+const seenIds = new Set<string>();
+const uniquePosts = posts.filter(post => {
 	const normalizedId = normalizePostId(post.id);
 	
 	if (seenIds.has(normalizedId)) {
-		// Дубликат - пропускаем
-		return;
+		return false;
 	}
 	
-	seenIds.set(normalizedId, index);
-	// Создаём новый объект с нормализованным id (не мутируем оригинал)
-	uniquePosts.push({
-		...post,
-		id: normalizedId
-	} as typeof post);
+	seenIds.add(normalizedId);
+	// Модифицируем post.id напрямую (это безопасно, т.к. мы работаем с копией из getCollection)
+	(post as any).id = normalizedId;
+	return true;
 });
 
 const sortedPosts = uniquePosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
@@ -197,13 +192,16 @@ const breadcrumbItems = [
 				// 🔒 ДЕДУПЛИКАЦИЯ НА КЛИЕНТЕ: убираем дубликаты по id (href)
 				const seenHrefs = new Set<string>();
 				const postsData = postsDataRaw.filter(p => {
-					if (seenHrefs.has(p.id)) {
-						console.warn(`[Client] Duplicate card detected: ${p.id}. Hiding duplicate.`);
-						// Скрываем дубликат сразу
-						if (p.element) p.element.style.display = 'none';
+					const href = p.id || '';
+					if (!href || seenHrefs.has(href)) {
+						if (href) {
+							console.warn(`[Client] Duplicate card detected: ${href}. Hiding duplicate.`);
+							// Скрываем дубликат сразу
+							if (p.element) p.element.style.display = 'none';
+						}
 						return false;
 					}
-					seenHrefs.add(p.id);
+					seenHrefs.add(href);
 					return true;
 				});
 				
