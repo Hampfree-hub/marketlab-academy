@@ -1,0 +1,135 @@
+---
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+const privacyHref = translatePath('privacy');
+---
+
+<div id="consent-banner-root" class="consent-banner-wrapper" aria-live="polite" hidden>
+	<div class="consent-banner nes-container is-rounded">
+		<p class="consent-message">{t('consent.message')}</p>
+		<div class="consent-actions">
+			<button type="button" class="consent-btn consent-accept nes-btn is-success" data-action="accept">
+				{t('consent.accept')}
+			</button>
+			<button type="button" class="consent-btn consent-reject nes-btn is-error" data-action="reject">
+				{t('consent.reject')}
+			</button>
+			<a href={privacyHref} class="consent-link nes-btn is-primary">{t('consent.privacy')}</a>
+		</div>
+	</div>
+</div>
+
+<script is:inline>
+	(function () {
+		var KEY = 'ga_consent';
+		var root = document.getElementById('consent-banner-root');
+		if (!root) return;
+
+		function hide() {
+			root.setAttribute('hidden', '');
+			root.classList.remove('consent-banner-visible');
+		}
+
+		function show() {
+			root.removeAttribute('hidden');
+			root.classList.add('consent-banner-visible');
+		}
+
+		function apply(choice) {
+			try {
+				localStorage.setItem(KEY, choice);
+			} catch (e) {}
+			if (typeof window.updateGAConsent === 'function') {
+				window.updateGAConsent(choice === 'granted');
+			}
+			hide();
+		}
+
+		function init() {
+			try {
+				var saved = localStorage.getItem(KEY);
+				if (saved === 'granted' || saved === 'denied') {
+					if (saved === 'granted' && typeof window.updateGAConsent === 'function') {
+						window.updateGAConsent(true);
+					}
+					hide();
+					return;
+				}
+			} catch (e) {}
+			show();
+		}
+
+		root.querySelectorAll('[data-action]').forEach(function (btn) {
+			btn.addEventListener('click', function () {
+				var action = btn.getAttribute('data-action');
+				apply(action === 'accept' ? 'granted' : 'denied');
+			});
+		});
+
+		init();
+		document.addEventListener('astro:page-load', init);
+	})();
+</script>
+
+<style>
+	.consent-banner-wrapper {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 9999;
+		padding: var(--space-4, 16px);
+		background: rgba(0, 0, 0, 0.85);
+		backdrop-filter: blur(4px);
+		transition: transform 0.2s ease, opacity 0.2s ease;
+	}
+	.consent-banner-wrapper[hidden] {
+		display: none !important;
+	}
+	.consent-banner-wrapper.consent-banner-visible {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	.consent-banner {
+		max-width: 720px;
+		margin: 0 auto;
+		padding: var(--space-4, 16px);
+	}
+	.consent-message {
+		margin: 0 0 var(--space-3, 12px);
+		font-size: 0.9rem;
+		line-height: 1.5;
+		color: var(--color-text-primary, #fff);
+	}
+	.consent-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-2, 8px);
+		align-items: center;
+	}
+	.consent-btn,
+	.consent-link {
+		font-family: 'Press Start 2P', monospace;
+		font-size: 0.65rem;
+		padding: var(--space-2, 8px) var(--space-3, 12px);
+		text-decoration: none;
+		border: 4px solid var(--nes-border-primary, #000);
+		cursor: pointer;
+		white-space: nowrap;
+	}
+	.consent-link {
+		margin-left: auto;
+	}
+	@media (max-width: 600px) {
+		.consent-actions {
+			flex-direction: column;
+			align-items: stretch;
+		}
+		.consent-link {
+			margin-left: 0;
+		}
+	}
+</style>

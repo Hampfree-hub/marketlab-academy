@@ -193,4 +193,4 @@ Bitcoin uses cryptography to protect transactions, making it secure. However, se
 
 **Where can I buy Bitcoin?**
 
-Bitcoin can be purchased through cryptocurrency exchanges, online exchangers, or payment systems. For more detailed information about working with cryptocurrency, study the [complete Bitcoin guide](/en/library/what-bitcoin-everything-you-need-know/).
+Bitcoin can be purchased through cryptocurrency exchanges, online exchangers, or payment systems. For more details, see [Bitcoin Basics](/en/library/bitcoin-basics/).

@@ -1,10 +1,12 @@
 ---
 import '../styles/components/footer.css';
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import ConsentBanner from './ConsentBanner.astro';
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
 
 const today = new Date();
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <footer class="main-footer">
@@ -51,7 +53,8 @@ const t = useTranslations(lang);
 		</div>
 
 		<div class="footer-bottom">
-			<p>&copy; {today.getFullYear()} MARKETLAB ACADEMY. SYSTEM_STABLE. {t('footer.rights')}</p>
+			<p>&copy; {today.getFullYear()} MARKETLAB ACADEMY. SYSTEM_STABLE. {t('footer.rights')} · <a href={translatePath('privacy')}>{t('nav.privacy')}</a></p>
 		</div>
 	</div>
 </footer>
+<ConsentBanner />

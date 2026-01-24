@@ -1,12 +1,10 @@
 ---
-// Google Analytics 4 Component
-// Добавляет аналитику на все страницы
-// Замените G-XXXXXXXXXX на ваш Measurement ID
+// Google Analytics 4 + Consent Mode v2 (GDPR-friendly)
+// ID из PUBLIC_GA_MEASUREMENT_ID (GitHub Secrets / .env)
 
 const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
 ---
 
-<!-- Google Analytics 4 -->
 {GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX' && (
 	<>
 		<script
@@ -15,32 +13,63 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXX
 		></script>
 		<script is:inline define:vars={{ gaId: GA_MEASUREMENT_ID }}>
 			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
+			function gtag() { dataLayer.push(arguments); }
 			gtag('js', new Date());
+
+			// Consent Mode v2: по умолчанию — отказ (GDPR)
+			gtag('consent', 'default', {
+				analytics_storage: 'denied',
+				ad_storage: 'denied',
+				ad_user_data: 'denied',
+				ad_personalization: 'denied',
+			});
+
 			gtag('config', gaId, {
 				anonymize_ip: true,
-				cookie_flags: 'SameSite=None;Secure',
+				cookie_flags: 'SameSite=Lax;Secure',
 			});
 
-			// Отслеживание кликов по ссылкам
-			document.addEventListener('click', (e) => {
-				const link = e.target.closest('a');
-				if (link && link.href) {
-					gtag('event', 'click', {
-						event_category: 'link',
-						event_label: link.href,
-						event_value: 1,
-						transport_type: 'beacon',
-					});
+			// Восстановить consent из localStorage (если пользователь уже выбрал)
+			(function () {
+				try {
+					var saved = localStorage.getItem('ga_consent');
+					if (saved === 'granted') {
+						gtag('consent', 'update', { analytics_storage: 'granted' });
+					}
+				} catch (e) {}
+			})();
+
+			// Глобально для баннера согласия
+			window.updateGAConsent = function (granted) {
+				gtag('consent', 'update', { analytics_storage: granted ? 'granted' : 'denied' });
+			};
+
+			// Клики по ссылкам — без PII: pathname (внутр.) или hostname (внеш.)
+			document.addEventListener('click', function (e) {
+				var link = e.target.closest('a');
+				if (!link || !link.href) return;
+				var label;
+				try {
+					var u = new URL(link.href);
+					if (u.origin === location.origin) {
+						label = u.pathname;
+					} else {
+						label = 'external:' + u.hostname;
+					}
+				} catch (err) {
+					label = 'link';
 				}
+				gtag('event', 'click', {
+					event_category: 'link',
+					event_label: label,
+					transport_type: 'beacon',
+				});
 			});
 
-			// Отслеживание времени на странице
-			let startTime = Date.now();
-			window.addEventListener('beforeunload', () => {
-				const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+			// Время на странице
+			var startTime = Date.now();
+			window.addEventListener('beforeunload', function () {
+				var timeOnPage = Math.round((Date.now() - startTime) / 1000);
 				if (timeOnPage > 0) {
 					gtag('event', 'time_on_page', {
 						event_category: 'engagement',
@@ -51,20 +80,19 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXX
 				}
 			});
 
-			// Отслеживание скролла (25%, 50%, 75%, 100%)
-			let scrollTracked = { 25: false, 50: false, 75: false, 100: false };
-			window.addEventListener('scroll', () => {
-				const scrollPercent = Math.round(
-					((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight) *
-						100
+			// Скролл 25/50/75/100%
+			var scrollTracked = { 25: false, 50: false, 75: false, 100: false };
+			window.addEventListener('scroll', function () {
+				var pct = Math.round(
+					((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight) * 100
 				);
-				[25, 50, 75, 100].forEach((threshold) => {
-					if (scrollPercent >= threshold && !scrollTracked[threshold]) {
-						scrollTracked[threshold] = true;
+				[25, 50, 75, 100].forEach(function (t) {
+					if (pct >= t && !scrollTracked[t]) {
+						scrollTracked[t] = true;
 						gtag('event', 'scroll', {
 							event_category: 'engagement',
-							event_label: `${threshold}%`,
-							value: threshold,
+							event_label: t + '%',
+							value: t,
 						});
 					}
 				});
@@ -72,4 +100,3 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXX
 		</script>
 	</>
 )}
-
