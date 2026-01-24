@@ -15,6 +15,8 @@ Un whitepaper es el documento oficial de un proyecto cripto que expone su diseñ
 
 ## Whitepaper frente a roadmap: qué revisar
 
+![Estructura del whitepaper y ejemplo de distribución de tokens en proyecto cripto](./assets/what-is-whitepaper.png)
+
 Aunque están relacionados, whitepaper y roadmap no son lo mismo. El whitepaper es un documento estratégico que define las bases del proyecto; el roadmap es un plan de acción con fases y plazos.
 
 Los inversores deben tener en cuenta ambos: el whitepaper ayuda a valorar la solidez técnica y la originalidad; el roadmap, la viabilidad de la ejecución y el cumplimiento de plazos.

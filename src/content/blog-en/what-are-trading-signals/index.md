@@ -35,6 +35,8 @@ As algo-trading becomes more accessible, automated signals are increasingly popu
 
 Most signals share a similar structure and mix technical and fundamental inputs.
 
+![Example trading signal on chart: entry, stop-loss and profit targets](./assets/what-are-trading-signals.png)
+
 ### Entry, Stop-Loss, and Targets
 
 A solid signal specifies an entry — a price or range at which to open a position. This is based on market context, including technical and fundamental data.

@@ -15,6 +15,8 @@ In volatile crypto markets, exiting well can matter more than entering well. One
 
 Unlike a fixed stop-loss, which stays at one level, the trailing stop moves with price. As the asset rises, the stop moves up. If price reverses, the stop holds and eventually triggers, closing the trade near the high.
 
+![Trailing stop chart: price rises, stop follows; profit locked in on reversal](./assets/what-is-trailing-stop.png)
+
 ## How a Trailing Stop Works
 
 The main difference from a regular stop is behaviour: a normal stop is fixed; a trailing stop moves with price, keeping a defined distance but not limiting further upside. That makes it useful for risk management and profit protection.
