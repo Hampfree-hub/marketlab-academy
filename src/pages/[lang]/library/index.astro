@@ -31,11 +31,28 @@ const posts = await getCollection(collectionName).catch((err) => {
 	console.error(`Error loading posts for ${collectionName}:`, err);
 	return [];
 });
-const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// 🔒 УБИРАЕМ ДУБЛИКАТЫ: если есть несколько записей с одинаковым id, оставляем только первую
+const seenIds = new Set<string>();
+const uniquePosts = posts.filter(post => {
+	if (seenIds.has(post.id)) {
+		if (import.meta.env.DEV) {
+			console.warn(`[${lang}] Duplicate post ID detected: ${post.id}. Skipping duplicate.`);
+		}
+		return false;
+	}
+	seenIds.add(post.id);
+	return true;
+});
+
+const sortedPosts = uniquePosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 // Debug: Log posts count
 if (import.meta.env.DEV) {
-	console.log(`[${lang}] Loaded ${posts.length} posts for library`);
+	console.log(`[${lang}] Loaded ${posts.length} posts, ${uniquePosts.length} unique posts for library`);
+	if (posts.length !== uniquePosts.length) {
+		console.warn(`[${lang}] Removed ${posts.length - uniquePosts.length} duplicate posts`);
+	}
 }
 
 const categories = [
@@ -178,7 +195,7 @@ const breadcrumbItems = [
 					shouldSort: true
 				});
 
-				let activeCategory = null;
+				let activeCategory: string | null = null;
 				let searchTerm = '';
 				let currentPage = 1;
 				const postsPerPage = 6;
@@ -241,7 +258,7 @@ const breadcrumbItems = [
 					if (noResults) noResults.style.display = filtered.length === 0 ? 'block' : 'none';
 				}
 
-				function renderPagination(totalPages) {
+				function renderPagination(totalPages: number) {
 					const container = document.getElementById('pagination');
 					if (!container) return;
 					
