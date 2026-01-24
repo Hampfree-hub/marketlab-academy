@@ -31,7 +31,26 @@ const posts = await getCollection(collectionName).catch((err) => {
 	console.error(`Error loading posts for ${collectionName}:`, err);
 	return [];
 });
-const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// 🔒 ДЕДУПЛИКАЦИЯ: нормализуем post.id и убираем дубликаты (как в library/index.astro)
+const normalizePostId = (id: string) => id.replace(/\/index$/, '').replace(/\/+$/, '');
+const seenIds = new Set<string>();
+const seenTitleCategory = new Set<string>();
+const uniquePosts = posts.filter(post => {
+	const normalizedId = normalizePostId(post.id);
+	const titleCategoryKey = `${post.data.title}|${post.data.category || ''}`;
+	
+	if (seenIds.has(normalizedId) || seenTitleCategory.has(titleCategoryKey)) {
+		return false;
+	}
+	
+	seenIds.add(normalizedId);
+	seenTitleCategory.add(titleCategoryKey);
+	Object.assign(post, { id: normalizedId });
+	return true;
+});
+
+const sortedPosts = uniquePosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const featuredPosts = sortedPosts.slice(0, 4);
 
 // Debug: Log posts count
