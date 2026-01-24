@@ -46,7 +46,7 @@ const uniquePosts = posts.filter(post => {
 	
 	seenIds.add(normalizedId);
 	// Модифицируем post.id напрямую (это безопасно, т.к. мы работаем с копией из getCollection)
-	(post as any).id = normalizedId;
+	Object.assign(post, { id: normalizedId });
 	return true;
 });
 
@@ -193,12 +193,12 @@ const breadcrumbItems = [
 				const seenHrefs = new Set<string>();
 				const postsData = postsDataRaw.filter(p => {
 					const href = p.id || '';
-					if (!href || seenHrefs.has(href)) {
-						if (href) {
-							console.warn(`[Client] Duplicate card detected: ${href}. Hiding duplicate.`);
-							// Скрываем дубликат сразу
-							if (p.element) p.element.style.display = 'none';
-						}
+					if (!href) return false;
+					
+					if (seenHrefs.has(href)) {
+						console.warn(`[Client] Duplicate card detected: ${href}. Hiding duplicate.`);
+						// Скрываем дубликат сразу
+						if (p.element) p.element.style.display = 'none';
 						return false;
 					}
 					seenHrefs.add(href);
