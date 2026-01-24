@@ -8,16 +8,18 @@ const privacyHref = translatePath('privacy');
 ---
 
 <div id="consent-banner-root" class="consent-banner-wrapper" aria-live="polite" hidden>
-	<div class="consent-banner nes-container is-rounded">
-		<p class="consent-message">{t('consent.message')}</p>
+	<div class="consent-banner">
+		<p class="consent-message">
+			{t('consent.message')}
+			<a href={privacyHref} class="consent-link">{t('consent.privacy')}</a>
+		</p>
 		<div class="consent-actions">
-			<button type="button" class="consent-btn consent-accept nes-btn is-success" data-action="accept">
+			<button type="button" class="consent-btn consent-accept" data-action="accept">
 				{t('consent.accept')}
 			</button>
-			<button type="button" class="consent-btn consent-reject nes-btn is-error" data-action="reject">
+			<button type="button" class="consent-btn consent-reject" data-action="reject">
 				{t('consent.reject')}
 			</button>
-			<a href={privacyHref} class="consent-link nes-btn is-primary">{t('consent.privacy')}</a>
 		</div>
 	</div>
 </div>
@@ -75,15 +77,16 @@ const privacyHref = translatePath('privacy');
 </script>
 
 <style>
+	/* 8pt grid, NES tokens — base.css + tokens.css */
 	.consent-banner-wrapper {
 		position: fixed;
 		bottom: 0;
 		left: 0;
 		right: 0;
 		z-index: 9999;
-		padding: var(--space-4, 16px);
-		background: rgba(0, 0, 0, 0.85);
-		backdrop-filter: blur(4px);
+		padding: var(--space-2);
+		background: var(--nes-bg-secondary);
+		border-top: 4px solid var(--nes-border-primary);
 		transition: transform 0.2s ease, opacity 0.2s ease;
 	}
 	.consent-banner-wrapper[hidden] {
@@ -94,42 +97,62 @@ const privacyHref = translatePath('privacy');
 		opacity: 1;
 	}
 	.consent-banner {
-		max-width: 720px;
+		max-width: var(--nes-max-width);
 		margin: 0 auto;
-		padding: var(--space-4, 16px);
+		padding: var(--space-3) var(--nes-padding-horizontal);
 	}
 	.consent-message {
-		margin: 0 0 var(--space-3, 12px);
-		font-size: 0.9rem;
+		margin: 0 0 var(--space-3);
+		font-size: 0.85rem;
 		line-height: 1.5;
-		color: var(--color-text-primary, #fff);
+		color: var(--nes-text-primary);
+		font-family: 'JetBrains Mono', monospace;
+	}
+	.consent-message .consent-link {
+		color: var(--nes-accent-green);
+		text-decoration: underline;
+		font-family: inherit;
+	}
+	.consent-message .consent-link:hover {
+		color: var(--nes-accent-green-dark);
 	}
 	.consent-actions {
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--space-2, 8px);
+		gap: var(--space-2);
 		align-items: center;
 	}
-	.consent-btn,
-	.consent-link {
+	.consent-btn {
 		font-family: 'Press Start 2P', monospace;
 		font-size: 0.65rem;
-		padding: var(--space-2, 8px) var(--space-3, 12px);
-		text-decoration: none;
-		border: 4px solid var(--nes-border-primary, #000);
+		padding: var(--space-2) var(--space-3);
+		border: 4px solid var(--nes-border-primary);
 		cursor: pointer;
 		white-space: nowrap;
+		transition: none;
 	}
-	.consent-link {
-		margin-left: auto;
+	.consent-btn.consent-accept {
+		background: var(--nes-accent-green);
+		color: var(--nes-bg-primary);
+		border-color: var(--nes-accent-green);
+	}
+	.consent-btn.consent-accept:hover {
+		background: var(--nes-accent-green-dark);
+		border-color: var(--nes-accent-green-dark);
+	}
+	.consent-btn.consent-reject {
+		background: var(--nes-bg-secondary);
+		color: var(--nes-text-primary);
+		border-color: var(--nes-border-primary);
+	}
+	.consent-btn.consent-reject:hover {
+		background: var(--nes-bg-tertiary);
+		border-color: var(--nes-border-secondary);
 	}
 	@media (max-width: 600px) {
-		.consent-actions {
-			flex-direction: column;
-			align-items: stretch;
-		}
-		.consent-link {
-			margin-left: 0;
-		}
+		.consent-banner { padding: var(--space-2) var(--space-2); }
+		.consent-message { font-size: 0.8rem; margin-bottom: var(--space-2); }
+		.consent-actions { flex-direction: row; gap: var(--space-2); }
+		.consent-btn { font-size: 0.6rem; padding: var(--space-1) var(--space-2); }
 	}
 </style>

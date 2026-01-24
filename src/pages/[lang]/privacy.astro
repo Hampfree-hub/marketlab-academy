@@ -36,7 +36,9 @@ const content = {
     rightsTitle: 'Ваши права (GDPR)',
     rightsBody: 'Вы имеете право на доступ к своим данным, исправление, удаление и ограничение обработки. При возникновении вопросов или жалоб — свяжитесь с нами (например, через Telegram) или обратитесь в надзорный орган по защите данных.',
     contactTitle: 'Контакты',
-    contactBody: 'По вопросам конфиденциальности: Telegram @Hampfree.',
+    contactBodyBefore: 'По вопросам конфиденциальности: ',
+    contactLink: 'https://t.me/Hampfree',
+    contactLabel: 'Telegram @Hampfree',
   },
   en: {
     title: 'Privacy Policy',
@@ -48,7 +50,9 @@ const content = {
     rightsTitle: 'Your rights (GDPR)',
     rightsBody: 'You have the right to access, rectify, erase and restrict processing of your data. For questions or complaints, contact us (e.g. via Telegram) or your data protection supervisory authority.',
     contactTitle: 'Contact',
-    contactBody: 'Privacy enquiries: Telegram @Hampfree.',
+    contactBodyBefore: 'Privacy enquiries: ',
+    contactLink: 'https://t.me/Hampfree',
+    contactLabel: 'Telegram @Hampfree',
   },
   es: {
     title: 'Política de privacidad',
@@ -60,7 +64,9 @@ const content = {
     rightsTitle: 'Tus derechos (RGPD)',
     rightsBody: 'Tienes derecho de acceso, rectificación, supresión y limitación del tratamiento. Para dudas o reclamaciones, contacta con nosotros (p. ej. por Telegram) o con tu autoridad de protección de datos.',
     contactTitle: 'Contacto',
-    contactBody: 'Consultas sobre privacidad: Telegram @Hampfree.',
+    contactBodyBefore: 'Consultas sobre privacidad: ',
+    contactLink: 'https://t.me/Hampfree',
+    contactLabel: 'Telegram @Hampfree',
   },
 };
 const c = content[lang as keyof typeof content] || content.en;
@@ -88,7 +94,7 @@ const c = content[lang as keyof typeof content] || content.en;
 					<h2>{c.rightsTitle}</h2>
 					<p>{c.rightsBody}</p>
 					<h2>{c.contactTitle}</h2>
-					<p>{c.contactBody}</p>
+					<p>{c.contactBodyBefore}<a href={c.contactLink} target="_blank" rel="noopener noreferrer" class="privacy-contact-link">{c.contactLabel}</a>.</p>
 				</section>
 			</article>
 		</main>
@@ -97,6 +103,8 @@ const c = content[lang as keyof typeof content] || content.en;
 			.responsive-title { font-size: clamp(1.5rem, 5vw, 2.5rem); word-break: break-word; line-height: 1.2; }
 			.privacy-content { color: var(--color-text-primary); }
 			.privacy-content h2 { color: var(--nes-accent-green); font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+			.privacy-contact-link { color: var(--nes-accent-green); text-decoration: underline; }
+			.privacy-contact-link:hover { color: var(--nes-accent-green-dark); }
 		</style>
 	</body>
 </html>
