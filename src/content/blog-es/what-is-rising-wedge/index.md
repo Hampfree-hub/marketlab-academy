@@ -13,6 +13,8 @@ En análisis técnico, la cuña alcista es uno de los patrones bajistas principa
 
 Una cuña alcista es un patrón formado por dos líneas de tendencia convergentes, ambas al alza. La línea de soporte (límite inferior) tiene mayor pendiente que la de resistencia (límite superior). Eso indica menor impulso alcista y posible agotamiento del movimiento.
 
+![Gráfico de cuña alcista con líneas de soporte y resistencia en mercado de criptomonedas](./assets/what-is-rising-wedge.png)
+
 Rasgos visuales principales:
 
 - Estrechamiento gradual del rango de precios.

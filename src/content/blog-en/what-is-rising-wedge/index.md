@@ -13,6 +13,8 @@ In technical analysis, the rising wedge is one of the main bearish patterns that
 
 A rising wedge is a chart pattern formed by two converging trendlines, both sloping up. The support line (lower boundary) has a steeper slope than the resistance line (upper boundary). This indicates slowing upward momentum and possible exhaustion of the bullish move.
 
+![Rising wedge chart pattern with support and resistance lines on cryptocurrency market](./assets/what-is-rising-wedge.png)
+
 Main visual traits:
 
 - Gradual narrowing of the price range.
