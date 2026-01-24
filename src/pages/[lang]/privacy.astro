@@ -36,9 +36,9 @@ const content = {
     rightsTitle: 'Ваши права (GDPR)',
     rightsBody: 'Вы имеете право на доступ к своим данным, исправление, удаление и ограничение обработки. При возникновении вопросов или жалоб — свяжитесь с нами (например, через Telegram) или обратитесь в надзорный орган по защите данных.',
     contactTitle: 'Контакты',
-    contactBodyBefore: 'По вопросам конфиденциальности: ',
+    contactText: 'По вопросам конфиденциальности — Telegram: ',
     contactLink: 'https://t.me/Hampfree',
-    contactLabel: 'Telegram @Hampfree',
+    contactLabel: '@Hampfree',
   },
   en: {
     title: 'Privacy Policy',
@@ -50,9 +50,9 @@ const content = {
     rightsTitle: 'Your rights (GDPR)',
     rightsBody: 'You have the right to access, rectify, erase and restrict processing of your data. For questions or complaints, contact us (e.g. via Telegram) or your data protection supervisory authority.',
     contactTitle: 'Contact',
-    contactBodyBefore: 'Privacy enquiries: ',
+    contactText: 'Privacy enquiries — Telegram: ',
     contactLink: 'https://t.me/Hampfree',
-    contactLabel: 'Telegram @Hampfree',
+    contactLabel: '@Hampfree',
   },
   es: {
     title: 'Política de privacidad',
@@ -94,7 +94,7 @@ const c = content[lang as keyof typeof content] || content.en;
 					<h2>{c.rightsTitle}</h2>
 					<p>{c.rightsBody}</p>
 					<h2>{c.contactTitle}</h2>
-					<p>{c.contactBodyBefore}<a href={c.contactLink} target="_blank" rel="noopener noreferrer" class="privacy-contact-link">{c.contactLabel}</a>.</p>
+					<p>{c.contactText}<a href={c.contactLink} target="_blank" rel="noopener noreferrer" class="privacy-contact-link">{c.contactLabel}</a></p>
 				</section>
 			</article>
 		</main>
