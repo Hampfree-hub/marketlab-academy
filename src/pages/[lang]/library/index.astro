@@ -33,37 +33,42 @@ const posts = await getCollection(collectionName).catch((err) => {
 });
 
 // 🔒 УБИРАЕМ ДУБЛИКАТЫ: нормализуем post.id и убираем дубликаты
-// Нормализуем post.id (убираем /index в конце, если есть)
-const normalizePostId = (id: string) => id.replace(/\/index$/, '').replace(/\/$/, '');
+const normalizePostId = (id: string) => id.replace(/\/index$/, '').replace(/\/+$/, '');
 
-const seenIds = new Set<string>();
-const uniquePosts = posts.filter(post => {
-	// Нормализуем ID перед проверкой
+// Дедупликация: используем Map для гарантированной уникальности
+const seenIds = new Map<string, number>();
+const uniquePosts: typeof posts = [];
+
+posts.forEach((post, index) => {
 	const normalizedId = normalizePostId(post.id);
 	
 	if (seenIds.has(normalizedId)) {
-		if (import.meta.env.DEV) {
-			console.warn(`[${lang}] Duplicate post ID detected: ${post.id} (normalized: ${normalizedId}). Skipping duplicate.`);
-		}
-		return false;
+		// Дубликат - пропускаем
+		return;
 	}
-	seenIds.add(normalizedId);
-	// Обновляем post.id на нормализованный для использования в href
-	post.id = normalizedId;
-	return true;
+	
+	seenIds.set(normalizedId, index);
+	// Создаём новый объект с нормализованным id (не мутируем оригинал)
+	uniquePosts.push({
+		...post,
+		id: normalizedId
+	} as typeof post);
 });
 
 const sortedPosts = uniquePosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-// Debug: Log posts count (работает и в PROD через встроенный скрипт)
+// Debug: Log posts count
 const duplicateCount = posts.length - uniquePosts.length;
 if (duplicateCount > 0) {
 	console.warn(`[${lang}] Removed ${duplicateCount} duplicate posts (${posts.length} → ${uniquePosts.length})`);
-}
-// Логируем все post.id для диагностики (только в DEV)
-if (import.meta.env.DEV) {
-	console.log(`[${lang}] Loaded ${posts.length} posts, ${uniquePosts.length} unique posts for library`);
-	console.log(`[${lang}] Post IDs:`, uniquePosts.map(p => p.id));
+	// Логируем дубликаты для диагностики
+	const allIds = posts.map(p => ({ original: p.id, normalized: normalizePostId(p.id) }));
+	const duplicates = allIds.filter((item, idx, arr) => 
+		arr.findIndex(i => normalizePostId(i.original) === item.normalized) !== idx
+	);
+	if (duplicates.length > 0) {
+		console.warn(`[${lang}] Duplicate IDs found:`, duplicates);
+	}
 }
 
 const categories = [
