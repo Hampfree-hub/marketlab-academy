@@ -10,10 +10,10 @@ export async function GET(context) {
 		getCollection('blog-es').catch(() => []),
 	]);
 	
-	// Combine all posts and sort by date
-	const allPosts = [...postsRu, ...postsEn, ...postsEs].sort(
-		(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-	);
+	// Combine all posts, exclude draft articles, and sort by date
+	const allPosts = [...postsRu, ...postsEn, ...postsEs]
+		.filter(post => !post.data.draft) // Исключаем draft статьи
+		.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 	
 	return rss({
 		title: SITE_TITLE,

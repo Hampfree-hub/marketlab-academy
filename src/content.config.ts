@@ -13,6 +13,7 @@ const blogSchema = ({ image }) =>
 		category: z.string().optional(),
 		tags: z.array(z.string()).optional(),
 		pinned: z.boolean().optional(),
+		draft: z.boolean().optional(), // Если true, статья не попадает в прод
 		heroImage: image().optional(), // Оставляем для совместимости со старыми темами
 	});
 

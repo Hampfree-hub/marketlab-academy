@@ -137,9 +137,9 @@ export function ogImagesIntegration(): AstroIntegration {
 				]);
 
 				const allPosts = [
-					...postsRu.map(p => ({ ...p, lang: 'ru' })),
-					...postsEn.map(p => ({ ...p, lang: 'en' })),
-					...postsEs.map(p => ({ ...p, lang: 'es' })),
+					...postsRu.filter(p => !p.data.draft).map(p => ({ ...p, lang: 'ru' })),
+					...postsEn.filter(p => !p.data.draft).map(p => ({ ...p, lang: 'en' })),
+					...postsEs.filter(p => !p.data.draft).map(p => ({ ...p, lang: 'es' })),
 				];
 
 				// Generate OG images for each post

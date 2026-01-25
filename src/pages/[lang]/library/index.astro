@@ -37,7 +37,9 @@ const posts = await getCollection(collectionName).catch((err) => {
 const normalizePostId = (id: string) => id.replace(/\/index$/, '').replace(/\/+$/, '');
 
 // Временные папки article-1, article-2, … — не в прод и не в списке
-const excludeTemp = (post: { id: string }) => !isTempArticle(post.id);
+// Draft статьи также исключаются
+const excludeTemp = (post: { id: string; data: { draft?: boolean } }) => 
+	!isTempArticle(post.id) && !post.data.draft;
 
 // Дедупликация: по нормализованному ID И по title+category (двойная защита)
 const seenIds = new Set<string>();

@@ -13,6 +13,7 @@ export async function getStaticPaths() {
 		
 		for (const post of posts) {
 			if (isTempArticle(post.id)) continue;
+			if (post.data.draft) continue; // Пропускаем draft статьи
 			paths.push({
 				params: { lang, slug: post.id },
 				props: post,

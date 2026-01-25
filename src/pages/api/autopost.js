@@ -20,7 +20,8 @@ export async function POST({ request }) {
       getCollection('blog-es').catch(() => []),
     ]);
     
-    const allPosts = [...postsRu, ...postsEn, ...postsEs];
+    const allPosts = [...postsRu, ...postsEn, ...postsEs]
+      .filter(post => !post.data.draft); // Исключаем draft статьи
     const latestPost = allPosts.sort((a, b) =>
       new Date(b.data.pubDate) - new Date(a.data.pubDate)
     )[0];
