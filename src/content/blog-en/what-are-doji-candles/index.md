@@ -27,6 +27,8 @@ Doji belong to the family of reversal and continuation patterns. They are often 
 
 There are several variants of this pattern. Each carries a different shade of signal depending on the shape and position of the wicks.
 
+![Doji types: standard, long-legged, dragonfly, gravestone, four-price](./assets/doji-types.png)
+
 ### Standard Doji
 
 Short wicks and a minimal body. Indicates consolidation and temporary balance between supply and demand. Often appears before key levels or news when participants are on the sidelines. By itself it rarely gives a clear signal; its value increases when combined with context and follow-up candles.

@@ -27,6 +27,8 @@ Las doji pertenecen a la familia de patrones de reversión y continuación. Se c
 
 Hay varias variantes. Cada una aporta un matiz de señal según la forma y la posición de las mechas.
 
+![Tipos de doji: estándar, piernas largas, libélula, lápida, cuatro precios](./assets/doji-types.png)
+
 ### Doji estándar
 
 Mechas cortas y cuerpo mínimo. Indica consolidación y equilibrio temporal entre oferta y demanda. Suele aparecer antes de niveles clave o noticias, cuando los participantes esperan. Por sí sola rara vez da una señal clara; gana valor en combinación con contexto y velas siguientes.
