@@ -13,6 +13,10 @@
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
+/** Временные папки article-1, article-2, … — только для структуры, не в прод и не в списках */
+export const TEMP_ARTICLE_SLUG = /^article-\d+$/;
+export const isTempArticle = (id: string) => TEMP_ARTICLE_SLUG.test(id);
+
 // Helper: получить коллекцию по языку
 function getCollectionByLang(lang: 'ru' | 'en' | 'es'): 'blog-ru' | 'blog-en' | 'blog-es' {
 	return `blog-${lang}` as 'blog-ru' | 'blog-en' | 'blog-es';
@@ -30,7 +34,9 @@ export async function getPosts(): Promise<CollectionEntry<'blog-ru' | 'blog-en' 
 	const enPosts = await getCollection('blog-en');
 	const esPosts = await getCollection('blog-es');
 	
-	const allPosts = [...ruPosts, ...enPosts, ...esPosts];
+	const allPosts = [...ruPosts, ...enPosts, ...esPosts].filter(
+		post => !isTempArticle(post.id)
+	);
 	
 	return allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 }
@@ -116,8 +122,10 @@ export async function getRelatedPosts(
 	
 	const posts = await getCollection(collectionName);
 	
-	// Исключаем текущую статью
-	const filteredPosts = posts.filter(post => post.id !== currentPostId);
+	// Исключаем текущую статью и временные article-*
+	const filteredPosts = posts.filter(
+		post => post.id !== currentPostId && !isTempArticle(post.id)
+	);
 	
 	// Если есть категория, пытаемся найти статьи из той же категории
 	if (category) {

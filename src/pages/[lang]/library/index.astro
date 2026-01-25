@@ -12,6 +12,7 @@ import PixelIcon from '../../../components/ui/PixelIcon.astro';
 import '../../../styles/components/blog-index.css';
 import { ui } from '../../../i18n/ui';
 import { useTranslations, useTranslatedPath } from '../../../i18n/utils';
+import { isTempArticle } from '../../../utils/blog';
 
 export async function getStaticPaths() {
   return [
@@ -35,29 +36,26 @@ const posts = await getCollection(collectionName).catch((err) => {
 // 🔒 УБИРАЕМ ДУБЛИКАТЫ: нормализуем post.id и убираем дубликаты
 const normalizePostId = (id: string) => id.replace(/\/index$/, '').replace(/\/+$/, '');
 
+// Временные папки article-1, article-2, … — не в прод и не в списке
+const excludeTemp = (post: { id: string }) => !isTempArticle(post.id);
+
 // Дедупликация: по нормализованному ID И по title+category (двойная защита)
 const seenIds = new Set<string>();
 const seenTitleCategory = new Set<string>();
-const uniquePosts = posts.filter(post => {
-	const normalizedId = normalizePostId(post.id);
-	const titleCategoryKey = `${post.data.title}|${post.data.category || ''}`;
-	
-	// Проверяем по ID
-	if (seenIds.has(normalizedId)) {
-		return false;
-	}
-	
-	// Проверяем по title+category (на случай если ID одинаковые, но это разные объекты)
-	if (seenTitleCategory.has(titleCategoryKey)) {
-		return false;
-	}
-	
-	seenIds.add(normalizedId);
-	seenTitleCategory.add(titleCategoryKey);
-	// Модифицируем post.id напрямую
-	Object.assign(post, { id: normalizedId });
-	return true;
-});
+const uniquePosts = posts
+	.filter(excludeTemp)
+	.filter(post => {
+		const normalizedId = normalizePostId(post.id);
+		const titleCategoryKey = `${post.data.title}|${post.data.category || ''}`;
+		
+		if (seenIds.has(normalizedId)) return false;
+		if (seenTitleCategory.has(titleCategoryKey)) return false;
+		
+		seenIds.add(normalizedId);
+		seenTitleCategory.add(titleCategoryKey);
+		Object.assign(post, { id: normalizedId });
+		return true;
+	});
 
 const sortedPosts = uniquePosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
