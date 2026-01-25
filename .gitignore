@@ -76,8 +76,15 @@ ARTICLES_OPTIMIZATION_STATUS.md
 ARTICLES_OPTIMIZATION_PLAN*.md
 OPTIMIZATION_GUIDELINES_SUMMARY.md
 IMAGES_REQUIRED.md
+IMAGES_MECHANICS.md
 docs/REPO_SYNC_AND_AUDIT.md
 .analysys_and_optimization
+
+# Документация — ТОЛЬКО в приватном репо (README, механика картинок)
+docs/README.md
+
+# Временные папки статей (article-1, article-2, …) — только для локальной структуры, НЕ в прод!
+src/content/**/article-[0-9]*/
 
 # Локальные архивы (НЕ отправлять в GitHub!)
 **/_archive/

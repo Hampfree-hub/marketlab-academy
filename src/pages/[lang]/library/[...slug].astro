@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import Layout from '../../../layouts/BlogPost.astro';
-import { estimateReadTime } from '../../../utils/blog';
+import { estimateReadTime, isTempArticle } from '../../../utils/blog';
 
 export async function getStaticPaths() {
 	const langs = ['ru', 'en', 'es'];
@@ -12,6 +12,7 @@ export async function getStaticPaths() {
 		const posts = await getCollection(collectionName).catch(() => []);
 		
 		for (const post of posts) {
+			if (isTempArticle(post.id)) continue;
 			paths.push({
 				params: { lang, slug: post.id },
 				props: post,
