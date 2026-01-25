@@ -79,6 +79,8 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 	.banner-full {
 		aspect-ratio: 3/1;
 		min-height: 200px;
+		/* Увеличиваем минимальную высоту для размещения полного описания */
+		min-height: 250px;
 	}
 
 	.banner-inner {
@@ -132,9 +134,27 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		line-height: 1.5;
 	}
 
+	/* Для полных баннеров (на странице статьи) убираем ограничение строк */
+	.banner-full .banner-subtitle {
+		-webkit-line-clamp: unset !important;
+		display: block !important;
+		overflow: visible !important;
+		text-overflow: clip !important;
+	}
+
 	.banner-subtitle.text-xs { font-size: 0.6rem; -webkit-line-clamp: 4; }
 	.banner-subtitle.text-sm { font-size: 0.7rem; -webkit-line-clamp: 3; }
 	.banner-subtitle.text-base { font-size: 0.85rem; -webkit-line-clamp: 2; }
+	
+	/* Для полных баннеров убираем ограничения независимо от размера текста */
+	.banner-full .banner-subtitle.text-xs,
+	.banner-full .banner-subtitle.text-sm,
+	.banner-full .banner-subtitle.text-base {
+		-webkit-line-clamp: unset !important;
+		display: block !important;
+		overflow: visible !important;
+		text-overflow: clip !important;
+	}
 
 	.banner-preview .banner-subtitle {
 		-webkit-line-clamp: 3;
