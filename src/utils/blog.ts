@@ -25,9 +25,7 @@ function getCollectionByLang(lang: 'ru' | 'en' | 'es'): 'blog-ru' | 'blog-en' | 
 /**
  * Получить все посты из коллекции blog
  * Сортирует по дате (новые сначала)
- * 
- * Note: Astro Content Collections не поддерживает draft в schema,
- * поэтому фильтрация по draft не применяется
+ * Исключает draft статьи и временные article-*
  */
 export async function getPosts(): Promise<CollectionEntry<'blog-ru' | 'blog-en' | 'blog-es'>[]> {
 	const ruPosts = await getCollection('blog-ru');
@@ -35,7 +33,7 @@ export async function getPosts(): Promise<CollectionEntry<'blog-ru' | 'blog-en' 
 	const esPosts = await getCollection('blog-es');
 	
 	const allPosts = [...ruPosts, ...enPosts, ...esPosts].filter(
-		post => !isTempArticle(post.id)
+		post => !isTempArticle(post.id) && !post.data.draft
 	);
 	
 	return allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
@@ -122,9 +120,9 @@ export async function getRelatedPosts(
 	
 	const posts = await getCollection(collectionName);
 	
-	// Исключаем текущую статью и временные article-*
+	// Исключаем текущую статью, временные article-* и draft статьи
 	const filteredPosts = posts.filter(
-		post => post.id !== currentPostId && !isTempArticle(post.id)
+		post => post.id !== currentPostId && !isTempArticle(post.id) && !post.data.draft
 	);
 	
 	// Если есть категория, пытаемся найти статьи из той же категории

@@ -37,6 +37,9 @@ const normalizePostId = (id: string) => id.replace(/\/index$/, '').replace(/\/+$
 const seenIds = new Set<string>();
 const seenTitleCategory = new Set<string>();
 const uniquePosts = posts.filter(post => {
+	// Исключаем draft статьи
+	if (post.data.draft) return false;
+	
 	const normalizedId = normalizePostId(post.id);
 	const titleCategoryKey = `${post.data.title}|${post.data.category || ''}`;
 	
