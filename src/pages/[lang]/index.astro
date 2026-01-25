@@ -50,7 +50,14 @@ const uniquePosts = posts.filter(post => {
 	return true;
 });
 
-const sortedPosts = uniquePosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+// ПОСЛЕДНИЕ_СТАТЬИ: pinned первыми, затем по pubDate (новые первые), при равенстве — по id
+const sortedPosts = uniquePosts.sort((a, b) => {
+	if (a.data.pinned && !b.data.pinned) return -1;
+	if (!a.data.pinned && b.data.pinned) return 1;
+	const byDate = b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+	if (byDate !== 0) return byDate;
+	return (a.id ?? '').localeCompare(b.id ?? '');
+});
 const featuredPosts = sortedPosts.slice(0, 4);
 
 // Debug: Log posts count
