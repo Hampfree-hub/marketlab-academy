@@ -92,6 +92,4 @@ Aun así, operar sin ningún backtest es operar a ciegas. Los backtests dan una 
 
 **¿Debo hacer backtest aunque mi estrategia ya funcione?** Sí. Ayuda a entender en qué condiciones rinde mejor, optimizar parámetros, valorar el riesgo y documentar la lógica.
 
----
-
 **En resumen:** El backtesting no es una panacea, pero es una herramienta esencial. Bien hecho, ayuda a evitar errores costosos y mejora las opciones de éxito. El backtest refleja el pasado; el mercado vive en el presente. Combina siempre backtesting con trading en demo y tamaño pequeño en vivo.

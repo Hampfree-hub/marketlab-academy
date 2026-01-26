@@ -92,6 +92,4 @@ Nevertheless, trading without any backtest is trading blind. Backtests provide a
 
 **Should I backtest even if my strategy already works?** Yes. Backtesting helps clarify when it works best, optimize parameters, assess risk, and document logic.
 
----
-
 **Bottom line:** Backtesting is not a cure‑all but an essential tool. Done well, it helps avoid costly mistakes and improves the odds of success. The backtest reflects the past; the market lives in the present. Always combine backtesting with demo trading and small live size.
