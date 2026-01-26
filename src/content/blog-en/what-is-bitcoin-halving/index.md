@@ -73,12 +73,4 @@ The main reason is supply and demand. When fewer new bitcoins are issued while d
 
 Historically, BTC has tended to rally after halvings. In 2012, it rose almost 100× in a year. In 2016–2017, about 10×. In 2020–2021, more than 3×, and after 2024, more than 2×.
 
-It is important to remember that halving is not the only driver of price. Macro conditions, regulation, tech upgrades, and investor sentiment all play a role and add to volatility.
-
----
-
-## Related Materials
-
-- [Bitcoin Basics](/en/library/bitcoin-basics/) — how Bitcoin and the blockchain work
-- [Bitcoin: Complete Guide](/en/library/what-bitcoin-everything-you-need-know/) — history, principles, mining
-- [What Is Digital Currency](/en/library/what-is-digital-currency-in-simple-terms/) — basics of cryptocurrency
+It is important to remember that halving is not the only driver of price. Macro conditions, regulation, tech upgrades, and investor sentiment all play a role and add to volatility. For a deeper understanding of Bitcoin, see the [complete guide to Bitcoin](/en/library/what-bitcoin-everything-you-need-know/), which covers history, principles, and mining in detail.
