@@ -69,12 +69,4 @@ La razón principal es la oferta y la demanda. Si se emiten menos bitcoin nuevos
 
 Históricamente, el BTC ha tendido a subir tras los halvings. En 2012 subió casi 100 veces en un año. En 2016–2017, unas 10 veces. En 2020–2021, más de 3 veces, y tras 2024, más de 2 veces.
 
-Conviene recordar que el halving no es el único factor. Las condiciones macro, la regulación, las mejoras tecnológicas y el sentimiento de los inversores también cuentan y añaden volatilidad.
-
----
-
-## Materiales relacionados
-
-- [Fundamentos de Bitcoin](/es/library/bitcoin-basics/) — cómo funcionan Bitcoin y el blockchain
-- [Bitcoin: guía completa](/es/library/what-bitcoin-everything-you-need-know/) — historia, principios, minería
-- [Qué es la moneda digital](/es/library/what-is-digital-currency-in-simple-terms/) — bases de las criptomonedas
+Conviene recordar que el halving no es el único factor. Las condiciones macro, la regulación, las mejoras tecnológicas y el sentimiento de los inversores también cuentan y añaden volatilidad. Para entender mejor Bitcoin, consulta la [guía completa de Bitcoin](/es/library/what-bitcoin-everything-you-need-know/), que cubre historia, principios y minería en detalle.

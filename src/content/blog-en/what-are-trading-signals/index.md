@@ -83,12 +83,4 @@ Signals can be used manually or via bots. If using bots, configure them properly
 
 Adapt to market regime. In a strong uptrend, focus on bullish signals; in sideways markets, consider shorter-term or scalping setups. Adjust usage to the current phase.
 
-Do not follow every signal blindly. Build your own view, review past entries, and learn to tell strong from weak signals. That supports both performance and growth as a trader.
-
----
-
-## Related Materials
-
-- [What Are Backtests in Trading](/en/library/what-are-backtests/) — testing strategies on history
-- [RSI: Technical Analysis Indicator](/en/library/technical-analysis-rsi/) — one source of signals
-- [Money Flow Index (MFI)](/en/library/money-flow-index/) — volume and entry zones
+Do not follow every signal blindly. Build your own view, review past entries, and learn to tell strong from weak signals. That supports both performance and growth as a trader. For testing signal effectiveness, [backtesting strategies](/en/library/what-are-backtests/) is essential, and the [RSI indicator](/en/library/technical-analysis-rsi/) is one common source of signals. For volume and entry zone analysis, the [Money Flow Index (MFI)](/en/library/money-flow-index/) can be helpful.

@@ -153,12 +153,4 @@ Website, whitepaper PDF, GitHub, docs, and community links (Telegram, Discord, T
 
 ## Conclusion
 
-A whitepaper is a core document for any crypto project, for both the team and users. When reading one, focus on tokenomics, roadmap, partners, and technical execution. Even a well-written whitepaper does not guarantee success, so thorough analysis is always needed before investing.
-
----
-
-## Related Materials
-
-- [What Is Digital Currency](/en/library/what-is-digital-currency-in-simple-terms/) — basics of the crypto market
-- [Bitcoin Basics](/en/library/bitcoin-basics/) — blockchain and early cryptocurrencies
-- [Bitcoin: Complete Guide](/en/library/what-bitcoin-everything-you-need-know/) — history, principles, use cases
+A whitepaper is a core document for any crypto project, for both the team and users. When reading one, focus on tokenomics, roadmap, partners, and technical execution. Even a well-written whitepaper does not guarantee success, so thorough analysis is always needed before investing. For crypto market basics, see [What Is Digital Currency](/en/library/what-is-digital-currency-in-simple-terms/), and for blockchain fundamentals, check [Bitcoin Basics](/en/library/bitcoin-basics/). The [complete guide to Bitcoin](/en/library/what-bitcoin-everything-you-need-know/) covers history, principles, and use cases in detail.

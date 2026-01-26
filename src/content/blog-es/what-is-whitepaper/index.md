@@ -127,12 +127,4 @@ Con el crecimiento del proyecto, el whitepaper puede actualizarse o ampliarse.
 
 ## Conclusión
 
-El whitepaper es un documento central para cualquier proyecto cripto, tanto para el equipo como para los usuarios. Al leerlo, conviene fijarse en tokenómica, roadmap, socios y ejecución técnica. Ni siquiera un whitepaper muy bien escrito garantiza el éxito, así que siempre conviene un análisis riguroso antes de invertir.
-
----
-
-## Materiales relacionados
-
-- [Qué es la moneda digital](/es/library/what-is-digital-currency-in-simple-terms/) — bases del mercado cripto
-- [Fundamentos de Bitcoin](/es/library/bitcoin-basics/) — blockchain y primeras criptomonedas
-- [Bitcoin: guía completa](/es/library/what-bitcoin-everything-you-need-know/) — historia, principios, casos de uso
+El whitepaper es un documento central para cualquier proyecto cripto, tanto para el equipo como para los usuarios. Al leerlo, conviene fijarse en tokenómica, roadmap, socios y ejecución técnica. Ni siquiera un whitepaper muy bien escrito garantiza el éxito, así que siempre conviene un análisis riguroso antes de invertir. Para las bases del mercado cripto, consulta [Qué es la moneda digital](/es/library/what-is-digital-currency-in-simple-terms/), y para fundamentos de blockchain, revisa [Fundamentos de Bitcoin](/es/library/bitcoin-basics/). La [guía completa de Bitcoin](/es/library/what-bitcoin-everything-you-need-know/) cubre historia, principios y casos de uso en detalle.

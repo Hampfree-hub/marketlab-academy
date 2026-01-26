@@ -95,6 +95,9 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		position: relative; /* REQUIRED for z-index to work */
 		z-index: 2; /* ABOVE the scanlines ::after */
 		min-height: 0; /* Prevent flex shrink issues */
+		width: 100%;
+		max-width: 100%; /* НЕ выходим за границы карточки */
+		box-sizing: border-box; /* Учитываем padding в ширине */
 	}
 
 	/* Фиксируем минимальную высоту для области title+subtitle в preview баннерах */
@@ -180,7 +183,7 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 	.banner-bottom {
 		display: flex;
 		justify-content: space-between; /* Размещаем тег слева, марку справа */
-		align-items: flex-start; /* Changed from center to flex-start for proper tag alignment */
+		align-items: flex-end; /* ВСЕГДА выравниваем по нижней границе категории - единообразно для всех типов баннеров */
 		gap: var(--space-4); /* 32px — минимальный отступ между тегом и водяной маркой при их сближении */
 		padding-top: var(--space-3); /* 24px — кратно 8 */
 		padding-bottom: var(--space-2); /* 16px — отступ снизу, чтобы тег не прилипал к границе */
@@ -188,6 +191,9 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		border-top: 2px solid rgba(255, 255, 255, 0.05); /* Changed from green to subtle white */
 		font-family: 'Press Start 2P', monospace;
 		width: 100%;
+		max-width: 100%; /* Ограничиваем ширину контейнера */
+		box-sizing: border-box; /* Учитываем padding в ширине */
+		min-width: 0; /* Позволяет flex-элементам сжиматься */
 	}
 
 	.banner-rubric {
@@ -206,6 +212,7 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		margin-right: var(--space-4); /* 32px — минимальный отступ справа для водяной марки */
 		white-space: nowrap; /* Предотвращаем перенос тега */
 		flex-shrink: 0; /* Предотвращаем сжатие тега */
+		align-self: flex-end; /* Выравниваем по нижней границе для единообразия */
 	}
 
 	.banner-preview .banner-rubric {
@@ -221,12 +228,22 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		font-family: 'JetBrains Mono', monospace;
 		font-size: 0.6rem; /* Увеличили с 0.5rem до 0.6rem для лучшей видимости */
 		opacity: 0.9; /* Увеличена видимость с 0.5 до 0.9 */
-		flex-shrink: 0; /* Предотвращаем сжатие водяной марки */
+		flex-shrink: 1; /* Разрешаем сжатие, но текст переносится */
+		flex-grow: 0; /* Не растягиваем */
+		min-width: 0; /* Позволяет перенос текста */
+		max-width: calc(100% - var(--space-4)); /* НЕ выходим за границы, оставляя место для категории и gap */
 		position: relative; /* Для правильного позиционирования */
 		z-index: 10; /* Обеспечиваем видимость */
-		white-space: nowrap; /* Предотвращаем перенос текста */
+		white-space: normal; /* Разрешаем перенос текста по словам */
+		word-wrap: break-word; /* Перенос по словам */
+		overflow-wrap: break-word; /* Перенос длинных слов */
+		overflow: visible; /* НИКОГДА не обрезаем текст */
 		font-weight: 600; /* Добавили font-weight для лучшей видимости */
 		margin-left: auto; /* Push to right edge через justify-content: space-between в .banner-bottom */
+		text-align: right; /* Выравниваем текст по правому краю */
+		line-height: 1.4; /* Улучшаем читаемость при переносе */
+		align-self: flex-end; /* Выравниваем по нижней границе категории */
+		box-sizing: border-box; /* Учитываем padding в ширине */
 	}
 
 	/* Для preview баннеров уменьшаем размер шрифта водяной марки */
@@ -328,40 +345,55 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 	@media (max-width: 768px) {
 		.banner-inner {
 			padding: var(--space-3); /* 24px = 3 × 8px — строго кратно 8 */
+			max-width: 100%; /* НЕ выходим за границы карточки */
 		}
 
 		.banner-bottom {
 			flex-wrap: wrap;
 			gap: var(--space-2); /* 16px — кратно 8 */
 			padding-top: var(--space-2); /* 16px — кратно 8 */
+			align-items: flex-end !important; /* ВСЕГДА выравниваем по нижней границе категории - единообразно */
+			max-width: 100%; /* НЕ выходим за границы карточки */
 		}
 
 		.banner-rubric {
 			margin: 0; /* Reset margins for consistent alignment */
+			align-self: flex-end; /* Выравниваем по нижней границе */
+			max-width: calc(100% - var(--space-2)); /* Оставляем место для водяной марки и gap */
 		}
 
 		.banner-watermark {
 			margin-left: auto;
-			align-self: flex-end;
+			align-self: flex-end !important; /* ВСЕГДА выравниваем по нижней границе категории - единообразно */
+			overflow: visible; /* НИКОГДА не обрезаем текст */
+			max-width: calc(100% - var(--space-2)); /* НЕ выходим за границы, учитывая gap */
 		}
 	}
 
 	@media (max-width: 480px) {
 		.banner-inner {
 			padding: var(--space-2); /* 16px = 2 × 8px — строго кратно 8 */
+			max-width: 100%; /* НЕ выходим за границы карточки */
 		}
 
 		.banner-bottom {
 			padding-top: var(--space-2); /* 16px — кратно 8 */
+			align-items: flex-end !important; /* ВСЕГДА выравниваем по нижней границе категории - единообразно */
+			max-width: 100%; /* НЕ выходим за границы карточки */
 		}
 
 		.banner-rubric {
 			font-size: 0.5rem;
 			padding: var(--space-1); /* 8px — кратно 8 */
+			align-self: flex-end; /* Выравниваем по нижней границе */
+			max-width: calc(100% - var(--space-2)); /* Оставляем место для водяной марки и gap */
 		}
 
 		.banner-watermark {
 			font-size: 0.4rem;
+			overflow: visible !important; /* НИКОГДА не обрезаем текст */
+			max-width: calc(100% - var(--space-2)); /* НЕ выходим за границы, учитывая gap */
+			align-self: flex-end !important; /* ВСЕГДА выравниваем по нижней границе категории - единообразно */
 		}
 	}
 
