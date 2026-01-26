@@ -107,10 +107,15 @@ article {
 	min-width: 0;
 }
 
+/* Специальный стиль для контейнера с RelatedPosts - правильные отступы */
+.related-posts-container {
+	padding: var(--space-3) var(--space-3) var(--space-3) var(--space-3) !important;
+}
+
 .article-footer {
 	/* Предотвращаем прилипание карточек к нижней границе */
-	margin-bottom: var(--space-10) !important;
-	padding-bottom: var(--space-4);
+	margin-bottom: var(--space-6) !important;
+	padding-bottom: 0;
 }
 
 .prose {
