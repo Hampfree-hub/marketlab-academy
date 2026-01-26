@@ -13,11 +13,11 @@ En el artículo se explica qué son las doji, qué tipos hay, cómo interpretarl
 
 Las **velas doji** son elementos del análisis de velas que reflejan un estado de indecisión en el mercado. En el modelo japonés clásico, una doji se ve como una vela con un cuerpo muy pequeño (o sin cuerpo) y mechas a menudo marcadas.
 
-Esa forma indica que en el periodo elegido compradores y vendedores quedaron prácticamente en equilibrio: el cierre coincidió con la apertura o se mantuvo muy cerca. El mercado se “detuvo”: ni alcistas ni bajistas lograron marcar la dirección.
+Esa forma indica que en el periodo elegido compradores y vendedores quedaron prácticamente en equilibrio: el cierre coincidió con la apertura o se mantuvo muy cerca. El mercado se "detuvo": ni alcistas ni bajistas lograron marcar la dirección.
 
 ### Origen y significado
 
-El término “doji” viene del análisis de velas japonés. Literalmente se asocia a la idea de “equilibrio” o “indecisión”: la vela muestra el movimiento del precio dentro del periodo pero sin un resultado claro. Por eso las doji suelen verse no como señal única para actuar, sino como aviso: es posible un cambio de dinámica o una pausa antes de que siga la tendencia.
+El término "doji" viene del análisis de velas japonés. Literalmente se asocia a la idea de "equilibrio" o "indecisión": la vela muestra el movimiento del precio dentro del periodo pero sin un resultado claro. Por eso las doji suelen verse no como señal única para actuar, sino como aviso: es posible un cambio de dinámica o una pausa antes de que siga la tendencia.
 
 ### Relación con otros patrones de velas
 
@@ -47,7 +47,7 @@ Mecha superior larga sin mecha inferior. El precio subió en el periodo pero per
 
 ### Doji de cuatro precios (Four-Price)
 
-Caso raro: apertura, cierre, máximo y mínimo coinciden. La vela es una línea horizontal sin cuerpo ni mechas. Típico de activos poco líquidos o mercados muy “congelados”. En activos líquidos es raro y a menudo ligado a peculiaridades de los datos.
+Caso raro: apertura, cierre, máximo y mínimo coinciden. La vela es una línea horizontal sin cuerpo ni mechas. Típico de activos poco líquidos o mercados muy "congelados". En activos líquidos es raro y a menudo ligado a peculiaridades de los datos.
 
 ## Significado en el análisis técnico
 
@@ -57,7 +57,7 @@ Una doji en el gráfico suele actuar como aviso de cambio de sentimiento o pausa
 
 Una doji tras una subida prolongada puede indicar que los compradores pierden control y el impulso se agota. Una lápida o doji de piernas largas con volumen alto es especialmente revelador. Conviene esperar confirmación de la vela siguiente o de [señales de indicadores](/es/library/technical-analysis-rsi) antes de plantearse ventas.
 
-Una tendencia alcista fuerte suele acabar no con un desplome, sino con un “enganche”: varias velas de cuerpo pequeño, incluida doji. Es una zona de decisión—unos toman beneficios, otros compran correcciones. Cuando la vela siguiente cierra claramente por debajo, sobre todo del mínimo de la doji, aumentan las probabilidades de cambio.
+Una tendencia alcista fuerte suele acabar no con un desplome, sino con un "enganche": varias velas de cuerpo pequeño, incluida doji. Es una zona de decisión—unos toman beneficios, otros compran correcciones. Cuando la vela siguiente cierra claramente por debajo, sobre todo del mínimo de la doji, aumentan las probabilidades de cambio.
 
 ### En el suelo de una tendencia
 
@@ -69,7 +69,7 @@ Una libélula en soporte muestra que los vendedores empujaron el precio a la baj
 
 En una tendencia fuerte, una doji suele indicar una pausa (consolidación) antes de que continúe el movimiento. No hay que interpretarla automáticamente como reversión; puede haber retroceso y luego continuación en la dirección de la tendencia.
 
-En tramos tendenciales, las doji suelen formar “islas” antes del siguiente impulso. Hay que mirar la estructura global: si la tendencia alcista sigue intacta (p. ej. serie de mínimos crecientes), una sola doji suele ser más un respiro que un cambio de tendencia.
+En tramos tendenciales, las doji suelen formar "islas" antes del siguiente impulso. Hay que mirar la estructura global: si la tendencia alcista sigue intacta (p. ej. serie de mínimos crecientes), una sola doji suele ser más un respiro que un cambio de tendencia.
 
 ## Cómo operar con doji
 
@@ -85,7 +85,7 @@ Una doji con volumen alto tiene mucho más peso que con volumen bajo. Un aumento
 
 ### Niveles y temporalidades
 
-El patrón es más fiable en soportes y resistencias históricos fuertes. En temporalidades altas (diario, semanal) las doji suelen ser más significativas que en bajas. En 4H y diario suele haber menos falsas señales, y la combinación “doji + nivel” suele dar entradas más limpias que en gráficos intradía.
+El patrón es más fiable en soportes y resistencias históricos fuertes. En temporalidades altas (diario, semanal) las doji suelen ser más significativas que en bajas. En 4H y diario suele haber menos falsas señales, y la combinación "doji + nivel" suele dar entradas más limpias que en gráficos intradía.
 
 ### Combinación con indicadores y backtesting
 
@@ -93,7 +93,7 @@ Las doji pueden usarse en sistemas de trading junto con [RSI](/es/library/techni
 
 ### Ejemplo breve
 
-Estrategia “doji en nivel”: en gráfico diario, el precio se acerca a un soporte fuerte y se forma una libélula. Volumen por encima de la media, [RSI](/es/library/technical-analysis-rsi) en sobreventa. Entrada—tras el cierre de la vela siguiente por encima del máximo de la doji. Stop—por debajo del mínimo de la doji o del soporte. Vale la pena [probarlo en backtest](/es/library/what-are-backtests).
+Estrategia "doji en nivel": en gráfico diario, el precio se acerca a un soporte fuerte y se forma una libélula. Volumen por encima de la media, [RSI](/es/library/technical-analysis-rsi) en sobreventa. Entrada—tras el cierre de la vela siguiente por encima del máximo de la doji. Stop—por debajo del mínimo de la doji o del soporte. Vale la pena [probarlo en backtest](/es/library/what-are-backtests).
 
 ## Errores al interpretar doji
 
@@ -115,13 +115,13 @@ En temporalidades bajas hay más ruido. Las doji suelen ser más útiles en 4H, 
 
 ### Ignorar el volumen
 
-Una doji con volumen anormalmente bajo puede ser una vela “parada” sin mucho significado. Una doji con pico de volumen suele ser más informativa y precede más a menudo movimientos relevantes.
+Una doji con volumen anormalmente bajo puede ser una vela "parada" sin mucho significado. Una doji con pico de volumen suele ser más informativa y precede más a menudo movimientos relevantes.
 
 ## Preguntas frecuentes
 
 **¿Una doji implica siempre reversión?** No. Refleja equilibrio entre compradores y vendedores. Puede preceder reversión, pausa o continuación de tendencia tras una consolidación breve. Importan contexto y confirmación.
 
-**¿Qué doji usar para entrar?** Las libélulas en soporte suelen aparecer en reversiones al alza; las lápidas en resistencia, en reversiones a la baja. La doji de piernas largas puede anticipar giro en cualquier sentido. En todos los casos importan más el lugar, el volumen y la confirmación que el “tipo” en sí.
+**¿Qué doji usar para entrar?** Las libélulas en soporte suelen aparecer en reversiones al alza; las lápidas en resistencia, en reversiones a la baja. La doji de piernas largas puede anticipar giro en cualquier sentido. En todos los casos importan más el lugar, el volumen y la confirmación que el "tipo" en sí.
 
 **¿Hay que combinar doji con indicadores?** Sí. La confirmación con zonas de sobrecompra/sobreventa de [RSI](/es/library/technical-analysis-rsi) o [MFI](/es/library/money-flow-index) y con soportes/resistencias mejora la fiabilidad.
 
@@ -129,8 +129,6 @@ Una doji con volumen anormalmente bajo puede ser una vela “parada” sin mucho
 
 **¿Se puede operar solo con doji?** En teoría sí, pero en la práctica funcionan mejor como un elemento más del sistema: junto con tendencia, niveles, volumen e indicadores. El [backtesting](/es/library/what-are-backtests) ayuda a comprobar cómo se habría comportado esa combinación en el pasado.
 
-**¿En qué se diferencia la doji de otras velas de reversión?** La doji subraya la indecisión: apertura ≈ cierre. Patrones como envolvente o pin bar muestran que un lado ya domina. Las doji suelen ser “aviso”; los otros ya son “acción”.
-
----
+**¿En qué se diferencia la doji de otras velas de reversión?** La doji subraya la indecisión: apertura ≈ cierre. Patrones como envolvente o pin bar muestran que un lado ya domina. Las doji suelen ser "aviso"; los otros ya son "acción".
 
 **En resumen:** Las velas doji son una herramienta útil de análisis técnico, pero rinden más junto con contexto, niveles, volumen e indicadores. Se recomienda usar confirmación de la vela siguiente y aplicar siempre stop-loss. Las estrategias con doji conviene [probarlas en histórico](/es/library/what-are-backtests) antes de operar en vivo. Los distintos tipos—libélula, lápida, piernas largas—aportan matices según el lugar del gráfico; la clave está en contexto y confirmación, no solo en la forma de la vela.
