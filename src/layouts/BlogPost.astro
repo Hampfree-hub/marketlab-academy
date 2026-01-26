@@ -160,7 +160,14 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 						<slot />
 					</div>
 
-					<div style="margin-top: var(--space-10);">
+					{postId && (
+						<div class="nes-container with-title related-posts-container" style="margin-top: var(--space-6); margin-bottom: 0;">
+							<p class="title">{t('home.recent_label') || 'RELATED'}</p>
+							<RelatedPosts currentPostId={postId} category={category} />
+						</div>
+					)}
+
+					<div style="margin-top: var(--space-6);">
 						<Disclaimer />
 					</div>
 
@@ -168,7 +175,7 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 						<FAQ items={faq} />
 					)}
 
-					<div class="article-footer" style="margin-top: var(--space-6); margin-bottom: var(--space-10); display: flex; flex-direction: column; gap: var(--space-6);">
+					<div class="article-footer" style="margin-top: var(--space-6); margin-bottom: var(--space-6); display: flex; flex-direction: column; gap: var(--space-6);">
 						{tags && tags.length > 0 && (
 							<div class="tags-section">
 								<div class="section-label" style="margin-bottom: var(--space-2);">{t('library.filter') || 'TAGS:'}</div>
@@ -179,13 +186,6 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 										</a>
 									))}
 								</div>
-							</div>
-						)}
-
-						{postId && (
-							<div class="nes-container with-title" style="margin-bottom: var(--space-6);">
-								<p class="title">{t('home.recent_label') || 'RELATED'}</p>
-								<RelatedPosts currentPostId={postId} category={category} />
 							</div>
 						)}
 					</div>
