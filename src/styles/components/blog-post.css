@@ -45,7 +45,7 @@
 
 /* Переопределяем padding nes-container для TOC - унифицированные отступы */
 .toc-sticky .nes-container {
-	padding: var(--space-2); /* 16px — унифицированный padding для всех сторон */
+	padding: var(--space-3); /* 24px — чуть больше "воздуха", кратно 8 */
 	margin: 0; /* Убираем margin nes-container для TOC */
 	width: 100%; /* Полная ширина для правильного выравнивания */
 	box-sizing: border-box; /* Включаем padding в ширину */
@@ -60,7 +60,7 @@
 }
 
 .toc-item {
-	padding: var(--space-1) 0; /* 8px сверху и снизу — отступ слева задаётся inline style */
+	padding: var(--space-1) 0; /* 8px сверху и снизу — строго кратно 8 */
 	padding-left: 0; /* Сбрасываем padding-left — он задаётся через inline style */
 	border-bottom: 1px dashed var(--nes-bg-secondary);
 	text-align: left; /* Выравниваем текст влево */
@@ -110,6 +110,13 @@ article {
 /* Специальный стиль для контейнера с RelatedPosts - правильные отступы */
 .related-posts-container {
 	padding: var(--space-3) var(--space-3) var(--space-3) var(--space-3) !important;
+	/* Унифицируем вертикальные отступы секции (без "прилипания") */
+	margin-top: var(--space-4) !important; /* раньше было inline: --space-6 */
+	margin-bottom: 0 !important;
+}
+
+.post-disclaimer {
+	margin-top: var(--space-4); /* раньше было inline: --space-6 */
 }
 
 .article-footer {
