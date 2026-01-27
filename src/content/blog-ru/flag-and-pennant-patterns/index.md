@@ -1,7 +1,7 @@
 ---
 title: 'Паттерны флаг и вымпел в трейдинге'
 description: 'Как использовать паттерны флаг и вымпел для определения точек входа: разбор бычьих и медвежьих флагов, правила торговли и подтверждение сигналов'
-pubDate: '2026-01-26'
+pubDate: '2026-01-27'
 category: 'technical-analysis'
 tags: ['patterns', 'technical-analysis', 'trading']
 draft: true
