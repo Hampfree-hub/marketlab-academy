@@ -12,6 +12,7 @@ import SubscribeForm from '../../components/SubscribeForm.astro';
 import '../../styles/components/home-index.css';
 import { ui } from '../../i18n/ui';
 import { useTranslations, useTranslatedPath } from '../../i18n/utils';
+import { isTempArticle } from '../../utils/blog';
 
 export async function getStaticPaths() {
   return [
@@ -37,7 +38,8 @@ const normalizePostId = (id: string) => id.replace(/\/index$/, '').replace(/\/+$
 const seenIds = new Set<string>();
 const seenTitleCategory = new Set<string>();
 const uniquePosts = posts.filter(post => {
-	// Исключаем draft статьи
+	// Исключаем временные article-* и draft статьи
+	if (isTempArticle(post.id)) return false;
 	if (post.data.draft) return false;
 	
 	const normalizedId = normalizePostId(post.id);

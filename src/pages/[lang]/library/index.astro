@@ -59,7 +59,14 @@ const uniquePosts = posts
 		return true;
 	});
 
-const sortedPosts = uniquePosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+// Сортировка: pinned первыми, затем по pubDate (новые первые), при равенстве — по id
+const sortedPosts = uniquePosts.sort((a, b) => {
+	if (a.data.pinned && !b.data.pinned) return -1;
+	if (!a.data.pinned && b.data.pinned) return 1;
+	const byDate = b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+	if (byDate !== 0) return byDate;
+	return (a.id ?? '').localeCompare(b.id ?? '');
+});
 
 // Debug: Log posts count
 const duplicateCount = posts.length - uniquePosts.length;
@@ -259,12 +266,32 @@ const breadcrumbItems = [
 						
 						// Если точных совпадений нет или их мало, используем Fuse.js для нечёткого поиска
 						if (exactMatches.length > 0) {
-							filtered = exactMatches;
+							// Сортируем так, чтобы совпадения в title шли выше, а затем по позиции совпадения
+							filtered = exactMatches.sort((a, b) => {
+								const aInTitle = a.title.includes(searchLower) ? 1 : 0;
+								const bInTitle = b.title.includes(searchLower) ? 1 : 0;
+								if (aInTitle !== bInTitle) return bInTitle - aInTitle;
+								
+								const aPos = Math.min(
+									a.title.indexOf(searchLower) >= 0 ? a.title.indexOf(searchLower) : 9999,
+									a.description.indexOf(searchLower) >= 0 ? a.description.indexOf(searchLower) : 9999,
+									a.tags.indexOf(searchLower) >= 0 ? a.tags.indexOf(searchLower) : 9999,
+								);
+								const bPos = Math.min(
+									b.title.indexOf(searchLower) >= 0 ? b.title.indexOf(searchLower) : 9999,
+									b.description.indexOf(searchLower) >= 0 ? b.description.indexOf(searchLower) : 9999,
+									b.tags.indexOf(searchLower) >= 0 ? b.tags.indexOf(searchLower) : 9999,
+								);
+								return aPos - bPos;
+							});
 						} else {
 							try {
-								const results = fuse.search(searchLower);
-								const resultIds = new Set(results.map(r => r.item.id));
-								filtered = filtered.filter(p => resultIds.has(p.id));
+								// Fuse возвращает результаты по релевантности — используем этот порядок
+								const allowedIds = new Set(filtered.map(p => p.id));
+								const results = fuse.search(searchLower)
+									.map(r => r.item)
+									.filter(item => allowedIds.has(item.id));
+								filtered = results;
 							} catch (error) {
 								console.error('Search error:', error);
 								// Fallback: простой поиск по подстроке
