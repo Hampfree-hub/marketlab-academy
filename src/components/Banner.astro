@@ -234,9 +234,11 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		max-width: calc(100% - var(--space-4)); /* НЕ выходим за границы, оставляя место для категории и gap */
 		position: relative; /* Для правильного позиционирования */
 		z-index: 10; /* Обеспечиваем видимость */
-		white-space: normal; /* Разрешаем перенос текста по словам */
-		word-wrap: break-word; /* Перенос по словам */
-		overflow-wrap: break-word; /* Перенос длинных слов */
+		/* ВАЖНО: переносим ТОЛЬКО по словам (не по буквам) */
+		white-space: normal;
+		overflow-wrap: normal;
+		word-break: keep-all;
+		hyphens: none;
 		overflow: visible; /* НИКОГДА не обрезаем текст */
 		font-weight: 600; /* Добавили font-weight для лучшей видимости */
 		margin-left: auto; /* Push to right edge через justify-content: space-between в .banner-bottom */
