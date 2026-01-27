@@ -1,7 +1,7 @@
 ---
 title: 'Торговые стратегии для бокового тренда'
 description: 'Как торговать в боковом тренде (боковике): стратегии range trading, grid-торговля, использование индикаторов и правила риск-менеджмента'
-pubDate: '2026-01-26'
+pubDate: '2026-01-27'
 category: 'technical-analysis'
 tags: ['strategies', 'sideways-trend', 'range-trading']
 draft: true

@@ -1,7 +1,7 @@
 ---
 title: 'Ложные пробои в трейдинге'
 description: 'Как распознать и использовать ложные пробои уровней поддержки и сопротивления: стратегии торговли, правила идентификации и типичные ошибки'
-pubDate: '2026-01-26'
+pubDate: '2026-01-27'
 category: 'technical-analysis'
 tags: ['patterns', 'support-resistance', 'trading']
 draft: true
