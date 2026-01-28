@@ -139,12 +139,15 @@ article {
 	margin-bottom: var(--space-3); /* Уменьшено до 24px */
 	color: var(--nes-accent-green);
 	font-family: 'Press Start 2P', monospace;
-	font-size: 24px; /* --fs-lg */
+	/* Responsive: avoid layout breaks on mobile/zoom */
+	font-size: clamp(18px, 4vw, 24px);
 	border-bottom: 4px solid var(--nes-bg-secondary);
 	padding-bottom: 0.5rem;
 	position: relative;
 	text-transform: none; /* Reduce caps for better readability */
 	letter-spacing: 0; /* Pixel font already has plenty of spacing */
+	overflow-wrap: anywhere;
+	word-break: break-word;
 }
 
 .prose h3,
@@ -158,10 +161,12 @@ article {
 	font-weight: 700;
 	letter-spacing: 0;
 	text-transform: none;
+	overflow-wrap: anywhere;
+	word-break: break-word;
 }
 
 .prose h3 {
-	font-size: 18px;
+	font-size: clamp(16px, 3.2vw, 18px);
 }
 
 .prose h4 {
