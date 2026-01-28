@@ -103,5 +103,7 @@ El verdadero suele venir con volumen y cierres sostenidos fuera del nivel. El fa
 
 A menudo para activar stops y crear liquidez.
 
-**Conclusión:** los falsos rompimientos son comunes — y operables — si los identificas bien, aplicas filtros (estructura/volumen) y controlas el riesgo.
+## Conclusión
+
+Los falsos rompimientos son comunes — y operables — si los identificas bien, aplicas filtros (estructura/volumen) y controlas el riesgo.
 

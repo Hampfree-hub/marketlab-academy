@@ -159,5 +159,7 @@ You can, but it’s risky. It’s better to combine with other methods and alway
 
 **[RSI](/en/library/technical-analysis-rsi)** and **[MFI](/en/library/money-flow-index)** can help judge whether the breakout has real participation and pressure. If indicators don’t confirm, the move may be a trap.
 
-**Bottom line:** False breakouts are common — and tradable — when you identify them correctly, use filters (volume/structure), and manage risk. Always validate your rules with **[backtesting](/en/library/what-are-backtests)**.
+## Bottom line
+
+False breakouts are common — and tradable — when you identify them correctly, use filters (volume/structure), and manage risk. Always validate your rules with **[backtesting](/en/library/what-are-backtests)**.
 
