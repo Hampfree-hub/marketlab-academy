@@ -1,19 +1,63 @@
 ---
-// Redirect to default language home
+// Root entrypoint: redirect user to best language.
+// - Prefer saved language (localStorage)
+// - Else, detect from browser languages (navigator.languages / navigator.language)
+// - Fallback: ru
+//
+// IMPORTANT: This is client-side only (static hosting). Language switcher keeps the URL as /[lang]/...
+const BASE_URL = import.meta.env.BASE_URL?.endsWith('/')
+	? import.meta.env.BASE_URL
+	: (import.meta.env.BASE_URL || '/') + '/';
 ---
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Redirecting...</title>
-	<script>
-		// Immediate redirect to default language
-		window.location.replace('/ru/');
+	<title>Redirecting…</title>
+	<meta name="robots" content="noindex" />
+	<link rel="canonical" href={BASE_URL} />
+	<script is:inline>
+		(() => {
+			const supported = ['ru', 'en', 'es'];
+
+			const safeGetStoredLang = () => {
+				try {
+					const v = window.localStorage.getItem('ml_lang');
+					return v && supported.includes(v) ? v : null;
+				} catch {
+					return null;
+				}
+			};
+
+			const detectBrowserLang = () => {
+				const rawList = (navigator.languages && navigator.languages.length)
+					? navigator.languages
+					: [navigator.language || ''];
+
+				for (const raw of rawList) {
+					const base = String(raw).toLowerCase().split('-')[0];
+					if (supported.includes(base)) return base;
+				}
+				return null;
+			};
+
+			const stored = safeGetStoredLang();
+			const detected = stored || detectBrowserLang() || 'ru';
+			const base = {BASE_URL};
+
+			// Ensure base ends with "/" and redirect to /{lang}/ under that base
+			window.location.replace(base + detected + '/');
+		})();
 	</script>
-	<meta http-equiv="refresh" content="0;url=/ru/">
-	<link rel="canonical" href="/ru/">
 </head>
 <body>
-	<p>Redirecting to <a href="/ru/">Russian version</a>...</p>
+	<noscript>
+		<p>Select language:</p>
+		<ul>
+			<li><a href={`${BASE_URL}ru/`}>Русский</a></li>
+			<li><a href={`${BASE_URL}en/`}>English</a></li>
+			<li><a href={`${BASE_URL}es/`}>Español</a></li>
+		</ul>
+	</noscript>
 </body>
 </html>

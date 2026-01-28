@@ -16,6 +16,20 @@ interface Props {
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const SUPPORTED_LANGS = ['ru', 'en', 'es'] as const;
+
+// --- hreflang alternates (static hosting SEO hygiene) ---
+const pathname = canonicalURL.pathname;
+const pathParts = pathname.split('/').filter(Boolean);
+const hasLangPrefix = pathParts.length > 0 && SUPPORTED_LANGS.includes(pathParts[0] as any);
+const restParts = hasLangPrefix ? pathParts.slice(1) : pathParts;
+const trailingSlash = pathname.endsWith('/');
+
+const buildLangPath = (lang: (typeof SUPPORTED_LANGS)[number]) => {
+	const rest = restParts.length ? restParts.join('/') : '';
+	if (!rest) return `/${lang}/`;
+	return `/${lang}/${rest}${trailingSlash ? '/' : ''}`;
+};
 
 const { title, description: descriptionProp, metaOgTitle, image: imageProp } = Astro.props;
 
@@ -109,6 +123,22 @@ if (imageProp) {
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
+
+<!-- hreflang alternates -->
+{SUPPORTED_LANGS.map((l) => (
+	<link rel="alternate" hreflang={l} href={new URL(buildLangPath(l), Astro.site).href} />
+))}
+<link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site).href} />
+
+<!-- Persist user language preference (used by / redirect) -->
+<script is:inline>
+	try {
+		const l = document.documentElement.lang;
+		if (l && ['ru', 'en', 'es'].includes(l)) {
+			localStorage.setItem('ml_lang', l);
+		}
+	} catch {}
+</script>
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
