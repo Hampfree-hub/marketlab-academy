@@ -1,8 +1,9 @@
 ---
 // Простая карусель баннеров (можно отключить через env переменную)
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 const showBanners = import.meta.env.PUBLIC_SHOW_BANNERS !== 'false';
 ---
 
@@ -10,7 +11,7 @@ const showBanners = import.meta.env.PUBLIC_SHOW_BANNERS !== 'false';
 	<div class="banner-carousel">
 		<div class="banner-wrapper">
 			<div class="banner-item">
-				<a href="/library/" class="banner-link">
+				<a href={translatePath('library')} class="banner-link">
 					<span>{t('banner.new_materials')}</span>
 				</a>
 			</div>
