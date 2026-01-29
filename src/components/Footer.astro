@@ -11,6 +11,15 @@ const translatePath = useTranslatedPath(lang);
 const bitgetCopyUrl = lang === 'ru'
 	? 'https://www.bitget.com/ru/copy-trading/trader/bdb24c7186bb3856a397/futures-order?clacCode=&shareType=2'
 	: 'https://www.bitget.com/copy-trading/trader/bdb24c7186bb3856a397/futures-order?clacCode=&shareType=2';
+// Реферальные: Bitget — для RU нужен /ru/referral/register и from=referral; Bybit — локаль в пути
+const bitgetReferralUrl = lang === 'ru'
+	? 'https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD'
+	: 'https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD';
+const bybitInviteUrl = lang === 'ru'
+	? 'https://www.bybit.com/ru-RU/invite?ref=PWMD24'
+	: lang === 'es'
+		? 'https://www.bybit.com/es/invite?ref=PWMD24'
+		: 'https://www.bybit.com/en/invite?ref=PWMD24';
 ---
 
 <footer class="main-footer">
@@ -40,9 +49,9 @@ const bitgetCopyUrl = lang === 'ru'
 			<div class="footer-column">
 				<h3>{t('footer.referrals')}</h3>
 				<div class="footer-links">
-					<a href="https://www.bitget.com/referral/register?clacCode=23EHR2VD" target="_blank">> Bitget</a>
-					<a href="https://www.bybit.com/invite?ref=PWMD24" target="_blank">> Bybit</a>
-					<a href="https://veles.finance/invite/washmallay" target="_blank">> Veles</a>
+					<a href={bitgetReferralUrl} target="_blank" rel="noopener noreferrer">> Bitget</a>
+					<a href={bybitInviteUrl} target="_blank" rel="noopener noreferrer">> Bybit</a>
+					<a href="https://veles.finance/invite/washmallay" target="_blank" rel="noopener noreferrer">> Veles</a>
 				</div>
 			</div>
 
@@ -51,7 +60,7 @@ const bitgetCopyUrl = lang === 'ru'
 				<h3>{t('footer.copytrading')}</h3>
 				<div class="footer-links">
 					<a href={bitgetCopyUrl} target="_blank" rel="noopener noreferrer">> Bitget (Copy)</a>
-					<a href="https://bybit.onelink.me/EhY6/1ll6qnvc" target="_blank">> Bybit (Copy)</a>
+					<a href="https://bybit.onelink.me/EhY6/1ll6qnvc" target="_blank" rel="noopener noreferrer">> Bybit (Copy)</a>
 				</div>
 			</div>
 		</div>
