@@ -345,6 +345,10 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 
 	/* --- Responsive Design --- */
 	@media (max-width: 768px) {
+		.banner-preview {
+			min-height: 260px; /* Место для title + subtitle + блок категории/водяной марки */
+		}
+
 		.banner-inner {
 			padding: var(--space-3); /* 24px = 3 × 8px — строго кратно 8 */
 			padding-bottom: var(--space-4); /* 32px снизу — значок категории не прилипает к границе баннера */
@@ -375,6 +379,10 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 	}
 
 	@media (max-width: 480px) {
+		.banner-preview {
+			min-height: 260px; /* Место для title + subtitle + блок категории/водяной марки */
+		}
+
 		.banner-inner {
 			padding: var(--space-2); /* 16px = 2 × 8px — строго кратно 8 */
 			padding-bottom: var(--space-3); /* 24px снизу — значок категории не прилипает к границе баннера */
