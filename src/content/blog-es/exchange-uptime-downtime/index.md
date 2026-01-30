@@ -1,7 +1,7 @@
 ---
 title: 'Qué son el uptime y el downtime de una exchange'
 description: 'Uptime y downtime de una criptoexchange: qué son, cómo se mide la fiabilidad de la plataforma y qué tener en cuenta al elegir exchange para operar.'
-pubDate: '2026-01-29'
+pubDate: '2026-01-30'
 category: 'fundamental-analysis'
 ---
 

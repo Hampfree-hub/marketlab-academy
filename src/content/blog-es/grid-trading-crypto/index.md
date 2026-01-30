@@ -1,7 +1,7 @@
 ---
 title: 'Trading en grid en el mercado cripto'
 description: 'Qué es el grid trading en cripto: cómo funciona la red de órdenes, cuándo es efectiva la estrategia, ventajas e inconvenientes y su relación con el mercado lateral.'
-pubDate: '2026-01-29'
+pubDate: '2026-01-30'
 category: 'algo-trading'
 ---
 
