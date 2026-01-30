@@ -347,6 +347,7 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 	@media (max-width: 768px) {
 		.banner-inner {
 			padding: var(--space-3); /* 24px = 3 × 8px — строго кратно 8 */
+			padding-bottom: var(--space-4); /* 32px снизу — значок категории не прилипает к границе баннера */
 			max-width: 100%; /* НЕ выходим за границы карточки */
 		}
 
@@ -354,6 +355,7 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 			flex-wrap: wrap;
 			gap: var(--space-2); /* 16px — кратно 8 */
 			padding-top: var(--space-2); /* 16px — кратно 8 */
+			padding-bottom: var(--space-3); /* 24px снизу — отступ значка [категория] от нижней границы */
 			align-items: flex-end !important; /* ВСЕГДА выравниваем по нижней границе категории - единообразно */
 			max-width: 100%; /* НЕ выходим за границы карточки */
 		}
@@ -375,11 +377,13 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 	@media (max-width: 480px) {
 		.banner-inner {
 			padding: var(--space-2); /* 16px = 2 × 8px — строго кратно 8 */
+			padding-bottom: var(--space-3); /* 24px снизу — значок категории не прилипает к границе баннера */
 			max-width: 100%; /* НЕ выходим за границы карточки */
 		}
 
 		.banner-bottom {
 			padding-top: var(--space-2); /* 16px — кратно 8 */
+			padding-bottom: var(--space-3); /* 24px снизу — отступ значка [категория] от нижней границы */
 			align-items: flex-end !important; /* ВСЕГДА выравниваем по нижней границе категории - единообразно */
 			max-width: 100%; /* НЕ выходим за границы карточки */
 		}
