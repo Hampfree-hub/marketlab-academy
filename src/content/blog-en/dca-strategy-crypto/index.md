@@ -1,7 +1,7 @@
 ---
 title: 'DCA Strategy (Dollar Cost Averaging) in Crypto'
 description: 'What DCA is in cryptocurrencies: how the averaging strategy works, pros and cons, how to apply it in practice, and how it differs from lump-sum buying.'
-pubDate: '2026-01-29'
+pubDate: '2026-01-30'
 category: 'algo-trading'
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 'Estrategia DCA (promedio de costo) en cripto'
 description: 'Qué es DCA en criptomonedas: cómo funciona el promedio de costo, ventajas e inconvenientes, cómo aplicarlo en la práctica y en qué se diferencia de la compra única.'
-pubDate: '2026-01-29'
+pubDate: '2026-01-30'
 category: 'algo-trading'
 ---
 
