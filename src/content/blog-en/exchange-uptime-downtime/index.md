@@ -1,7 +1,7 @@
 ---
 title: 'What Are Exchange Uptime and Downtime'
 description: 'Exchange uptime and downtime: what they are, how platform reliability is measured, and what to look for when choosing an exchange for trading.'
-pubDate: '2026-01-29'
+pubDate: '2026-01-30'
 category: 'fundamental-analysis'
 ---
 
