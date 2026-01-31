@@ -23,6 +23,8 @@ cp scripts/pre-commit-check.sh .git/hooks/pre-commit
 chmod +x .git/hooks/pre-commit
 ```
 
+**Проверка:** попробуйте `git add docs/PLANS_AND_CATEGORIES.md` и `git commit -m "test"` — хук должен отклонить коммит с сообщением о конфиденциальном документе. Затем `git restore --staged docs/PLANS_AND_CATEGORIES.md`.
+
 ---
 
 ## ✅ Коммит и пуш из Cursor (рекомендуемый способ)
