@@ -243,6 +243,11 @@ a:hover {
   border-bottom-color: var(--nes-accent-yellow);
 }
 
+/* Баннер в карточке не сжимать — иначе overflow:hidden обрезает блок с категорией */
+.post-card .code-banner {
+  flex-shrink: 0;
+}
+
 .post-card h3 {
   color: var(--color-text-primary);
   margin: var(--spacing-sm) 0;
