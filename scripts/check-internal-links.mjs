@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const repoRoot = 'D:/Projects/HampfreeBlog';
+// Run from repo root: node scripts/check-internal-links.mjs
+const repoRoot = process.cwd();
 const contentRoot = path.join(repoRoot, 'src', 'content');
 
 const langDirs = [

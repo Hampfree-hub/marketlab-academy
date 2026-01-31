@@ -20,9 +20,11 @@ npm run build
 
 ---
 
-## 0.1) Подтянуть последние изменения (git pull) — ошибки
+## 0.1) Подтянуть последние изменения (git pull) / коммит и пуш — ошибки
 
-**Симптом:** при `git pull` ошибка вроде *CreateFileMapping / Win32 error 5* (часто в Git Bash или в терминале Cursor).
+**Коммит и пуш из Cursor:** работают, когда команды выполняются с правами **`all`** (см. [SAFE_COMMIT_PROCEDURE.md](./SAFE_COMMIT_PROCEDURE.md)). Не переключаться на PowerShell, если коммит из Cursor успешен.
+
+**Симптом:** при `git pull` (или `git commit`/`git push`) ошибка вроде *CreateFileMapping / Win32 error 5* в терминале Cursor.
 
 **Решение:**
 
