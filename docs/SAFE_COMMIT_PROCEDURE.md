@@ -4,6 +4,21 @@
 
 ---
 
+## КРИТИЧЕСКИ ВАЖНО: что НИКОГДА не коммитить в публичный репо
+
+**Проверки pre-commit в проекте нет.** Перед каждым коммитом обязательно смотрите `git status` и список ниже.
+
+**В публичный репо НЕ должны попадать:**
+
+- Планы, стратегии, дорожные карты (в т.ч. `docs/*PLAN*.md`, `docs/ARCHIVE_RECOMMENDATIONS.md`, `docs/PLANS_AND_CATEGORIES.md`)
+- Упоминания внутренних проектов по имени (в т.ч. Veles и др.)
+- Секреты, токены, ключи, `.env`, `*PRIVATE*`, `*SECRET*`
+- Внутренняя документация (README с механикой, characters, оптимизации)
+
+Если такой файл уже попал в коммит — добавить его в `.gitignore`, удалить из репо (`git rm --cached <файл>`), закоммитить и запушить. Файл останется только локально.
+
+---
+
 ## ✅ Коммит и пуш из Cursor (рекомендуемый способ)
 
 **Коммит и пуш можно делать прямо из Cursor.** Агент (или вы через терминал с нужными правами) выполняет `git add`, `git commit`, `git push` с правами **`all`** (плюс `git_write` для коммита, `network` для пуша). При таком запуске команды проходят без ошибки *CreateFileMapping / Win32 error 5*.
@@ -68,7 +83,8 @@ git push
 ## Что уже в .gitignore (не попадёт в коммит)
 
 - `.env`, `secrets/`, `*.key`, `*PRIVATE*`, `*SECRET*`
-- Планы и стратегии: `docs/ARTICLES_WORK_PLAN.md`, `docs/SEO_STRATEGY_SUMMARY.md`, `ARTICLES_OPTIMIZATION_*.md` и др.
+- Планы и стратегии: `docs/ARTICLES_WORK_PLAN.md`, `docs/SEO_STRATEGY_SUMMARY.md`, `ARTICLES_OPTIMIZATION_*.md`, `docs/ARCHIVE_RECOMMENDATIONS.md`, `docs/PLANS_AND_CATEGORIES.md`, `docs/*PLAN*.md`, `docs/*ARCHIVE*.md`, `docs/*CATEGOR*.md` и др.
+- Упоминания внутренних проектов: пути с `Veles`, `veles`
 - `docs/README.md`, `docs/characters/`
 - `.cursorrules*`, `node_modules/`, `dist/`, `.astro/`
 

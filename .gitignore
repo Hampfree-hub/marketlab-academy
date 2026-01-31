@@ -80,6 +80,15 @@ IMAGES_MECHANICS.md
 docs/REPO_SYNC_AND_AUDIT.md
 .analysys_and_optimization
 
+# Конфиденциальные документы — НИКОГДА в публичный репо!
+docs/ARCHIVE_RECOMMENDATIONS.md
+docs/PLANS_AND_CATEGORIES.md
+docs/*PLAN*.md
+docs/*ARCHIVE*.md
+docs/*CATEGOR*.md
+**/Veles*
+**/veles*
+
 # Документация — ТОЛЬКО в приватном репо (README, механика картинок)
 docs/README.md
 
