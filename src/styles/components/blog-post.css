@@ -109,10 +109,13 @@ article {
 
 /* Специальный стиль для контейнера с RelatedPosts - правильные отступы */
 .related-posts-container {
-	padding: var(--space-3) var(--space-3) var(--space-3) var(--space-3) !important;
+	padding: var(--space-4) var(--space-3) var(--space-4) var(--space-3) !important; /* сверху/снизу 32px — карточки не наезжают на рамку */
 	/* Унифицируем вертикальные отступы секции (без "прилипания") */
 	margin-top: var(--space-4) !important; /* раньше было inline: --space-6 */
 	margin-bottom: 0 !important;
+	/* НЕ overflow: hidden — иначе заголовок «Ещё по теме» (position: absolute; top: -0.8rem) обрезается рамкой */
+	overflow: visible;
+	box-sizing: border-box;
 }
 
 .post-disclaimer {
