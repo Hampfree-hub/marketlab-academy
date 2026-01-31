@@ -69,6 +69,7 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		border-bottom: 2px solid var(--color-border);
 		image-rendering: pixelated;
 		background-color: var(--nes-bg-primary);
+		flex-shrink: 0; /* Не сжимать баннер в карточках — категория и марка всегда видны */
 	}
 
 	.banner-preview {
@@ -79,8 +80,8 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 	.banner-full {
 		aspect-ratio: 3/1;
 		min-height: 200px;
-		/* Увеличиваем минимальную высоту для размещения полного описания */
-		min-height: 250px;
+		/* Минимальная высота: заголовок + описание + блок категория/марка (не обрезать) */
+		min-height: 280px;
 	}
 
 	.banner-inner {
@@ -88,8 +89,8 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		padding-top: var(--space-5); /* 40px — равномерный отступ сверху */
-		padding-bottom: var(--space-5); /* 40px — равномерный отступ снизу */
+		padding-top: var(--space-5); /* 40px — отступ сверху */
+		padding-bottom: var(--space-3); /* 24px — снизу меньше, чтобы не было «пустого подвала» при полном разрешении */
 		padding-left: var(--space-5); /* 40px — равномерный отступ слева */
 		padding-right: var(--space-6); /* 48px — достаточное пространство справа для водяной марки */
 		position: relative; /* REQUIRED for z-index to work */
@@ -111,7 +112,7 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 
 	.banner-title {
 		font-family: 'Press Start 2P', monospace;
-		font-size: 1.25rem;
+		font-size: clamp(1rem, 2vw + 0.75rem, 1.25rem); /* Адаптивный размер заголовка */
 		color: var(--nes-accent-green);
 		margin: 0 0 var(--space-1) 0; /* 8px — строго кратно 8 (заменено 0.5rem) */
 		line-height: 1.4;
@@ -120,7 +121,7 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 	}
 
 	.banner-preview .banner-title {
-		font-size: 0.85rem;
+		font-size: clamp(0.65rem, 1.5vw + 0.5rem, 0.85rem); /* Адаптивно: меньше на узких экранах */
 		line-height: 1.6;
 	}
 
@@ -183,10 +184,10 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 	.banner-bottom {
 		display: flex;
 		justify-content: space-between; /* Размещаем тег слева, марку справа */
-		align-items: flex-end; /* ВСЕГДА выравниваем по нижней границе категории - единообразно для всех типов баннеров */
+		align-items: flex-end; /* Водяная марка выровнена по нижней границе прямоугольника категории */
 		gap: var(--space-4); /* 32px — минимальный отступ между тегом и водяной маркой при их сближении */
 		padding-top: var(--space-3); /* 24px — кратно 8 */
-		padding-bottom: var(--space-2); /* 16px — отступ снизу, чтобы тег не прилипал к границе */
+		padding-bottom: var(--space-2); /* 16px — умеренный отступ снизу, баланс с верхом карточки */
 		margin-top: var(--space-2); /* 16px — дополнительный отступ для тега */
 		border-top: 2px solid rgba(255, 255, 255, 0.05); /* Changed from green to subtle white */
 		font-family: 'Press Start 2P', monospace;
@@ -194,11 +195,13 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		max-width: 100%; /* Ограничиваем ширину контейнера */
 		box-sizing: border-box; /* Учитываем padding в ширине */
 		min-width: 0; /* Позволяет flex-элементам сжиматься */
+		flex-shrink: 0; /* Не сжимать блок с категорией и маркой — всегда виден */
+		flex-wrap: nowrap; /* Не переносить марку под категорию до узких экранов */
 	}
 
 	.banner-rubric {
 		font-family: 'Press Start 2P', monospace;
-		font-size: 0.65rem;
+		font-size: clamp(0.5rem, 1.2vw + 0.45rem, 0.65rem); /* Адаптивный размер: от 0.5rem до 0.65rem */
 		padding: var(--space-1) var(--space-2); /* 8px 16px — кратно 8 */
 		background-color: var(--nes-accent-green);
 		color: var(--nes-bg-primary);
@@ -212,45 +215,54 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		margin-right: var(--space-4); /* 32px — минимальный отступ справа для водяной марки */
 		white-space: nowrap; /* Предотвращаем перенос тега */
 		flex-shrink: 0; /* Предотвращаем сжатие тега */
-		align-self: flex-end; /* Выравниваем по нижней границе для единообразия */
 	}
 
 	.banner-preview .banner-rubric {
-		font-size: 0.5rem;
-		padding: var(--space-1); /* 8px — кратно 8 */
+		font-size: clamp(0.4rem, 1vw + 0.35rem, 0.5rem); /* Адаптивный размер для превью */
+		padding: var(--space-1) var(--space-2); /* 8px сверху/снизу, 16px слева/справа — текст не прилипает к границам блока */
 		box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
-		margin: 0; /* Reset top/bottom margins */
+		margin: 0;
 		margin-right: var(--space-4); /* 32px — минимальный отступ справа для водяной марки */
+		box-sizing: border-box;
 	}
 
 	.banner-watermark {
 		color: var(--nes-text-tertiary);
 		font-family: 'JetBrains Mono', monospace;
-		font-size: 0.6rem; /* Увеличили с 0.5rem до 0.6rem для лучшей видимости */
+		font-size: clamp(0.5rem, 1vw + 0.4rem, 0.6rem); /* Адаптивный размер: от 0.5rem до 0.6rem */
 		opacity: 0.9; /* Увеличена видимость с 0.5 до 0.9 */
-		flex-shrink: 1; /* Разрешаем сжатие, но текст переносится */
 		flex-grow: 0; /* Не растягиваем */
-		min-width: 0; /* Позволяет перенос текста */
+		min-width: 0; /* Позволяет сжиматься и переносить текст внутри */
 		max-width: calc(100% - var(--space-4)); /* НЕ выходим за границы, оставляя место для категории и gap */
 		position: relative; /* Для правильного позиционирования */
 		z-index: 10; /* Обеспечиваем видимость */
-		/* ВАЖНО: переносим ТОЛЬКО по словам (не по буквам) */
-		white-space: normal;
-		overflow-wrap: normal;
-		word-break: keep-all;
-		hyphens: none;
-		overflow: visible; /* НИКОГДА не обрезаем текст */
 		font-weight: 600; /* Добавили font-weight для лучшей видимости */
 		margin-left: auto; /* Push to right edge через justify-content: space-between в .banner-bottom */
 		text-align: right; /* Выравниваем текст по правому краю */
 		line-height: 1.4; /* Улучшаем читаемость при переносе */
-		align-self: flex-end; /* Выравниваем по нижней границе категории */
 		box-sizing: border-box; /* Учитываем padding в ширине */
+		align-self: flex-end; /* Базовая линия марки по нижней границе категории */
 	}
 
-	/* Для preview баннеров уменьшаем размер шрифта водяной марки */
+	/* Полный баннер (страница статьи): марка может переноситься при необходимости */
+	.banner-full .banner-watermark {
+		white-space: normal;
+		overflow-wrap: normal;
+		word-break: keep-all;
+		overflow: visible;
+	}
+
+	/* Preview: (а) широкий экран — одна строка; (б) меньше места — 2 слова столбик (MARKETLAB / ACADEMY); (в) ещё уже — перенос под категорию (см. 360px) */
 	.banner-preview .banner-watermark {
-		font-size: 0.5rem; /* Уменьшили с 0.6rem до 0.5rem для preview */
+		font-size: clamp(0.35rem, 0.75vw + 0.3rem, 0.5rem);
+		flex-shrink: 1;
+		white-space: normal;
+		overflow-wrap: normal; /* Только по пробелу: не дробить по 1–2 буквы */
+		word-break: keep-all; /* Только MARKETLAB / ACADEMY в столбик */
+		max-width: calc(100% - var(--space-4));
+		overflow: visible;
+		text-overflow: clip;
+		line-height: 1.3;
 	}
 
 	/* --- Background Patterns --- */
@@ -351,23 +363,20 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 		}
 
 		.banner-bottom {
-			flex-wrap: wrap;
+			flex-wrap: nowrap; /* Не переносить марку под категорию при 2 карточках */
 			gap: var(--space-2); /* 16px — кратно 8 */
 			padding-top: var(--space-2); /* 16px — кратно 8 */
-			align-items: flex-end !important; /* ВСЕГДА выравниваем по нижней границе категории - единообразно */
+			align-items: flex-end !important; /* Марка по нижней границе категории */
 			max-width: 100%; /* НЕ выходим за границы карточки */
 		}
 
 		.banner-rubric {
 			margin: 0; /* Reset margins for consistent alignment */
-			align-self: flex-end; /* Выравниваем по нижней границе */
 			max-width: calc(100% - var(--space-2)); /* Оставляем место для водяной марки и gap */
 		}
 
 		.banner-watermark {
 			margin-left: auto;
-			align-self: flex-end !important; /* ВСЕГДА выравниваем по нижней границе категории - единообразно */
-			overflow: visible; /* НИКОГДА не обрезаем текст */
 			max-width: calc(100% - var(--space-2)); /* НЕ выходим за границы, учитывая gap */
 		}
 	}
@@ -380,22 +389,31 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 
 		.banner-bottom {
 			padding-top: var(--space-2); /* 16px — кратно 8 */
-			align-items: flex-end !important; /* ВСЕГДА выравниваем по нижней границе категории - единообразно */
+			align-items: flex-end !important; /* Марка по нижней границе категории */
 			max-width: 100%; /* НЕ выходим за границы карточки */
 		}
 
 		.banner-rubric {
 			font-size: 0.5rem;
 			padding: var(--space-1); /* 8px — кратно 8 */
-			align-self: flex-end; /* Выравниваем по нижней границе */
 			max-width: calc(100% - var(--space-2)); /* Оставляем место для водяной марки и gap */
 		}
 
-		.banner-watermark {
-			font-size: 0.4rem;
-			overflow: visible !important; /* НИКОГДА не обрезаем текст */
-			max-width: calc(100% - var(--space-2)); /* НЕ выходим за границы, учитывая gap */
-			align-self: flex-end !important; /* ВСЕГДА выравниваем по нижней границе категории - единообразно */
+		.banner-preview .banner-watermark {
+			font-size: clamp(0.3rem, 0.7vw + 0.25rem, 0.45rem); /* Ещё меньше на узких экранах */
+		}
+	}
+
+	/* (в) Очень узкий экран (preview): строка водяной марки переносится под категорию */
+	@media (max-width: 360px) {
+		.banner-preview .banner-bottom {
+			flex-wrap: wrap;
+		}
+
+		.banner-preview .banner-watermark {
+			white-space: normal;
+			overflow: visible;
+			text-overflow: clip;
 		}
 	}
 

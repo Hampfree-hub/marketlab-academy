@@ -234,6 +234,11 @@ a:hover {
   transition: border-bottom-color 0.10s steps(3);  /* ✅ VARIANT F: golden middle */
 }
 
+/* Баннер в карточке не сжимаем — категория и водяная марка всегда видны */
+.post-card > .code-banner {
+  flex-shrink: 0;
+}
+
 .post-card:hover {
   border-bottom-color: var(--nes-accent-yellow);
 }
