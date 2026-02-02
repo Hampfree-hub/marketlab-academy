@@ -78,7 +78,7 @@ npm run preview
 
 Контент хранится в `src/content/blog-[lang]/`
 
-**Структура статьи:** одна папка = одна статья; внутри только `index.md` (и при необходимости `assets/` для картинок). Frontmatter: `title`, `description`, `pubDate`, `category`. Поле **`tags` не используется** — только категория (см. `docs/CONTENT_WRITING_GUIDE.md`).
+**Структура статьи:** одна папка = одна статья; внутри только `index.md` (и при необходимости `assets/` для картинок). Frontmatter: `title`, `description`, `pubDate`, `category`. Поле **`tags` не используется** — только категория (подробности — во внутренней документации, приватный репо).
 
 **Рабочая ветка:** `main`. Клонирование и pull — с `origin main`.
 
