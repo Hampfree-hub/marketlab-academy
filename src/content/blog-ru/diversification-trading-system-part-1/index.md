@@ -3,7 +3,6 @@ title: 'Диверсификация и настройка торговой си
 description: 'Зачем трейдеру диверсификация: активы, стратегии, площадки. Как не класть всё в одну корзину и снизить риски при торговле и ботах.'
 pubDate: '2026-02-02'
 category: 'algo-trading'
-tags: ['diversification', 'trading-system', 'risk-management']
 draft: true
 ---
 

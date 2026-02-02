@@ -3,7 +3,6 @@ title: 'Patrones de bandera y banderín en trading'
 description: 'Cómo usar los patrones de bandera y banderín para encontrar entradas: banderas alcistas y bajistas, reglas de identificación, operativa y confirmación.'
 pubDate: '2026-01-27'
 category: 'technical-analysis'
-tags: ['patterns', 'technical-analysis', 'trading']
 ---
 
 Los patrones de bandera y banderín son figuras clásicas de continuación en análisis técnico. En criptomonedas aparecen con frecuencia y ayudan a sincronizar entradas después de una pausa breve tras un impulso fuerte.

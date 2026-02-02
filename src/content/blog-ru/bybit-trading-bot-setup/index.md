@@ -3,7 +3,6 @@ title: 'Как настроить торгового бота на Bybit'
 description: 'Пошаговая инструкция по настройке торгового бота на бирже Bybit: подключение API, создание стратегии и запуск автоматической торговли'
 pubDate: '2026-01-25'
 category: 'algo-trading'
-tags: ['bybit', 'trading-bots', 'automation', 'api']
 draft: true
 ---
 

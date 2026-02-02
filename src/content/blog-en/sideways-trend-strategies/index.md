@@ -3,7 +3,6 @@ title: 'Trading Strategies for Sideways Markets'
 description: 'How to trade a range (sideways trend): range trading, grid trading, oscillator signals, and risk-management rules.'
 pubDate: '2026-01-27'
 category: 'technical-analysis'
-tags: ['strategies', 'sideways-trend', 'range-trading']
 ---
 
 A sideways market (range) is a period when price moves inside a horizontal band without a clear uptrend or downtrend. A large portion of market time is spent in ranges, so being able to trade them is an important skill.

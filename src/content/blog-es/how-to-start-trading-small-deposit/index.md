@@ -3,7 +3,6 @@ title: 'Cómo empezar a hacer trading con un depósito pequeño'
 description: 'Guía para principiantes: cómo operar cripto con poco capital, qué estrategias usar y cómo minimizar riesgos.'
 pubDate: '2026-01-25'
 category: 'technical-analysis'
-tags: ['beginners', 'trading', 'small-deposit']
 draft: true
 ---
 

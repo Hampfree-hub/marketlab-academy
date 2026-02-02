@@ -3,7 +3,6 @@ title: 'Gestión de riesgo para bots de trading cripto'
 description: 'Cómo gestionar riesgo en trading automatizado: tamaño de posición, stop-loss, límites de drawdown, diversificación y configuración segura.'
 pubDate: '2026-01-25'
 category: 'technical-analysis'
-tags: ['risk-management', 'trading-bots', 'beginners']
 draft: true
 ---
 

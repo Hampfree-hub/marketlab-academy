@@ -3,7 +3,6 @@ title: 'How to Set Up a Trading Bot on Bybit'
 description: 'Step-by-step Bybit trading bot setup: creating API keys safely, connecting a bot, choosing a strategy, and launching automation.'
 pubDate: '2026-01-25'
 category: 'algo-trading'
-tags: ['bybit', 'trading-bots', 'automation', 'api']
 draft: true
 ---
 

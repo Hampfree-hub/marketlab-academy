@@ -3,7 +3,6 @@ title: 'Falsos rompimientos en trading'
 description: 'Cómo identificar y operar falsos rompimientos de soporte y resistencia: setups, filtros, reglas de confirmación y errores típicos.'
 pubDate: '2026-01-27'
 category: 'technical-analysis'
-tags: ['patterns', 'support-resistance', 'trading']
 ---
 
 Los falsos rompimientos son una de las situaciones más comunes del mercado: el precio rompe un nivel de soporte o resistencia por un momento y luego vuelve rápidamente al rango. Entender esta mecánica ayuda a evitar entradas malas y a encontrar reversiones con mejor relación riesgo/beneficio.

@@ -3,7 +3,6 @@ title: 'Как начать трейдинг с малой суммы'
 description: 'Руководство для начинающих: как начать торговать криптовалютами с небольшого депозита, какие стратегии выбрать и как минимизировать риски'
 pubDate: '2026-01-25'
 category: 'technical-analysis'
-tags: ['beginners', 'trading', 'small-deposit']
 draft: true
 ---
 

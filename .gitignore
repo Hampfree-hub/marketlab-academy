@@ -117,3 +117,7 @@ src/content/**/article-[0-9]*/
 # Локальные архивы (НЕ отправлять в GitHub!)
 **/_archive/
 ../_archive/
+
+# Временные/служебные папки (не коммитить)
+_tmp_untracked/
+scripts/docs/

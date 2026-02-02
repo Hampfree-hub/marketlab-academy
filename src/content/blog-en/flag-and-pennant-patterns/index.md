@@ -3,7 +3,6 @@ title: 'Flag and Pennant Patterns in Trading'
 description: 'How to use flag and pennant patterns to find entries: bullish and bearish flags, identification rules, trade setup, and confirmation.'
 pubDate: '2026-01-27'
 category: 'technical-analysis'
-tags: ['patterns', 'technical-analysis', 'trading']
 ---
 
 Flag and pennant patterns are classic technical analysis continuation structures. They often appear on crypto charts and help traders time entries after a short pause in a strong move.

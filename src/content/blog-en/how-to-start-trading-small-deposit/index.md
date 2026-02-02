@@ -3,7 +3,6 @@ title: 'How to Start Trading with a Small Deposit'
 description: 'Beginner-friendly guide: how to start crypto trading with a small balance, which strategies to use, and how to minimize risk.'
 pubDate: '2026-01-25'
 category: 'technical-analysis'
-tags: ['beginners', 'trading', 'small-deposit']
 draft: true
 ---
 

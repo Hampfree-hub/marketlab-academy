@@ -3,7 +3,6 @@ title: 'Estrategias para mercados laterales (rango)'
 description: 'Cómo operar un mercado lateral: range trading, grid trading, señales con osciladores y reglas de gestión de riesgo.'
 pubDate: '2026-01-27'
 category: 'technical-analysis'
-tags: ['strategies', 'sideways-trend', 'range-trading']
 ---
 
 Un mercado lateral (rango) es un periodo en el que el precio se mueve dentro de un canal horizontal sin una dirección clara. Gran parte del tiempo el mercado está en rangos, por lo que saber operarlos es una habilidad clave.

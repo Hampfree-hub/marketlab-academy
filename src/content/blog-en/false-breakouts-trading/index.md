@@ -3,7 +3,6 @@ title: 'False Breakouts in Trading'
 description: 'How to spot and trade false breakouts of support and resistance: setups, identification rules, filters, and common mistakes.'
 pubDate: '2026-01-27'
 category: 'technical-analysis'
-tags: ['patterns', 'support-resistance', 'trading']
 ---
 
 False breakouts are one of the most common market situations: price briefly breaks a support or resistance level, but then quickly returns back into the range. Understanding how false breakouts work helps you avoid bad entries and find high-quality reversals.

@@ -3,7 +3,6 @@ title: 'Risk Management for Crypto Trading Bots'
 description: 'How to manage risk in automated crypto trading: position sizing, stop-loss rules, drawdown limits, diversification, and safe bot configuration.'
 pubDate: '2026-01-25'
 category: 'technical-analysis'
-tags: ['risk-management', 'trading-bots', 'beginners']
 draft: true
 ---
 

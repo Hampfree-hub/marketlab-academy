@@ -339,7 +339,11 @@ category: 'technical-analysis'  # Одна из 4 категорий
 - `bannerImage` — баннер (создаётся автоматически через компонент `<Banner>`)
 - `pinned` — закрепить статью (boolean)
 
-**Не используем:** `metaOgTitle` — для OG и соцсетей везде используется `title`. В новые статьи не добавлять. Сверяться с актуальными статьями (bitcoin-basics, technical-analysis-rsi), а не со старыми планами.
+**Не используем в frontmatter:**
+- `metaOgTitle` — для OG и соцсетей везде используется `title`.
+- **`tags`** — в блоге используется только **`category`** (одна из 4 категорий). Поле `tags` не добавлять; сверяться со структурой статей `bitcoin-basics`, `what-are-backtests` (там только title, description, pubDate, category).
+
+В новые статьи не добавлять лишние поля. Сверяться с актуальными статьями (bitcoin-basics, technical-analysis-rsi), а не со старыми планами.
 
 **Автоматические поля:**
 - `readingTime` — время чтения (вычисляется автоматически: слова / 200)
