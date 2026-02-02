@@ -121,3 +121,4 @@ src/content/**/article-[0-9]*/
 # Временные/служебные папки (не коммитить)
 _tmp_untracked/
 scripts/docs/
+commit-msg-tmp.txt

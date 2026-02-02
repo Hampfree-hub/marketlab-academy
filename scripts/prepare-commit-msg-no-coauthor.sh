@@ -6,7 +6,10 @@
 MSG_FILE="$1"
 [ -z "$MSG_FILE" ] || [ ! -f "$MSG_FILE" ] && exit 0
 
-# Удалить строки Co-authored-by (любые)
-sed -i.bak '/^Co-authored-by:/d' "$MSG_FILE" 2>/dev/null || sed -i '/^Co-authored-by:/d' "$MSG_FILE" 2>/dev/null || true
-rm -f "${MSG_FILE}.bak" 2>/dev/null || true
+# Удалить строки, содержащие Co-authored-by или cursoragent (любой формат)
+if sed --version 2>/dev/null | grep -q GNU; then
+  sed -i '/Co-authored-by:/d; /cursoragent/d' "$MSG_FILE"
+else
+  sed -i.bak -e '/Co-authored-by:/d' -e '/cursoragent/d' "$MSG_FILE" && rm -f "${MSG_FILE}.bak"
+fi
 exit 0
