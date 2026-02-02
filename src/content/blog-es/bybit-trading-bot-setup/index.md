@@ -7,15 +7,15 @@ tags: ['bybit', 'trading-bots', 'automation', 'api']
 draft: true
 ---
 
-Automatizar en Bybit permite operar 24/7 sin monitorear el mercado todo el tiempo. Un bot ejecuta reglas predefinidas y puede ayudar a mantener disciplina.
+Automatizar en Bybit permite operar 24/7 sin monitorear el mercado todo el tiempo. Esta guía es para conectar **plataformas o servicios externos** de bots a Bybit vía API; las herramientas integradas de Bybit en la web no requieren API keys.
 
-Este borrador describe un setup práctico y seguro: qué necesitas, cómo crear API keys y qué errores evitar.
+Qué necesitas, cómo crear API keys, conectarlas a tu plataforma y qué errores evitar.
 
 ## Qué necesitas
 
 - cuenta Bybit verificada
 - fondos para trading y comisiones
-- **API keys** (para conectar el bot)
+- **API keys** (para conectar un bot o plataforma externa a Bybit)
 - una estrategia (grid/DCA) y reglas de riesgo
 
 ## Paso 1: Cuenta y verificación

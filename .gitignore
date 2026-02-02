@@ -78,6 +78,8 @@ OPTIMIZATION_GUIDELINES_SUMMARY.md
 IMAGES_REQUIRED.md
 IMAGES_MECHANICS.md
 docs/REPO_SYNC_AND_AUDIT.md
+docs/PRIORITY_*.md
+docs/REPO_STATUS*.md
 .analysys_and_optimization
 
 # Конфиденциальные документы — НИКОГДА в публичный репо!
@@ -88,6 +90,15 @@ docs/*ARCHIVE*.md
 docs/*CATEGOR*.md
 **/Veles*
 **/veles*
+
+# Черновики и внутренняя структура статей (не в публичный репо)
+the-structure-of-articles-on-02.02
+docs/SYNC_AND_CONTENT_AUDIT*.md
+docs/SAFE_COMMIT_PROCEDURE.md
+docs/BANNER_LAYOUT_TEST_CHECKLIST.md
+docs/BLOG_BANNER_AND_LAYOUT_RULES.md
+NEXT_STEPS_PRODUCTION_AND_PLANS.md
+NEXT_STEPS*.md
 
 # Документация — ТОЛЬКО в приватном репо (README, механика картинок)
 docs/README.md
