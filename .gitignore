@@ -71,7 +71,7 @@ secrets/
 *COMMIT_PLAN*.md
 *INTEGRATION_COMPLETE*.md
 
-# Планы, стратегии, статусы, аудиты — ТОЛЬКО ПРИВАТНЫЙ РЕПО!
+# Планы, стратегии, статусы, аудиты — ТОЛЬКО ПРИВАТНЫЙ РЕПО (hampfreeblog-private)!
 ARTICLES_OPTIMIZATION_STATUS.md
 ARTICLES_OPTIMIZATION_PLAN*.md
 OPTIMIZATION_GUIDELINES_SUMMARY.md
@@ -80,6 +80,14 @@ IMAGES_MECHANICS.md
 docs/REPO_SYNC_AND_AUDIT.md
 docs/PRIORITY_*.md
 docs/REPO_STATUS*.md
+docs/SYNC_AND_CONTENT_AUDIT*.md
+docs/PLANS_AND_CATEGORIES.md
+docs/BANNER_LAYOUT_TEST_CHECKLIST.md
+docs/BLOG_BANNER_AND_LAYOUT_RULES.md
+docs/SAFE_COMMIT_PROCEDURE.md
+NEXT_STEPS_PRODUCTION_AND_PLANS.md
+NEXT_STEPS*.md
+docs/TO_PRIVATE_REPO.md
 .analysys_and_optimization
 
 # Конфиденциальные документы — НИКОГДА в публичный репо!

@@ -12,9 +12,10 @@ fi
 
 # 2) Запрещённые пути (планы, архив, конфид — НЕ трогаем src/content/)
 STAGED_NAMES=$(git diff --cached --name-only)
-if echo "$STAGED_NAMES" | grep -E "^(docs/ARCHIVE_RECOMMENDATIONS|docs/PLANS_AND_CATEGORIES|docs/.*PLAN.*\.md|docs/.*ARCHIVE.*\.md|docs/.*CATEGOR.*\.md)" > /dev/null 2>&1; then
-  echo "❌ PRE-COMMIT: В коммите есть конфиденциальные документы (планы, архив, категории)."
-  echo "   Эти файлы только в приватном репо. Добавьте их в .gitignore и не коммитьте."
+FORBIDDEN="docs/ARCHIVE_RECOMMENDATIONS|docs/PLANS_AND_CATEGORIES|docs/.*PLAN.*\.md|docs/.*ARCHIVE.*\.md|docs/.*CATEGOR.*\.md|docs/BANNER_LAYOUT|docs/BLOG_BANNER_AND_LAYOUT|docs/SAFE_COMMIT_PROCEDURE|NEXT_STEPS.*\.md"
+if echo "$STAGED_NAMES" | grep -E "^($FORBIDDEN)" > /dev/null 2>&1; then
+  echo "❌ PRE-COMMIT: В коммите есть конфиденциальные/внутренние документы."
+  echo "   Эти файлы только в приватном репо (hampfreeblog-private). Добавьте в .gitignore и не коммитьте."
   exit 1
 fi
 if echo "$STAGED_NAMES" | grep -iE "Veles|veles" > /dev/null 2>&1; then

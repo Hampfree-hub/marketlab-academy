@@ -36,6 +36,8 @@ Testing helps identify strengths and weaknesses and optimize parameters (e.g. st
 
 TradingView uses **Pine Script** to define entry/exit logic. The Strategy Tester computes profitability, max drawdown, profit factor, and trade count. Good for visual, quick checks. Strategies based on [candlestick patterns](/en/library/what-are-doji-candles) such as doji can be tested together with other signals.
 
+![Strategy tester window: equity curve, trade count, and win rate](./assets/Example-of-backtest-results.png)
+
 ### 2. Python (Backtrader, VectorBT, etc.)
 
 Libraries like Backtrader or VectorBT allow deeper statistical analysis and testing on large datasets or portfolios. More flexible but requires coding.

@@ -22,9 +22,9 @@ npm run build
 
 ## 0.1) Подтянуть последние изменения (git pull) / коммит и пуш — ошибки
 
-**Коммит и пуш из Cursor:** работают, когда команды выполняются с правами **`all`** (см. [SAFE_COMMIT_PROCEDURE.md](./SAFE_COMMIT_PROCEDURE.md)). Не переключаться на PowerShell, если коммит из Cursor успешен.
+**Коммит и пуш из IDE:** работают, когда команды выполняются с правами **`all`** (см. процедуру безопасного коммита в приватном репо). Не переключаться на PowerShell, если коммит из IDE успешен.
 
-**Симптом:** при `git pull` (или `git commit`/`git push`) ошибка вроде *CreateFileMapping / Win32 error 5* в терминале Cursor.
+**Симптом:** при `git pull` (или `git commit`/`git push`) ошибка вроде *CreateFileMapping / Win32 error 5* в встроенном терминале IDE.
 
 **Решение:**
 
@@ -33,7 +33,7 @@ npm run build
   cd d:\Projects
   git pull
   ```
-- Либо в Git Bash **вне** песочницы/IDE: закрыть Cursor, открыть Git Bash, перейти в `d:/Projects`, выполнить `git pull origin main`.
+- Либо в Git Bash **вне** песочницы/IDE: закрыть IDE, открыть Git Bash, перейти в `d:/Projects`, выполнить `git pull origin main`.
 - Если нужен merge: `git pull origin main --no-rebase` или разрешить конфликты по подсказкам git.
 
 После успешного pull снова установить зависимости, если обновился `package.json`: `npm install`.
@@ -51,7 +51,7 @@ npm run build
 - **Dev**: `npm run dev` → открыть `http://127.0.0.1:4321/ru/`
 - **Preview (после build)**: `npm run build` → `npm run preview` → открыть `http://127.0.0.1:4321/ru/`
 
-**Если «ничего не работает» / дев не запущен:** откройте **PowerShell** или **cmd** (не Git Bash в Cursor), перейдите в корень проекта (`cd d:\Projects`) и выполните `npm run dev`. После старта откройте в браузере `http://127.0.0.1:4321/ru/`.
+**Если «ничего не работает» / дев не запущен:** откройте **PowerShell** или **cmd** (не встроенный Git Bash IDE), перейдите в корень проекта (`cd d:\Projects`) и выполните `npm run dev`. После старта откройте в браузере `http://127.0.0.1:4321/ru/`.
 
 ## 2) Открыт не тот адрес / порт
 
