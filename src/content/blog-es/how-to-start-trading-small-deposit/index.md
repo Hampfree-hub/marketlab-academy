@@ -14,7 +14,7 @@ Sí, pero hay limitaciones:
 
 - menos margen para posiciones
 - comisiones pesan más (en %)
-- diversificar es más difícil
+- diversificar es más difícil. Cómo hacerlo con poco capital: [Diversificación y configuración del sistema de trading](/es/library/diversification-trading-system-part-1/)
 
 También hay ventajas:
 
@@ -26,7 +26,7 @@ También hay ventajas:
 
 ### 1) Regla del 1–2%
 
-Limita el riesgo por operación/idea. Con $100, arriesgar $1–2 por idea es un buen comienzo.
+Limita el riesgo por operación/idea. Con $100, arriesgar $1–2 por idea es un buen comienzo. Más en [Gestión de riesgos en trading con bots](/es/library/risk-management-crypto-trading-bots/).
 
 ### 2) Estrategias conservadoras
 
