@@ -71,6 +71,9 @@ secrets/
 *COMMIT_PLAN*.md
 *INTEGRATION_COMPLETE*.md
 
+# Аудит безопасности — только локально, не в публичный репо
+docs/SECURITY_AUDIT*.md
+
 # Планы, стратегии, статусы, аудиты — ТОЛЬКО ПРИВАТНЫЙ РЕПО (hampfreeblog-private)!
 ARTICLES_OPTIMIZATION_STATUS.md
 ARTICLES_OPTIMIZATION_PLAN*.md
