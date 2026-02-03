@@ -1,7 +1,7 @@
 ---
 title: 'ROC (Rate of Change) in Cryptocurrency Trading'
 description: 'What the ROC (Rate of Change) indicator is: how it measures price change speed, signals, and combination with RSI and Williams %R.'
-pubDate: '2026-02-10'
+pubDate: '2026-02-03'
 category: 'technical-analysis'
 ---
 

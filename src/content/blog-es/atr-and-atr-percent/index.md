@@ -1,7 +1,7 @@
 ---
 title: 'ATR y ATR% en el trading de criptomonedas'
 description: 'Qué son Average True Range (ATR) y ATR%: cómo miden la volatilidad, ajuste de stop-loss y relación con riesgo e indicadores.'
-pubDate: '2026-02-10'
+pubDate: '2026-02-03'
 category: 'technical-analysis'
 ---
 

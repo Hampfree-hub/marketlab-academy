@@ -1,7 +1,7 @@
 ---
 title: 'Bollinger Bands in Cryptocurrency Trading'
 description: 'What Bollinger Bands are: how they are built, overbought and oversold zones, and combination with RSI and Williams %R.'
-pubDate: '2026-02-10'
+pubDate: '2026-02-03'
 category: 'technical-analysis'
 ---
 

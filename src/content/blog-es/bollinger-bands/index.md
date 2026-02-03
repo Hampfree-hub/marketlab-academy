@@ -1,7 +1,7 @@
 ---
 title: 'Bandas de Bollinger en el trading de criptomonedas'
 description: 'Qué son las bandas de Bollinger: cómo se construyen, zonas de sobrecompra y sobreventa, combinación con RSI y Williams %R.'
-pubDate: '2026-02-10'
+pubDate: '2026-02-03'
 category: 'technical-analysis'
 ---
 

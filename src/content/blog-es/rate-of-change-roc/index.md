@@ -1,7 +1,7 @@
 ---
 title: 'ROC (Rate of Change) en el trading de criptomonedas'
 description: 'Qué es el indicador ROC (Rate of Change): cómo mide la velocidad de cambio del precio, señales y combinación con RSI y Williams %R.'
-pubDate: '2026-02-10'
+pubDate: '2026-02-03'
 category: 'technical-analysis'
 ---
 

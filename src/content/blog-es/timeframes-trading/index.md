@@ -1,7 +1,7 @@
 ---
 title: 'Timeframes en el trading: qué son y cómo elegirlos'
 description: 'Qué son los timeframes en el análisis técnico: M1, M5, H1, H4, D1, cómo elegir según el estilo de trading y relación con indicadores y estrategias.'
-pubDate: '2026-02-10'
+pubDate: '2026-02-03'
 category: 'technical-analysis'
 ---
 

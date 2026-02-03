@@ -1,7 +1,7 @@
 ---
 title: 'ORACLE 1.1: configuración de la estrategia con cuatro indicadores'
 description: 'Resumen de la configuración ORACLE 1.1: Bollinger Bands, ATR%, ROC, Williams %R en timeframes H1→M5, backtests y prueba en BingX.'
-pubDate: '2026-02-10'
+pubDate: '2026-02-03'
 category: 'algo-trading'
 ---
 
