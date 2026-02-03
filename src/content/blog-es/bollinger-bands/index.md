@@ -3,7 +3,6 @@ title: 'Bandas de Bollinger en el trading de criptomonedas'
 description: 'Qué son las bandas de Bollinger: cómo se construyen, zonas de sobrecompra y sobreventa, combinación con RSI y Williams %R.'
 pubDate: '2026-02-10'
 category: 'technical-analysis'
-draft: true
 ---
 
 Las bandas de Bollinger son un indicador de volatilidad: línea media (media móvil) y dos bandas por encima y por debajo, cuya distancia depende de la desviación estándar del precio. Ayudan a valorar el "recorrido" del movimiento y a buscar rebotes en los límites del canal. En este artículo: cómo se calculan las bandas, cómo leer los toques de la banda superior e inferior y cómo combinarlas con [RSI](/es/library/technical-analysis-rsi/) y [Williams %R](/es/library/williams-percent-range-r/).

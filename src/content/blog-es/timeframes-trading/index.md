@@ -3,7 +3,6 @@ title: 'Timeframes en el trading: qué son y cómo elegirlos'
 description: 'Qué son los timeframes en el análisis técnico: M1, M5, H1, H4, D1, cómo elegir según el estilo de trading y relación con indicadores y estrategias.'
 pubDate: '2026-02-10'
 category: 'technical-analysis'
-draft: true
 ---
 
 El timeframe es el intervalo de tiempo que representa una vela (o barra) en el gráfico. La elección del timeframe determina la configuración de los indicadores, la cantidad de señales y el tipo de estrategia: scalping, trading intradía o swing. En este artículo: qué son los timeframes, cómo se designan, cómo elegir según tu estilo y cómo relacionarlos con [RSI](/es/library/technical-analysis-rsi/), [backtests](/es/library/what-are-backtests/) y estrategias.

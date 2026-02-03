@@ -4,6 +4,9 @@ import Layout from '../../../layouts/BlogPost.astro';
 import { estimateReadTime, isTempArticle } from '../../../utils/blog';
 
 export async function getStaticPaths() {
+	function normalizeSlug(id: string) {
+		return id.replace(/\/index$/, '').replace(/\/+$/, '');
+	}
 	const langs = ['ru', 'en', 'es'];
 	const paths = [];
 
@@ -14,9 +17,10 @@ export async function getStaticPaths() {
 		for (const post of posts) {
 			if (isTempArticle(post.id)) continue;
 			if (post.data.draft) continue; // Пропускаем draft статьи
+			const slug = normalizeSlug(post.id);
 			paths.push({
-				params: { lang, slug: post.id },
-				props: post,
+				params: { lang, slug },
+				props: { ...post, id: slug },
 			});
 		}
 	}

@@ -206,21 +206,36 @@ article {
 
 .prose img {
 	border: 4px solid var(--color-border);
-	margin: var(--space-2) 0; /* Уменьшено до 16px сверху и снизу */
-	width: 100% !important;
+	margin: var(--space-2) 0; /* 16px сверху и снизу */
+	max-width: 100% !important;
+	width: auto !important;
+	height: auto !important;
+	min-height: unset !important;
 	display: block !important;
-	/* КРИТИЧНО: Фиксированное соотношение сторон 16:9 - НЕ НАРУШАТЬ! */
-	aspect-ratio: 16 / 9 !important;
-	/* Убираем height: auto - aspect-ratio сам управляет высотой */
-	max-height: none !important;
-	min-height: 0 !important;
-	object-fit: cover !important;
+	/* Сохраняем пропорции — без обрезки и без сжатия по высоте */
+	object-fit: contain !important;
 	object-position: center !important;
-	/* Убираем любые возможные переопределения */
+	aspect-ratio: unset !important;
 	padding: 0 !important;
 	box-sizing: border-box !important;
-	/* Принудительно убираем любые inline стили высоты */
-	height: unset !important;
+}
+
+/* Обёртка figure (markdown/astro) не должна сжимать изображение */
+.prose figure {
+	max-width: 100%;
+	width: fit-content;
+	aspect-ratio: unset !important;
+}
+.prose figure img {
+	width: auto !important;
+	height: auto !important;
+	max-width: 100% !important;
+	aspect-ratio: unset !important;
+}
+
+/* Отступ после параграфа со ссылкой (например «✖️ 🪄 BINGX ZEC ORACLE 1.1») перед следующим изображением */
+.prose p:has(a) + img {
+	margin-top: var(--space-4) !important;
 }
 
 /* Уменьшаем отступ сверху для заголовков, которые идут сразу после изображений */

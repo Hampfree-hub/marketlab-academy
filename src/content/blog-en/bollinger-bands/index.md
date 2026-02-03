@@ -3,7 +3,6 @@ title: 'Bollinger Bands in Cryptocurrency Trading'
 description: 'What Bollinger Bands are: how they are built, overbought and oversold zones, and combination with RSI and Williams %R.'
 pubDate: '2026-02-10'
 category: 'technical-analysis'
-draft: true
 ---
 
 Bollinger Bands are a volatility indicator: a middle line (moving average) and two bands above and below, whose distance depends on the standard deviation of price. The tool helps gauge the "range" of movement and look for bounces off the channel boundaries. This article covers how the bands are calculated, how to read touches of the upper and lower band, and how to combine them with [RSI](/en/library/technical-analysis-rsi/) and [Williams %R](/en/library/williams-percent-range-r/).

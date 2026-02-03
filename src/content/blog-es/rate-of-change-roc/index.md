@@ -3,7 +3,6 @@ title: 'ROC (Rate of Change) en el trading de criptomonedas'
 description: 'Qué es el indicador ROC (Rate of Change): cómo mide la velocidad de cambio del precio, señales y combinación con RSI y Williams %R.'
 pubDate: '2026-02-10'
 category: 'technical-analysis'
-draft: true
 ---
 
 ROC (Rate of Change) es un oscilador de momentum: muestra en qué porcentaje ha cambiado el precio en el periodo elegido. La línea cero y las desviaciones por encima y por debajo dan una idea de la aceleración o desaceleración y de posibles reversiones. En este artículo: cómo se calcula el ROC, cómo leer niveles y divergencias y cómo combinarlo con [RSI](/es/library/technical-analysis-rsi/) y [Williams %R](/es/library/williams-percent-range-r/) en la misma familia de osciladores.
