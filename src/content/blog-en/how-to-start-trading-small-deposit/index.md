@@ -1,9 +1,8 @@
 ---
 title: 'How to Start Trading with a Small Deposit'
 description: 'Beginner-friendly guide: how to start crypto trading with a small balance, which strategies to use, and how to minimize risk.'
-pubDate: '2026-01-25'
+pubDate: '2026-02-05'
 category: 'technical-analysis'
-draft: true
 ---
 
 You can start trading crypto even with a small amount. Many beginners think they need a large bankroll, but the key is not the size of capital — it’s **risk management**, realistic expectations, and choosing strategies that match your constraints.

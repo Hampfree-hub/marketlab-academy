@@ -1,9 +1,8 @@
 ---
 title: 'Cómo configurar un bot de trading en Bybit'
 description: 'Guía paso a paso: crear API keys de forma segura, conectar un bot, elegir estrategia y lanzar automatización en Bybit.'
-pubDate: '2026-01-25'
+pubDate: '2026-02-05'
 category: 'algo-trading'
-draft: true
 ---
 
 Automatizar en Bybit permite operar 24/7 sin monitorear el mercado todo el tiempo. Esta guía es para conectar **plataformas o servicios externos** de bots a Bybit vía API; las herramientas integradas de Bybit en la web no requieren API keys. Puedes usar los bots integrados de Bybit o conectar bots de otras plataformas de automatización — por ejemplo [Veles](https://veles.finance/invite/washmallay) (enlace de referido: registrarte por él beneficia a ambos). Si conectas una plataforma externa y necesitas ayuda, escríbenos; contactos en la página [Sobre el proyecto](/es/about/).

@@ -1,9 +1,8 @@
 ---
 title: 'Risk Management for Crypto Trading Bots'
 description: 'How to manage risk in automated crypto trading: position sizing, stop-loss rules, drawdown limits, diversification, and safe bot configuration.'
-pubDate: '2026-01-25'
+pubDate: '2026-02-05'
 category: 'technical-analysis'
-draft: true
 ---
 
 Risk management is the foundation of long-term trading performance — especially when using automated systems. Bots execute exactly what you configure, so the trader is still responsible for controlling downside. This draft outlines practical rules for risk control when trading crypto with bots.

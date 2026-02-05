@@ -1,9 +1,8 @@
 ---
 title: 'Gestión de riesgo para bots de trading cripto'
 description: 'Cómo gestionar riesgo en trading automatizado: tamaño de posición, stop-loss, límites de drawdown, diversificación y configuración segura.'
-pubDate: '2026-01-25'
+pubDate: '2026-02-05'
 category: 'technical-analysis'
-draft: true
 ---
 
 La gestión de riesgo es la base de la supervivencia en trading — especialmente con bots. Un bot ejecuta exactamente lo que configuras, por lo que el control del riesgo sigue siendo responsabilidad del trader. Este borrador resume reglas prácticas.

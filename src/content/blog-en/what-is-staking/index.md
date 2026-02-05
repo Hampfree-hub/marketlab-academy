@@ -1,9 +1,8 @@
 ---
 title: 'What Is Crypto Staking'
 description: 'A practical guide to staking: how it works, what you can stake, main types (centralized vs on-chain), risks, and how to start.'
-pubDate: '2026-01-25'
+pubDate: '2026-02-05'
 category: 'crypto'
-draft: true
 ---
 
 Crypto staking is the process of locking your crypto assets in a blockchain network to help secure and operate the network and, in return, earn rewards. Staking is most common in **Proof of Stake (PoS)** and related consensus systems. Unlike mining, you don’t need special hardware — you mainly need the asset and a way to stake it.

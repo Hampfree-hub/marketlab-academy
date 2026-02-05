@@ -1,9 +1,8 @@
 ---
 title: 'Qué es el staking de criptomonedas'
 description: 'Guía práctica de staking: cómo funciona, tipos (exchange vs on-chain), riesgos y cómo empezar.'
-pubDate: '2026-01-25'
+pubDate: '2026-02-05'
 category: 'crypto'
-draft: true
 ---
 
 El **staking** es el proceso de bloquear criptoactivos para apoyar el funcionamiento y la seguridad de una red blockchain (normalmente Proof of Stake) y recibir recompensas. A diferencia del mining, no necesitas hardware especial: principalmente necesitas el activo y una forma de hacer staking.
