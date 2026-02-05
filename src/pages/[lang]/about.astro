@@ -75,7 +75,7 @@ const breadcrumbItems = [
 							</p>
 							<h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1rem;">Поддержка криптоактивами</h3>
 							<p style="margin-bottom: 0.5rem;"><strong>Адрес (любая EVM-сеть):</strong></p>
-							<p style="margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.9rem; word-break: break-all;">0x7428658Cf98E663080b70214bC41FB45Aa8C4405</p>
+							<button type="button" class="evm-address-copy" data-address="0x7428658Cf98E663080b70214bC41FB45Aa8C4405" title="Копировать адрес">0x7428658Cf98E663080b70214bC41FB45Aa8C4405</button>
 							<p style="margin-bottom: 1rem;">
 								Принимаем: ETH, USDT, USDC и другие токены в сетях <strong>Ethereum, Polygon, Arbitrum, Optimism, BSC</strong>.
 							</p>
@@ -121,7 +121,7 @@ const breadcrumbItems = [
 							</p>
 							<h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1rem;">Support via crypto</h3>
 							<p style="margin-bottom: 0.5rem;"><strong>Address (any EVM network):</strong></p>
-							<p style="margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.9rem; word-break: break-all;">0x7428658Cf98E663080b70214bC41FB45Aa8C4405</p>
+							<button type="button" class="evm-address-copy" data-address="0x7428658Cf98E663080b70214bC41FB45Aa8C4405" title="Copy address">0x7428658Cf98E663080b70214bC41FB45Aa8C4405</button>
 							<p style="margin-bottom: 1rem;">
 								We accept: ETH, USDT, USDC and other tokens on <strong>Ethereum, Polygon, Arbitrum, Optimism, BSC</strong>.
 							</p>
@@ -167,7 +167,7 @@ const breadcrumbItems = [
 							</p>
 							<h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1rem;">Apoyo en cripto</h3>
 							<p style="margin-bottom: 0.5rem;"><strong>Dirección (cualquier red EVM):</strong></p>
-							<p style="margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.9rem; word-break: break-all;">0x7428658Cf98E663080b70214bC41FB45Aa8C4405</p>
+							<button type="button" class="evm-address-copy" data-address="0x7428658Cf98E663080b70214bC41FB45Aa8C4405" title="Copiar dirección">0x7428658Cf98E663080b70214bC41FB45Aa8C4405</button>
 							<p style="margin-bottom: 1rem;">
 								Aceptamos: ETH, USDT, USDC y otros tokens en <strong>Ethereum, Polygon, Arbitrum, Optimism, BSC</strong>.
 							</p>
@@ -210,6 +210,56 @@ const breadcrumbItems = [
 				color: var(--nes-accent-green);
 				font-size: 1.2rem;
 			}
+			.evm-address-copy {
+				display: block;
+				width: 100%;
+				max-width: 100%;
+				margin-bottom: 1rem;
+				padding: 0.6rem 0.75rem;
+				font-family: var(--font-mono);
+				font-size: 0.9rem;
+				word-break: break-all;
+				text-align: left;
+				background: transparent;
+				color: inherit;
+				border: 1px solid var(--color-border, rgba(128, 128, 128, 0.35));
+				border-radius: 4px;
+				cursor: pointer;
+				transition: border-color 0.15s, background 0.15s;
+			}
+			.evm-address-copy:hover {
+				border-color: var(--nes-accent-green, #7fb414);
+				background: rgba(127, 180, 20, 0.06);
+			}
+			.evm-address-copy:focus {
+				outline: 2px solid var(--nes-accent-green, #7fb414);
+				outline-offset: 2px;
+			}
+			.evm-address-copy.copied {
+				border-color: var(--nes-accent-green);
+				background: rgba(127, 180, 20, 0.1);
+			}
 		</style>
+		<script>
+			document.querySelectorAll('.evm-address-copy').forEach((btn) => {
+				btn.addEventListener('click', async () => {
+					const address = btn.getAttribute('data-address') || btn.textContent?.trim() || '';
+					const lang = document.documentElement.getAttribute('lang') || 'en';
+					const copiedText = { ru: 'Скопировано!', en: 'Copied!', es: '¡Copiado!' }[lang] || 'Copied!';
+					try {
+						await navigator.clipboard.writeText(address);
+						btn.classList.add('copied');
+						const was = btn.textContent;
+						btn.textContent = copiedText;
+						setTimeout(() => { btn.textContent = was; btn.classList.remove('copied'); }, 1500);
+					} catch {
+						const range = document.createRange();
+						range.selectNodeContents(btn);
+						getSelection()?.removeAllRanges();
+						getSelection()?.addRange(range);
+					}
+				});
+			});
+		</script>
 	</body>
 </html>
