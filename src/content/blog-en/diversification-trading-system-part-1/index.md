@@ -31,7 +31,7 @@ Don’t concentrate all volume in one bot or one strategy: [DCA](/en/library/dca
 
 ## Diversification by venues
 
-Better not keep all volume on one exchange: uptime, withdrawal limits, and reputation matter. During long downtime or withdrawal issues access to funds is limited; if everything is on one venue — risk is higher. What to look for when choosing and how to assess reliability — in the article on [exchange uptime and downtime](/en/library/exchange-uptime-downtime/). Separate exchange reviews (Bybit, Bitget, BingX, etc.) are planned; they will include comparison criteria and practical tips to get started.
+Better not keep all volume on one exchange: uptime, withdrawal limits, and reputation matter. During long downtime or withdrawal issues access to funds is limited; if everything is on one venue — risk is higher. What to look for when choosing and how to assess reliability — in the article on [exchange uptime and downtime](/en/library/exchange-uptime-downtime/). Separate exchange reviews ([Bybit](https://www.bybit.com/invite?ref=PWMD24), Bitget, [BingX](https://bingxdao.com/invite/CUBDBG/), etc.) are planned; they will include comparison criteria and practical tips to get started.
 
 ## Conclusion
 

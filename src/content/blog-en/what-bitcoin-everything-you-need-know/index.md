@@ -61,7 +61,7 @@ Total supply is capped at **21 million** coins.
 ### 1. Get a wallet
 - **Hardware (Ledger, Trezor):** Highest security (keys stored offline).
 - **Mobile (e.g. Trust Wallet):** Convenient for day-to-day use.
-- **Exchange wallets:** Held on trading platforms ([Bybit](https://www.bybit.com/), [Bitget](https://partner.bitget.com/)).
+- **Exchange wallets:** Held on trading platforms ([Bybit](https://www.bybit.com/invite?ref=PWMD24), [Bitget](https://partner.bitget.com/)).
 
 ![Comparison of hardware, mobile, and exchange wallets for Bitcoin](../bitcoin-basics/assets/wallet-types-comparison.png)
 

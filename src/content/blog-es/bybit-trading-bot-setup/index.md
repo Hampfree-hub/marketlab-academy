@@ -5,7 +5,9 @@ pubDate: '2026-02-05'
 category: 'algo-trading'
 ---
 
-Automatizar en Bybit permite operar 24/7 sin monitorear el mercado todo el tiempo. Esta guía es para conectar **plataformas o servicios externos** de bots a Bybit vía API; las herramientas integradas de Bybit en la web no requieren API keys. Puedes usar los bots integrados de Bybit o conectar bots de otras plataformas de automatización — por ejemplo [Veles](https://veles.finance/invite/washmallay) (enlace de referido: registrarte por él beneficia a ambos). Si conectas una plataforma externa y necesitas ayuda, escríbenos; contactos en la página [Sobre el proyecto](/es/about/).
+Automatizar en Bybit permite operar 24/7 sin monitorear el mercado todo el tiempo. Regístrate en [Bybit](https://www.bybit.com/es-ES/invite?ref=PWMD24) (enlace de referido) si aún no tienes cuenta.
+
+Esta guía es para conectar **plataformas o servicios externos** de bots a Bybit vía API; las herramientas integradas de Bybit en la web no requieren API keys. Puedes usar los bots integrados de Bybit o conectar bots de otras plataformas de automatización — por ejemplo [Veles](https://veles.finance/invite/washmallay) (enlace de referido: registrarte por él beneficia a ambos). Si conectas una plataforma externa y necesitas ayuda, escríbenos; contactos en la página [Sobre el proyecto](/es/about/).
 
 Qué necesitas, cómo crear API keys, conectarlas a tu plataforma y qué errores evitar.
 

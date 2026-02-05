@@ -31,7 +31,7 @@ No concentres todo el volumen en un bot o una estrategia: [DCA](/es/library/dca-
 
 ## Diversificación por plataformas
 
-Mejor no tener todo el volumen en un exchange: el uptime, los límites de retiro y la reputación importan. En downtime largo o problemas de retiro el acceso a fondos se limita; si todo está en una plataforma — el riesgo es mayor. Qué revisar al elegir y cómo valorar la fiabilidad — en el artículo sobre [uptime y downtime del exchange](/es/library/exchange-uptime-downtime/). Reseñas de exchanges (Bybit, Bitget, BingX, etc.) están previstas; incluirán criterios de comparación y consejos prácticos para empezar.
+Mejor no tener todo el volumen en un exchange: el uptime, los límites de retiro y la reputación importan. En downtime largo o problemas de retiro el acceso a fondos se limita; si todo está en una plataforma — el riesgo es mayor. Qué revisar al elegir y cómo valorar la fiabilidad — en el artículo sobre [uptime y downtime del exchange](/es/library/exchange-uptime-downtime/). Reseñas de exchanges ([Bybit](https://www.bybit.com/es-ES/invite?ref=PWMD24), Bitget, [BingX](https://bingxdao.com/invite/CUBDBG/), etc.) están previstas; incluirán criterios de comparación y consejos prácticos para empezar.
 
 ## Conclusión
 

@@ -62,7 +62,7 @@ category: 'crypto'
 ### 1. Создание кошелька
 - **Аппаратные (Ledger, Trezor):** Максимальная безопасность (хранение ключей оффлайн).
 - **Мобильные (Trust Wallet):** Удобство для повседневных операций.
-- **Биржевые:** Хранение на счетах торговых площадок ([Bybit](https://www.bybit.com/ru-RU/sign-up?affiliate_id=35260), [Bitget](https://partner.bitget.com/bg/7S167G)).
+- **Биржевые:** Хранение на счетах торговых площадок ([Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24), [Bitget](https://partner.bitget.com/bg/7S167G)).
 
 ![Сравнение аппаратных, мобильных и биржевых кошельков для Биткоина](../bitcoin-basics/assets/wallet-types-comparison.png)
 

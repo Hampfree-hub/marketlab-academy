@@ -5,7 +5,7 @@ pubDate: '2026-02-03'
 category: 'algo-trading'
 ---
 
-ORACLE versión 1.1 es un conjunto de ajustes de estrategia en el que la señal se forma por la coincidencia de cuatro indicadores en distintos [timeframes](/es/library/timeframes-trading/): de mayor a menor — bandas de Bollinger, ATR%, ROC y Williams %R. Puedes configurar y ejecutar la estrategia en la plataforma de algotrading Veles [enlace de referido](https://veles.finance/invite/washmallay). A continuación: arquitectura de la configuración, qué movimientos buscamos, backtests anuales y enlace a la cuenta de prueba de copia en BingX.
+ORACLE versión 1.1 es un conjunto de ajustes de estrategia en el que la señal se forma por la coincidencia de cuatro indicadores en distintos [timeframes](/es/library/timeframes-trading/): de mayor a menor — bandas de Bollinger, ATR%, ROC y Williams %R. Puedes configurar y ejecutar la estrategia en la plataforma de algotrading Veles [enlace de referido](https://veles.finance/invite/washmallay). A continuación: arquitectura de la configuración, qué movimientos buscamos, backtests anuales y enlace a la cuenta de prueba de copia en [BingX](https://bingxdao.com/invite/CUBDBG/).
 
 **Importante:** este sistema está actualmente en modo de pruebas. Los resultados en BingX son solo informativos; antes de usar la estrategia, consulta [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/) y la serie [Diversificación y configuración del sistema de trading](/es/library/diversification-trading-system-part-1/).
 

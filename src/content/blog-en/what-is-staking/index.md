@@ -30,7 +30,7 @@ Staking isn’t only about passive income — it supports:
 
 ### 1) Centralized staking (via exchanges)
 
-You stake through a platform (e.g., Binance/Bybit/OKX). The platform stakes on your behalf and shares rewards.
+You stake through a platform (e.g., Binance/[Bybit](https://www.bybit.com/invite?ref=PWMD24)/OKX). The platform stakes on your behalf and shares rewards.
 
 **Pros:**
 
