@@ -13,7 +13,7 @@ Puedes empezar a hacer trading de criptomonedas con una suma pequeña. La clave 
 Sí, pero hay limitaciones:
 
 - menos margen para posiciones
-- comisiones pesan más (en %)
+- las comisiones pueden pesar más como % del resultado — conviene tenerlo en cuenta al elegir exchange y frecuencia
 - diversificar es más difícil. Cómo hacerlo con poco capital: [Diversificación y configuración del sistema de trading](/es/library/diversification-trading-system-part-1/)
 
 También hay ventajas:
@@ -24,9 +24,9 @@ También hay ventajas:
 
 ## Principios base
 
-### 1) Regla del 1–2%
+### 1) Límite de riesgo por operación/idea
 
-Limita el riesgo por operación/idea. Con $100, arriesgar $1–2 por idea es un buen comienzo. Más en [Gestión de riesgos en trading con bots](/es/library/risk-management-crypto-trading-bots/).
+Muchas guías recomiendan no arriesgar más del 1–2% por operación. Nosotros usamos otro enfoque: capital repartido entre muchos activos y estrategias, riesgo por idea un poco mayor (~2,5%), pero la diversificación nos ha ayudado a pasar varias correcciones. Lo importante es fijar un límite claro por idea y respetarlo (p. ej. con $100, limitar el riesgo por idea a $2–3). Más en [Gestión de riesgos en trading con bots](/es/library/risk-management-crypto-trading-bots/).
 
 ### 2) Estrategias conservadoras
 

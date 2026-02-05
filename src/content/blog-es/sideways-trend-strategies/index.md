@@ -85,7 +85,7 @@ Lee más en **[Falsos rompimientos en trading](/es/library/false-breakouts-tradi
 Reglas básicas:
 
 1. stop-loss obligatorio
-2. limitar el riesgo por operación (p.ej. 1–2%)
+2. limitar el riesgo por operación/idea (p.ej. 1–2% o según tu enfoque; ver [gestión de riesgo](/es/library/risk-management-crypto-trading-bots/))
 3. tamaño de posición acorde al ancho del rango
 4. diversificar (no concentrar todo en un solo rango)
 

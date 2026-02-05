@@ -14,7 +14,9 @@ La **gestión de riesgo** es un conjunto de reglas para limitar pérdidas y prot
 
 ## Reglas base (compatibles con bots)
 
-1. **Riesgo 1–2%** por idea/ciclo.
+No seguimos al pie de la letra el “1–2% por operación”: nuestro capital está repartido entre muchos activos y estrategias, así que más parte está “en trabajo”. El riesgo por idea es un poco mayor (~2,5%), pero con diversificación y reglas de salida claras hemos comprobado que el enfoque es al menos igual de seguro y ha ayudado a pasar varias correcciones. En cualquier caso:
+
+1. **Límite de riesgo** por idea/ciclo. Define un máximo de pérdida por idea y no lo superes.
 2. **Salida definida:** stop-loss o nivel de invalidación.
 3. **Diversificación:** varios activos/estrategias, no todo en un bot.
 4. **Límite de drawdown:** pausar bots si se alcanza.

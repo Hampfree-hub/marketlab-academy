@@ -23,7 +23,9 @@ Crypto can move fast, gaps happen, liquidity can disappear, and leverage magnifi
 
 ## Core rules (bot-friendly)
 
-1. **1–2% risk per trade** (or per bot cycle). Define a maximum loss for one idea.
+We don’t stick to the classic “1–2% per trade” rigidly: our capital is spread across many assets and strategies, so more of it is “at work” at once. Risk per idea is a bit higher (~2.5%), but with strong diversification and clear exit rules we’ve found this approach at least as safe — it has helped us through several corrections. Whatever your approach, keep these in mind:
+
+1. **Cap risk per trade / per bot cycle.** Set a maximum loss for one idea and don’t exceed it.
 2. **Always define an exit**: stop-loss / invalidation level.
 3. **Diversify** across assets/strategies (don’t concentrate everything in one bot).
 4. **Set a max drawdown limit** for the account and pause bots if reached.

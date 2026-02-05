@@ -15,7 +15,7 @@ This draft explains practical principles for small deposits and simple strategie
 Yes. But trading with a small balance has constraints:
 
 - you can’t open large positions
-- fees matter more (as a % of your balance)
+- fees can matter more as a share of small trades — worth considering when choosing an exchange and trade frequency
 - diversification is harder
 
 There are also benefits:
@@ -26,11 +26,11 @@ There are also benefits:
 
 ## Core principles
 
-### 1) The 1–2% risk rule
+### 1) Limit risk per trade / idea
 
-Risk per trade should be limited. With a $100 account, risking $1–2 per idea is a reasonable starting point.
+Many guides suggest risking no more than 1–2% per trade. We use a different approach: capital spread across many assets and strategies, slightly higher risk per idea (~2.5%), but with diversification it has helped us through several corrections. Either way, set a clear limit per idea and stick to it — e.g. with $100, cap risk per idea at $2–3.
 
-For a structured approach see **[Risk Management for Crypto Trading Bots](/en/library/risk-management-crypto-trading-bots)** (draft).
+For our full approach see **[Risk Management for Crypto Trading Bots](/en/library/risk-management-crypto-trading-bots)** (draft).
 
 ### 2) Start with conservative strategies
 

@@ -139,7 +139,7 @@ Read more in **[False Breakouts in Trading](/en/library/false-breakouts-trading)
 ### Core rules
 
 1. **Stop-loss is mandatory** — always place stops beyond the range
-2. **1–2% rule** — risk per trade should be limited (relative to account size)
+2. **Cap risk per trade** — set a max loss per idea and stick to it (many suggest 1–2% of account; with diversification the approach can differ — see [risk management](/en/library/risk-management-crypto-trading-bots))
 3. **Position sizing** — consider range width when sizing
 4. **Diversify** — don’t lock all capital into one range setup
 

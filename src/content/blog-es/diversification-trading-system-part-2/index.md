@@ -19,7 +19,7 @@ Los criterios de entrada vienen del análisis técnico o la lógica de la estrat
 
 ## Tamaño de posición y riesgo por operación
 
-El riesgo por operación es la parte del depósito que estás dispuesto a perder en una operación; de ahí dependen el tamaño de posición y la distancia al stop loss. Ejemplo: depósito 1000 $, riesgo por operación 1 % — 10 $; con stop del 5 % respecto al precio de entrada, el tamaño de posición no debe implicar pérdida mayor de 10 $. Conviene fijar un máximo (p. ej. no más del 1–2 % del depósito por operación) y no superarlo. Así una operación mala no golpea todo el capital; una racha de pérdidas también queda limitada. Más sobre protección del capital en [gestión del riesgo en trading cripto](/es/library/risk-management-crypto-trading-bots/).
+El riesgo por operación es la parte del depósito que estás dispuesto a perder en una operación; de ahí dependen el tamaño de posición y la distancia al stop loss. Ejemplo: depósito 1000 $, riesgo por operación 1 % — 10 $; con stop del 5 % respecto al precio de entrada, el tamaño de posición no debe implicar pérdida mayor de 10 $. Muchos recomiendan no más del 1–2 % por operación; con diversificación fuerte, un riesgo por idea un poco mayor puede ser aceptable si el riesgo global del portafolio está bajo control. Fija un máximo y respétalo. Más en [gestión del riesgo en trading cripto](/es/library/risk-management-crypto-trading-bots/).
 
 ## Elección y configuración de bots
 

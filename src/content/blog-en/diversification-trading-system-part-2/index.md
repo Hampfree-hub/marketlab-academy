@@ -19,7 +19,7 @@ Entry criteria come from technical analysis or strategy logic: e.g. support leve
 
 ## Position size and risk per trade
 
-Risk per trade is the share of the deposit you are willing to lose in one trade; from it depend position size and distance to stop loss. Example: $1000 deposit, 1% risk per trade — $10; with a 5% stop from entry price, position size must not lead to more than $10 loss. Set a maximum (e.g. no more than 1–2% of deposit per trade) and don’t exceed it. So one bad trade doesn’t hit the whole capital; a string of losses is also limited. For more on capital protection see [risk management in crypto trading](/en/library/risk-management-crypto-trading-bots/).
+Risk per trade is the share of the deposit you are willing to lose in one trade; from it depend position size and distance to stop loss. Example: $1000 deposit, 1% risk per trade — $10; with a 5% stop from entry price, position size must not lead to more than $10 loss. Set a maximum and don’t exceed it. So one bad trade doesn’t hit the whole capital; a string of losses is also limited. Many recommend no more than 1–2% per trade; with strong diversification, slightly higher risk per idea can be acceptable if overall portfolio risk is under control. For our approach see [risk management in crypto trading](/en/library/risk-management-crypto-trading-bots/).
 
 ## Choosing and configuring bots
 
