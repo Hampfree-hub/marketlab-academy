@@ -10,6 +10,34 @@ draft: false
 
 ## ¿Por qué elegir ELDER 2.0?
 
+Cerramos la posición cuando:
+- **Stochastic > 80** — el indicador está en zona de sobrecompra
+- El precio toca o está por encima de la banda superior de Bollinger
+- **CMO > +20** — confirmación del impulso alcista
+- La ganancia desde el precio promedio de entrada es **≥ 3-5%** (nivel objetivo)
+
+## Gestión de capital
+### Distribución del depósito
+- **Orden base:** 5% del depósito
+- **Órdenes de promediación:** del 5% al 15% según la profundidad de la caída
+- **Número máximo de promediaciones:** 4-6 órdenes
+- **Reserva:** 20-30% del depósito
+
+### Pasos de promediación
+Intervalos recomendados:
+- 1ª promediación: -5% desde la entrada base
+- 2ª promediación: -10%
+- 3ª promediación: -15%
+- 4ª promediación: -20%
+
+## Marcos de tiempo y activos recomendados
+- **Timeframe:** 4 horas (4H) — óptimo. 1 hora (1H) — más agresivo.
+- **Activos:** BTC, ETH, y monedas del TOP-20 por capitalización.
+
+## Conclusión
+La estrategia spot ELDER 2.0 es un enfoque fundamental para trabajar en el mercado cripto. La ausencia de riesgo de liquidación la convierte en una opción ideal para la automatización y la acumulación de activos a largo plazo. Recuerda los riesgos y opera siempre con fondos que puedas permitirte perder.
+
+**Materiales relacionados:** [¿Qué es el trading spot?](/es/library/what-is-spot-trading/), [Stochastic Oscillator](/es/library/stochastic-oscillator/), [Bollinger Bands](/es/library/bollinger-bands/), [Chande Momentum Oscillator](/es/library/chande-momentum-oscillator/).
 Esta estrategia fue desarrollada para operar en el [mercado spot](/es/library/what-is-spot-trading/), donde no existe el riesgo de liquidación. La idea central es entrar en la posición en pequeñas partes cuando aparecen señales de sobrecompra/sobreventa y promediar durante las caídas de precio.
 
 **Ventajas del enfoque:**
