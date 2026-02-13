@@ -5,87 +5,50 @@ pubDate: '2026-02-03'
 category: 'technical-analysis'
 ---
 
-Las bandas de Bollinger son un indicador de volatilidad: línea media (media móvil) y dos bandas por encima y 
-
-**Squeeze (estrangulamiento) de las bandas:** cuando las bandas se estrechan significativamente, la volatilidad disminuye. A menudo, a un squeeze le sigue un movimiento brusco del precio en una de las direcciones. Las bandas por sí solas no muestran la dirección, solo el hecho de una posible explosión. La dirección de entrada se determina por la tendencia u otros indicadores.
-
-## Señales de compra y venta
-Enfoque clásico de señales:
-*   **Compra potencial:** el precio toca o rompe la banda inferior, luego se revierte y cierra dentro de las bandas. Una confirmación puede ser un rebote del [RSI](/es/library/technical-analysis-rsi/) desde la zona de sobreventa o la salida de [Williams %R](/es/library/williams-percent-range-r/) desde la zona inferior a −80.
-*   **Venta potencial:** el precio toca o rompe la banda superior, luego se revierte y cierra dentro de las bandas. La confirmación es el debilitamiento del impulso según RSI o %R.
-
-Un solo indicador puede dar señales falsas: por ejemplo, el precio está en la banda inferior pero la tendencia continúa a la baja. La combinación de las bandas de Bollinger con osciladores y, si es necesario, con [estrategias para tendencia lateral](/es/library/sideways-trend-strategies/) aumenta el filtrado.
-
-## Combinación con otros indicadores
-*   **Bandas de Bollinger + RSI:** el RSI muestra la sobreventa/sobrecompra, las bandas muestran la desviación extrema del precio respecto a la media. La coincidencia de señales (por ejemplo, RSI < 30 y toque de la banda inferior) refuerza la probabilidad de rebote.
-*   **Bandas de Bollinger + Williams %R:** como en el artículo sobre [Williams %R](/es/library/williams-percent-range-r/), el %R y las bandas juntos ayudan a identificar momentos en los que el precio se ha alejado mucho de la media y el oscilador confirma el extremo.
-*   **Bandas de Bollinger + volumen:** un aumento de volumen al rebotar desde la banda inferior o superior puede confirmar la fuerza de la reversión.
-
-No satures el gráfico: 2–3 indicadores suelen ser suficientes. Más detalles sobre combinaciones en los materiales sobre [señales de trading](/es/library/what-are-trading-signals/) y [backtests](/es/library/what-are-backtests/).
-
-## Aplicación en criptotrading
-El mercado cripto se distingue por su alta volatilidad. Las bandas en pares cripto a menudo se expanden fuertemente ante movimientos bruscos y se estrechan en el rango lateral (flat). Los valores estándar de 20 y 2 suelen ser adecuados; en el scalping en [timeframes cortos](/es/library/timeframes-trading/) a veces se reduce el periodo. Tiene sentido verificar la configuración históricamente a través de [backtests](/es/library/what-are-backtests/) para el activo y estilo de trading elegidos.
-
-## En resumen
-*   Las Bandas de Bollinger consisten en una línea media (SMA) y dos bandas a una distancia de K × desviación estándar. El estándar es periodo 20, multiplicador 2.
-*   El toque de la banda inferior indica una posible sobreventa; el de la superior, sobrecompra. En tendencia, el precio puede "caminar" por la banda durante mucho tiempo.
-*   El squeeze de las bandas precede a una posible explosión de volatilidad; la dirección la marca la tendencia u otros indicadores.
-*   La combinación con RSI, Williams %R y, si es necesario, con volumen mejora la filtración de señales.por debajo, cuya distancia depende de la desviación estándar del precio. Ayudan a valorar el "recorrido" del movimiento y a buscar rebotes en los límites del canal. En este artículo: cómo se calculan las bandas, cómo leer los toques de la banda superior e inferior y cómo combinarlas con [RSI](/es/library/technical-analysis-rsi/) y [Williams %R](/es/library/williams-percent-range-r/).
+Las **bandas de Bollinger** son un indicador de volatilidad que consta de tres líneas en el gráfico de precios: una línea media (media móvil simple) y dos bandas (superior e inferior) cuya distancia depende de la desviación estándar del precio. Este instrumento ayuda a evaluar la amplitud del movimiento y a buscar rebotes desde los límites del canal.
 
 ## Qué son las bandas de Bollinger
 
-**Bandas de Bollinger** es un indicador de tres líneas en el gráfico de precio. La línea media es una media móvil (normalmente simple, SMA) del periodo elegido. Las bandas superior e inferior se dibujan a una distancia de la media igual a un múltiplo de la desviación estándar del precio en ese mismo periodo. Así, las bandas se ensanchan cuando sube la volatilidad y se estrechan cuando baja.
-
-El indicador fue desarrollado por John Bollinger en los años 80. La idea es que el precio se mueve la mayor parte del tiempo dentro de las bandas, y la salida o el toque de los límites suele preceder a una reversión o corrección. En artículos de análisis técnico y [señales de trading](/es/library/what-are-trading-signals/) las bandas de Bollinger se clasifican con los indicadores de volatilidad junto con [ATR](/es/library/atr-and-atr-percent/).
+El indicador fue desarrollado por John Bollinger en los años 80. La idea central es que el precio se mueve la mayor parte del tiempo dentro de las bandas, y el toque o la salida de estos límites a menudo precede a una reversión o corrección. En el análisis técnico, se agrupan con otros indicadores de volatilidad como el [ATR](/es/library/atr-and-atr-percent/).
 
 ## Cómo se calculan las bandas de Bollinger
 
-El cálculo se basa en tres magnitudes.
+El cálculo se basa en tres valores:
 
-**Línea media (Middle Band):** media móvil simple (SMA) del precio de cierre del periodo N. Lo más habitual N = 20.
+*   **Línea media (Middle Band):** media móvil simple (SMA) de los precios de cierre de un periodo N (usualmente N = 20).
+*   **Desviación estándar:** se calcula sobre las mismas N velas y muestra qué tanto se desvía el precio de su media.
+*   **Bandas superior e inferior:** línea media más/menos (K × desviación estándar). Normalmente K = 2.
 
-**Desviación estándar:** se calcula sobre las mismas N velas del precio de cierre. Mide cuánto se desvía el precio de su media.
+Configuración típica: 20 periodos y multiplicador 2. En [timeframes](/es/library/timeframes-trading/) menores se puede reducir el periodo para aumentar la sensibilidad.
 
-**Bandas superior e inferior:** línea media más/menos (K × desviación estándar). Suele usarse K = 2. Es decir, banda superior = SMA(20) + 2 × StdDev(20), inferior = SMA(20) − 2 × StdDev(20).
+## Interpretación: sobrecompra y sobreventa
 
-La configuración típica es 20 periodos y multiplicador 2. En [timeframes](/es/library/timeframes-trading/) menores a veces se usa un periodo más corto (p. ej. 15) para que el indicador reaccione antes.
+El toque de la **banda inferior** suele interpretarse como sobreventa, sugiriendo un posible rebote al alza. El toque de la **banda superior** indica sobrecompra y una posible corrección a la baja.
 
-## Interpretación: zonas de sobrecompra y sobreventa
-
-El toque o salida por la **banda inferior** suele interpretarse como sobreventa: el precio ha bajado respecto a su media reciente. Muchos traders lo ven como una zona posible de rebote al alza. El toque de la **banda superior** es sobrecompra, con posible corrección a la baja.
-
-Importante: en tendencia fuerte el precio puede "caminar la banda" — mantenerse junto al límite superior en subida o al inferior en bajada. En esos casos el toque de la banda no es por sí solo señal de reversión. Conviene buscar confirmación con [RSI](/es/library/technical-analysis-rsi/) o [Williams %R](/es/library/williams-percent-range-r/) y niveles de soporte/resistencia.
-
-**Estrechamiento de bandas (squeeze):** cuando las bandas se estrechan mucho, baja la volatilidad. Tras el estrechamiento suele venir un movimiento fuerte en una dirección. Las bandas no indican la dirección, solo la posibilidad de un repunte. La dirección de entrada se toma del tendencia u otros indicadores.
-
-![Bandas de Bollinger en el gráfico: límites superior e inferior del canal, toques y rebotes del precio](./assets/bollinger-bands.png)
+**Squeeze (estrangulamiento):** cuando las bandas se estrechan significativamente, la volatilidad disminuye. A menudo, a un squeeze le sigue un movimiento brusco del precio. Las bandas no muestran la dirección, solo la probabilidad de un estallido inminente.
 
 ## Señales de compra y venta
 
-Enfoque clásico de señales:
+Enfoque clásico:
 
-- **Posible compra:** el precio toca o rompe la banda inferior, luego revierte y cierra dentro de las bandas. La confirmación puede ser rebote de [RSI](/es/library/technical-analysis-rsi/) desde sobreventa o salida de [Williams %R](/es/library/williams-percent-range-r/) de la zona por debajo de −80.
-- **Posible venta:** el precio toca o rompe la banda superior, luego revierte y cierra dentro de las bandas. Confirmación: debilitamiento del momentum en RSI o %R.
-
-Un solo indicador puede dar señales falsas: p. ej. precio en la banda inferior pero tendencia aún bajista. Combinar bandas de Bollinger con osciladores y, si aplica, [estrategias de tendencia lateral](/es/library/sideways-trend-strategies/) mejora el filtrado.
+*   **Compra potencial:** el precio toca o rompe la banda inferior, luego se revierte y cierra dentro de las bandas. Se recomienda confirmación con el [RSI](/es/library/technical-analysis-rsi/) o [Williams %R](/es/library/williams-percent-range-r/).
+*   **Venta potencial:** el precio toca o rompe la banda superior, luego se revierte y cierra dentro de las bandas.
 
 ## Combinación con otros indicadores
 
-- **Bandas de Bollinger + RSI:** RSI muestra sobrecompra/sobreventa, las bandas la desviación extrema del precio respecto a la media. La coincidencia (p. ej. RSI &lt; 30 y toque de banda inferior) refuerza la probabilidad de rebote.
-- **Bandas de Bollinger + Williams %R:** como en el artículo de [Williams %R](/es/library/williams-percent-range-r/), %R y las bandas ayudan a detectar momentos en que el precio se ha alejado mucho de la media y el oscilador confirma el extremo.
-- **Bandas de Bollinger + volumen:** un pico de volumen en el rebote desde la banda inferior o superior puede confirmar la fuerza de la reversión.
+*   **Bollinger + RSI:** refuerza la probabilidad de rebote si ambos indican extremos simultáneamente.
+*   **Bollinger + Williams %R:** ayuda a identificar momentos de agotamiento del impulso en los límites del canal.
+*   **Bollinger + Volumen:** un aumento de volumen en el rebote confirma la fuerza del giro.
 
-No conviene cargar el gráfico: 2–3 indicadores suelen bastar. Más sobre combinaciones en [señales de trading](/es/library/what-are-trading-signals/) y [backtests](/es/library/what-are-backtests/).
+## Aplicación en criptotrading
 
-## Uso en criptotrading
+Debido a la alta volatilidad de las criptomonedas, las bandas suelen expandirse y contraerse drásticamente. En el mercado lateral (rango), los rebotes desde los límites son más fiables. En tendencias fuertes, el precio puede "caminar por la banda" durante mucho tiempo, por lo que se deben usar filtros adicionales.
 
-El mercado cripto es muy volátil. Las bandas en pares cripto suelen ensancharse mucho en movimientos fuertes y estrecharse en lateral. Los valores 20 y 2 pueden servir; en scalping en [timeframes cortos](/es/library/timeframes-trading/) a veces se reduce el periodo. Conviene probar la configuración en histórico con [backtests](/es/library/what-are-backtests/) para el activo y estilo elegidos.
+## En resumen
 
-En mercado lateral los rebotes en los límites de las bandas se ven mejor. En tendencia conviene usar las bandas como zonas de posible corrección y alinear la dirección de la operación con la tendencia.
+*   Constan de una SMA(20) y dos bandas basadas en 2 desviaciones estándar.
+*   El toque de las bandas sugiere extremos de precio, pero en tendencia puede prolongarse.
+*   El estrangulamiento de las bandas precede a picos de volatilidad.
+*   Combinar con osciladores mejora la calidad de las señales.
 
-## Resumen
-
-- Bandas de Bollinger: línea media (SMA) y dos bandas a distancia K × desviación estándar. Estándar periodo 20, multiplicador 2.
-- Toque de banda inferior — posible sobreventa; superior — sobrecompra. En tendencia el precio puede ir largo tiempo junto a la banda.
-- El estrechamiento de bandas anuncia posible repunte de volatilidad; la dirección la marcan la tendencia u otros indicadores.
-- La combinación con RSI, Williams %R y, si hace falta, volumen mejora el filtrado de señales.
+**Materiales relacionados:** [ATR y ATR%](/es/library/atr-and-atr-percent/), [Falsos rompimientos](/es/library/false-breakouts-trading/), [Patrones de bandera y banderín](/es/library/flag-and-pennant-patterns/).
