@@ -1,7 +1,7 @@
 ---
 title: 'Стохастический осциллятор (Stochastic) в трейдинге'
 description: 'Stochastic: %K и %D, зоны перекупленности и перепроданности, пересечения уровней 20 и 80, связь со стратегией ELDER.'
-pubDate: '2026-02-10'
+pubDate: '2026-02-13'
 category: 'technical-analysis'
 draft: true
 ---
