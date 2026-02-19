@@ -70,4 +70,4 @@ Prisma 5.5 es una estrategia equilibrada para quienes desean automatizar el trad
 
 ---
 
-Если вам интересна эта стратегия и вы хотите следить за развитием нашего проекта, загляните на страницу [Sobre el proyecto](/es/about/) — там мы рассказываем о нашей миссии и о том, как можно поддержать стартап.
+Si le interesa esta estrategia y desea seguir el desarrollo de nuestro proyecto, visite la página [Sobre el proyecto](/es/about/) — allí hablamos de nuestra misión y de cómo puede apoyar la startup.
