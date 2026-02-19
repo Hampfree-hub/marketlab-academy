@@ -5,17 +5,19 @@ pubDate: '2026-02-19'
 category: 'technical-analysis'
 draft: true
 ---
+
 **El Canal de Keltner (Keltner Channel)** es un indicador de volatilidad construido alrededor de una Media Móvil Exponencial (EMA) con bandas basadas en el Average True Range (ATR). En los sistemas de trading modernos como Prisma 5.5, se utiliza como filtro de volatilidad y señal de ruptura.
 
 ## ¿Qué es el Canal de Keltner?
 
 El indicador fue descrito por primera vez por Chester Keltner en su libro de 1960, "How To Make Money in Commodities". Más tarde fue perfeccionado por Linda Raschke y Robert Colby, quienes sustituyeron la Media Móvil Simple por una Exponencial y utilizaron el ATR para calcular el ancho del canal.
 
-A diferencia de las Bandas de Bollinger, que se expanden y contraen bruscamente, el Canal de Keltner es más "suave", ya que el ATR (Average True Range) reacciona a la volatilidad de forma menos agresiva que la desviación estándar.
+A diferencia de las Bandas de Bollinger, que se expanden y contraen bruscamente, el Canal de Keltner es más «suave», ya que el ATR (Average True Range) reacciona a la volatilidad de forma menos agresiva que la desviación estándar.
 
 ## Estructura del indicador
 
 El Canal de Keltner clásico consta de tres líneas:
+
 1. **Línea central:** Media Móvil Exponencial (habitualmente EMA 20).
 2. **Banda superior:** EMA + (Multiplicador * ATR).
 3. **Banda inferior:** EMA - (Multiplicador * ATR).
@@ -25,23 +27,27 @@ La configuración estándar utiliza un periodo EMA de 20 y un multiplicador de 2
 ## Señales del Canal de Keltner
 
 ### 1. Ruptura y tendencia
-Un cierre por encima de la banda superior a menudo indica un fuerte impulso alcista. Un cierre por debajo de la banda inferior indica movimiento bajista. En tendencias fuertes, el precio puede "deslizarse" a lo largo de los límites del canal durante un período prolongado.
+
+Un cierre por encima de la banda superior a menudo indica un fuerte impulso alcista. Un cierre por debajo de la banda inferior indica movimiento bajista. En tendencias fuertes, el precio puede «deslizarse» a lo largo de los límites del canal durante un período prolongado.
 
 ### 2. Retorno a la media
+
 En un mercado lateral (rango), los límites del canal actúan como niveles de soporte y resistencia. El precio que sale de los límites del canal tiende a volver a la EMA 20.
 
 ### 3. Filtro de volatilidad
+
 Un estrechamiento del canal indica calma en el mercado (acumulación), que generalmente va seguido de un movimiento fuerte.
 
 ## Configuración en Prisma 5.5
 
 En la estrategia Prisma 5.5 en la plataforma Veles, la configuración del Canal de Keltner está optimizada para capturar impulsos locales en el marco temporal de 15 minutos:
+
 - **Periodo EMA:** 20
 - **Periodo ATR:** 10
 - **Multiplicador:** 1.5
 - **Marco temporal:** M15
 
-El indicador ayuda a determinar si el precio se encuentra en la zona de distribución "normal" o si está comenzando una ruptura volátil adecuada para entrar en una operación.
+El indicador ayuda a determinar si el precio se encuentra en la zona de distribución «normal» o si está comenzando una ruptura volátil adecuada para entrar en una operación.
 
 ## Comparación con las Bandas de Bollinger
 
