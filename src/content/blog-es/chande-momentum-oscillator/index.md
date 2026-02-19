@@ -44,11 +44,11 @@ En nuestra [estrategia spot ELDER 2.0](/es/library/spot-strategy-elder-20/), el 
 
 El CMO es una herramienta potente para determinar la fuerza de la tendencia y los puntos de agotamiento del movimiento. Su ventaja es la ausencia de «doble suavizado», lo que permite al trader reaccionar más rápidamente a los impulsos del mercado.
 
-Para el trading automatizado usando CMO y otros indicadores, recomendamos usar plataformas probadas:
+Existen plataformas probadas disponibles para empezar a operar:
 
-- [Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24) – una excelente opción para bots de spot.
-- [Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD) – alta liquidez e interfaz amigable.
-- [BingX](https://bingxdao.com/invite/CUBDBG/) – soporte para muchos activos.
+- **[Bybit](https://partner.bybit.com/b/marketlab)** — una excelente opción para bots de spot.
+- **[Bitget](https://partner.bitget.com/bg/marketlab)** — alta liquidez e interfaz amigable.
+- **[BingX](https://bingx.com/en-us/partner/MarketLab/)** — soporte para muchos activos.
 
 ---
 
