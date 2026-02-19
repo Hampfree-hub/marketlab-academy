@@ -3,7 +3,7 @@ title: 'Prisma 5.5: Strategy Settings on the Veles Platform'
 description: 'Breaking down the settings of the Prisma 5.5 proprietary strategy on the Veles platform: entry indicators, filters, order grid management, and pair recommendations.'
 pubDate: '2026-02-19'
 category: 'algo-trading'
-draft: false
+draft: true
 ---
 
 **Prisma 5.5** is a proprietary strategy from the [Veles](https://veles.finance/invite/washmallay) platform for automated trading. This article provides a full breakdown of the settings: which indicators are used for entry, how to set up the order grid, and which pairs to launch on.
@@ -68,9 +68,6 @@ It is recommended to use liquid pairs with high trading volume:
 
 Prisma 5.5 is a balanced strategy for those who want to automate spot or futures trading with moderate risk. Always monitor your margin level and don't forget about diversification.
 
-## Related Materials
+---
 
-* • [What are Backtests in Trading](/en/library/what-are-backtests/)
-* • [How to Set Up a Trading Bot on Bybit](/en/library/bybit-trading-bot-setup/)
-* • [Risk Management in Crypto Trading with Bots](/en/library/risk-management-crypto-trading-bots/)
-* • [DCA Strategy (Averaging) in Crypto](/en/library/dca-strategy-crypto/)
+If you are interested in this strategy and want to follow the development of our project, take a look at the [About Project](/en/about/) page — there we talk about our mission and how you can support the startup.
