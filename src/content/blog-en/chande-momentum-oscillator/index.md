@@ -44,11 +44,11 @@ In our [spot strategy ELDER 2.0](/en/library/spot-strategy-elder-20/), the CMO i
 
 CMO is a powerful tool for determining trend strength and points of exhaustion. Its advantage is the absence of "double smoothing," which allows the trader to react faster to market impulses.
 
-For automated trading using CMO and other indicators, we recommend using proven platforms:
+Proven platforms are available to start trading:
 
-- [Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24) – an excellent choice for spot bots.
-- [Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD) – high liquidity and a user-friendly interface.
-- [BingX](https://bingxdao.com/invite/CUBDBG/) – support for many assets.
+- **[Bybit](https://partner.bybit.com/b/marketlab)** — an excellent choice for working with [trading bots](/en/library/bybit-trading-bot-setup/).
+- **[Bitget](https://partner.bitget.com/bg/marketlab)** — high liquidity and a user-friendly interface.
+- **[BingX](https://bingx.com/en-us/partner/MarketLab/)** — support for many assets.
 
 ---
 
