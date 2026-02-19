@@ -73,3 +73,8 @@ category: 'algo-trading'
 **Основы и стратегии:** Обязательно изучите [что такое спотовая торговля](/ru/library/what-is-spot-trading/) и [различия между спотом, фьючерсами и маржой](/ru/library/spot-trading-vs-futures-margin/). Также узнайте, [как начать трейдинг с малой суммы](/ru/library/how-to-start-trading-small-deposit/).
 
 **Инструменты и опыт:** Углубите знания об индикаторах: [Stochastic Oscillator](/ru/library/stochastic-oscillator/), [Bollinger Bands](/ru/library/bollinger-bands/) и [CMO](/ru/library/chande-momentum-oscillator/). Посмотрите наш [дневник живого депозита](/ru/library/surviving-drawdown-diary/) и изучите принципы [риск-менеджмента](/ru/library/risk-management-crypto-trading-bots/).
+
+
+---
+
+Если вам интересна эта стратегия и вы хотите следить за развитием нашего проекта, загляните на страницу [О проекте](/ru/about/) — там мы рассказываем о нашей миссии и о том, как можно поддержать стартап.
