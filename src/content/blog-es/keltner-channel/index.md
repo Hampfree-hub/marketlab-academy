@@ -3,9 +3,8 @@ title: 'Canal de Keltner (Keltner Channel)'
 description: 'Keltner Channel — indicador de volatilidad basado en EMA y ATR: configuración, zonas de ruptura y uso en estrategias spot como Prisma 5.5.'
 pubDate: '2026-02-19'
 category: 'technical-analysis'
-draft: false
+draft: true
 ---
-
 **El Canal de Keltner (Keltner Channel)** es un indicador de volatilidad construido alrededor de una Media Móvil Exponencial (EMA) con bandas basadas en el Average True Range (ATR). En los sistemas de trading modernos como Prisma 5.5, se utiliza como filtro de volatilidad y señal de ruptura.
 
 ## ¿Qué es el Canal de Keltner?
@@ -64,8 +63,8 @@ El Canal de Keltner es un indicador de volatilidad fiable que proporciona un fil
 
 ## Materiales relacionados
 
-**Conceptos básicos y estrategias:** el estudio de las [Bandas de Bollinger](/es/library/bollinger-bands/), el [RSI](/es/library/rsi/) y el [EMA](/es/library/ema/) ayudará a comprender mejor los principios de los indicadores de canal.
+**Conceptos básicos y estrategias:** el estudio de las [Bandas de Bollinger](/es/library/bollinger-bands/), el [RSI (Relative Strength Index)](/es/library/technical-analysis-rsi/) y el [ATR](/es/library/atr-and-atr-percent/) ayudará a comprender mejor los principios de los indicadores de canal.
 
-**Herramientas y automatización:** hay información disponible sobre [cómo configurar un bot en Bybit](/es/library/bybit-trading-bot-setup/) y usar la estrategia [Prisma 5.5](/es/library/prisma-5-5-strategy-settings/).
+**Herramientas y automatización:** hay información disponible sobre [cómo configurar un bot en Bybit](/es/library/bybit-trading-bot-setup/) y [qué son los backtests](/es/library/what-are-backtests/).
 
 **Experiencia y riesgos:** es de vital importancia comprender la [gestión de riesgos al trabajar con bots](/es/library/risk-management-crypto-trading-bots/) y monitorizar la [diversificación](/es/library/diversification-trading-system-part-1/).
