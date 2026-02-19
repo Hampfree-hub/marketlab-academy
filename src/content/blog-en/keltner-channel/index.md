@@ -12,60 +12,60 @@ draft: false
 
 The indicator was first described by Chester Keltner in his 1960 book, "How To Make Money in Commodities." Later, it was refined by Linda Raschke and Robert Colby, who replaced the Simple Moving Average with an Exponential one and used the ATR to calculate the channel's width.
 
-Unlike Bollinger Bands, which expand and contract very sharply, the Keltner Channel is smoother because the ATR (Average True Range) reacts to volatility less aggressively than standard deviation.
+Unlike Bollinger Bands, which expand and contract sharply, the Keltner Channel is smoother because ATR (Average True Range) responds to volatility less aggressively than standard deviation.
 
 ## Indicator Structure
 
-A classic Keltner Channel consists of three lines:
+The classic Keltner Channel consists of three lines:
 1. **Middle Line:** Exponential Moving Average (usually EMA 20).
 2. **Upper Band:** EMA + (Multiplier * ATR).
 3. **Lower Band:** EMA - (Multiplier * ATR).
 
-Standard settings typically involve an EMA 20 period and a 2.0 multiplier.
+Standard settings use an EMA period of 20 and a multiplier of 2.0.
 
 ## Keltner Channel Signals
 
 ### 1. Breakout and Trend
-If the price closes above the upper band, it often signals strong bullish momentum. If it closes below the lower band, it indicates bearish momentum. In strong trends, the price may "ride" along the channel boundaries for a long time.
+A close above the upper band often signals strong bullish momentum. A close below the lower band signals bearish. In strong trends, the price may "slide" along the channel boundaries for an extended period.
 
 ### 2. Mean Reversion
-In a range-bound (sideways) market, the channel boundaries act as support and resistance levels. When the price moves outside the channel, it tends to return to the EMA 20.
+In a sideways market (flat), the channel boundaries act as support and resistance levels. Price breaking outside the channel tends to return to the EMA 20.
 
 ### 3. Volatility Filter
-A narrowing channel indicates a quiet market (accumulation), which is usually followed by a strong price movement.
+A narrowing of the channel indicates market calm (accumulation), which is usually followed by a strong move.
 
 ## Settings in Prisma 5.5
 
-In the Prisma 5.5 strategy on the Veles platform, Keltner Channel settings are optimized for catching local impulses on a 15-minute timeframe:
+In the Prisma 5.5 strategy on the Veles platform, the Keltner Channel settings are optimized to catch local impulses on the 15-minute timeframe:
 - **EMA Period:** 20
 - **ATR Period:** 10
 - **Multiplier:** 1.5
 - **Timeframe:** M15
 
-Here, the indicator helps the bot determine if the price is within a "normal" distribution zone or if a volatile breakout suitable for entering a trade is beginning.
+The indicator helps determine whether the price is in a "normal" distribution zone or whether a volatile breakout, suitable for entering a trade, is beginning.
 
-## Difference from Bollinger Bands
+## Comparison with Bollinger Bands
 
-| Feature | Keltner Channel | Bollinger Bands |
+| Characteristic | Keltner Channel | Bollinger Bands |
 |---|---|---|
-| **Basis** | ATR (Average True Range) | Standard Deviation |
-| **Reaction** | Smoother | Sharp, sensitive |
-| **Middle Line** | EMA (Exponential) | SMA (Simple) |
+| Basis | ATR (Average True Range) | Standard Deviation |
+| Reaction | Smoother | Sharp, sensitive |
+| Middle Line | EMA (exponential) | SMA (simple) |
 
 ## Conclusion
 
-The Keltner Channel is a reliable tool for those seeking a balance between sensitivity and stability. It is excellent for trend-following strategies and automated bots, helping to filter out market noise.
+The Keltner Channel is a reliable volatility indicator that provides smoother noise filtering compared to Bollinger Bands. Using the indicator allows for effectively identifying the moments when a trend is forming and finding optimal entry points within algorithmic strategies. Proven platforms are available to start trading:
 
-You can start trading on verified exchanges:
-- **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24)** — an excellent choice for working with [trading bots](/en/library/bybit-trading-bot-setup/)
-- **[Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD)** — user-friendly interface and bonuses
-- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — social trading and copy trading
-
----
-
-## Related Materials
-**Basics and Strategies:** explore [Bollinger Bands](/en/library/bollinger-bands/), [RSI](/en/library/technical-analysis-rsi/), and [CMO](/en/library/chande-momentum-oscillator/). These indicators are often used together with the Keltner Channel.
-**Tools and Automation:** The Keltner Channel is a key element of the [Prisma 5.5](/en/library/prisma-5-5-strategy-settings/) strategy. It is also useful to study [risk management](/en/library/risk-management-crypto-trading-bots/) when working with bots.
+- **[Bybit](https://partner.bybit.com/b/marketlab)** — one of the leading exchanges for working with [trading bots](/en/library/bybit-trading-bot-setup/).
+- **[Bitget](https://partner.bitget.com/bg/marketlab)** — a platform with a user-friendly interface and bonuses for new users.
+- **[BingX](https://bingx.com/en-us/partner/MarketLab/)** — a popular platform for social trading and copy trading.
 
 ---
-If you are interested in this topic and want to follow the development of the project, take a look at the [About Project](/en/about/) page — there we tell about our mission and how you can support the startup.
+
+## Related materials
+
+**Basics and strategies:** studying [Bollinger Bands](/en/library/bollinger-bands/), [RSI](/en/library/rsi/), and [EMA](/en/library/ema/) will help to better understand the principles of channel indicators.
+
+**Tools and automation:** information is available on [how to set up a bot on Bybit](/en/library/bybit-trading-bot-setup/) and use the [Prisma 5.5](/en/library/prisma-5-5-strategy-settings/) strategy.
+
+**Experience and risks:** it is critically important to understand [risk management when working with bots](/en/library/risk-management-crypto-trading-bots/) and to monitor [diversification](/en/library/diversification-trading-system-part-1/).
