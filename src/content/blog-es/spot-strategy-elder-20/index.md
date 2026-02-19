@@ -9,42 +9,14 @@ category: 'algo-trading'
 
 ## ¿Por qué elegir ELDER 2.0?
 
-Cerramos la posición cuando:
-- **Stochastic > 80** — el indicador está en zona de sobrecompra
-- El precio toca o está por encima de la banda superior de Bollinger
-- **CMO > +20** — confirmación del impulso alcista
-- La ganancia desde el precio promedio de entrada es **≥ 3-5%** (nivel objetivo)
-
-## Gestión de capital
-### Distribución del depósito
-- **Orden base:** 5% del depósito
-- **Órdenes de promediación:** del 5% al 15% según la profundidad de la caída
-- **Número máximo de promediaciones:** 4-6 órdenes
-- **Reserva:** 20-30% del depósito
-
-### Pasos de promediación
-Intervalos recomendados:
-- 1ª promediación: -5% desde la entrada base
-- 2ª promediación: -10%
-- 3ª promediación: -15%
-- 4ª promediación: -20%
-
-## Marcos de tiempo y activos recomendados
-- **Timeframe:** 4 horas (4H) — óptimo. 1 hora (1H) — más agresivo.
-- **Activos:** BTC, ETH, y monedas del TOP-20 por capitalización.
-
-## Conclusión
-La estrategia spot ELDER 2.0 es un enfoque fundamental para trabajar en el mercado cripto. La ausencia de riesgo de liquidación la convierte en una opción ideal para la automatización y la acumulación de activos a largo plazo. Recuerda los riesgos y opera siempre con fondos que puedas permitirte perder.
-
-**Materiales relacionados:** [¿Qué es el trading spot?](/es/library/what-is-spot-trading/), [Stochastic Oscillator](/es/library/stochastic-oscillator/), [Bollinger Bands](/es/library/bollinger-bands/), [Chande Momentum Oscillator](/es/library/chande-momentum-oscillator/).
-Esta estrategia fue desarrollada para operar en el [mercado spot](/es/library/what-is-spot-trading/), donde no existe el riesgo de liquidación. La idea central es entrar en la posición en pequeñas partes cuando aparecen señales de sobrecompra/sobreventa y promediar durante las caídas de precio.
+Esta estrategia fue desarrollada para trabajar en el [mercado spot](/es/library/what-is-spot-trading/), donde no existe el riesgo de liquidación. La idea central es entrar en la posición en pequeñas partes cuando aparecen señales de sobrecompra/sobreventa y promediar durante las caídas de precio.
 
 **Ventajas del enfoque:**
 
-- Trabajo sin apalancamiento — sin riesgo de liquidación
-- Promediación de posiciones en lugar de stop-loss
-- Automatización a través de [bots de trading en exchanges](/es/library/bybit-trading-bot-setup/)
-- Eficacia confirmada en diversas condiciones de mercado
+* • Trabajo sin apalancamiento — sin riesgo de liquidación
+* • Promediación de posiciones en lugar de stop-loss
+* • Automatización a través de [bots de trading en exchanges](/es/library/bybit-trading-bot-setup/)
+* • Eficacia confirmada en diversas condiciones de mercado
 
 ## Los tres pilares de la estrategia ELDER 2.0
 
@@ -62,7 +34,7 @@ Esta estrategia fue desarrollada para operar en el [mercado spot](/es/library/wh
 
 ### 3. CMO (Chande Momentum Oscillator) — filtro de impulso
 
-**Función:** Filtrado de señales falsas. Un análisis detallado del [indicador CMO](/es/library/chande-momentum-oscillator/) ayudará a entender mejor su rol.
+**Función:** Filtrado de señales falsas. Un análisis detallado del [indicador CMO](/es/library/chande-momentum-oscillator) ayudará a entender mejor su rol.
 
 **Configuración:** Período 14, Zona de filtrado: de -20 a +20.
 
@@ -72,26 +44,45 @@ Esta estrategia fue desarrollada para operar en el [mercado spot](/es/library/wh
 
 Entramos en la operación cuando se cumplen **simultáneamente**:
 
-- 1. Stochastic < 20
-- 2. El precio toca o está por debajo de la banda inferior de Bollinger
-- 3. CMO < -20
+1. Stochastic < 20
+2. El precio toca o está por debajo de la banda inferior de Bollinger
+3. CMO < -20
 
 ### Señal de salida (toma de ganancias)
 
 Cerramos la posición cuando:
 
-- 1. Stochastic > 80
-- 2. El precio toca o está por encima de la banda superior de Bollinger
-- 3. CMO > +20
-- 4. La ganancia desde el precio promedio de entrada es ≥ 3-5%
+1. Stochastic > 80
+2. El precio toca o está por encima de la banda superior de Bollinger
+3. CMO > +20
+4. La ganancia desde el precio promedio de entrada es ≥ 3-5%
+
+## Gestión de capital
+
+### Distribución del depósito
+* • **Orden base:** 5% del depósito
+* • **Órdenes de promediación:** del 5% al 15% según la profundidad de la caída
+* • **Número máximo de promediaciones:** 4-6 órdenes
+* • **Reserva:** 20-30% del depósito
+
+### Pasos de promediación
+Intervalos recomendados:
+* • 1ª promediación: -5% desde la entrada base
+* • 2ª promediación: -10%
+* • 3ª promediación: -15%
+* • 4ª promediación: -20%
+
+## Marcos de tiempo y activos recomendados
+* • **Timeframe:** 4 horas (4H) — óptimo. 1 hora (1H) — más agresivo.
+* • **Activos:** BTC, ETH, y monedas del TOP-20 por capitalización.
 
 ## Configuración en exchanges
 
 La estrategia puede ejecutarse en exchanges populares con bots de trading:
 
-- **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24)** — bots listos para usar y comisiones bajas. La instrucción para [configurar un bot de trading en Bybit](/es/library/bybit-trading-bot-setup/) te ayudará a empezar.
-- **[Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD)** — amplia selección de estrategias de copytrading.
-- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — interfaz sencilla para principiantes.
+* • **[Bybit](https://www.bybit.com/en-US/invite?ref=PWMD24)** — bots listos para usar y comisiones bajas. La instrucción para [configurar un bot de trading en Bybit](/es/library/bybit-trading-bot-setup/) te ayudará a empezar.
+* • **[Bitget](https://www.bitget.com/en/referral/register?from=referral&clacCode=23EHR2VD)** — amplia selección de estrategias de copytrading.
+* • **[BingX](https://bingxdao.com/invite/CUBDBG/)** — interfaz sencilla para principiantes.
 
 ## Conclusión
 
@@ -99,6 +90,8 @@ La estrategia spot ELDER 2.0 es un enfoque fundamental para operar en el mercado
 
 ## Materiales relacionados
 
-**Fundamentos y estrategias:** Asegúrate de estudiar [qué es el trading spot](/es/library/what-is-spot-trading/) y las [diferencias entre spot, futuros y margen](/es/library/spot-trading-vs-futures-margin/). También descubre [cómo empezar el trading con una pequeña cantidad](/es/library/how-to-start-trading-small-deposit/).
+**Fundamentos y estrategias:** Asegúrate de estudiar [qué es el trading spot](/es/library/what-is-spot-trading/) y las [diferencias entre spot, futures, y margen](/es/library/spot-trading-vs-futures-margin/). También descubre [cómo empezar el trading con una pequeña cantidad](/es/library/how-to-start-trading-small-deposit/).
 
-**Herramientas y experiencia:** Profundiza tus conocimientos sobre los indicadores: [Stochastic Oscillator](/es/library/stochastic-oscillator/), [Bollinger Bands](/es/library/bollinger-bands/) y [CMO](/es/library/chande-momentum-oscillator/). Mira nuestro [diario de depósito en vivo](/es/library/surviving-drawdown-diary/) y estudia los principios de [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/).
+**Herramientas y experience:** Profundiza tus conocimientos sobre los indicadores: [Stochastic Oscillator](/es/library/stochastic-oscillator/), [Bollinger Bands](/es/library/bollinger-bands/) y [CMO](/es/library/chande-momentum-oscillator/). Mira nuestro [diario de depósito en vivo](/es/library/surviving-drawdown-diary) y estudia los principios de [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/).
+
+Si estás interesado en esta estrategia y quieres seguir el desarrollo de nuestro proyecto, echa un vistazo a la página [Sobre el proyecto](/es/about/) — allí hablamos de nuestra misión y de cómo puedes apoyar a la startup.
