@@ -16,82 +16,87 @@ This strategy was developed for working on the [spot market](/en/library/what-is
 * • Trading without leverage — no liquidation risk
 * • Position averaging instead of stop-losses
 * • Automation via [exchange trading bots](/en/library/bybit-trading-bot-setup/)
-* • Proven effectiveness across various market conditions
+* • Proven effectiveness in various market conditions
 
-## Three Pillars of the ELDER 2.0 Strategy
+## Three pillars of the ELDER 2.0 strategy
 
 ### 1. Stochastic Oscillator — the main signal
 
-**Function:** Identifying overbought and oversold zones for entry points. Read more about the [Stochastic indicator](/en/library/stochastic-oscillator/) in a separate article.
+**Function:** Identifying overbought and oversold zones for entry points. Read more about how the [Stochastic indicator](/en/library/stochastic-oscillator/) works in a separate article.
 
 **Settings:** 14, 3, 3. Oversold zone: 20, Overbought zone: 80.
 
 ### 2. Bollinger Bands — volatility filter
 
-**Function:** Confirming signals during price stretches. Learn more about [Bollinger Bands and their application](/en/library/bollinger-bands/).
+**Function:** Signal confirmation during price stretches. Learn more about [Bollinger Bands and their application](/en/library/bollinger-bands/).
 
 **Settings:** Period 20, Deviation 2.0.
 
 ### 3. CMO (Chande Momentum Oscillator) — momentum filter
 
-**Function:** Cutting off false signals. A detailed breakdown of the [CMO indicator](/en/library/chande-momentum-oscillator/) will help you better understand its role.
+**Function:** Filtering out false signals. A detailed breakdown of the [CMO indicator](/en/library/chande-momentum-oscillator/) will help to better understand its role.
 
 **Settings:** Period 14, Filtration zone: from -20 to +20.
 
-## Strategy Algorithm
+## Strategy algorithm
 
-### Entry Signal (Opening/Averaging)
+### Entry signal (opening/averaging)
 
 Enter a trade when the following conditions are met **simultaneously**:
-
 1. Stochastic < 20
 2. Price touches or is below the lower Bollinger Band
 3. CMO < -20
 
-### Exit Signal (Profit Taking)
+### Exit signal (profit-taking)
 
 Close the position when:
-
 1. Stochastic > 80
 2. Price touches or is above the upper Bollinger Band
 3. CMO > +20
-4. Profit from the average entry price ≥ 3-5%
+4. Profit from the average entry price is ≥ 3-5%
 
 ## Capital Management
 
-### Deposit Distribution
-* • **Base Order:** 5% of deposit
-* • **Averaging Orders:** 5% to 15% depending on drop depth
-* • **Max Averaging Orders:** 4-6 orders
-* • **Reserve:** 20-30% of deposit
+### Deposit distribution
 
-### Averaging Steps
+* • **Base order:** 5% of the deposit
+* • **Safety orders:** from 5% to 15% depending on the drawdown depth
+* • **Maximum number of safety orders:** 4-6 orders
+* • **Reserve:** 20-30% of the deposit
+
+### Averaging steps
+
 Recommended intervals:
-* • 1st averaging: -5% from base entry
+* • 1st averaging: -5% from entry
 * • 2nd averaging: -10%
 * • 3rd averaging: -15%
 * • 4th averaging: -20%
 
-## Recommended Timeframes and Assets
-* • **Timeframe:** 4 hours (4H) — optimal. 1 hour (1H) — more aggressive.
-* • **Assets:** BTC, ETH, and TOP-20 coins by market cap.
+## Recommended timeframes and assets
 
-## Exchange Setup
+* • **Timeframe:** 4 hours (4H) — optimal. 1 hour (1H) — more aggressive.
+* • **Assets:** BTC, ETH, and TOP-20 coins by capitalization.
+
+## Setting up on exchanges
 
 The strategy can be launched on popular exchanges with trading bots:
 
-* • **[Bybit](https://www.bybit.com/en-US/invite?ref=PWMD24)** — user-friendly ready-made bots and low fees. The [Bybit trading bot setup guide](/en/library/bybit-trading-bot-setup/) will help you get started.
-* • **[Bitget](https://www.bitget.com/en/referral/register?from=referral&clacCode=23EHR2VD)** — a wide selection of copy-trading strategies.
-* • **[BingX](https://bingxdao.com/invite/CUBDBG/)** — simple interface for beginners.
+* • **[Bybit](https://partner.bybit.com/b/marketlab)** — convenient ready-made bots and low fees. Instructions on [setting up a trading bot on Bybit](/en/library/bybit-trading-bot-setup/) will help to get started.
+* • **[Bitget](https://partner.bitget.com/bg/marketlab)** — a wide selection of copy trading strategies.
+* • **[BingX](https://bingx.com/en-us/partner/MarketLab/)** — simple interface for beginners.
 
 ## Conclusion
 
-The ELDER 2.0 spot strategy is a fundamental approach to the crypto market. The absence of liquidation risk makes it an ideal choice for automation. Remember [risk management](/en/library/risk-management-crypto-trading-bots/) and always trade with funds you can afford to lose.
+The ELDER 2.0 spot strategy is a fundamental approach to working in the crypto market without liquidation risk. Position averaging and three-factor signal filtering provide system stability in various market conditions. Proven platforms are available for strategy automation:
 
-## Related Materials
+- **[Bybit](https://partner.bybit.com/b/marketlab)** — one of the leading exchanges for working with [trading bots](/en/library/bybit-trading-bot-setup/).
+- **[Bitget](https://partner.bitget.com/bg/marketlab)** — a platform with a user-friendly interface and bonuses for new users.
+- **[BingX](https://bingx.com/en-us/partner/MarketLab/)** — a popular platform for social trading and copy trading.
 
-**Basics and Strategies:** Be sure to study [what spot trading is](/en/library/what-is-spot-trading/) and the [differences between spot, futures, and margin](/en/library/spot-trading-vs-futures-margin/). Also, find out [how to start trading with a small amount](/en/library/how-to-start-trading-small-deposit/).
+---
 
-**Tools and Experience:** Deepen your knowledge of indicators: [Stochastic Oscillator](/en/library/stochastic-oscillator/), [Bollinger Bands](/en/library/bollinger-bands/), and [CMO](/en/library/chande-momentum-oscillator/). Check out our [surviving drawdown diary](/en/library/surviving-drawdown-diary/) and study the principles of [risk management](/en/library/risk-management-crypto-trading-bots/).
+## Related materials
 
-If you are interested in this strategy and want to follow the development of our project, take a look at the [About Project](/en/about/) page — there we talk about our mission and how you can support the startup.
+**Basics and strategies:** it is recommended to study [what spot trading is](/en/library/what-is-spot-trading/) and the [differences between spot, futures, and margin](/en/library/spot-trading-vs-futures-margin/). Information is also available on [how to start trading with a small deposit](/en/library/how-to-start-trading-small-deposit/).
+
+**Tools and experience:** in-depth study of indicators: [Stochastic Oscillator](/en/library/stochastic-oscillator/), [Bollinger Bands](/en/library/bollinger-bands/), and [CMO](/en/library/chande-momentum-oscillator/). A [live deposit diary](/en/library/surviving-drawdown-diary/) and [risk management](/en/library/risk-management-crypto-trading-bots/) principles are available.
