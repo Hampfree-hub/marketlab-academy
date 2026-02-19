@@ -57,6 +57,25 @@ Close the position when:
 3. CMO > +20
 4. Profit from the average entry price ≥ 3-5%
 
+## Capital Management
+
+### Deposit Distribution
+* • **Base Order:** 5% of deposit
+* • **Averaging Orders:** 5% to 15% depending on drop depth
+* • **Max Averaging Orders:** 4-6 orders
+* • **Reserve:** 20-30% of deposit
+
+### Averaging Steps
+Recommended intervals:
+* • 1st averaging: -5% from base entry
+* • 2nd averaging: -10%
+* • 3rd averaging: -15%
+* • 4th averaging: -20%
+
+## Recommended Timeframes and Assets
+* • **Timeframe:** 4 hours (4H) — optimal. 1 hour (1H) — more aggressive.
+* • **Assets:** BTC, ETH, and TOP-20 coins by market cap.
+
 ## Exchange Setup
 
 The strategy can be launched on popular exchanges with trading bots:
