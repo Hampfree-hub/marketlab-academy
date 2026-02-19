@@ -3,9 +3,8 @@ title: 'Keltner Channel'
 description: 'Keltner Channel — a volatility indicator based on EMA and ATR: settings, breakout zones, and use in spot trading strategies like Prisma 5.5.'
 pubDate: '2026-02-19'
 category: 'technical-analysis'
-draft: false
+draft: true
 ---
-
 **Keltner Channel** is a volatility-based indicator built around an Exponential Moving Average (EMA) with bands based on the Average True Range (ATR). In modern trading systems like Prisma 5.5, it is used as a volatility filter and a breakout signal.
 
 ## What is the Keltner Channel?
@@ -62,10 +61,10 @@ The Keltner Channel is a reliable volatility indicator that provides smoother no
 
 ---
 
-## Related materials
+## Related Materials
 
-**Basics and strategies:** studying [Bollinger Bands](/en/library/bollinger-bands/), [RSI](/en/library/rsi/), and [EMA](/en/library/ema/) will help to better understand the principles of channel indicators.
+**Basics and strategies:** studying [Bollinger Bands](/en/library/bollinger-bands/), [RSI (Relative Strength Index)](/en/library/technical-analysis-rsi/) and [ATR](/en/library/atr-and-atr-percent/) will help to better understand the principles of channel indicators.
 
-**Tools and automation:** information is available on [how to set up a bot on Bybit](/en/library/bybit-trading-bot-setup/) and use the [Prisma 5.5](/en/library/prisma-5-5-strategy-settings/) strategy.
+**Tools and automation:** information is available on [how to set up a bot on Bybit](/en/library/bybit-trading-bot-setup/) and [what backtests are](/en/library/what-are-backtests/).
 
 **Experience and risks:** it is critically important to understand [risk management when working with bots](/en/library/risk-management-crypto-trading-bots/) and to monitor [diversification](/en/library/diversification-trading-system-part-1/).
