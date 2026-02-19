@@ -62,3 +62,22 @@ draft: true
 - [BingX](https://bingxdao.com/invite/CUBDBG/) — поддержка множества активов.
 
 **Связанные материалы:** [Полосы Боллинджера](/ru/library/bollinger-bands/), [Chande Momentum Oscillator](/ru/library/chande-momentum-oscillator/), [Спотовая стратегия ELDER 2.0](/ru/library/spot-strategy-elder-20/).
+
+
+## Использование в стратегии ELDER 2.0
+
+В стратегии ELDER 2.0 Стохастик работает не в одиночку, а в связке с [Полосами Боллинджера](/ru/library/bollinger-bands/) и [Chande Momentum Oscillator (CMO)](/ru/library/chande-momentum-oscillator/).
+
+В этой системе Стохастик выступает «триггером»: мы ждем, когда он опустится ниже 20, чтобы начать искать точку входа для спотового бота.
+
+## Резюме
+
+Стохастический осциллятор — эффективный инструмент для поиска точек входа на волатильном крипторынке. Однако, как и любой осциллятор, он может давать ложные сигналы во время сильных направленных трендов. Поэтому его всегда стоит использовать с фильтрами тренда или волатильности.
+
+Для автоматизации торговли по Стохастику и другим индикаторам рекомендуем использовать проверенные платформы:
+
+- [Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24) — отличный выбор для спотовых ботов.
+- [Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD) — высокая ликвидность и удобный интерфейс.
+- [BingX](https://bingxdao.com/invite/CUBDBG/) — поддержка множества активов.
+
+**Связанные материалы:** [Полосы Боллинджера](/ru/library/bollinger-bands/), [Chande Momentum Oscillator](/ru/library/chande-momentum-oscillator/), [Спотовая стратегия ELDER 2.0](/ru/library/spot-strategy-elder-20/).
