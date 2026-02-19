@@ -57,3 +57,23 @@ Aquí, el indicador ayuda al bot a determinar si el precio se encuentra dentro d
 El Canal de Keltner es una herramienta fiable para quienes buscan un equilibrio entre sensibilidad и estabilidad. Es excelente para estrategias de seguimiento de tendencias y bots automatizados, ayudando a filtrar el ruido del mercado.
 
 **Materiales relacionados:** [Bandas de Bollinger](/es/library/bollinger-bands/), [RSI](/es/library/technical-analysis-rsi/), [Chande Momentum Oscillator](/es/library/chande-momentum-oscillator/), [Gestión de Riesgos](/es/library/risk-management-crypto-trading-bots/).
+
+
+## Conclusión
+
+El Canal de Keltner es un indicador de volatilidad fiable que proporciona una filtración del ruido de mercado más suave en comparación con las Bandas de Bollinger. El uso de este indicador permite identificar eficazmente los momentos de inicio de una tendencia y encontrar puntos de entrada óptimos dentro de las estrategias algorítmicas.
+
+Existen plataformas verificadas disponibles para comenzar a operar:
+- **[Bybit](https://partner.bybit.com/b/marketlab)** — uno de los principales exchanges para trabajar con [bots de trading](/es/library/bybit-trading-bot-setup/).
+- **[Bitget](https://partner.bitget.com/bg/marketlab)** — una plataforma con interfaz amigable y bonos para nuevos usuarios.
+- **[BingX](https://bingx.com/en-us/partner/MarketLab/)** — una opción popular para social trading y copy trading.
+
+---
+
+## Materiales Relacionados
+
+**Fundamentos y Estrategias:** el estudio de las [Bandas de Bollinger](/es/library/bollinger-bands/), el [RSI](/es/library/rsi/) y la [EMA](/es/library/ema/) ayudará a comprender mejor los principios de los indicadores de canal.
+
+**Herramientas y Automatización:** hay información disponible sobre [cómo configurar un bot en Bybit](/es/library/bybit-trading-bot-setup/) y utilizar la estrategia [Prisma 5.5](/es/library/prisma-5-5-strategy-settings/).
+
+**Experiencia y Riesgos:** es de vital importancia comprender la [gestión de riesgos al trabajar con bots](/es/library/risk-management-crypto-trading-bots/) y vigilar la [diversificación](/es/library/diversification-trading-system-part-1/).
