@@ -3,16 +3,16 @@ title: 'Prisma 5.5: Configuración de la Estrategia en la Plataforma Veles'
 description: 'Analizamos la configuración de la estrategia propia Prisma 5.5 en la plataforma Veles: indicadores de entrada, filtros, gestión de la cuadrícula de órdenes y recomendaciones de pares.'
 pubDate: '2026-02-19'
 category: 'algo-trading'
-draft: true
+draft: false
 ---
 
 **Prisma 5.5** es una estrategia propia de la plataforma [Veles](https://veles.finance/invite/washmallay) para el trading automatizado. En este artículo presentamos un desglose completo de la configuración: qué indicadores se utilizan para la entrada, cómo configurar la cuadrícula de órdenes y en qué pares ejecutarla.
 
-**Importante:** Antes de utilizar cualquier estrategia, familiarícese con la [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/) y la serie [Diversification y Configuración del Sistema de Trading](/es/library/diversification-trading-system-part-1/).
+**Importante:** Antes de utilizar cualquier estrategia, familiarícese con la [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/) y la serie [Diversificación y Configuración del Sistema de Trading](/es/library/diversification-trading-system-part-1/).
 
 ## ¿Qué es Prisma 5.5?
 
-Prisma 5.5 es una estrategia de trading de alta frecuencia diseñada para el volátil mercado cripto. Combina filtros de tendencia и osciladores para encontrar puntos de entrada óptimos para posiciones Long.
+Prisma 5.5 es una estrategia de trading de alta frecuencia diseñada para el volátil mercado cripto. Combina filtros de tendencia y osciladores para encontrar puntos de entrada óptimos para posiciones Long.
 
 ## Configuración de la Estrategia
 
@@ -29,45 +29,43 @@ Prisma 5.5 es una estrategia de trading de alta frecuencia diseñada para el vol
 
 ### Indicadores de Entrada (Filtros)
 
-Para abrir una posición en Prisma 5.5 se используют los siguientes indicadores:
+Para abrir una posición en Prisma 5.5 se utilizan los siguientes indicadores:
 
 1. **CCI (Commodity Channel Index)**
-   * • Período: 14
-   * • Nivel: -100
-   * • Condición: CCI menor que -100 (zona de sobreventa)
+   - Período: 14
+   - Nivel: -100
+   - Condición: CCI menor que -100 (zona de sobreventa)
 
 2. **Bollinger Bands**
-   * • Período: 20, Desviación: 2
-   * • Condición: El precio toca o está por debajo de la banda inferior
+   - Período: 20, Desviación: 2
+   - Condición: El precio toca o está por debajo de la banda inferior
 
 3. **RSI (Relative Strength Index)**
-   * • Período: 14
-   * • Nivel: 30
-   * • Condición: RSI menor que 30
+   - Período: 14
+   - Nivel: 30
+   - Condición: RSI menor que 30
 
 ### Gestión de la Cuadrícula de Órdenes
 
 La cuadrícula se configura teniendo en cuenta la volatilidad actual:
-* • **Paso de órdenes:** logarítmico, comenzando desde 0.5%
-* • **Coeficiente de martingala:** permite volver a beneficios más rápidamente durante las reversiones de precio.
-
-## Pares Recomendados
-
-Se recomienda utilizar pares líquidos con alto volumen de trading:
-* • **TOP-10:** BTC/USDT, ETH/USDT, SOL/USDT.
-* • **Alcoins Volátiles:** ARB/USDT, OP/USDT, LINK/USDT.
-
-## Cómo Iniciar Prisma 5.5 en Veles
-
-1. Regístrese en [Veles](https://veles.finance/invite/washmallay) и vincule su clave API del exchange.
-2. Vaya a la sección **"Bots listos"** и filtre por autor o el nombre Prisma 5.5.
-3. Haga clic en **"Copiar"**, seleccione un par de trading и especifique el depósito asignado.
-4. Verifique los parámetros con el botón "Calcular" и haga clic en **"Iniciar"**.
+- **Paso de orden:** logarítmico, comenzando desde 0.5%
+- **Coeficiente Martingala:** permite un retorno más rápido a las ganancias durante las reversiones de precios.
 
 ## Conclusión
 
-Prisma 5.5 es una estrategia equilibrada para quienes desean automatizar el trading spot o de futuros con un riesgo moderado. Supervise siempre su nivel de margen и no olvide la diversificación.
+Prisma 5.5 es una estrategia equilibrada para automatizar el trading en spot y futuros con un nivel de riesgo moderado. Es fundamental controlar los niveles de margen y cumplir con las reglas de diversificación para garantizar la estabilidad del sistema de trading.
+
+Existen plataformas verificadas disponibles para comenzar a operar:
+- **[Bybit](https://partner.bybit.com/b/marketlab)** — uno de los principales exchanges para trabajar con [bots de trading](/es/library/bybit-trading-bot-setup/).
+- **[Bitget](https://partner.bitget.com/bg/marketlab)** — una plataforma con interfaz amigable y bonos para nuevos usuarios.
+- **[BingX](https://bingx.com/en-us/partner/MarketLab/)** — una opción popular para social trading y copy trading.
 
 ---
 
-Si le interesa esta estrategia y desea seguir el desarrollo de nuestro proyecto, visite la página [Sobre el proyecto](/es/about/) — allí hablamos de nuestra misión y de cómo puede apoyar la startup.
+## Materiales Relacionados
+
+**Fundamentos y Estrategias:** Prisma 5.5 es un nivel avanzado. Para principiantes, se recomienda comenzar con el [trading de spot](/es/library/what-is-spot-trading/) y la [estrategia básica ELDER 2.0](/es/library/spot-strategy-elder-20/).
+
+**Herramientas y Automatización:** hay información disponible sobre [cómo funcionan los backtests](/es/library/what-are-backtests/) y cómo [configurar un bot en Bybit](/es/library/bybit-trading-bot-setup/). También se recomienda estudiar la [estrategia DCA](/es/library/dca-strategy-crypto/).
+
+**Experiencia y Riesgos:** es de vital importancia comprender la [gestión de riesgos al trabajar con bots](/es/library/risk-management-crypto-trading-bots/) y vigilar la [diversificación](/es/library/diversification-trading-system-part-1/).
