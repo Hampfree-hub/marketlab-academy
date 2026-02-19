@@ -52,8 +52,20 @@ Here, the indicator helps the bot determine if the price is within a "normal" di
 | **Reaction** | Smoother | Sharp, sensitive |
 | **Middle Line** | EMA (Exponential) | SMA (Simple) |
 
-## Summary
+## Conclusion
 
 The Keltner Channel is a reliable tool for those seeking a balance between sensitivity and stability. It is excellent for trend-following strategies and automated bots, helping to filter out market noise.
 
-**Related Materials:** [Bollinger Bands](/en/library/bollinger-bands/), [RSI](/en/library/technical-analysis-rsi/), [Chande Momentum Oscillator](/en/library/chande-momentum-oscillator/), [Risk Management](/en/library/risk-management-crypto-trading-bots/).
+You can start trading on verified exchanges:
+- **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24)** — an excellent choice for working with [trading bots](/en/library/bybit-trading-bot-setup/)
+- **[Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD)** — user-friendly interface and bonuses
+- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — social trading and copy trading
+
+---
+
+## Related Materials
+**Basics and Strategies:** explore [Bollinger Bands](/en/library/bollinger-bands/), [RSI](/en/library/technical-analysis-rsi/), and [CMO](/en/library/chande-momentum-oscillator/). These indicators are often used together with the Keltner Channel.
+**Tools and Automation:** The Keltner Channel is a key element of the [Prisma 5.5](/en/library/prisma-5-5-strategy-settings/) strategy. It is also useful to study [risk management](/en/library/risk-management-crypto-trading-bots/) when working with bots.
+
+---
+If you are interested in this topic and want to follow the development of the project, take a look at the [About Project](/en/about/) page — there we tell about our mission and how you can support the startup.
