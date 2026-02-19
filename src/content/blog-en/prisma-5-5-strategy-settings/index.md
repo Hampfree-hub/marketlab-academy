@@ -3,7 +3,7 @@ title: 'Prisma 5.5: Strategy Settings on the Veles Platform'
 description: 'Breaking down the settings of the Prisma 5.5 proprietary strategy on the Veles platform: entry indicators, filters, order grid management, and pair recommendations.'
 pubDate: '2026-02-19'
 category: 'algo-trading'
-draft: true
+draft: false
 ---
 
 **Prisma 5.5** is a proprietary strategy from the [Veles](https://veles.finance/invite/washmallay) platform for automated trading. This article provides a full breakdown of the settings: which indicators are used for entry, how to set up the order grid, and which pairs to launch on.
@@ -32,42 +32,40 @@ Prisma 5.5 is a high-frequency trading strategy designed for the volatile crypto
 To open a position in Prisma 5.5, the following indicators are used:
 
 1. **CCI (Commodity Channel Index)**
-   * • Period: 14
-   * • Level: -100
-   * • Condition: CCI less than -100 (oversold zone)
+   - Period: 14
+   - Level: -100
+   - Condition: CCI less than -100 (oversold zone)
 
 2. **Bollinger Bands**
-   * • Period: 20, Deviation: 2
-   * • Condition: Price below the lower band
+   - Period: 20, Deviation: 2
+   - Condition: Price below the lower band
 
 3. **RSI (Relative Strength Index)**
-   * • Period: 14
-   * • Level: 30
-   * • Condition: RSI less than 30
+   - Period: 14
+   - Level: 30
+   - Condition: RSI less than 30
 
 ### Order Grid Management
 
 The grid is configured considering current volatility:
-* • **Order Step:** logarithmic, starting from 0.5%
-* • **Martingale Coefficient:** allows for a faster return to profit during price reversals.
-
-## Recommended Pairs
-
-It is recommended to use liquid pairs with high trading volume:
-* • **TOP-10:** BTC/USDT, ETH/USDT, SOL/USDT.
-* • **Volatile Altcoins:** ARB/USDT, OP/USDT, LINK/USDT.
-
-## How to Launch Prisma 5.5 on Veles
-
-1. Register on [Veles](https://veles.finance/invite/washmallay) and link your exchange API key.
-2. Go to the **"Ready-made bots"** section and filter by author or the name Prisma 5.5.
-3. Click **"Copy"**, select a trading pair, and specify the allocated deposit.
-4. Check the parameters using the "Calculate" button and click **"Launch"**.
+- **Order Step:** logarithmic, starting from 0.5%
+- **Martingale Coefficient:** allows for a faster return to profit during price reversals.
 
 ## Conclusion
 
-Prisma 5.5 is a balanced strategy for those who want to automate spot or futures trading with moderate risk. Always monitor your margin level and don't forget about diversification.
+Prisma 5.5 is a balanced strategy for automating spot and futures trading with a moderate level of risk. It is essential to monitor margin levels and adhere to diversification rules to ensure the stability of the trading system.
+
+Proven platforms are available to start trading:
+- **[Bybit](https://partner.bybit.com/b/marketlab)** — a leading exchange for working with [trading bots](/en/library/bybit-trading-bot-setup/).
+- **[Bitget](https://partner.bitget.com/bg/marketlab)** — a platform with a user-friendly interface and bonuses for new users.
+- **[BingX](https://bingx.com/en-us/partner/MarketLab/)** — a popular choice for social trading and copy trading.
 
 ---
 
-If you are interested in this strategy and want to follow the development of our project, take a look at the [About Project](/en/about/) page — there we talk about our mission and how you can support the startup.
+## Related Materials
+
+**Basics and Strategies:** Prisma 5.5 is an advanced-level strategy. For beginners, it is recommended to start with [spot trading](/en/library/what-is-spot-trading/) and the basic [ELDER 2.0 strategy](/en/library/spot-strategy-elder-20/).
+
+**Tools and Automation:** information is available on [how backtests work](/en/library/what-are-backtests/) and how to [set up a bot on Bybit](/en/library/bybit-trading-bot-setup/). Studying the [DCA strategy](/en/library/dca-strategy-crypto/) is also recommended.
+
+**Experience and Risks:** it is critically important to understand [risk management when working with bots](/en/library/risk-management-crypto-trading-bots/) and to monitor [diversification](/en/library/diversification-trading-system-part-1/).
