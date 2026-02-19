@@ -1,24 +1,49 @@
 ---
-title: 'Chande Momentum Oscillator (CMO)'
-description: 'CMO: what it is, formula, overbought/oversold zones, buy and sell signals, link to ELDER strategy.'
-pubDate: '2026-02-10'
+title: 'Chande Momentum Oscillator (CMO) Indicator'
+description: 'CMO: what it is, formula, overbought and oversold zones, buy and sell signals, connection with the ELDER strategy.'
+pubDate: '2026-02-13'
 category: 'technical-analysis'
 draft: true
 ---
 
-<!-- Placeholder for ELDER 2.0 migration. CMO is one of three indicators in the strategy (CMO, Bollinger Bands, Stochastic). Do not publish until filled. -->
+**Chande Momentum Oscillator (CMO)** is a technical indicator, a momentum oscillator developed by Tushar Chande. Unlike RSI or Stochastic, CMO measures momentum directly, using data on the sum of all price changes (up and down) over a certain period in its calculations.
 
-Chande Momentum Oscillator (CMO) is a momentum oscillator ranging from -100 to +100. Used in the ELDER 2.0 spot strategy for indicator-based averaging.
+## What is CMO and who is its author
 
-**Structure (to fill):**
+The indicator was introduced by **Tushar Chande**, a well-known analyst and author of trading books, in 1994. The main task of CMO is to determine the "pure" momentum of price movement without additional smoothing, which makes it more sensitive to sharp market changes.
 
-- What CMO is, author (Tushar Chande), purpose
-- Formula and calculation (sums of up/down price changes)
-- Interpretation: oversold (< -50) and overbought (> +50) zones
-- Buy signals: CMO falls below -50
-- Sell signals: CMO rises above +50
-- Timeframes and settings (in ELDER — M15)
-- Combining with [Bollinger Bands](/en/library/bollinger-bands/) and [Stochastic](/en/library/stochastic-oscillator/) (link when published)
-- Brief: use in algo trading and spot strategies
+## How CMO works
 
-**Related:** [Bollinger Bands](/en/library/bollinger-bands/), [Stochastic Oscillator](/en/library/stochastic-oscillator/) (stub), [Trading signals](/en/library/what-are-trading-signals/).
+The range of indicator values: **from -100 to +100**.
+
+- Values above **+50** are considered an overbought zone.
+- Values below **-50** are considered an oversold zone.
+
+The central line is **0**. Crossing the zero mark is often used as a confirmation of a short-term trend change.
+
+## Formula and calculation
+
+The CMO formula compares the sum of all positive price changes ($S_{up}$) and the sum of all negative changes ($S_{down}$) for the selected period (usually 9 or 14):
+
+$$CMO = \frac{S_{up} - S_{down}}{S_{up} + S_{down}} 	imes 100$$
+
+## Indicator Signals
+
+1. **Extreme values:** reaching levels +50 or -50 signals a possible stop or reversal of the trend.
+2. **Zero line crossover:** when CMO rises above 0, it is a bullish signal; when it drops below 0 — bearish.
+3. **Divergence:** a discrepancy between the direction of price movement and the indicator often precedes strong price movements.
+
+## Use in ELDER 2.0 Strategy
+
+In our [spot strategy ELDER 2.0](/en/library/spot-strategy-elder-20/), the CMO indicator is used as one of the three main filters:
+
+- **Timeframe:** M15.
+- **Entry condition:** CMO must be below **-50** (deep oversold zone) in combination with signals from Bollinger Bands and Stochastic.
+
+## Summary
+
+CMO is a powerful tool for determining trend strength and points of exhaustion. Its advantage is the absence of "double smoothing," which allows the trader to react faster to market impulses.
+
+---
+
+**Related Materials:** [Stochastic Oscillator](/en/library/stochastic-oscillator/), [Bollinger Bands](/en/library/bollinger-bands/), [Risk Management](/en/library/risk-management-crypto-trading-bots/), [About the Project](/en/about/).
