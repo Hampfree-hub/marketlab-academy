@@ -12,68 +12,60 @@ draft: false
 
 El indicador fue descrito por primera vez por Chester Keltner en su libro de 1960, "How To Make Money in Commodities". Más tarde fue perfeccionado por Linda Raschke y Robert Colby, quienes sustituyeron la Media Móvil Simple por una Exponencial y utilizaron el ATR para calcular el ancho del canal.
 
-A diferencia de las Bandas de Bollinger, que se expanden y contraen de forma muy brusca, el Canal de Keltner es más "suave", ya que el ATR (rango verdadero promedio) reacciona a la volatilidad de forma menos agresiva que la desviación estándar.
+A diferencia de las Bandas de Bollinger, que se expanden y contraen bruscamente, el Canal de Keltner es más "suave", ya que el ATR (Average True Range) reacciona a la volatilidad de forma menos agresiva que la desviación estándar.
 
 ## Estructura del indicador
 
-Un Canal de Keltner clásico consta de tres líneas:
-1. **Línea media:** Media Móvil Exponencial (normalmente EMA 20).
+El Canal de Keltner clásico consta de tres líneas:
+1. **Línea central:** Media Móvil Exponencial (habitualmente EMA 20).
 2. **Banda superior:** EMA + (Multiplicador * ATR).
 3. **Banda inferior:** EMA - (Multiplicador * ATR).
 
-Los ajustes estándar suelen implicar un periodo EMA 20 и un multiplicador de 2.0.
+La configuración estándar utiliza un periodo EMA de 20 y un multiplicador de 2.0.
 
 ## Señales del Canal de Keltner
 
 ### 1. Ruptura y tendencia
-Si el precio cierra por encima de la banda superior, suele indicar un fuerte impulso alcista. Si cierra por debajo de la banda inferior, indica un impulso bajista. En tendencias fuertes, el precio puede "cabalgar" a lo largo de los límites del canal durante mucho tiempo.
+Un cierre por encima de la banda superior a menudo indica un fuerte impulso alcista. Un cierre por debajo de la banda inferior indica movimiento bajista. En tendencias fuertes, el precio puede "deslizarse" a lo largo de los límites del canal durante un período prolongado.
 
-### 2. Reversión a la media
-En un mercado lateral (rango), los límites del canal actúan como niveles de soporte y resistencia. Cuando el precio sale del canal, tiende a volver a la EMA 20.
+### 2. Retorno a la media
+En un mercado lateral (rango), los límites del canal actúan como niveles de soporte y resistencia. El precio que sale de los límites del canal tiende a volver a la EMA 20.
 
 ### 3. Filtro de volatilidad
-Un canal que se estrecha indica un mercado tranquilo (acumulación), al que suele seguir un fuerte movimiento de precios.
+Un estrechamiento del canal indica calma en el mercado (acumulación), que generalmente va seguido de un movimiento fuerte.
 
 ## Configuración en Prisma 5.5
 
-En la estrategia Prisma 5.5 de la plataforma Veles, los ajustes del Canal de Keltner están optimizados para captar impulsos locales en un marco temporal de 15 minutos:
+En la estrategia Prisma 5.5 en la plataforma Veles, la configuración del Canal de Keltner está optimizada para capturar impulsos locales en el marco temporal de 15 minutos:
 - **Periodo EMA:** 20
 - **Periodo ATR:** 10
 - **Multiplicador:** 1.5
 - **Marco temporal:** M15
 
-Aquí, el indicador ayuda al bot a determinar si el precio se encuentra dentro de una zona de distribución "normal" o si está comenzando una ruptura volátil adecuada para entrar en una operación.
+El indicador ayuda a determinar si el precio se encuentra en la zona de distribución "normal" o si está comenzando una ruptura volátil adecuada para entrar en una operación.
 
-## Diferencia con las Bandas de Bollinger
+## Comparación con las Bandas de Bollinger
 
 | Característica | Canal de Keltner | Bandas de Bollinger |
 |---|---|---|
-| **Base** | ATR (Average True Range) | Desviación Estándar |
-| **Reacción** | Más suave | Brusca, sensible |
-| **Línea media** | EMA (Exponencial) | SMA (Simple) |
-
-## Resumen
-
-El Canal de Keltner es una herramienta fiable para quienes buscan un equilibrio entre sensibilidad и estabilidad. Es excelente para estrategias de seguimiento de tendencias y bots automatizados, ayudando a filtrar el ruido del mercado.
-
-**Materiales relacionados:** [Bandas de Bollinger](/es/library/bollinger-bands/), [RSI](/es/library/technical-analysis-rsi/), [Chande Momentum Oscillator](/es/library/chande-momentum-oscillator/), [Gestión de Riesgos](/es/library/risk-management-crypto-trading-bots/).
-
+| Base | ATR (Average True Range) | Desviación estándar |
+| Reacción | Más suave | Brusca, sensible |
+| Línea central | EMA (exponencial) | SMA (simple) |
 
 ## Conclusión
 
-El Canal de Keltner es un indicador de volatilidad fiable que proporciona una filtración del ruido de mercado más suave en comparación con las Bandas de Bollinger. El uso de este indicador permite identificar eficazmente los momentos de inicio de una tendencia y encontrar puntos de entrada óptimos dentro de las estrategias algorítmicas.
+El Canal de Keltner es un indicador de volatilidad fiable que proporciona un filtrado más suave del ruido del mercado en comparación con las Bandas de Bollinger. El uso del indicador permite identificar eficazmente los momentos en que se forma una tendencia y encontrar puntos de entrada óptimos en el marco de las estrategias algorítmicas. Existen plataformas probadas disponibles para empezar a operar:
 
-Existen plataformas verificadas disponibles para comenzar a operar:
 - **[Bybit](https://partner.bybit.com/b/marketlab)** — uno de los principales exchanges para trabajar con [bots de trading](/es/library/bybit-trading-bot-setup/).
-- **[Bitget](https://partner.bitget.com/bg/marketlab)** — una plataforma con interfaz amigable y bonos para nuevos usuarios.
-- **[BingX](https://bingx.com/en-us/partner/MarketLab/)** — una opción popular para social trading y copy trading.
+- **[Bitget](https://partner.bitget.com/bg/marketlab)** — una plataforma con una interfaz intuitiva y bonos para nuevos usuarios.
+- **[BingX](https://bingx.com/en-us/partner/MarketLab/)** — una plataforma popular para el trading social y el copy trading.
 
 ---
 
-## Materiales Relacionados
+## Materiales relacionados
 
-**Fundamentos y Estrategias:** el estudio de las [Bandas de Bollinger](/es/library/bollinger-bands/), el [RSI](/es/library/rsi/) y la [EMA](/es/library/ema/) ayudará a comprender mejor los principios de los indicadores de canal.
+**Conceptos básicos y estrategias:** el estudio de las [Bandas de Bollinger](/es/library/bollinger-bands/), el [RSI](/es/library/rsi/) y el [EMA](/es/library/ema/) ayudará a comprender mejor los principios de los indicadores de canal.
 
-**Herramientas y Automatización:** hay información disponible sobre [cómo configurar un bot en Bybit](/es/library/bybit-trading-bot-setup/) y utilizar la estrategia [Prisma 5.5](/es/library/prisma-5-5-strategy-settings/).
+**Herramientas y automatización:** hay información disponible sobre [cómo configurar un bot en Bybit](/es/library/bybit-trading-bot-setup/) y usar la estrategia [Prisma 5.5](/es/library/prisma-5-5-strategy-settings/).
 
-**Experiencia y Riesgos:** es de vital importancia comprender la [gestión de riesgos al trabajar con bots](/es/library/risk-management-crypto-trading-bots/) y vigilar la [diversificación](/es/library/diversification-trading-system-part-1/).
+**Experiencia y riesgos:** es de vital importancia comprender la [gestión de riesgos al trabajar con bots](/es/library/risk-management-crypto-trading-bots/) y monitorizar la [diversificación](/es/library/diversification-trading-system-part-1/).
