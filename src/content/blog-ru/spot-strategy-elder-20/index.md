@@ -43,7 +43,6 @@ category: 'algo-trading'
 ### Сигнал на вход (открытие/усреднение)
 
 Входим в сделку, когда выполняются **одновременно**:
-
 1. Stochastic < 20
 2. Цена касается или ниже нижней полосы Bollinger Bands
 3. CMO < -20
@@ -51,7 +50,6 @@ category: 'algo-trading'
 ### Сигнал на выход (фиксация прибыли)
 
 Закрываем позицию, когда:
-
 1. Stochastic > 80
 2. Цена касается или выше верхней полосы Bollinger Bands
 3. CMO > +20
@@ -60,12 +58,14 @@ category: 'algo-trading'
 ## Управление капиталом
 
 ### Распределение депозита
+
 * • **Базовый ордер:** 5% от депозита
 * • **Ордера усреднения:** от 5% до 15% в зависимости от глубины просадки
 * • **Максимальное количество усреднений:** 4-6 ордеров
 * • **Резерв:** 20-30% от депозита
 
 ### Шаги усреднения
+
 Рекомендуемые интервалы:
 * • 1-е усреднение: -5% от входа
 * • 2-е усреднение: -10%
@@ -73,6 +73,7 @@ category: 'algo-trading'
 * • 4-е усреднение: -20%
 
 ## Рекомендуемые таймфреймы и активы
+
 * • **Таймфрейм:** 4 часа (4H) — оптимально. 1 час (1H) — более агрессивно.
 * • **Активы:** BTC, ETH и монеты из ТОП-20 по капитализации.
 
@@ -80,18 +81,22 @@ category: 'algo-trading'
 
 Стратегию можно запустить на популярных биржах с торговыми ботами:
 
-* • **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24)** — удобные готовые боты и низкие комиссии. Инструкция по [настройке торгового бота на Bybit](/ru/library/bybit-trading-bot-setup/) поможет вам начать.
-* • **[Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD)** — широкий выбор стратегий копитрейдинга.
-* • **[BingX](https://bingxdao.com/invite/CUBDBG/)** — простой интерфейс для новичков.
+* • **[Bybit](https://partner.bybit.com/b/marketlab)** — удобные готовые боты и низкие комиссии. Инструкция по [настройке торгового бота на Bybit](/ru/library/bybit-trading-bot-setup/) поможет начать.
+* • **[Bitget](https://partner.bitget.com/bg/marketlab)** — широкий выбор стратегий копитрейдинга.
+* • **[BingX](https://bingx.com/en-us/partner/MarketLab/)** — простой интерфейс для новичков.
 
 ## Заключение
 
-Спотовая стратегия ELDER 2.0 — это фундаментальный подход к работе на крипторынке. Отсутствие риска ликвидации делает её идеальным выбором для автоматизации. Помните о [риск-менеджменте](/ru/library/risk-management-crypto-trading-bots/) и всегда торгуйте средствами, потерю которых можете себе позволить.
+Спотовая стратегия ELDER 2.0 — это фундаментальный подход к работе на крипторынке без риска ликвидации. Усреднение позиций и трёхфакторная фильтрация сигналов обеспечивают устойчивость системы на различных рыночных условиях. Для автоматизации стратегии доступны проверенные платформы:
+
+- **[Bybit](https://partner.bybit.com/b/marketlab)** — одна из ведущих бирж для работы с [торговыми ботами](/ru/library/bybit-trading-bot-setup/).
+- **[Bitget](https://partner.bitget.com/bg/marketlab)** — площадка с удобным интерфейсом и бонусами для новых пользователей.
+- **[BingX](https://bingx.com/en-us/partner/MarketLab/)** — популярная платформа для социального трейдинга и копитрейдинга.
+
+---
 
 ## Связанные материалы
 
-**Основы и стратегии:** Обязательно изучите [что такое спотовая торговля](/ru/library/what-is-spot-trading/) и [различия между спотом, фьючерсами и маржой](/ru/library/spot-trading-vs-futures-margin/). Также узнайте, [как начать трейдинг с малой суммы](/ru/library/how-to-start-trading-small-deposit/).
+**Основы и стратегии:** рекомендуется изучить [что такое спотовая торговля](/ru/library/what-is-spot-trading/) и [различия между спотом, фьючерсами и маржой](/ru/library/spot-trading-vs-futures-margin/). Также доступна информация о том, [как начать трейдинг с малой суммы](/ru/library/how-to-start-trading-small-deposit/).
 
-**Инструменты и опыт:** Углубите знания об индикаторах: [Stochastic Oscillator](/ru/library/stochastic-oscillator/), [Bollinger Bands](/ru/library/bollinger-bands/) и [CMO](/ru/library/chande-momentum-oscillator/). Посмотрите наш [дневник живого депозита](/ru/library/surviving-drawdown-diary/) и изучите принципы [риск-менеджмента](/ru/library/risk-management-crypto-trading-bots/).
-
-Если вам интересна эта стратегия и вы хотите следить за развитием нашего проекта, загляните на страницу [О проекте](/ru/about/) — там мы рассказываем о нашей миссии и о том, как можно поддержать стартап.
+**Инструменты и опыт:** углублённое изучение индикаторов: [Stochastic Oscillator](/ru/library/stochastic-oscillator/), [Bollinger Bands](/ru/library/bollinger-bands/) и [CMO](/ru/library/chande-momentum-oscillator/). Доступен [дневник живого депозита](/ru/library/surviving-drawdown-diary/) и принципы [риск-менеджмента](/ru/library/risk-management-crypto-trading-bots/).
