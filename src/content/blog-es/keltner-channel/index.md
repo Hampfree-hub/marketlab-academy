@@ -3,31 +3,57 @@ title: 'Canal de Keltner (Keltner Channel)'
 description: 'Keltner Channel — indicador de volatilidad basado en EMA y ATR: configuración, zonas de ruptura y uso en estrategias spot como Prisma 5.5.'
 pubDate: '2026-02-19'
 category: 'technical-analysis'
-draft: true
+draft: false
 ---
 
-<!-- Stub: Keltner Channel (ES). Usado en la estrategia Prisma 5.5. Completar antes de publicar. -->
+**El Canal de Keltner (Keltner Channel)** es un indicador de volatilidad construido alrededor de una Media Móvil Exponencial (EMA) con bandas basadas en el Average True Range (ATR). En los sistemas de trading modernos como Prisma 5.5, se utiliza como filtro de volatilidad y señal de ruptura.
 
-**El Canal de Keltner (Keltner Channel)** es un indicador de volatilidad construido alrededor de una Media Móvil Exponencial (EMA) con bandas basadas en el Average True Range (ATR). Se utiliza como filtro de volatilidad y señal de ruptura en la estrategia Prisma 5.5.
+## ¿Qué es el Canal de Keltner?
 
-## Qué es el Canal de Keltner
+El indicador fue descrito por primera vez por Chester Keltner en su libro de 1960, "How To Make Money in Commodities". Más tarde fue perfeccionado por Linda Raschke y Robert Colby, quienes sustituyeron la Media Móvil Simple por una Exponencial y utilizaron el ATR para calcular el ancho del canal.
 
-<!-- TODO: historia, autor Chester Keltner, evolución por Linda Raschke -->
+A diferencia de las Bandas de Bollinger, que se expanden y contraen de forma muy brusca, el Canal de Keltner es más "suave", ya que el ATR (rango verdadero promedio) reacciona a la volatilidad de forma menos agresiva que la desviación estándar.
 
 ## Estructura del indicador
 
-<!-- TODO: EMA (EMA 20 por defecto), banda superior (EMA + 2*ATR), banda inferior (EMA - 2*ATR) -->
+Un Canal de Keltner clásico consta de tres líneas:
+1. **Línea media:** Media Móvil Exponencial (normalmente EMA 20).
+2. **Banda superior:** EMA + (Multiplicador * ATR).
+3. **Banda inferior:** EMA - (Multiplicador * ATR).
+
+Los ajustes estándar suelen implicar un periodo EMA 20 и un multiplicador de 2.0.
 
 ## Señales del Canal de Keltner
 
-<!-- TODO: ruptura arriba/abajo, precio dentro del canal, retorno a la media -->
+### 1. Ruptura y tendencia
+Si el precio cierra por encima de la banda superior, suele indicar un fuerte impulso alcista. Si cierra por debajo de la banda inferior, indica un impulso bajista. En tendencias fuertes, el precio puede "cabalgar" a lo largo de los límites del canal durante mucho tiempo.
+
+### 2. Reversión a la media
+En un mercado lateral (rango), los límites del canal actúan como niveles de soporte y resistencia. Cuando el precio sale del canal, tiende a volver a la EMA 20.
+
+### 3. Filtro de volatilidad
+Un canal que se estrecha indica un mercado tranquilo (acumulación), al que suele seguir un fuerte movimiento de precios.
 
 ## Configuración en Prisma 5.5
 
-<!-- TODO: periodo EMA 20, periodo ATR 10, multiplicador 1.5, marco temporal M15 -->
+En la estrategia Prisma 5.5 de la plataforma Veles, los ajustes del Canal de Keltner están optimizados para captar impulsos locales en un marco temporal de 15 minutos:
+- **Periodo EMA:** 20
+- **Periodo ATR:** 10
+- **Multiplicador:** 1.5
+- **Marco temporal:** M15
+
+Aquí, el indicador ayuda al bot a determinar si el precio se encuentra dentro de una zona de distribución "normal" o si está comenzando una ruptura volátil adecuada para entrar en una operación.
 
 ## Diferencia con las Bandas de Bollinger
 
-<!-- TODO: diferencia clave — ATR vs desviación estándar; EMA vs SMA -->
+| Característica | Canal de Keltner | Bandas de Bollinger |
+|---|---|---|
+| **Base** | ATR (Average True Range) | Desviación Estándar |
+| **Reacción** | Más suave | Brusca, sensible |
+| **Línea media** | EMA (Exponencial) | SMA (Simple) |
 
-**Artículos relacionados:** [Bandas de Bollinger](/es/library/bollinger-bands/), [RSI](/es/library/technical-analysis-rsi/), [CMO](/es/library/chande-momentum-oscillator/), [Gestión de riesgos](/es/library/risk-management-crypto-trading-bots/).
+## Resumen
+
+El Canal de Keltner es una herramienta fiable para quienes buscan un equilibrio entre sensibilidad и estabilidad. Es excelente para estrategias de seguimiento de tendencias y bots automatizados, ayudando a filtrar el ruido del mercado.
+
+**Materiales relacionados:** [Bandas de Bollinger](/es/library/bollinger-bands/), [RSI](/es/library/technical-analysis-rsi/), [Chande Momentum Oscillator](/es/library/chande-momentum-oscillator/), [Gestión de Riesgos](/es/library/risk-management-crypto-trading-bots/).
