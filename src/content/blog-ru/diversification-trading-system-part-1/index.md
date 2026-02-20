@@ -36,3 +36,24 @@ category: 'algo-trading'
 ## Вывод
 
 Диверсификация — часть настройки торговой системы, не самоцель. Цель — снизить риск потери всего капитала из-за одного актива, одной стратегии или одной площадки. Далее — [Часть 2: как выстроить и настроить систему](/ru/library/diversification-trading-system-part-2/).
+
+
+Начать торговлю на надёжных платформах:
+
+- **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24)** — отличный выбор для работы с [торговыми ботами](/ru/library/bybit-trading-bot-setup/)
+- **[Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD)** — удобный интерфейс и бонусы для новых пользователей
+- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — социальный трейдинг и копитрейдинг
+
+---
+
+## Связанные материалы
+
+**Продолжение серии:** изучите [Часть 2: как выстроить систему](/ru/library/diversification-trading-system-part-2/) и [Часть 3: настройка под себя и ошибки](/ru/library/diversification-trading-system-part-3/).
+
+**Инструменты:** ознакомьтесь с [DCA-стратегией](/ru/library/dca-strategy-crypto/) и [сеточной торговлей (grid)](/ru/library/grid-trading-crypto/) — стратегиями для диверсификации подходов.
+
+**Риски и защита капитала:** обязательно прочитайте про [риск-менеджмент в криптотрейдинге](/ru/library/risk-management-crypto-trading-bots/) и [аптайм и даунтайм биржи](/ru/library/exchange-uptime-downtime/).
+
+---
+
+Если вам интересна эта тема и вы хотите следить за развитием нашего проекта, загляните на страницу [О проекте](/ru/about/) — там мы рассказываем о нашей миссии и о том, как можно поддержать стартап.
