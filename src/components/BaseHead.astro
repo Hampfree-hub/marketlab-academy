@@ -53,9 +53,7 @@ if (imageProp) {
 		if (imagePath.startsWith('/')) {
 			ogImageUrl = new URL(imagePath, Astro.site);
 		} else {
-			const currentPath = Astro.url.pathname.endsWith('/') 
-				? Astro.url.pathname.slice(0, -1) 
-				: Astro.url.pathname;
+			const currentPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname.slice(0, -1) : Astro.url.pathname;
 			ogImageUrl = new URL(currentPath + '/' + imagePath, Astro.site);
 		}
 	} else {
@@ -64,31 +62,27 @@ if (imageProp) {
 	}
 } else {
 	// Автоматически определяем путь к сгенерированному OG изображению
-	// Формат: /og/{lang}-{slug}.png для статей
-	// Или /og/homepage.png для главной
-	
 	const pathname = Astro.url.pathname;
-	
+	const pathParts = pathname.split('/').filter(Boolean);
+	const langPrefix = pathParts.length > 0 && SUPPORTED_LANGS.includes(pathParts[0] as any) ? pathParts[0] : 'ru';
+
 	// Проверяем, это статья (library/[lang]/[...slug]) или главная
 	if (pathname.includes('/library/')) {
-		// Извлекаем lang и slug из пути
-		// Формат пути: /ru/library/what-is-digital-currency-in-simple-terms/
-		const pathParts = pathname.split('/').filter(Boolean);
 		const libraryIndex = pathParts.indexOf('library');
-		if (libraryIndex >= 0 && libraryIndex > 0) {
-			// lang это элемент ПЕРЕД 'library'
-			const lang = pathParts[libraryIndex - 1];
-			// slug это все элементы ПОСЛЕ 'library'
+		if (libraryIndex >= 0) {
+			const lang = pathParts[libraryIndex - 1] || langPrefix;
 			const slugParts = pathParts.slice(libraryIndex + 1);
 			const slug = slugParts.length > 0 ? slugParts.join('-') : 'homepage';
 			ogImageUrl = new URL(`/og/${lang}-${slug}.png`, Astro.site);
 		} else {
-			// Fallback для неожиданных путей
 			ogImageUrl = new URL(FallbackImage.src, Astro.site);
 		}
 	} else if (pathname === '/' || pathname === '/ru/' || pathname === '/en/' || pathname === '/es/') {
-		// Главная страница
-		ogImageUrl = new URL('/og/homepage.png', Astro.site);
+		// Главная страница (мультиязычная)
+		ogImageUrl = new URL(`/og/${langPrefix}-homepage.png`, Astro.site);
+	} else if (pathname.includes('/about/')) {
+		// Страница "О проекте" (мультиязычная)
+		ogImageUrl = new URL(`/og/${langPrefix}-about.png`, Astro.site);
 	} else {
 		// Fallback для других страниц
 		ogImageUrl = new URL(FallbackImage.src, Astro.site);
@@ -99,43 +93,44 @@ if (imageProp) {
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
+
 <!-- Favicon: правильный порядок для максимальной совместимости -->
-<!-- Стандартный favicon.ico для поисковых систем и старых браузеров (должен быть первым) -->
 <link rel="icon" type="image/x-icon" href={new URL("/favicon.ico", Astro.site).href} />
-<!-- SVG favicon для современных браузеров -->
 <link rel="icon" type="image/svg+xml" href={new URL("/favicon.svg", Astro.site).href} />
-<!-- PNG favicon с явными размерами для разных случаев -->
 <link rel="icon" type="image/png" sizes="16x16" href={new URL("/favicon-96x96.png", Astro.site).href} />
 <link rel="icon" type="image/png" sizes="32x32" href={new URL("/favicon-96x96.png", Astro.site).href} />
-<link rel="icon" type="image/png" sizes="96x96" href={new URL("/favicon-96x96.png", Astro.site).href} />
-<!-- Для iOS устройств -->
-<link rel="apple-touch-icon" sizes="180x180" href={new URL("/apple-touch-icon.png", Astro.site).href} />
-<!-- Web App Manifest -->
-<link rel="manifest" href="/site.webmanifest" />
-<link rel="sitemap" href="/sitemap-index.xml" />
-<link
-	rel="alternate"
-	type="application/rss+xml"
-	title={SITE_TITLE}
-	href={new URL('rss.xml', Astro.site)}
-/>
-<meta name="generator" content={Astro.generator} />
+<link rel="apple-touch-icon" href={new URL("/apple-touch-icon.png", Astro.site).href} />
+<link rel="manifest" href={new URL("/site.webmanifest", Astro.site).href} />
 
-<!-- Google Fonts: 8-bit Pixel Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<meta name="generator" content={Astro.generator} />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
-<!-- hreflang alternates -->
+<!-- Alternate Language Links (SEO) -->
 {SUPPORTED_LANGS.map((l) => (
-	<link rel="alternate" hreflang={l} href={new URL(buildLangPath(l), Astro.site).href} />
+	<link rel="alternate" hreflang={l} href={new URL(buildLangPath(l), Astro.site)} />
 ))}
-<link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site).href} />
 
-<!-- Persist user language preference (used by / redirect) -->
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={ogTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImageUrl} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={ogTitle} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={ogImageUrl} />
+
 <script is:inline>
 	try {
 		const l = document.documentElement.lang;
@@ -145,29 +140,7 @@ if (imageProp) {
 	} catch {}
 </script>
 
-<!-- Primary Meta Tags -->
-<title>{title}</title>
-<meta name="title" content={title} />
-<meta name="description" content={description} />
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url.href} />
-<meta property="og:title" content={ogTitle} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content={ogImageUrl.href} />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:type" content="image/png" />
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url.href} />
-<meta property="twitter:title" content={ogTitle} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={ogImageUrl.href} />
-
-<!-- Schema.org Organization -->
+<!-- JSON-LD Structured Data (Organization) -->
 {(() => {
 	const orgSchema = {
 		"@context": "https://schema.org",
