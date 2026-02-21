@@ -122,19 +122,17 @@ async function getBlogPosts() {
 				if (existsSync(indexPath)) {
 					try {
 						const content = await readFile(indexPath, 'utf-8');
-						const frontmatter = content.match(/^---
-([\s\S]*?)
----/);
+                    const frontmatter = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
 						if (frontmatter) {
 							const yaml = frontmatter[1];
-							const titleMatch = yaml.match(/title:\s*['"](.*?)['"]/);
-							const descMatch = yaml.match(/description:\s*['"](.*?)['"]/);
-							const catMatch = yaml.match(/category:\s*['"]?([\w-]+)['"]?/);
+                        const titleMatch = yaml.match(/^title:\s*['"]?(.*?)['"]?\s*$/m);
+                        const descMatch  = yaml.match(/^description:\s*['"]?(.*?)['"]?\s*$/m);
+                        const catMatch   = yaml.match(/^category:\s*['"]?([\w-]+)['"]?/m);
 							posts.push({
 								lang,
 								slug: entry.name,
-								title: titleMatch ? titleMatch[1] : entry.name,
-								description: descMatch ? descMatch[1] : '',
+								                        title: titleMatch ? titleMatch[1].trim() : entry.name,
+								                        description: descMatch  ? descMatch[1].trim()  : '',
 								category: catMatch ? catMatch[1] : 'general',
 							});
 						}
