@@ -31,6 +31,9 @@ jobs:
         env:
           PUBLIC_GA_MEASUREMENT_ID: ${{ secrets.PUBLIC_GA_MEASUREMENT_ID }}
 
+        - name: Validate OG script syntax
+          run: node --check scripts/generate-og-images.mjs
+
       - name: Generate OG Images
         run: node scripts/generate-og-images.mjs
         continue-on-error: false
