@@ -112,7 +112,7 @@
 	border: none;
 	color: var(--color-text-secondary);
 	cursor: pointer;
-	padding: 0px 8px; /* ✅ Issue #52: Исправлено на кратно 8px (было 4px 8px) */
+	padding: 4px 8px; /* ✅ Issue #52: Исправлено на кратно 8px (было 4px 8px) */
 	transition: color 0.2s steps(3);
 }
 
