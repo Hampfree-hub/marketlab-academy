@@ -1,58 +1,108 @@
 ---
-title: 'Oscilador estocástico (Stochastic) en trading'
-description: 'Stochastic: %K y %D, zonas de sobrecompra y sobreventa, cruces de 20 y 80, relación con la estrategia ELDER.'
+title: 'Oscilador estocástico (Stochastic): Guía completa'
+description: 'Cómo usar el Stochastic en trading: configuración de las líneas %K y %D, zonas de sobrecompra y sobreventa, señales de entrada y estrategias.'
 pubDate: '2026-02-10'
 category: 'technical-analysis'
 draft: false
 ---
 
-El oscilador estocástico ayuda a identificar sobrecompra y sobreventa y a entrar en retrocesos. En ELDER 2.0 se usa para entrada (cruce por encima de 20) y salida (cruce por debajo de 80).
+El oscilador estocástico (Stochastic Oscillator) es uno de los indicadores de análisis técnico más populares, que permite identificar momentos de desaceleración del impulso del precio y encontrar posibles puntos de reversión del mercado.
 
-## ¿Qué es el oscilador estocástico?
+## Qué es el Stochastic y quién lo creó
 
-Desarrollado por George Lane a finales de los años 50, el oscilador estocástico es un indicador de momento que compara un precio de cierre particular de un activo con un rango de sus precios durante un período de tiempo determinado.
+El indicador fue desarrollado por George Lane a finales de los años 50. La idea central: en una tendencia alcista, el precio de cierre tiende hacia el límite superior del rango en un período determinado, y en una bajista — hacia el inferior.
 
-El indicador consta de dos líneas:
-- **%K (Línea principal):** Generalmente representada por una línea sólida.
-- **%D (Línea de señal):** Una media móvil del %K, generalmente representada por una línea discontinua.
+El Stochastic mide la posición del precio actual respecto al rango de precios del período seleccionado. El resultado se muestra como dos líneas que oscilan entre 0 y 100.
 
-La sensibilidad del oscilador a los movimientos del mercado se puede reducir ajustando ese período de tiempo o tomando una media móvil del resultado.
+## Líneas %K y %D: la base del indicador
 
-## Fórmula
+El indicador consta de dos curvas:
+1. **%K (Línea rápida):** La línea principal que muestra la posición actual del precio.
+2. **%D (Línea de señal):** Una media móvil del %K.
 
-La fórmula para la línea %K es:
-`%K = (Cierre actual - Mínimo más bajo) / (Máximo más alto - Mínimo más bajo) * 100`
+### Fórmula de cálculo de %K
 
-Donde:
-- **Cierre actual** es el precio de cierre más reciente.
-- **Mínimo más bajo** es el precio más bajo de las últimas 14 sesiones.
-- **Máximo más alto** es el precio más alto de las últimas 14 sesiones.
+$$\%K = \frac{C - L_{n}}{H_{n} - L_{n}} \times 100$$
 
-## Señales principales
+Donde C es el precio de cierre, L_n es el mínimo de n períodos, H_n es el máximo de n períodos.
 
-### 1. Niveles de sobrecompra y sobreventa
-El Stochastic es un oscilador acotado (0 a 100).
-- **Sobrecompra (> 80):** Indica que el precio está cerca del tope de su rango reciente.
-- **Sobreventa (< 20):** Indica que el precio está cerca del fondo de su rango reciente.
+### Configuración recomendada
 
-### 2. Cruces de %K y %D
-Una señal de compra ocurre cuando la línea %K cruza por encima de la línea %D en la zona de sobreventa. Una señal de venta ocurre cuando la línea %K cruza por debajo de la línea %D en la zona de sobrecompra.
+Para la mayoría de las estrategias, incluyendo la [estrategia spot ELDER 2.0](/es/library/spot-strategy-elder-20/), se utilizan los siguientes parámetros:
+- **Período %K:** 14
+- **Slowing (desaceleración):** 3
+- **Período %D:** 3
+
+## Zonas de sobrecompra y sobreventa
+
+Los niveles clave en la escala del Stochastic son **20** y **80**.
+
+- **Zona de sobreventa (por debajo de 20):** El precio ha caído demasiado — es posible un rebote o giro al alza. Zona clásica para buscar compras.
+- **Zona de sobrecompra (por encima de 80):** El precio ha subido demasiado — es posible una corrección o giro a la baja.
+
+## Señales de trading
+
+### 1. Salida de zonas extremas
+La señal más simple — las líneas salen de las zonas extremas.
+- **Compra (Long):** Las líneas cruzan el nivel 20 de abajo hacia arriba.
+- **Venta (Short):** Las líneas cruzan el nivel 80 de arriba hacia abajo.
+
+### 2. Cruce de líneas %K y %D
+Cuando la línea rápida %K cruza la lenta %D — confirmación de un cambio en el impulso a corto plazo.
 
 ### 3. Divergencia
-Si el precio marca un nuevo máximo pero el Stochastic no lo hace (divergencia bajista), es una señal fuerte de un posible cambio de tendencia a la baja. Lo contrario aplica para la divergencia alcista.
+Si el precio marca un nuevo máximo pero el Stochastic no (divergencia bajista), es una señal fuerte de un posible giro a la baja. Y viceversa para la divergencia alcista.
 
 ## Uso en la estrategia ELDER 2.0
 
-En la estrategia ELDER 2.0, el Stochastic no actúa solo, sino en conjunto con las [Bandas de Bollinger](/es/library/bollinger-bands/) y el [Oscilador de Momentum Chande (CMO)](/es/library/chande-momentum-oscillator/). En este sistema, el Stochastic actúa como un "disparador": esperamos a que caiga por debajo de 20 para comenzar a buscar un punto de entrada para un bot de spot.
+En la estrategia [ELDER 2.0](/es/library/spot-strategy-elder-20/), el Stochastic actúa en conjunto con las [Bandas de Bollinger](/es/library/bollinger-bands/) y el [Oscilador de Momentum Chande (CMO)](/es/library/chande-momentum-oscillator/).
+
+En este sistema, el Stochastic actúa como «disparador»: la señal para buscar un punto de entrada surge cuando cae por debajo de 20, en la zona de sobreventa profunda.
+
+| Indicador | Rol en ELDER 2.0 |
+|---|---|
+| Bollinger Bands | Filtro de volatilidad |
+| CMO | Filtro de impulso |
+| Stochastic | Disparador de entrada |
+
+## Stochastic vs RSI: diferencias clave
+
+| Característica | Stochastic | RSI |
+|---|---|---|
+| Base | Rango de precios (H-L) | Cambios en precio de cierre |
+| Líneas | 2 (%K y %D) | 1 |
+| Sensibilidad | Alta | Moderada |
+| Mejor para | Rango y giros | Tendencia |
+
+## FAQ
+
+**¿Qué configuración de Stochastic es mejor para cripto?**
+Para trading a corto plazo en M15: %K=14, Slowing=3, %D=3. Para señales más suaves: %K=21, Slowing=5, %D=5.
+
+**¿Se puede usar el Stochastic en tendencia?**
+El oscilador tiende a dar señales falsas en tendencias fuertes. Se recomienda combinarlo con filtros de tendencia, como las [Bandas de Bollinger](/es/library/bollinger-bands/).
+
+**¿En qué se diferencia el Stochastic del CMO?**
+El [CMO](/es/library/chande-momentum-oscillator/) mide el impulso puro directamente sin doble suavizado, mientras que el Stochastic compara el precio de cierre con el rango High-Low.
 
 ## Resumen
 
-El oscilador estocástico es una herramienta eficaz para encontrar puntos de entrada en el volátil mercado de criptomonedas. Sin embargo, como cualquier oscilador, puede dar señales falsas durante tendencias direccionales fuertes. Por ello, siempre debe usarse junto con filtros de tendencia o volatilidad.
+El oscilador estocástico es una herramienta eficaz para encontrar puntos de entrada en el volátil mercado de criptomonedas. Como cualquier oscilador, puede dar señales falsas en tendencias fuertes, por lo que debe usarse con filtros de tendencia o volatilidad.
 
-Para el trading automatizado usando Stochastic y otros indicadores, recomendamos usar plataformas probadas:
+Comienza a operar en exchanges probados:
+- **[Bybit](https://www.bybit.com/es/invite?ref=PWMD24)** — una excelente opción para trabajar con [bots de trading](/es/library/bybit-trading-bot-setup/)
+- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — interfaz amigable y bonificaciones
+- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — trading social y copytrading
 
-- [Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24) – una excelente opción para bots de spot.
-- [Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD) – alta liquidez e interfaz amigable.
-- [BingX](https://bingxdao.com/invite/CUBDBG/) – soporte para muchos activos.
+---
 
-**Materiales relacionados:** [Bandas de Bollinger](/es/library/bollinger-bands/), [Oscilador de Momentum Chande](/es/library/chande-momentum-oscillator/), [Estrategia Spot ELDER 2.0](/es/library/spot-strategy-elder-20/).
+## Materiales relacionados
+
+**Fundamentos y estrategias:** estudia la [estrategia spot ELDER 2.0](/es/library/spot-strategy-elder-20/), donde el Stochastic es el disparador clave. Más sobre cómo empezar — en el artículo [cómo iniciar el trading con un depósito pequeño](/es/library/how-to-start-trading-small-deposit/).
+
+**Herramientas y automatización:** para un análisis integral utiliza las [Bandas de Bollinger](/es/library/bollinger-bands/) y el [CMO](/es/library/chande-momentum-oscillator/). Automatización del trading — en [configurar un bot en Bybit](/es/library/bybit-trading-bot-setup/).
+
+**Experiencia y riesgos:** asegúrate de leer sobre la [gestión de riesgos al trabajar con bots](/es/library/risk-management-crypto-trading-bots/) y la [diversificación](/es/library/diversification-trading-system-part-1/) para proteger tu capital.
+
+---
+Si te interesa este tema y quieres seguir el desarrollo de nuestro proyecto, visita la página [Sobre el proyecto](/es/about/) — allí hablamos de nuestra misión y de cómo puedes apoyar la startup.
