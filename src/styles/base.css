@@ -149,7 +149,7 @@ button, .btn, .nav-link, .lang-btn, .theme-btn, .hamburger,
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Press Start 2P', 'Courier New', monospace;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.8;
   color: var(--nes-text-primary);
   margin-bottom: var(--nes-space-md);
   -webkit-font-smoothing: none;
@@ -182,14 +182,14 @@ h4 { font-size: var(--fs-base); } /* 16px */
 h1.brutal {
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  line-height: 1.4; /* ✅ Reduced from 1.7 */
+  line-height: 1.8;
 }
 
 /* .long — для длинных заголовков (5+ слов, обычный вид) */
 h1.long {
   text-transform: none;
   letter-spacing: 0;
-  line-height: 1.4; /* ✅ Reduced from 1.9 */
+  line-height: 1.8;
 }
 
 /* H2-H6 остаются с uppercase (как и было) */
@@ -212,6 +212,12 @@ a {
 
 a:hover {
   color: var(--nes-accent-yellow);
+  text-decoration: none;
+  transition: color 0.10s steps(3);  /* ✅ VARIANT F */
+}
+
+/* Underline only for links in text blocks (как в nes8bit.css) */
+p a:hover, .prose a:hover, article a:hover, .toc-item a:hover {
   text-decoration: underline;
   text-decoration-color: var(--nes-accent-yellow);
   text-decoration-thickness: 2px;
