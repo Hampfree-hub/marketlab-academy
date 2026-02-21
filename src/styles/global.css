@@ -92,41 +92,6 @@
   --color-btn-text: var(--nes-text-primary, #1A2A0A);
 }
 
-/* Base Styles */
-html {
-  font-size: 16px;
-  background-color: var(--color-bg);
-  color: var(--color-text-primary);
-  box-sizing: border-box;
-  /* Убираем smooth scroll - может вызывать дёргание */
-  scroll-behavior: auto;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
-  font-family: 'JetBrains Mono', 'Courier New', monospace;
-  margin: 0;
-  padding: 0;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* NO transitions in 8-bit */
-  transition: none;
-}
-
-h1, h2, h3, h4, .mono {
-  font-family: 'Press Start 2P', 'Courier New', monospace;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  margin: 0 0 var(--spacing-base);
-  color: var(--color-text-primary);
-  text-transform: uppercase;
-  line-height: 1.8; /* ✅ ИСПРАВЛЕНИЕ: Увеличен с 1.4 до 1.8 для видимого пространства между строками при выделении */
-}
-
 a {
   color: var(--color-accent);
   text-decoration: none;
