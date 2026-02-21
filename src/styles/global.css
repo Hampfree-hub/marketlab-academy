@@ -100,10 +100,7 @@ a {
 
 a:hover {
   color: var(--nes-accent-yellow, #FCFC00);
-  text-decoration: underline;
-  text-decoration-color: var(--nes-accent-yellow, #FCFC00);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
+  text-decoration: none;
 }
 
 /* Exceptions: no underline for button-style links */

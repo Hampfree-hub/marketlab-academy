@@ -97,7 +97,7 @@ $$%K = \frac{C - L_{n}}{H_{n} - L_{n}} \times 100$$
 ---
 
 ## Связанные материалы
-**Основы и стратегии:** изучите [спотовую стратегию ELDER 2.0](/ru/library/spot-strategy-elder-20/), где Стохастик является ключевым триггером. Подробнее о старте — в статье [как начать трейдинг с малой суммы](/ru/library/how-to-start-trading-small-deposit/).
+**Основы и стратегии:** изучите [спотовую стратегию ELDER 2.0](/ru/library/spot-strategy-elder-20/), где Стохастик является ключевым триггером. Подробнее о старте — в статье [как начать трейдинг с малой суммой](/ru/library/how-to-start-trading-small-deposit/).
 **Инструменты и автоматизация:** для комплексного анализа используйте [Полосы Боллинджера](/ru/library/bollinger-bands/) и [CMO](/ru/library/chande-momentum-oscillator/). Автоматизация торговли — в [настройке бота на Bybit](/ru/library/bybit-trading-bot-setup/).
 **Опыт и риски:** обязательно прочитайте [риск-менеджмент при работе с ботами](/ru/library/risk-management-crypto-trading-bots/) и [диверсификацию](/ru/library/diversification-trading-system-part-1/) для защиты капитала.
 
