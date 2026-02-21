@@ -3,6 +3,7 @@ title: 'La famosa estrategia spot ELDER 2.0 con configuración'
 description: 'Estrategia ELDER 2.0 probada con promediación: configuraciones de Stochastic, Bollinger, CMO para bots de spot en el mercado cripto.'
 pubDate: '2026-02-13'
 category: 'algo-trading'
+draft: false
 ---
 
 **La estrategia spot ELDER 2.0** es un sistema de trading automatizado en el mercado spot con promediación de posiciones, basado en tres indicadores clave. La estrategia ha demostrado su eficacia a lo largo de años de uso práctico en el trading algorítmico.
@@ -13,10 +14,10 @@ Esta estrategia fue desarrollada para trabajar en el [mercado spot](/es/library/
 
 **Ventajas del enfoque:**
 
-* • Trabajo sin apalancamiento — sin riesgo de liquidación
-* • Promediación de posiciones en lugar de stop-loss
-* • Automatización a través de [bots de trading en exchanges](/es/library/bybit-trading-bot-setup/)
-* • Eficacia confirmada en diversas condiciones de mercado
+- Trabajo sin apalancamiento — sin riesgo de liquidación
+- Promediación de posiciones en lugar de stop-loss
+- Automatización a través de [bots de trading en exchanges](/es/library/bybit-trading-bot-setup/)
+- Eficacia confirmada en diversas condiciones de mercado
 
 ## Los tres pilares de la estrategia ELDER 2.0
 
@@ -34,9 +35,9 @@ Esta estrategia fue desarrollada para trabajar en el [mercado spot](/es/library/
 
 ### 3. CMO (Chande Momentum Oscillator) — filtro de impulso
 
-**Función:** Filtrado de señales falsas. Un análisis detallado del [indicador CMO](/es/library/chande-momentum-oscillator) ayudará a entender mejor su rol.
+**Función:** Filtrado de señales falsas. Un análisis detallado del [indicador CMO](/es/library/chande-momentum-oscillator/) ayudará a entender mejor su rol.
 
-**Configuración:** Período 14, Zona de filtrado: de -20 a +20.
+**Configuración:** Período 14, Zona de filtrado: de −50 a +50.
 
 ## Algoritmo de funcionamiento de la estrategia
 
@@ -46,7 +47,7 @@ Entramos en la operación cuando se cumplen **simultáneamente**:
 
 1. Stochastic < 20
 2. El precio toca o está por debajo de la banda inferior de Bollinger
-3. CMO < -20
+3. CMO < −50
 
 ### Señal de salida (toma de ganancias)
 
@@ -54,35 +55,38 @@ Cerramos la posición cuando:
 
 1. Stochastic > 80
 2. El precio toca o está por encima de la banda superior de Bollinger
-3. CMO > +20
-4. La ganancia desde el precio promedio de entrada es ≥ 3-5%
+3. CMO > +50
+4. La ganancia desde el precio promedio de entrada es ≥ 3–5%
 
 ## Gestión de capital
 
 ### Distribución del depósito
-* • **Orden base:** 5% del depósito
-* • **Órdenes de promediación:** del 5% al 15% según la profundidad de la caída
-* • **Número máximo de promediaciones:** 4-6 órdenes
-* • **Reserva:** 20-30% del depósito
+
+- **Orden base:** 5% del depósito
+- **Órdenes de promediación:** del 5% al 15% según la profundidad de la caída
+- **Número máximo de promediaciones:** 4–6 órdenes
+- **Reserva:** 20–30% del depósito
 
 ### Pasos de promediación
+
 Intervalos recomendados:
-* • 1ª promediación: -5% desde la entrada base
-* • 2ª promediación: -10%
-* • 3ª promediación: -15%
-* • 4ª promediación: -20%
+- 1ª promediación: −5% desde la entrada base
+- 2ª promediación: −10%
+- 3ª promediación: −15%
+- 4ª promediación: −20%
 
 ## Marcos de tiempo y activos recomendados
-* • **Timeframe:** 4 horas (4H) — óptimo. 1 hora (1H) — más agresivo.
-* • **Activos:** BTC, ETH, y monedas del TOP-20 por capitalización.
+
+- **Timeframe:** 4 horas (4H) — óptimo. 1 hora (1H) — más agresivo.
+- **Activos:** BTC, ETH, y monedas del TOP-20 por capitalización.
 
 ## Configuración en exchanges
 
 La estrategia puede ejecutarse en exchanges populares con bots de trading:
 
-* • **[Bybit](https://www.bybit.com/en-US/invite?ref=PWMD24)** — bots listos para usar y comisiones bajas. La instrucción para [configurar un bot de trading en Bybit](/es/library/bybit-trading-bot-setup/) te ayudará a empezar.
-* • **[Bitget](https://www.bitget.com/en/referral/register?from=referral&clacCode=23EHR2VD)** — amplia selección de estrategias de copytrading.
-* • **[BingX](https://bingxdao.com/invite/CUBDBG/)** — interfaz sencilla para principiantes.
+- **[Bybit](https://www.bybit.com/es/invite?ref=PWMD24)** — bots listos para usar y comisiones bajas. La instrucción para [configurar un bot de trading en Bybit](/es/library/bybit-trading-bot-setup/) te ayudará a empezar.
+- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — amplia selección de estrategias de copytrading.
+- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — interfaz sencilla para principiantes.
 
 ## Conclusión
 
@@ -90,8 +94,9 @@ La estrategia spot ELDER 2.0 es un enfoque fundamental para operar en el mercado
 
 ## Materiales relacionados
 
-**Fundamentos y estrategias:** Asegúrate de estudiar [qué es el trading spot](/es/library/what-is-spot-trading/) y las [diferencias entre spot, futures, y margen](/es/library/spot-trading-vs-futures-margin/). También descubre [cómo empezar el trading con una pequeña cantidad](/es/library/how-to-start-trading-small-deposit/).
+**Fundamentos y estrategias:** Asegúrate de estudiar [qué es el trading spot](/es/library/what-is-spot-trading/) y las [diferencias entre spot, futures y margen](/es/library/spot-trading-vs-futures-margin/). También descubre [cómo empezar el trading con una pequeña cantidad](/es/library/how-to-start-trading-small-deposit/).
 
-**Herramientas y experience:** Profundiza tus conocimientos sobre los indicadores: [Stochastic Oscillator](/es/library/stochastic-oscillator/), [Bollinger Bands](/es/library/bollinger-bands/) y [CMO](/es/library/chande-momentum-oscillator/). Mira nuestro [diario de depósito en vivo](/es/library/surviving-drawdown-diary) y estudia los principios de [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/).
+**Herramientas y experiencia:** Profundiza tus conocimientos sobre los indicadores: [Stochastic Oscillator](/es/library/stochastic-oscillator/), [Bollinger Bands](/es/library/bollinger-bands/) y [CMO](/es/library/chande-momentum-oscillator/). Mira nuestro [diario de depósito en vivo](/es/library/surviving-drawdown-diary/) y estudia los principios de [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/).
 
+---
 Si estás interesado en esta estrategia y quieres seguir el desarrollo de nuestro proyecto, echa un vistazo a la página [Sobre el proyecto](/es/about/) — allí hablamos de nuestra misión y de cómo puedes apoyar a la startup.
