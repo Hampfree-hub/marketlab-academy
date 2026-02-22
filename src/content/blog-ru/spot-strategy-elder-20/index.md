@@ -78,6 +78,16 @@ draft: false
 - **Таймфрейм:** 4 часа (4H) — оптимально. 1 час (1H) — более агрессивно.
 - **Активы:** BTC, ETH и монеты из TOP-20 по капитализации.
 
+## Бэктесты ELDER 2.0
+
+![Годовой бэктест ELDER 2.0 BB SPOT LONG INJ](./assets/inj-elder-strategy.png)
+
+[ELDER 2.0 BB SPOT LONG INJ](https://veles.finance/share/QyjWG)
+
+![Годовой бэктест ELDER 2.0 BB SPOT LONG HYPE](./assets/hype-elder-strategy.png)
+
+[ELDER 2.0 BB SPOT LONG HYPE](https://veles.finance/share/tKVEY)
+
 ## Настройка на биржах
 
 Стратегию можно запустить на популярных биржах с торговыми ботами:
