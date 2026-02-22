@@ -28,16 +28,16 @@ Prisma 5.5 — это высокочастотная торговая страт
 
 Для открытия позиции в Prisma 5.5 используются следующие индикаторы:
 
-1. **[CMO (Chande Momentum Oscillator)](/ru/library/chande-momentum-oscillator/)**
+1. **[CMO (Chande Momentum Oscillator)](/ru/library/chande-momentum-oscillator/)**  
    • Период: 14  
    • Уровни: ±50  
    • Условие: CMO  ниже −50 (зона перепроданности) перед входом в Long, выше +50 — усиление импульса вверх.
 
-2. **Bollinger Bands**
+3. **Bollinger Bands**
    • Период: 20, Отклонение: 2  
    • Условие: Цена вблизи или ниже нижней полосы Боллинджера.
 
-3. **RSI (Relative Strength Index)**
+4. **RSI (Relative Strength Index)**
    • Период: 14  
    • Уровень: 30  
    • Условие: RSI ниже 30 — подтверждение перепроданности по импульсу.
