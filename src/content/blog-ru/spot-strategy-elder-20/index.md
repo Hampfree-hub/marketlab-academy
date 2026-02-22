@@ -84,7 +84,6 @@ draft: false
 
 [ELDER 2.0 BB SPOT LONG INJ](https://veles.finance/share/QyjWG)
 
-
 ![Годовой бэктест ELDER 2.0 BB SPOT LONG HYPE](./assets/hype-elder-strategy.png)
 
 [ELDER 2.0 BB SPOT LONG HYPE](https://veles.finance/share/tKVEY)
