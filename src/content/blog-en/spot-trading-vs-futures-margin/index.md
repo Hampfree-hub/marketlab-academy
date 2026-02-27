@@ -52,3 +52,16 @@ Futures are contracts to buy or sell an asset at a predetermined price at a spec
 ## Conclusion
 
 Each trading instrument has its place in a trader's toolkit. Spot trading provides safety and ownership, margin offers amplified gains (and losses), and futures provide flexibility to trade in any market direction. Start simple, learn the mechanics, and only then gradually move to more complex instruments with higher leverage.
+
+You can start trading on proven exchanges:
+- **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** — an excellent choice for working with [trading bots](/en/library/bybit-trading-bot-setup/)
+- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — user-friendly interface and bonuses
+- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — social trading and copy trading
+
+## Related Materials
+
+**Fundamentals and Strategies:** When choosing spot trading, be sure to learn [what is spot trading](/en/library/what-is-spot-trading/) and the flagship [ELDER 2.0 strategy](/en/library/spot-strategy-elder-20/).
+
+**Tools and Automation:** For efficient trading, it's important to understand analysis tools like the [Stochastic Oscillator](/en/library/stochastic-oscillator/) and [Bollinger Bands](/en/library/bollinger-bands/). The guide on [setting up a bot on Bybit](/en/library/bybit-trading-bot-setup/) will help automate processes.
+
+**Experience and Risks:** The [live deposit diary](/en/library/surviving-drawdown-diary/) shows real examples of portfolio management. Don't forget about [risk management when working with bots](/en/library/risk-management-crypto-trading-bots/).
