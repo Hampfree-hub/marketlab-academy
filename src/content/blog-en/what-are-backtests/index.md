@@ -95,3 +95,62 @@ Nevertheless, trading without any backtest is trading blind. Backtests provide a
 **Should I backtest even if my strategy already works?** Yes. Backtesting helps clarify when it works best, optimize parameters, assess risk, and document logic.
 
 **Bottom line:** Backtesting is not a cure‑all but an essential tool. Done well, it helps avoid costly mistakes and improves the odds of success. The backtest reflects the past; the market lives in the present. Always combine backtesting with demo trading and small live size.
+
+## FAQ
+
+**How much data is needed for a backtest?**
+
+For daily timeframes, a minimum of 1-2 years of historical data is recommended. For intraday (1-hour, 4-hour), 6-12 months is sufficient. The more data, the more reliable the results, but it's important that the data covers different market conditions.
+
+**Can backtest results be trusted?**
+
+Backtest results are a guide, not a guarantee. They show how a strategy performed in the past but do not guarantee future profits. It is recommended to test the strategy on a demo account before using real funds.
+
+**What if a backtest shows profit, but the strategy is unprofitable in a real account?**
+
+This is a common situation. Possible reasons:
+- Overfitting – the strategy is tailored to historical data.
+- Commissions and slippage were not accounted for in the backtest.
+- Market conditions have changed.
+- Psychological factors influence execution.
+
+It is recommended to review the parameters, incorporate more realistic commissions, and test on other periods.
+
+**How often should a strategy be re-tested?**
+
+It is recommended to re-test a strategy:
+- After significant changes in parameters.
+- If market conditions have changed.
+- Periodically (e.g., quarterly) to check relevance.
+- If real account performance differs significantly from the backtest.
+
+**Can backtesting be used for all strategies?**
+
+Backtesting works best for:
+- Systematic strategies with clear rules.
+- Strategies based on technical indicators.
+- Algorithmic strategies.
+
+It is less effective for:
+- Intuitive strategies.
+- Strategies dependent on news (if historical news data is unavailable).
+- Very long-term strategies (where decades of data are needed).
+
+**What's more important: high profitability or stability?**
+
+There is no single answer—it depends on your goals and risk tolerance. However, for most traders, stability is more important:
+- A stable strategy with 15% annual returns is better than an unstable one with 50%.
+- Low drawdown allows for better capital management.
+- Predictability is more important than peak profitability.
+
+**Should a strategy be backtested if it is already profitable?**
+
+Yes. Even with a working strategy, a backtest helps to:
+- Understand under what conditions it performs better/worse.
+- Optimize parameters.
+- Assess risks more objectively.
+- Document the logic for future use.
+
+## Conclusion
+
+Backtesting is not a panacea, but a critically important tool for any serious trader. A properly conducted backtest helps to avoid costly mistakes and increase the chances of success in real trading. A backtest reflects the past; the market lives in the present. It is recommended to combine backtesting with demo account testing and real trading with small volumes.
