@@ -1,8 +1,10 @@
+---
 title: 'What Is Crypto Spot Trading?'
 description: 'Spot trading is the buying and selling of cryptocurrency at the current market price with immediate settlement. We break down the mechanics, how it differs from margin and futures, plus key advantages and risks.'
 pubDate: '2026-02-13'
 category: 'crypto'
 draft: false
+---
 
 What Is Spot Trading?
 Spot trading is the buying and selling of cryptocurrency at the current market price with immediate delivery of the asset. On the spot market, there is a direct exchange: the buyer receives the cryptocurrency right after the trade is executed and becomes its full owner.
