@@ -162,3 +162,97 @@ You can, but it’s risky. It’s better to combine with other methods and alway
 
 False breakouts are common — and tradable — when you identify them correctly, use filters (volume/structure), and manage risk. Always validate your rules with **[backtesting](/en/library/what-are-backtests)**.
 
+
+
+## FAQ
+
+**1. What is a false breakout?**
+A false breakout is a short-term price movement beyond a support or resistance level that then returns to its original trading range.
+
+**2. Why do false breakouts occur?**
+False breakouts often occur due to market manipulation, triggering a large number of stop-losses, or when major players try to lure traders in the wrong direction.
+
+**3. How to identify a false breakout?**
+Pay attention to:
+*   **Trading volume:** Low volume during a breakout can indicate weak momentum and a potential false breakout.
+*   **Candle close:** If a candle closes within the range after a breakout, this is a strong signal of a false breakout.
+*   **Test candles:** Dojis, pin bars, or hammers after a breakout.
+
+**4. How to trade false breakouts?**
+
+*   **Wait for confirmation:** Do not enter a trade immediately after a breakout. Wait for the candle to close or a confirming pattern to form.
+*   **Use stop-losses:** Place stop-losses to provide protection, but not too close to the level to avoid being triggered by small fluctuations.
+*   **Combine with other tools:** Use technical indicators (RSI, MACD) and volume analysis.
+
+**5. Which indicators can help when trading false breakouts?**
+
+*   **Volume:** Falling volume during a breakout can be a signal of a false breakout.
+*   **Oscillators (RSI, Stochastic):** If the price breaks a level and oscillators show overbought/oversold conditions or divergence, this may indicate a false breakout.
+*   **Bollinger Bands:** Price moving outside the bands but quickly returning can be a false breakout.
+
+**How much data is needed for a backtest?**
+
+For daily timeframes, a minimum of 1-2 years of data is recommended. For intraday (1-hour, 4-hour), 6-12 months is sufficient. The more data, the more reliable the results, but it's important that the data covers different market conditions.
+
+**Can backtest results be trusted?**
+
+Backtest results are a guide, not a guarantee. They show how a strategy performed in the past but do not guarantee future profits. It is recommended to test the strategy on a demo account before using real funds.
+
+**What if a backtest shows profit, but the strategy is unprofitable in a real account?**
+
+This is a common situation. Possible reasons:
+- Overfitting – the strategy is tailored to historical data.
+- Commissions and slippage were not accounted for in the backtest.
+- Market conditions have changed.
+- Psychological factors influence execution.
+
+It is recommended to review the parameters, incorporate more realistic commissions, and test on other periods.
+
+**How often should a strategy be re-tested?**
+
+It is recommended to re-test a strategy:
+- After significant changes in parameters.
+- If market conditions have changed.
+- Periodically (e.g., quarterly) to check relevance.
+- If real account performance differs significantly from the backtest.
+
+**Can backtesting be used for all strategies?**
+
+Backtesting works best for:
+- Systematic strategies with clear rules.
+- Strategies based on technical indicators.
+- Algorithmic strategies.
+
+It is less effective for:
+- Intuitive strategies.
+- Strategies dependent on news (if historical news data is unavailable).
+- Very long-term strategies (where decades of data are needed).
+
+**What's more important: high profitability or stability?**
+
+There is no single answer—it depends on your goals and risk tolerance. However, for most traders, stability is more important:
+- A stable strategy with 15% annual returns is better than an unstable one with 50%.
+- Low drawdown allows for better capital management.
+- Predictability is more important than peak profitability.
+
+**Should a strategy be backtested if it is already profitable?**
+
+Yes. Even with a working strategy, a backtest helps to:
+- Understand under what conditions it performs better/worse.
+- Optimize parameters.
+- Assess risks more objectively.
+- Document the logic for future use.
+
+## Conclusion
+
+Backtesting is not a panacea, but a critically important tool for any serious trader. A properly conducted backtest helps to avoid costly mistakes and increase the chances of success in real trading. A backtest reflects the past; the market lives in the present. It is recommended to combine backtesting with demo account testing and real trading with small volumes.
+
+## Related Materials
+
+**Fundamentals and Strategies:** After mastering the basics, be sure to study our flagship [ELDER 2.0 strategy](/en/library/spot-strategy-elder-20/), specifically designed for the spot market. Also, understand [the difference between spot, margin, and futures](/en/library/spot-trading-vs-futures-margin/).
+
+**Tools and Automation:** To increase efficiency, use technical indicators like the [Stochastic Oscillator](/en/library/stochastic-oscillator/) and [Bollinger Bands](/en/library/bollinger-bands/). And a step-by-step guide on [setting up a trading bot on Bybit](/en/library/bybit-trading-bot-setup/) will help automate processes.
+
+**Experience and Risks:** Learn [how to start trading with a small deposit](/en/library/how-to-start-trading-small-deposit/) and be sure to study the basics of [risk management](/en/library/risk-management-crypto-trading-bots/) and check out the [live deposit diary](/en/library/surviving-drawdown-diary/).
+
+If you are interested in this strategy and want to follow the development of our project, visit the [About Us](/en/about/) page — there we talk about our mission and how you can support the startup.
