@@ -113,3 +113,19 @@ Start trading on proven exchanges:
 
 ---
 If you are interested in this strategy and want to follow the development of our project, visit the [About the Project](/en/about/) page — there we talk about our mission and how you can support our startup.
+
+
+## Conclusion
+
+Chande Momentum Oscillator (CMO) is a versatile oscillator that provides traders with deep insights into market momentum. Its ability to react quickly to price changes and identify overbought/oversold conditions makes it a valuable addition to any trading strategy.
+
+By using CMO in conjunction with other technical analysis tools, such as moving averages or Bollinger Bands, traders can significantly improve their trading decisions and enhance adaptability to changing market conditions. As with any indicator, practice and understanding its limitations are key to success.
+
+## Related Materials
+
+**Fundamentals and Strategies:** After mastering the basics, be sure to study our flagship [ELDER 2.0 strategy](/en/library/spot-strategy-elder-20/), specifically designed for the spot market. Also, understand [the difference between spot, margin, and futures](/en/library/spot-trading-vs-futures-margin/).
+
+**Tools and Automation:** To increase efficiency, use technical indicators like the [Stochastic Oscillator](/en/library/stochastic-oscillator/) and [Bollinger Bands](/en/library/bollinger-bands/). A step-by-step guide on [setting up a trading bot on Bybit](/en/library/bybit-trading-bot-setup/) will help automate processes.
+
+**Experience and Risks:** Learn [how to start trading with a small deposit](/en/library/how-to-start-trading-small-deposit/) and be sure to study the basics of [risk management](/en/library/risk-management-crypto-trading-bots/) and check out the [live deposit diary](/en/library/surviving-drawdown-diary/).
+
