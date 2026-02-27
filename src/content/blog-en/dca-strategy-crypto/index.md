@@ -116,3 +116,21 @@ DCA is time-based purchases of a fixed amount, usually one direction (accumulati
 **Is DCA good for beginners?**
 
 Yes. DCA does not require price forecasting or complex analysis; you set amount and interval. Avoid investing money you need or borrowing; consider fees on frequent small buys; risk-management basics apply to any strategy.
+
+
+## Conclusion
+
+DCA strategy in cryptocurrencies is an effective and relatively safe investment method that helps minimize risks associated with high market volatility. It is suitable for both beginners and experienced investors aiming for long-term growth.
+
+Remember that DCA does not guarantee profit and does not protect against losses during prolonged market downturns. However, it significantly reduces emotional pressure and helps foster a disciplined approach to investing. Invest regularly, diversify, and be prepared for the long term – these are the keys to success with DCA.
+
+You can start using the DCA strategy on Veles, one of the most convenient platforms for this. You can [register on Veles](https://veles.finance/en/auth/registration). Detailed guides for setting up trading bots are also available there.
+
+## Related Materials
+
+**Fundamentals and Strategies:** After mastering the basics, be sure to study our flagship [ELDER 2.0 strategy](/en/library/spot-strategy-elder-20/), specifically designed for the spot market. Also, understand [the difference between spot, margin, and futures](/en/library/spot-trading-vs-futures-margin/).
+
+**Tools and Automation:** To increase efficiency, use technical indicators like the [Stochastic Oscillator](/en/library/stochastic-oscillator/) and [Bollinger Bands](/en/library/bollinger-bands/). A step-by-step guide on [setting up a trading bot on Bybit](/en/library/bybit-trading-bot-setup/) will help automate processes.
+
+**Experience and Risks:** Learn [how to start trading with a small deposit](/en/library/how-to-start-trading-small-deposit/) and be sure to study the basics of [risk management](/en/library/risk-management-crypto-trading-bots/) and check out the [live deposit diary](/en/library/surviving-drawdown-diary/).
+

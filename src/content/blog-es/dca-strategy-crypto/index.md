@@ -116,3 +116,21 @@ DCA son compras en el tiempo por cantidad fija, normalmente en una dirección (a
 **¿DCA es bueno para principiantes?**
 
 Sí. DCA no exige predecir el precio ni análisis complejos; se fija cantidad e intervalo. Conviene no invertir dinero imprescindible y tener en cuenta las comisiones en compras pequeñas frecuentes; los fundamentos de gestión de riesgos aplican a cualquier estrategia.
+
+
+## Conclusión
+
+La estrategia DCA en criptomonedas es un método de inversión efectivo y relativamente seguro que ayuda a minimizar los riesgos asociados con la alta volatilidad del mercado. Es adecuada tanto para principiantes como para inversores experimentados que buscan un crecimiento a largo plazo.
+
+Recuerde que DCA no garantiza ganancias y no protege contra pérdidas durante periodos prolongados de baja del mercado. Sin embargo, reduce significativamente la presión emocional y ayuda a fomentar un enfoque disciplinado de la inversión. Invierta regularmente, diversifique y prepárese para el largo plazo: estas son las claves del éxito con DCA.
+
+Puede comenzar a usar la estrategia DCA en Veles, una de las plataformas más convenientes para ello. Puede [registrarse en Veles](https://veles.finance/es/auth/registration). También hay guías detalladas para configurar bots de trading allí.
+
+## Materiales relacionados
+
+**Fundamentos y estrategias:** Después de dominar los conceptos básicos, asegúrese de estudiar nuestra estrategia principal [ELDER 2.0](/es/library/spot-strategy-elder-20/), diseñada específicamente para el mercado spot. Además, comprenda [la diferencia entre spot, margen y futuros](/es/library/spot-trading-vs-futures-margin/).
+
+**Herramientas y automatización:** Para aumentar la eficiencia, utilice indicadores técnicos como el [Oscilador Estocástico](/es/library/stochastic-oscillator/) y las [Bandas de Bollinger](/es/library/bollinger-bands/). Una guía paso a paso sobre [cómo configurar un bot de trading en Bybit](/es/library/bybit-trading-bot-setup/) le ayudará a automatizar los procesos.
+
+**Experiencia y riesgos:** Aprenda [cómo empezar a operar con un depósito pequeño](/es/library/how-to-start-trading-small-deposit/) y asegúrese de estudiar los fundamentos de la [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/) y consulte nuestro [diario de depósito real](/es/library/surviving-drawdown-diary/).
+
