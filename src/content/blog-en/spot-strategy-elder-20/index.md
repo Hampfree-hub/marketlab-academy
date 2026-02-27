@@ -1,6 +1,4 @@
 ---
-If you are interested in this strategy and want to follow the development of our project, visit the [About the Project](/en/about/) page — there we talk about our mission and how you can support our startup.
-
 title: 'The Famous ELDER 2.0 Spot Strategy with Settings'
 description: 'Proven ELDER 2.0 strategy with averaging: Stochastic, Bollinger, CMO settings for spot bots in the crypto market.'
 pubDate: '2026-02-13'
@@ -80,6 +78,16 @@ Recommended intervals:
 - **Timeframe:** 4 hours (4H) — optimal. 1 hour (1H) — more aggressive.
 - **Assets:** BTC, ETH, and TOP-20 coins by capitalization.
 
+## Backtests ELDER 2.0
+
+![Annual backtest ELDER 2.0 BB SPOT LONG INJ](./assets/inj-elder-strategy.png)
+
+[ELDER 2.0 BB SPOT LONG INJ](https://veles.finance/share/QyjWG)
+
+![Annual backtest ELDER 2.0 BB SPOT LONG HYPE](./assets/hype-elder-strategy.png)
+
+[ELDER 2.0 BB SPOT LONG HYPE](https://veles.finance/share/8yj24)
+
 ## Setting Up on Exchanges
 
 The strategy can be launched on popular exchanges with trading bots:
@@ -97,6 +105,7 @@ The ELDER 2.0 spot strategy is a fundamental approach to working in the crypto m
 - **[BingX](https://bingxdao.com/invite/CUBDBG/)** — a popular platform for social trading and copy trading.
 
 ---
+If you are interested in this strategy and want to follow the development of our project, visit the [About the Project](/en/about/) page — there we talk about our mission and how you can support our startup.
 
 ## Related Materials
 
