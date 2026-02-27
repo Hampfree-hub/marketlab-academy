@@ -30,10 +30,10 @@ Prisma 5.5 is a high-frequency trading strategy designed for the volatile crypto
 
 To open a position in Prisma 5.5, the following indicators are used:
 
-1. **CCI (Commodity Channel Index)**
-   - Period: 14
-   - Level: -100
-   - Condition: CCI less than -100 (oversold zone)
+1. **[CMO (Chande Momentum Oscillator)](/en/library/chande-momentum-oscillator/)**
+   • Period: 14
+   • Levels: ±50
+   • Condition: CMO below −50 (oversold zone) before Long entry, above +50 — upward momentum (oversold zone)
 
 2. **Bollinger Bands**
    - Period: 20, Deviation: 2

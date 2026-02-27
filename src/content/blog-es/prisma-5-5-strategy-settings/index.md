@@ -30,10 +30,10 @@ Prisma 5.5 es una estrategia de trading de alta frecuencia diseñada para el vol
 
 Para abrir una posición en Prisma 5.5 se utilizan los siguientes indicadores:
 
-1. **CCI (Commodity Channel Index)**
-   - Período: 14
-   - Nivel: -100
-   - Condición: CCI menor que -100 (zona de sobreventa)
+1. **[CMO (Chande Momentum Oscillator)](/es/library/chande-momentum-oscillator/)**
+   • Período: 14
+   • Niveles: ±50
+   - Condición: CMO por debajo de −50 (zona de sobreventa) antes de entrar en Long, por encima de +50 — impulso al alza (zona de sobreventa)
 
 2. **Bollinger Bands**
    - Período: 20, Desviación: 2
