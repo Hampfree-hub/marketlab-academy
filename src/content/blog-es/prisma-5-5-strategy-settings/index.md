@@ -3,6 +3,7 @@ title: 'Prisma 5.5: Configuración de la Estrategia en la Plataforma Veles'
 description: 'Analizamos la configuración de la estrategia propia Prisma 5.5 en la plataforma Veles: indicadores de entrada, filtros, gestión de la cuadrícula de órdenes y recomendaciones de pares.'
 pubDate: '2026-02-27'
 category: 'algo-trading'
+draft: true
 ---
 
 **Prisma 5.5** es una estrategia propia de la plataforma [Veles](https://veles.finance/invite/washmallay) para el trading automatizado. En este artículo presentamos un desglose completo de la configuración: qué indicadores se utilizan para la entrada, cómo configurar la cuadrícula de órdenes y en qué pares ejecutarla.
@@ -49,6 +50,22 @@ Para abrir una posición en Prisma 5.5 se utilizan los siguientes indicadores:
 La cuadrícula se configura teniendo en cuenta la volatilidad actual:
 - **Paso de orden:** logarítmico, comenzando desde 0.5%
 - **Coeficiente Martingala:** permite un retorno más rápido a las ganancias durante las reversiones de precios.
+
+## En Qué Pares Lanzar
+
+Se recomienda usar pares líquidos con alto volumen de operaciones:
+- **TOP-10:** BTC/USDT, ETH/USDT, SOL/USDT.
+- **Altcoins volátiles:** ARB/USDT, OP/USDT, LINK/USDT.
+
+## Backtests Prisma 5.5
+
+![Backtest anual Prisma 5.5 en el par SOL](./assets/prisma-sol-backtest.png)
+
+[Prisma 5.5 SOL Futures Long](https://veles.finance/share/EXAMPLE1)
+
+![Backtest anual Prisma 5.5 en el par BTC](./assets/prisma-btc-backtest.png)
+
+[Prisma 5.5 BTC Futures Long](https://veles.finance/share/EXAMPLE2)
 
 ## Conclusión
 

@@ -3,6 +3,7 @@ title: 'Prisma 5.5: Strategy Settings on the Veles Platform'
 description: 'Breaking down the settings of the Prisma 5.5 proprietary strategy on the Veles platform: entry indicators, filters, order grid management, and pair recommendations.'
 pubDate: '2026-02-27'
 category: 'algo-trading'
+draft: true
 ---
 
 **Prisma 5.5** is a proprietary strategy from the [Veles](https://veles.finance/invite/washmallay) platform for automated trading. This article provides a full breakdown of the settings: which indicators are used for entry, how to set up the order grid, and which pairs to launch on.
@@ -49,6 +50,22 @@ To open a position in Prisma 5.5, the following indicators are used:
 The grid is configured considering current volatility:
 - **Order Step:** logarithmic, starting from 0.5%
 - **Martingale Coefficient:** allows for a faster return to profit during price reversals.
+
+## Which Pairs to Launch On
+
+It is recommended to use liquid pairs with high trading volume:
+- **TOP-10:** BTC/USDT, ETH/USDT, SOL/USDT.
+- **Volatile altcoins:** ARB/USDT, OP/USDT, LINK/USDT.
+
+## Backtests Prisma 5.5
+
+![Annual backtest Prisma 5.5 on SOL pair](./assets/prisma-sol-backtest.png)
+
+[Prisma 5.5 SOL Futures Long](https://veles.finance/share/EXAMPLE1)
+
+![Annual backtest Prisma 5.5 on BTC pair](./assets/prisma-btc-backtest.png)
+
+[Prisma 5.5 BTC Futures Long](https://veles.finance/share/EXAMPLE2)
 
 ## Conclusion
 

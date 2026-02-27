@@ -3,7 +3,7 @@ title: 'La famosa estrategia spot ELDER 2.0 con configuración'
 description: 'Estrategia ELDER 2.0 probada con promediación: configuraciones de Stochastic, Bollinger, CMO para bots de spot en el mercado cripto.'
 pubDate: '2026-02-13'
 category: 'algo-trading'
-draft: false
+draft: true
 ---
 
 **La estrategia spot ELDER 2.0** es un sistema de trading automatizado en el mercado spot con promediación de posiciones, basado en tres indicadores clave. La estrategia ha demostrado su eficacia a lo largo de años de uso práctico en el trading algorítmico.
@@ -79,6 +79,16 @@ Intervalos recomendados:
 
 - **Timeframe:** 4 horas (4H) — óptimo. 1 hora (1H) — más agresivo.
 - **Activos:** BTC, ETH, y monedas del TOP-20 por capitalización.
+
+## Backtests ELDER 2.0
+
+![Backtest anual ELDER 2.0 BB SPOT LONG INJ](./assets/inj-elder-strategy.png)
+
+[ELDER 2.0 BB SPOT LONG INJ](https://veles.finance/share/QyjWG)
+
+![Backtest anual ELDER 2.0 BB SPOT LONG HYPE](./assets/hype-elder-strategy.png)
+
+[ELDER 2.0 BB SPOT LONG HYPE](https://veles.finance/share/8yj24)
 
 ## Configuración en exchanges
 
