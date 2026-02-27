@@ -65,3 +65,25 @@ ATR does not show direction — only the size of swings. It is used together wit
 - True Range = max(High−Low, |High−PrevClose|, |Low−PrevClose|); ATR is smoothed TR (often period 14).
 - ATR is used to set stop-losses (e.g. 1.5–2 × ATR) and trailing stops, and to adapt position size to volatility.
 - In crypto, ATR helps adjust stops and risk to a changing market.
+
+
+## Conclusion
+
+ATR and ATR % are powerful tools for measuring volatility and price movement. ATR shows the absolute range of movement, while ATR % shows the relative range, making it more versatile for comparing different assets.
+
+Understanding and correctly applying these indicators allows:
+- Effectively setting stop-losses and take-profits.
+- Adapting position sizes to current volatility.
+- Identifying strong trend movements and consolidations.
+
+By integrating ATR into their trading strategy, traders can significantly increase its adaptability to changing market conditions and improve risk management.
+
+## Related Materials
+
+**Fundamentals and and Strategies:** After mastering the basics, be sure to study our flagship [ELDER 2.0 strategy](/en/library/spot-strategy-elder-20/), specifically designed for the spot market. Also, understand [the difference between spot, margin, and futures](/en/library/spot-trading-vs-futures-margin/).
+
+**Tools and Automation:** To increase efficiency, use technical indicators like the [Stochastic Oscillator](/en/library/stochastic-oscillator/) and [Bollinger Bands](/en/library/bollinger-bands/). A step-by-step guide on [setting up a trading bot on Bybit](/en/library/bybit-trading-bot-setup/) will help automate processes.
+
+**Experience and Risks:** Learn [how to start trading with a small deposit](/en/library/how-to-start-trading-small-deposit/) and be sure to study the basics of [risk management](/en/library/risk-management-crypto-trading-bots/) and check out the [live deposit diary](/en/library/surviving-drawdown-diary/).
+
+If you are interested in this strategy and want to follow the development of our project, visit the [About Us](/en/about/) page — there we talk about our mission and how you can support the startup.
