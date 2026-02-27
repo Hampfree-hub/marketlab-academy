@@ -54,6 +54,26 @@ Parameters are tuned from test results. The goal is not only maximum profit but 
 
 **Overfitting** means the strategy is fitted too closely to history and fails live. Avoid it by: using walk‑forward tests, testing on different periods and assets, not optimizing too many parameters at once, and validating on out‑of‑sample data. For strategies based on the [MFI indicator](/en/library/money-flow-index), test various periods and overbought/oversold levels.
 
+### What Is Parameter Optimization
+
+Optimization is the process of finding the best values for strategy parameters. For example, when working with a strategy based on an indicator, you can test various indicator periods and overbought/oversold levels.
+
+**Example of optimization:**
+- Testing RSI period: 10, 12, 14, 16, 18, 20
+- Testing overbought levels: 70, 75, 80
+- Testing oversold levels: 20, 25, 30
+- Finding the combination with the best profit/risk ratio
+
+### Optimization Criteria
+
+When optimizing, it's important to consider not only profit but also other metrics:
+
+1. **Profit Factor** — ratio of total profit to total loss (should be > 1.5)
+2. **Maximum Drawdown** — maximum capital decline (the lower, the better)
+3. **Sharpe Ratio** — return to risk ratio (the higher, the better)
+4. **Number of Trades** — should be sufficient for statistical significance (minimum 30-50)
+5. **Win Rate** — important but not critical (even 40% can be profitable with proper profit/loss ratio)
+
 ## Limitations of Backtests
 
 Past results do not guarantee future performance. Backtests do not account for:
@@ -65,18 +85,110 @@ Past results do not guarantee future performance. Backtests do not account for:
 - **Market structure shifts** — Regulators, technology, new participants.
 - **Data errors** — Gaps, bad ticks, especially in older data.
 
+### Factors Not Accounted for in Backtests
+
+**1. Slippage**
+In real trading, execution price may differ from expected. This is especially critical for:
+- Fast markets (high volatility)
+- Large volumes (market may not handle)
+- Low-liquidity assets
+
+**2. Liquidity Changes**
+Historical data does not reflect market liquidity changes. In crisis situations, liquidity can drop sharply, making it impossible to execute trades at expected prices.
+
+**3. Psychological Factor**
+Backtest does not account for trader emotions:
+- Fear of losses may lead to premature closing of profitable positions
+- Greed may cause holding losing positions too long
+- Stress affects decision-making
+
+**4. Fees and Spreads**
+Every trade costs money in real trading:
+- Exchange/broker fees
+- Spreads (difference between buy and sell price)
+- For crypto — network fees
+
+**5. Market Structure Changes**
+Markets evolve:
+- New participants change dynamics
+- Regulatory changes affect behavior
+- Technological changes (e.g., algorithmic trading) change market character
+
+**6. Data May Be Inaccurate**
+Historical data may contain:
+- Data errors
+- Data gaps
+- Price inaccuracies (especially for older data)
+
+### Why Backtest Is Still Important
+
 Nevertheless, trading without any backtest is trading blind. Backtests provide a baseline, a rough expectation, and a filter for obviously bad ideas.
 
 ## Best Practices
 
-1. **Enough data** — At least 1–2 years for daily timeframes, 6–12 months for intraday.
-2. **Multiple regimes** — Test on bull markets, bear markets, sideways, high and low volatility.
-3. **Realistic costs** — Include fees (e.g. 0.1% for crypto) and slippage in the backtester.
-4. **Walk‑forward** — Optimize on one period, test on the next; repeat rolling forward.
-5. **Statistical significance** — Enough trades (e.g. 30–50+), stable metrics, sensible profit factor and drawdown.
-6. **Several assets** — If it only works on one asset, it may be luck.
-7. **Keep a log** — Parameters, results, changes, and observations.
-8. **Learn from bad results** — Losses in certain conditions are valuable information.
+To get the most reliable results, you can follow these recommendations:
+
+### 1. Use Sufficient Data Volume
+
+**Minimum:** 1-2 years of historical data for daily timeframes, 6-12 months for intraday.
+
+**Why it matters:** Short periods may not cover different market conditions (trends, sideways, crises).
+
+### 2. Test on Different Periods
+
+Don't limit yourself to one period. Test the strategy on:
+- Bull market (growth)
+- Bear market (decline)
+- Sideways trend (flat)
+- High volatility
+- Low volatility
+
+### 3. Account for Fees and Slippage
+
+In backtester settings, it is recommended to specify:
+- Realistic fees (e.g., 0.1% for cryptocurrencies)
+- Slippage (0.05-0.2% depending on liquidity)
+- Minimum trade size
+
+### 4. Use Walk-Forward Analysis
+
+Instead of optimizing on the entire period:
+1. Optimize on the first period (e.g., first 6 months)
+2. Test on the next period (next 6 months)
+3. Repeat the process, "rolling" the window forward
+
+This gives a more realistic performance estimate.
+
+### 5. Check Statistical Significance
+
+Make sure that:
+- Number of trades is sufficient (minimum 30-50)
+- Results are stable (not dependent on one or two lucky periods)
+- Metrics are consistent (high profit + low drawdown + good Profit Factor)
+
+### 6. Test on Multiple Assets
+
+If a strategy works only on one asset — this may be coincidence. It is recommended to test on:
+- Similar assets (e.g., different cryptocurrencies)
+- Different sectors (if trading stocks)
+- Different timeframes
+
+### 7. Keep a Detailed Log
+
+Record:
+- Parameters of each strategy version
+- Results of each test
+- Changes made and their reasons
+- Observations and insights
+
+This will help understand the strategy evolution and avoid repeating mistakes.
+
+### 8. Don't Ignore Bad Results
+
+If a strategy shows losses under certain conditions — this is valuable information. Understanding weaknesses helps to:
+- Improve the strategy
+- Avoid trading in unfavorable conditions
+- Manage risks correctly
 
 ## Frequently Asked Questions
 

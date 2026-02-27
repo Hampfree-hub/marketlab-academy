@@ -78,3 +78,45 @@ Stop the bot if:
 3. choosing low-liquidity pairs
 4. running without clear stop/risk limits
 
+## API key security
+
+To protect your funds, it is recommended to follow these rules:
+
+- ✅ Use two-factor authentication (2FA)
+- ✅ Restrict API permissions to only necessary functions
+- ✅ Regularly check API key activity
+- ✅ Do not store secret keys in plain text
+- ✅ Use separate API keys for different platforms or services
+- ✅ Revoke unused keys
+
+## FAQ
+
+**1. Is it safe to use API keys to connect external platforms?**
+Yes, if permissions are configured correctly: disable withdrawals and use 2FA.
+
+**2. Can I use one API key for multiple platforms or services?**
+Technically, yes, but it is recommended to use separate keys for each platform — this makes it easier to control access and revoke only one key in case of a leak.
+
+**3. What if I forgot the API secret key?**
+You need to create a new API key. The old key can be revoked in the settings.
+
+**4. What is the minimum amount required for trading via an external platform on Bybit?**
+The minimum amount depends on the strategy and trading pair. Usually, $50–100 is enough to start.
+
+**5. Is it possible to trade on Bybit without verification?**
+Yes, but with limitations. For full access to exchange features, it is recommended to complete verification.
+
+## Conclusion
+
+Setting up a trading bot on Bybit is the first step towards automating trading. A correctly configured bot and well-tuned risk management allow you to trade efficiently 24/7.
+
+Register on Bybit and start automated trading:
+- **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** — an excellent choice for working with [trading bots](/en/library/bybit-trading-bot-setup/)
+- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — user-friendly interface and bonuses
+- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — social trading and copy trading
+
+## Related Materials
+**Basics and strategies:** learn popular strategies – [DCA](/en/library/dca-strategy-crypto/) and the [Veles](https://veles.finance/invite/washmallay) platform for advanced bots.
+**Tools and automation:** learn about [backtests](/en/library/what-are-backtests/) to test a strategy before launching a bot.
+**Experience and risks:** be sure to check out [risk management](/en/library/risk-management-crypto-trading-bots/) and [diversification](/en/library/diversification-trading-system-part-1/) for safe automated trading.
+
