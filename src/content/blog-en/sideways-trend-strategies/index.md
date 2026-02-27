@@ -143,7 +143,7 @@ Read more in **[False Breakouts in Trading](/en/library/false-breakouts-trading)
 3. **Position sizing** — consider range width when sizing
 4. **Diversify** — don’t lock all capital into one range setup
 
-For a deeper framework, see **Risk Management in Crypto Trading with Bots** (EN draft will be added for parity).
+For a deeper framework, see **Risk Management in Crypto Trading with Bots** .
 
 ## When the range ends
 

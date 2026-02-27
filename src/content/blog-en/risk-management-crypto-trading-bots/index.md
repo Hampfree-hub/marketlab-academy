@@ -5,7 +5,7 @@ pubDate: '2026-02-05'
 category: 'technical-analysis'
 ---
 
-Risk management is the foundation of long-term trading performance — especially when using automated systems. Bots execute exactly what you configure, so the trader is still responsible for controlling downside. This draft outlines practical rules for risk control when trading crypto with bots.
+Risk management is the foundation of long-term trading performance — especially when using automated systems. Bots execute exactly what you configure, so the trader is still responsible for controlling downside. This guide outlines practical rules for risk control when trading crypto with bots.
 
 ## What is risk management (in trading)
 

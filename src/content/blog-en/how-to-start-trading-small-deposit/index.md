@@ -7,7 +7,7 @@ category: 'technical-analysis'
 
 You can start trading crypto even with a small amount. Many beginners think they need a large bankroll, but the key is not the size of capital — it’s **risk management**, realistic expectations, and choosing strategies that match your constraints.
 
-This draft explains practical principles for small deposits and simple strategies that are safer for beginners.
+This guide explains practical principles for small deposits and simple strategies that are safer for beginners.
 
 ## Can you trade with a small deposit?
 
@@ -29,7 +29,7 @@ There are also benefits:
 
 Many guides suggest risking no more than 1–2% per trade. We use a different approach: capital spread across many assets and strategies, slightly higher risk per idea (~2.5%), but with diversification it has helped us through several corrections. Either way, set a clear limit per idea and stick to it — e.g. with $100, cap risk per idea at $2–3.
 
-For our full approach see **[Risk Management for Crypto Trading Bots](/en/library/risk-management-crypto-trading-bots)** (draft).
+For our full approach see **[Risk Management for Crypto Trading Bots](/en/library/risk-management-crypto-trading-bots)** .
 
 ### 2) Start with conservative strategies
 
