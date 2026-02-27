@@ -51,7 +51,7 @@ Un futuro es un contrato sobre el precio futuro de un activo. No eres dueño de 
 *   **Para especulaciones:** Futuros, ya que permiten ganar dinero en un mercado bajista.
 
 Puedes empezar a operar en exchanges verificados:
-*   **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24)** — excelente opción para trabajar con [bots de trading](/es/library/bybit-trading-bot-setup/)
+*   **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** — excelente opción para trabajar con [bots de trading](/es/library/bybit-trading-bot-setup/)
 *   **[Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD)** — interfaz cómoda y bonos
 *   **[BingX](https://bingxdao.com/invite/CUBDBG/)** — trading social y copytrading
 

@@ -91,7 +91,7 @@ category: 'algo-trading'
 
 Стратегию можно запустить на популярных биржах с торговыми ботами:
 
-- **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24)** — удобные готовые боты и низкие комиссии. Инструкция по [настройке торгового бота на Bybit](/ru/library/bybit-trading-bot-setup/) поможет начать.
+- **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** — удобные готовые боты и низкие комиссии. Инструкция по [настройке торгового бота на Bybit](/ru/library/bybit-trading-bot-setup/) поможет начать.
 - **[Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD)** — широкий выбор стратегий копитрейдинга.
 - **[BingX](https://bingxdao.com/invite/CUBDBG/)** — простой интерфейс для новичков.
 
@@ -99,7 +99,7 @@ category: 'algo-trading'
 
 Спотовая стратегия ELDER 2.0 — это фундаментальный подход к работе на крипторынке без риска ликвидации. Усреднение позиции и трёхфакторная фильтрация сигналов обеспечивают устойчивость системы в различных рыночных условиях. Для автоматизации стратегии доступны проверенные площадки:
 
-- **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24)** — одна из ведущих бирж для работы с [торговыми ботами](/ru/library/bybit-trading-bot-setup/).
+- **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** — одна из ведущих бирж для работы с [торговыми ботами](/ru/library/bybit-trading-bot-setup/).
 - **[Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD)** — площадка с удобным интерфейсом и бонусами для новых пользователей.
 - **[BingX](https://bingxdao.com/invite/CUBDBG/)** — популярная платформа для социального трейдинга и копитрейдинга.
 

@@ -165,7 +165,7 @@ category: 'technical-analysis'
 Ложные пробои — мощный инструмент в теханализе. Научитесь распознавать их, сочетайте с другими индикаторами и всегда используйте стоп-лоссы.
 
 Начать торговлю можно на проверенных биржах:
-- **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24)** — отличный выбор для работы с [торговыми ботами](/ru/library/bybit-trading-bot-setup/)
+- **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** — отличный выбор для работы с [торговыми ботами](/ru/library/bybit-trading-bot-setup/)
 - **[Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD)** — удобный интерфейс и бонусы
 - **[BingX](https://bingxdao.com/invite/CUBDBG/)** — социальный трейдинг и копитрейдинг
 
