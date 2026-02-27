@@ -1,12 +1,11 @@
 ---
 title: 'Canal de Keltner (Keltner Channel)'
-description: 'Keltner Channel — indicador de volatilidad basado en EMA y ATR: configuración, zonas de ruptura y uso en estrategias spot como Prisma 5.5.'
-pubDate: '2026-02-19'
+description: 'Keltner Channel — indicador de volatilidad basado en EMA y ATR: configuración, zonas de ruptura y uso en estrategias spot como [Prisma 5.5](/es/library/prisma-5-5-strategy-settings/).'
+pubDate: '2026-02-27'
 category: 'technical-analysis'
-draft: true
 ---
 
-**El Canal de Keltner (Keltner Channel)** es un indicador de volatilidad construido alrededor de una Media Móvil Exponencial (EMA) con bandas basadas en el Average True Range (ATR). En los sistemas de trading modernos como Prisma 5.5, se utiliza como filtro de volatilidad y señal de ruptura.
+**El Canal de Keltner (Keltner Channel)** es un indicador de volatilidad construido alrededor de una Media Móvil Exponencial (EMA) con bandas basadas en el Average True Range (ATR). En los sistemas de trading modernos como [Prisma 5.5](/es/library/prisma-5-5-strategy-settings/), se utiliza como filtro de volatilidad y señal de ruptura.
 
 ## ¿Qué es el Canal de Keltner?
 
@@ -38,7 +37,7 @@ En un mercado lateral (rango), los límites del canal actúan como niveles de so
 
 Un estrechamiento del canal indica calma en el mercado (acumulación), que generalmente va seguido de un movimiento fuerte.
 
-## Configuración en Prisma 5.5
+## Configuración en [Prisma 5.5](/es/library/prisma-5-5-strategy-settings/)
 
 En la estrategia Prisma 5.5 en la plataforma Veles, la configuración del Canal de Keltner está optimizada para capturar impulsos locales en el marco temporal de 15 minutos:
 
@@ -61,9 +60,9 @@ El indicador ayuda a determinar si el precio se encuentra en la zona de distribu
 
 El Canal de Keltner es un indicador de volatilidad fiable que proporciona un filtrado más suave del ruido del mercado en comparación con las Bandas de Bollinger. El uso del indicador permite identificar eficazmente los momentos en que se forma una tendencia y encontrar puntos de entrada óptimos en el marco de las estrategias algorítmicas. Existen plataformas probadas disponibles para empezar a operar:
 
-- **[Bybit](https://partner.bybit.com/b/marketlab)** — uno de los principales exchanges para trabajar con [bots de trading](/es/library/bybit-trading-bot-setup/).
-- **[Bitget](https://partner.bitget.com/bg/marketlab)** — una plataforma con una interfaz intuitiva y bonos para nuevos usuarios.
-- **[BingX](https://bingx.com/en-us/partner/MarketLab/)** — una plataforma popular para el trading social y el copy trading.
+- **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** — uno de los principales exchanges para trabajar con [bots de trading](/es/library/bybit-trading-bot-setup/).
+- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — una plataforma con una interfaz intuitiva y bonos para nuevos usuarios.
+- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — una plataforma popular para el trading social y el copy trading.
 
 ---
 

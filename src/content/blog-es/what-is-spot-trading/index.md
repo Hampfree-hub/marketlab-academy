@@ -3,7 +3,6 @@ title: 'Qué es el trading spot en criptomonedas'
 description: 'Trading spot: qué es, cómo se diferencia del margen y los futuros, ventajas e inconvenientes, cuándo conviene a principiantes.'
 pubDate: '2026-02-13'
 category: 'crypto'
-draft: true
 ---
 
 ## Qué es el trading spot

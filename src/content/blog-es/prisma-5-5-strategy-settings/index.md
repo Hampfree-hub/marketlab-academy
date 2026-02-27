@@ -1,9 +1,8 @@
 ---
 title: 'Prisma 5.5: Configuración de la Estrategia en la Plataforma Veles'
 description: 'Analizamos la configuración de la estrategia propia Prisma 5.5 en la plataforma Veles: indicadores de entrada, filtros, gestión de la cuadrícula de órdenes y recomendaciones de pares.'
-pubDate: '2026-02-19'
+pubDate: '2026-02-27'
 category: 'algo-trading'
-draft: true
 ---
 
 **Prisma 5.5** es una estrategia propia de la plataforma [Veles](https://veles.finance/invite/washmallay) para el trading automatizado. En este artículo presentamos un desglose completo de la configuración: qué indicadores se utilizan para la entrada, cómo configurar la cuadrícula de órdenes y en qué pares ejecutarla.
@@ -56,9 +55,9 @@ La cuadrícula se configura teniendo en cuenta la volatilidad actual:
 Prisma 5.5 es una estrategia equilibrada para automatizar el trading en spot y futuros con un nivel de riesgo moderado. Es fundamental controlar los niveles de margen y cumplir con las reglas de diversificación para garantizar la estabilidad del sistema de trading.
 
 Existen plataformas verificadas disponibles para comenzar a operar:
-- **[Bybit](https://partner.bybit.com/b/marketlab)** — uno de los principales exchanges para trabajar con [bots de trading](/es/library/bybit-trading-bot-setup/).
-- **[Bitget](https://partner.bitget.com/bg/marketlab)** — una plataforma con interfaz amigable y bonos para nuevos usuarios.
-- **[BingX](https://bingx.com/en-us/partner/MarketLab/)** — una opción popular para social trading y copy trading.
+- **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** — uno de los principales exchanges para trabajar con [bots de trading](/es/library/bybit-trading-bot-setup/).
+- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — una plataforma con interfaz amigable y bonos para nuevos usuarios.
+- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — una opción popular para social trading y copy trading.
 
 ---
 

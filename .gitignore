@@ -10,6 +10,8 @@ lerna-debug.log*
 
 # environment variables
 .env
+.env.local
+.env.development
 .env.production
 
 # macOS-specific files
@@ -60,7 +62,7 @@ secrets/
 .cursorrules-*
 
 # Скрипты с путями к приватным репозиториям (опционально - можно оставить, но обезличить пути)
-# scripts/*.ps1
+scripts/
 # scripts/*.cjs
 # scripts/*.js
 
@@ -116,6 +118,7 @@ NEXT_STEPS*.md
 
 # Документация — ТОЛЬКО в приватном репо (README, механика картинок)
 docs/README.md
+docs/README_OLD.md
 
 # Временные папки статей (article-1, article-2, …) — только для локальной структуры, НЕ в прод!
 src/content/**/article-[0-9]*/
@@ -128,3 +131,14 @@ src/content/**/article-[0-9]*/
 _tmp_untracked/
 scripts/docs/
 commit-msg-tmp.txt
+
+# Логи и временные файлы
+*.log
+*.tmp
+*.bak
+
+# Переменные окружения
+.env
+.env.local
+.env.development
+.env.production

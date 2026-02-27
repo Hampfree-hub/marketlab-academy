@@ -68,9 +68,9 @@ ATR не показывает направление движения — тол
 Индикаторы ATR и ATR% — незаменимые инструменты для измерения волатильности и настройки адаптивного риск-менеджмента. Они помогают обоснованно выставлять стоп-лоссы и определять размер позиции, защищая ваш депозит от случайных рыночных колебаний.
 
 Начать торговлю можно на проверенных биржах:
-- **[Bybit](https://partner.bybit.com/b/marketlab)** — отличный выбор для работы с [торговыми ботами](/ru/library/bybit-trading-bot-setup/)
-- **[Bitget](https://partner.bitget.com/bg/marketlab)** — удобный интерфейс и бонусы
-- **[BingX](https://bingx.com/en-us/partner/MarketLab/)** — социальный трейдинг и копитрейдинг
+- **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** — отличный выбор для работы с [торговыми ботами](/ru/library/bybit-trading-bot-setup/)
+- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — удобный интерфейс и бонусы
+- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — социальный трейдинг и копитрейдинг
 
 ---
 

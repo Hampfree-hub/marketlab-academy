@@ -1,9 +1,8 @@
 ---
 title: 'Prisma 5.5: Strategy Settings on the Veles Platform'
 description: 'Breaking down the settings of the Prisma 5.5 proprietary strategy on the Veles platform: entry indicators, filters, order grid management, and pair recommendations.'
-pubDate: '2026-02-19'
+pubDate: '2026-02-27'
 category: 'algo-trading'
-draft: true
 ---
 
 **Prisma 5.5** is a proprietary strategy from the [Veles](https://veles.finance/invite/washmallay) platform for automated trading. This article provides a full breakdown of the settings: which indicators are used for entry, how to set up the order grid, and which pairs to launch on.
@@ -56,9 +55,9 @@ The grid is configured considering current volatility:
 Prisma 5.5 is a balanced strategy for automating spot and futures trading with a moderate level of risk. It is essential to monitor margin levels and adhere to diversification rules to ensure the stability of the trading system.
 
 Proven platforms are available to start trading:
-- **[Bybit](https://partner.bybit.com/b/marketlab)** — a leading exchange for working with [trading bots](/en/library/bybit-trading-bot-setup/).
-- **[Bitget](https://partner.bitget.com/bg/marketlab)** — a platform with a user-friendly interface and bonuses for new users.
-- **[BingX](https://bingx.com/en-us/partner/MarketLab/)** — a popular choice for social trading and copy trading.
+- **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** — a leading exchange for working with [trading bots](/en/library/bybit-trading-bot-setup/).
+- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — a platform with a user-friendly interface and bonuses for new users.
+- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — a popular choice for social trading and copy trading.
 
 ---
 

@@ -3,7 +3,6 @@ title: 'What Is Spot Trading in Cryptocurrency'
 description: 'Spot trading explained: what it is, how it differs from margin and futures, pros and cons, when it suits beginners.'
 pubDate: '2026-02-10'
 category: 'crypto'
-draft: true
 ---
 
 <!-- Placeholder. Content to follow Veles "What is spot trading" and MarketLab style. Do not publish until filled. -->

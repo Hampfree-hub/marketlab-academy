@@ -61,7 +61,7 @@ El total está limitado a **21 millones** de monedas.
 ### 1. Conseguir un monedero
 - **Hardware (Ledger, Trezor):** Máxima seguridad (claves fuera de línea).
 - **Móvil (p. ej. Trust Wallet):** Cómodo para el día a día.
-- **Monederos de exchange:** Fondos en plataformas de trading ([Bybit](https://www.bybit.com/es-ES/invite?ref=PWMD24), [Bitget](https://partner.bitget.com/)).
+- **Monederos de exchange:** Fondos en plataformas de trading ([Bybit](https://www.bybit.com/es-ES/invite?ref=PWMD24), [Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)).
 
 ![Comparación de monederos hardware, móvil y de exchange para Bitcoin](../bitcoin-basics/assets/wallet-types-comparison.png)
 

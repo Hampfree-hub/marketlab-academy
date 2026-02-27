@@ -3,7 +3,6 @@ title: 'Spot, Futures and Margin: What’s the Difference'
 description: 'Comparing spot, margin and futures trading: leverage, liquidation risk, when to choose which.'
 pubDate: '2026-02-10'
 category: 'crypto'
-draft: true
 ---
 
 <!-- Placeholder. Content: spot vs margin vs futures comparison. Do not publish until filled. -->
