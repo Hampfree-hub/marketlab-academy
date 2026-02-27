@@ -47,7 +47,7 @@ The goal was to create a system free from the influence of banks and governments
 
 **2011 — Development:** The first competitors (altcoins) appeared, such as Litecoin. The market began to expand, and new projects using blockchain technology emerged.
 
-**Growing Interest:** From 2012, Bitcoin began to be viewed as an investment instrument. Major exchanges such as Coinbase and Kraken were formed, simplifying access to cryptocurrency for ordinary users.
+**Growing Interest:** From 2012, Bitcoin began to be viewed as an investment instrument. Major exchanges were formed, simplifying access to cryptocurrency for ordinary users.
 
 ![Bitcoin price growth chart from 2009 to 2026](./assets/bitcoin-price-chart.png)
 

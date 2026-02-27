@@ -19,7 +19,7 @@ Main milestones:
 2. **2009 — Launch:** The Bitcoin network went live with the first block (genesis block).
 3. **2010 — First purchase:** Programmer Laszlo Hanyecz made the first known purchase with Bitcoin (2 pizzas for 10,000 BTC).
 4. **2011 — Growth:** First competitors (altcoins), such as Litecoin, appeared.
-5. **Rising interest:** From 2012, Bitcoin was increasingly seen as an investment. Major exchanges like Coinbase and Kraken emerged.
+5. **Rising interest:** From 2012, Bitcoin was increasingly seen as an investment. Major exchanges emerged.
 
 ![Bitcoin price chart since 2009 and key events](../bitcoin-basics/assets/bitcoin-price-chart.png)
 
