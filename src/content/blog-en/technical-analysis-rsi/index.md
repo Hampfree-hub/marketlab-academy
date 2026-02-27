@@ -180,3 +180,19 @@ Divergence is a discrepancy between the direction of price movement and RSI. Bul
 **Can RSI be used alone?**
 
 Technically yes, but in practice RSI is more reliable in combination with other technical analysis tools. Confirming signals with support/resistance levels or other indicators increases the probability of successful trades.
+
+## Conclusion
+
+RSI is one of the most reliable technical analysis indicators, proven by decades of practice. Using the indicator makes it possible to effectively identify overbought and oversold zones, as well as detect divergences earlier than they become obvious on the price chart. Maximum efficiency is achieved by combining with other analysis tools. For starting trading, proven platforms are available:
+
+- **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** — one of the leading exchanges for working with [trading bots](/en/library/bybit-trading-bot-setup/).
+- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — platform with convenient interface and bonuses for new users.
+- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — popular platform for social trading and copy trading.
+
+## Related Materials
+
+**Basics and Indicators:** For deeper understanding of signals, it is recommended to study the [Money Flow Index (MFI)](/en/library/money-flow-index/), [Williams Percent Range](/en/library/williams-percent-range-r/), and [Bollinger Bands](/en/library/bollinger-bands/).
+
+**Tools and Automation:** Information is available on [how to set up a bot on Bybit](/en/library/bybit-trading-bot-setup/) and [what are backtests](/en/library/what-are-backtests/).
+
+**Experience and Risks:** It is critically important to understand [risk management when working with bots](/en/library/risk-management-crypto-trading-bots/) and the principles of [diversification](/en/library/diversification-trading-system-part-1/).
