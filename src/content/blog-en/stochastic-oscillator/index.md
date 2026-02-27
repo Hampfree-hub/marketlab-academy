@@ -105,4 +105,3 @@ Start trading on proven exchanges:
 **Experience and risks:** be sure to read about [risk management when working with bots](/en/library/risk-management-crypto-trading-bots/) and [diversification](/en/library/diversification-trading-system-part-1/) to protect your capital.
 
 ---
-If you are interested in this topic and want to follow the development of our project, visit the [About the Project](/en/about/) page — there we talk about our mission and how you can support the startup.

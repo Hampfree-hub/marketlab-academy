@@ -103,4 +103,3 @@ The ELDER 2.0 spot strategy is a fundamental approach to working in the crypto m
 **Tools and experience:** in-depth study of indicators: [Stochastic Oscillator](/en/library/stochastic-oscillator/), [Bollinger Bands](/en/library/bollinger-bands/), and [CMO](/en/library/chande-momentum-oscillator/). A [live deposit diary](/en/library/surviving-drawdown-diary/) and [risk management](/en/library/risk-management-crypto-trading-bots/) principles are available.
 
 ---
-If you are interested in this strategy and want to follow the development of our project, visit the [About the Project](/en/about/) page — there we talk about our mission and how you can support our startup.
