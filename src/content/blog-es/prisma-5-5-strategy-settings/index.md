@@ -21,10 +21,12 @@ Prisma 5.5 es una estrategia de trading de alta frecuencia diseñada para el vol
 |---|---|
 | Dirección | Long |
 | Exchange | Bybit / BingX / Bitget |
-| Cuadrícula de órdenes | 25-30 órdenes |
-| Cobertura | 15-20% |
+| Cuadrícula de órdenes | 4 órdenes |
+| Cobertura | 28% |
 | Desplazamiento de la 1ª orden | 0.2% |
 | Martingala | 1.05 - 1.1 |
+
+Cabe señalar que los parámetros, al igual que la configuración de otras estrategias de Marketlab, son bastante flexibles y pueden ajustarse según su gestión de riesgos.
 
 ### Indicadores de Entrada (Filtros)
 
