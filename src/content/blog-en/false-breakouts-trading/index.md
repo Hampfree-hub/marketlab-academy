@@ -254,5 +254,3 @@ Backtesting is not a panacea, but a critically important tool for any serious tr
 **Tools and Automation:** To increase efficiency, use technical indicators like the [Stochastic Oscillator](/en/library/stochastic-oscillator/) and [Bollinger Bands](/en/library/bollinger-bands/). And a step-by-step guide on [setting up a trading bot on Bybit](/en/library/bybit-trading-bot-setup/) will help automate processes.
 
 **Experience and Risks:** Learn [how to start trading with a small deposit](/en/library/how-to-start-trading-small-deposit/) and be sure to study the basics of [risk management](/en/library/risk-management-crypto-trading-bots/) and check out the [live deposit diary](/en/library/surviving-drawdown-diary/).
-
-If you are interested in this strategy and want to follow the development of our project, visit the [About Us](/en/about/) page — there we talk about our mission and how you can support the startup.
