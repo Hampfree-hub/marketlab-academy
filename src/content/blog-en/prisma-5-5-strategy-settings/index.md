@@ -59,13 +59,13 @@ It is recommended to use liquid pairs with high trading volume:
 
 ## Backtests Prisma 5.5
 
-![Annual backtest Prisma 5.5 on SOL pair](./assets/prisma-sol-backtest.png)
+![Annual backtest BINGX KAS PRISMA 5.5](./assets/kas-prisma-strategy.png)
 
-[Prisma 5.5 SOL Futures Long](https://veles.finance/share/EXAMPLE1)
+[✖️ 🌪 BINGX KAS PRISMA 5.5](https://veles.finance/share/Vsyhz)
 
-![Annual backtest Prisma 5.5 on BTC pair](./assets/prisma-btc-backtest.png)
+![Annual backtest BINGX UNI PRISMA 5.5](./assets/uni-prisma-strategy.png)
 
-[Prisma 5.5 BTC Futures Long](https://veles.finance/share/EXAMPLE2)
+[✖️ 🌪 BINGX UNI PRISMA 5.5](https://veles.finance/share/zslhm)
 
 ## Conclusion
 

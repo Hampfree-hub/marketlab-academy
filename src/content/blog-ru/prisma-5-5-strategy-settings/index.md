@@ -54,13 +54,13 @@ Prisma 5.5 — это высокочастотная торговая страт
 
 ## Бэктесты Prisma 5.5
 
-![Annual backtest Prisma 5.5 on SOL pair](./assets/prisma-sol-backtest.png)
+![Годовой бэктест ✖️ 🌪 BINGX KAS PRISMA 5.5](./assets/kas-prisma-strategy.png)
 
-[Prisma 5.5 SOL Futures Long](https://ru.veles.finance/share/EXAMPLE1)
+[✖️ 🌪 BINGX KAS PRISMA 5.5](https://veles.finance/share/Vsyhz)
 
-![Annual backtest Prisma 5.5 on BTC pair](./assets/prisma-btc-backtest.png)
+![Годовой бэктест ✖️ 🌪 BINGX UNI PRISMA 5.5](./assets/uni-prisma-strategy.png)
 
-[Prisma 5.5 BTC Futures Long](https://ru.veles.finance/share/EXAMPLE2)
+[✖️ 🌪 BINGX UNI PRISMA 5.5](https://veles.finance/share/zslhm)
 
 ## Как запустить Prisma 5.5 на Veles
 1. Зарегистрируйтесь на [Veles](https://veles.finance/invite/washmallay) и привяжите API-ключ биржи.
