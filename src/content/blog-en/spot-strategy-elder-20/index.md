@@ -1,9 +1,8 @@
 ---
 title: 'The Famous ELDER 2.0 Spot Strategy with Settings'
 description: 'Proven ELDER 2.0 strategy with averaging: Stochastic, Bollinger, CMO settings for spot bots in the crypto market.'
-pubDate: '2026-02-13'
+pubDate: '2026-02-28'
 category: 'algo-trading'
-draft: true
 ---
 
 **ELDER 2.0 spot strategy** is an automated trading system on the spot market with position averaging, based on three key indicators. The strategy has proven its effectiveness over years of practical use in algorithmic trading.

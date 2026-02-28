@@ -1,9 +1,8 @@
 ---
 title: 'La famosa estrategia spot ELDER 2.0 con configuración'
 description: 'Estrategia ELDER 2.0 probada con promediación: configuraciones de Stochastic, Bollinger, CMO para bots de spot en el mercado cripto.'
-pubDate: '2026-02-13'
+pubDate: '2026-02-28'
 category: 'algo-trading'
-draft: true
 ---
 
 **La estrategia spot ELDER 2.0** es un sistema de trading automatizado en el mercado spot con promediación de posiciones, basado en tres indicadores clave. La estrategia ha demostrado su eficacia a lo largo de años de uso práctico en el trading algorítmico.
