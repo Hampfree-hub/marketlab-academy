@@ -35,11 +35,11 @@ To open a position in Prisma 5.5, the following indicators are used:
    • Levels: ±50
    • Condition: CMO below −50 (oversold zone) before Long entry, above +50 — upward momentum (oversold zone)
 
-2. **Bollinger Bands**
+2. **[Bollinger Bands](/en/library/bollinger-bands/)**
    - Period: 20, Deviation: 2
    - Condition: Price below the lower band
 
-3. **RSI (Relative Strength Index)**
+3. **[RSI (Relative Strength Index)](/en/library/technical-analysis-rsi/)**
    - Period: 14
    - Level: 30
    - Condition: RSI less than 30
