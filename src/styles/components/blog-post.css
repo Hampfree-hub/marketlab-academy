@@ -129,7 +129,6 @@ article {
 }
 
 .prose {
-	list-style: none;
 	/* Предотвращаем дёргание при скролле */
 	will-change: auto;
 	transform: translateZ(0);
@@ -198,6 +197,14 @@ article {
 .prose ul, .prose ol {
 	margin-bottom: var(--space-6);
 	padding-left: 2.5rem;
+}
+
+.prose ol {
+	list-style-type: decimal !important;
+}
+
+.prose ul {
+	list-style-type: disc !important;
 }
 
 .prose li {
