@@ -23,8 +23,6 @@ Prisma 5.5 is a high-frequency trading strategy designed for the volatile crypto
 | Exchange | Bybit / BingX / Bitget |
 | Order Grid | 4 orders |
 | Overlap | 28% |
-| First Order Offset | 0.2% |
-| Martingale | 1.05 - 1.1 |
 
 It should be noted that the parameters, like the settings of other Marketlab strategies, are quite flexible and can be adjusted to suit your risk management.
 
@@ -48,9 +46,7 @@ To open a position in Prisma 5.5, the following indicators are used:
 
 ### Order Grid Management
 
-The grid is configured considering current volatility:
-- **Order Step:** logarithmic, starting from 0.5%
-- **Martingale Coefficient:** allows for a faster return to profit during price reversals.
+The grid is configured considering current volatility. Order step is standard for most strategies, but can be adjusted to suit your trading style. The martingale coefficient allows for a faster return to profit during price reversals.
 
 ## Which Pairs to Launch On
 
