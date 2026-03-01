@@ -55,3 +55,25 @@ Antes de usar en trading real una estrategia con ROC, se recomienda probarla en 
 - F√≥rmula: ((Precio actual ‚àí Precio hace N periodos) / Precio hace N periodos) √ó 100. Periodo t√≠pico 9, 12 o 14.
 - El cruce de cero y los valores extremos dan se√±ales; las divergencias ROC‚Äìprecio pueden anticipar reversi√≥n.
 - ROC combina bien con RSI, Williams %R y MFI; en cripto la configuraci√≥n y niveles conviene ajustarlos por timeframe y backtests.
+
+## FAQ
+
+**?Que periodo ROC elegir?**
+
+Estandar ó 12 o 14. Para scalping en TFs bajos ó 5ñ9. Para swing ó 20ñ28.
+
+**ROC o RSI ó ?cual es mejor?**
+
+RSI esta limitado a 0ñ100, ROC no tiene limites (muestra porcentaje). ROC es mas rapido, RSI mas suave. Usar juntos.
+
+**?Como usar las divergencias del ROC?**
+
+Divergencia alcista ó precio hace nuevo minimo, ROC mas alto. Bajista ó nuevo maximo, ROC mas bajo. Es senal de reversion.
+
+**?Por que el ROC da senales falsas en cripto?**
+
+Alta volatilidad. Usar con indicadores de tendencia y probar en backtests.
+
+**?Se puede usar ROC sin otros indicadores?**
+
+Es posible, pero no recomendado. ROC muestra momentum, no direccion. Combinar con tendencia.

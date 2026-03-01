@@ -55,3 +55,25 @@ Before using a ROC-based strategy in live trading, it is recommended to test it 
 - Formula: ((Current price − Price N periods ago) / Price N periods ago) × 100. Period often 9, 12 or 14.
 - Zero crosses and extreme values give signals; ROC–price divergences can warn of a reversal.
 - ROC works well with RSI, Williams %R and MFI; in crypto, settings and levels are best tuned by timeframe and backtests.
+
+## FAQ
+
+**What ROC period to choose?**
+
+Standard — 12 or 14. For scalping on lower TFs — 5–9. For swing — 20–28.
+
+**ROC or RSI — which is better?**
+
+RSI is bounded 0–100, ROC is unbounded (shows percentage). ROC is faster, RSI is smoother. Use together.
+
+**How to use ROC divergences?**
+
+Bullish divergence — price makes new low, ROC higher. Bearish — new high, ROC lower. This is a reversal signal.
+
+**Why does ROC give false signals on crypto?**
+
+High volatility. Use with trend indicators and test on backtests.
+
+**Can I use ROC without other indicators?**
+
+Possible, but not recommended. ROC shows momentum, not direction. Combine with trend.
