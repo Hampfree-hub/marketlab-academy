@@ -74,8 +74,19 @@ Recommended intervals:
 
 ## Recommended Timeframes and Assets
 
-- **Timeframe:** 4 hours (4H) — optimal. 1 hour (1H) — more aggressive.
-- **Assets:** BTC, ETH, and TOP-20 coins by capitalization.
+| Timeframe | Description | Risk |
+|-----------|-------------|------|
+| **4H (4 hours)** | Optimal for beginners. Less noise, more stable signals. | Low |
+| **1H (1 hour)** | Balance between signal frequency and quality. | Medium |
+| **30 minutes** | More trades, but more false signals. | High |
+| **5-15 minutes** | Scalping. Only for experienced traders. | Very high |
+
+**Recommendation:** Start with 4H, test for 1-2 months, then move to smaller timeframes.
+
+**Assets:**
+- **Required:** BTC, ETH (liquidity, low spread)
+- **Recommended:** TOP-20 by market cap (SOL, BNB, XRP, ADA, etc.)
+- **Avoid:** Coins with volume < $1M/day
 
 ## Backtests ELDER 2.0
 
@@ -87,15 +98,7 @@ Recommended intervals:
 
 [ELDER 2.0 BB SPOT LONG HYPE](https://veles.finance/share/8yj24)
 
-## Setting Up on Exchanges
-
-The strategy can be launched on popular exchanges with trading bots:
-
-- **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)** — convenient ready-made bots and low fees. Instructions on [setting up a trading bot on Bybit](/en/library/bybit-trading-bot-setup/) will help to get started.
-- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — a wide selection of copy trading strategies.
-- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — simple interface for beginners.
-
-## Conclusion
+## Summary
 
 The ELDER 2.0 spot strategy is a fundamental approach to working in the crypto market without liquidation risk. Key advantages: position averaging instead of stop-losses, three-factor signal filtering, and automation through bots. The strategy has proven stable in various market conditions.
 

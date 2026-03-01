@@ -76,8 +76,19 @@ Intervalos recomendados:
 
 ## Marcos de tiempo y activos recomendados
 
-- **Timeframe:** 4 horas (4H) — óptimo. 1 hora (1H) — más agresivo.
-- **Activos:** BTC, ETH, y monedas del TOP-20 por capitalización.
+| Marco temporal | Descripción | Riesgo |
+|----------------|-------------|--------|
+| **4H (4 horas)** | Óptimo para principiantes. Menos ruido, señales más estables. | Bajo |
+| **1H (1 hora)** | Balance entre frecuencia de señales y calidad. | Medio |
+| **30 minutos** | Más operaciones, pero más señales falsas. | Alto |
+| **5-15 minutos** | Scalping. Solo para traders experimentados. | Muy alto |
+
+**Recomendación:** Empieza con 4H, prueba durante 1-2 meses, luego cambia a marcos menores.
+
+**Activos:**
+- **Requeridos:** BTC, ETH (liquidez, spread bajo)
+- **Recomendados:** TOP-20 por capitalización (SOL, BNB, XRP, ADA, etc.)
+- **Evitar:** Monedas con volumen < $1M/día
 
 ## Backtests ELDER 2.0
 
@@ -88,14 +99,6 @@ Intervalos recomendados:
 ![Backtest anual ELDER 2.0 BB SPOT LONG HYPE](./assets/hype-elder-strategy.png)
 
 [ELDER 2.0 BB SPOT LONG HYPE](https://veles.finance/share/8yj24)
-
-## Configuración en exchanges
-
-La estrategia puede ejecutarse en exchanges populares con bots de trading:
-
-- **[Bybit](https://www.bybit.com/es/invite?ref=PWMD24)** — bots listos para usar y comisiones bajas. La instrucción para [configurar un bot de trading en Bybit](/es/library/bybit-trading-bot-setup/) te ayudará a empezar.
-- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — amplia selección de estrategias de copytrading.
-- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — interfaz sencilla para principiantes.
 
 ## Resumen
 
