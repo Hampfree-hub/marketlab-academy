@@ -66,24 +66,19 @@ El ATR no indica dirección, solo la magnitud de las oscilaciones. Se combina co
 - El ATR se usa para colocar el stop-loss (p. ej. 1,5–2 × ATR) y el trailing stop, y para adaptar el tamaño de posición a la volatilidad.
 - En cripto, el ATR ayuda a ajustar stops y riesgo a un mercado cambiante.
 
+## FAQ
 
-## Conclusión
+**¿Qué periodo ATR debo elegir?**
+El estándar es 14. Para scalping en timeframes bajos — 5–7. Para swing trading en D1 — 20–28.
 
-ATR y ATR % son herramientas poderosas para medir la volatilidad y el movimiento de precios. El ATR muestra el rango de movimiento absoluto, mientras que el ATR % muestra el rango relativo, lo que lo hace más versátil para comparar diferentes activos.
+**¿Por qué ATR% es mejor que ATR normal?**
+Permite comparar volatilidad entre diferentes activos. ATR $100 en BTC y $5 en ALT — no está claro cuál es más volátil. ATR% lo muestra inmediatamente.
 
-Comprender y aplicar correctamente estos indicadores permite:
-- Establecer eficazmente stop-losses y take-profits.
-- Adaptar los tamaños de posición a la volatilidad actual.
-- Identificar fuertes movimientos de tendencia y consolidaciones.
+**¿Cómo usar ATR para entrada?**
+ATR no da señales de entrada. Se usa para colocar el stop-loss: mayor ATR = stop más amplio.
 
-Al integrar el ATR en su estrategia de trading, los traders pueden aumentar significativamente su adaptabilidad a las cambiantes condiciones del mercado y mejorar la gestión de riesgos.
+**¿Puedo usar ATR sin otros indicadores?**
+Se puede, pero no es ideal. ATR solo muestra volatilidad, no dirección. Combínalo con indicadores de tendencia.
 
-## Materiales relacionados
-
-**Fundamentos y estrategias:** Después de dominar los conceptos básicos, asegúrese de estudiar nuestra estrategia principal [ELDER 2.0](/es/library/spot-strategy-elder-20/), diseñada específicamente para el mercado spot. Además, comprenda [la diferencia entre spot, margen y futuros](/es/library/spot-trading-vs-futures-margin/).
-
-**Herramientas y automatización:** Para aumentar la eficiencia, utilice indicadores técnicos como el [Oscilador Estocástico](/es/library/stochastic-oscillator/) y las [Bandas de Bollinger](/es/library/bollinger-bands/). Una guía paso a paso sobre [cómo configurar un bot de trading en Bybit](/es/library/bybit-trading-bot-setup/) le ayudará a automatizar los procesos.
-
-**Experiencia y riesgos:** Aprenda [cómo empezar a operar con un depósito pequeño](/es/library/how-to-start-trading-small-deposit/) y asegúrese de estudiar los fundamentos de la [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/) y consulte nuestro [diario de depósito real](/es/library/surviving-drawdown-diary/).
-
-Si le interesa esta estrategia y desea seguir el desarrollo de nuestro proyecto, visite la página [Sobre nosotros](/es/about/) — allí hablamos de nuestra misión y de cómo puede apoyar la startup.
+**¿Cómo ATR ayuda en la gestión de posición?**
+Cuando la volatilidad sube, ATR sube → el stop se aleja. Cuando baja — el stop se acerca. Esto es gestión de riesgo adaptativa.
