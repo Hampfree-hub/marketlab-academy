@@ -1,6 +1,6 @@
 ---
 title: 'Canal de Keltner (Keltner Channel)'
-description: 'Keltner Channel — indicador de volatilidad basado en EMA y ATR: configuración, zonas de ruptura y uso en estrategias spot como [Prisma 5.5](/es/library/prisma-5-5-strategy-settings/).'
+description: 'Keltner Channel — indicador de volatilidad basado en EMA y ATR: configuración, zonas de ruptura y uso en estrategias spot.'
 pubDate: '2026-02-27'
 category: 'technical-analysis'
 ---
