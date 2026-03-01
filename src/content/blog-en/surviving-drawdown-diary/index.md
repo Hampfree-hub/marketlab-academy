@@ -48,6 +48,30 @@ What we do, step by step:
 
 After a drawdown it‚Äôs useful to review: what worked, what didn‚Äôt, whether limits were breached. That way the system isn‚Äôt broken ‚Äî it‚Äôs refined.
 
+
+## FAQ
+
+**What percentage of drawdown is normal?**
+
+For conservative strategies ó 10ñ15%, for moderate ó 15ñ25%, for aggressive ó up to 30ñ40%. The key is to set the limit in advance and not exceed it.
+
+**When should I turn off the bot?**
+
+When drawdown reaches the preset limit (e.g., 20% of deposit). Not earlier ó due to emotions, and not later ó to avoid losing the entire deposit.
+
+**What if I want to shut everything down?**
+
+Breathe. Drawdown is part of the system, not an error. Check diversification: if other strategies are in profit, the overall portfolio may be fine. Don't make decisions on one candle.
+
+**Why can't you always average down?**
+
+Averaging increases your position in an asset that's already falling. Without clear rules, this quickly leads to larger losses. Average down only according to plan, with limits.
+
+**How to tell if drawdown is an error or normal?**
+
+Check: were risk limits exceeded, did stops work, was there manual intervention. If the system worked by rules ó it's a normal market phase.
+
 ## Conclusion
 
 Drawdown is a normal part of trading. On a live account we go through it by sticking to the plan: no averaging without rules, no shutting everything down in a fit, keeping limits and diversification. The goal isn‚Äôt to show ‚Äúperpetual growth‚Äù but a robust system that survives both up and down without turning drawdown into disaster. Survive the drawdown with a cool head and keep the system intact for the next market cycle.
+

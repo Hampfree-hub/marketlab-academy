@@ -66,6 +66,30 @@ Proven platforms are available to start trading:
 
 ---
 
+## FAQ
+
+**What deposit is needed for Prisma 5.5?**
+
+Recommended minimum is $500. For moderate risk, $1000–2000 per pair is better. Don't invest your entire deposit — diversify across multiple strategies.
+
+**Which pairs does the strategy work best on?**
+
+Liquid TOP-10 pairs (BTC, ETH, SOL) have less slippage. Volatile altcoins (ARB, OP, LINK) — higher returns, but also higher risks.
+
+**Do I need to monitor the bot after launching?**
+
+Yes. Although the strategy is automated, you need to monitor margin levels, drawdowns, and emergency market situations. Check positions once a day.
+
+**Why is the strategy Long only?**
+
+Prisma 5.5 uses oscillators to enter oversold zones — this only works for rebounds upward. Short version requires different indicators.
+
+**How much can you earn on Prisma 5.5?**
+
+According to backtests — 100–300% annually. Real returns depend on market, settings, and risk management. Expect drawdowns of 20–40%.
+
+---
+
 ## Related Materials
 
 **Basics and Strategies:** Prisma 5.5 is an advanced-level strategy. For beginners, it is recommended to start with [spot trading](/en/library/what-is-spot-trading/) and the basic [ELDER 2.0 strategy](/en/library/spot-strategy-elder-20/).
