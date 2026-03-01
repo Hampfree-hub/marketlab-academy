@@ -50,15 +50,24 @@ Un futuro es un contrato sobre el precio futuro de un activo. No eres dueño de 
 *   **Traders experimentados:** Margen o futuros con apalancamiento pequeño para cobertura (hedging).
 *   **Para especulaciones:** Futuros, ya que permiten ganar dinero en un mercado bajista.
 
-Puedes empezar a operar en exchanges verificados:
-*   **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** — excelente opción para trabajar con [bots de trading](/es/library/bybit-trading-bot-setup/)
-*   **[Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD)** — interfaz cómoda y bonos
-*   **[BingX](https://bingxdao.com/invite/CUBDBG/)** — trading social y copytrading
+## Resumen
 
-## Materiales relacionados
+Cada instrumento tiene su lugar. Empieza simple, aprende la mecanica.
 
-**Bases y estrategias:** Si has elegido el trading spot, asegúrate de estudiar [qué es el trading spot](/es/library/what-is-spot-trading/) y nuestra [estrategia ELDER 2.0](/es/library/spot-strategy-elder-20/). También aprende [cómo empezar el trading con una cantidad pequeña](/es/library/how-to-start-trading-small-deposit/).
+## FAQ
 
-**Herramientas y automatización:** Para un trading efectivo es importante entender las herramientas de análisis como el [Stochastic Oscillator](/es/library/stochastic-oscillator/) y las [Bollinger Bands](/es/library/bollinger-bands/). Una guía paso a paso sobre la [configuración de un bot en Bybit](/es/library/bybit-trading-bot-setup/) te ayudará a automatizar los procesos.
+**?Que es mas seguro � spot o futuros?**
 
-**Experiencia y riesgos:** No olvides el [gestión de riesgos al trabajar con bots](/es/library/risk-management-crypto-trading-bots/).
+Spot es mas seguro. Sin riesgo de liquidacion, los activos estan en tu propiedad.
+
+**?Puedo combinar spot y futuros?**
+
+Si: capital principal en spot, pequena porcion en futuros para especulacion.
+
+**?Que apalancamiento es seguro para principiantes?**
+
+En margen � maximo 2-3x. En futuros � maximo 2-5x.
+
+**?Cuanto dinero necesito para empezar en futuros?**
+
+Minimo \-100, mejor \-500.

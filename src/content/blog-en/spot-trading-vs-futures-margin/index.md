@@ -49,19 +49,32 @@ Futures are contracts to buy or sell an asset at a predetermined price at a spec
 - **Experienced and seeking profits in both directions?** Consider futures.
 - **Always use** stop-losses and proper position sizing regardless of instrument.
 
-## Conclusion
+## Summary
 
 Each trading instrument has its place in a trader's toolkit. Spot trading provides safety and ownership, margin offers amplified gains (and losses), and futures provide flexibility to trade in any market direction. Start simple, learn the mechanics, and only then gradually move to more complex instruments with higher leverage.
 
-You can start trading on proven exchanges:
-- **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** — an excellent choice for working with [trading bots](/en/library/bybit-trading-bot-setup/)
-- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — user-friendly interface and bonuses
-- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — social trading and copy trading
+## FAQ
 
-## Related Materials
+**What's safer — spot or futures?**
 
-**Fundamentals and Strategies:** When choosing spot trading, be sure to learn [what is spot trading](/en/library/what-is-spot-trading/) and the flagship [ELDER 2.0 strategy](/en/library/spot-strategy-elder-20/).
+Spot is definitely safer. No liquidation risk, assets are in your ownership. Futures with leverage can lead to losing your entire deposit.
 
-**Tools and Automation:** For efficient trading, it's important to understand analysis tools like the [Stochastic Oscillator](/en/library/stochastic-oscillator/) and [Bollinger Bands](/en/library/bollinger-bands/). The guide on [setting up a bot on Bybit](/en/library/bybit-trading-bot-setup/) will help automate processes.
+**Can I combine spot and futures?**
 
-**Experience and Risks:** The [live deposit diary](/en/library/surviving-drawdown-diary/) shows real examples of portfolio management. Don't forget about [risk management when working with bots](/en/library/risk-management-crypto-trading-bots/).
+Yes, many do: main capital on spot for long-term growth, small portion on futures for speculation or hedging.
+
+**What leverage is safe for beginners?**
+
+On margin — no more than 2-3x. On futures — maximum 2-5x. Higher leverage = faster liquidation.
+
+**What is liquidation in futures?**
+
+Forced position closure by the exchange when price goes against you and margin is insufficient.
+
+**Why is funding needed for perpetual futures?**
+
+Funding are periodic payments between longs and shorts to keep contract price close to spot price.
+
+**How much money do I need to start on futures?**
+
+Minimum $50-100, but better start with $200-500 to withstand drawdown when using leverage.
