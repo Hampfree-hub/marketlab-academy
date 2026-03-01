@@ -270,6 +270,66 @@ article {
 	font-style: italic;
 }
 
+/* Таблицы — горизонтальный скролл на мобильных */
+/* Таблицы — горизонтальный скролл на мобильных */
+.prose table {
+	width: 100%;
+	border-collapse: collapse;
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 0.85rem;
+	min-width: 400px; /* Минимальная ширина для скролла */
+	display: block;
+	overflow-x: auto;
+	margin: var(--space-4) 0;
+	border: 2px solid var(--nes-border-primary);
+}
+
+.prose th, .prose td {
+	padding: 0.75rem 1rem;
+	border: 2px solid var(--nes-border-primary);
+	text-align: left;
+}
+
+.prose th {
+	background-color: var(--nes-bg-secondary);
+	color: var(--nes-accent-green);
+	font-family: 'Press Start 2P', monospace;
+	font-size: 0.6rem;
+	text-transform: uppercase;
+}
+
+.prose tbody tr:hover {
+	background-color: rgba(0, 216, 0, 0.05);
+}
+
+/* На десктопе таблицы не скроллятся — помещаются */
+@media (min-width: 1200px) {
+	.prose table {
+		min-width: auto;
+		display: table;
+		overflow: visible;
+		border: none;
+	}
+	
+	.prose th, .prose td {
+		border: 2px solid var(--nes-border-primary);
+	}
+}
+
+/* Скрываем скроллбар, но оставляем возможность скролла */
+.prose .table-wrapper::-webkit-scrollbar {
+	height: 6px;
+}
+
+.prose .table-wrapper::-webkit-scrollbar-track {
+	background: var(--nes-bg-secondary);
+}
+
+.prose .table-wrapper::-webkit-scrollbar-thumb {
+	background: var(--nes-border-primary);
+	border-radius: 3px;
+}
+
 .prose > * {
 	list-style: inherit;
 }
