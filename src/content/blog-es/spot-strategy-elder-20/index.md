@@ -97,15 +97,32 @@ La estrategia puede ejecutarse en exchanges populares con bots de trading:
 - **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — amplia selección de estrategias de copytrading.
 - **[BingX](https://bingxdao.com/invite/CUBDBG/)** — interfaz sencilla para principiantes.
 
-## Conclusión
+## Resumen
 
-La estrategia spot ELDER 2.0 es un enfoque fundamental para operar en el mercado cripto. La ausencia de riesgo de liquidación la convierte en la opción ideal para la automatización. Recuerda la [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/) y opera siempre con fondos que puedas permitirte perder.
+La estrategia spot ELDER 2.0 es un enfoque fundamental para operar en el mercado cripto sin riesgo de liquidación. Ventajas clave: promediado de posición en lugar de stop-loss, filtración de señales de tres factores y automatización a través de bots. La estrategia ha demostrado ser estable en diversas condiciones de mercado.
 
-## Materiales relacionados
+## FAQ
 
-**Fundamentos y estrategias:** Asegúrate de estudiar [qué es el trading spot](/es/library/what-is-spot-trading/) y las [diferencias entre spot, futures y margen](/es/library/spot-trading-vs-futures-margin/). También descubre [cómo empezar el trading con una pequeña cantidad](/es/library/how-to-start-trading-small-deposit/).
+**¿Por qué spot y no futuros?**
 
-**Herramientas y experiencia:** Profundiza tus conocimientos sobre los indicadores: [Stochastic Oscillator](/es/library/stochastic-oscillator/), [Bollinger Bands](/es/library/bollinger-bands/) y [CMO](/es/library/chande-momentum-oscillator/). Mira nuestro [diario de depósito en vivo](/es/library/surviving-drawdown-diary/) y estudia los principios de [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/).
+En spot no hay riesgo de liquidación: la posición puede caer indefinidamente pero no se liquidará. Esto es ideal para inversiones a largo plazo con promediado.
 
----
-Si estás interesado en esta estrategia y quieres seguir el desarrollo de nuestro proyecto, echa un vistazo a la página [Sobre el proyecto](/es/about/) — allí hablamos de nuestra misión y de cómo puedes apoyar a la startup.
+**¿Cuánto dinero necesito para empezar?**
+
+Se recomienda mínimo $100-200. Con un depósito de $100, la orden base 5% = $5. Esto es suficiente para 4-6 órdenes de promediado.
+
+**¿Qué marco temporal debe elegir un principiante?**
+
+Empieza con 4H (4 horas) — menos ruido que en 1H. Después de probar, puedes pasar a 1H para más operaciones.
+
+**¿Qué hago si se usan las 6 órdenes de promediado y el precio sigue abajo?**
+
+Si se agotan las reservas, es mejor tomar la pérdida y empezar de nuevo con otra moneda. No aumentes la posición más de lo planificado — esto lleva a margin call.
+
+**¿Funciona ELDER 2.0 en monedas de baja liquidez?**
+
+No. Usa solo TOP-20 por capitalización (BTC, ETH, SOL, BNB, etc.). Las monedas de baja liquidez pueden dar señales falsas y problemas de ejecución.
+
+**¿Necesito cambiar la configuración de indicadores para diferentes monedas?**
+
+La configuración base (14,3,3 para Stochastic; 20,2.0 para Bollinger; 14 para CMO) funciona universalmente. Traders experimentados pueden ajustar períodos según la volatilidad del activo.

@@ -97,19 +97,32 @@ The strategy can be launched on popular exchanges with trading bots:
 
 ## Conclusion
 
-The ELDER 2.0 spot strategy is a fundamental approach to working in the crypto market without liquidation risk. Position averaging and three-factor signal filtering provide system stability in various market conditions. Proven platforms are available for strategy automation:
+The ELDER 2.0 spot strategy is a fundamental approach to working in the crypto market without liquidation risk. Key advantages: position averaging instead of stop-losses, three-factor signal filtering, and automation through bots. The strategy has proven stable in various market conditions.
 
-- **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)** — one of the leading exchanges for working with [trading bots](/en/library/bybit-trading-bot-setup/).
-- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — a platform with a user-friendly interface and bonuses for new users.
-- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — a popular platform for social trading and copy trading.
+## FAQ
 
----
-If you are interested in this strategy and want to follow the development of our project, visit the [About the Project](/en/about/) page — there we talk about our mission and how you can support our startup.
+**Why spot and not futures?**
 
-## Related Materials
+On spot, there's no liquidation risk — the position can drop indefinitely but won't be liquidated. This is ideal for long-term investing with averaging.
 
-**Basics and strategies:** it is recommended to study [what spot trading is](/en/library/what-is-spot-trading/) and the [differences between spot, futures, and margin](/en/library/spot-trading-vs-futures-margin/). Information is also available on [how to start trading with a small deposit](/en/library/how-to-start-trading-small-deposit/).
+**How much money do I need to start?**
 
-**Tools and experience:** in-depth study of indicators: [Stochastic Oscillator](/en/library/stochastic-oscillator/), [Bollinger Bands](/en/library/bollinger-bands/), and [CMO](/en/library/chande-momentum-oscillator/). A [live deposit diary](/en/library/surviving-drawdown-diary/) and [risk management](/en/library/risk-management-crypto-trading-bots/) principles are available.
+Minimum $100-200 recommended. With $100 deposit, base order 5% = $5. This is enough for 4-6 averaging orders.
+
+**Which timeframe should beginners choose?**
+
+Start with 4H (4 hours) — less noise than 1H. After testing, you can switch to 1H for more frequent trades.
+
+**What if all 6 averaging orders are used and price is still lower?**
+
+If reserves are exhausted, it's better to take the loss and start fresh with a different coin. Don't increase position beyond the plan — this leads to margin call.
+
+**Does ELDER 2.0 work on low-liquidity coins?**
+
+No. Use only TOP-20 by market cap (BTC, ETH, SOL, BNB, etc.). Low-liquidity coins can give false signals and order execution issues.
+
+**Do I need to change indicator settings for different coins?**
+
+Base settings (14,3,3 for Stochastic; 20,2.0 for Bollinger; 14 for CMO) work universally. Experienced traders may adjust periods based on asset volatility.
 
 ---
