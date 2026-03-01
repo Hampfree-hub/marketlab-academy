@@ -66,17 +66,20 @@ In sideways markets, bounces off the band boundaries are clearer. In a trend, th
 - Combining with RSI, Williams %R and, when needed, volume improves signal filtering.
 
 
-## Conclusion
+## FAQ
 
-Bollinger Bands are a powerful tool for analyzing volatility and potential price changes. They provide traders with a clear visual representation of an asset's normal movement range. Using them in conjunction with other indicators and analytical approaches can significantly improve trading decisions.
+**What settings for Bollinger Bands should I use?**
+Default — period 20, multiplier 2. For scalping on lower timeframes, reduce period to 10–15.
 
-Remember, no single indicator is perfect. A comprehensive approach, risk management, and continuous learning are keys to success in the dynamic cryptocurrency market.
+**Why doesn't price bounce off the band?**
+In a strong trend, price can "ride the band" for a long time. Touch alone is not a signal — confirmation from oscillators is needed.
 
-## Related Materials
+**What is band squeeze?**
+When bands narrow sharply — volatility is low. Often a sharp move follows. Direction is determined by trend.
 
-**Fundamentals and Strategies:** After mastering the basics, be sure to study our flagship [ELDER 2.0 strategy](/en/library/spot-strategy-elder-20/), specifically designed for the spot market. Also, understand [the difference between spot, margin, and futures](/en/library/spot-trading-vs-futures-margin/).
+**Do Bollinger Bands give entry signals?**
+Not directly. It's a volatility indicator, not direction. Use with RSI or Williams %R for confirmation.
 
-**Tools and Automation:** To increase efficiency, use technical indicators like the [Stochastic Oscillator](/en/library/stochastic-oscillator/) and [MACD](/en/library/mac-d-indicator/). A step-by-step guide on [setting up a trading bot on Bybit](/en/library/bybit-trading-bot-setup/) will help automate processes.
-
-**Experience and Risks:** Learn [how to start trading with a small deposit](/en/library/how-to-start-trading-small-deposit/) and be sure to study the basics of [risk management](/en/library/risk-management-crypto-trading-bots/) and check out the [live deposit diary](/en/library/surviving-drawdown-diary/).
+**Can I use them on crypto?**
+Yes, but with caution: crypto is more volatile, default settings may produce many false signals. Test on history.
 

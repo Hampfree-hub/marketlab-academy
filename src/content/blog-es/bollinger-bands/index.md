@@ -54,17 +54,20 @@ Debido a la alta volatilidad de las criptomonedas, las bandas suelen expandirse 
 **Materiales relacionados:** [ATR y ATR%](/es/library/atr-and-atr-percent/), [Falsos rompimientos](/es/library/false-breakouts-trading/), [Patrones de bandera y banderín](/es/library/flag-and-pennant-patterns/).
 
 
-## Conclusión
+## FAQ
 
-Las Bandas de Bollinger son una herramienta poderosa para analizar la volatilidad y los posibles cambios de precios. Ofrecen a los traders una representación visual clara del rango de movimiento normal de un activo. Su uso en combinación con otros indicadores y enfoques de análisis puede mejorar significativamente las decisiones de trading.
+**¿Qué configuraciones usar para las bandas de Bollinger?**
+Por defecto — periodo 20, multiplicador 2. Para scalping en timeframes bajos, reducir periodo a 10–15.
 
-Recuerde que ningún indicador es perfecto. Un enfoque integral, la gestión de riesgos y el aprendizaje continuo son claves para el éxito en el dinámico mercado de criptomonedas.
+**¿Por qué el precio no rebota de la banda?**
+En una tendencia fuerte, el precio puede "caminar por la banda" mucho tiempo. El toque solo no es señal — se necesita confirmación de osciladores.
 
-## Materiales relacionados
+**¿Qué es el squeeze (estrangulamiento)?**
+Cuando las bandas se estrechan mucho — la volatilidad es baja. A menudo sigue un movimiento brusco. La dirección la da la tendencia.
 
-**Fundamentos y estrategias:** Después de dominar los conceptos básicos, asegúrese de estudiar nuestra estrategia principal [ELDER 2.0](/es/library/spot-strategy-elder-20/), diseñada específicamente para el mercado spot. Además, comprenda [la diferencia entre spot, margen y futuros](/es/library/spot-trading-vs-futures-margin/).
+**¿Las bandas de Bollinger dan señales de entrada?**
+No directamente. Es un indicador de volatilidad, no de dirección. Usar con RSI o Williams %R para confirmación.
 
-**Herramientas y automatización:** Para aumentar la eficiencia, utilice indicadores técnicos como el [Oscilador Estocástico](/es/library/stochastic-oscillator/) y [MACD](/es/library/mac-d-indicator/). Una guía paso a paso sobre [cómo configurar un bot de trading en Bybit](/es/library/bybit-trading-bot-setup/) le ayudará a automatizar los procesos.
-
-**Experiencia y riesgos:** Aprenda [cómo empezar a operar con un depósito pequeño](/es/library/how-to-start-trading-small-deposit/) y asegúrese de estudiar los fundamentos de la [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/) y consulte nuestro [diario de depósito real](/es/library/surviving-drawdown-diary/).
+**¿Se puede usar en cripto?**
+Sí, pero con cautela: el mercado cripto es más volátil, la configuración por defecto puede dar muchas señales falsas. Prueba en historia.
 
