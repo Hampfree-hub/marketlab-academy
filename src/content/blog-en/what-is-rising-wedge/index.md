@@ -52,3 +52,20 @@ With futures or leverage, the rising wedge becomes even more important. It can b
 In volatile crypto markets, bots are increasingly used. Many can detect chart patterns, including the rising wedge, and place trades automatically.
 
 Understanding and using the rising wedge correctly can improve trading results. It can be combined with other tools, such as the [RSI](/en/library/technical-analysis-rsi/) or [doji candles](/en/library/what-are-doji-candles/), for better timing. For volume and momentum analysis, the [Money Flow Index (MFI)](/en/library/money-flow-index/) is useful, and for identifying overbought zones, the [Williams %R oscillator](/en/library/williams-percent-range-r/) can help.
+
+## FAQ
+
+**Is a rising wedge bullish or bearish?**
+Mostly bearish. Signals exhaustion of an uptrend and possible reversal down.
+
+**How to identify a rising wedge breakout?**
+Price breaks below the lower support line. Confirmation comes with volume.
+
+**Can you trade a rising wedge long?**
+Technically yes, but risky. Most trade breakout to the short side.
+
+**How does it differ from a price channel?**
+In a channel, lines are parallel; in a wedge, they converge. Wedge indicates narrowing volatility.
+
+**What timeframe is best for this pattern?**
+H1 and above. Lower timeframes have many false breakouts.

@@ -59,3 +59,20 @@ Al ser adelantado, puede dar señales falsas en tendencias fuertes. Suele combin
 Es adecuado para traders a corto y medio plazo (escalping, intradía). Funciona bien en mercados laterales y al buscar correcciones locales.
 
 Para principiantes es útil por su interpretación sencilla, pero requiere disciplina cuando el mercado tiene un movimiento direccional fuerte.
+
+## FAQ
+
+**¿Qué configuraciones usar para Williams %R?**
+El periodo por defecto es 14. Para scalping en timeframes bajos — 5–10. Para swing — 20–28.
+
+**Williams %R o RSI — ¿cuál es mejor?**
+RSI es más lento y suave, %R es más rápido y sensible. Usar juntos para confirmación.
+
+**¿Por qué el indicador se queda mucho en zona de sobrecompra?**
+En tendencia fuerte es normal. Tendencia alcista = precio en máximos = sobrecompra puede durar mucho.
+
+**¿Cómo usar con indicadores de tendencia?**
+Solo tomar señales en dirección de la tendencia. En tendencia alcista — esperar salida de sobreventa (-80). En bajista — de sobrecompra (-20).
+
+**¿Funciona en cripto?**
+Sí, pero con cautela por la alta volatilidad. Siempre obtener confirmación de otros indicadores.

@@ -52,3 +52,20 @@ Con futuros o apalancamiento, la cuña alcista gana importancia. Se puede operar
 En mercados cripto volátiles, los bots son cada vez más usados. Muchos detectan patrones gráficos, incluida la cuña alcista, y ejecutan operaciones de forma automática.
 
 Entender y usar bien la cuña alcista puede mejorar los resultados. Puede combinarse con otras herramientas, como el [RSI](/es/library/technical-analysis-rsi/) o las [velas doji](/es/library/what-are-doji-candles/), para afinar el timing. Para análisis de volumen e impulso, el [índice de flujo de dinero (MFI)](/es/library/money-flow-index/) es útil, y para identificar zonas de sobrecompra, el [oscilador Williams %R](/es/library/williams-percent-range-r/) puede ayudar.
+
+## FAQ
+
+**¿La cuña alcista es alcista o bajista?**
+Mayormente bajista. Señala agotamiento del uptrend y posible reversión a la baja.
+
+**¿Cómo identificar la ruptura de la cuña alcista?**
+El precio rompe la línea de soporte inferior. La confirmación viene con volumen.
+
+**¿Se puede operar la cuña alcista en largo?**
+Técnicamente sí, pero arriesgado. La mayoría opera la ruptura en corto.
+
+**¿En qué se diferencia del canal de precios?**
+En el canal las líneas son paralelas; en la cuña convergen. La cuña indica estrechamiento de volatilidad.
+
+**¿Qué timeframe es mejor para este patrón?**
+H1 y superior. Los timeframes bajos dan muchas rupturas falsas.

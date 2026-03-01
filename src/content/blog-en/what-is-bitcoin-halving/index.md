@@ -74,3 +74,20 @@ The main reason is supply and demand. When fewer new bitcoins are issued while d
 Historically, BTC has tended to rally after halvings. In 2012, it rose almost 100× in a year. In 2016–2017, about 10×. In 2020–2021, more than 3×, and after 2024, more than 2×.
 
 It is important to remember that halving is not the only driver of price. Macro conditions, regulation, tech upgrades, and investor sentiment all play a role and add to volatility. For a deeper understanding of Bitcoin, see the [complete guide to Bitcoin](/en/library/what-bitcoin-everything-you-need-know/), which covers history, principles, and mining in detail.
+
+## FAQ
+
+**What is halving in simple terms?**
+It's halving the miner reward. Every ~4 years the block reward drops by half.
+
+**When is the next BTC halving?**
+Around 2028 (every 210,000 blocks, about 4 years).
+
+**Does halving guarantee price rise?**
+No, history shows growth, but other factors matter: regulation, macro, market sentiment.
+
+**How does halving affect miners?**
+Income drops by half. Less efficient miners leave, hashrate temporarily drops.
+
+**How many halvings total?**
+About 33 (when reward drops below 1 satoshi, mining stops at 21M BTC).

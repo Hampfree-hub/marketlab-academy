@@ -59,3 +59,20 @@ Because %R is leading, it can give false signals in strong trends. It is often c
 It suits short- and medium-term traders (scalping, intraday). It works well in sideways markets and when looking for local pullbacks.
 
 Beginners benefit from its simple interpretation, but need discipline when the market is in a strong directional move.
+
+## FAQ
+
+**What settings for Williams %R to use?**
+Default period is 14. For scalping on lower timeframes — 5–10. For swing — 20–28.
+
+**Williams %R or RSI — which is better?**
+RSI is slower and smoother, %R is faster and more sensitive. Use together for confirmation.
+
+**Why does the indicator stay long in overbought zone?**
+In a strong trend this is normal. Uptrend = price at highs = overbought can last long.
+
+**How to use with trend indicators?**
+Only take signals in trend direction. In uptrend — wait for exit from oversold (-80). In downtrend — from overbought (-20).
+
+**Does it work on crypto?**
+Yes, but with caution due to high volatility. Always get confirmation from other indicators.

@@ -70,3 +70,20 @@ La razón principal es la oferta y la demanda. Si se emiten menos bitcoin nuevos
 Históricamente, el BTC ha tendido a subir tras los halvings. En 2012 subió casi 100 veces en un año. En 2016–2017, unas 10 veces. En 2020–2021, más de 3 veces, y tras 2024, más de 2 veces.
 
 Conviene recordar que el halving no es el único factor. Las condiciones macro, la regulación, las mejoras tecnológicas y el sentimiento de los inversores también cuentan y añaden volatilidad. Para entender mejor Bitcoin, consulta la [guía completa de Bitcoin](/es/library/what-bitcoin-everything-you-need-know/), que cubre historia, principios y minería en detalle.
+
+## FAQ
+
+**¿Qué es el halving en palabras simples?**
+Es reducir a la mitad la recompensa de los mineros. Cada ~4 años la recompensa baja a la mitad.
+
+**¿Cuándo será el próximo halving de BTC?**
+Around 2028 (cada 210.000 bloques, unos 4 años).
+
+**¿El halving garantiza subida de precio?**
+No, la historia muestra crecimiento, pero otros factores importan: regulación, macro, sentimiento.
+
+**¿Cómo afecta el halving a los mineros?**
+Los ingresos caen a la mitad. Los mineros menos eficientes se van, el hashrate baja temporalmente.
+
+**¿Cuántos halvings habrá en total?**
+Unos 33 (cuando la recompensa baje de 1 satoshi, la minería se detiene en 21M BTC).
