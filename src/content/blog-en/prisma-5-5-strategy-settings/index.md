@@ -70,7 +70,7 @@ Proven platforms are available to start trading:
 
 **What deposit is needed for Prisma 5.5?**
 
-Recommended minimum is $10�20. For moderate risk, $1000–2000 per pair is better. Don't invest your entire deposit — diversify across multiple strategies.
+Recommended minimum is $10-20. For moderate risk, $1000–2000 per pair is better. Don't invest your entire deposit — diversify across multiple strategies.
 
 **Which pairs does the strategy work best on?**
 

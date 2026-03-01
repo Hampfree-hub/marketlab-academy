@@ -1,4 +1,4 @@
----
+ï»¿---
 title: 'Diversification and Trading System Setup. Part 3: Tuning for Yourself and Mistakes'
 description: 'How to adapt your trading system: monitoring, tuning, common mistakes and how to avoid them.'
 pubDate: '2026-02-02'
@@ -41,15 +41,15 @@ Diversification is part of trading system setup: by assets, strategies, and venu
 
 **How often to check the system?**
 
-For daily strategies — once a day/week. For scalping — more often, every day.
+For daily strategies â€” once a day/week. For scalping â€” more often, every day.
 
 **When to change system settings?**
 
-After a period (week, month), not after one trade. If system is steadily in red — revision is justified.
+After a period (week, month), not after one trade. If system is steadily in red â€” revision is justified.
 
 **What is system overfitting?**
 
-When you tune parameters to past data — looks good on history, drawdown again live.
+When you tune parameters to past data â€” looks good on history, drawdown again live.
 
 **Why shouldn't I ignore stop losses?**
 
@@ -57,5 +57,5 @@ When you tune parameters to past data — looks good on history, drawdown again li
 
 **How many assets in portfolio is enough?**
 
-Minimum 3–5 assets, distributed by capital. More — better diversification.
+Minimum 3â€”5 assets, distributed by capital. More â€” better diversification.
 

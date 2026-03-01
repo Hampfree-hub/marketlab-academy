@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Spot, futuros y margen: qué diferencias hay'
 description: 'Comparación entre spot, margen y futuros: apalancamiento, liquidación, cuándo elegir cada uno.'
 pubDate: '2026-02-13'
@@ -56,7 +56,7 @@ Cada instrumento tiene su lugar. Empieza simple, aprende la mecanica.
 
 ## FAQ
 
-**?Que es mas seguro � spot o futuros?**
+**?Que es mas seguro — spot o futuros?**
 
 Spot es mas seguro. Sin riesgo de liquidacion, los activos estan en tu propiedad.
 
@@ -66,7 +66,7 @@ Si: capital principal en spot, pequena porcion en futuros para especulacion.
 
 **?Que apalancamiento es seguro para principiantes?**
 
-En margen � maximo 2-3x. En futuros � maximo 2-5x.
+En margen — maximo 2-3x. En futuros — maximo 2-5x.
 
 **?Cuanto dinero necesito para empezar en futuros?**
 

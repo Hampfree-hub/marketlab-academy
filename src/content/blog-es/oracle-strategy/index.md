@@ -1,4 +1,4 @@
----
+﻿---
 title: 'ORACLE 1.1: configuración de la estrategia con cuatro indicadores'
 description: 'Resumen de la configuración ORACLE 1.1: Bollinger Bands, ATR%, ROC, Williams %R en timeframes H1→M5, backtests y prueba en BingX.'
 pubDate: '2026-02-03'
@@ -67,7 +67,7 @@ Más sobre el proyecto, principios y formas de apoyo en la página **[Sobre el p
 
 **?Por que exactamente 4 indicadores y 4 timeframes?**
 
-Cada indicador cumple su funcion: BB � limites, ATR% � volatilidad, ROC � impulso, Williams %R � reversion. El filtrado multitimeframe reduce el ruido.
+Cada indicador cumple su funcion: BB — limites, ATR% — volatilidad, ROC — impulso, Williams %R — reversion. El filtrado multitimeframe reduce el ruido.
 
 **?Que pares funcionan mejor?**
 

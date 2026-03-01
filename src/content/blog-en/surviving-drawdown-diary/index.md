@@ -1,4 +1,4 @@
----
+ï»¿---
 title: 'How We Survive Drawdown: A Live Account Diary'
 description: 'When Bitcoin drops and the account shrinks: our survival plan, why we donâ€™t average down blindly, and how to get through a drawdown without breaking the system. Live account, real drawdown.'
 pubDate: '2026-02-05'
@@ -53,11 +53,11 @@ After a drawdown itâ€™s useful to review: what worked, what didnâ€™t, whether li
 
 **What percentage of drawdown is normal?**
 
-For conservative strategies — 10–15%, for moderate — 15–25%, for aggressive — up to 30–40%. The key is to set the limit in advance and not exceed it.
+For conservative strategies â€” 10â€”15%, for moderate â€” 15â€”25%, for aggressive â€” up to 30â€”40%. The key is to set the limit in advance and not exceed it.
 
 **When should I turn off the bot?**
 
-When drawdown reaches the preset limit (e.g., 20% of deposit). Not earlier — due to emotions, and not later — to avoid losing the entire deposit.
+When drawdown reaches the preset limit (e.g., 20% of deposit). Not earlier â€” due to emotions, and not later â€” to avoid losing the entire deposit.
 
 **What if I want to shut everything down?**
 
@@ -69,7 +69,7 @@ Averaging increases your position in an asset that's already falling. Without cl
 
 **How to tell if drawdown is an error or normal?**
 
-Check: were risk limits exceeded, did stops work, was there manual intervention. If the system worked by rules — it's a normal market phase.
+Check: were risk limits exceeded, did stops work, was there manual intervention. If the system worked by rules â€” it's a normal market phase.
 
 ## Conclusion
 

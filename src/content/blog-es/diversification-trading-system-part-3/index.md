@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Diversificación y configuración del sistema de trading. Parte 3: Ajustar a ti y errores'
 description: 'Cómo adaptar tu sistema de trading: supervisión, ajustes, errores típicos y cómo evitarlos.'
 pubDate: '2026-02-02'
@@ -41,15 +41,15 @@ Diversificación — parte de la configuración del sistema: por activos, estrat
 
 **?Con que frecuencia revisar el sistema?**
 
-Para estrategias diarias � una vez al dia/semana. Para scalping � mas a menudo, cada dia.
+Para estrategias diarias — una vez al dia/semana. Para scalping — mas a menudo, cada dia.
 
 **?Cuando cambiar ajustes del sistema?**
 
-Tras un periodo (semana, mes), no tras una operacion. Si el sistema va estable en rojo � la revision esta justificada.
+Tras un periodo (semana, mes), no tras una operacion. Si el sistema va estable en rojo — la revision esta justificada.
 
 **?Que es el sobreajuste del sistema?**
 
-Cuando ajustas parametros a datos pasados � bonito en historia, otra vez drawdown en vivo.
+Cuando ajustas parametros a datos pasados — bonito en historia, otra vez drawdown en vivo.
 
 **?Por que no ignorar los stop loss?**
 
@@ -57,5 +57,5 @@ Cuando ajustas parametros a datos pasados � bonito en historia, otra vez drawdow
 
 **?Cuantos activos en el portafolio son suficientes?**
 
-Minimo 3�5 activos, distribuidos por capital. Mas � mejor diversificacion.
+Minimo 3—5 activos, distribuidos por capital. Mas — mejor diversificacion.
 

@@ -1,4 +1,4 @@
----
+ï»¿---
 title: 'ORACLE 1.1: Strategy Settings on Four Indicators'
 description: 'Overview of ORACLE 1.1 settings: Bollinger Bands, ATR%, ROC, Williams %R on timeframes H1â†’M5, backtests and BingX test.'
 pubDate: '2026-02-03'
@@ -67,7 +67,7 @@ Find out more about the project, principles and ways to support it on the **[Abo
 
 **Why exactly 4 indicators and 4 timeframes?**
 
-Each indicator serves its purpose: BB — boundaries, ATR% — volatility, ROC — momentum, Williams %R — reversal. Multi-timeframe filtering reduces noise.
+Each indicator serves its purpose: BB â€” boundaries, ATR% â€” volatility, ROC â€” momentum, Williams %R â€” reversal. Multi-timeframe filtering reduces noise.
 
 **Which pairs work best?**
 

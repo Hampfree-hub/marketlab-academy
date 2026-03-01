@@ -1,4 +1,4 @@
----
+ï»¿---
 title: 'ROC (Rate of Change) en el trading de criptomonedas'
 description: 'QuÃ© es el indicador ROC (Rate of Change): cÃ³mo mide la velocidad de cambio del precio, seÃ±ales y combinaciÃ³n con RSI y Williams %R.'
 pubDate: '2026-02-03'
@@ -60,15 +60,15 @@ Antes de usar en trading real una estrategia con ROC, se recomienda probarla en 
 
 **?Que periodo ROC elegir?**
 
-Estandar — 12 o 14. Para scalping en TFs bajos — 5–9. Para swing — 20–28.
+Estandar â€” 12 o 14. Para scalping en TFs bajos â€” 5â€”9. Para swing â€” 20â€”28.
 
-**ROC o RSI — ?cual es mejor?**
+**ROC o RSI â€” ?cual es mejor?**
 
-RSI esta limitado a 0–100, ROC no tiene limites (muestra porcentaje). ROC es mas rapido, RSI mas suave. Usar juntos.
+RSI esta limitado a 0â€”100, ROC no tiene limites (muestra porcentaje). ROC es mas rapido, RSI mas suave. Usar juntos.
 
 **?Como usar las divergencias del ROC?**
 
-Divergencia alcista — precio hace nuevo minimo, ROC mas alto. Bajista — nuevo maximo, ROC mas bajo. Es senal de reversion.
+Divergencia alcista â€” precio hace nuevo minimo, ROC mas alto. Bajista â€” nuevo maximo, ROC mas bajo. Es senal de reversion.
 
 **?Por que el ROC da senales falsas en cripto?**
 
