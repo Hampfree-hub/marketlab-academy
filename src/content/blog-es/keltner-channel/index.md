@@ -92,10 +92,10 @@ El Canal de Keltner es más efectivo en combinación con osciladores para confir
 
 | Indicador | Para retorno a la media | Para ruptura |
 |-----------|------------------------|--------------|
-| **RSI** | Sobrecompra (short) / Sobreventa (long) al tocar banda | Confirmación de tendencia (por encima/debajo de 50) |
-| **Estocástico** | Igual que RSI — zonas de sobrecompra/sobreventa | — |
-| **MACD** | Divergencias | Confirmación de tendencia |
-| **Volumen** | — | Ruptura verdadera vs falsa (el volumen aumenta) |
+| **RSI** | Precio en banda superior + RSI > 70 → short; Precio en banda inferior + RSI < 30 → long | RSI por encima de 50 (largo) o debajo de 50 (corto) |
+| **Estocástico** | Igual que RSI: K y D en zonas de sobrecompra/sobreventa | — |
+| **MACD** | Divergencias entre precio e histograma | La línea MACD cruza la línea de señal |
+| **Volumen** | — | El volumen debe aumentar en ruptura |
 
 ### Ejemplo de estrategia (Retorno a la media)
 1. El precio toca la banda superior o inferior

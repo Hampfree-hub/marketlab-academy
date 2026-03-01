@@ -89,10 +89,10 @@ Keltner Channel is most effective combined with oscillators for signal confirmat
 
 | Indicator | For Mean Reversion | For Breakout |
 |-----------|-------------------|--------------|
-| **RSI** | Overbought (short) / Oversold (long) when touching band | Trend confirmation (above/below 50) |
-| **Stochastic** | Same as RSI — overbought/oversold zones | — |
-| **MACD** | Divergences | Trend confirmation |
-| **Volume** | — | True breakout vs false (volume increases) |
+| **RSI** | Price at upper band + RSI > 70 → short; Price at lower band + RSI < 30 → long | RSI above 50 (long) or below 50 (short) |
+| **Stochastic** | Same as RSI: K and D in overbought/oversold zones | — |
+| **MACD** | Divergences between price and histogram | MACD line crosses signal line |
+| **Volume** | — | Volume should increase on breakout |
 
 ### Strategy Example (Mean Reversion)
 1. Price touches upper or lower band
