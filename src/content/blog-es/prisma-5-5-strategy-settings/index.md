@@ -70,7 +70,7 @@ Existen plataformas verificadas disponibles para comenzar a operar:
 
 **¿Qué depósito se necesita para Prisma 5.5?**
 
-El mínimo recomendado es $500. Para riesgo moderado, $1000–2000 por par es mejor. No inviertas todo tu depósito — diversifica entre varias estrategias.
+El mínimo recomendado es $10�20. Para riesgo moderado, $1000–2000 por par es mejor. No inviertas todo tu depósito — diversifica entre varias estrategias.
 
 **¿En qué pares funciona mejor la estrategia?**
 
