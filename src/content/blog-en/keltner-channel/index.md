@@ -30,6 +30,7 @@ The Keltner Channel is versatile and works in two modes. The choice depends on t
 In a sideways market (flat), the channel boundaries act as support and resistance levels. This is the **primary** strategy for Keltner Channel — similar to Bollinger Bands.
 
 **How it works:**
+
 - Price approaches upper band → expect a pullback down to EMA
 - Price approaches lower band → expect a rebound up to EMA
 - The middle line (EMA) serves as the Take Profit target
@@ -115,11 +116,13 @@ Keltner Channel is most effective combined with oscillators for signal confirmat
 **Lag:** Like all moving average-based indicators, Keltner Channel lags. This is especially noticeable in fast moves.
 
 **Doesn't work well in:**
+
 - Sharp news moves (gaps)
 - Extreme volatility periods
 - Low-liquidity assets
 
 **Risk management recommendations:**
+
 - Don't risk more than 1-2% per trade
 - Always set stop-loss
 - Test on demo before real trading
@@ -150,3 +153,4 @@ Yes, but with caution. On low timeframes (M1-M5) there's a lot of noise. It's re
 **Why does the channel narrow and what does it mean?**
 
 Channel narrowing (also called "squeeze") indicates low volatility and position accumulation. After a quiet period, a strong move usually follows — breakout can be in either direction.
+

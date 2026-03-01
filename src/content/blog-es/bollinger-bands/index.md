@@ -57,17 +57,23 @@ Debido a la alta volatilidad de las criptomonedas, las bandas suelen expandirse 
 ## FAQ
 
 **¿Qué configuraciones usar para las bandas de Bollinger?**
+
 Por defecto — periodo 20, multiplicador 2. Para scalping en timeframes bajos, reducir periodo a 10–15.
 
 **¿Por qué el precio no rebota de la banda?**
+
 En una tendencia fuerte, el precio puede "caminar por la banda" mucho tiempo. El toque solo no es señal — se necesita confirmación de osciladores.
 
 **¿Qué es el squeeze (estrangulamiento)?**
+
 Cuando las bandas se estrechan mucho — la volatilidad es baja. A menudo sigue un movimiento brusco. La dirección la da la tendencia.
 
 **¿Las bandas de Bollinger dan señales de entrada?**
+
 No directamente. Es un indicador de volatilidad, no de dirección. Usar con RSI o Williams %R para confirmación.
 
 **¿Se puede usar en cripto?**
+
 Sí, pero con cautela: el mercado cripto es más volátil, la configuración por defecto puede dar muchas señales falsas. Prueba en historia.
+
 

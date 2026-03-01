@@ -167,12 +167,15 @@ False breakouts are common — and tradable — when you identify them correctly
 ## FAQ
 
 **1. What is a false breakout?**
+
 A false breakout is a short-term price movement beyond a support or resistance level that then returns to its original trading range.
 
 **2. Why do false breakouts occur?**
+
 False breakouts often occur due to market manipulation, triggering a large number of stop-losses, or when major players try to lure traders in the wrong direction.
 
 **3. How to identify a false breakout?**
+
 Pay attention to:
 *   **Trading volume:** Low volume during a breakout can indicate weak momentum and a potential false breakout.
 *   **Candle close:** If a candle closes within the range after a breakout, this is a strong signal of a false breakout.
@@ -254,3 +257,4 @@ Backtesting is not a panacea, but a critically important tool for any serious tr
 **Tools and Automation:** To increase efficiency, use technical indicators like the [Stochastic Oscillator](/en/library/stochastic-oscillator/) and [Bollinger Bands](/en/library/bollinger-bands/). And a step-by-step guide on [setting up a trading bot on Bybit](/en/library/bybit-trading-bot-setup/) will help automate processes.
 
 **Experience and Risks:** Learn [how to start trading with a small deposit](/en/library/how-to-start-trading-small-deposit/) and be sure to study the basics of [risk management](/en/library/risk-management-crypto-trading-bots/) and check out the [live deposit diary](/en/library/surviving-drawdown-diary/).
+

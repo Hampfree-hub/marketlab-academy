@@ -60,29 +60,37 @@ En el trading de margen y los futuros, el uso de apalancamiento crea un riesgo d
 ## Ventajas del trading spot
 
 **Simplicidad y transparencia**
+
 Comprar un activo al precio actual es comprensible incluso para traders principiantes. No hay mecánicas complejas de requisitos de margen o cálculos de funding.
 
 **Sin límites de tiempo**
+
 La criptomoneda comprada se puede mantener todo el tiempo que se desee. No hay fechas de vencimiento de contratos ni necesidad de renovar posiciones (rollover).
 
 **Control total sobre los activos**
+
 La capacidad de retirar criptomonedas a tu propia billetera, usarlas en protocolos DeFi, recibir recompensas de staking o participar en airdrops.
 
 **Comisiones mínimas**
+
 Las comisiones de spot suelen ser más bajas que en los derivados. No hay costos adicionales por pago de funding o intereses sobre fondos prestados.
 
 ## Desventajas del trading spot
 
 **Falta de apalancamiento**
+
 Es imposible aumentar el beneficio potencial utilizando fondos prestados. El ingreso está limitado por el tamaño del capital propio.
 
 **Imposibilidad de operar en corto (short)**
+
 En el spot clásico, solo se puede comprar (ir en largo). No se puede ganar con la caída del mercado sin margen.
 
 **Se requiere mayor capital**
+
 Se necesitan inversiones significativas para obtener beneficios relevantes, ya que no hay un multiplicador en forma de apalancamiento.
 
 **Crecimiento lento en un mercado lateral**
+
 En ausencia de tendencias, el beneficio en spot se forma más lentamente que en los derivados con apalancamiento.
 
 ## Trading spot en el trading algorítmico
@@ -90,26 +98,33 @@ En ausencia de tendencias, el beneficio en spot se forma más lentamente que en 
 Muchos bots de trading funcionan específicamente en el mercado spot, utilizando diversas estrategias:
 
 **DCA (Dollar Cost Averaging)**
+
 Promediación de una posición durante una caída mediante compras adicionales. Reduce el precio promedio de entrada sin riesgo de liquidación.
 
 **Grid Trading (Trading de rejilla)**
+
 Colocación de órdenes límite de compra y venta a intervalos específicos. Ganancia por fluctuaciones de precio dentro de un rango.
 
 **Estrategias de indicadores**
+
 Entrada y salida basada en indicadores técnicos (RSI, MACD, Bollinger Bands). Adecuado para la automatización en spot sin el riesgo de cierre forzoso.
 
 ## ¿Para quién es adecuado el trading spot?
 
 **Para traders principiantes**
+
 El spot es la mejor manera de empezar a conocer el mercado de criptomonedas. Mecánica simple, falta de liquidación y oportunidad de aprender sin riesgos catastróficos.
 
 **Para inversores a largo plazo**
+
 Comprar criptomonedas en spot para mantener (HODL) es una estrategia clásica de acumulación de activos.
 
 **Para traders conservadores**
+
 Aquellos que prefieren evitar los riesgos de liquidación y quieren un control total sobre sus activos.
 
 **Para usuarios de bots de trading**
+
 El trading automatizado en spot es más seguro: el bot no podrá perder todos los fondos debido a la liquidación durante un movimiento brusco del mercado.
 
 ## ¿Qué exchanges soportan el trading spot?
@@ -149,18 +164,24 @@ Sitios de phishing, monedas falsas, proyectos estafa. Antes de comprar una cript
 ## FAQ
 
 **¿Spot o futuros — qué elegir para empezar?**
+
 Definitivamente spot. Sin riesgo de liquidación, mecánica simple, puedes aprender sin riesgos catastróficos.
 
 **¿Se puede ganar en spot sin apalancamiento?**
+
 Sí, pero necesitas mayores cantidades o más tiempo. El apalancamiento acelera ganancias y pérdidas.
 
 **¿Qué órdenes usar en spot?**
+
 Límite para entrada a precio específico, stop-límite para salida. Mercado — solo cuando importa la velocidad.
 
 **¿Se pagan comisiones por mantener posición en spot?**
+
 No, a diferencia de margen y futuros, en spot no hay funding fees.
 
 **¿Es seguro el spot en exchange?**
+
 Más seguro que derivados, pero hay riesgo de exchange (hackeo, bancarrota). Cantidades grandes — cold wallet.
 
 **Relacionados:** [Señales de trading](/es/library/what-are-trading-signals/), [Configuración bot Bybit](/es/library/bybit-trading-bot-setup/), [Gestión del riesgo](/es/library/risk-management-crypto-trading-bots/).
+

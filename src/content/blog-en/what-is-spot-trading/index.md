@@ -58,9 +58,11 @@ A combination of a stop price (trigger) and a limit price. When the stop price i
 ## Risks and Disadvantages
 
 **Requires More Capital**
+
 Significant investments are needed to achieve substantial profits, as there's no multiplier like leverage.
 
 **Slow Growth in Sideways Markets**
+
 Prolonged periods without trends result in slower profits in spot trading compared to leveraged derivatives.
 
 ## Spot Trading in Algo Trading
@@ -68,26 +70,33 @@ Prolonged periods without trends result in slower profits in spot trading compar
 Many trading bots operate specifically in the spot market, utilizing various strategies:
 
 **DCA (Dollar Cost Averaging)**
+
 Averaging down a position during a drawdown by making additional purchases. This lowers the average entry price without liquidation risk.
 
 **Grid Trading**
+
 Placing limit orders to buy and sell at specific intervals. Profits are generated from price fluctuations within a range.
 
 **Indicator Strategies**
+
 Entry and exit based on technical indicators (RSI, MACD, Bollinger Bands). Suitable for spot automation without the risk of forced closure.
 
 ## Who Is Spot Trading For
 
 **For Beginner Traders**
+
 Spot is the best way to start your journey in the cryptocurrency market. Simple mechanics, no liquidation, and the opportunity to learn without catastrophic risks.
 
 **For Long-Term Investors**
+
 Buying cryptocurrency on the spot market with the intent to hold (HODL) is a classic strategy for accumulating assets.
 
 **For Conservative Traders**
+
 Those who prefer to avoid liquidation risks and want full control over their assets.
 
 **For Trading Bot Users**
+
 Automated spot trading is safer: the bot won't lose all funds due to liquidation during sudden market movements.
 
 ## Exchanges Supporting Spot Trading
@@ -125,16 +134,22 @@ Phishing sites, fake coins, scam projects. Before buying a lesser-known cryptocu
 ## FAQ
 
 **Spot or futures — what should a beginner choose?**
+
 Definitely spot. No liquidation risk, simple mechanics, you can learn without catastrophic losses.
 
 **Can you make money on spot without leverage?**
+
 Yes, but you need larger amounts or a longer horizon. Leverage accelerates both profits and losses.
 
 **What orders to use on spot?**
+
 Limit orders for entry at a specific price, stop-limit for exit. Market orders — only when speed matters.
 
 **Do you pay fees for holding spot positions?**
+
 No, unlike margin and futures, spot has no funding fees.
 
 **Is spot on exchange safe?**
+
 Safer than derivatives, but there's exchange risk (hack, bankruptcy). Large amounts — cold wallet.
+

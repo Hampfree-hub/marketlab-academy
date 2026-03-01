@@ -66,18 +66,24 @@ M√°s sobre el proyecto, principios y formas de apoyo en la p√°gina **[Sobre el p
 ## FAQ
 
 **?Por que exactamente 4 indicadores y 4 timeframes?**
+
 Cada indicador cumple su funcion: BB ó limites, ATR% ó volatilidad, ROC ó impulso, Williams %R ó reversion. El filtrado multitimeframe reduce el ruido.
 
 **?Que pares funcionan mejor?**
+
 Volatilidad media: ZEC, WOO, RARE. Evita demasiado quietos (USDT-stablecoins) y extremadamente volatiles.
 
 **?Necesito ajustar ajustes para diferentes pares?**
+
 Los ajustes base son universales, pero puedes afinar ATR% y ROC para la volatilidad especifica del par.
 
 **?Con que frecuencia revisar resultados?**
+
 Diariamente en las primeras semanas, luego semanalmente. Observa drawdown y cantidad de operaciones.
 
 **?Puedo usar en otros exchanges?**
+
 Si, la logica de la estrategia es universal. Pero necesita adaptacion para comisiones y ajustes de API.
 
 Descubre mas sobre el proyecto, principios y formas de apoyarlo en la pagina **[Acerca de](https://marketlab-academy.org/es/about/)**.
+

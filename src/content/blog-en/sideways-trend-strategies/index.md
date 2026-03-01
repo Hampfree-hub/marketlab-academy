@@ -106,6 +106,7 @@ Range trading is simple: look for buys closer to support and sells closer to res
 **Rules:**
 
 1. use **[RSI](/en/library/technical-analysis-rsi)** or **[MFI](/en/library/money-flow-index)**
+
 2. buy when RSI < 30 (oversold) and price is near support
 3. sell when RSI > 70 (overbought) and price is near resistance
 4. place a stop beyond the range boundary
@@ -150,6 +151,7 @@ For a deeper framework, see **Risk Management in Crypto Trading with Bots** .
 ### Signs the range is breaking
 
 1. **Breakout with volume**
+
 2. **Acceptance beyond the boundary** (closes hold outside)
 3. **New highs/lows** start printing
 4. **Structure change** — movement becomes directional
@@ -225,3 +227,4 @@ Sideways markets are a normal state of the market that can be effectively used f
 **Tools and Automation:** To increase efficiency, use technical indicators like the [Stochastic Oscillator](/en/library/stochastic-oscillator/) and [Bollinger Bands](/en/library/bollinger-bands/). A step-by-step guide on [setting up a trading bot on Bybit](/en/library/bybit-trading-bot-setup/) will help automate processes.
 
 **Experience and Risks:** Learn [how to start trading with a small deposit](/en/library/how-to-start-trading-small-deposit/) and be sure to study the basics of [risk management](/en/library/risk-management-crypto-trading-bots/) and check out the [live deposit diary](/en/library/surviving-drawdown-diary/).
+

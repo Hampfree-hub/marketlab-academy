@@ -59,6 +59,7 @@ Parameters are tuned from test results. The goal is not only maximum profit but 
 Optimization is the process of finding the best values for strategy parameters. For example, when working with a strategy based on an indicator, you can test various indicator periods and overbought/oversold levels.
 
 **Example of optimization:**
+
 - Testing RSI period: 10, 12, 14, 16, 18, 20
 - Testing overbought levels: 70, 75, 80
 - Testing oversold levels: 20, 25, 30
@@ -88,33 +89,39 @@ Past results do not guarantee future performance. Backtests do not account for:
 ### Factors Not Accounted for in Backtests
 
 **1. Slippage**
+
 In real trading, execution price may differ from expected. This is especially critical for:
 - Fast markets (high volatility)
 - Large volumes (market may not handle)
 - Low-liquidity assets
 
 **2. Liquidity Changes**
+
 Historical data does not reflect market liquidity changes. In crisis situations, liquidity can drop sharply, making it impossible to execute trades at expected prices.
 
 **3. Psychological Factor**
+
 Backtest does not account for trader emotions:
 - Fear of losses may lead to premature closing of profitable positions
 - Greed may cause holding losing positions too long
 - Stress affects decision-making
 
 **4. Fees and Spreads**
+
 Every trade costs money in real trading:
 - Exchange/broker fees
 - Spreads (difference between buy and sell price)
 - For crypto — network fees
 
 **5. Market Structure Changes**
+
 Markets evolve:
 - New participants change dynamics
 - Regulatory changes affect behavior
 - Technological changes (e.g., algorithmic trading) change market character
 
 **6. Data May Be Inaccurate**
+
 Historical data may contain:
 - Data errors
 - Data gaps

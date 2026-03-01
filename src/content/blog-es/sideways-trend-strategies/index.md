@@ -70,6 +70,7 @@ Un **mercado lateral (range)** es una fase de consolidación donde el precio osc
 **Reglas:**
 
 1. usar **[RSI](/es/library/technical-analysis-rsi)** o **[MFI](/es/library/money-flow-index)**
+
 2. comprar cuando RSI < 30 y el precio está cerca del soporte
 3. vender cuando RSI > 70 y el precio está cerca de la resistencia
 4. stop por fuera del rango

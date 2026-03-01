@@ -69,17 +69,23 @@ In sideways markets, bounces off the band boundaries are clearer. In a trend, th
 ## FAQ
 
 **What settings for Bollinger Bands should I use?**
+
 Default — period 20, multiplier 2. For scalping on lower timeframes, reduce period to 10–15.
 
 **Why doesn't price bounce off the band?**
+
 In a strong trend, price can "ride the band" for a long time. Touch alone is not a signal — confirmation from oscillators is needed.
 
 **What is band squeeze?**
+
 When bands narrow sharply — volatility is low. Often a sharp move follows. Direction is determined by trend.
 
 **Do Bollinger Bands give entry signals?**
+
 Not directly. It's a volatility indicator, not direction. Use with RSI or Williams %R for confirmation.
 
 **Can I use them on crypto?**
+
 Yes, but with caution: crypto is more volatile, default settings may produce many false signals. Test on history.
+
 

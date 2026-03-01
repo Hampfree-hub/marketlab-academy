@@ -32,16 +32,22 @@ System = entry/exit rules + position size and risk + diversification by assets, 
 ## FAQ
 
 **How many strategies to run at once?**
+
 Start with 1–2. When they work stably — add more. 3–5 strategies is usually enough to start.
 
 **How to determine risk per trade?**
+
 1–2% of deposit. With heavy diversification, you can go slightly higher, but overall portfolio risk must be controlled.
 
 **Do I need to test the system on history?**
+
 Yes, required. [Backtests](/en/library/what-are-backtests/) show drawdowns and past system behavior.
 
 **What risk management for DCA bots?**
+
 Risk is calculated on the full position (including averages), not just first entry. Usually 1–2% of deposit.
 
 **Can I run DCA and grid on the same asset?**
+
 Possible, but hard to manage. Better to separate: either DCA or grid on one asset.
+

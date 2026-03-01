@@ -32,16 +32,22 @@ Sistema = reglas de entrada/salida + tamaño de posición y riesgo + diversifica
 ## FAQ
 
 **¿Cuántas estrategias ejecutar a la vez?**
+
 Empieza con 1–2. Cuando funcionen establemente — añade. 3–5 estrategias suelen ser suficientes para empezar.
 
 **¿Cómo determinar el riesgo por operación?**
+
 1–2% del depósito. Con diversificación fuerte se puede subir un poco, pero el riesgo global del portafolio debe estar controlado.
 
 **¿Necesito probar el sistema en historia?**
+
 Sí, obligatorio. Los [backtests](/es/library/what-are-backtests/) muestran drawdowns y comportamiento pasado del sistema.
 
 **¿Qué gestión de riesgo para bots DCA?**
+
 El riesgo se calcula en la posición completa (incluyendo promedios), no solo la primera entrada. Usualmente 1–2% del depósito.
 
 **¿Puedo ejecutar DCA y grid en el mismo activo?**
+
 Es posible, pero difícil de manejar. Mejor separar: o DCA o grid en un activo.
+

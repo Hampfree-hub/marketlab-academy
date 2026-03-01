@@ -59,16 +59,22 @@ Cryptocurrencies trade around the clock; volume and volatility can change a lot 
 ## FAQ
 
 **What timeframe should a beginner choose?**
+
 Start with M15 or H1 — enough signals but less noise than M1–M5.
 
 **Can I use multiple timeframes?**
+
 Yes, that's multi-timeframe analysis. Trend on higher (H4/D1), entry on lower (H1/M15).
 
 **Why do lower timeframes have more false signals?**
+
 Smaller timeframe = more "noise" — random moves. On D1 signals are rarer but more reliable.
 
 **How does indicator period depend on timeframe?**
+
 Period is measured in candles. RSI 14 on M5 = 14×5=70 minutes, on D1 = 14 days. Different sensitivity.
 
 **What timeframe is best for scalping?**
+
 M1–M5. But be ready for high trade frequency, commissions, and noise. Many suggest starting with M15.
+

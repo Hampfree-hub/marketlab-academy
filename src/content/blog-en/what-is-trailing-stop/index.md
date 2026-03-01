@@ -46,16 +46,22 @@ Using a trailing stop well helps lock in profits across different volatility reg
 ## FAQ
 
 **What trailing stop step should I choose?**
+
 Depends on asset volatility and trading style. For scalping — 0.5–1%, for swing — 3–5%.
 
 **Trailing stop or regular stop-loss — which is better?**
+
 Trailing stop is better for trending strategies; regular stop is better for range trading and controlled risk.
 
 **Can I use it on spot markets?**
+
 Yes, most exchanges support trailing stops on spot. Bybit, Binance, OKX — all have it.
 
 **Why might a trailing stop not work?**
+
 On gaps (sharp price jumps) or low liquidity. Slippage can be significant.
 
 **Does a trailing stop protect against losses?**
+
 It locks in profit but doesn't limit losses. You still need a regular stop-loss.
+

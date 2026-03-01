@@ -56,16 +56,22 @@ Entender y usar bien la cuña alcista puede mejorar los resultados. Puede combin
 ## FAQ
 
 **¿La cuña alcista es alcista o bajista?**
+
 Mayormente bajista. Señala agotamiento del uptrend y posible reversión a la baja.
 
 **¿Cómo identificar la ruptura de la cuña alcista?**
+
 El precio rompe la línea de soporte inferior. La confirmación viene con volumen.
 
 **¿Se puede operar la cuña alcista en largo?**
+
 Técnicamente sí, pero arriesgado. La mayoría opera la ruptura en corto.
 
 **¿En qué se diferencia del canal de precios?**
+
 En el canal las líneas son paralelas; en la cuña convergen. La cuña indica estrechamiento de volatilidad.
 
 **¿Qué timeframe es mejor para este patrón?**
+
 H1 y superior. Los timeframes bajos dan muchas rupturas falsas.
+

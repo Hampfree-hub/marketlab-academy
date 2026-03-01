@@ -77,12 +77,15 @@ In this system, Stochastic acts as the "trigger": the signal to look for an entr
 ## FAQ
 
 **What Stochastic settings are best for crypto?**
+
 For short-term trading on M15: %K=14, Slowing=3, %D=3. For smoother signals: %K=21, Slowing=5, %D=5.
 
 **Can Stochastic be used in a trend?**
+
 The oscillator tends to give false signals in strong trends. It is recommended to combine with trend filters — for example, [Bollinger Bands](/en/library/bollinger-bands/).
 
 **How is Stochastic different from CMO?**
+
 [CMO](/en/library/chande-momentum-oscillator/) measures pure momentum directly without double smoothing, while Stochastic compares the closing price to the High-Low range.
 
 ## Summary
@@ -105,3 +108,4 @@ Start trading on proven exchanges:
 **Experience and risks:** be sure to read about [risk management when working with bots](/en/library/risk-management-crypto-trading-bots/) and [diversification](/en/library/diversification-trading-system-part-1/) to protect your capital.
 
 ---
+

@@ -83,12 +83,15 @@ In the [spot strategy ELDER 2.0](/en/library/spot-strategy-elder-20/), the CMO i
 ## FAQ
 
 **What CMO period is best for crypto?**
+
 For short-term trading — 9 or 14. For medium-term analysis — 20. The shorter the period, the more sensitive the indicator to noise.
 
 **Why is CMO better than RSI?**
+
 CMO does not use double smoothing, so it reacts faster to momentum changes. This is important in the high volatility conditions of cryptocurrencies.
 
 **Can CMO be used for futures?**
+
 Yes, CMO works on any markets. However, the ELDER 2.0 strategy is optimized specifically for [spot trading](/en/library/what-is-spot-trading/) without leverage.
 
 ## Summary
@@ -128,4 +131,5 @@ By using CMO in conjunction with other technical analysis tools, such as moving 
 **Tools and Automation:** To increase efficiency, use technical indicators like the [Stochastic Oscillator](/en/library/stochastic-oscillator/) and [Bollinger Bands](/en/library/bollinger-bands/). A step-by-step guide on [setting up a trading bot on Bybit](/en/library/bybit-trading-bot-setup/) will help automate processes.
 
 **Experience and Risks:** Learn [how to start trading with a small deposit](/en/library/how-to-start-trading-small-deposit/) and be sure to study the basics of [risk management](/en/library/risk-management-crypto-trading-bots/) and check out the [live deposit diary](/en/library/surviving-drawdown-diary/).
+
 

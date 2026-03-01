@@ -131,12 +131,15 @@ Los falsos rompimientos son una parte inevitable del trading en los mercados fin
 ## Preguntas frecuentes (FAQ)
 
 **1. ¿Qué es un falso rompimiento?**
+
 Un falso rompimiento es un movimiento del precio a corto plazo más allá de un nivel de soporte o resistencia, que luego vuelve al rango de trading original.
 
 **2. ¿Por qué ocurren los falsos rompimientos?**
+
 Los falsos rompimientos a menudo ocurren debido a manipulaciones del mercado, la activación de un gran número de stop-losses, o cuando los grandes jugadores intentan atraer a los traders en la dirección equivocada.
 
 **3. ¿Cómo identificar un falso rompimiento?**
+
 Presta atención a:
 *   **Volumen de trading:** El bajo volumen durante un rompimiento puede indicar una debilidad del movimiento y un posible falso rompimiento.
 *   **Cierre de la vela:** Si la vela cierra dentro del rango después de un rompimiento, es una fuerte señal de falso rompimiento.

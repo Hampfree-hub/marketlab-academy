@@ -32,6 +32,7 @@ El Canal de Keltner es versátil y funciona en dos modos. La elección depende d
 En un mercado lateral (rango), los límites del canal actúan como niveles de soporte y resistencia. Esta es la **estrategia principal** para el Canal de Keltner — similar a las Bandas de Bollinger.
 
 **Cómo funciona:**
+
 - El precio se acerca a la banda superior → esperamos un rebote hacia abajo hacia la EMA
 - El precio se acerca a la banda inferior → esperamos un rebote hacia arriba hacia la EMA
 - La línea central (EMA) sirve como objetivo para Take Profit
@@ -118,11 +119,13 @@ El Canal de Keltner es más efectivo en combinación con osciladores para confir
 **Retraso:** Como todos los indicadores basados en medias móviles, el Canal de Keltner se retrasa. Esto es especialmente notable en movimientos rápidos.
 
 **No funciona bien en:**
+
 - Movimientos abruptos por noticias (gaps)
 - Períodos de volatilidad extrema
 - Activos de baja liquidez
 
 **Recomendaciones de gestión de riesgos:**
+
 - No arriesgues más del 1-2% por operación
 - Siempre establece stop-loss
 - Prueba en demo antes de operar en real
@@ -153,3 +156,4 @@ Sí, pero con precaución. En marcos temporales bajos (M1-M5) hay mucho ruido. S
 **¿Por qué se estrecha el canal y qué significa?**
 
 El estrechamiento del canal (también llamado "squeeze") indica baja volatilidad y acumulación de posiciones. Después de un período de calma, generalmente sigue un movimiento fuerte — la ruptura puede ser en cualquier dirección.
+

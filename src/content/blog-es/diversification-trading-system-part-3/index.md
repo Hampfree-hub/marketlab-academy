@@ -40,16 +40,22 @@ Diversificaci√≥n ‚Äî parte de la configuraci√≥n del sistema: por activos, estrat
 ## FAQ
 
 **?Con que frecuencia revisar el sistema?**
+
 Para estrategias diarias ó una vez al dia/semana. Para scalping ó mas a menudo, cada dia.
 
 **?Cuando cambiar ajustes del sistema?**
+
 Tras un periodo (semana, mes), no tras una operacion. Si el sistema va estable en rojo ó la revision esta justificada.
 
 **?Que es el sobreajuste del sistema?**
+
 Cuando ajustas parametros a datos pasados ó bonito en historia, otra vez drawdown en vivo.
 
 **?Por que no ignorar los stop loss?**
+
 "Esperar el rebote" difumina las reglas del sistema y lleva a perder control del riesgo.
 
 **?Cuantos activos en el portafolio son suficientes?**
+
 Minimo 3ñ5 activos, distribuidos por capital. Mas ó mejor diversificacion.
+

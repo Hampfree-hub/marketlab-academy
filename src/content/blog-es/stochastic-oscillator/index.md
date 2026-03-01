@@ -77,12 +77,15 @@ En este sistema, el Stochastic actúa como «disparador»: la señal para buscar
 ## FAQ
 
 **¿Qué configuración de Stochastic es mejor para cripto?**
+
 Para trading a corto plazo en M15: %K=14, Slowing=3, %D=3. Para señales más suaves: %K=21, Slowing=5, %D=5.
 
 **¿Se puede usar el Stochastic en tendencia?**
+
 El oscilador tiende a dar señales falsas en tendencias fuertes. Se recomienda combinarlo con filtros de tendencia, como las [Bandas de Bollinger](/es/library/bollinger-bands/).
 
 **¿En qué se diferencia el Stochastic del CMO?**
+
 El [CMO](/es/library/chande-momentum-oscillator/) mide el impulso puro directamente sin doble suavizado, mientras que el Stochastic compara el precio de cierre con el rango High-Low.
 
 ## Resumen
@@ -106,3 +109,4 @@ Comienza a operar en exchanges probados:
 
 ---
 Si te interesa este tema y quieres seguir el desarrollo de nuestro proyecto, visita la página [Sobre el proyecto](/es/about/) — allí hablamos de nuestra misión y de cómo puedes apoyar la startup.
+

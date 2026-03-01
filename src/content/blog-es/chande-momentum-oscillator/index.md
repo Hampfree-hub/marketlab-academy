@@ -83,12 +83,15 @@ En la [estrategia spot ELDER 2.0](/es/library/spot-strategy-elder-20/), el indic
 ## FAQ
 
 **¿Qué período de CMO es mejor para cripto?**
+
 Para trading a corto plazo — 9 o 14. Para análisis a medio plazo — 20. Cuanto más corto sea el período, más sensible será el indicador al ruido.
 
 **¿Por qué el CMO es mejor que el RSI?**
+
 El CMO no usa doble suavizado, por lo que reacciona más rápido a los cambios de impulso. Esto es importante en las condiciones de alta volatilidad de las criptomonedas.
 
 **¿Se puede usar el CMO para futuros?**
+
 Sí, el CMO funciona en cualquier mercado. Sin embargo, la estrategia ELDER 2.0 está optimizada específicamente para [trading spot](/es/library/what-is-spot-trading/) sin apalancamiento.
 
 ## Resumen
@@ -128,4 +131,5 @@ Al utilizar el CMO en conjunto con otras herramientas de análisis técnico, com
 **Herramientas y automatización:** Para aumentar la eficiencia, utilice indicadores técnicos como el [Oscilador Estocástico](/es/library/stochastic-oscillator/) y las [Bandas de Bollinger](/es/library/bollinger-bands/). Una guía paso a paso sobre [cómo configurar un bot de trading en Bybit](/es/library/bybit-trading-bot-setup/) le ayudará a automatizar los procesos.
 
 **Experiencia y riesgos:** Aprenda [cómo empezar a operar con un depósito pequeño](/es/library/how-to-start-trading-small-deposit/) y asegúrese de estudiar los fundamentos de la [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/) y consulte nuestro [diario de depósito real](/es/library/surviving-drawdown-diary/).
+
 

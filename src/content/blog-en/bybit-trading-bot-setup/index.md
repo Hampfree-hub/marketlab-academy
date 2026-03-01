@@ -31,6 +31,7 @@ Deposit (commonly USDT/USDC). Then transfer funds from the funding wallet to the
 In your Bybit profile:
 
 1. open **API**
+
 2. create a new key (e.g., “Trading Bot”)
 3. set permissions:
    - ✅ trading permissions (Spot/Margin, Futures if needed)
@@ -43,7 +44,9 @@ If possible, restrict by IP (only allow your server IPs).
 In your bot platform:
 
 - select exchange **Bybit**
+
 - paste **API Key** and **API Secret**
+
 - save and validate the connection
 
 ## Step 5: Configure strategy parameters
@@ -92,18 +95,23 @@ To protect your funds, it is recommended to follow these rules:
 ## FAQ
 
 **1. Is it safe to use API keys to connect external platforms?**
+
 Yes, if permissions are configured correctly: disable withdrawals and use 2FA.
 
 **2. Can I use one API key for multiple platforms or services?**
+
 Technically, yes, but it is recommended to use separate keys for each platform — this makes it easier to control access and revoke only one key in case of a leak.
 
 **3. What if I forgot the API secret key?**
+
 You need to create a new API key. The old key can be revoked in the settings.
 
 **4. What is the minimum amount required for trading via an external platform on Bybit?**
+
 The minimum amount depends on the strategy and trading pair. Usually, $50–100 is enough to start.
 
 **5. Is it possible to trade on Bybit without verification?**
+
 Yes, but with limitations. For full access to exchange features, it is recommended to complete verification.
 
 ## Conclusion
@@ -119,4 +127,5 @@ Register on Bybit and start automated trading:
 **Basics and strategies:** learn popular strategies – [DCA](/en/library/dca-strategy-crypto/) and the [Veles](https://veles.finance/invite/washmallay) platform for advanced bots.
 **Tools and automation:** learn about [backtests](/en/library/what-are-backtests/) to test a strategy before launching a bot.
 **Experience and risks:** be sure to check out [risk management](/en/library/risk-management-crypto-trading-bots/) and [diversification](/en/library/diversification-trading-system-part-1/) for safe automated trading.
+
 

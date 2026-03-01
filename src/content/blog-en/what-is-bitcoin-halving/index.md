@@ -78,16 +78,22 @@ It is important to remember that halving is not the only driver of price. Macro 
 ## FAQ
 
 **What is halving in simple terms?**
+
 It's halving the miner reward. Every ~4 years the block reward drops by half.
 
 **When is the next BTC halving?**
+
 Around 2028 (every 210,000 blocks, about 4 years).
 
 **Does halving guarantee price rise?**
+
 No, history shows growth, but other factors matter: regulation, macro, market sentiment.
 
 **How does halving affect miners?**
+
 Income drops by half. Less efficient miners leave, hashrate temporarily drops.
 
 **How many halvings total?**
+
 About 33 (when reward drops below 1 satoshi, mining stops at 21M BTC).
+

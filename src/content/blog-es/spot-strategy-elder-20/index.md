@@ -86,6 +86,7 @@ Intervalos recomendados:
 **Recomendación:** Empieza con 4H, prueba durante 1-2 meses, luego cambia a marcos menores.
 
 **Activos:**
+
 - **Requeridos:** BTC, ETH (liquidez, spread bajo)
 - **Recomendados:** TOP-20 por capitalización (SOL, BNB, XRP, ADA, etc.)
 - **Evitar:** Monedas con volumen < $1M/día
@@ -129,3 +130,4 @@ No. Usa solo TOP-20 por capitalización (BTC, ETH, SOL, BNB, etc.). Las monedas 
 **¿Necesito cambiar la configuración de indicadores para diferentes monedas?**
 
 La configuración base (14,3,3 para Stochastic; 20,2.0 para Bollinger; 14 para CMO) funciona universalmente. Traders experimentados pueden ajustar períodos según la volatilidad del activo.
+

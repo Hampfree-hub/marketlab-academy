@@ -46,16 +46,22 @@ Usar bien el trailing stop ayuda a asegurar beneficios en distintas condiciones 
 ## FAQ
 
 **¿Qué paso de trailing stop elegir?**
+
 Depende de la volatilidad del activo y el estilo de trading. Para scalping — 0,5–1%, para swing — 3–5%.
 
 **¿Trailing stop o stop-loss normal — cuál es mejor?**
+
 El trailing stop es mejor para estrategias tendenciales; el normal es mejor para trading en rango y riesgo controlado.
 
 **¿Se puede usar en mercado spot?**
+
 Sí, la mayoría de exchanges soportan trailing stops en spot. Bybit, Binance, OKX — todos lo tienen.
 
 **¿Por qué el trailing stop puede no funcionar?**
+
 En gaps (saltos bruscos de precio) o baja liquidez. El deslizamiento puede ser notable.
 
 **¿El trailing stop protege de pérdidas?**
+
 Bloquea beneficios pero no limita pérdidas. Necesitas un stop-loss normal.
+

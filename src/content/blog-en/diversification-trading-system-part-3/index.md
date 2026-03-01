@@ -40,16 +40,22 @@ Diversification is part of trading system setup: by assets, strategies, and venu
 ## FAQ
 
 **How often to check the system?**
+
 For daily strategies — once a day/week. For scalping — more often, every day.
 
 **When to change system settings?**
+
 After a period (week, month), not after one trade. If system is steadily in red — revision is justified.
 
 **What is system overfitting?**
+
 When you tune parameters to past data — looks good on history, drawdown again live.
 
 **Why shouldn't I ignore stop losses?**
+
 "Wait for a bounce" blurs system rules and leads to losing risk control.
 
 **How many assets in portfolio is enough?**
+
 Minimum 3–5 assets, distributed by capital. More — better diversification.
+

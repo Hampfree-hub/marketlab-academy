@@ -56,16 +56,22 @@ Understanding and using the rising wedge correctly can improve trading results. 
 ## FAQ
 
 **Is a rising wedge bullish or bearish?**
+
 Mostly bearish. Signals exhaustion of an uptrend and possible reversal down.
 
 **How to identify a rising wedge breakout?**
+
 Price breaks below the lower support line. Confirmation comes with volume.
 
 **Can you trade a rising wedge long?**
+
 Technically yes, but risky. Most trade breakout to the short side.
 
 **How does it differ from a price channel?**
+
 In a channel, lines are parallel; in a wedge, they converge. Wedge indicates narrowing volatility.
 
 **What timeframe is best for this pattern?**
+
 H1 and above. Lower timeframes have many false breakouts.
+

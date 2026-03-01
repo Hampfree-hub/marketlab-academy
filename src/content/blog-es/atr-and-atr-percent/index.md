@@ -69,16 +69,21 @@ El ATR no indica dirección, solo la magnitud de las oscilaciones. Se combina co
 ## FAQ
 
 **¿Qué periodo ATR debo elegir?**
+
 El estándar es 14. Para scalping en timeframes bajos — 5–7. Para swing trading en D1 — 20–28.
 
 **¿Por qué ATR% es mejor que ATR normal?**
+
 Permite comparar volatilidad entre diferentes activos. ATR $100 en BTC y $5 en ALT — no está claro cuál es más volátil. ATR% lo muestra inmediatamente.
 
 **¿Cómo usar ATR para entrada?**
+
 ATR no da señales de entrada. Se usa para colocar el stop-loss: mayor ATR = stop más amplio.
 
 **¿Puedo usar ATR sin otros indicadores?**
+
 Se puede, pero no es ideal. ATR solo muestra volatilidad, no dirección. Combínalo con indicadores de tendencia.
 
 **¿Cómo ATR ayuda en la gestión de posición?**
+
 Cuando la volatilidad sube, ATR sube → el stop se aleja. Cuando baja — el stop se acerca. Esto es gestión de riesgo adaptativa.

@@ -81,6 +81,7 @@ This setup reduces the chance that one asset or one mistake wipes the entire acc
 
 - enable only permissions you need
 - **never enable withdrawals**
+
 - prefer IP restrictions if you know your server IPs
 - rotate keys periodically
 
@@ -142,17 +143,23 @@ All this can lead to irreversible losses and deposit drain. To reduce risks, it'
 ## FAQ
 
 **1. How does risk management work in trading?**
+
 It allows you to limit losses, control risk volume, and stably preserve capital in the long term.
 
 **2. Can you trade with bots without risk management?**
+
 You shouldn't. Even if trades are executed automatically, risk parameters are still set manually. Without them, a bot can quickly "drain" the entire capital.
 
 **3. What deposit to margin ratio is optimal?**
+
 For beginners, a 1:1 ratio is recommended: half for bots, half in reserve. As experience grows, you can increase the share of active funds.
 
 **4. How many bots should you use simultaneously?**
+
 It's recommended to distribute capital between several bots (for example, 5 bots with 10% of deposit each) for risk diversification.
 
 **5. How often should risk management settings be reviewed?**
+
 It's recommended to regularly analyze trading results and adjust parameters. When market conditions change or the deposit grows, it makes sense to adapt the settings.
+
 

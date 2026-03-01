@@ -86,11 +86,13 @@ Before you scale up, validate your strategy logic via **[backtesting](/en/librar
 DCA is a strategy where you regularly buy an asset for a fixed amount regardless of the price. This helps average the entry cost and reduce the impact of volatility.
 
 **Advantages:**
+
 - Simple to implement
 - Reduces emotional impact
 - Suitable for long-term accumulation
 
 **Disadvantages:**
+
 - Slower capital growth
 - Requires discipline
 
@@ -99,11 +101,13 @@ DCA is a strategy where you regularly buy an asset for a fixed amount regardless
 Grid trading involves placing buy and sell orders within a specific price range. As the price moves up and down, orders trigger, generating profit.
 
 **Advantages:**
+
 - Works well in sideways trends
 - Can be automated
 - Regular income
 
 **Disadvantages:**
+
 - Requires parameter tuning
 - Risk during strong trends
 
@@ -156,4 +160,5 @@ Not recommended for beginners. Leverage increases risks and can quickly lead to 
 
 **5. How often should I trade with a small deposit?**  
 Trading frequency depends on your chosen strategy. Don't overtrade — quality over quantity.
+
 

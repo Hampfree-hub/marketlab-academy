@@ -84,6 +84,7 @@ Recommended intervals:
 **Recommendation:** Start with 4H, test for 1-2 months, then move to smaller timeframes.
 
 **Assets:**
+
 - **Required:** BTC, ETH (liquidity, low spread)
 - **Recommended:** TOP-20 by market cap (SOL, BNB, XRP, ADA, etc.)
 - **Avoid:** Coins with volume < $1M/day
@@ -129,3 +130,4 @@ No. Use only TOP-20 by market cap (BTC, ETH, SOL, BNB, etc.). Low-liquidity coin
 Base settings (14,3,3 for Stochastic; 20,2.0 for Bollinger; 14 for CMO) work universally. Experienced traders may adjust periods based on asset volatility.
 
 ---
+
