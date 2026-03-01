@@ -36,3 +36,20 @@ Before putting the system in ‚Äúlive‚Äù mode, check:
 ## Series wrap-up
 
 Diversification is part of trading system setup: by assets, strategies, and venues (Part 1). The system is entry/exit rules, position size and risk (Part 2). In practice it‚Äôs important to monitor results, tune thoughtfully, and not repeat common mistakes (Part 3). See also: [risk management](/en/library/risk-management-crypto-trading-bots/), [DCA](/en/library/dca-strategy-crypto/), [grid](/en/library/grid-trading-crypto/), [exchange uptime](/en/library/exchange-uptime-downtime/).
+
+## FAQ
+
+**How often to check the system?**
+For daily strategies ó once a day/week. For scalping ó more often, every day.
+
+**When to change system settings?**
+After a period (week, month), not after one trade. If system is steadily in red ó revision is justified.
+
+**What is system overfitting?**
+When you tune parameters to past data ó looks good on history, drawdown again live.
+
+**Why shouldn't I ignore stop losses?**
+"Wait for a bounce" blurs system rules and leads to losing risk control.
+
+**How many assets in portfolio is enough?**
+Minimum 3ñ5 assets, distributed by capital. More ó better diversification.

@@ -62,3 +62,22 @@ One botâ€™s settings are part of the overall system. How to avoid concentrating 
 - System is in test mode.
 
 Find out more about the project, principles and ways to support it on the **[About](https://marketlab-academy.org/en/about/)** page.
+
+## FAQ
+
+**Why exactly 4 indicators and 4 timeframes?**
+Each indicator serves its purpose: BB — boundaries, ATR% — volatility, ROC — momentum, Williams %R — reversal. Multi-timeframe filtering reduces noise.
+
+**Which pairs work best?**
+Medium volatility: ZEC, WOO, RARE. Avoid too quiet (USDT-stablecoins) and extremely volatile.
+
+**Do I need to adjust settings for different pairs?**
+Base settings are universal, but you can tune ATR% and ROC for specific pair volatility.
+
+**How often to check results?**
+Daily in first weeks, then weekly. Watch drawdown and trade count.
+
+**Can I use on other exchanges?**
+Yes, strategy logic is universal. But need adaptation for commissions and API settings.
+
+Find out more about the project, principles and ways to support it on the **[About](https://marketlab-academy.org/en/about/)** page.

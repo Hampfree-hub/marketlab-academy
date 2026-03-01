@@ -36,3 +36,20 @@ Antes de poner el sistema en modo “vivo”, comprobar:
 ## Cierre de la serie
 
 Diversificación — parte de la configuración del sistema: por activos, estrategias y plataformas (Parte 1). Sistema — reglas de entrada/salida, tamaño de posición y riesgo (Parte 2). En la práctica importa supervisar resultados, ajustar con criterio y no repetir errores típicos (Parte 3). Ver también: [gestión del riesgo](/es/library/risk-management-crypto-trading-bots/), [DCA](/es/library/dca-strategy-crypto/), [grid](/es/library/grid-trading-crypto/), [uptime del exchange](/es/library/exchange-uptime-downtime/).
+
+## FAQ
+
+**?Con que frecuencia revisar el sistema?**
+Para estrategias diarias � una vez al dia/semana. Para scalping � mas a menudo, cada dia.
+
+**?Cuando cambiar ajustes del sistema?**
+Tras un periodo (semana, mes), no tras una operacion. Si el sistema va estable en rojo � la revision esta justificada.
+
+**?Que es el sobreajuste del sistema?**
+Cuando ajustas parametros a datos pasados � bonito en historia, otra vez drawdown en vivo.
+
+**?Por que no ignorar los stop loss?**
+"Esperar el rebote" difumina las reglas del sistema y lleva a perder control del riesgo.
+
+**?Cuantos activos en el portafolio son suficientes?**
+Minimo 3�5 activos, distribuidos por capital. Mas � mejor diversificacion.
