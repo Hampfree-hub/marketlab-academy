@@ -122,25 +122,19 @@ Phishing sites, fake coins, scam projects. Before buying a lesser-known cryptocu
 5.  **Consider Fees** — with frequent trading, fees can eat into profits.
 6.  **Use 2FA and Cold Storage** to protect funds.
 
-## Conclusion
+## FAQ
 
-Spot cryptocurrency trading is the fundamental and safest way to work with digital assets. The absence of leverage and liquidation risk makes spot an ideal choice for beginner traders, long-term investors, and trading bot users.
+**Spot or futures — what should a beginner choose?**
+Definitely spot. No liquidation risk, simple mechanics, you can learn without catastrophic losses.
 
-Understanding spot market mechanics is a necessary foundation for further exploring more complex instruments like margin trading and futures. By starting with spot, you can safely grasp the principles of technical analysis, capital management, and emotional discipline.
+**Can you make money on spot without leverage?**
+Yes, but you need larger amounts or a longer horizon. Leverage accelerates both profits and losses.
 
-You can start trading on verified exchanges:
-- **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** — an excellent choice for working with [trading bots](/en/library/bybit-trading-bot-setup/)
-- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — user-friendly interface and bonuses
-- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — social trading and copy trading
+**What orders to use on spot?**
+Limit orders for entry at a specific price, stop-limit for exit. Market orders — only when speed matters.
 
----
+**Do you pay fees for holding spot positions?**
+No, unlike margin and futures, spot has no funding fees.
 
-## Related Materials
-
-**Fundamentals and Strategies:** After mastering the basics, be sure to study our flagship [ELDER 2.0 strategy](/en/library/spot-strategy-elder-20/), specifically designed for the spot market. Also, understand [the difference between spot, margin, and futures](/en/library/spot-trading-vs-futures-margin/).
-
-**Tools and Automation:** To increase efficiency, use technical indicators like the [Stochastic Oscillator](/en/library/stochastic-oscillator/) and [Bollinger Bands](/en/library/bollinger-bands/). And a step-by-step guide on [setting up a trading bot on Bybit](/en/library/bybit-trading-bot-setup/) will help automate processes.
-
-**Experience and Risks:** Learn [how to start trading with a small deposit](/en/library/how-to-start-trading-small-deposit/) and be sure to study the basics of [risk management](/en/library/risk-management-crypto-trading-bots/) and check out our [live deposit diary](/en/library/surviving-drawdown-diary/).
-
----
+**Is spot on exchange safe?**
+Safer than derivatives, but there's exchange risk (hack, bankruptcy). Large amounts — cold wallet.

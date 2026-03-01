@@ -55,3 +55,20 @@ Las criptomonedas se operan 24 horas; el volumen y la volatilidad pueden cambiar
 - Menores (M1–M15) para scalping y entradas rápidas; mayores (H4, D1) para tendencia y swing.
 - El periodo de los indicadores se fija en velas del timeframe elegido; la configuración conviene comprobarla en [backtests](/es/library/what-are-backtests/).
 - Análisis multitimeframe: tendencia en el superior, entrada en el inferior — ayuda a filtrar señales falsas.
+
+## FAQ
+
+**¿Qué timeframe elegir para empezar?**
+Empieza con M15 o H1 — suficientes señales pero menos ruido que M1–M5.
+
+**¿Se pueden usar varios timeframes?**
+Sí, es el análisis multitimeframe. Tendencia en superior (H4/D1), entrada en inferior (H1/M15).
+
+**¿Por qué los timeframes bajos dan más señales falsas?**
+Menor timeframe = más "ruido" — movimientos aleatorios. En D1 las señales son más raras pero más fiables.
+
+**¿Cómo depende el periodo del indicador del timeframe?**
+El periodo se mide en velas. RSI 14 en M5 = 14×5=70 minutos, en D1 = 14 días. Sensibilidad diferente.
+
+**¿Qué timeframe es mejor para scalping?**
+M1–M5. Pero prepárate para alta frecuencia de operaciones, comisiones y ruido. Muchos sugieren empezar con M15.

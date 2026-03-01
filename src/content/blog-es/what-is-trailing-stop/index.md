@@ -42,3 +42,20 @@ Los trailing stops pueden ejecutarse como órdenes a mercado (rápidas, pero con
 Hasta que se activa, el trailing stop no aparece en el libro de órdenes. A diferencia de una orden límite, no es visible, lo que puede reducir la exposición a caza de stops.
 
 Usar bien el trailing stop ayuda a asegurar beneficios en distintas condiciones de volatilidad. Si operas cripto, merece la pena probarlo, también con bots. Para comprobar cómo se comportan estrategias con stops, los [backtests](/es/library/what-are-backtests/) son útiles; para el timing de salidas, el [RSI](/es/library/technical-analysis-rsi/) puede complementar el enfoque. El [oscilador Williams %R](/es/library/williams-percent-range-r/) también puede ayudar a identificar zonas de giro.
+
+## FAQ
+
+**¿Qué paso de trailing stop elegir?**
+Depende de la volatilidad del activo y el estilo de trading. Para scalping — 0,5–1%, para swing — 3–5%.
+
+**¿Trailing stop o stop-loss normal — cuál es mejor?**
+El trailing stop es mejor para estrategias tendenciales; el normal es mejor para trading en rango y riesgo controlado.
+
+**¿Se puede usar en mercado spot?**
+Sí, la mayoría de exchanges soportan trailing stops en spot. Bybit, Binance, OKX — todos lo tienen.
+
+**¿Por qué el trailing stop puede no funcionar?**
+En gaps (saltos bruscos de precio) o baja liquidez. El deslizamiento puede ser notable.
+
+**¿El trailing stop protege de pérdidas?**
+Bloquea beneficios pero no limita pérdidas. Necesitas un stop-loss normal.

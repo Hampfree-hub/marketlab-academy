@@ -146,8 +146,21 @@ Sitios de phishing, monedas falsas, proyectos estafa. Antes de comprar una cript
 5. **Considerar las comisiones**: con operaciones frecuentes, las comisiones pueden reducir el beneficio.
 6. **Usar 2FA y almacenamiento en frío** para proteger los fondos.
 
-## Conclusión
+## FAQ
 
-El trading spot de criptomonedas es la forma fundamental y más segura de trabajar con activos digitales. La falta de apalancamiento y del riesgo de liquidación hace que el spot sea la elección ideal para traders principiantes, inversores a largo plazo y usuarios de bots de trading.
+**¿Spot o futuros — qué elegir para empezar?**
+Definitivamente spot. Sin riesgo de liquidación, mecánica simple, puedes aprender sin riesgos catastróficos.
+
+**¿Se puede ganar en spot sin apalancamiento?**
+Sí, pero necesitas mayores cantidades o más tiempo. El apalancamiento acelera ganancias y pérdidas.
+
+**¿Qué órdenes usar en spot?**
+Límite para entrada a precio específico, stop-límite para salida. Mercado — solo cuando importa la velocidad.
+
+**¿Se pagan comisiones por mantener posición en spot?**
+No, a diferencia de margen y futuros, en spot no hay funding fees.
+
+**¿Es seguro el spot en exchange?**
+Más seguro que derivados, pero hay riesgo de exchange (hackeo, bancarrota). Cantidades grandes — cold wallet.
 
 **Relacionados:** [Señales de trading](/es/library/what-are-trading-signals/), [Configuración bot Bybit](/es/library/bybit-trading-bot-setup/), [Gestión del riesgo](/es/library/risk-management-crypto-trading-bots/).
