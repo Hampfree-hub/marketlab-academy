@@ -47,6 +47,12 @@ Already in progress:
 - **Digital ruble:** Russia is testing a platform for retail and wholesale payments.
 - **Digital euro:** The EU is preparing for launch in the coming years.
 
+## Summary
+
+Digital currency is the future of finance: fast, low-cost, and transparent. While cryptocurrencies are decentralized, CBDCs are state-issued digital money. Both are growing in adoption worldwide.
+
+For crypto trading with low fees, register on **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)**.
+
 ## FAQ
 
 **Is digital currency the same as cryptocurrency?**  

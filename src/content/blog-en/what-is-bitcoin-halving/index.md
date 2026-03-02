@@ -75,6 +75,12 @@ Historically, BTC has tended to rally after halvings. In 2012, it rose almost 10
 
 It is important to remember that halving is not the only driver of price. Macro conditions, regulation, tech upgrades, and investor sentiment all play a role and add to volatility. For a deeper understanding of Bitcoin, see the [complete guide to Bitcoin](/en/library/what-bitcoin-everything-you-need-know/), which covers history, principles, and mining in detail.
 
+## Summary
+
+Bitcoin halving is a programmed supply control mechanism that reduces miner rewards every ~4 years. Historically, this has correlated with price rallies, though other factors like regulation and macro conditions also matter.
+
+For Bitcoin trading with low fees, register on **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)**.
+
 ## FAQ
 
 **What is halving in simple terms?**

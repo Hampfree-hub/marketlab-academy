@@ -53,6 +53,12 @@ In volatile crypto markets, bots are increasingly used. Many can detect chart pa
 
 Understanding and using the rising wedge correctly can improve trading results. It can be combined with other tools, such as the [RSI](/en/library/technical-analysis-rsi/) or [doji candles](/en/library/what-are-doji-candles/), for better timing. For volume and momentum analysis, the [Money Flow Index (MFI)](/en/library/money-flow-index/) is useful, and for identifying overbought zones, the [Williams %R oscillator](/en/library/williams-percent-range-r/) can help.
 
+## Summary
+
+The rising wedge is a bearish reversal pattern that forms after an uptrend. It shows weakening momentum and often precedes a breakdown. Confirm with volume and combine with other indicators.
+
+For automated pattern trading, register on **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)**.
+
 ## FAQ
 
 **Is a rising wedge bullish or bearish?**

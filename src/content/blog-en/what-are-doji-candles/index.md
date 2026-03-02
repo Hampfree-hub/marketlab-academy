@@ -134,3 +134,5 @@ A doji on unusually low volume can be a random “stalled” candle with little 
 ---
 
 **Bottom line:** Doji candles are a useful technical analysis tool but work best together with context, levels, volume, and indicators. Confirmation from the next candle and stop-losses are recommended. Strategies using doji should be [tested on history](/en/library/what-are-backtests) before live trading. Different doji types—dragonfly, gravestone, long-legged—convey different meaning depending on where they appear; the key to using them lies in context and confirmation, not in the candle shape alone.
+
+For automated candlestick pattern trading, register on **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)**.

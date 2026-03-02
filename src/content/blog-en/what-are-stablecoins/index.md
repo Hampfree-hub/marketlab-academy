@@ -42,6 +42,8 @@ On the crypto market, stablecoins are used for:
 
 Stablecoins are a core piece of the crypto ecosystem: they connect crypto rails to fiat value and make trading and DeFi more practical. The key is to remember issuer risks and regulatory constraints.
 
+For trading and DeFi with low fees, register on **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)**.
+
 ## FAQ
 
 **How are stablecoins different from regular cryptocurrencies?**
