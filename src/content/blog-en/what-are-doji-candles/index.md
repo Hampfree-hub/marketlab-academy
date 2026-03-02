@@ -117,7 +117,7 @@ On lower timeframes there is more noise. Doji tend to be more useful on 4H, dail
 
 A doji on unusually low volume can be a random “stalled” candle with little meaning. A doji on a volume spike is usually more informative and more often precedes meaningful moves.
 
-## Frequently Asked Questions
+## FAQ
 
 **Does a doji always mean a reversal?** No. A doji reflects balance between buyers and sellers. It can precede a reversal, a pause, or trend continuation after brief consolidation. Context and confirmation matter.
 

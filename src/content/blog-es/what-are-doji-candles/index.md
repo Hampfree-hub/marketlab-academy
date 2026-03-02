@@ -1,4 +1,4 @@
----
+﻿---
 title: '¿Qué son las velas doji en trading?'
 description: 'Aprende a reconocer las velas doji en los gráficos y cómo usarlas para identificar momentos de incertidumbre y posibles reversiones de tendencia.'
 pubDate: '2025-09-11'
@@ -131,6 +131,6 @@ Una doji con volumen anormalmente bajo puede ser una vela "parada" sin mucho sig
 
 **¿En qué se diferencia la doji de otras velas de reversión?** La doji subraya la indecisión: apertura ≈ cierre. Patrones como envolvente o pin bar muestran que un lado ya domina. Las doji suelen ser "aviso"; los otros ya son "acción".
 
-## Conclusión
+## Resumen
 
 Las velas doji son una herramienta útil de análisis técnico, pero rinden más junto con contexto, niveles, volumen e indicadores. Se recomienda usar confirmación de la vela siguiente y aplicar siempre stop-loss. Las estrategias con doji conviene [probarlas en histórico](/es/library/what-are-backtests) antes de operar en vivo. Los distintos tipos—libélula, lápida, piernas largas—aportan matices según el lugar del gráfico; la clave está en contexto y confirmación, no solo en la forma de la vela.

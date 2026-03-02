@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Análisis fundamental en finanzas tradicionales y en cripto'
 description: 'Por qué el análisis fundamental importa tanto como el técnico. Clásico vs cripto, métricas on-chain, marco simple para traders. Breve y al grano.'
 pubDate: '2026-01-31'
@@ -56,7 +56,7 @@ Puedes dividir la revisión fundamental en tres bloques. No hace falta profundiz
 
 Para el detalle de métricas on-chain, ver el [artículo dedicado](/es/library/onchain-metrics-fundamental-analysis/); para un repaso rápido del token, el [checklist de 15 minutos](/es/library/fundamental-analysis-checklist/).
 
-## Conclusión
+## Resumen
 
 El análisis fundamental no sustituye al técnico; lo complementa: ayuda a elegir activos y a entender el contexto del ciclo. Un trader que usa FA y AT distingue mejor el “bombeo por bombeo” de una tendencia con fundamento y depende menos solo del gráfico.
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Indicador Chande Momentum Oscillator (CMO)'
 description: 'CMO: qué es, fórmula, zonas de sobrecompra y sobreventa, señales de compra y venta, relación con la estrategia ELDER.'
 pubDate: '2026-02-13'
@@ -105,31 +105,4 @@ Comienza a operar en exchanges probados:
 - **[BingX](https://bingxdao.com/invite/CUBDBG/)** — trading social y copytrading
 
 ---
-
-## Materiales relacionados
-
-**Conceptos básicos y estrategias:** asegúrate de estudiar nuestra estrategia insignia [ELDER 2.0](/es/library/spot-strategy-elder-20/), donde el CMO es un filtro clave. También aprende [cómo comenzar a operar con un depósito pequeño](/es/library/how-to-start-trading-small-deposit/).
-
-**Herramientas y automatización:** utiliza el [Oscilador Estocástico](/es/library/stochastic-oscillator/) y las [Bandas de Bollinger](/es/library/bollinger-bands/) para un análisis integral. Las instrucciones paso a paso sobre [cómo configurar un bot de trading en Bybit](/es/library/bybit-trading-bot-setup/) te ayudarán a automatizar los procesos.
-
-**Experiencia y riesgos:** no olvides la [gestión de riesgos al trabajar con bots](/es/library/risk-management-crypto-trading-bots/) y consulta nuestro [diario de depósito en vivo](/es/library/surviving-drawdown-diary/).
-
----
-Si te interesa esta estrategia y deseas seguir el desarrollo de nuestro proyecto, visita la página [Sobre el Proyecto](/es/about/) — allí hablamos sobre nuestra misión y cómo puedes apoyar nuestra startup.
-
-
-## Conclusión
-
-El Oscilador de Momento de Chande (CMO) es un oscilador versátil que proporciona a los traders una comprensión profunda del impulso del mercado. Su capacidad para reaccionar rápidamente a los cambios de precio e identificar condiciones de sobrecompra/sobreventa lo convierte en una valiosa adición a cualquier estrategia de trading.
-
-Al utilizar el CMO en conjunto con otras herramientas de análisis técnico, como las medias móviles o las Bandas de Bollinger, los traders pueden mejorar significativamente sus decisiones de trading y aumentar la adaptabilidad a las condiciones cambiantes del mercado. Como con cualquier indicador, la práctica y la comprensión de sus limitaciones son clave para el éxito.
-
-## Materiales relacionados
-
-**Fundamentos y estrategias:** Después de dominar los conceptos básicos, asegúrese de estudiar nuestra estrategia principal [ELDER 2.0](/es/library/spot-strategy-elder-20/), diseñada específicamente para el mercado spot. Además, comprenda [la diferencia entre spot, margen y futuros](/es/library/spot-trading-vs-futures-margin/).
-
-**Herramientas y automatización:** Para aumentar la eficiencia, utilice indicadores técnicos como el [Oscilador Estocástico](/es/library/stochastic-oscillator/) y las [Bandas de Bollinger](/es/library/bollinger-bands/). Una guía paso a paso sobre [cómo configurar un bot de trading en Bybit](/es/library/bybit-trading-bot-setup/) le ayudará a automatizar los procesos.
-
-**Experiencia y riesgos:** Aprenda [cómo empezar a operar con un depósito pequeño](/es/library/how-to-start-trading-small-deposit/) y asegúrese de estudiar los fundamentos de la [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/) y consulte nuestro [diario de depósito real](/es/library/surviving-drawdown-diary/).
-
 

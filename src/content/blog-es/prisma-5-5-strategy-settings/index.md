@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Prisma 5.5: Configuración de la Estrategia en la Plataforma Veles'
 description: 'Analizamos la configuración de la estrategia propia Prisma 5.5 en la plataforma Veles: indicadores de entrada, filtros, gestión de la cuadrícula de órdenes y recomendaciones de pares.'
 pubDate: '2026-02-28'
@@ -55,7 +55,7 @@ Se recomienda usar pares líquidos con alto volumen de operaciones:
 
 [✖️ 🌪 BINGX UNI PRISMA 5.5](https://veles.finance/share/zslhm)
 
-## Conclusión
+## Resumen
 
 Prisma 5.5 es una estrategia equilibrada para automatizar el trading en spot y futuros con un nivel de riesgo moderado. Es fundamental controlar los niveles de margen y cumplir con las reglas de diversificación para garantizar la estabilidad del sistema de trading.
 
@@ -90,10 +90,3 @@ Según backtests — 100–300% anuales. Los rendimientos reales dependen del me
 
 ---
 
-## Materiales Relacionados
-
-**Fundamentos y Estrategias:** Prisma 5.5 es un nivel avanzado. Para principiantes, se recomienda comenzar con el [trading de spot](/es/library/what-is-spot-trading/) y la [estrategia básica ELDER 2.0](/es/library/spot-strategy-elder-20/).
-
-**Herramientas y Automatización:** hay información disponible sobre [cómo funcionan los backtests](/es/library/what-are-backtests/) y cómo [configurar un bot en Bybit](/es/library/bybit-trading-bot-setup/). También se recomienda estudiar la [estrategia DCA](/es/library/dca-strategy-crypto/).
-
-**Experiencia y Riesgos:** es de vital importancia comprender la [gestión de riesgos al trabajar con bots](/es/library/risk-management-crypto-trading-bots/) y vigilar la [diversificación](/es/library/diversification-trading-system-part-1/).

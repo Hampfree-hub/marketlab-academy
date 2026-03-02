@@ -114,18 +114,10 @@ The minimum amount depends on the strategy and trading pair. Usually, $50–100 
 
 Yes, but with limitations. For full access to exchange features, it is recommended to complete verification.
 
-## Conclusion
+## Summary
 
-Setting up a trading bot on Bybit is the first step towards automating trading. A correctly configured bot and well-tuned risk management allow you to trade efficiently 24/7.
+Setting up a trading bot on Bybit is the first step towards automating trading. A correctly configured bot and well-tuned risk management allow you to trade efficiently 24/7. Before launching a bot, it is recommended to test the strategy on [backtests](/en/library/what-are-backtests/).
 
-Register on Bybit and start automated trading:
-- **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** — an excellent choice for working with [trading bots](/en/library/bybit-trading-bot-setup/)
-- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — user-friendly interface and bonuses
-- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — social trading and copy trading
-
-## Related Materials
-**Basics and strategies:** learn popular strategies – [DCA](/en/library/dca-strategy-crypto/) and the [Veles](https://veles.finance/invite/washmallay) platform for advanced bots.
-**Tools and automation:** learn about [backtests](/en/library/what-are-backtests/) to test a strategy before launching a bot.
-**Experience and risks:** be sure to check out [risk management](/en/library/risk-management-crypto-trading-bots/) and [diversification](/en/library/diversification-trading-system-part-1/) for safe automated trading.
+Register on **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** and start automated trading.
 
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Qué es el staking de criptomonedas'
 description: 'Guía práctica de staking: cómo funciona, tipos (exchange vs on-chain), riesgos y cómo empezar.'
 pubDate: '2026-02-05'
@@ -215,7 +215,7 @@ Si decides empezar a hacer staking, aquí tienes un plan paso a paso:
 4. **Empieza con una pequeña cantidad** — prueba el proceso con una pequeña cantidad.
 5. **Monitoriza los resultados** — sigue los rendimientos y los cambios de precio.
 
-## Conclusión
+## Resumen
 
 El staking de criptomonedas se ha convertido en una forma eficaz de generar ingresos pasivos, apta tanto para principiantes como para usuarios experimentados. Ofrece flexibilidad de elección, la posibilidad de apoyar el funcionamiento de la blockchain y de participar en el desarrollo de tecnologías descentralizadas.
 

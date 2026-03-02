@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Fundamental Analysis in Traditional Finance and Crypto'
 description: 'Why fundamental analysis matters as much as technical analysis. Classic vs crypto, on-chain metrics, a simple framework for traders. Short and to the point.'
 pubDate: '2026-01-31'
@@ -58,7 +58,7 @@ You can split the fundamental check into three blocks. You don’t have to go de
 
 For a detailed look at on-chain metrics, see the [dedicated article](/en/library/onchain-metrics-fundamental-analysis/); for a quick token run-through, see the [15-minute checklist](/en/library/fundamental-analysis-checklist/).
 
-## Conclusion
+## Summary
 
 Fundamental analysis does not replace technical analysis; it complements it: it helps select assets and understand cycle context. A trader who uses both FA and TA is better at telling “pump for the sake of pump” from a trend with a basis and relies less on the chart alone.
 

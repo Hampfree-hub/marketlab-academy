@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Falsos rompimientos en trading'
 description: 'Cómo identificar y operar falsos rompimientos de soporte y resistencia: setups, filtros, reglas de confirmación y errores típicos.'
 pubDate: '2026-01-27'
@@ -102,7 +102,7 @@ El verdadero suele venir con volumen y cierres sostenidos fuera del nivel. El fa
 
 A menudo para activar stops y crear liquidez.
 
-## Conclusión
+## Resumen
 
 Los falsos rompimientos son comunes — y operables — si los identificas bien, aplicas filtros (estructura/volumen) y controlas el riesgo.
 
@@ -124,7 +124,7 @@ Las órdenes stop-loss son esenciales para limitar pérdidas. Coloca tu stop-los
 
 Ningún método de trading es infalible por sí solo. Combina la identificación de falsos rompimientos con otras herramientas de análisis técnico como [RSI (Índice de Fuerza Relativa)](/es/library/technical-analysis-rsi/), [MACD (Convergencia/Divergencia de Medias Móviles)](/es/library/what-is-macd/), [Bandas de Bollinger](/es/library/bollinger-bands/) o el análisis de volumen. Por ejemplo, un falso rompimiento con bajo volumen podría ser una señal más fuerte.
 
-## Conclusión
+## Resumen
 
 Los falsos rompimientos son una parte inevitable del trading en los mercados financieros, y entenderlos es crucial para proteger tu capital y buscar oportunidades. En lugar de verlos como trampas, un trader experimentado los utiliza como señales poderosas. La clave es la paciencia, la confirmación y una sólida gestión de riesgos. Al dominar el trading de falsos rompimientos, puedes mejorar significativamente tus habilidades y resultados en el mercado.
 
@@ -157,12 +157,3 @@ Presta atención a:
 *   **Osciladores (RSI, Estocástico):** Si el precio rompe un nivel y los osciladores muestran condiciones de sobrecompra/sobreventa o divergencia, esto puede indicar un falso rompimiento.
 *   **Bandas de Bollinger:** El precio que se sale de las bandas pero regresa rápidamente puede ser un falso rompimiento.
 
-## Materiales relacionados
-
-**Fundamentos y estrategias:** Después de dominar los conceptos básicos, asegúrate de estudiar nuestra estrategia principal [ELDER 2.0](/es/library/spot-strategy-elder-20/), diseñada específicamente para el mercado spot. Además, comprende [la diferencia entre spot, margen y futuros](/es/library/spot-trading-vs-futures-margin/).
-
-**Herramientas y automatización:** Para aumentar la eficiencia, utiliza indicadores técnicos como el [Oscilador Estocástico](/es/library/stochastic-oscillator/) y las [Bandas de Bollinger](/es/library/bollinger-bollinger-bands/). Una guía paso a paso sobre [cómo configurar un bot de trading en Bybit](/es/library/bybit-trading-bot-setup/) te ayudará a automatizar los procesos.
-
-**Experiencia y riesgos:** Aprende [cómo empezar a operar con un depósito pequeño](/es/library/how-to-start-trading-small-deposit/) y asegúrate de estudiar los fundamentos de la [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/) y consulta nuestro [diario de depósito real](/es/library/surviving-drawdown-diary/).
-
-Si te interesa esta estrategia y quieres seguir el desarrollo de nuestro proyecto, visita la página [Sobre nosotros](/es/about/) — allí hablamos de nuestra misión y de cómo puedes apoyar la startup.

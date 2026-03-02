@@ -1,4 +1,4 @@
----
+﻿---
 title: 'What Is Crypto Staking'
 description: 'A practical guide to staking: how it works, what you can stake, main types (centralized vs on-chain), risks, and how to start.'
 pubDate: '2026-02-05'
@@ -212,7 +212,7 @@ If you've decided to start staking, here's a step-by-step plan:
 If you’re new, start small, prefer reputable networks/validators, and avoid locking funds you might need on short notice.
 
 
-## Conclusion
+## Summary
 
 Crypto staking has become an effective way to generate passive income, suitable for both beginners and experienced users. It offers flexibility in choosing a platform, the ability to support blockchain operations, and participation in the development of decentralized technologies.
 
@@ -240,10 +240,3 @@ Returns depend on the cryptocurrency and staking type. Typically, it ranges from
 
 Generally no, funds are locked for the entire period. Some platforms may offer early withdrawal with a loss of part of the rewards or a fee.
 
-## Related Materials
-
-**Getting started with crypto:** Learn how to start trading with a small deposit in the article "[How to start trading with a small deposit](/en/library/how-to-start-trading-small-deposit/)".
-
-**Automation:** Explore [trading bots on Bybit](/en/library/bybit-trading-bot-setup/) to automate your trading strategies.
-
-**Risk management:** Read about [risk management in crypto trading bots](/en/library/risk-management-crypto-trading-bots/) to protect your capital.

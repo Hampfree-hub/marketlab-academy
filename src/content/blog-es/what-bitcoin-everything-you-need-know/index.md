@@ -92,8 +92,30 @@ Puedes obtener BTC mediante:
 3. **Trading:** Operar con las fluctuaciones del precio.
 4. **Minería:** Generar monedas con hardware especializado (ASIC).
 
-## Conclusión
+## Resumen
 
 Bitcoin es una tecnología que cambió la forma de entender el dinero. Pese a la volatilidad, sigue siendo un activo central para muchos inversores gracias a su diseño y oferta limitada.
 
 Para más bases, consulta [Fundamentos de Bitcoin](/es/library/bitcoin-basics/) y [Qué es la moneda digital](/es/library/what-is-digital-currency-in-simple-terms/).
+
+## FAQ
+
+**¿Bitcoin es dinero?**
+
+Sí, Bitcoin es una moneda digital que se puede usar para pagos, inversiones y transferencias. Cada vez más empresas y algunos países lo aceptan.
+
+**¿Cuántos Bitcoin existen en total?**
+
+Máximo 21 millones de monedas. Esto está integrado en el código y no puede cambiarse. Ya se han minado más de 19 millones.
+
+**¿Cómo almacenar Bitcoin?**
+
+Para almacenamiento a largo plazo, usar wallets hardware (Ledger, Trezor). Para trading activo, usar wallets de exchanges o wallets calientes con buena seguridad.
+
+**¿Es legal Bitcoin en Rusia?**
+
+A fecha de escritura, Bitcoin no está prohibido, pero su uso es limitado. Se recomienda seguir los cambios legislativos.
+
+**¿Por qué Bitcoin es volátil?**
+
+Por el mercado pequeño y la falta de regulación. Las noticias, el sentimiento y los grandes jugadores afectan significativamente el precio. Esto es tanto un riesgo como una oportunidad de ganancia.

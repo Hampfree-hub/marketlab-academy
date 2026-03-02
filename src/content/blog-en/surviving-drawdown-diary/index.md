@@ -71,7 +71,7 @@ Averaging increases your position in an asset that's already falling. Without cl
 
 Check: were risk limits exceeded, did stops work, was there manual intervention. If the system worked by rules — it's a normal market phase.
 
-## Conclusion
+## Summary
 
 Drawdown is a normal part of trading. On a live account we go through it by sticking to the plan: no averaging without rules, no shutting everything down in a fit, keeping limits and diversification. The goal isn’t to show “perpetual growth” but a robust system that survives both up and down without turning drawdown into disaster. Survive the drawdown with a cool head and keep the system intact for the next market cycle.
 

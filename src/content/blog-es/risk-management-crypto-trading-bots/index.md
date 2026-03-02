@@ -38,3 +38,29 @@ No seguimos al pie de la letra el “1–2% por operación”: nuestro capital e
 
 Antes de operar en real, valida reglas con **[backtesting](/es/library/what-are-backtests)** y luego prueba con tamaño pequeño.
 
+## Resumen
+
+La gestión de riesgos es la base del trading exitoso. Sin ella, incluso la mejor estrategia fracasará. Las reglas clave: nunca arriesgar más del 1-2% por operación, usar stop-loss, diversificar entre estrategias y activos, mantener un buffer de seguridad. Los bots automatizan la ejecución, pero la gestión de riesgos sigue siendo responsabilidad del trader.
+
+## FAQ
+
+**¿Cuánto arriesgar por operación?**
+
+Se recomienda no arriesgar más del 1-2% del capital por operación. Esto permite resistir una serie de pérdidas.
+
+**¿Qué es el stop-loss?**
+
+Es una orden que cierra la posición automáticamente cuando el precio alcanza un nivel predeterminado. Limita las pérdidas.
+
+**¿Necesito diversificar con bots?**
+
+Sí. Usar varios bots con diferentes estrategias y en diferentes activos reduce el riesgo de pérdidas generalizadas.
+
+**¿Cuánto buffer mantener?**
+
+Se recomienda mantener un buffer del 20-30% del capital en stablecoins o fiat. Esto cubre operaciones extraordinarias ydrawdowns.
+
+**¿Los bots eliminan el riesgo?**
+
+No. Los bots ejecutan reglas, pero no eliminan el riesgo de mercado. Una estrategia puede fallar y causar pérdidas.
+

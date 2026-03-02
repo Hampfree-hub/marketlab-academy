@@ -56,3 +56,29 @@ Los bots ayudan a ejecutar reglas sin emociones, pero no eliminan el riesgo.
 
 Antes de escalar, valida con **[backtesting](/es/library/what-are-backtests)**.
 
+## Resumen
+
+Comenzar con poco dinero es posible y hasta recomendable. La clave es gestionar el riesgo desde el primer día: no invertir más de lo que se puede perder, usar stops, diversificar y mantener un buffer. Los errores son inevitables, pero con un enfoque disciplinado se puede aprender sin grandes pérdidas.
+
+## FAQ
+
+**¿Cuánto dinero se necesita para empezar a tradear?**
+
+Se puede comenzar con $10-50 en muchas bolsas. Lo importante no es la cantidad, sino aprender a gestionar el riesgo.
+
+**¿Es posible ganar dinero con poco capital?**
+
+Sí, pero las ganancias serán proporcionales al capital. Con sums pequeñas, el enfoque debe estar en aprender, no en maximizar ganancias.
+
+**¿Qué errores cometen los principiantes?**
+
+Operar sin stop-loss, sobredimensionar posiciones, perseguir pérdidas, operar por emociones. Todos son evitables con disciplina.
+
+**¿Cuánto tiempo lleva aprender a tradear?**
+
+Varía, pero generalmente se necesitan 1-3 años de práctica constante para tener resultados consistentes. La educación continua es clave.
+
+**¿Se necesita mucho tiempo para tradear?**
+
+Depende del enfoque. El trading manual requiere varias horas al día. Los bots pueden reducir el tiempo, pero requieren configuración inicial y monitoreo.
+

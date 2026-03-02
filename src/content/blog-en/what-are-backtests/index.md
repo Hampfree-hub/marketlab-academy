@@ -1,4 +1,4 @@
----
+﻿---
 title: 'What Are Backtests in Trading'
 description: 'Learn what backtesting is, why it is critically important for traders, and how to properly test strategies on historical data.'
 pubDate: '2025-06-03'
@@ -270,6 +270,6 @@ Yes. Even with a working strategy, a backtest helps to:
 - Assess risks more objectively.
 - Document the logic for future use.
 
-## Conclusion
+## Summary
 
 Backtesting is not a panacea, but a critically important tool for any serious trader. A properly conducted backtest helps to avoid costly mistakes and increase the chances of success in real trading. A backtest reflects the past; the market lives in the present. It is recommended to combine backtesting with demo account testing and real trading with small volumes.

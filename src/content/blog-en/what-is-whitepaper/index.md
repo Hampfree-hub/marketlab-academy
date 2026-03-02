@@ -151,6 +151,28 @@ Website, whitepaper PDF, GitHub, docs, and community links (Telegram, Discord, T
 
 **Partners:** Known partners add credibility, but claims should be verified.
 
-## Conclusion
+## Summary
 
 A whitepaper is a core document for any crypto project, for both the team and users. When reading one, focus on tokenomics, roadmap, partners, and technical execution. Even a well-written whitepaper does not guarantee success, so thorough analysis is always needed before investing. For crypto market basics, see [What Is Digital Currency](/en/library/what-is-digital-currency-in-simple-terms/), and for blockchain fundamentals, check [Bitcoin Basics](/en/library/bitcoin-basics/). The [complete guide to Bitcoin](/en/library/what-bitcoin-everything-you-need-know/) covers history, principles, and use cases in detail.
+
+## FAQ
+
+**Is a whitepaper required for every crypto project?**
+
+Yes, it's a standard document for any serious project. Absence of a whitepaper is a red flag.
+
+**What is the difference between Whitepaper and Litepaper?**
+
+Litepaper is a simplified version for a general audience. Whitepaper is the full technical version for investors and developers.
+
+**Where to find a project's Whitepaper?**
+
+Usually on the project's official website in the Documents or Resources section, or as a PDF. It's often available on GitHub as well.
+
+**Can promises in a Whitepaper be trusted?**
+
+No, verification is necessary. Check the Roadmap — whether promises are being fulfilled on time. Also analyze the team and their experience.
+
+**What to do if the Whitepaper is incomprehensible?**
+
+This is normal for technical projects. Start with the introduction and summary. If too complex — the project may not be suitable, or wait for a Litepaper to be released.

@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Diversificación y configuración del sistema de trading. Parte 2: Cómo construir el sistema'
 description: 'Cómo construir y configurar un sistema de trading: reglas de entrada y salida, tamaño de posición, stop loss, elección y configuración de bots.'
 pubDate: '2026-02-02'
@@ -25,7 +25,7 @@ El riesgo por operación es la parte del depósito que estás dispuesto a perder
 
 DCA y [trading en grid](/es/library/grid-trading-crypto/) resuelven tareas distintas: condiciones de activación y límites por bot se configuran por separado. DCA promedia la entrada en el tiempo; grid opera en rango. Para conectar con un exchange harán falta API keys y entender los límites de posiciones — paso a paso en [configuración del bot en Bybit](/es/library/bybit-trading-bot-setup/). No concentres todo el volumen en un bot: la repartición entre varias estrategias y pares debe cuadrar con la diversificación por activos y plataformas de la Parte 1. Antes de lanzar comprobar: los límites de posiciones no superan tu riesgo por operación ni el riesgo global del portafolio.
 
-## Conclusión
+## Resumen
 
 Sistema = reglas de entrada/salida + tamaño de posición y riesgo + diversificación por activos, estrategias y plataformas. Siguiente — [Parte 3: ajustar a ti y errores típicos](/es/library/diversification-trading-system-part-3/).
 

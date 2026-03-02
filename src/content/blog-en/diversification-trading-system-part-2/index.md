@@ -25,7 +25,7 @@ Risk per trade is the share of the deposit you are willing to lose in one trade;
 
 DCA and [grid trading](/en/library/grid-trading-crypto/) solve different tasks: trigger conditions and limits per bot are set separately. DCA averages entry over time; grid trades in a range. To connect to an exchange you’ll need API keys and an understanding of position limits — step by step in [setting up a bot on Bybit](/en/library/bybit-trading-bot-setup/). Don’t concentrate all volume in one bot: allocation across several strategies and pairs should match diversification by assets and venues from Part 1. Before launch check: position limits don’t exceed your risk per trade and overall portfolio risk.
 
-## Conclusion
+## Summary
 
 System = entry/exit rules + position size and risk + diversification by assets, strategies, and venues. Next — [Part 3: tuning for yourself and common mistakes](/en/library/diversification-trading-system-part-3/).
 

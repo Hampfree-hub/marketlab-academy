@@ -92,8 +92,30 @@ You can get BTC via:
 3. **Trading:** Active trading on price swings.
 4. **Mining:** Producing coins with specialized hardware (ASIC).
 
-## Conclusion
+## Summary
 
 Bitcoin is a groundbreaking technology that changed how we think about money. Despite volatility, it remains a core asset for many investors thanks to its unique design and fixed supply.
 
 For more on the basics, see [Bitcoin Basics](/en/library/bitcoin-basics/) and [What Is Digital Currency](/en/library/what-is-digital-currency-in-simple-terms/).
+
+## FAQ
+
+**Is Bitcoin money?**
+
+Yes, Bitcoin is a digital currency that can be used for payments, investments, and transfers. More companies and even some countries accept it.
+
+**How many Bitcoin exist in total?**
+
+Maximum 21 million coins. This is embedded in the code and cannot be changed. Over 19 million have been mined so far.
+
+**How to store Bitcoin?**
+
+For long-term storage, use hardware wallets (Ledger, Trezor). For active trading, use exchange wallets or hot wallets with good security.
+
+**Is Bitcoin legal in Russia?**
+
+As of writing, Bitcoin is not banned, but its use is limited. Following legislation changes is recommended.
+
+**Why is Bitcoin volatile?**
+
+Due to the small market and lack of regulation. News, sentiment, and large players significantly affect the price. This is both a risk and an opportunity for profit.

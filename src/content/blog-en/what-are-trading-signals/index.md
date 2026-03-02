@@ -83,4 +83,30 @@ Signals can be used manually or via bots. If using bots, configure them properly
 
 Adapt to market regime. In a strong uptrend, focus on bullish signals; in sideways markets, consider shorter-term or scalping setups. Adjust usage to the current phase.
 
-Do not follow every signal blindly. Build your own view, review past entries, and learn to tell strong from weak signals. That supports both performance and growth as a trader. For testing signal effectiveness, [backtesting strategies](/en/library/what-are-backtests/) is essential, and the [RSI indicator](/en/library/technical-analysis-rsi/) is one common source of signals. For volume and entry zone analysis, the [Money Flow Index (MFI)](/en/library/money-flow-index/) can be helpful.
+Do not follow every signal blindly. Build your own view, review past entries, and learn to tell strong from weak signals. That supports both performance and growth as a trader. For testing signal effectiveness, [backtesting strategies](/en/library/what-are-backtests/) is essential, and the [RSI indicator](/en/library/technical-analysis-rsi/) is one common source of signals. For volume and entry zone analysis, the [Money Flow Index (MFI)](/en/library/money-flow-index/) can be helpful. For automated trading, [trading bots on Bybit](https://www.bybit.com/invite?ref=PWMD24) can be used.
+
+## Summary
+
+Trading signals are recommendations for entry and exit based on technical or fundamental analysis. They save time and help beginners, but don't guarantee profits. It's important to verify sources, practice risk management, and not rely blindly on a single channel.
+
+## FAQ
+
+**Are trading signals legal?**
+
+Yes, it's a legitimate tool. However, be cautious of scam schemes promising guaranteed profits. Check the source's reputation and signal history.
+
+**Are crypto signals paid or free?**
+
+Both exist. Free signals are often used to attract to paid channels. Quality doesn't always depend on price — checking stats is important.
+
+**How to verify signal effectiveness?**
+
+Backtesting is used: signals are applied to historical data and results are reviewed. Keeping a trade journal and comparing results with signals is also useful.
+
+**Can trading be automated with signals?**
+
+Yes, many use bots that automatically open trades based on signals from Telegram or API. But the bot needs proper configuration and a backup plan for failures.
+
+**Are signals suitable for beginners?**
+
+Yes, they help learn and save time on analysis. But understanding the logic behind signals, not just copying them, is important. Basic risk management must also be learned.

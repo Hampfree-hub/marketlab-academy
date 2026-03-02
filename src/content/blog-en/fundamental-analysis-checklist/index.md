@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Fundamental Analysis in Crypto: A 15-Minute Checklist'
 description: 'A simple token checklist instead of a complex model. Basic info, project and team, tokenomics, on-chain metrics, red flags. For traders.'
 pubDate: '2026-01-31'
@@ -50,7 +50,7 @@ From “it’s too complex” to “I have a 15-minute checklist.” The goal is
 
 One red flag is reason for caution; several — better not to enter or to cap position size. For more on risk and capital protection, see [risk management in crypto trading](/en/library/risk-management-crypto-trading-bots/).
 
-## Conclusion
+## Summary
 
 Here fundamentals are a junk filter and setup amplifier: filter out what isn’t worth looking at on the chart and understand context for the rest. The goal isn’t to know everything about every token but to quickly check key points and decide: dig deeper or skip.
 

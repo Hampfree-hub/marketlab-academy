@@ -36,3 +36,29 @@ Key components:
 
 Tokenomics is one piece of fundamental analysis. It should be evaluated together with the product, the team, and market conditions. For basics: **[Bitcoin Basics](/en/library/bitcoin-basics)** and **[What Is Digital Currency?](/en/library/what-is-digital-currency-in-simple-terms)**.
 
+## Summary
+
+Tokenomics shows how a crypto project's economy is structured. It's important to look at issuance, distribution, and real token utility. Sharp unlocks and a large team share are red flags.
+
+## FAQ
+
+**What is FDV and why does it matter?**
+
+FDV (Fully Diluted Valuation) is price × max supply. If FDV greatly exceeds current market cap, a lot of new tokens may hit the market, diluting your stake.
+
+**How to find token unlock schedules?**
+
+Look for "unlock schedule" on the project website, in documentation (Tokenomics, Token Distribution), or on trackers like Token Unlocks. Pay attention to dates and volumes.
+
+**Is a large team token allocation good?**
+
+It's a risk. If the team has 30%+ with no vesting (gradual unlock), they can sell anytime. Optimal is 10–20% with long vesting (2–4 years).
+
+**What is token burning (burn)?**
+
+It's a mechanism where tokens are permanently removed from circulation. This reduces supply and potentially increases price. But it's important to check if a sufficient percentage is burned.
+
+**Is tokenomics enough to evaluate a project?**
+
+No, it's only one part. Also look at product, team, competitors, regulatory risks. Good tokenomics won't save a bad project.
+

@@ -36,3 +36,29 @@ Componentes clave:
 
 La tokenómica es parte del análisis fundamental. Conviene verla junto con producto, equipo y mercado. Para base: **[Bitcoin Basics](/es/library/bitcoin-basics)** y **[Qué es una moneda digital](/es/library/what-is-digital-currency-in-simple-terms)**.
 
+## Resumen
+
+La tokenómica muestra cómo está estructurada la economía de un proyecto cripto. Es importante observar emisión, distribución y utilidad real del token. Desbloqueos abruptos y gran asignación al equipo son señales de alerta.
+
+## FAQ
+
+**¿Qué es FDV y por qué importa?**
+
+FDV (Fully Diluted Valuation) es precio × supply máximo. Si FDV supera mucho la capitalización actual, muchos tokens nuevos pueden salir al mercado, diluyendo tu participación.
+
+**¿Cómo encontrar el calendario de desbloqueos de tokens?**
+
+Busca "unlock schedule" en la web del proyecto, en documentación (Tokenomics, Token Distribution), o en trackers como Token Unlocks. Presta atención a fechas y volúmenes.
+
+**¿Es buena una gran asignación de tokens al equipo?**
+
+Es un riesgo. Si el equipo tiene 30%+ sin vesting (desbloqueo gradual), pueden vender en cualquier momento. Lo óptimo es 10–20% con vesting largo (2–4 años).
+
+**¿Qué es quema de tokens (burn)?**
+
+Es un mecanismo donde los tokens se eliminan permanentemente de circulación. Esto reduce la oferta y potencialmente aumenta el precio. Pero es importante verificar si se quema un porcentaje suficiente.
+
+**¿La tokenómica basta para evaluar un proyecto?**
+
+No, es solo una parte. También hay que ver producto, equipo, competidores, riesgos regulatorios. Buena tokenómica no salva un mal proyecto.
+

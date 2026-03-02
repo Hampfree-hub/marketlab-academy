@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Análisis fundamental en cripto: checklist de 15 minutos'
 description: 'Checklist simple por token en lugar de un modelo complejo. Info básica, proyecto y equipo, tokenómica, métricas on-chain, banderas rojas. Para traders.'
 pubDate: '2026-01-31'
@@ -50,7 +50,7 @@ De “es muy complejo” a “tengo un checklist de 15 minutos”. El objetivo e
 
 Una bandera roja es motivo de cautela; varias — mejor no entrar o limitar mucho el tamaño de la posición. Más sobre riesgo y protección del capital en [gestión del riesgo en trading cripto](/es/library/risk-management-crypto-trading-bots/).
 
-## Conclusión
+## Resumen
 
 Aquí el fundamental es filtro de ruido y amplificador de setups: filtrar lo que no merece mirar en el gráfico y entender el contexto del resto. Lo importante no es saberlo todo de cada token sino revisar rápido los puntos clave y decidir: profundizar o pasar.
 

@@ -246,15 +246,9 @@ Yes. Even with a working strategy, a backtest helps to:
 - Assess risks more objectively.
 - Document the logic for future use.
 
-## Conclusion
+## Summary
 
 Backtesting is not a panacea, but a critically important tool for any serious trader. A properly conducted backtest helps to avoid costly mistakes and increase the chances of success in real trading. A backtest reflects the past; the market lives in the present. It is recommended to combine backtesting with demo account testing and real trading with small volumes.
 
-## Related Materials
-
-**Fundamentals and Strategies:** After mastering the basics, be sure to study our flagship [ELDER 2.0 strategy](/en/library/spot-strategy-elder-20/), specifically designed for the spot market. Also, understand [the difference between spot, margin, and futures](/en/library/spot-trading-vs-futures-margin/).
-
-**Tools and Automation:** To increase efficiency, use technical indicators like the [Stochastic Oscillator](/en/library/stochastic-oscillator/) and [Bollinger Bands](/en/library/bollinger-bands/). And a step-by-step guide on [setting up a trading bot on Bybit](/en/library/bybit-trading-bot-setup/) will help automate processes.
-
-**Experience and Risks:** Learn [how to start trading with a small deposit](/en/library/how-to-start-trading-small-deposit/) and be sure to study the basics of [risk management](/en/library/risk-management-crypto-trading-bots/) and check out the [live deposit diary](/en/library/surviving-drawdown-diary/).
+For automated trading, register on **[Bybit](https://www.bybit.com/invite?ref=PWMD24)**.
 

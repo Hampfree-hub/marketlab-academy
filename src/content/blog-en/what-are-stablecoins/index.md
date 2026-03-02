@@ -38,5 +38,29 @@ On the crypto market, stablecoins are used for:
 - **Regulation:** restrictions on issuers or usage can impact availability.
 - **Smart-contract risk (DeFi):** bugs, exploits, and protocol failures.
 
-Stablecoins are a core piece of the crypto ecosystem: they connect crypto rails to fiat value and make trading and DeFi more practical. For background reading: **[Bitcoin Basics](/en/library/bitcoin-basics)** and **[What Is Digital Currency?](/en/library/what-is-digital-currency-in-simple-terms)**.
+## Summary
+
+Stablecoins are a core piece of the crypto ecosystem: they connect crypto rails to fiat value and make trading and DeFi more practical. The key is to remember issuer risks and regulatory constraints.
+
+## FAQ
+
+**How are stablecoins different from regular cryptocurrencies?**
+
+Stablecoin prices are pegged to an external asset (dollar, euro), so they aren't volatile. Bitcoin and ether can move 10–20% in a day; stablecoins move fractions of a percent.
+
+**USDT or USDC — which is better?**
+
+USDC is considered more transparent (monthly audits, reserves in US Treasuries). USDT is more widely used and has higher liquidity. The choice depends on priorities: transparency or liquidity.
+
+**Can you earn money on stablecoins?**
+
+Directly — no, they're not designed for growth. However, income can be earned through DeFi staking, lending, or yield protocols. It's important to consider the risks of these platforms.
+
+**Are stablecoins backed by real money?**
+
+The largest ones (USDT, USDC) claim to be backed by reserves. USDC has passed audits and confirms reserves. USDT has faced criticism for lack of transparency in the past but has improved reporting.
+
+**Is it safe to store money in stablecoins?**
+
+Relatively. It's safer than volatile cryptocurrencies, but there are risks: technical (smart contract hacks), regulatory (banning of issuers), and depegging risk (loss of peg).
 

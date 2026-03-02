@@ -83,4 +83,30 @@ Las señales pueden usarse a mano o con bots. Si se usan bots, configurarlos bie
 
 Adaptarse al régimen de mercado. En un uptrend fuerte, centrarse en señales alcistas; en lateral, plantearse operativas más cortas o scalping. Ajustar el uso a la fase actual.
 
-No seguir cada señal a ciegas. Formar criterio propio, revisar entradas pasadas y aprender a distinguir señales fuertes de débiles. Eso mejora tanto resultados como crecimiento como trader. Para comprobar la efectividad de las señales, [probar estrategias con backtests](/es/library/what-are-backtests/) es esencial, y el [indicador RSI](/es/library/technical-analysis-rsi/) es una fuente común de señales. Para análisis de volumen y zonas de entrada, el [índice de flujo de dinero (MFI)](/es/library/money-flow-index/) puede ser útil.
+No seguir cada señal a ciegas. Formar criterio propio, revisar entradas pasadas y aprender a distinguir señales fuertes de débiles. Eso mejora tanto resultados como crecimiento como trader. Para comprobar la efectividad de las señales, [probar estrategias con backtests](/es/library/what-are-backtests/) es esencial, y el [indicador RSI](/es/library/technical-analysis-rsi/) es una fuente común de señales. Para análisis de volumen y zonas de entrada, el [índice de flujo de dinero (MFI)](/es/library/money-flow-index/) puede ser útil. Para trading automatizado, se pueden usar [bots de trading en Bybit](https://www.bybit.com/invite?ref=PWMD24).
+
+## Resumen
+
+Las señales de trading son recomendaciones de entrada y salida basadas en análisis técnico o fundamental. Ahorran tiempo y ayudan a principiantes, pero no garantizan ganancias. Es importante verificar fuentes, practicar gestión de riesgos y no depender ciegamente de un solo canal.
+
+## FAQ
+
+**¿Las señales de trading son legales?**
+
+Sí, es una herramienta legítima. Sin embargo, hay que desconfiar de esquemas fraudulentos que prometen ganancias garantizadas. Es importante verificar la reputación de la fuente y el historial de señales.
+
+**¿Las señales de criptomonedas son pagadas o gratuitas?**
+
+Existen ambas. Las gratuitas a menudo se usan para atraer a canales de pago. La calidad no siempre depende del precio — verificar estadísticas es importante.
+
+**¿Cómo verificar la efectividad de las señales?**
+
+Se utiliza backtesting: las señales se aplican a datos históricos y se miran los resultados. También es útil llevar un diario de operaciones y comparar resultados con las señales.
+
+**¿Se puede automatizar el trading con señales?**
+
+Sí, muchos usan bots que abren operaciones automáticamente según señales de Telegram o API. Pero el bot necesita configuración adecuada y un plan de respaldo para fallos.
+
+**¿Las señales son adecuadas para principiantes?**
+
+Sí, ayudan a aprender y ahorrar tiempo en análisis. Pero entender la lógica detrás de las señales, no solo copiarlas, es importante. También hay que aprender gestión de riesgos básica.

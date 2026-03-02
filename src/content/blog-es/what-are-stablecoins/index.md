@@ -38,5 +38,29 @@ En el mercado cripto se usan para:
 - **Regulación:** restricciones a emisores o uso.
 - **Riesgo de contratos (DeFi):** bugs/exploits.
 
-Para base conceptual: **[Bitcoin Basics](/es/library/bitcoin-basics)** y **[Qué es una moneda digital](/es/library/what-is-digital-currency-in-simple-terms)**.
+## Resumen
+
+Los stablecoins son una parte fundamental del ecosistema cripto: conectan los rails cripto con el valor fiat y hacen el trading y DeFi más prácticos. Lo principal es recordar los riesgos del emisor y las restricciones regulatorias.
+
+## FAQ
+
+**¿En qué se diferencian los stablecoins de las criptomonedas regulares?**
+
+El precio de los stablecoins está vinculado a un activo externo (dólar, euro), por lo que no son volátiles. Bitcoin y ether pueden moverse un 10–20% en un día; los stablecoins se mueven fracciones de por ciento.
+
+**USDT o USDC — cuál es mejor?**
+
+USDC se considera más transparente (auditorías mensuales, reservas en bonos del Tesoro de EE. UU.). USDT es más utilizada y tiene mayor liquidez. La elección depende de las prioridades: transparencia o liquidez.
+
+**¿Se puede ganar dinero con stablecoins?**
+
+Directamente — no, no están diseñados para crecer. Sin embargo, se puede obtener ingresos a través de staking en DeFi, lending o protocolos yield. Es importante considerar los riesgos de estas plataformas.
+
+**¿Los stablecoins están respaldados por dinero real?**
+
+Los más grandes (USDT, USDC) afirman estar respaldados por reservas. USDC ha pasado auditorías y confirma reservas. USDT ha recibido críticas por falta de transparencia en el pasado, pero ha mejorado sus informes.
+
+**¿Es seguro guardar dinero en stablecoins?**
+
+Relativamente. Es más seguro que en criptomonedas volátiles, pero existen riesgos: técnicos (hackeos de smart contracts), regulatorios (prohibición de emisores) y riesgo de perder el peg.
 

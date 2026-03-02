@@ -118,6 +118,28 @@ Primero, revisa tus ajustes y las claves API. Desactiva el bot y examina los reg
 *   [Qué es el bot DCA](/es/library/dca-strategy-crypto/)
 *   [Gestión de riesgos](/es/library/risk-management-crypto-trading-bots/)
 
-## Conclusión
+## Resumen
 
-Configurar un bot de trading en Bybit con el uso de claves API no es un proceso complicado y abre grandes oportunidades para el trading automatizado. Es importante seguir cuidadosamente todos los pasos para conectar las claves API y prestar especial atención a la configuración de seguridad. El uso correcto de bots de trading puede mejorar significativamente la eficiencia de tus operaciones y reducir el estrés emocional. Sin embargo, recuerda que la automatización no exime de la necesidad de comprender el mercado y gestionar los riesgos.
+Configurar un bot de trading en Bybit con el uso de claves API no es un proceso complicado y abre grandes oportunidades para el trading automatizado. Es importante seguir cuidadosamente todos los pasos para conectar las claves API y prestar especial atención a la configuración de seguridad. El uso correcto de bots de trading puede mejorar significativamente la eficiencia de tus operaciones y reducir el estrés emocional. Sin embargo, la automatización no exime de la necesidad de comprender el mercado y gestionar los riesgos. Para trading automatizado, se recomienda usar [Bybit](https://www.bybit.com/invite?ref=PWMD24).
+
+## FAQ
+
+**¿Qué configuraciones del bot son las más importantes?**
+
+Las clave: tamaño de posición (% del depósito), Take Profit, Stop Loss. También son importantes: tiempo de operación, pausa entre operaciones, número máximo de operaciones.
+
+**¿Es seguro el bot en Bybit?**
+
+El exchange es confiable, pero siempre hay riesgos. Usar solo la cantidad que se está dispuesto a perder. Comenzar con ajustes mínimos y probar en cuenta demo.
+
+**¿Cuánto se puede ganar con un bot?**
+
+No hay garantías. Los bots automatizan la estrategia, pero no garantizan ganancias. El mercado es impredecible: siempre existe riesgo de pérdidas.
+
+**¿Se necesita internet constante para el bot?**
+
+Sí, el bot debe estar en línea 24/7. Usar VPS (servidor virtual) o hosting en la nube. El ordenador de casa puede desconectarse.
+
+**¿Se pueden usar varios bots simultáneamente?**
+
+Sí, pero hay que vigilar el riesgo total. No invertir todo el dinero en una estrategia. Diversificar entre bots y pares.
