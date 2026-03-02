@@ -40,7 +40,7 @@ Tokenomics is one piece of fundamental analysis. It should be evaluated together
 
 Tokenomics shows how a crypto project's economy is structured. It's important to look at issuance, distribution, and real token utility. Sharp unlocks and a large team share are red flags.
 
-For portfolio analytics and tokenomics data, visit **[Veles Finance](https://veles.finance/invite/washmallay)**.
+For automated tokenomics-based trading strategies, visit **[Veles Finance](https://veles.finance/invite/washmallay)**.
 
 ## FAQ
 

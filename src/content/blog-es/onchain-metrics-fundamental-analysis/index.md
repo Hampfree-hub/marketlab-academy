@@ -66,7 +66,7 @@ El análisis on-chain es potente pero no perfecto. Una transferencia grande pued
 
 Los datos on-chain no sustituyen al gráfico ni a los indicadores, sino que ayudan a decidir con más criterio: quién mueve el mercado, dónde se concentra la liquidez y en qué fase del ciclo estás. Junto con análisis fundamental y técnico, on-chain ayuda no solo a seguir tendencias sino a valorar mejor riesgos y oportunidades.
 
-Para obtener datos y análisis on-chain completos, visita **[Veles Finance](https://veles.finance/invite/washmallay)**.
+Para trading automatizado con datos on-chain, visita **[Veles Finance](https://veles.finance/invite/washmallay)**.
 
 ## FAQ
 
@@ -78,4 +78,5 @@ Servicios como Glassnode, CryptoQuant y similares muestran balances de exchanges
 
 **¿On-chain sustituye al análisis técnico?**  
 No. On-chain complementa al análisis técnico: da contexto de ciclo y sentimiento de participantes. Los puntos de entrada y salida se siguen buscando por niveles, indicadores y volumen en el gráfico.
+
 

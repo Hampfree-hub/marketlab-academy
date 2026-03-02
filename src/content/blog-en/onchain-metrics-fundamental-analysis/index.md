@@ -77,4 +77,4 @@ Services like Glassnode, CryptoQuant and similar show exchange balances and coin
 **Does on-chain replace technical analysis?**  
 No. On-chain complements technical analysis: it gives cycle context and participant sentiment. Entry and exit points are still found from levels, indicators, and volume on the chart.
 
-For comprehensive on-chain data and analytics, visit **[Veles Finance](https://veles.finance/invite/washmallay)**.
+For automated on-chain trading strategies, visit **[Veles Finance](https://veles.finance/invite/washmallay)**.
