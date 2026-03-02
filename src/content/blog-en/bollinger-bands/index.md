@@ -65,6 +65,7 @@ In sideways markets, bounces off the band boundaries are clearer. In a trend, th
 - Band squeeze suggests a possible volatility spike; direction comes from trend or other indicators.
 - Combining with RSI, Williams %R and, when needed, volume improves signal filtering.
 
+For automated Bollinger Bands strategies, register on **[Bybit](https://www.bybit.com/invite?ref=PWMD24)**.
 
 ## FAQ
 

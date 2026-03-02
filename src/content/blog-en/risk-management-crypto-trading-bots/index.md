@@ -163,3 +163,4 @@ It's recommended to distribute capital between several bots (for example, 5 bots
 It's recommended to regularly analyze trading results and adjust parameters. When market conditions change or the deposit grows, it makes sense to adapt the settings.
 
 
+

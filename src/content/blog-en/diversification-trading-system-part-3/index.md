@@ -1,55 +1,55 @@
-Ôªø---
+---
 title: 'Diversification and Trading System Setup. Part 3: Tuning for Yourself and Mistakes'
 description: 'How to adapt your trading system: monitoring, tuning, common mistakes and how to avoid them.'
 pubDate: '2026-02-02'
 category: 'algo-trading'
 ---
 
-A system on paper and a system in practice are not the same. It‚Äôs important to monitor it, adjust when needed, and not repeat common mistakes.
+A system on paper and a system in practice are not the same. Itís important to monitor it, adjust when needed, and not repeat common mistakes.
 
-In this part ‚Äî tuning for yourself and what to avoid. Previous parts: [Part 1](/en/library/diversification-trading-system-part-1/) (why diversify), [Part 2](/en/library/diversification-trading-system-part-2/) (how to build rules and configure bots).
+In this part ó tuning for yourself and what to avoid. Previous parts: [Part 1](/en/library/diversification-trading-system-part-1/) (why diversify), [Part 2](/en/library/diversification-trading-system-part-2/) (how to build rules and configure bots).
 
 ## Monitoring and reporting
 
-It makes sense to check periodically: overall PnL and drawdown, bot execution (do orders fire by the rules, any API failures). If a bot doesn‚Äôt open or close positions when conditions are met ‚Äî possible misconfiguration or exchange API issue. Simple tracking ‚Äî at least in a spreadsheet or platform reports ‚Äî helps see which strategy or bot is performing and what to tune or turn off. How often to check depends on your timeframe: for daily strategies once a day or week is enough; for more active ones ‚Äî more often.
+It makes sense to check periodically: overall PnL and drawdown, bot execution (do orders fire by the rules, any API failures). If a bot doesnít open or close positions when conditions are met ó possible misconfiguration or exchange API issue. Simple tracking ó at least in a spreadsheet or platform reports ó helps see which strategy or bot is performing and what to tune or turn off. How often to check depends on your timeframe: for daily strategies once a day or week is enough; for more active ones ó more often.
 
 ## When and how to tune
 
-Don‚Äôt change rules after one trade: one drawdown or one profit is not a reason to rewrite the system. Tuning ‚Äî after a period (week, month): if the system is steadily in the red or drawdown exceeds what you accept, then revising parameters is justified. Before changing settings, test the new configuration on history ‚Äî [backtests](/en/library/what-are-backtests/) show how the system would have behaved in the past. Otherwise you risk fitting to past data and overfitting: nice on history, drawdown again in live.
+Donít change rules after one trade: one drawdown or one profit is not a reason to rewrite the system. Tuning ó after a period (week, month): if the system is steadily in the red or drawdown exceeds what you accept, then revising parameters is justified. Before changing settings, test the new configuration on history ó [backtests](/en/library/what-are-backtests/) show how the system would have behaved in the past. Otherwise you risk fitting to past data and overfitting: nice on history, drawdown again in live.
 
 ## Common mistakes
 
-- **Too many positions** ‚Äî too many bots or pairs at once; one drawdown drags the whole portfolio. It makes sense to limit the number of simultaneous positions (position lock on the platform or a manual cap).
-- **Ignoring stop losses** ‚Äî ‚ÄúI‚Äôll wait for a bounce‚Äù instead of closing by the rule; risk of losing control of risk and blurring system rules.
-- **No diversification** ‚Äî all volume in one asset, one bot, or one exchange; one failure hits all capital. See [Part 1](/en/library/diversification-trading-system-part-1/).
-- **Chasing the market** ‚Äî increasing size or aggression after a string of winning trades; often leads to overtrading and drawdown when the market turns.
+- **Too many positions** ó too many bots or pairs at once; one drawdown drags the whole portfolio. It makes sense to limit the number of simultaneous positions (position lock on the platform or a manual cap).
+- **Ignoring stop losses** ó ìIíll wait for a bounceî instead of closing by the rule; risk of losing control of risk and blurring system rules.
+- **No diversification** ó all volume in one asset, one bot, or one exchange; one failure hits all capital. See [Part 1](/en/library/diversification-trading-system-part-1/).
+- **Chasing the market** ó increasing size or aggression after a string of winning trades; often leads to overtrading and drawdown when the market turns.
 
 ## Pre-launch checklist
 
-Before putting the system in ‚Äúlive‚Äù mode, check:
+Before putting the system in ìliveî mode, check:
 
 - Entry and exit rules are written and clear; risk per trade is set and not exceeded.
 - Bots are configured, position and pair limits match diversification (assets, strategies, venues).
-- Venues checked: uptime, withdrawal limits, reputation ‚Äî see [exchange uptime and downtime](/en/library/exchange-uptime-downtime/).
+- Venues checked: uptime, withdrawal limits, reputation ó see [exchange uptime and downtime](/en/library/exchange-uptime-downtime/).
 - Key scenarios tested on history (backtest) where possible.
 
 ## Series wrap-up
 
-Diversification is part of trading system setup: by assets, strategies, and venues (Part 1). The system is entry/exit rules, position size and risk (Part 2). In practice it‚Äôs important to monitor results, tune thoughtfully, and not repeat common mistakes (Part 3). See also: [risk management](/en/library/risk-management-crypto-trading-bots/), [DCA](/en/library/dca-strategy-crypto/), [grid](/en/library/grid-trading-crypto/), [exchange uptime](/en/library/exchange-uptime-downtime/).
+Diversification is part of trading system setup: by assets, strategies, and venues (Part 1). The system is entry/exit rules, position size and risk (Part 2). In practice itís important to monitor results, tune thoughtfully, and not repeat common mistakes (Part 3). See also: [risk management](/en/library/risk-management-crypto-trading-bots/), [DCA](/en/library/dca-strategy-crypto/), [grid](/en/library/grid-trading-crypto/), [exchange uptime](/en/library/exchange-uptime-downtime/).`n`nFor portfolio analytics and diversification tools, visit **[Veles Finance](https://veles.finance/)**.
 
 ## FAQ
 
 **How often to check the system?**
 
-For daily strategies ‚Äî once a day/week. For scalping ‚Äî more often, every day.
+For daily strategies ó once a day/week. For scalping ó more often, every day.
 
 **When to change system settings?**
 
-After a period (week, month), not after one trade. If system is steadily in red ‚Äî revision is justified.
+After a period (week, month), not after one trade. If system is steadily in red ó revision is justified.
 
 **What is system overfitting?**
 
-When you tune parameters to past data ‚Äî looks good on history, drawdown again live.
+When you tune parameters to past data ó looks good on history, drawdown again live.
 
 **Why shouldn't I ignore stop losses?**
 
@@ -57,5 +57,6 @@ When you tune parameters to past data ‚Äî looks good on history, drawdown again 
 
 **How many assets in portfolio is enough?**
 
-Minimum 3‚Äî5 assets, distributed by capital. More ‚Äî better diversification.
+Minimum 3ó5 assets, distributed by capital. More ó better diversification.
+
 

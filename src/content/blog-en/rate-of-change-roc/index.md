@@ -56,6 +56,12 @@ Before using a ROC-based strategy in live trading, it is recommended to test it 
 - Zero crosses and extreme values give signals; ROC–price divergences can warn of a reversal.
 - ROC works well with RSI, Williams %R and MFI; in crypto, settings and levels are best tuned by timeframe and backtests.
 
+## Summary
+
+ROC measures price change velocity. Use zero crosses and divergences for signals. Combine with trend indicators.
+
+For automated ROC strategies, register on **[Bybit](https://www.bybit.com/invite?ref=PWMD24)**.
+
 ## FAQ
 
 **What ROC period to choose?**

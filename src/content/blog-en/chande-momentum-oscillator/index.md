@@ -106,18 +106,6 @@ Start trading on proven exchanges:
 
 ---
 
-## Related Materials
-
-**Basics and strategies:** be sure to study our flagship [ELDER 2.0 strategy](/en/library/spot-strategy-elder-20/), where CMO is a key filter. Also learn [how to start trading with a small deposit](/en/library/how-to-start-trading-small-deposit/).
-
-**Tools and automation:** for comprehensive analysis use [Stochastic Oscillator](/en/library/stochastic-oscillator/) and [Bollinger Bands](/en/library/bollinger-bands/). Step-by-step instructions on [setting up a trading bot on Bybit](/en/library/bybit-trading-bot-setup/) will help automate processes.
-
-**Experience and risks:** do not forget about [risk management when working with bots](/en/library/risk-management-crypto-trading-bots/) and check out our [live deposit diary](/en/library/surviving-drawdown-diary/).
-
----
-If you are interested in this strategy and want to follow the development of our project, visit the [About the Project](/en/about/) page — there we talk about our mission and how you can support our startup.
-
-
 ## Summary
 
 Chande Momentum Oscillator (CMO) is a versatile oscillator that provides traders with deep insights into market momentum. Its ability to react quickly to price changes and identify overbought/oversold conditions makes it a valuable addition to any trading strategy.

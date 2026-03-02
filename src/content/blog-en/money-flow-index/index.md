@@ -89,6 +89,12 @@ To summarize, **Money Flow Index** is universal and can be applied both for scal
 - Possible false signals with low liquidity
 - Need to combine with other indicators
 
+## Summary
+
+MFI combines price and volume to measure buying/selling pressure. Use it with RSI or Williams %R for confirmation. Backtest before live trading.
+
+For automated MFI strategies, register on **[Bybit](https://www.bybit.com/invite?ref=PWMD24)**.
+
 ## FAQ
 
 **What is a good MFI value?**

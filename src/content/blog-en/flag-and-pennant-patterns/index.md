@@ -147,5 +147,7 @@ Technically yes, but the reliability drops on lower timeframes. Prefer H4+ when 
 
 A real breakout often comes with volume expansion and a candle close beyond the boundary; a false breakout frequently snaps back inside the pattern quickly.
 
-**Bottom line:** Flags and pennants are effective continuation tools when traded with confirmation (breakout close + volume) and proper risk control. Always test your rules via **[backtesting](/en/library/what-are-backtests)**.
+**Summary:** Flags and pennants are effective continuation tools when traded with confirmation (breakout close + volume) and proper risk control. Always test your rules via **[backtesting](/en/library/what-are-backtests)**.
+
+For automated pattern trading, register on **[Bybit](https://www.bybit.com/invite?ref=PWMD24)**.
 

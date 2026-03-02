@@ -161,4 +161,8 @@ Not recommended for beginners. Leverage increases risks and can quickly lead to 
 **5. How often should I trade with a small deposit?**  
 Trading frequency depends on your chosen strategy. Don't overtrade — quality over quantity.
 
+## Summary
+
+Starting with a small deposit is a valid way to learn trading. Focus on education, risk management, and gradual growth. Choose exchanges with low fees like **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** to maximize your capital.
+
 

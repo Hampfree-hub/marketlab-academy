@@ -66,6 +66,8 @@ ATR does not show direction — only the size of swings. It is used together wit
 - ATR is used to set stop-losses (e.g. 1.5–2 × ATR) and trailing stops, and to adapt position size to volatility.
 - In crypto, ATR helps adjust stops and risk to a changing market.
 
+For automated trading with smart stops, register on **[Bybit](https://www.bybit.com/invite?ref=PWMD24)**.
+
 ## FAQ
 
 **What ATR period should I choose?**

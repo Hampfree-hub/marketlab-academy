@@ -132,6 +132,8 @@ Keltner Channel is most effective combined with oscillators for signal confirmat
 
 Keltner Channel is a reliable volatility indicator with smoother reaction to market changes compared to Bollinger Bands. It's effective for trend identification, entry point finding, and filtering false signals in algorithmic strategies.
 
+For automated trading with Keltner Channel, register on **[Bybit](https://www.bybit.com/invite?ref=PWMD24)**.
+
 ## FAQ
 
 **Keltner Channel or Bollinger Bands — which is better?**

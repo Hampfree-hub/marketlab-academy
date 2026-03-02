@@ -99,13 +99,3 @@ Start trading on proven exchanges:
 
 ---
 
-## Related Materials
-
-**Basics and strategies:** study the [ELDER 2.0 spot strategy](/en/library/spot-strategy-elder-20/), where Stochastic is the key trigger. More on getting started — in the article [how to start trading with a small deposit](/en/library/how-to-start-trading-small-deposit/).
-
-**Tools and automation:** for comprehensive analysis use [Bollinger Bands](/en/library/bollinger-bands/) and [CMO](/en/library/chande-momentum-oscillator/). Trade automation — in [setting up a bot on Bybit](/en/library/bybit-trading-bot-setup/).
-
-**Experience and risks:** be sure to read about [risk management when working with bots](/en/library/risk-management-crypto-trading-bots/) and [diversification](/en/library/diversification-trading-system-part-1/) to protect your capital.
-
----
-

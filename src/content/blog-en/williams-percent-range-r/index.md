@@ -60,6 +60,12 @@ It suits short- and medium-term traders (scalping, intraday). It works well in s
 
 Beginners benefit from its simple interpretation, but need discipline when the market is in a strong directional move.
 
+## Summary
+
+Williams %R shows overbought/oversold zones (-20/-80). Use with trend indicators to filter false signals. Works well with RSI and MFI for confirmation.
+
+For automated Williams %R strategies, register on **[Bybit](https://www.bybit.com/invite?ref=PWMD24)**.
+
 ## FAQ
 
 **What settings for Williams %R to use?**

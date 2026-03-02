@@ -194,3 +194,9 @@ Bitcoin uses cryptography to protect transactions, making it secure. However, se
 **Where can I buy Bitcoin?**
 
 Bitcoin can be purchased through cryptocurrency exchanges, online exchangers, or payment systems. For more details, see [Bitcoin Basics](/en/library/bitcoin-basics/).
+
+## Summary
+
+Bitcoin is the first decentralized cryptocurrency with a capped supply. It serves as digital gold and a hedge against inflation. Learn the basics before investing.
+
+For buying Bitcoin with low fees, register on **[Bybit](https://www.bybit.com/invite?ref=PWMD24)**.

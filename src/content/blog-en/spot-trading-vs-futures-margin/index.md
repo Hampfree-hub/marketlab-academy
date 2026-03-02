@@ -53,6 +53,8 @@ Futures are contracts to buy or sell an asset at a predetermined price at a spec
 
 Each trading instrument has its place in a trader's toolkit. Spot trading provides safety and ownership, margin offers amplified gains (and losses), and futures provide flexibility to trade in any market direction. Start simple, learn the mechanics, and only then gradually move to more complex instruments with higher leverage.
 
+For spot and futures trading with low fees, register on **[Bybit](https://www.bybit.com/invite?ref=PWMD24)**.
+
 ## FAQ
 
 **What's safer — spot or futures?**
