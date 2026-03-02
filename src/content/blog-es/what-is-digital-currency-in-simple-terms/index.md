@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Qué es la moneda digital en términos simples'
 description: 'Qué son las monedas digitales, en qué se diferencian de las criptomonedas y del dinero fiat. Ventajas, inconvenientes y futuro de las monedas digitales de banco central (CBDC).'
 pubDate: '2026-01-15'
@@ -47,6 +47,8 @@ Ya en marcha:
 - **Rublo digital:** Rusia está probando una plataforma para pagos minoristas y mayoristas.
 - **Euro digital:** La UE prepara su lanzamiento en los próximos años.
 
+Para trading de criptomonedas con bajas comisiones, regístrate en **[Bybit](https://www.bybit.com/es/invite?ref=PWMD24)**.
+
 ## FAQ
 
 **¿Moneda digital y criptomoneda son lo mismo?**  
@@ -57,3 +59,4 @@ El blockchain y la criptografía moderna ofrecen una protección sólida. La seg
 
 **¿Sustituirá la moneda digital al efectivo?**  
 A largo plazo, probablemente. A corto plazo coexistirán como formas complementarias de dinero.
+

@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Cuña alcista en trading: qué es y cómo usarla'
 description: 'Cuña alcista: figura de análisis técnico. Cómo reconocerla, cómo operarla. Diferencias con otros patrones, señales de entrada y salida.'
 pubDate: '2026-01-24'
@@ -53,6 +53,8 @@ En mercados cripto volátiles, los bots son cada vez más usados. Muchos detecta
 
 Entender y usar bien la cuña alcista puede mejorar los resultados. Puede combinarse con otras herramientas, como el [RSI](/es/library/technical-analysis-rsi/) o las [velas doji](/es/library/what-are-doji-candles/), para afinar el timing. Para análisis de volumen e impulso, el [índice de flujo de dinero (MFI)](/es/library/money-flow-index/) es útil, y para identificar zonas de sobrecompra, el [oscilador Williams %R](/es/library/williams-percent-range-r/) puede ayudar.
 
+Para trading automatizado de patrones, regístrate en **[Bybit](https://www.bybit.com/es/invite?ref=PWMD24)**.
+
 ## FAQ
 
 **¿La cuña alcista es alcista o bajista?**
@@ -74,4 +76,5 @@ En el canal las líneas son paralelas; en la cuña convergen. La cuña indica es
 **¿Qué timeframe es mejor para este patrón?**
 
 H1 y superior. Los timeframes bajos dan muchas rupturas falsas.
+
 

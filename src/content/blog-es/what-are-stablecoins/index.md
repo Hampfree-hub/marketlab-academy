@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Qué son las stablecoins (explicación simple)'
 description: 'Stablecoins: criptomonedas con precio vinculado (normalmente al USD). USDT, USDC, DAI: para qué sirven, cómo mantienen el peg y riesgos.'
 pubDate: '2026-01-24'
@@ -42,6 +42,8 @@ En el mercado cripto se usan para:
 
 Los stablecoins son una parte fundamental del ecosistema cripto: conectan los rails cripto con el valor fiat y hacen el trading y DeFi más prácticos. Lo principal es recordar los riesgos del emisor y las restricciones regulatorias.
 
+Para trading y DeFi con bajas comisiones, regístrate en **[Bybit](https://www.bybit.com/es/invite?ref=PWMD24)**.
+
 ## FAQ
 
 **¿En qué se diferencian los stablecoins de las criptomonedas regulares?**
@@ -63,4 +65,5 @@ Los más grandes (USDT, USDC) afirman estar respaldados por reservas. USDC ha pa
 **¿Es seguro guardar dinero en stablecoins?**
 
 Relativamente. Es más seguro que en criptomonedas volátiles, pero existen riesgos: técnicos (hackeos de smart contracts), regulatorios (prohibición de emisores) y riesgo de perder el peg.
+
 

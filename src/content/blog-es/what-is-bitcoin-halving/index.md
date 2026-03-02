@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Qué es el halving de Bitcoin y para qué sirve'
 description: 'Halving de Bitcoin: reducción a la mitad de la recompensa de mineros cada ~4 años. Por qué existe, cómo afecta a la emisión y al precio del BTC. Historia y qué esperar.'
 pubDate: '2026-01-24'
@@ -71,6 +71,8 @@ Históricamente, el BTC ha tendido a subir tras los halvings. En 2012 subió cas
 
 Conviene recordar que el halving no es el único factor. Las condiciones macro, la regulación, las mejoras tecnológicas y el sentimiento de los inversores también cuentan y añaden volatilidad. Para entender mejor Bitcoin, consulta la [guía completa de Bitcoin](/es/library/what-bitcoin-everything-you-need-know/), que cubre historia, principios y minería en detalle.
 
+Para trading de Bitcoin con bajas comisiones, regístrate en **[Bybit](https://www.bybit.com/es/invite?ref=PWMD24)**.
+
 ## FAQ
 
 **¿Qué es el halving en palabras simples?**
@@ -92,4 +94,5 @@ Los ingresos caen a la mitad. Los mineros menos eficientes se van, el hashrate b
 **¿Cuántos halvings habrá en total?**
 
 Unos 33 (cuando la recompensa baje de 1 satoshi, la minería se detiene en 21M BTC).
+
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Qué es la tokenómica (explicación simple)'
 description: 'Tokenómica: diseño económico de un proyecto cripto — oferta, distribución, utilidad, emisiones, burns y calendario de unlocks. Qué revisar y por qué.'
 pubDate: '2026-01-24'
@@ -40,6 +40,8 @@ La tokenómica es parte del análisis fundamental. Conviene verla junto con prod
 
 La tokenómica muestra cómo está estructurada la economía de un proyecto cripto. Es importante observar emisión, distribución y utilidad real del token. Desbloqueos abruptos y gran asignación al equipo son señales de alerta.
 
+Para análisis de portafolio y datos de tokenomics, visita **[Veles Finance](https://veles.finance/invite/washmallay)**.
+
 ## FAQ
 
 **¿Qué es FDV y por qué importa?**
@@ -61,4 +63,5 @@ Es un mecanismo donde los tokens se eliminan permanentemente de circulación. Es
 **¿La tokenómica basta para evaluar un proyecto?**
 
 No, es solo una parte. También hay que ver producto, equipo, competidores, riesgos regulatorios. Buena tokenómica no salva un mal proyecto.
+
 
