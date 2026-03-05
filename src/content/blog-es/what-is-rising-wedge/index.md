@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Cuña alcista en trading: qué es y cómo usarla'
 description: 'Cuña alcista: figura de análisis técnico. Cómo reconocerla, cómo operarla. Diferencias con otros patrones, señales de entrada y salida.'
 pubDate: '2026-01-24'

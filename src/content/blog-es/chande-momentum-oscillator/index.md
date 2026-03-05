@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Indicador Chande Momentum Oscillator (CMO)'
 description: 'CMO: qué es, fórmula, zonas de sobrecompra y sobreventa, señales de compra y venta, relación con la estrategia ELDER.'
 pubDate: '2026-02-13'

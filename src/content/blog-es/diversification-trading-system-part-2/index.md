@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Diversificación y Configuración del Sistema de Trading. Parte 2: Cómo Construir el Sistema'
 description: 'Cómo construir y configurar un sistema de trading: reglas de entrada y salida, tamaño de posición, stop-losses, elección y configuración de bots.'
 pubDate: '2026-03-05'

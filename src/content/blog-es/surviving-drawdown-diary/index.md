@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'CГіmo sobrevivimos al drawdown: diario de una cuenta en vivo'
 description: 'Cuando Bitcoin cae y el depГіsito se reduce: nuestro plan de supervivencia, por quГ© no promediamos a la baja sin plan y cГіmo pasar el drawdown sin romper el sistema. Cuenta en vivo, drawdown real.'
 pubDate: '2026-02-05'

@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Grid Trading on the Crypto Market'
 description: 'What grid trading is in crypto: how the order grid works, when the strategy is effective, pros and cons, and how it relates to sideways markets.'
 pubDate: '2026-01-30'

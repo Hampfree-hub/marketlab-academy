@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Qué es el halving de Bitcoin y para qué sirve'
 description: 'Halving de Bitcoin: reducción a la mitad de la recompensa de mineros cada ~4 años. Por qué existe, cómo afecta a la emisión y al precio del BTC. Historia y qué esperar.'
 pubDate: '2026-01-24'

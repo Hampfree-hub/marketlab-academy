@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Qué son las stablecoins (explicación simple)'
 description: 'Stablecoins: criptomonedas con precio vinculado (normalmente al USD). USDT, USDC, DAI: para qué sirven, cómo mantienen el peg y riesgos.'
 pubDate: '2026-01-24'

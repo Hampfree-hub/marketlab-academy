@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Qué es la moneda digital en términos simples'
 description: 'Qué son las monedas digitales, en qué se diferencian de las criptomonedas y del dinero fiat. Ventajas, inconvenientes y futuro de las monedas digitales de banco central (CBDC).'
 pubDate: '2026-01-15'

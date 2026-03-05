@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Análisis fundamental en cripto: checklist de 15 minutos'
 description: 'Checklist simple por token en lugar de un modelo complejo. Info básica, proyecto y equipo, tokenómica, métricas on-chain, banderas rojas. Para traders.'
 pubDate: '2026-01-31'

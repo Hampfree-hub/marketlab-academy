@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Prisma 5.5: Configuración de la Estrategia en la Plataforma Veles'
 description: 'Analizamos la configuración de la estrategia propia Prisma 5.5 en la plataforma Veles: indicadores de entrada, filtros, gestión de la cuadrícula de órdenes y recomendaciones de pares.'
 pubDate: '2026-02-28'

@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Análisis fundamental en finanzas tradicionales y en cripto'
 description: 'Por qué el análisis fundamental importa tanto como el técnico. Clásico vs cripto, métricas on-chain, marco simple para traders. Breve y al grano.'
 pubDate: '2026-01-31'

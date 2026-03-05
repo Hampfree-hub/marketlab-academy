@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Spot, futuros y margen: qué diferencias hay'
 description: 'Comparación entre spot, margen y futuros: apalancamiento, liquidación, cuándo elegir cada uno.'
 pubDate: '2026-02-13'

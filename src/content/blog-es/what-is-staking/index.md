@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Qué es el staking de criptomonedas'
 description: 'Guía práctica de staking: cómo funciona, tipos (exchange vs on-chain), riesgos y cómo empezar.'
 pubDate: '2026-02-05'

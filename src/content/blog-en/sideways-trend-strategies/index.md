@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Trading Strategies for Sideways Markets'
 description: 'How to trade a range (sideways trend): range trading, grid trading, oscillator signals, and risk-management rules.'
 pubDate: '2026-01-27'

@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Diversificación y Configuración del Sistema de Trading. Parte 3: Ajuste y Errores'
 description: 'Cómo adaptar tu sistema de trading: monitoreo, ajuste, errores comunes y cómo evitarlos.'
 pubDate: '2026-03-05'

@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'What Is Crypto Staking'
 description: 'A practical guide to staking: how it works, what you can stake, main types (centralized vs on-chain), risks, and how to start.'
 pubDate: '2026-02-05'

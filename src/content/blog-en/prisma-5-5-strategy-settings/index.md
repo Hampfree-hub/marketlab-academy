@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Prisma 5.5: Strategy Settings on the Veles Platform'
 description: 'Breaking down the settings of the Prisma 5.5 proprietary strategy on the Veles platform: entry indicators, filters, order grid management, and pair recommendations.'
 pubDate: '2026-02-28'

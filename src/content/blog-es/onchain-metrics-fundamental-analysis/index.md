@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Métricas on-chain como parte del análisis fundamental: MVRV, SOPR, reservas en exchanges y flujos de ballenas'
 description: 'Cómo usar datos on-chain en el análisis fundamental. MVRV, SOPR, flujos de monedas a y desde exchanges, zonas de liquidación. Para traders intermedios y principiantes — sin simplificar de más.'
 pubDate: '2026-01-31'

@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Falsos rompimientos en trading'
 description: 'Cómo identificar y operar falsos rompimientos de soporte y resistencia: setups, filtros, reglas de confirmación y errores típicos.'
 pubDate: '2026-01-27'
