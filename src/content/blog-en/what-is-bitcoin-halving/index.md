@@ -79,7 +79,7 @@ It is important to remember that halving is not the only driver of price. Macro 
 
 Bitcoin halving is a programmed supply control mechanism that reduces miner rewards every ~4 years. Historically, this has correlated with price rallies, though other factors like regulation and macro conditions also matter.
 
-For Bitcoin trading with low fees, register on **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)**.
+For Bitcoin trading with low fees, register on **Bybit**.
 
 ## FAQ
 

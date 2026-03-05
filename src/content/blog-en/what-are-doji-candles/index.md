@@ -13,11 +13,11 @@ The article explains what doji are, what types exist, how to interpret them corr
 
 **Doji candles** are elements of candlestick analysis that reflect a state of indecision in the market. In the classic Japanese model, a doji appears as a candle with a very small body (or none at all) and often pronounced wicks.
 
-This shape means that over the chosen period, buyers and sellers were roughly in balance: the close matched the open or stayed very close to it. The market effectively “stalled”—neither bulls nor bears managed to set the direction.
+This shape means that over the chosen period, buyers and sellers were roughly in balance: the close matched the open or stayed very close to it. The market effectively "stalled"—neither bulls nor bears managed to set the direction.
 
 ### Origin and Meaning
 
-The term “doji” comes from Japanese candlestick analysis. Literally it is linked to the idea of “balance” or “indecision”: the candle shows price movement within the period but without a clear outcome. That is why doji are often treated not as a standalone signal to act, but as a warning: a change in momentum or a pause before the trend continues is possible.
+The term "doji" comes from Japanese candlestick analysis. Literally it is linked to the idea of "balance" or "indecision": the candle shows price movement within the period but without a clear outcome. That is why doji are often treated not as a standalone signal to act, but as a warning: a change in momentum or a pause before the trend continues is possible.
 
 ### Relation to Other Candlestick Patterns
 
@@ -47,7 +47,7 @@ A long upper wick with no lower wick. Price rallied during the period but gave b
 
 ### Four-Price Doji
 
-A rare case: open, close, high and low all coincide. The candle looks like a horizontal line with no body or wicks. Typical of illiquid instruments or extremely “frozen” markets. On liquid assets it is rare and often related to data display quirks.
+A rare case: open, close, high and low all coincide. The candle looks like a horizontal line with no body or wicks. Typical of illiquid instruments or extremely "frozen" markets. On liquid assets it is rare and often related to data display quirks.
 
 ## Meaning in Technical Analysis
 
@@ -57,7 +57,7 @@ A doji on the chart often serves as a warning of a shift in sentiment or a pause
 
 A doji after an extended rally can mean buyers are losing control and momentum is fading. A gravestone or long-legged doji on high volume is especially telling. Wait for confirmation from the next candle or [indicator signals](/en/library/technical-analysis-rsi) before considering a short.
 
-A strong uptrend often ends not with a sharp drop but with a “hang”: several candles with small bodies, including doji. That is a decision zone—profit-taking by some and dip-buying by others. Once the next candle closes clearly lower, especially below the doji low, the odds of a shift increase.
+A strong uptrend often ends not with a sharp drop but with a "hang": several candles with small bodies, including doji. That is a decision zone—profit-taking by some and dip-buying by others. Once the next candle closes clearly lower, especially below the doji low, the odds of a shift increase.
 
 ### At the Bottom of a Trend
 
@@ -69,7 +69,7 @@ A dragonfly at support shows sellers pushed price down, but by the close buyers 
 
 In a strong trend, a doji often indicates a pause (consolidation) before the move continues. Do not automatically treat it as a reversal; a pullback and then continuation in the trend direction is possible.
 
-In trending phases, doji often form “islands” before the next impulse. Watch the overall structure: if the uptrend is intact (e.g. a series of higher lows), a single doji is more likely a breather than a trend change.
+In trending phases, doji often form "islands" before the next impulse. Watch the overall structure: if the uptrend is intact (e.g. a series of higher lows), a single doji is more likely a breather than a trend change.
 
 ## How to Trade Using Doji
 
@@ -85,7 +85,7 @@ A doji on high volume carries much more weight than on low volume. Rising volume
 
 ### Levels and Timeframes
 
-The pattern is most reliable at strong historical support or resistance. On higher timeframes (daily, weekly) doji are often more meaningful than on lower ones. On 4H and daily, there tend to be fewer false signals, and the “doji + level” combo usually gives cleaner entries than on intraday charts.
+The pattern is most reliable at strong historical support or resistance. On higher timeframes (daily, weekly) doji are often more meaningful than on lower ones. On 4H and daily, there tend to be fewer false signals, and the "doji + level" combo usually gives cleaner entries than on intraday charts.
 
 ### Combining with Indicators and Backtesting
 
@@ -93,7 +93,7 @@ Doji can be used in trading systems together with [RSI](/en/library/technical-an
 
 ### Short Example
 
-“Doji at level” strategy: on the daily chart, price approaches strong support and a dragonfly forms. Volume is above average, [RSI](/en/library/technical-analysis-rsi) is oversold. Entry—after the next candle closes above the doji high. Stop—below the doji low or below support. Such a setup is worth testing via [backtest](/en/library/what-are-backtests).
+"Doji at level" strategy: on the daily chart, price approaches strong support and a dragonfly forms. Volume is above average, [RSI](/en/library/technical-analysis-rsi) is oversold. Entry—after the next candle closes above the doji high. Stop—below the doji low or below support. Such a setup is worth testing via [backtest](/en/library/what-are-backtests).
 
 ## Mistakes When Interpreting Doji
 
@@ -115,13 +115,17 @@ On lower timeframes there is more noise. Doji tend to be more useful on 4H, dail
 
 ### Ignoring Volume
 
-A doji on unusually low volume can be a random “stalled” candle with little meaning. A doji on a volume spike is usually more informative and more often precedes meaningful moves.
+A doji on unusually low volume can be a random "stalled" candle with little meaning. A doji on a volume spike is usually more informative and more often precedes meaningful moves.
+
+## Summary
+
+Briefly: the key points are above; use them as a practical checklist and combine with risk management.
 
 ## FAQ
 
 **Does a doji always mean a reversal?** No. A doji reflects balance between buyers and sellers. It can precede a reversal, a pause, or trend continuation after brief consolidation. Context and confirmation matter.
 
-**Which doji is best for entry?** Dragonflies at support often feature in upside reversals; gravestones at resistance in downside reversals. A long-legged doji can precede a turn either way. In all cases, location, volume, and confirmation matter more than the “type” alone.
+**Which doji is best for entry?** Dragonflies at support often feature in upside reversals; gravestones at resistance in downside reversals. A long-legged doji can precede a turn either way. In all cases, location, volume, and confirmation matter more than the "type" alone.
 
 **Should doji be combined with indicators?** Yes. Confirmation with [RSI](/en/library/technical-analysis-rsi) or [MFI](/en/library/money-flow-index) overbought/oversold zones and support/resistance improves reliability.
 
@@ -129,10 +133,8 @@ A doji on unusually low volume can be a random “stalled” candle with little 
 
 **Can you trade only with doji?** Theoretically yes, but in practice doji work better as one element of a system: together with trend, levels, volume, and indicators. [Backtesting](/en/library/what-are-backtests) helps check how such a combination performed in the past.
 
-**How does doji differ from other reversal candles?** Doji emphasise indecision: open ≈ close. Patterns like engulfing or pin bars show one side already in control. Doji are often a “warning”; the others are already “action”.
+**How does doji differ from other reversal candles?** Doji emphasise indecision: open ≈ close. Patterns like engulfing or pin bars show one side already in control. Doji are often a "warning"; the others are already "action".
 
 ---
 
 **Bottom line:** Doji candles are a useful technical analysis tool but work best together with context, levels, volume, and indicators. Confirmation from the next candle and stop-losses are recommended. Strategies using doji should be [tested on history](/en/library/what-are-backtests) before live trading. Different doji types—dragonfly, gravestone, long-legged—convey different meaning depending on where they appear; the key to using them lies in context and confirmation, not in the candle shape alone.
-
-For automated candlestick pattern trading, register on **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)**.

@@ -169,6 +169,10 @@ Bitcoin tiene tanto ventajas como desventajas que son importantes de considerar 
 
 **Minería Intensiva en Energía:** El proceso de minería requiere un consumo significativo de electricidad, generando preocupaciones ambientales.
 
+## Resumen
+
+En resumen: los puntos clave están arriba; úsalos como checklist práctico y combínalos con gestión de riesgos.
+
 ## FAQ
 
 **¿Qué es Bitcoin en términos simples?**

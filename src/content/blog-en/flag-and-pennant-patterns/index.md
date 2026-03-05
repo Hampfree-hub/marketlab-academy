@@ -125,6 +125,10 @@ These patterns can be used in bots. A bot can:
 
 Before going live, test the logic on historical data with **[backtesting](/en/library/what-are-backtests)**.
 
+## Summary
+
+Briefly: the key points are above; use them as a practical checklist and combine with risk management.
+
 ## FAQ
 
 **What is the difference between a flag and a pennant?**
@@ -148,6 +152,3 @@ Technically yes, but the reliability drops on lower timeframes. Prefer H4+ when 
 A real breakout often comes with volume expansion and a candle close beyond the boundary; a false breakout frequently snaps back inside the pattern quickly.
 
 **Summary:** Flags and pennants are effective continuation tools when traded with confirmation (breakout close + volume) and proper risk control. Always test your rules via **[backtesting](/en/library/what-are-backtests)**.
-
-For automated pattern trading, register on **[Bybit](https://www.bybit.com/invite?ref=PWMD24)**.
-

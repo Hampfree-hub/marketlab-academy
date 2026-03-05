@@ -89,6 +89,10 @@ Para resumir, el **Money Flow Index** es universal y puede aplicarse tanto para 
 - Posibles señales falsas con baja liquidez
 - Necesidad de combinar con otros indicadores
 
+## Resumen
+
+En resumen: los puntos clave están arriba; úsalos como checklist práctico y combínalos con gestión de riesgos.
+
 ## FAQ
 
 **¿Qué valor de MFI es bueno?**

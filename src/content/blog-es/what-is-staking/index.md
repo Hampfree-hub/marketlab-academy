@@ -52,7 +52,7 @@ Existen varios tipos de staking, cada uno con sus características, riesgos, ren
 
 ### Staking centralizado
 
-El staking centralizado se realiza a través de exchanges de criptomonedas como [Bybit](https://www.bybit.com/invite?ref=PWMD24). En este caso, los usuarios entregan sus activos a la plataforma, que se encarga del staking y distribuye las recompensas.
+El staking centralizado se realiza a través de exchanges de criptomonedas como Bybit. En este caso, los usuarios entregan sus activos a la plataforma, que se encarga del staking y distribuye las recompensas.
 
 **Ventajas:**
 
@@ -196,7 +196,7 @@ Ethereum es una de las criptomonedas más populares para staking. Tras la transi
 
 Para empezar a hacer staking de Ethereum en Bybit:
 
-1. [Regístrate en Bybit](https://www.bybit.com/invite?ref=PWMD24) (si aún no lo has hecho; al registrarte a través del enlace, obtendrás apoyo del proyecto).
+1. Regístrate en Bybit
 2. Deposita ETH en tu cuenta.
 3. Ve a la sección "Earn" o "Staking".
 4. Elige Ethereum.

@@ -102,9 +102,9 @@ Automated spot trading is safer: the bot won't lose all funds due to liquidation
 ## Exchanges Supporting Spot Trading
 
 All major cryptocurrency exchanges provide spot trading:
-- **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** — user-friendly interface, trading bot support
-- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — low fees, bonuses for newcomers
-- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — social trading and copy trading
+
+
+
 
 When choosing an exchange, it's important to consider: trading pair liquidity, fee sizes, API availability for connecting bots, and platform reliability.
 
@@ -130,6 +130,10 @@ Phishing sites, fake coins, scam projects. Before buying a lesser-known cryptocu
 4.  **Don't Trade Emotionally** — create a trading plan and stick to it.
 5.  **Consider Fees** — with frequent trading, fees can eat into profits.
 6.  **Use 2FA and Cold Storage** to protect funds.
+
+## Summary
+
+Briefly: the key points are above; use them as a practical checklist and combine with risk management.
 
 ## FAQ
 

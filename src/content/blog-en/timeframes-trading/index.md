@@ -47,16 +47,14 @@ An approach where trend and zones are defined on a higher timeframe and the entr
 
 ## Timeframes and the Crypto Market
 
-Cryptocurrencies trade around the clock; volume and volatility can change a lot during the day. On low timeframes (M1–M15) this creates many moves but also many false breakouts. [How to start with a small deposit](/en/library/how-to-start-trading-small-deposit/) often advises not to focus on M1 but to start with M15–H1 to combine frequent trades with more readable levels.
+Cryptocurrencies trade around the clock; volume and volatility can change a lot during the day. On low timeframes (M1–M15) this creates many moves but also many false breakout. [How to start with a small deposit](/en/library/how-to-start-trading-small-deposit/) often advises not to focus on M1 but to start with M15–H1 to combine frequent trades with more readable levels.
 
 ## Summary
 
 - Timeframe is the interval of one candle (M1, H4, D1, etc.). It drives "noise", number of signals, and strategy type.
 - Lower (M1–M15) for scalping and fast entries; higher (H4, D1) for trend and swing.
-
-For multi-timeframe analysis and automated trading, register on **[Bybit](https://www.bybit.com/invite?ref=PWMD24)**.
 - Indicator periods are set in candles of the chosen timeframe; settings are best checked in [backtests](/en/library/what-are-backtests/).
-- Multi-timeframe analysis: trend on the higher timeframe, entry on the lower one — helps filter false signals.
+- Multi-timeframe analysis: trend on the higher timeframe, entry on the lower one — helps filter false signals. For automated multi-timeframe strategies, traders often use platforms like [Veles](https://veles.finance/invite/washmallay) — a popular service for running trading bots.
 
 ## FAQ
 
@@ -79,4 +77,3 @@ Period is measured in candles. RSI 14 on M5 = 14×5=70 minutes, on D1 = 14 days.
 **What timeframe is best for scalping?**
 
 M1–M5. But be ready for high trade frequency, commissions, and noise. Many suggest starting with M15.
-

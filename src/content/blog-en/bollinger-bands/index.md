@@ -46,7 +46,7 @@ One indicator can give false signals: e.g. price at the lower band but the trend
 
 ## Combining with Other Indicators
 
-- **Bollinger Bands + RSI:** RSI shows overbought/oversold, the bands show extreme deviation of price from the average. Agreement (e.g. RSI &lt; 30 and touch of lower band) increases the chance of a bounce.
+- **Bollinger Bands + RSI:** RSI shows overbought/oversold, the bands show extreme deviation of price from the average. Agreement (e.g. RSI < 30 and touch of lower band) increases the chance of a bounce.
 - **Bollinger Bands + Williams %R:** as in the [Williams %R](/en/library/williams-percent-range-r/) article, %R and the bands together help spot when price has moved far from the average and the oscillator confirms the extreme.
 - **Bollinger Bands + volume:** a volume spike on a bounce from the lower or upper band can confirm the strength of the reversal.
 
@@ -58,14 +58,14 @@ The crypto market is highly volatile. Bands on crypto pairs often widen a lot on
 
 In sideways markets, bounces off the band boundaries are clearer. In a trend, the bands can be used as zones of possible correction, with trade direction aligned to the trend.
 
+For automated Bollinger Bands strategies, traders often use platforms like [Veles](https://veles.finance/invite/washmallay) — a popular service for running trading bots with customizable indicator settings.
+
 ## Summary
 
 - Bollinger Bands: middle line (SMA) and two bands at K × standard deviation. Default period 20, multiplier 2.
 - Touch of lower band — possible oversold; upper — overbought. In a trend, price can ride the band.
 - Band squeeze suggests a possible volatility spike; direction comes from trend or other indicators.
-- Combining with RSI, Williams %R and, when needed, volume improves signal filtering.
-
-For automated Bollinger Bands strategies, register on **[Bybit](https://www.bybit.com/invite?ref=PWMD24)**.
+- Combining with [RSI](/en/library/technical-analysis-rsi/), [Williams %R](/en/library/williams-percent-range-r/) and, when needed, volume improves signal filtering.
 
 ## FAQ
 
@@ -88,5 +88,3 @@ Not directly. It's a volatility indicator, not direction. Use with RSI or Willia
 **Can I use them on crypto?**
 
 Yes, but with caution: crypto is more volatile, default settings may produce many false signals. Test on history.
-
-

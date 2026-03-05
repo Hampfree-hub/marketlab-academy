@@ -83,7 +83,7 @@ Las señales pueden usarse a mano o con bots. Si se usan bots, configurarlos bie
 
 Adaptarse al régimen de mercado. En un uptrend fuerte, centrarse en señales alcistas; en lateral, plantearse operativas más cortas o scalping. Ajustar el uso a la fase actual.
 
-No seguir cada señal a ciegas. Formar criterio propio, revisar entradas pasadas y aprender a distinguir señales fuertes de débiles. Eso mejora tanto resultados como crecimiento como trader. Para comprobar la efectividad de las señales, [probar estrategias con backtests](/es/library/what-are-backtests/) es esencial, y el [indicador RSI](/es/library/technical-analysis-rsi/) es una fuente común de señales. Para análisis de volumen y zonas de entrada, el [índice de flujo de dinero (MFI)](/es/library/money-flow-index/) puede ser útil. Para trading automatizado, se pueden usar [bots de trading en Bybit](https://www.bybit.com/invite?ref=PWMD24).
+No seguir cada señal a ciegas. Formar criterio propio, revisar entradas pasadas y aprender a distinguir señales fuertes de débiles. Eso mejora tanto resultados como crecimiento como trader. Para comprobar la efectividad de las señales, [probar estrategias con backtests](/es/library/what-are-backtests/) es esencial, y el [indicador RSI](/es/library/technical-analysis-rsi/) es una fuente común de señales. Para análisis de volumen y zonas de entrada, el [índice de flujo de dinero (MFI)](/es/library/money-flow-index/) puede ser útil. Para trading automatizado, se pueden usar bots de trading en Bybit.
 
 ## Resumen
 

@@ -42,7 +42,7 @@ En el mercado cripto se usan para:
 
 Los stablecoins son una parte fundamental del ecosistema cripto: conectan los rails cripto con el valor fiat y hacen el trading y DeFi más prácticos. Lo principal es recordar los riesgos del emisor y las restricciones regulatorias.
 
-Para trading y DeFi con bajas comisiones, regístrate en **[Bybit](https://www.bybit.com/es/invite?ref=PWMD24)**.
+Para trading y DeFi con bajas comisiones, regístrate en **Bybit**.
 
 ## FAQ
 

@@ -71,7 +71,11 @@ Históricamente, el BTC ha tendido a subir tras los halvings. En 2012 subió cas
 
 Conviene recordar que el halving no es el único factor. Las condiciones macro, la regulación, las mejoras tecnológicas y el sentimiento de los inversores también cuentan y añaden volatilidad. Para entender mejor Bitcoin, consulta la [guía completa de Bitcoin](/es/library/what-bitcoin-everything-you-need-know/), que cubre historia, principios y minería en detalle.
 
-Para trading de Bitcoin con bajas comisiones, regístrate en **[Bybit](https://www.bybit.com/es/invite?ref=PWMD24)**.
+Para trading de Bitcoin con bajas comisiones, regístrate en **Bybit**.
+
+## Resumen
+
+En resumen: los puntos clave están arriba; úsalos como checklist práctico y combínalos con gestión de riesgos.
 
 ## FAQ
 

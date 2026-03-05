@@ -151,6 +151,10 @@ Un indicador similar es [Williams Percent Range](/es/library/williams-percent-ra
 
 **Filtrado Requerido:** Para aumentar la confiabilidad, se requiere combinar RSI con otros indicadores o métodos de análisis.
 
+## Resumen
+
+En resumen: los puntos clave están arriba; úsalos como checklist práctico y combínalos con gestión de riesgos.
+
 ## FAQ
 
 **¿Qué es RSI en términos simples?**

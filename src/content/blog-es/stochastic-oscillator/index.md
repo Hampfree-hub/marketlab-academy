@@ -90,23 +90,9 @@ El [CMO](/es/library/chande-momentum-oscillator/) mide el impulso puro directame
 
 ## Resumen
 
+Indicadores clave como el [Índice de Flujo de Dinero (MFI)](/es/library/money-flow-index/) y las [Bandas de Bollinger](/es/library/bollinger-bands/) complementan el análisis, ofreciendo una imagen más completa del mercado.
+
 El oscilador estocástico es una herramienta eficaz para encontrar puntos de entrada en el volátil mercado de criptomonedas. Como cualquier oscilador, puede dar señales falsas en tendencias fuertes, por lo que debe usarse con filtros de tendencia o volatilidad.
 
-Comienza a operar en exchanges probados:
-- **[Bybit](https://www.bybit.com/es/invite?ref=PWMD24)** — una excelente opción para trabajar con [bots de trading](/es/library/bybit-trading-bot-setup/)
-- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — interfaz amigable y bonificaciones
-- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — trading social y copytrading
 
----
-
-## Materiales relacionados
-
-**Fundamentos y estrategias:** estudia la [estrategia spot ELDER 2.0](/es/library/spot-strategy-elder-20/), donde el Stochastic es el disparador clave. Más sobre cómo empezar — en el artículo [cómo iniciar el trading con un depósito pequeño](/es/library/how-to-start-trading-small-deposit/).
-
-**Herramientas y automatización:** para un análisis integral utiliza las [Bandas de Bollinger](/es/library/bollinger-bands/) y el [CMO](/es/library/chande-momentum-oscillator/). Automatización del trading — en [configurar un bot en Bybit](/es/library/bybit-trading-bot-setup/).
-
-**Experiencia y riesgos:** asegúrate de leer sobre la [gestión de riesgos al trabajar con bots](/es/library/risk-management-crypto-trading-bots/) y la [diversificación](/es/library/diversification-trading-system-part-1/) para proteger tu capital.
-
----
-Si te interesa este tema y quieres seguir el desarrollo de nuestro proyecto, visita la página [Sobre el proyecto](/es/about/) — allí hablamos de nuestra misión y de cómo puedes apoyar la startup.
 

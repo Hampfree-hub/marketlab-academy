@@ -54,6 +54,10 @@ Debido a la alta volatilidad de las criptomonedas, las bandas suelen expandirse 
 **Materiales relacionados:** [ATR y ATR%](/es/library/atr-and-atr-percent/), [Falsos rompimientos](/es/library/false-breakouts-trading/), [Patrones de bandera y banderín](/es/library/flag-and-pennant-patterns/).
 
 
+## Resumen
+
+En resumen: los puntos clave están arriba; úsalos como checklist práctico y combínalos con gestión de riesgos.
+
 ## FAQ
 
 **¿Qué configuraciones usar para las bandas de Bollinger?**

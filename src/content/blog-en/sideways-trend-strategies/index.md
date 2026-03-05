@@ -220,5 +220,5 @@ Yes — ranges are well-suited for bots (grid/range systems).
 
 Sideways markets are a normal state of the market that can be effectively used for trading. It is important to correctly define the range boundaries, use appropriate strategies (range trading, grid trading), and always apply risk management. To increase reliability, it is recommended to test strategies through [backtesting](/en/library/what-are-backtests) and combine with technical analysis indicators.
 
-For automated grid and range trading, register on **[Bybit](https://www.bybit.com/invite?ref=PWMD24)**.
+For automated grid and range trading, register on **Bybit**.
 

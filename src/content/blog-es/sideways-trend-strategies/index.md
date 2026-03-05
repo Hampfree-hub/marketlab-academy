@@ -99,6 +99,10 @@ Señales típicas:
 3. nuevos máximos/mínimos direccionales
 4. cambio de estructura a tendencia
 
+## Resumen
+
+En resumen: los puntos clave están arriba; úsalos como checklist práctico y combínalos con gestión de riesgos.
+
 ## FAQ
 
 **¿Cuánto puede durar un rango?**

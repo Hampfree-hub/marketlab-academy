@@ -68,6 +68,10 @@ Los datos on-chain no sustituyen al gráfico ni a los indicadores, sino que ayud
 
 Para trading automatizado con datos on-chain, visita **[Veles Finance](https://veles.finance/invite/washmallay)**.
 
+## Resumen
+
+En resumen: los puntos clave están arriba; úsalos como checklist práctico y combínalos con gestión de riesgos.
+
 ## FAQ
 
 **¿Qué es MVRV en pocas palabras?**  

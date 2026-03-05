@@ -43,6 +43,10 @@ Until it triggers, the trailing stop is not visible in the order book. Unlike a 
 
 Using a trailing stop well helps lock in profits across different volatility regimes. If you trade crypto, it is worth testing it, including with bots. For checking how strategies with stops perform, [backtesting](/en/library/what-are-backtests/) is useful; for exit timing, the [RSI](/en/library/technical-analysis-rsi/) can complement your approach. The [Williams %R oscillator](/en/library/williams-percent-range-r/) can also help identify reversal zones.
 
+## Summary
+
+Briefly: the key points are above; use them as a practical checklist and combine with risk management.
+
 ## FAQ
 
 **What trailing stop step should I choose?**

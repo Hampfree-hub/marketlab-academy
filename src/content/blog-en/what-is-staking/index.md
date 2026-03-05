@@ -30,7 +30,7 @@ Staking isn’t only about passive income — it supports:
 
 ### 1) Centralized staking (via exchanges)
 
-You stake through a platform (e.g., [Bybit](https://www.bybit.com/invite?ref=PWMD24), Bitget, BingX). The platform stakes on your behalf and shares rewards.
+You stake through a platform (e.g., Bybit, Bitget, BingX). The platform stakes on your behalf and shares rewards.
 
 **Pros:**
 
@@ -183,7 +183,7 @@ Ethereum is one of the most popular cryptocurrencies for staking. After Ethereum
 
 To start staking Ethereum on Bybit:
 
-1. [Register on Bybit](https://www.bybit.com/invite?ref=PWMD24) (if not already registered)
+1. Register on Bybit
 2. Fund your ETH account
 3. Go to the "Earn" or "Staking" section
 4. Select Ethereum

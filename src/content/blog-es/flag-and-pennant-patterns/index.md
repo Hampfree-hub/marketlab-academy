@@ -118,6 +118,10 @@ Se pueden automatizar: detección del patrón, espera de ruptura, filtro por vol
 
 Antes de operar en real, valida reglas con **[backtesting](/es/library/what-are-backtests)**.
 
+## Resumen
+
+En resumen: los puntos clave están arriba; úsalos como checklist práctico y combínalos con gestión de riesgos.
+
 ## FAQ
 
 **¿En qué se diferencia una bandera de un banderín?**

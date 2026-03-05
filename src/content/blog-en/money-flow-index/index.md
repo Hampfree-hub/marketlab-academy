@@ -91,9 +91,7 @@ To summarize, **Money Flow Index** is universal and can be applied both for scal
 
 ## Summary
 
-MFI combines price and volume to measure buying/selling pressure. Use it with RSI or Williams %R for confirmation. Backtest before live trading.
-
-For automated MFI strategies, register on **[Bybit](https://www.bybit.com/invite?ref=PWMD24)**.
+MFI combines price and volume to measure buying/selling pressure. Use it with [RSI](/en/library/technical-analysis-rsi) or [Williams %R](/en/library/williams-percent-range-r) for confirmation. Backtest before live trading. For automated MFI-based strategies, traders often use platforms like [Veles](https://veles.finance/invite/washmallay) — a popular service for running trading bots.
 
 ## FAQ
 

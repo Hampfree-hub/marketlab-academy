@@ -17,9 +17,9 @@ El mercado no tiene por quГ© subir. Cuando Bitcoin y los altcoins caen, el bal
 
 ## Nuestra situaciГіn: quГ© pasa con las cuentas
 
-No estamos intentando вЂњpintar una historia bonita a toro pasadoвЂќ вЂ” es una foto en vivo. En la cuenta de [Bybit](https://www.bybit.com/es-ES/invite?ref=PWMD24) el drawdown ya se nota, pero sigue dentro de nuestros parГЎmetros de riesgo: los lГ­mites de caГ­da mГЎxima de capital no se han alcanzado y el sistema no exige desenrollar de urgencia. Hace poco se disparГі un stop-loss en un activo вЂ” no вЂњnos salvГівЂќ del drawdown global de la cuenta, pero limitГі el daГ±o a nivel local y mostrГі que la disciplina de gestiГіn de riesgo tambiГ©n funciona en mercado bajista.
+No estamos intentando вЂњpintar una historia bonita a toro pasadoвЂќ вЂ” es una foto en vivo. En la cuenta de Bybit el drawdown ya se nota, pero sigue dentro de nuestros parГЎmetros de riesgo: los lГ­mites de caГ­da mГЎxima de capital no se han alcanzado y el sistema no exige desenrollar de urgencia. Hace poco se disparГі un stop-loss en un activo вЂ” no вЂњnos salvГівЂќ del drawdown global de la cuenta, pero limitГі el daГ±o a nivel local y mostrГі que la disciplina de gestiГіn de riesgo tambiГ©n funciona en mercado bajista.
 
-El factor clave que por ahora nos mantiene a flote es la diversificaciГіn: parte de las estrategias no se solapan por activos y timeframes, parte corre en otros exchanges y con otro apalancamiento. Un colchГіn extra lo da la cuenta en [BingX](https://bingxdao.com/invite/CUBDBG/) (enlace de referido: registrarte por Г©l apoya el proyecto), a la que escalamos hace relativamente poco: ahГ­ corre la estrategia [ORACLE 1.1](/es/library/oracle-strategy/) вЂ” en la prГЎctica un mГіdulo aparte con su propio perfil de drawdown y periodos de recuperaciГіn. El objetivo del artГ­culo es mostrar con honestidad: sГ­, hay drawdown; sГ­, es desagradable; pero es parte del escenario que tenГ­amos previsto, no un cisne negro.
+El factor clave que por ahora nos mantiene a flote es la diversificaciГіn: parte de las estrategias no se solapan por activos y timeframes, parte corre en otros exchanges y con otro apalancamiento. Un colchГіn extra lo da la cuenta en BingX (enlace de referido: registrarte por Г©l apoya el proyecto), a la que escalamos hace relativamente poco: ahГ­ corre la estrategia [ORACLE 1.1](/es/library/oracle-strategy/) вЂ” en la prГЎctica un mГіdulo aparte con su propio perfil de drawdown y periodos de recuperaciГіn. El objetivo del artГ­culo es mostrar con honestidad: sГ­, hay drawdown; sГ­, es desagradable; pero es parte del escenario que tenГ­amos previsto, no un cisne negro.
 
 ## Nuestro plan de supervivencia
 
@@ -47,6 +47,10 @@ QuГ© hacemos, paso a paso:
 5. **Revisar el plan de vez en cuando** вЂ” recordar para quГ© horizonte y quГ© riesgo estГЎ pensado el sistema. Ayuda a no tomar decisiones por una vela o un dГ­a.
 
 DespuГ©s de un drawdown conviene repasar: quГ© funcionГі, quГ© no, si se superaron lГ­mites. AsГ­ el sistema no se rompe, se afina.
+
+## Resumen
+
+En resumen: los puntos clave están arriba; úsalos como checklist práctico y combínalos con gestión de riesgos.
 
 ## FAQ
 

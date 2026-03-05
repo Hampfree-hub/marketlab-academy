@@ -66,6 +66,10 @@ On-chain analysis is powerful but not perfect. A large transfer can be an intern
 
 On-chain data is not a replacement for the chart and indicators but a way to make decisions more informed: who is moving the market, where liquidity is concentrated, and which phase of the cycle you’re in. Together with fundamental and technical analysis, on-chain helps not just follow trends but better assess risks and opportunities.
 
+## Summary
+
+Briefly: the key points are above; use them as a practical checklist and combine with risk management.
+
 ## FAQ
 
 **What is MVRV in simple terms?**  

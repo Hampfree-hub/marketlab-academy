@@ -100,9 +100,9 @@ El CMO es una herramienta potente para determinar la fuerza de la tendencia y lo
 
 Comienza a operar en exchanges probados:
 
-- **[Bybit](https://www.bybit.com/es/invite?ref=PWMD24)** — una excelente opción para trabajar con [bots de trading](/es/library/bybit-trading-bot-setup/)
+- **Bybit** — una excelente opción para trabajar con [bots de trading](/es/library/bybit-trading-bot-setup/)
 - **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — interfaz amigable y bonificaciones
-- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — trading social y copytrading
+- **BingX** — trading social y copytrading
 
 ---
 

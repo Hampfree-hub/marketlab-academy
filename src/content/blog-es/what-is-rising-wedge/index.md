@@ -53,7 +53,11 @@ En mercados cripto volátiles, los bots son cada vez más usados. Muchos detecta
 
 Entender y usar bien la cuña alcista puede mejorar los resultados. Puede combinarse con otras herramientas, como el [RSI](/es/library/technical-analysis-rsi/) o las [velas doji](/es/library/what-are-doji-candles/), para afinar el timing. Para análisis de volumen e impulso, el [índice de flujo de dinero (MFI)](/es/library/money-flow-index/) es útil, y para identificar zonas de sobrecompra, el [oscilador Williams %R](/es/library/williams-percent-range-r/) puede ayudar.
 
-Para trading automatizado de patrones, regístrate en **[Bybit](https://www.bybit.com/es/invite?ref=PWMD24)**.
+Para trading automatizado de patrones, regístrate en **Bybit**.
+
+## Resumen
+
+En resumen: los puntos clave están arriba; úsalos como checklist práctico y combínalos con gestión de riesgos.
 
 ## FAQ
 

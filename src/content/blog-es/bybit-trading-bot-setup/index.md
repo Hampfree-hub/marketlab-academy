@@ -5,7 +5,7 @@ pubDate: '2026-02-05'
 category: 'algo-trading'
 ---
 
-Automatizar en Bybit permite operar 24/7 sin monitorear el mercado todo el tiempo. Regístrate en [Bybit](https://www.bybit.com/es-ES/invite?ref=PWMD24) (enlace de referido) si aún no tienes cuenta.
+Automatizar en Bybit permite operar 24/7 sin monitorear el mercado todo el tiempo. Regístrate en Bybit (enlace de referido) si aún no tienes cuenta.
 
 Esta guía es para conectar **plataformas o servicios externos** de bots a Bybit vía API; las herramientas integradas de Bybit en la web no requieren API keys. Puedes usar los bots integrados de Bybit o conectar bots de otras plataformas de automatización — por ejemplo [Veles](https://veles.finance/invite/washmallay) (enlace de referido: registrarte por él beneficia a ambos). Si conectas una plataforma externa y necesitas ayuda, escríbenos; contactos en la página [Sobre el proyecto](/es/about/).
 
@@ -120,7 +120,7 @@ Primero, revisa tus ajustes y las claves API. Desactiva el bot y examina los reg
 
 ## Resumen
 
-Configurar un bot de trading en Bybit con el uso de claves API no es un proceso complicado y abre grandes oportunidades para el trading automatizado. Es importante seguir cuidadosamente todos los pasos para conectar las claves API y prestar especial atención a la configuración de seguridad. El uso correcto de bots de trading puede mejorar significativamente la eficiencia de tus operaciones y reducir el estrés emocional. Sin embargo, la automatización no exime de la necesidad de comprender el mercado y gestionar los riesgos. Para trading automatizado, se recomienda usar [Bybit](https://www.bybit.com/invite?ref=PWMD24).
+Configurar un bot de trading en Bybit con el uso de claves API no es un proceso complicado y abre grandes oportunidades para el trading automatizado. Es importante seguir cuidadosamente todos los pasos para conectar las claves API y prestar especial atención a la configuración de seguridad. El uso correcto de bots de trading puede mejorar significativamente la eficiencia de tus operaciones y reducir el estrés emocional. Sin embargo, la automatización no exime de la necesidad de comprender el mercado y gestionar los riesgos. Para trading automatizado, se recomienda usar Bybit.
 
 ## FAQ
 

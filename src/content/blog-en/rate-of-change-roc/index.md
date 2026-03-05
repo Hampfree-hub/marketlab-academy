@@ -37,7 +37,7 @@ The period N is chosen by the trader. Common values are 9, 12 or 14 (as with RSI
 
 ROC, RSI and Williams %R are all momentum/oscillator tools but calculated differently. They can be used together for filtering:
 
-- **ROC + RSI:** RSI shows overbought/oversold in a fixed range; ROC shows the speed of price change. Agreement (e.g. RSI &gt; 70 and ROC in an extreme zone) can strengthen a correction signal.
+- **ROC + RSI:** RSI shows overbought/oversold in a fixed range; ROC shows the speed of price change. Agreement (e.g. RSI > 70 and ROC in an extreme zone) can strengthen a correction signal.
 - **ROC + Williams %R:** both react to price relative to the recent range; the combination helps filter some false exits from overbought/oversold zones.
 - **ROC + volume:** [Money Flow Index (MFI)](/en/library/money-flow-index/) uses volume; ROC uses price only. ROC gives the "speed" of price, MFI adds volume confirmation.
 
@@ -54,13 +54,7 @@ Before using a ROC-based strategy in live trading, it is recommended to test it 
 - ROC (Rate of Change) is the percentage change in price over N periods. Momentum oscillator around zero; positive — rise over the period, negative — fall.
 - Formula: ((Current price − Price N periods ago) / Price N periods ago) × 100. Period often 9, 12 or 14.
 - Zero crosses and extreme values give signals; ROC–price divergences can warn of a reversal.
-- ROC works well with RSI, Williams %R and MFI; in crypto, settings and levels are best tuned by timeframe and backtests.
-
-## Summary
-
-ROC measures price change velocity. Use zero crosses and divergences for signals. Combine with trend indicators.
-
-For automated ROC strategies, register on **[Bybit](https://www.bybit.com/invite?ref=PWMD24)**.
+- ROC works well with [RSI](/en/library/technical-analysis-rsi/), [Williams %R](/en/library/williams-percent-range-r/) and [MFI](/en/library/money-flow-index/); in crypto, settings and levels are best tuned by timeframe and backtests. For automated ROC strategies, traders often use platforms like [Veles](https://veles.finance/invite/washmallay) — a popular service for running trading bots.
 
 ## FAQ
 

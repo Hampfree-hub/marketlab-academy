@@ -5,7 +5,7 @@ pubDate: '2026-02-05'
 category: 'algo-trading'
 ---
 
-Automating trading on Bybit lets you trade 24/7 without constantly watching the market. Register at [Bybit](https://www.bybit.com/invite?ref=PWMD24) (referral link) if you don’t have an account yet.
+Automating trading on Bybit lets you trade 24/7 without constantly watching the market. Register at Bybit (referral link) if you don’t have an account yet.
 
 This guide is for connecting **external** bot platforms or services to Bybit via API; Bybit's built-in tools on the exchange do not require API keys. You can use Bybit's built-in bots or connect bots from other automation platforms — for example [Veles](https://veles.finance/invite/washmallay) (referral link: signing up via it benefits both you and us). If you connect an external platform and need help, reach out; contacts are on the [About](/en/about/) page.
 
@@ -118,6 +118,6 @@ Yes, but with limitations. For full access to exchange features, it is recommend
 
 Setting up a trading bot on Bybit is the first step towards automating trading. A correctly configured bot and well-tuned risk management allow you to trade efficiently 24/7. Before launching a bot, it is recommended to test the strategy on [backtests](/en/library/what-are-backtests/).
 
-Register on **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** and start automated trading.
+Register on **Bybit** and start automated trading.
 
 

@@ -47,18 +47,23 @@ El Williams %R genera señales al salir de las zonas extremas:
 
 Al ser adelantado, puede dar señales falsas en tendencias fuertes. Suele combinarse con:
 
-- **Williams %R + RSI:** filtra señales falsas comparando dos osciladores.
-- **Williams %R + EMA 50/200:** confirma señales en la dirección del tendencia a largo plazo.
+- **Williams %R + [RSI](/es/library/technical-analysis-rsi):** filtra señales falsas comparando dos osciladores.
+- **Williams %R + EMA 50/200:** confirma señales en la dirección de la tendencia a largo plazo.
 - **Williams %R + indicadores de volumen:** picos de volumen al salir de sobrecompra/sobreventa refuerzan la señal.
-- **Williams %R + bandas de Bollinger:** detecta cuándo el precio se aleja mucho de la media.
+- **Williams %R + [Bandas de Bollinger](/es/library/bollinger-bands/):** detecta cuándo el precio se aleja mucho de la media.
+- **Williams %R + [MFI](/es/library/money-flow-index):** combina momento y volumen para confirmación más fuerte.
 
 ![Williams %R combinado con RSI y medias móviles](./assets/Zones-WPR-RSI-EMA.png)
 
 ## Para quién sirve el Williams %R
 
-Es adecuado para traders a corto y medio plazo (escalping, intradía). Funciona bien en mercados laterales y al buscar correcciones locales.
+Es adecuado para traders a corto y medio plazo (scalping, intradía). Funciona bien en mercados laterales y al buscar correcciones locales.
 
 Para principiantes es útil por su interpretación sencilla, pero requiere disciplina cuando el mercado tiene un movimiento direccional fuerte.
+
+## Resumen
+
+Williams %R muestra zonas de sobrecompra/sobreventa (-20/-80). Úsalo con indicadores de tendencia para filtrar señales falsas. Funciona bien con [RSI](/es/library/technical-analysis-rsi) y [MFI](/es/library/money-flow-index) para confirmación. Mejor para trading a corto y medio plazo en mercados laterales.
 
 ## FAQ
 
@@ -81,4 +86,3 @@ Solo tomar señales en dirección de la tendencia. En tendencia alcista — espe
 **¿Funciona en cripto?**
 
 Sí, pero con cautela por la alta volatilidad. Siempre obtener confirmación de otros indicadores.
-

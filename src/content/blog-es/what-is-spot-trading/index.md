@@ -161,6 +161,10 @@ Sitios de phishing, monedas falsas, proyectos estafa. Antes de comprar una cript
 5. **Considerar las comisiones**: con operaciones frecuentes, las comisiones pueden reducir el beneficio.
 6. **Usar 2FA y almacenamiento en frío** para proteger los fondos.
 
+## Resumen
+
+En resumen: los puntos clave están arriba; úsalos como checklist práctico y combínalos con gestión de riesgos.
+
 ## FAQ
 
 **¿Spot o futuros — qué elegir para empezar?**

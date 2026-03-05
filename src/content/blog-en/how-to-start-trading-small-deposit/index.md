@@ -163,6 +163,6 @@ Trading frequency depends on your chosen strategy. Don't overtrade — quality o
 
 ## Summary
 
-Starting with a small deposit is a valid way to learn trading. Focus on education, risk management, and gradual growth. Choose exchanges with low fees like **[Bybit](https://www.bybit.com/invite?ref=PWMD24)** to maximize your capital.
+Starting with a small deposit is a valid way to learn trading. Focus on education, risk management, and gradual growth. Choose exchanges with low fees like **Bybit** to maximize your capital.
 
 
