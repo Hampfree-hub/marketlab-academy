@@ -13,6 +13,9 @@ In this part — tuning for yourself and what to avoid. Previous parts: [Part 1]
 
 It makes sense to check periodically: overall PnL and drawdown, bot execution (do orders fire by the rules, any API failures). If a bot doesn't open or close positions when conditions are met — possible misconfiguration or exchange API issue. Simple tracking — at least in a spreadsheet or platform reports — helps see which strategy or bot is performing and what to tune or turn off. How often to check depends on your timeframe: for daily strategies once a day or week is enough; for more active ones — more often.
 
+![Example monitoring: overall statistics and system metrics](./assets/monitoring-dashboard.png)
+*Fig. 1. Monitoring dashboard: PnL, drawdown, system metrics*
+
 **Keeping a trading journal**
 
 For systematic trade tracking, it's recommended to keep a trading journal. This can be a paper notebook, a spreadsheet, or a specialized platform. At Market Lab, we use [TMM](/en/library/trading-journal-guide/) for automatic statistics collection and trade analysis.

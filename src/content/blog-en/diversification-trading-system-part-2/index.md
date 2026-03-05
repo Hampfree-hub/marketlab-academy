@@ -11,7 +11,12 @@ In this part — how to build a basic system and align it with diversification f
 
 ## What is a trading system
 
-A trading system is explicit rules instead of impulses: when to enter and exit, what position size to allow, where to set stop losses and take profits. Without such rules, decisions depend on mood and market noise; one “gut” trade leads to the next and the outcome is hard to evaluate. With rules you can test the system on history ([backtests](/en/library/what-are-backtests/)), compare results with expectations and adjust parameters if needed. A basic system includes: entry and exit criteria, position size and risk per trade, choice and configuration of bots in line with diversification by assets and venues from [Part 1](/en/library/diversification-trading-system-part-1/).
+A trading system is explicit rules instead of impulses: when to enter and exit, what position size to allow, where to set stop losses and take profits. Without such rules, decisions depend on mood and market noise; one "gut" trade leads to the next and the outcome is hard to evaluate. With rules you can test the system on history ([backtests](/en/library/what-are-backtests/)), compare results with expectations and adjust parameters if needed.
+
+![Trading system flowchart: from signal to result](./assets/trading-system-flowchart.png)
+*Fig. 1. Trading system flowchart: entry rules, position size, stop-loss, exit*
+
+A basic system includes: entry and exit criteria, position size and risk per trade, choice and configuration of bots in line with diversification by assets and venues from [Part 1](/en/library/diversification-trading-system-part-1/).
 
 ## Entry and exit rules
 

@@ -13,7 +13,10 @@ In this part — why to diversify and what to look at first. In [Part 2](/en/lib
 
 Concentrating risk in one asset, one strategy, or one venue increases the impact of a drawdown: if one part of the system “fails,” all capital is at risk. Example: all capital in one altcoin — a crash in that asset means maximum drawdown on the account; all capital on one exchange — during long downtime or withdrawal issues, access to funds is limited. Diversification does not remove risk but spreads it: the hit is to a share of capital, not the whole deposit.
 
-A useful metaphor is a **conveyor**: several lines; one stops — the others keep running. Several bots and assets give the same effect: one line dips — the others continue. The goal is not “run everything at once” but to spread capital and limits consciously.
+A useful metaphor is a **conveyor**: several lines; one stops — the others keep running. Several bots and assets give the same effect: one line dips — the others continue. The goal is not "run everything at once" but to spread capital and limits consciously.
+
+![Conveyor metaphor: diversification reduces the risk of stopping the whole system](./assets/diversification-conveyor.png)
+*Fig. 1. Diversification conveyor: one line stops, others keep running*
 
 ## Starting with a small budget
 
@@ -23,7 +26,10 @@ You can start with a small amount — e.g. $20. The idea is to test the system o
 
 ## Diversification by assets
 
-Better not keep all capital in one asset: correlations between coins are high but not 100% — a drawdown in one asset hits a share of the portfolio, not the whole deposit. When one altcoin crashes, other positions (e.g. BTC, ETH or another asset) may behave differently. Core assets like BTC and ETH are the base of many portfolios; for more on crypto basics see [Bitcoin basics](/en/library/bitcoin-basics/). Set shares and limits per asset in advance and don’t exceed them: e.g. no more than 20–30% of the deposit in one asset, the rest spread.
+Better not keep all capital in one asset: correlations between coins are high but not 100% — a drawdown in one asset hits a share of the portfolio, not the whole deposit. When one altcoin crashes, other positions (e.g. BTC, ETH or another asset) may behave differently. Core assets like BTC and ETH are the base of many portfolios; for more on crypto basics see [Bitcoin basics](/en/library/bitcoin-basics/). Set shares and limits per asset in advance and don't exceed them: e.g. no more than 20–30% of the deposit in one asset, the rest spread.
+
+![Example of diversification by assets: core + altcoins](./assets/diversification-pie-chart.png)
+*Fig. 2. Portfolio allocation example: BTC, ETH and altcoins*
 
 ## Diversification by strategies and bots
 

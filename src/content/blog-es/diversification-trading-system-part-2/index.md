@@ -11,7 +11,12 @@ En esta parte — cómo construir un sistema básico y alinearlo con la diversif
 
 ## Qué es un Sistema de Trading
 
-Un sistema de trading son reglas explícitas en lugar de impulsos: cuándo entrar y salir, qué tamaño de posición permitir, dónde establecer stop-losses y take-profits. Sin tales reglas, las decisiones dependen del estado de ánimo y el ruido del mercado; una operación "por instinto" lleva a la siguiente y el resultado es difícil de evaluar. Con reglas puedes probar el sistema en historia ([backtests](/es/library/what-are-backtests/)), comparar resultados con expectativas y ajustar parámetros si es necesario. Un sistema básico incluye: criterios de entrada y salida, tamaño de posición y riesgo por operación, elección y configuración de bots en línea con la diversificación por activos y plataformas de [Parte 1](/es/library/diversification-trading-system-part-1/).
+Un sistema de trading son reglas explícitas en lugar de impulsos: cuándo entrar y salir, qué tamaño de posición permitir, dónde establecer stop-losses y take-profits. Sin tales reglas, las decisiones dependen del estado de ánimo y el ruido del mercado; una operación "por instinto" lleva a la siguiente y el resultado es difícil de evaluar. Con reglas puedes probar el sistema en historia ([backtests](/es/library/what-are-backtests/)), comparar resultados con expectativas y ajustar parámetros si es necesario.
+
+![Diagrama de flujo del sistema de trading: de la señal al resultado](./assets/trading-system-flowchart.png)
+*Fig. 1. Diagrama de flujo del sistema de trading: reglas de entrada, tamaño de posición, stop-loss, salida*
+
+Un sistema básico incluye: criterios de entrada y salida, tamaño de posición y riesgo por operación, elección y configuración de bots en línea con la diversificación por activos y plataformas de [Parte 1](/es/library/diversification-trading-system-part-1/).
 
 ## Reglas de Entrada y Salida
 

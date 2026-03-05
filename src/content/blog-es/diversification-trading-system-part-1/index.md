@@ -15,6 +15,9 @@ Concentrar riesgo en un activo, una estrategia o una plataforma aumenta el impac
 
 Una metáfora útil es una **cadena de montaje**: varias líneas; una se detiene — las otras siguen funcionando. Varios bots y activos dan el mismo efecto: una línea baja — las otras continúan. El objetivo no es "ejecutar todo a la vez" sino distribuir capital y límites conscientemente.
 
+![Metáfora de la cadena de montaje: la diversificación reduce el riesgo de detener todo el sistema](./assets/diversification-conveyor.png)
+*Fig. 1. Cadena de montaje de diversificación: una línea se detiene, las otras continúan*
+
 ## Comenzar con un Presupuesto Pequeño
 
 Puedes comenzar con una cantidad pequeña — por ejemplo, $20. La idea es probar el sistema con un presupuesto pequeño primero, luego escalar. Una división 1:1: la mitad para bots, la mitad en reserva (margen). Así si una parte tiene drawdown, aún tienes un buffer para recargas o gastos de vida.
@@ -24,6 +27,9 @@ Puedes comenzar con una cantidad pequeña — por ejemplo, $20. La idea es proba
 ## Diversificación por Activos
 
 Mejor no mantener todo el capital en un activo: las correlaciones entre monedas son altas pero no 100% — un drawdown en un activo golpea una parte del portafolio, no todo el depósito. Cuando un altcoin colapsa, otras posiciones (por ejemplo, BTC, ETH u otro activo) pueden comportarse de manera diferente. Los activos principales como BTC y ETH son la base de muchos portafolios; para más sobre conceptos básicos de cripto ver [Conceptos básicos de Bitcoin](/es/library/bitcoin-basics/). Establece acciones y límites por activo de antemano y no los excedas: por ejemplo, no más del 20-30% del depósito en un activo, el resto distribuido.
+
+![Ejemplo de diversificación por activos: principales + altcoins](./assets/diversification-pie-chart.png)
+*Fig. 2. Ejemplo de asignación de portafolio: BTC, ETH y altcoins*
 
 ## Diversificación por Estrategias y Bots
 

@@ -13,6 +13,9 @@ En esta parte — ajuste para ti y qué evitar. Partes anteriores: [Parte 1](/es
 
 Tiene sentido verificar periódicamente: PnL general y drawdown, ejecución de bots (¿las órdenes se disparan según las reglas, hay fallos de API?). Si un bot no abre o cierra posiciones cuando se cumplen las condiciones — posible mala configuración o problema de API del exchange. El seguimiento simple — al menos en una hoja de cálculo o reportes de plataforma — ayuda a ver qué estrategia o bot está funcionando y qué ajustar o apagar. Con qué frecuencia verificar depende de tu timeframe: para estrategias diarias una vez al día o semana es suficiente; para las más activas — más frecuente.
 
+![Ejemplo de monitoreo: estadísticas generales y métricas del sistema](./assets/monitoring-dashboard.png)
+*Fig. 1. Dashboard de monitoreo: PnL, drawdown, métricas del sistema*
+
 **Mantener un diario de trading**
 
 Para el registro sistemático de operaciones, se recomienda mantener un diario de trading. Puede ser un cuaderno de papel, una hoja de cálculo o una plataforma especializada. En Market Lab, usamos [TMM](/es/library/trading-journal-guide/) para la recopilación automática de estadísticas y análisis de operaciones.

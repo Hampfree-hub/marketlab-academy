@@ -1,7 +1,7 @@
 ---
 title: 'Gestión de Riesgo en Trading Cripto con Bots'
 description: 'Cómo gestionar riesgos en trading automatizado con criptomonedas: reglas de gestión de riesgo para bots de trading, protección del depósito y minimización de pérdidas.'
-pubDate: '2026-03-05'
+pubDate: '2026-02-05'
 category: 'technical-analysis'
 ---
 
