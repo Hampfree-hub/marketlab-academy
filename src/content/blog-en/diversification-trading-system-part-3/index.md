@@ -1,7 +1,7 @@
 ---
 title: 'Diversification and Trading System Setup. Part 3: Tuning for Yourself and Mistakes'
 description: 'How to adapt your trading system: monitoring, tuning, common mistakes and how to avoid them.'
-pubDate: '2026-02-02'
+pubDate: '2026-03-05'
 category: 'algo-trading'
 ---
 
@@ -12,6 +12,10 @@ In this part — tuning for yourself and what to avoid. Previous parts: [Part 1]
 ## Monitoring and reporting
 
 It makes sense to check periodically: overall PnL and drawdown, bot execution (do orders fire by the rules, any API failures). If a bot doesn't open or close positions when conditions are met — possible misconfiguration or exchange API issue. Simple tracking — at least in a spreadsheet or platform reports — helps see which strategy or bot is performing and what to tune or turn off. How often to check depends on your timeframe: for daily strategies once a day or week is enough; for more active ones — more often.
+
+**Keeping a trading journal**
+
+For systematic trade tracking, it's recommended to keep a trading journal. This can be a paper notebook, a spreadsheet, or a specialized platform. At Market Lab, we use [TMM](/en/library/trading-journal-guide/) for automatic statistics collection and trade analysis.
 
 ## When and how to tune
 
@@ -35,9 +39,18 @@ Before putting the system in "live" mode, check:
 
 ## Series wrap-up
 
-Diversification is part of trading system setup: by assets, strategies, and venues (Part 1). The system is entry/exit rules, position size and risk (Part 2). In practice it's important to monitor results, tune thoughtfully, and not repeat common mistakes (Part 3). See also: [risk management](/en/library/risk-management-crypto-trading-bots/), [DCA](/en/library/dca-strategy-crypto/), [grid](/en/library/grid-trading-crypto/), [exchange uptime](/en/library/exchange-uptime-downtime/).
+Diversification is part of trading system setup: by assets, strategies, and venues (Part 1). The system is entry/exit rules, position size and risk (Part 2). In practice it's important to monitor results, tune thoughtfully, and not repeat common mistakes (Part 3).
 
-For automated portfolio strategies and diversification workflows, visit **[Veles Finance](https://veles.finance/invite/washmallay)**.
+**Additional materials:**
+- [Risk Management in Crypto Trading](/en/library/risk-management-crypto-trading-bots/) — capital protection principles
+- [Trading Journal](/en/library/trading-journal-guide/) — how to keep trade records
+- [DCA Strategy](/en/library/dca-strategy-crypto/) — time-based entry averaging
+- [Grid Trading](/en/library/grid-trading-crypto/) — range-based trading
+- [Exchange Uptime](/en/library/exchange-uptime-downtime/) — choosing a reliable venue
+
+## Summary
+
+Briefly: the key points are above; use them as a practical checklist and combine with risk management.
 
 ## FAQ
 

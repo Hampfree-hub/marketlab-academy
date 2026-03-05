@@ -1,7 +1,7 @@
 ---
 title: 'Diversification and Trading System Setup. Part 1: Why Diversify'
 description: 'Why traders diversify: assets, strategies, venues. How not to put everything in one basket and reduce risk when trading and using bots.'
-pubDate: '2026-02-02'
+pubDate: '2026-03-05'
 category: 'algo-trading'
 ---
 
@@ -31,7 +31,18 @@ Don’t concentrate all volume in one bot or one strategy: [DCA](/en/library/dca
 
 ## Diversification by venues
 
-Better not keep all volume on one exchange: uptime, withdrawal limits, and reputation matter. During long downtime or withdrawal issues access to funds is limited; if everything is on one venue — risk is higher. What to look for when choosing and how to assess reliability — in the article on [exchange uptime and downtime](/en/library/exchange-uptime-downtime/). Separate exchange reviews are planned; they will include comparison criteria and practical tips to get started.
+Better not keep all volume on one exchange: uptime, withdrawal limits, and reputation matter. During long downtime or withdrawal issues access to funds is limited; if everything is on one venue — risk is higher. What to look for when choosing and how to assess reliability — in the article on [exchange uptime and downtime](/en/library/exchange-uptime-downtime/).
+
+**Diversification by subaccounts**
+
+Advanced level of diversification — using multiple subaccounts on one exchange or across different venues. This gives additional advantages:
+
+- **Strategy separation** — different subaccounts for DCA, grid, and hybrid bots
+- **Risk control** — limits per subaccount separately
+- **Scaling** — ability to increase number of assets without growing risk
+- **Isolation** — problems on one subaccount don't affect others
+
+At Market Lab, we use 3-4 subaccounts with a total of 200+ assets — this allows testing new strategies without risk to the main portfolio.
 
 ## Summary
 

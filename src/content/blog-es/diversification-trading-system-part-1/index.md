@@ -1,60 +1,71 @@
 ---
-title: 'Diversificación y configuración del sistema de trading. Parte 1: Por qué diversificar'
-description: 'Por qué el trader diversifica: activos, estrategias, plataformas. Cómo no poner todo en una cesta y reducir riesgos al operar y con bots.'
-pubDate: '2026-02-02'
+title: 'Diversificación y Configuración del Sistema de Trading. Parte 1: Por Qué Diversificar'
+description: 'Por qué los traders diversifican: activos, estrategias, plataformas. Cómo no poner todo en una sola cesta y reducir el riesgo al operar y usar bots.'
+pubDate: '2026-03-05'
 category: 'algo-trading'
 ---
 
-La diversificación es repartir capital y riesgo: por activos, estrategias y plataformas. Una posición, un bot o un exchange pueden fallar; la diversificación no garantiza beneficio pero reduce la probabilidad de perderlo todo por un solo factor.
+La diversificación es distribuir capital y riesgo: a través de activos, estrategias y plataformas. Una posición, un bot o un exchange pueden fallar; la diversificación no garantiza ganancias pero reduce la posibilidad de perder todo por un solo factor.
 
-En esta parte — por qué diversificar y qué revisar primero. En la [Parte 2](/es/library/diversification-trading-system-part-2/) — cómo definir reglas de entrada/salida y configurar bots; en la [Parte 3](/es/library/diversification-trading-system-part-3/) — supervisión, ajustes y errores típicos.
+En esta parte — por qué diversificar y qué mirar primero. En [Parte 2](/es/library/diversification-trading-system-part-2/) — cómo establecer reglas de entrada/salida y configurar bots; en [Parte 3](/es/library/diversification-trading-system-part-3/) — monitoreo, ajuste y errores comunes.
 
-## Por qué el trader diversifica
+## Por Qué los Traders Diversifican
 
-Concentrar el riesgo en un activo, una estrategia o una plataforma aumenta el impacto de una drawdown: si “falla” un elemento del sistema, todo el capital está en juego. Ejemplo: todo el capital en un altcoin — un crash de ese activo implica drawdown máximo en la cuenta; todo en un exchange — durante un downtime largo o problemas de retiro, el acceso a fondos se limita. La diversificación no elimina el riesgo pero lo reparte: el golpe es a una parte del capital, no a todo el depósito.
+Concentrar riesgo en un activo, una estrategia o una plataforma aumenta el impacto de un drawdown: si una parte del sistema "falla," todo el capital está en riesgo. Ejemplo: todo el capital en un altcoin — un colapso en ese activo significa drawdown máximo en la cuenta; todo el capital en un exchange — durante downtime prolongado o problemas de retiro, el acceso a fondos es limitado. La diversificación no elimina el riesgo pero lo distribuye: el golpe es a una parte del capital, no a todo el depósito.
 
-Una metáfora útil es el **conveyor**: varias líneas; una se para — las demás siguen. Varios bots y activos dan el mismo efecto: una línea cae — las demás continúan. El objetivo no es “lanzar todo a la vez” sino repartir capital y límites de forma consciente.
+Una metáfora útil es una **cadena de montaje**: varias líneas; una se detiene — las otras siguen funcionando. Varios bots y activos dan el mismo efecto: una línea baja — las otras continúan. El objetivo no es "ejecutar todo a la vez" sino distribuir capital y límites conscientemente.
 
-## Empezar con poco presupuesto
+## Comenzar con un Presupuesto Pequeño
 
-Puedes empezar con una cantidad pequeña — p. ej. 20 $. La idea es probar el sistema con poco presupuesto y luego escalar. Proporción 1:1: mitad para bots, mitad en reserva (margen). Así, si una parte hace drawdown, sigues teniendo colchón para reponer o gastos.
+Puedes comenzar con una cantidad pequeña — por ejemplo, $20. La idea es probar el sistema con un presupuesto pequeño primero, luego escalar. Una división 1:1: la mitad para bots, la mitad en reserva (margen). Así si una parte tiene drawdown, aún tienes un buffer para recargas o gastos de vida.
 
-**Ejemplo:** 20 $ disponibles. 10 $ para bots, 10 $ en reserva. Puedes probar el sistema en muchos activos pero con límite de entradas simultáneas. En plataformas de algotrading (p. ej. Veles) existe el **bloqueo por posiciones**: no entran más bots en una operación de los que permiten tus ajustes. Puedes tener 10, 20 o 30 bots en la lista, pero con bloqueo “1” solo trabaja uno a la vez — el que recibe la señal primero. Así reduces riesgo: no repartes el presupuesto en todos los activos a la vez sino que compruebas lógica y riesgo en una línea del conveyor. Cuando el sistema esté claro y los resultados estables, puedes subir poco a poco bloqueos y tamaño.
+**Ejemplo:** $20 disponibles. $10 para bots, $10 en reserva. Puedes probar el sistema en muchos activos pero con un límite en entradas simultáneas. En plataformas de algo-trading (por ejemplo, Veles) hay **bloqueo de posiciones**: no más bots entran en una operación de lo que tus configuraciones permiten. Puedes tener 10, 20 o 30 bots en la lista, pero con bloqueo "1" solo uno funciona a la vez — el que recibió la señal primero. Esto reduce el riesgo: no distribuyes el presupuesto en todos los activos a la vez sino que verificas lógica y riesgo en una línea de la cadena. Cuando el sistema está claro y los resultados son estables, puedes aumentar gradualmente los bloqueos y el tamaño.
 
-## Diversificación por activos
+## Diversificación por Activos
 
-Mejor no tener todo el capital en un activo: las correlaciones entre monedas son altas pero no del 100 % — una drawdown de un activo golpea a una parte del portafolio, no a todo el depósito. Cuando un altcoin se hunde, otras posiciones (p. ej. BTC, ETH u otro activo) pueden comportarse distinto. Activos base como BTC y ETH son la base de muchos portafolios; más sobre bases del criptomercado en [Fundamentos de Bitcoin](/es/library/bitcoin-basics/). Conviene fijar de antemano porcentajes y límites por activo y no superarlos: p. ej. no más del 20–30 % del depósito en un activo, el resto repartido.
+Mejor no mantener todo el capital en un activo: las correlaciones entre monedas son altas pero no 100% — un drawdown en un activo golpea una parte del portafolio, no todo el depósito. Cuando un altcoin colapsa, otras posiciones (por ejemplo, BTC, ETH u otro activo) pueden comportarse de manera diferente. Los activos principales como BTC y ETH son la base de muchos portafolios; para más sobre conceptos básicos de cripto ver [Conceptos básicos de Bitcoin](/es/library/bitcoin-basics/). Establece acciones y límites por activo de antemano y no los excedas: por ejemplo, no más del 20-30% del depósito en un activo, el resto distribuido.
 
-## Diversificación por estrategias y bots
+## Diversificación por Estrategias y Bots
 
-No concentres todo el volumen en un bot o una estrategia: [DCA](/es/library/dca-strategy-crypto/) y [trading en grid](/es/library/grid-trading-crypto/) resuelven tareas distintas y se comportan distinto según el mercado. DCA promedia la entrada en el tiempo; grid opera en rango. En tendencia fuerte una estrategia puede hacer drawdown y otra beneficio; en lateral — al revés. Repartir capital entre varios bots y estrategias reduce la dependencia de una “línea del conveyor”. La conexión con reglas de capital está en [gestión del riesgo en trading cripto](/es/library/risk-management-crypto-trading-bots/).
+No concentres todo el volumen en un bot o una estrategia: [DCA](/es/library/dca-strategy-crypto/) y [trading de cuadrícula (grid)](/es/library/grid-trading-crypto/) resuelven diferentes tareas y se comportan de manera diferente en diferentes condiciones de mercado. DCA promedia la entrada en el tiempo; grid trabaja en un rango. En una tendencia fuerte una estrategia puede tener drawdown, otra ganancias; en un mercado lateral — lo opuesto. Distribuir capital entre varios bots y estrategias reduce la dependencia de una "línea de la cadena." Para reglas de capital ver [gestión de riesgo en trading cripto](/es/library/risk-management-crypto-trading-bots/).
 
-## Diversificación por plataformas
+## Diversificación por Plataformas
 
-Mejor no tener todo el volumen en un exchange: el uptime, los límites de retiro y la reputación importan. En downtime largo o problemas de retiro el acceso a fondos se limita; si todo está en una plataforma — el riesgo es mayor. Qué revisar al elegir y cómo valorar la fiabilidad — en el artículo sobre [uptime y downtime del exchange](/es/library/exchange-uptime-downtime/). Reseñas de exchanges están previstas; incluirán criterios de comparación y consejos prácticos para empezar.
+Mejor no mantener todo el volumen en un exchange: uptime, límites de retiro y reputación importan. Durante downtime prolongado o problemas de retiro el acceso a fondos es limitado; si todo está en una plataforma — el riesgo es mayor. Qué buscar al elegir y cómo evaluar la confiabilidad — en el artículo sobre [uptime y downtime del exchange](/es/library/exchange-uptime-downtime/).
+
+**Diversificación por subcuentas**
+
+Nivel avanzado de diversificación — usar múltiples subcuentas en un exchange o en diferentes plataformas. Esto da ventajas adicionales:
+
+- **Separación de estrategias** — diferentes subcuentas para bots DCA, grid e híbridos
+- **Control de riesgo** — límites por subcuenta por separado
+- **Escalado** — capacidad de aumentar el número de activos sin aumentar el riesgo
+- **Aislamiento** — problemas en una subcuenta no afectan a otras
+
+En Market Lab, usamos 3-4 subcuentas con un total de más de 200 activos — esto permite probar nuevas estrategias sin riesgo para el portafolio principal.
 
 ## Resumen
 
-La diversificación es parte de la configuración del sistema de trading, no un fin en sí. El objetivo es reducir el riesgo de perder todo el capital por un activo, una estrategia o una plataforma. Siguiente — [Parte 2: cómo construir y configurar el sistema](/es/library/diversification-trading-system-part-2/).
+La diversificación es parte de la configuración de un sistema de trading, no un fin en sí mismo. El objetivo es reducir el riesgo de perder todo el capital debido a un activo, una estrategia o una plataforma. Siguiente — [Parte 2: cómo construir y configurar el sistema](/es/library/diversification-trading-system-part-2/).
 
 ## FAQ
 
-**¿Cuántos activos necesito para diversificar?**
+**¿Cuántos activos necesito para diversificación?**
 
-Mínimo 3-5 activos. Idealmente 7-10 en el portafolio. Lo importante no es solo la cantidad, sino que los activos estén descorrelacionados o débilmente correlacionados.
+Mínimo 3-5 activos. Idealmente 7-10 en un portafolio. La clave no es solo la cantidad, sino que los activos estén no correlacionados o débilmente correlacionados.
 
 **¿Puedo diversificar con un depósito pequeño ($50-100)?**
 
-Sí, pero con limitaciones. Usa 1-2 activos y 1-2 bots. No te disperses en muchos activos con posiciones mínimas — da una falsa sensación de seguridad.
+Sí, pero con limitaciones. Usa 1-2 activos y 1-2 bots. No te disperses demasiado en muchos activos con posiciones mínimas — da una falsa sensación de seguridad.
 
-**¿Estrategias iguales en diferentes activos — es diversificación?**
+**¿Las mismas estrategias en diferentes activos son diversificación?**
 
-Parcialmente. Es diversificación por activos, pero no por estrategias. Si todos los bots usan la misma lógica, el fallo de condiciones del mercado afectará todas las posiciones simultáneamente.
+Parcialmente. Es diversificación por activos, pero no por estrategias. Si todos los bots usan la misma lógica, las fallas de condiciones del mercado afectarán a todas las posiciones simultáneamente.
 
-**¿Necesito diversificar entre exchanges con depósito de $100?**
+**¿Necesito diversificar por exchanges con un depósito de $100?**
 
-Mientras el depósito sea pequeño, mejor enfocarse en un exchange confiable. Con $500-1000 tiene sentido dividir entre 2 exchanges. Sobredividir crea trabajo extra y complica el monitoreo.
+Mientras el depósito es pequeño, mejor enfocarse en un exchange confiable. Con $500-1000 tiene sentido dividir entre 2 exchanges. La sobre-división crea trabajo extra y complica el monitoreo.
 
 **¿Con qué frecuencia revisar la diversificación?**
 
-Cada 1-3 meses o después de cambios grandes del mercado. Revisa: ¿no creció la participación de un activo? ¿Cambió la correlación? ¿Necesitas agregar nuevos activos?
+Cada 1-3 meses o después de cambios importantes del mercado. Verifica: ¿no ha crecido la parte de un activo? ¿Ha cambiado la correlación? ¿Necesitas agregar nuevos activos?

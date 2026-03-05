@@ -1,7 +1,7 @@
 ---
 title: 'Diversification and Trading System Setup. Part 2: How to Build the System'
 description: 'How to build and configure a trading system: entry and exit rules, position size, stop losses, choosing and configuring bots.'
-pubDate: '2026-02-02'
+pubDate: '2026-03-05'
 category: 'algo-trading'
 ---
 

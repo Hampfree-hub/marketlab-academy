@@ -1,53 +1,52 @@
 ﻿---
-title: 'Diversificación y configuración del sistema de trading. Parte 2: Cómo construir el sistema'
-description: 'Cómo construir y configurar un sistema de trading: reglas de entrada y salida, tamaño de posición, stop loss, elección y configuración de bots.'
-pubDate: '2026-02-02'
+title: 'Diversificación y Configuración del Sistema de Trading. Parte 2: Cómo Construir el Sistema'
+description: 'Cómo construir y configurar un sistema de trading: reglas de entrada y salida, tamaño de posición, stop-losses, elección y configuración de bots.'
+pubDate: '2026-03-05'
 category: 'algo-trading'
 ---
 
-Un sistema de trading es un conjunto de reglas: cuándo entrar y salir, cuánto arriesgar, cómo repartir el capital. Sin reglas claras las decisiones se vuelven emocionales e inconsistentes; con reglas es más fácil mantener disciplina y evaluar resultados.
+Un sistema de trading es un conjunto de reglas: cuándo entrar y salir, cuánto arriesgar, cómo asignar capital. Sin reglas claras, las decisiones se vuelven emocionales e inconsistentes; con reglas es más fácil mantener la disciplina y evaluar resultados.
 
-En esta parte — cómo construir un sistema básico y alinearlo con la diversificación de la [Parte 1](/es/library/diversification-trading-system-part-1/). En la [Parte 3](/es/library/diversification-trading-system-part-3/) — supervisión, ajustes y errores típicos.
+En esta parte — cómo construir un sistema básico y alinearlo con la diversificación de [Parte 1](/es/library/diversification-trading-system-part-1/). En [Parte 3](/es/library/diversification-trading-system-part-3/) — monitoreo, ajuste y errores comunes.
 
-## Qué es un sistema de trading
+## Qué es un Sistema de Trading
 
-Un sistema de trading son reglas explícitas en lugar de impulsos: cuándo entrar y salir, qué tamaño de posición permitir, dónde poner stop loss y take profit. Sin esas reglas las decisiones dependen del ánimo y el ruido del mercado; una operación “a sensación” arrastra a la siguiente y el resultado es difícil de evaluar. Con reglas puedes probar el sistema en historia ([backtests](/es/library/what-are-backtests/)), comparar con lo esperado y ajustar parámetros si hace falta. Un sistema básico incluye: criterios de entrada y salida, tamaño de posición y riesgo por operación, elección y configuración de bots según la diversificación por activos y plataformas de la [Parte 1](/es/library/diversification-trading-system-part-1/).
+Un sistema de trading son reglas explícitas en lugar de impulsos: cuándo entrar y salir, qué tamaño de posición permitir, dónde establecer stop-losses y take-profits. Sin tales reglas, las decisiones dependen del estado de ánimo y el ruido del mercado; una operación "por instinto" lleva a la siguiente y el resultado es difícil de evaluar. Con reglas puedes probar el sistema en historia ([backtests](/es/library/what-are-backtests/)), comparar resultados con expectativas y ajustar parámetros si es necesario. Un sistema básico incluye: criterios de entrada y salida, tamaño de posición y riesgo por operación, elección y configuración de bots en línea con la diversificación por activos y plataformas de [Parte 1](/es/library/diversification-trading-system-part-1/).
 
-## Reglas de entrada y salida
+## Reglas de Entrada y Salida
 
-Los criterios de entrada vienen del análisis técnico o la lógica de la estrategia: p. ej. nivel de soporte, señal de indicador o condición DCA/grid. Conviene escribirlos claro: “entramos con RSI < 30 y rebote del nivel”, “DCA se activa cada N días con caída de precio del X %”. Salida — por objetivos (take profit) y stop loss; no mantener “esperando” si la regla ya se cumplió. Si el stop se activa — cerrar por la regla, no “esperar el rebote”; si no, el riesgo se descontrola. Antes de ir en vivo, probar las reglas en historia — los backtests muestran cómo se habría comportado el sistema y qué drawdowns son posibles.
+Los criterios de entrada vienen del análisis técnico o la lógica de la estrategia: por ejemplo, nivel de soporte, señal de indicador o condición DCA/grid. Escríbelos claramente: "entramos en RSI < 30 y rebote desde el nivel," "DCA se activa cada N días en X% de caída de precio." Salida — por objetivos (take-profit) y stop-losses; no mantengas "con esperanza" si la regla ya se activó. Si el stop se activó — cierra según la regla, no "esperemos un rebote"; de lo contrario el riesgo sale de control. Antes de operar en vivo, prueba las reglas en historia — los backtests muestran cómo se habría comportado el sistema en el pasado y qué drawdowns son posibles.
 
-## Tamaño de posición y riesgo por operación
+## Tamaño de Posición y Riesgo por Operación
 
-El riesgo por operación es la parte del depósito que estás dispuesto a perder en una operación; de ahí dependen el tamaño de posición y la distancia al stop loss. Ejemplo: depósito 1000 $, riesgo por operación 1 % — 10 $; con stop del 5 % respecto al precio de entrada, el tamaño de posición no debe implicar pérdida mayor de 10 $. Muchos recomiendan no más del 1–2 % por operación; con diversificación fuerte, un riesgo por idea un poco mayor puede ser aceptable si el riesgo global del portafolio está bajo control. Fija un máximo y respétalo. Más en [gestión del riesgo en trading cripto](/es/library/risk-management-crypto-trading-bots/).
+El riesgo por operación es la parte del depósito que estás dispuesto a perder en una operación; de ello dependen el tamaño de la posición y la distancia al stop-loss. Ejemplo: depósito de $1000, riesgo del 1% por operación — $10; con un stop-loss del 5% desde el precio de entrada, el tamaño de la posición no debe llevar a más de $10 de pérdida. Establece un máximo y no lo excedas. Así una mala operación no golpea todo el capital; una racha de pérdidas también está limitada. Muchos recomiendan no más del 1-2% por operación; con fuerte diversificación, un riesgo ligeramente mayor por idea puede ser aceptable si el riesgo general del portafolio está bajo control. Para nuestro enfoque ver [gestión de riesgo en trading cripto](/es/library/risk-management-crypto-trading-bots/).
 
-## Elección y configuración de bots
+## Elección y Configuración de Bots
 
-DCA y [trading en grid](/es/library/grid-trading-crypto/) resuelven tareas distintas: condiciones de activación y límites por bot se configuran por separado. DCA promedia la entrada en el tiempo; grid opera en rango. Para conectar con un exchange harán falta API keys y entender los límites de posiciones — paso a paso en [configuración del bot en Bybit](/es/library/bybit-trading-bot-setup/). No concentres todo el volumen en un bot: la repartición entre varias estrategias y pares debe cuadrar con la diversificación por activos y plataformas de la Parte 1. Antes de lanzar comprobar: los límites de posiciones no superan tu riesgo por operación ni el riesgo global del portafolio.
+DCA y [trading de cuadrícula (grid)](/es/library/grid-trading-crypto/) resuelven diferentes tareas: las condiciones de activación y los límites por bot se establecen por separado. DCA promedia la entrada en el tiempo; grid opera en un rango. Para conectarse a un exchange necesitarás claves API y comprensión de los límites de posición — paso a paso en [configuración de un bot en Bybit](/es/library/bybit-trading-bot-setup/). No concentres todo el volumen en un bot: la asignación en varias estrategias y pares debe coincidir con la diversificación por activos y plataformas de la Parte 1. Antes del lanzamiento verifica: los límites de posición no exceden tu riesgo por operación y el riesgo general del portafolio.
 
 ## Resumen
 
-Sistema = reglas de entrada/salida + tamaño de posición y riesgo + diversificación por activos, estrategias y plataformas. Siguiente — [Parte 3: ajustar a ti y errores típicos](/es/library/diversification-trading-system-part-3/).
+Sistema = reglas de entrada/salida + tamaño de posición y riesgo + diversificación por activos, estrategias y plataformas. Siguiente — [Parte 3: ajuste para ti y errores comunes](/es/library/diversification-trading-system-part-3/).
 
 ## FAQ
 
 **¿Cuántas estrategias ejecutar a la vez?**
 
-Empieza con 1–2. Cuando funcionen establemente — añade. 3–5 estrategias suelen ser suficientes para empezar.
+Comienza con 1-2. Cuando funcionen establemente — agrega más. 3-5 estrategias suele ser suficiente para comenzar.
 
 **¿Cómo determinar el riesgo por operación?**
 
-1–2% del depósito. Con diversificación fuerte se puede subir un poco, pero el riesgo global del portafolio debe estar controlado.
+1-2% del depósito. Con gran diversificación, puedes subir ligeramente, pero el riesgo general del portafolio debe estar controlado.
 
 **¿Necesito probar el sistema en historia?**
 
-Sí, obligatorio. Los [backtests](/es/library/what-are-backtests/) muestran drawdowns y comportamiento pasado del sistema.
+Sí, requerido. Los [backtests](/es/library/what-are-backtests/) muestran drawdowns y comportamiento pasado del sistema.
 
 **¿Qué gestión de riesgo para bots DCA?**
 
-El riesgo se calcula en la posición completa (incluyendo promedios), no solo la primera entrada. Usualmente 1–2% del depósito.
+El riesgo se calcula en toda la posición (incluyendo promedios), no solo la primera entrada. Usualmente 1-2% del depósito.
 
 **¿Puedo ejecutar DCA y grid en el mismo activo?**
 
-Es posible, pero difícil de manejar. Mejor separar: o DCA o grid en un activo.
-
+Posible, pero difícil de gestionar. Mejor separar: o DCA o grid en un activo.
