@@ -34,7 +34,7 @@ category: 'technical-analysis'
 - **Tradervue** — социальная платформа для обмена сделками
 - **Google Sheets / Excel** — кастомные решения
 
-В Market Lab мы используем [TMM](https://tradermake.money/ru/trader/Marketlab/?ref=Jx9LLm) — на одном из наших субаккаунтов можно отслеживать подробную публичную статистику тестовых наработок.
+В Market Lab мы используем [TMM](https://tradermake.money/ru/trader/Marketlab?page=1#OXMme8) — на одном из наших субаккаунтов можно отслеживать подробную публичную статистику тестовых наработок.
 
 ![Интерфейс TraderMake.Money — главная страница с общей статистикой](./assets/tmm-main-dashboard.png)
 *Рис. 1. Главная страница TMM: общая статистика, график депозита, метрики*

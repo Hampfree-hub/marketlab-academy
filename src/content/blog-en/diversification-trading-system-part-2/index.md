@@ -29,8 +29,6 @@ DCA and [grid trading](/en/library/grid-trading-crypto/) solve different tasks: 
 
 System = entry/exit rules + position size and risk + diversification by assets, strategies, and venues. Next — [Part 3: tuning for yourself and common mistakes](/en/library/diversification-trading-system-part-3/).
 
-For portfolio analytics and diversification tools, visit **[Veles Finance](https://veles.finance/)**.
-
 ## FAQ
 
 **How many strategies to run at once?**

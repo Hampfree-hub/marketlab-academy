@@ -34,7 +34,7 @@ Trade tracking has existed as long as trading itself.
 - **Tradervue** — social platform for sharing trades
 - **Google Sheets / Excel** — custom solutions
 
-At Market Lab, we use [TMM](https://tradermake.money/ru/trader/Marketlab/?ref=Jx9LLm) — you can track detailed public statistics of our test setups on one of our subaccounts.
+At Market Lab, we use [TMM](https://tradermake.money/trader/Marketlab?page=1#OXMme8) — you can track detailed public statistics of our test setups on one of our subaccounts.
 
 ![TraderMake.Money interface — main page with overall statistics](./assets/tmm-main-dashboard.png)
 *Fig. 1. TMM main page: overall statistics, deposit chart, metrics*

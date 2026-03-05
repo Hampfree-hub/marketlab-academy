@@ -34,7 +34,7 @@ El registro de operaciones existe desde que existe el trading mismo.
 - **Tradervue** — plataforma social para compartir operaciones
 - **Google Sheets / Excel** — soluciones personalizadas
 
-En Market Lab usamos [TMM](https://tradermake.money/ru/trader/Marketlab/?ref=Jx9LLm) — puedes ver estadísticas públicas detalladas de nuestros setups de prueba en una de nuestras subcuentas.
+En Market Lab usamos [TMM](https://tradermake.money/es/trader/Marketlab?page=1#OXMme8) — puedes ver estadísticas públicas detalladas de nuestros setups de prueba en una de nuestras subcuentas.
 
 ![Interfaz de TraderMake.Money — página principal con estadísticas generales](./assets/tmm-main-dashboard.png)
 *Fig. 1. Página principal de TMM: estadísticas generales, gráfico de depósito, métricas*

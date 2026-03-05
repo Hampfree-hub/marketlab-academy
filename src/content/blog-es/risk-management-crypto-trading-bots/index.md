@@ -31,7 +31,7 @@ Todas estas medidas forman la base de las reglas de gestión de dinero y permite
 
 Una herramienta efectiva para el control de la gestión de riesgo es mantener un diario de trading. El registro de operaciones ayuda a analizar errores, monitorear el progreso y mantener la disciplina.
 
-Existen plataformas especializadas para el registro de operaciones, como [TraderMake.Money](https://tradermake.money/ru/trader/Marketlab/?ref=Jx9LLm). En Market Lab usamos TMM en modo de prueba para analizar nuestro propio trading en una de nuestras subcuentas de Bybit (datos públicos desde 14.02.2026).
+Existen plataformas especializadas para el registro de operaciones, como [TraderMake.Money](https://tradermake.money/es/trader/Marketlab?page=1#OXMme8). En Market Lab usamos TMM en modo de prueba para analizar nuestro propio trading en una de nuestras subcuentas de Bybit (datos públicos desde 14.02.2026).
 
 Más sobre mantener un diario de trading en el artículo separado [Diario de Trading](/es/library/trading-journal-guide/).
 

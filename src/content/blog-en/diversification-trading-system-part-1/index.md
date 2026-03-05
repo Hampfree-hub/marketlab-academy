@@ -48,8 +48,6 @@ At Market Lab, we use 3-4 subaccounts with a total of 200+ assets — this allow
 
 Diversification is part of setting up a trading system, not an end in itself. The goal is to reduce the risk of losing all capital due to one asset, one strategy, or one venue. Next — [Part 2: how to build and configure the system](/en/library/diversification-trading-system-part-2/).
 
-For portfolio analytics and diversification tools, visit **[Veles Finance](https://veles.finance/)**.
-
 ## FAQ
 
 **How many assets do I need for diversification?**
