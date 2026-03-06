@@ -35,12 +35,21 @@
   --nes-accent-red: #F83800;        /* NES red (alerts) */
   --nes-accent-yellow: #FCFC00;     /* NES yellow (highlight) */
   
-	/* Category colors (Inspired by Veles Almanac) */
-	--cat-fundamentals: #F97316;
-	--cat-architecture: #14B8A6;
-	--cat-dynamics: #EF4444;
-	--cat-practice: #EAB308;
-	--cat-regulation: #8B5CF6;
+	/* Category colors (Market Lab Characters — Tailwind palette) */
+	/* Emily — Зелёный (crypto): рост, движение, уверенность */
+	--cat-crypto: #16A34A;           /* Tailwind green-600 (читается с белым) */
+	
+	/* Kai — Синий (technical-analysis): спокойствие, защита, анализ */
+	--cat-technical-analysis: #0284C7;  /* Tailwind sky-600 (читается с белым) */
+	
+	/* Leon — Жёлтый (algo-trading): обучение, свет, наставничество */
+	--cat-algo-trading: #EAB308;     /* Tailwind yellow-500 (ярче, но белый читается) */
+	
+	/* Vera — Оранжевый (fundamental-analysis): опыт, энергия, практицизм */
+	--cat-fundamental-analysis: #EA580C;  /* Tailwind orange-600 (читается с белым) */
+	
+	/* Alex — Фиолетовый (regulation): интеллект, аналитика, магия цифр */
+	--cat-regulation: #7C3AED;       /* Tailwind violet-600 (читается с белым) */
 
 	/* Fibonacci Font Sizes */
 	--fs-xs: 8px;

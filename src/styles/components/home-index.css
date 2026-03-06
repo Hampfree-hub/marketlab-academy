@@ -110,10 +110,10 @@ section[aria-labelledby*="recent"] {
 	margin-left: auto;
 }
 
-.cat-crypto { color: var(--cat-fundamentals); }
-.cat-technical-analysis { color: var(--cat-architecture); }
-.cat-algo-trading { color: var(--cat-practice); }
-.cat-fundamental-analysis { color: var(--cat-dynamics); }
+.cat-crypto { color: var(--cat-crypto); }
+.cat-technical-analysis { color: var(--cat-technical-analysis); }
+.cat-algo-trading { color: var(--cat-algo-trading); }
+.cat-fundamental-analysis { color: var(--cat-fundamental-analysis); }
 
 .post-card-tags {
 	display: flex;
