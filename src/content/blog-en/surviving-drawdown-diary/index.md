@@ -1,6 +1,6 @@
 ---
 title: 'How We Survive Drawdown: A Live Account Diary'
-description: 'When Bitcoin drops and the account shrinks: our survival plan, why we don't average down blindly, and how to get through a drawdown without breaking the system. Live account, real drawdown.'
+description: "When Bitcoin drops and the account shrinks: our survival plan, why we don't average down blindly, and how to get through a drawdown without breaking the system. Live account, real drawdown."
 pubDate: '2026-03-05'
 category: 'technical-analysis'
 ---
