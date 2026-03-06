@@ -283,15 +283,8 @@ article {
 	border: 2px solid var(--nes-border-primary);
 	/* Плавный скролл */
 	scroll-behavior: smooth;
-	/* Визуальный индикатор скролла (тень справа) */
-	mask-image: linear-gradient(to right, black 95%, transparent 100%);
-	-webkit-mask-image: linear-gradient(to right, black 95%, transparent 100%);
-}
-
-/* Убираем маску при скролле вправо (когда видно край) */
-.prose table.scrolled-right {
-	mask-image: none;
-	-webkit-mask-image: none;
+	/* Скруглённые углы для контейнера */
+	border-radius: 4px;
 }
 
 .prose th, .prose td {
@@ -320,8 +313,6 @@ article {
 		display: table;
 		overflow: visible;
 		border: none;
-		mask-image: none;
-		-webkit-mask-image: none;
 	}
 
 	.prose th, .prose td {
@@ -343,6 +334,34 @@ article {
 	
 	.prose th {
 		font-size: 0.5rem; /* Меньше шрифт заголовков */
+	}
+}
+
+/* Кастомный скроллбар для таблиц (как на GitHub) */
+.prose table::-webkit-scrollbar {
+	height: 8px;
+}
+
+.prose table::-webkit-scrollbar-track {
+	background: var(--nes-bg-secondary);
+	border-radius: 4px;
+}
+
+.prose table::-webkit-scrollbar-thumb {
+	background: var(--nes-border-primary);
+	border-radius: 4px;
+	transition: background 0.2s;
+}
+
+.prose table::-webkit-scrollbar-thumb:hover {
+	background: var(--nes-accent-green);
+}
+
+/* Firefox скроллбар */
+@-moz-document url-prefix() {
+	.prose table {
+		scrollbar-width: thin;
+		scrollbar-color: var(--nes-border-primary) var(--nes-bg-secondary);
 	}
 }
 
