@@ -235,13 +235,13 @@ p {
 }
 
 a {
-  color: var(--nes-accent-green);
+  color: var(--color-link);
   text-decoration: none;
   transition: color 0.10s steps(3);  /* ✅ VARIANT F */
 }
 
 a:hover {
-  color: var(--nes-accent-yellow);
+  color: var(--color-link-hover);
   text-decoration: none;
   transition: color 0.10s steps(3);  /* ✅ VARIANT F */
 }

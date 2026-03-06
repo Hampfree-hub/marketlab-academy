@@ -67,7 +67,11 @@
   --color-bullish: #10B981;         /* Зелёный (рост) 📈 */
   --color-bearish: #EF4444;         /* Красный (падение) 📉 */
   --color-neutral: #6B7280;         /* Серый (нейтраль) ━ */
-  
+
+  /* Link colors (Emily's green для ссылок) */
+  --color-link: #16A34A;            /* Tailwind green-600 (читается на белом) */
+  --color-link-hover: #EAB308;      /* Tailwind yellow-500 (Leon's yellow) */
+
   /* Standard semantic */
   --color-success: #10B981;         /* Успех ✓ */
   --color-error: #EF4444;           /* Ошибка ✗ */
