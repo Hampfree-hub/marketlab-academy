@@ -280,7 +280,6 @@ article {
 	display: block;
 	overflow-x: auto;
 	margin: var(--space-4) 0;
-	border: 2px solid var(--nes-border-primary);
 	/* Плавный скролл */
 	scroll-behavior: smooth;
 	/* Скруглённые углы для контейнера */
