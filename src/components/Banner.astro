@@ -358,12 +358,21 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 	/* --- Responsive Design --- */
 	@media (max-width: 768px) {
 		.banner-preview {
-			min-height: 260px; /* Место для title + subtitle + блок категории/водяной марки */
+			min-height: 280px; /* Увеличили: место для title + subtitle + блок категории/водяной марки */
 		}
 
 		.banner-inner {
 			padding: var(--space-3); /* 24px сверху и снизу — симметрия, чтобы низ не казался больше верха */
 			max-width: 100%; /* НЕ выходим за границы карточки */
+		}
+
+		.banner-title {
+			font-size: clamp(0.55rem, 1.2vw + 0.4rem, 0.75rem); /* Ещё меньше на планшетах */
+			line-height: 1.5;
+		}
+
+		.banner-preview .banner-title {
+			font-size: clamp(0.5rem, 1vw + 0.35rem, 0.65rem); /* Адаптивно: ещё меньше на узких экранах */
 		}
 
 		.banner-bottom {
@@ -376,23 +385,41 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 
 		.banner-rubric {
 			margin: 0; /* Reset margins for consistent alignment */
+			font-size: 0.5rem; /* Меньше шрифт на мобильных */
 			max-width: calc(100% - var(--space-2)); /* Оставляем место для водяной марки и gap */
 		}
 
 		.banner-watermark {
 			margin-left: auto;
+			font-size: 0.45rem; /* Меньше шрифт на мобильных */
 			max-width: calc(100% - var(--space-2)); /* НЕ выходим за границы, учитывая gap */
 		}
 	}
 
 	@media (max-width: 480px) {
 		.banner-preview {
-			min-height: 260px; /* Место для title + subtitle + блок категории/водяной марки */
+			min-height: 300px; /* Ещё больше места на мобильных */
 		}
 
 		.banner-inner {
 			padding: var(--space-2); /* 16px сверху и снизу — симметрия на малых экранах */
 			max-width: 100%; /* НЕ выходим за границы карточки */
+		}
+
+		.banner-title {
+			font-size: clamp(0.45rem, 0.8vw + 0.3rem, 0.55rem); /* Минимальный размер для мобильных */
+			line-height: 1.4;
+			word-break: break-word; /* Перенос длинных слов */
+			overflow-wrap: break-word; /* Гарантированный перенос */
+		}
+
+		.banner-preview .banner-title {
+			font-size: clamp(0.4rem, 0.7vw + 0.25rem, 0.5rem); /* Ещё меньше на очень узких экранах */
+		}
+
+		.banner-subtitle {
+			font-size: 0.5rem; /* Меньше шрифт */
+			-webkit-line-clamp: 4; /* Больше строк на мобильных */
 		}
 
 		.banner-bottom {
