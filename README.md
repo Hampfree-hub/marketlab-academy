@@ -57,8 +57,33 @@ npm run preview
 
 - **Философия:** 70% серьёзное / 30% забавное
 - **Шрифты:** Press Start 2P (заголовки), JetBrains Mono (текст)
-- **Цвета:** Классическая NES палитра
+- **Цвета:** Классическая NES палитра + Tailwind для категорий
 - **Стили:** `src/styles/nes8bit.css`, `src/styles/tokens.css`
+
+### 🎭 Цвета категорий (Market Lab Characters)
+
+Каждая категория закреплена за персонажем Market Lab:
+
+| Персонаж | Категория | Цвет | HEX | Класс |
+|----------|-----------|------|-----|-------|
+| **Emily** 🟢 | `crypto` | Зелёный | `#16A34A` | `.cat-crypto` |
+| **Kai** 🔵 | `technical-analysis` | Синий | `#0284C7` | `.cat-technical-analysis` |
+| **Leon** 🟡 | `algo-trading` | Жёлтый | `#EAB308` | `.cat-algo-trading` |
+| **Vera** 🟠 | `fundamental-analysis` | Оранжевый | `#EA580C` | `.cat-fundamental-analysis` |
+| **Alex** 🟣 | `regulation` | Фиолетовый | `#7C3AED` | `.cat-regulation` |
+
+**Почему Tailwind палитра:**
+- ✅ Белый текст читается на всех фонах
+- ✅ Отлично смотрится на тёмной теме
+- ✅ Соответствует 8-bit эстетике
+
+**Использование:**
+```css
+.category-badge { 
+  background-color: var(--cat-crypto); /* Или другая категория */
+  color: white; /* Белый текст читается на всех цветах */
+}
+```
 
 ### Компоненты
 
