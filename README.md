@@ -57,7 +57,7 @@ npm run preview
 
 - **Философия:** 70% серьёзное / 30% забавное
 - **Шрифты:** Press Start 2P (заголовки), JetBrains Mono (текст)
-- **Цвета:** Классическая NES палитра + Tailwind для категорий
+- **Цвета:** Классическая NES палитра + NES-подобные оттенки для категорий
 - **Стили:** `src/styles/nes8bit.css`, `src/styles/tokens.css`
 
 ### 🎭 Цвета категорий (Market Lab Characters)
