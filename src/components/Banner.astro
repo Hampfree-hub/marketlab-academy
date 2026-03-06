@@ -361,6 +361,11 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 			min-height: 280px; /* Увеличили: место для title + subtitle + блок категории/водяной марки */
 		}
 
+		.banner-full {
+			min-height: 320px; /* Увеличили для полных баннеров на планшетах */
+			aspect-ratio: unset; /* Отменяем фиксированное соотношение на мобильных */
+		}
+
 		.banner-inner {
 			padding: var(--space-3); /* 24px сверху и снизу — симметрия, чтобы низ не казался больше верха */
 			max-width: 100%; /* НЕ выходим за границы карточки */
@@ -373,6 +378,10 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 
 		.banner-preview .banner-title {
 			font-size: clamp(0.5rem, 1vw + 0.35rem, 0.65rem); /* Адаптивно: ещё меньше на узких экранах */
+		}
+
+		.banner-full .banner-title {
+			font-size: clamp(0.7rem, 1.5vw + 0.5rem, 1rem); /* Больше шрифт для полных баннеров */
 		}
 
 		.banner-bottom {
@@ -401,6 +410,11 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 			min-height: 300px; /* Ещё больше места на мобильных */
 		}
 
+		.banner-full {
+			min-height: 360px; /* Ещё больше места для полных баннеров на мобильных */
+			aspect-ratio: unset; /* Отменяем фиксированное соотношение */
+		}
+
 		.banner-inner {
 			padding: var(--space-2); /* 16px сверху и снизу — симметрия на малых экранах */
 			max-width: 100%; /* НЕ выходим за границы карточки */
@@ -417,9 +431,18 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 			font-size: clamp(0.4rem, 0.7vw + 0.25rem, 0.5rem); /* Ещё меньше на очень узких экранах */
 		}
 
+		.banner-full .banner-title {
+			font-size: clamp(0.55rem, 1vw + 0.35rem, 0.75rem); /* Больше шрифт для полных баннеров */
+		}
+
 		.banner-subtitle {
 			font-size: 0.5rem; /* Меньше шрифт */
 			-webkit-line-clamp: 4; /* Больше строк на мобильных */
+		}
+
+		.banner-full .banner-subtitle {
+			font-size: 0.6rem; /* Больше шрифт для полных баннеров */
+			-webkit-line-clamp: 5; /* Ещё больше строк */
 		}
 
 		.banner-bottom {
@@ -436,6 +459,10 @@ const subtitleSizeClass = subtitleLength > 120 ? 'text-xs' : subtitleLength > 80
 
 		.banner-preview .banner-watermark {
 			font-size: clamp(0.3rem, 0.7vw + 0.25rem, 0.45rem); /* Ещё меньше на узких экранах */
+		}
+
+		.banner-full .banner-watermark {
+			font-size: 0.5rem; /* Больше шрифт для полных баннеров */
 		}
 	}
 
