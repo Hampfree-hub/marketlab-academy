@@ -1,7 +1,7 @@
 ---
-title: 'Diversificación y Configuración del Sistema de Trading. Parte 1: Por Qué Diversificar'
+title: 'Configuración del Sistema. Parte 1'
 description: 'Por qué los traders diversifican: activos, estrategias, plataformas. Cómo no poner todo en una sola cesta y reducir el riesgo al operar y usar bots.'
-pubDate: '2026-03-05'
+pubDate: '2026-02-20'
 category: 'algo-trading'
 ---
 

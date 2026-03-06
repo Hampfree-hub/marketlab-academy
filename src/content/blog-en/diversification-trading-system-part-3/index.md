@@ -1,7 +1,7 @@
 ---
-title: 'Diversification and Trading System Setup. Part 3: Tuning for Yourself and Mistakes'
+title: 'Trading System Setup. Part 3'
 description: 'How to adapt your trading system: monitoring, tuning, common mistakes and how to avoid them.'
-pubDate: '2026-03-05'
+pubDate: '2026-02-27'
 category: 'algo-trading'
 ---
 

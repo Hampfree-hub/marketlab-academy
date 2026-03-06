@@ -1,7 +1,7 @@
 ---
-title: 'Diversificación y Configuración del Sistema de Trading. Parte 3: Ajuste y Errores'
+title: 'Configuración del Sistema. Parte 3'
 description: 'Cómo adaptar tu sistema de trading: monitoreo, ajuste, errores comunes y cómo evitarlos.'
-pubDate: '2026-03-05'
+pubDate: '2026-02-27'
 category: 'algo-trading'
 ---
 

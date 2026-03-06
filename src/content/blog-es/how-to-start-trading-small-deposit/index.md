@@ -18,8 +18,10 @@ Sí, pero hay limitaciones:
 También hay ventajas:
 
 - menos estrés psicológico
-- aprendizaje con “errores baratos”
+- aprendizaje con "errores baratos"
 - disciplina forzada
+
+Para empezar, necesitas una cuenta en un exchange confiable. [Bybit](https://www.bybit.com/invite?ref=PWMD24) y [Bitget](https://www.bitget.com/ru/referral/register?clacCode=23EHR2VD) son adecuados para principiantes: interfaz intuitiva, comisiones bajas y soporte para operaciones pequeñas.
 
 ## Principios base
 

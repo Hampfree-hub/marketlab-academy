@@ -1,7 +1,7 @@
 ---
-title: 'Diversification and Trading System Setup. Part 1: Why Diversify'
+title: 'Trading System Setup. Part 1'
 description: 'Why traders diversify: assets, strategies, venues. How not to put everything in one basket and reduce risk when trading and using bots.'
-pubDate: '2026-03-05'
+pubDate: '2026-02-20'
 category: 'algo-trading'
 ---
 

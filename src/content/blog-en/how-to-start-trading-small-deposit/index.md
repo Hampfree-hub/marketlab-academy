@@ -13,11 +13,13 @@ This guide explains practical principles for small deposits and simple strategie
 
 Yes. But trading with a small balance has constraints:
 
-- you can’t open large positions
+- you can't open large positions
 - fees can matter more as a share of small trades — worth considering when choosing an exchange and trade frequency
 - diversification is harder
 
 There are also benefits:
+
+To get started, you'll need an account on a reliable exchange. [Bybit](https://www.bybit.com/invite?ref=PWMD24) and [Bitget](https://www.bitget.com/ru/referral/register?clacCode=23EHR2VD) are beginner-friendly: intuitive interface, low fees, and support for small trades.
 
 - lower psychological pressure
 - learning with smaller mistakes

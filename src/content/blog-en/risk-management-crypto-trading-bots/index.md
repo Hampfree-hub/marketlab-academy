@@ -31,7 +31,7 @@ All these measures form the basis of money management rules and allow even a beg
 
 One effective tool for risk management control is keeping a trading journal. Trade tracking helps analyze mistakes, monitor progress, and maintain discipline.
 
-There are specialized platforms for trade tracking, such as [TraderMake.Money](https://tradermake.money/trader/Marketlab?page=1#OXMme8). At Market Lab, we use TMM in test mode to analyze our own trading on one of our Bybit subaccounts (public data since 14.02.2026).
+There are specialized platforms for trade tracking, such as [TraderMake.Money](https://tradermake.money/ru/trader/Marketlab/?ref=Jx9LLm). At Market Lab, we use TMM in test mode to analyze our own trading on one of our Bybit subaccounts (public data since 14.02.2026).
 
 More on keeping a trading journal in the separate article [Trading Journal](/en/library/trading-journal-guide/).
 

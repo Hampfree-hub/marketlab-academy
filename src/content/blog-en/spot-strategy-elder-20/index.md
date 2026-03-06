@@ -1,5 +1,5 @@
 ---
-title: 'The Famous ELDER 2.0 Spot Strategy with Settings'
+title: 'The Famous ELDER 2.0 Spot Strategy'
 description: 'Proven ELDER 2.0 strategy with averaging: Stochastic, Bollinger, CMO settings for spot bots in the crypto market.'
 pubDate: '2026-02-28'
 category: 'algo-trading'

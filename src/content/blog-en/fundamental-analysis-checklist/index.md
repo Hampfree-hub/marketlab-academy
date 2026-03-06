@@ -1,5 +1,5 @@
 ---
-title: 'Fundamental Analysis in Crypto: A 15-Minute Checklist'
+title: 'Fundamental Analysis: 15-Min Checklist'
 description: 'A simple token checklist instead of a complex model. Basic info, project and team, tokenomics, on-chain metrics, red flags. For traders.'
 pubDate: '2026-01-31'
 category: 'fundamental-analysis'

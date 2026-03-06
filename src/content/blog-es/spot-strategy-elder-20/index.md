@@ -1,5 +1,5 @@
 ---
-title: 'La famosa estrategia spot ELDER 2.0 con configuración'
+title: 'La famosa estrategia spot ELDER 2.0'
 description: 'Estrategia ELDER 2.0 probada con promediación: configuraciones de Stochastic, Bollinger, CMO para bots de spot en el mercado cripto.'
 pubDate: '2026-02-28'
 category: 'algo-trading'
