@@ -35,21 +35,21 @@
   --nes-accent-red: #F83800;        /* NES red (alerts) */
   --nes-accent-yellow: #FCFC00;     /* NES yellow (highlight) */
   
-	/* Category colors (Market Lab Characters — Tailwind palette) */
+	/* Category colors (Market Lab Characters — NES-like palette) */
 	/* Emily — Зелёный (crypto): рост, движение, уверенность */
-	--cat-crypto: #16A34A;           /* Tailwind green-600 (читается с белым) */
+	--cat-crypto: #00A800;           /* NES green-dark (тёмнее для контраста) */
 	
 	/* Kai — Синий (technical-analysis): спокойствие, защита, анализ */
-	--cat-technical-analysis: #0284C7;  /* Tailwind sky-600 (читается с белым) */
+	--cat-technical-analysis: #0078B4;  /* NES blue-dark (тёмнее для контраста) */
 	
 	/* Leon — Жёлтый (algo-trading): обучение, свет, наставничество */
-	--cat-algo-trading: #EAB308;     /* Tailwind yellow-500 (ярче, но белый читается) */
+	--cat-algo-trading: #D4B800;     /* NES yellow-dark (золотистый) */
 	
 	/* Vera — Оранжевый (fundamental-analysis): опыт, энергия, практицизм */
-	--cat-fundamental-analysis: #EA580C;  /* Tailwind orange-600 (читается с белым) */
+	--cat-fundamental-analysis: #D45800;  /* NES orange-dark (тёмнее) */
 	
 	/* Alex — Фиолетовый (regulation): интеллект, аналитика, магия цифр */
-	--cat-regulation: #7C3AED;       /* Tailwind violet-600 (читается с белым) */
+	--cat-regulation: #7038C0;       /* NES purple-dark (тёмнее) */
 
 	/* Fibonacci Font Sizes */
 	--fs-xs: 8px;

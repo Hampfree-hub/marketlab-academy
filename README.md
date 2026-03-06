@@ -66,24 +66,17 @@ npm run preview
 
 | Персонаж | Категория | Цвет | HEX | Класс |
 |----------|-----------|------|-----|-------|
-| **Emily** 🟢 | `crypto` | Зелёный | `#16A34A` | `.cat-crypto` |
-| **Kai** 🔵 | `technical-analysis` | Синий | `#0284C7` | `.cat-technical-analysis` |
-| **Leon** 🟡 | `algo-trading` | Жёлтый | `#EAB308` | `.cat-algo-trading` |
-| **Vera** 🟠 | `fundamental-analysis` | Оранжевый | `#EA580C` | `.cat-fundamental-analysis` |
-| **Alex** 🟣 | `regulation` | Фиолетовый | `#7C3AED` | `.cat-regulation` |
+| **Emily** 🟢 | `crypto` | Зелёный | `#00A800` | `.cat-crypto` |
+| **Kai** 🔵 | `technical-analysis` | Синий | `#0078B4` | `.cat-technical-analysis` |
+| **Leon** 🟡 | `algo-trading` | Жёлтый | `#D4B800` | `.cat-algo-trading` |
+| **Vera** 🟠 | `fundamental-analysis` | Оранжевый | `#D45800` | `.cat-fundamental-analysis` |
+| **Alex** 🟣 | `regulation` | Фиолетовый | `#7038C0` | `.cat-regulation` |
 
-### 🔗 Цвета ссылок
-
-| Состояние | Цвет | HEX | Примечание |
-|-----------|------|-----|------------|
-| **Обычное** | Emily's green | `#16A34A` | Tailwind green-600 |
-| **При наведении** | Leon's yellow | `#EAB308` | Tailwind yellow-500 |
-
-**Почему Tailwind палитра:**
-- ✅ Белый текст читается на всех фонах (категории)
-- ✅ Ссылки отлично видны на белом фоне
-- ✅ Отлично смотрится на тёмной теме
-- ✅ Соответствует 8-bit эстетике
+**Почему NES-подобная палитра:**
+- ✅ Аутентично 8-bit NES стилю
+- ✅ Белый текст читается на всех фонах
+- ✅ Более тёмные оттенки для контраста
+- ✅ Соответствует ретро эстетике Market Lab
 
 **Использование:**
 ```css
