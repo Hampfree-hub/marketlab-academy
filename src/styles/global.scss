@@ -2,27 +2,27 @@
   ═══════════════════════════════════════════════════════════════
   MARKETLAB ACADEMY — 8-bit NES Theme (Global Overrides)
   ═══════════════════════════════════════════════════════════════
-  
-  NOTE: This file imports tokens.css (variables) and base.css (reset + typography).
+
+  NOTE: This file imports tokens.scss (variables) and base.scss (reset + typography).
   This file contains compatibility overrides for legacy components.
-  
+
   Structure:
-  - tokens.css: CSS variables only (colors, spacing, borders)
-  - base.css: Reset + Typography + Utility classes
-  - components/*.css: Component-specific styles
+  - tokens.scss: CSS variables only (colors, spacing, borders)
+  - base.scss: Reset + Typography + Utility classes
+  - components/*.scss: Component-specific styles
   ═══════════════════════════════════════════════════════════════
 */
 
 /* Import tokens (variables) first */
-@import './tokens.css';
+@import './tokens.scss';
 
 /* Import base (reset + typography) */
-@import './base.css';
+@import './base.scss';
 
 /* Import component-specific styles globally to ensure reliable loading */
-@import './components/header.css';
-@import './components/blog-post.css';
-@import './components/nes-ui.css';
+@import './components/header.scss';
+@import './components/blog-post.scss';
+@import './components/nes-ui.scss';
 
 :root {
   /* Legacy variables (for compatibility with existing components) */
