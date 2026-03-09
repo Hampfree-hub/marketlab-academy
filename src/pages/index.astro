@@ -1,10 +1,13 @@
 ---
 // Root entrypoint: redirect user to best language.
-// - Prefer saved language (localStorage)
-// - Else, detect from browser languages (navigator.languages / navigator.language)
-// - Fallback: ru
+// Priority:
+// 1. Saved language (localStorage)
+// 2. Browser languages (navigator.languages)
+// 3. Geo-IP detection (via Accept-Language header - server-side, if available)
+// 4. Fallback: ru
 //
-// IMPORTANT: This is client-side only (static hosting). Language switcher keeps the URL as /[lang]/...
+// IMPORTANT: GitHub Pages is static hosting, so Geo-IP is not available.
+// We use browser language as proxy for region detection.
 const BASE_URL = import.meta.env.BASE_URL?.endsWith('/')
 	? import.meta.env.BASE_URL
 	: (import.meta.env.BASE_URL || '/') + '/';
@@ -16,6 +19,8 @@ const BASE_URL = import.meta.env.BASE_URL?.endsWith('/')
 	<title>Redirecting…</title>
 	<meta name="robots" content="noindex" />
 	<link rel="canonical" href={BASE_URL} />
+	<!-- Fallback redirect after 2 seconds if JS fails -->
+	<meta http-equiv="refresh" content="2;url={BASE_URL}ru/" />
 	<script is:inline>
 		(() => {
 			const supported = ['ru', 'en', 'es'];
@@ -41,8 +46,25 @@ const BASE_URL = import.meta.env.BASE_URL?.endsWith('/')
 				return null;
 			};
 
+			// Detect region from timezone (more reliable than language for region)
+			const detectRegionFromTimezone = () => {
+				try {
+					const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+					if (tz.includes('Moscow') || tz.includes('Europe') || tz.includes('Kirov')) return 'ru';
+					if (tz.includes('America') || tz.includes('US') || tz.includes('Canada')) return 'en';
+					if (tz.includes('Madrid') || tz.includes('Barcelona') || tz.includes('America/Mexico') || tz.includes('America/Argentina')) return 'es';
+				} catch {
+					return null;
+				}
+				return null;
+			};
+
 			const stored = safeGetStoredLang();
-			const detected = stored || detectBrowserLang() || 'ru';
+			const browser = detectBrowserLang();
+			const region = detectRegionFromTimezone();
+			
+			// Priority: stored > browser > region > fallback
+			const detected = stored || browser || region || 'ru';
 			const base = {BASE_URL};
 
 			// Ensure base ends with "/" and redirect to /{lang}/ under that base
