@@ -20,7 +20,7 @@ const BASE_URL = import.meta.env.BASE_URL?.endsWith('/')
 	<meta name="robots" content="noindex" />
 	<link rel="canonical" href={BASE_URL} />
 	<!-- Fallback redirect after 2 seconds if JS fails -->
-	<meta http-equiv="refresh" content="2;url={BASE_URL}ru/" />
+	<meta http-equiv="refresh" content={`2;url=${BASE_URL}ru/`} />
 	<script is:inline>
 		(() => {
 			const supported = ['ru', 'en', 'es'];
