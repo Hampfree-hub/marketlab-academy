@@ -19,8 +19,7 @@ const BASE_URL = import.meta.env.BASE_URL?.endsWith('/')
 	<title>Redirecting…</title>
 	<meta name="robots" content="noindex" />
 	<link rel="canonical" href={BASE_URL} />
-	<!-- Fallback redirect after 2 seconds if JS fails -->
-	<meta http-equiv="refresh" content={`2;url=${BASE_URL}ru/`} />
+	<!-- No meta refresh - Astro doesn't support dynamic values in meta content -->
 	<script is:inline>
 		(() => {
 			const supported = ['ru', 'en', 'es'];
@@ -73,13 +72,17 @@ const BASE_URL = import.meta.env.BASE_URL?.endsWith('/')
 	</script>
 </head>
 <body>
+	<!-- Fallback for users without JavaScript -->
 	<noscript>
-		<p>Select language:</p>
-		<ul>
-			<li><a href={`${BASE_URL}ru/`}>Русский</a></li>
-			<li><a href={`${BASE_URL}en/`}>English</a></li>
-			<li><a href={`${BASE_URL}es/`}>Español</a></li>
-		</ul>
+		<div style="font-family: monospace; padding: 2rem; text-align: center;">
+			<p>Redirecting...</p>
+			<p>If you are not redirected, <a href="/ru/">click here for Russian</a></p>
+			<ul style="list-style: none; padding: 0;">
+				<li><a href="/ru/">Русский</a></li>
+				<li><a href="/en/">English</a></li>
+				<li><a href="/es/">Español</a></li>
+			</ul>
+		</div>
 	</noscript>
 </body>
 </html>
