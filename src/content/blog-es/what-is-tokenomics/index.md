@@ -25,22 +25,91 @@ Componentes clave:
 
 **Circulating supply:** tokens disponibles en el mercado (no siempre igual al máximo).
 
+**Total supply:** todos los tokens que existen ahora (incluyendo bloqueados).
+
+**Max supply:** máximo número de tokens que existirán. Bitcoin: 21 millones; Ethereum: ilimitado.
+
 **Unlock schedule:** calendario de desbloqueos de equipo/inversores/ecosistema; unlocks grandes pueden crear presión vendedora.
 
-## Qué revisar al analizar
+**Inflation rate:** porcentaje anual de aumento de oferta. Inflación alta diluye la participación de holders.
 
-- asignación a equipo/inversores y vesting/desbloqueos
-- mecanismos deflacionarios (burn) o staking que reduzcan oferta efectiva
-- utilidad real del token (más allá de especulación)
-- comparación de FDV con proyectos similares y potencial de adopción
+## Tipos de tokens por propósito
 
-La tokenómica es parte del análisis fundamental. Conviene verla junto con producto, equipo y mercado. Para base: **[Bitcoin Basics](/es/library/bitcoin-basics)** y **[Qué es una moneda digital](/es/library/what-is-digital-currency-in-simple-terms)**.
+**Utility tokens:** Dan acceso a producto o servicio. Ejemplos: FIL para almacenamiento en Filecoin, ETH para gas de Ethereum.
+
+**Governance tokens:** Dan derecho a voto en gobernanza del protocolo. Ejemplos: UNI para votar en Uniswap, MKR en MakerDAO.
+
+**Security tokens:** Representan propiedad en activo o proyecto. Sujetos a regulación de valores. Ejemplo: acciones tokenizadas.
+
+**Stablecoins:** Vinculadas a activo estable (USD, oro). Ejemplos: USDT, USDC, DAI.
+
+**NFTs (tokens no fungibles):** Tokens únicos que representan propiedad de activos digitales o físicos.
+
+## Qué revisar al analizar tokenomics
+
+**1. Asignación a equipo e inversores:**
+- Óptimo: 10-20% con vesting de 2-4 años
+- Riesgo: 30%+ sin vesting (pueden vender anytime)
+
+**2. Unlock schedule:**
+- Comprobar fechas de unlocks grandes
+- Evitar proyectos con 50%+ tokens en una mano
+
+**3. Mecanismos de quema (burn):**
+- Quemas regulares reducen oferta
+- Ejemplo: BNB quema 20% de beneficios trimestralmente
+
+**4. Utilidad real del token:**
+- ¿El token sirve para el producto o solo especulación?
+- ¿Hay incentivos para mantener (staking, descuentos)?
+
+**5. Comparación con competidores:**
+- FDV relativo a market cap
+- ratio circulating/max supply
+
+**6. Inflación y emisiones:**
+- ¿Cuántos tokens nuevos se crean anualmente?
+- ¿Cómo afecta al precio a largo plazo?
+
+## Banderas rojas en tokenomics
+
+**❌ Gran asignación al equipo sin vesting:** 30%+ a fundadores que pueden vender anytime.
+
+**❌ Emisiones ocultas:** No está claro cuántos tokens más se crearán.
+
+**❌ Sin utilidad real:** Token solo para especulación, no uso en producto.
+
+**❌ Inflación excesiva:** 50%+ anual diluye holders.
+
+**❌ Distribución opaca:** Sin información sobre quién posee los tokens.
+
+## Ejemplos de tokenomics
+
+**Bitcoin (BTC):**
+- Max Supply: 21 millones
+- Circulating: ~19.5 millones (93%)
+- Inflación: 1.7% anual (tras halving 2024)
+- Distribución: descentralizada (mining)
+
+**Ethereum (ETH):**
+- Max Supply: ilimitado
+- Circulating: ~120 millones
+- Inflación: ~0.5% (tras transición a PoS y quemas)
+- Distribución: mining (histórico), staking (actual)
+
+**BNB:**
+- Max Supply: 200 millones
+- Circulating: ~153 millones
+- Mecanismo: quema trimestral del 20% de beneficios
+- Utilidad: fees, staking, participación en launchpad
 
 ## Resumen
 
 La tokenómica muestra cómo está estructurada la economía de un proyecto cripto. Es importante observar emisión, distribución y utilidad real del token. Desbloqueos abruptos y gran asignación al equipo son señales de alerta.
 
-Para trading automatizado basado en tokenomics, plataformas como [Veles](https://veles.finance/invite/washmallay) ofrecen seguimiento de tokenomics y ejecución automática basada en calendarios de unlock y métricas de oferta.
+Una buena tokenómica incentiva participación a largo plazo, es transparente y tiene mecanismos claros de influencia en precio. Antes de invertir, estudia whitepaper, unlock schedule y compara con competidores.
+
+Para más sobre análisis de documentación, ver [Qué es Whitepaper](/es/library/what-is-whitepaper/).
 
 ## FAQ
 
@@ -58,11 +127,17 @@ Es un riesgo. Si el equipo tiene 30%+ sin vesting (desbloqueo gradual), pueden v
 
 **¿Qué es quema de tokens (burn)?**
 
-Es un mecanismo donde los tokens se eliminan permanentemente de circulación. Esto reduce la oferta y potencialmente aumenta el precio. Pero es importante verificar si se quema un porcentaje suficiente.
+Mecanismo donde parte de la oferta de tokens se elimina permanentemente de circulación. Esto reduce oferta y potencialmente aumenta precio. Pero es importante comprobar si se quema suficiente porcentaje.
 
-**¿La tokenómica basta para evaluar un proyecto?**
+**¿La tokenómica es suficiente para evaluar un proyecto?**
 
-No, es solo una parte. También hay que ver producto, equipo, competidores, riesgos regulatorios. Buena tokenómica no salva un mal proyecto.
+No, es solo una parte. Mira también producto, equipo, competidores, riesgos regulatorios. Buena tokenómica no salva mal proyecto.
 
+**¿En qué se diferencian utility y governance tokens?**
 
+Utility tokens dan acceso al producto (fees, staking). Governance tokens dan derecho a voto en decisiones del protocolo (propuestas, votaciones). Algunos tokens combinan ambas funciones.
+
+**¿Qué es vesting?**
+
+Vesting es desbloqueo gradual de tokens. Por ejemplo, el equipo recibe 20% de tokens pero obtiene 25% por año durante 4 años. Esto incentiva al equipo a trabajar en el proyecto a largo plazo.
 
