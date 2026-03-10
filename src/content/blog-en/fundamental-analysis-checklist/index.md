@@ -7,63 +7,138 @@ category: 'fundamental-analysis'
 
 From "it's too complex" to "I have a 15-minute checklist." The goal is to quickly run through a token and decide whether to dig deeper or not. The checklist does not replace a deep dive but helps filter out what isn't worth looking at on the chart. For an introduction to fundamental analysis and how it fits with technical analysis, see the [overview article](/en/library/fundamental-analysis-intro/).
 
-## Step 1. Basic asset info (about 5 minutes)
+## Step 1. Basic info (3 minutes)
 
-**What to check:** what problem the project solves (use case), where the token trades, liquidity and volume.
+**Where to check:** CoinMarketCap, CoinGecko
 
-**Why:** if the token trades on one obscure exchange with tiny volume, order execution and exiting a position can be a problem. Market cap and volume show whether it's worth your time for the next step or the asset is too small for your risk.
+**Checklist:**
+- [ ] Top 200 by market cap (below — high manipulation risk)
+- [ ] 24h volume > $1M (otherwise hard to enter/exit)
+- [ ] Trades on 3+ exchanges (dependency on one venue — risk)
+- [ ] Has USDT/USDC pair (stable liquidity)
 
-**Practical:** go to CoinGecko/CoinMarketCap — exchanges, 24h volume, market cap. Assess whether liquidity is enough for your position size and whether price is being manipulated on a single venue.
+**Red flags:**
+- ❌ Top 500+ by market cap
+- ❌ Volume < $100,000 per 24h
+- ❌ Only one exchange (especially unknown)
+- ❌ No stablecoin pairs
 
-## Step 2. Project and team (5-10 minutes)
+**Decision:** If 2+ red flags — skip.
 
-**What to check:** website, whitepaper (if any), GitHub (open code and activity), team and partner visibility.
+## Step 2. Project and team (5 minutes)
 
-**Why:** projects with no clear product, anonymous team, and only marketing promises are higher risk. A live community, real partners, and a working product don't guarantee profit but reduce the chance of a rug.
+**Where to check:** Project website, Twitter, Discord, GitHub
 
-**Practical:** is there a clear problem and solution; is the code updated; are founders' names and socials listed; are there partnerships with known projects or companies. Red flag — big claims with no proof.
+**Checklist:**
+- [ ] Website with problem and solution description (not just "to the moon")
+- [ ] Whitepaper or documentation (clear what project does)
+- [ ] Team is public (names, LinkedIn, experience)
+- [ ] GitHub is active (commits in last month)
+- [ ] Socials are active (posts 2-3 times per week, not just "partnerships")
 
-## Step 3. Tokenomics and rug risks (10–15 minutes)
+**Red flags:**
+- ❌ No product description (only "crypto revolution")
+- ❌ Team is anonymous (no names, only nicknames)
+- ❌ GitHub is empty or last commit > 6 months ago
+- ❌ Socials only promise "X100" and "next Bitcoin"
+- ❌ Partnerships with unknown projects (or fake)
 
-**What to check:** max supply, emission model (inflation or deflation), vesting and allocations (who gets how much and when it unlocks). Any large unlocks in the next few months; is allocation skewed toward team and funds. Does the token have real utility in the product.
+**Decision:** If 2+ red flags — skip.
 
-**Why:** mass unlock to team or funds increases supply and often pushes price down. If most tokens sit in few wallets and unlock is soon, risk for buyers is higher. For more on on-chain metrics and coin flows, see the [on-chain metrics article](/en/library/onchain-metrics-fundamental-analysis/).
+## Step 3. Tokenomics (5 minutes)
 
-**Practical:** check unlock schedules (Token Unlocks, analytics services). Assess share held by team, funds, marketing. Understand whether the token is needed for the network/product or only for speculation.
+**Where to check:** CoinMarketCap, Token Unlocks, project website
 
-## Step 4. Basic on-chain metrics as a filter
+**Checklist:**
+- [ ] Max Supply is stated (clear how many tokens will exist)
+- [ ] Circulating Supply > 50% of Max Supply (otherwise many ununlocked)
+- [ ] No major unlocks in next 30 days
+- [ ] Team has < 20% of tokens (or 2+ year vesting)
+- [ ] Token has utility (needed for product, not only speculation)
 
-**What to check:** active addresses, on-chain transaction volume, concentration in large holders (whales), exchange reserves.
+**Red flags:**
+- ❌ Max Supply not stated (infinite emission)
+- ❌ Circulating Supply < 20% of Max Supply
+- ❌ Unlock > 10% of supply in next 7 days
+- ❌ Team has 30%+ tokens without vesting
+- ❌ Token is not needed for product (only "hold and wait for growth")
 
-**Why:** price rising while network activity falls and coins move to wallets can be less sustainable. Rising active addresses and usage with reasonable concentration is a sign of interest in the network, not just price. Data is available from Glassnode, CryptoQuant, Dune and similar services.
+**Decision:** If 2+ red flags — skip.
 
-**Practical:** compare price trend and active-address/volume trend; see whether exchange reserves are rising or falling (inflow to exchanges often precedes selling pressure). Don't conclude from one metric — look at them together.
+**For more:** [What Is Tokenomics](/en/library/what-is-tokenomics/) — metrics, token types, examples.
 
-## Step 5. Red flags
+## Step 4. On-chain context (2 minutes)
 
-**What may indicate higher risk:**
+**Where to check:** Glassnode, CryptoQuant, Arkham
 
-- **Pump-style tokenomics** — huge share with team/marketing, unlocks soon, no clear token utility.
-- **Opaque team** — anonymous, fake LinkedIn, no project history.
-- **Aggressive marketing with no product** — “X100”, “next Bitcoin” promises, no working app or contracts.
-- **Suspicious smart contracts** — ability to freeze user funds, hidden fees, contract not verified or closed-source.
+**Checklist:**
+- [ ] MVRV < 2 (not in overheated zone)
+- [ ] Outflow from exchanges in last 7 days (accumulation)
+- [ ] No anomalous whale transfers (> 5% supply per day)
 
-One red flag is reason for caution; several — better not to enter or to cap position size. For more on risk and capital protection, see [risk management in crypto trading](/en/library/risk-management-crypto-trading-bots/).
+**Red flags:**
+- ❌ MVRV > 3 (overheated zone, correction risk)
+- ❌ Inflow to exchanges > 10,000 BTC per week (for BTC)
+- ❌ Whales transferring tokens to exchanges (possible selling)
+
+**Decision:** If 1+ red flag — delay entry, wait for better moment.
+
+**For more:** [On-Chain Metrics](/en/library/onchain-metrics-fundamental-analysis/) — MVRV, SOPR, whales, services.
+
+## Step 5. Final check (1 minute)
+
+**Questions before entry:**
+1. Do I understand what the project does?
+2. Does the token have real utility?
+3. Is the market overheated (MVRV, narratives)?
+4. Am I ready to lose the entire position amount?
+
+**If at least one answer is "no":**
+- Don't enter or reduce position by 2-3x
+- Use stop loss mandatory
 
 ## Summary
 
-Here fundamentals are a junk filter and setup amplifier: filter out what isn't worth looking at on the chart and understand context for the rest. The goal isn't to know everything about every token but to quickly check key points and decide: dig deeper or skip.
+**Quick analysis formula:**
+- Steps 1-3 (15 minutes) — "junk/not junk" filter
+- Step 4 (2 minutes) — entry timing
+- Step 5 (1 minute) — final decision
 
-For automated trading with advanced tools, platforms like [Veles](https://veles.finance/invite/washmallay) offer built-in fundamental analysis features and automated execution based on checklist signals.
+**If token passed all 5 steps:**
+- ✅ Can move to technical analysis for entry
+- ✅ Position size — by risk management
+- ✅ Stop loss — mandatory
+
+**If token failed any step:**
+- ❌ Skip or position 3-5x smaller than usual
+- ❌ Stop loss — mandatory
+
+Remember: Fundamental analysis doesn't guarantee profit. It only reduces risk of entering obviously weak projects. Technical analysis gives entry and exit points.
+
+For more on risk management: [Risk Management for Beginner Traders](/en/library/risk-management-crypto-trading-bots/).
 
 ## FAQ
 
-**How long does the checklist take in practice?**  
+**How long does the checklist take in practice?**
+
 First run — 15–20 minutes. Once you're used to the data sources — 10–15 minutes per token.
 
-**Can I skip on-chain metrics?**  
+**Can I skip on-chain metrics?**
+
 Yes, for a first filter steps 1–3 (basic info, project, tokenomics) are enough. On-chain adds cycle context and large-holder behavior; useful for a deeper pass — see [on-chain metrics in FA](/en/library/onchain-metrics-fundamental-analysis/).
 
-**What to do after the checklist?**  
+**What to do after the checklist?**
+
 If the token passed the filter — move to technical analysis for entry: levels, indicators, volume. If not — either skip or strictly limit position size and stop loss.
+
+**What services to use for the checklist?**
+
+- Basic info: CoinMarketCap, CoinGecko
+- Tokenomics: Token Unlocks, project website
+- On-chain: Glassnode, CryptoQuant, Arkham
+- Team and project: Twitter, Discord, GitHub
+
+**Can you trade only by checklist?**
+
+No. Checklist only filters "junk". For entry use technical analysis: levels, indicators, volume. Checklist answers "is it worth looking", technical analysis answers "when to enter".
 
