@@ -48,15 +48,24 @@ Platform reliability is assessed from several sources.
 
 Many exchanges run a status page showing current state of services (trading, API, withdrawals, web interface) and incident history. This gives the official view: when an outage occurred, which systems were affected, and when service was restored.
 
+**Examples:**
+- Binance: status.binance.com
+- Bybit: status.bybit.com
+- Kraken: status.kraken.com
+
 ### Availability Reports
 
-Some exchanges publish monthly or yearly reports with uptime percentages for main services. Useful for comparison, but calculation methods can differ (what counts as “available,” which regions and nodes are included).
+Some exchanges publish monthly or yearly reports with uptime percentages for main services. Useful for comparison, but calculation methods can differ (what counts as "available," which regions and nodes are included).
 
 ### Third-Party Monitoring
 
-Independent services periodically probe exchange sites and APIs from different locations and build availability charts. They help assess uptime “from outside,” but coverage and frequency vary — treat as one input, not the only source.
+Independent services periodically probe exchange sites and APIs from different locations and build availability charts. They help assess uptime "from outside," but coverage and frequency vary — treat as one input, not the only source.
 
-When choosing an exchange, combine: official status, external monitoring, and user reports of recent incidents.
+**Examples:**
+- DownDetector — real-time user complaints
+- CryptoStatus — crypto exchange and wallet monitoring
+
+When choosing an exchange, combine: official status, external monitoring, and user reports of recent incidents. For automated trading, choose exchanges with 99.5%+ uptime — such exchanges are in the list of supported platforms on [Veles](https://veles.finance/invite/washmallay).
 
 ## Typical Causes of Downtime
 

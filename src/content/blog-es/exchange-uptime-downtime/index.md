@@ -48,15 +48,24 @@ La fiabilidad de la plataforma se valora con varias fuentes.
 
 Muchas exchanges tienen una página de estado (status page) con el estado actual de los servicios (trading, API, retiros, interfaz web) e historial de incidentes. Así se ve la versión oficial: cuándo hubo fallo, qué sistemas se vieron afectados y cuándo se restableció el servicio.
 
+**Ejemplos:**
+- Binance: status.binance.com
+- Bybit: status.bybit.com
+- Kraken: status.kraken.com
+
 ### Informes de disponibilidad
 
-Algunas exchanges publican informes mensuales o anuales con porcentajes de uptime por servicio. Sirven para comparar, pero la metodología puede variar (qué se considera “disponible”, qué regiones y nodos se incluyen).
+Algunas exchanges publican informes mensuales o anuales con porcentajes de uptime por servicio. Sirven para comparar, pero la metodología puede variar (qué se considera "disponible", qué regiones y nodos se incluyen).
 
 ### Servicios de monitorización externos
 
-Servicios independientes hacen ping periódico a sitios y APIs de exchanges desde distintos puntos y construyen gráficos de disponibilidad. Ayudan a valorar el uptime “desde fuera”, pero la cobertura y frecuencia varían — conviene usarlos como una fuente más, no la única.
+Servicios independientes hacen ping periódico a sitios y APIs de exchanges desde distintos puntos y construyen gráficos de disponibilidad. Ayudan a valorar el uptime "desde fuera", pero la cobertura y frecuencia varían — conviene usarlos como una fuente más, no la única.
 
-Al elegir exchange, conviene combinar: estado oficial, monitorización externa y comentarios de usuarios sobre incidentes recientes.
+**Ejemplos:**
+- DownDetector — quejas de usuarios en tiempo real
+- CryptoStatus — monitorización de exchanges y wallets cripto
+
+Al elegir exchange, conviene combinar: estado oficial, monitorización externa y comentarios de usuarios sobre incidentes recientes. Para trading automatizado, es importante elegir plataformas con uptime 99,5%+ — este tipo de exchanges están en la lista de plataformas soportadas en [Veles](https://veles.finance/invite/washmallay).
 
 ## Causas típicas del downtime
 
