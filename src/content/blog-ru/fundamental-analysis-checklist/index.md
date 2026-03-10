@@ -87,6 +87,8 @@ category: 'fundamental-analysis'
 
 **Подробнее:** [Ончейн-метрики](/ru/library/onchain-metrics-fundamental-analysis/) — MVRV, SOPR, киты, сервисы.
 
+Для работы с ончейн-сигналами в автоматическом режиме подойдут боты на [Veles](https://veles.finance/invite/washmallay) — можно настроить алерты и торговлю по метрикам.
+
 ## Шаг 5. Финальная проверка (1 минута)
 
 **Вопросы перед входом:**
