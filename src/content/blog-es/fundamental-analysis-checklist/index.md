@@ -5,62 +5,141 @@ pubDate: '2026-01-31'
 category: 'fundamental-analysis'
 ---
 
-De “es muy complejo” a “tengo un checklist de 15 minutos”. El objetivo es repasar un token rápido y decidir si profundizar o no. El checklist no sustituye un análisis profundo pero ayuda a filtrar lo que no merece ni mirar el gráfico. Para la introducción al análisis fundamental y su encaje con el técnico, ver el [artículo de visión general](/es/library/fundamental-analysis-intro/).
+De "es muy complejo" a "tengo un checklist de 15 minutos". El objetivo es repasar un token rápido y decidir si profundizar o no. El checklist no sustituye un análisis profundo pero ayuda a filtrar lo que no merece ni mirar el gráfico. Para la introducción al análisis fundamental y su encaje con el técnico, ver el [artículo de visión general](/es/library/fundamental-analysis-intro/).
 
-## Paso 1. Información básica del activo (unos 5 minutos)
+**Importante:** Este checklist es filtro "basura/no basura", no recomendación de compra. Para análisis profundo de tokenómica ver [Qué es Tokenómica](/es/library/what-is-tokenomics/), para métricas on-chain — [Análisis On-Chain](/es/library/onchain-metrics-fundamental-analysis/).
 
-**Qué revisar:** qué problema resuelve el proyecto (caso de uso), dónde se negocia el token, liquidez y volumen.
+## Paso 1. Información básica (3 minutos)
 
-**Para qué:** si el token se negocia en un solo exchange poco conocido con volumen ínfimo, la ejecución de órdenes y la salida de la posición pueden ser un problema. Capitalización y volumen indican si merece la pena el siguiente paso o el activo es demasiado pequeño para tu riesgo.
+**Dónde mirar:** CoinMarketCap, CoinGecko
 
-**En la práctica:** entrar en CoinGecko/CoinMarketCap — exchanges, volumen 24h, capitalización. Valorar si hay liquidez suficiente para tu tamaño de posición y si el precio se manipula en una sola plaza.
+**Checklist:**
+- [ ] Top 200 por market cap (debajo — alto riesgo de manipulación)
+- [ ] Volumen 24h > $1M (si no, difícil entrar/salir)
+- [ ] Cotiza en 3+ exchanges (dependencia de una plataforma — riesgo)
+- [ ] Tiene par USDT/USDC (liquidez estable)
 
-## Paso 2. Proyecto y equipo (5–10 minutos)
+**Banderas rojas:**
+- ❌ Top 500+ por market cap
+- ❌ Volumen < $100,000 por 24h
+- ❌ Solo un exchange (especialmente desconocido)
+- ❌ Sin pares con stablecoins
 
-**Qué revisar:** web, whitepaper (si hay), GitHub (código abierto y actividad), visibilidad del equipo y socios.
+**Decisión:** Si 2+ banderas rojas — saltar.
 
-**Para qué:** proyectos sin producto claro, equipo anónimo y solo promesas de marketing son mayor riesgo. Comunidad activa, socios reales y producto funcionando no garantizan beneficio pero reducen la probabilidad de “rug.”
+## Paso 2. Proyecto y equipo (5 minutos)
 
-**En la práctica:** ¿hay descripción del problema y la solución? ¿Se actualiza el código? ¿Nombres y redes de los fundadores? ¿Hay alianzas con proyectos o empresas conocidos? Bandera roja — solo afirmaciones grandilocuentes sin pruebas.
+**Dónde mirar:** Web del proyecto, Twitter, Discord, GitHub
 
-## Paso 3. Tokenómica y riesgos de “rug” (10–15 minutos)
+**Checklist:**
+- [ ] Web con descripción de problema y solución (no solo "to the moon")
+- [ ] Whitepaper o documentación (claro qué hace el proyecto)
+- [ ] Equipo es público (nombres, LinkedIn, experiencia)
+- [ ] GitHub activo (commits en último mes)
+- [ ] Redes activas (posts 2-3 veces por semana, no solo "partnerships")
 
-**Qué revisar:** oferta máxima, modelo de emisión (inflación o deflación), vesting y asignaciones (quién recibe cuánto y cuándo se desbloquea). ¿Unlocks grandes en los próximos meses? ¿La asignación está muy inclinada a equipo y fondos? ¿El token tiene utilidad real en el producto?
+**Banderas rojas:**
+- ❌ Sin descripción de producto (solo "revolución cripto")
+- ❌ Equipo anónimo (sin nombres, solo nicknames)
+- ❌ GitHub vacío o último commit > 6 meses atrás
+- ❌ Redes solo prometen "X100" y "próximo Bitcoin"
+- ❌ Partnerships con proyectos desconocidos (o falsos)
 
-**Para qué:** un unlock masivo a equipo o fondos aumenta la oferta y a menudo presiona el precio. Si la mayoría de tokens está en pocos wallets y el unlock está cerca, el riesgo para el comprador es mayor. Más sobre métricas on-chain y flujos de monedas en el [artículo de métricas on-chain](/es/library/onchain-metrics-fundamental-analysis/).
+**Decisión:** Si 2+ banderas rojas — saltar.
 
-**En la práctica:** consultar calendarios de unlocks (Token Unlocks, servicios de análisis). Valorar la parte de equipo, fondos, marketing. Entender si el token es necesario para la red/producto o solo para especulación.
+## Paso 3. Tokenómica (5 minutos)
 
-## Paso 4. Métricas on-chain básicas como filtro
+**Dónde mirar:** CoinMarketCap, Token Unlocks, web del proyecto
 
-**Qué revisar:** direcciones activas, volumen de transacciones on-chain, concentración en grandes holders (ballenas), reservas en exchanges.
+**Checklist:**
+- [ ] Max Supply declarado (claro cuántos tokens existirán)
+- [ ] Circulating Supply > 50% de Max Supply (si no, muchos sin desbloquear)
+- [ ] Sin unlocks grandes en próximos 30 días
+- [ ] Equipo tiene < 20% de tokens (o vesting 2+ años)
+- [ ] Token tiene utilidad (necesario para producto, no solo especulación)
 
-**Para qué:** un precio al alza con actividad de red a la baja y monedas yendo “a wallets” puede ser menos sostenible. Subida de direcciones activas y uso con concentración razonable es señal de interés por la red, no solo por el precio. Datos en Glassnode, CryptoQuant, Dune y similares.
+**Banderas rojas:**
+- ❌ Max Supply no declarado (emisión infinita)
+- ❌ Circulating Supply < 20% de Max Supply
+- ❌ Unlock > 10% de supply en próximos 7 días
+- ❌ Equipo tiene 30%+ tokens sin vesting
+- ❌ Token no es necesario para producto (solo "mantén y espera crecimiento")
 
-**En la práctica:** comparar tendencia de precio y de direcciones activas/volumen; ver si las reservas en exchanges suben o bajan (entrada a exchanges suele preceder presión vendedora). No concluir por una sola métrica — mirar en conjunto.
+**Decisión:** Si 2+ banderas rojas — saltar.
 
-## Paso 5. Banderas rojas
+**Para más:** [Qué es Tokenómica](/es/library/what-is-tokenomics/) — métricas, tipos de tokens, ejemplos.
 
-**Qué puede indicar mayor riesgo:**
+## Paso 4. Contexto on-chain (2 minutos)
 
-- **Tokenómica tipo “pump”** — gran parte en equipo/marketing, unlocks pronto, sin utilidad clara del token.
-- **Equipo opaco** — anónimos, LinkedIn falsos, sin historial de proyectos.
-- **Marketing agresivo sin producto** — promesas “X100”, “el próximo Bitcoin”, sin app o contratos funcionando.
-- **Contratos inteligentes sospechosos** — posibilidad de “congelar” fondos de usuarios, comisiones ocultas, contrato no verificado o cerrado.
+**Dónde mirar:** Glassnode, CryptoQuant, Arkham
 
-Una bandera roja es motivo de cautela; varias — mejor no entrar o limitar mucho el tamaño de la posición. Más sobre riesgo y protección del capital en [gestión del riesgo en trading cripto](/es/library/risk-management-crypto-trading-bots/).
+**Checklist:**
+- [ ] MVRV < 2 (no en zona de sobrecalentamiento)
+- [ ] Salida de exchanges en últimos 7 días (acumulación)
+- [ ] Sin transferencias anómalas de ballenas (> 5% supply por día)
+
+**Banderas rojas:**
+- ❌ MVRV > 3 (zona de sobrecalentamiento, riesgo de corrección)
+- ❌ Entrada a exchanges > 10,000 BTC por semana (para BTC)
+- ❌ Ballenas transfiriendo tokens a exchanges (posible venta)
+
+**Decisión:** Si 1+ bandera roja — retrasar entrada, esperar mejor momento.
+
+**Para más:** [Métricas On-Chain](/es/library/onchain-metrics-fundamental-analysis/) — MVRV, SOPR, ballenas, servicios.
+
+## Paso 5. Verificación final (1 minuto)
+
+**Preguntas antes de entrar:**
+1. ¿Entiendo qué hace el proyecto?
+2. ¿El token tiene utilidad real?
+3. ¿El mercado está sobrecalentado (MVRV, narrativas)?
+4. ¿Estoy listo para perder toda la cantidad de la posición?
+
+**Si al menos una respuesta es "no":**
+- No entrar o reducir posición 2-3x
+- Usar stop loss obligatorio
 
 ## Resumen
 
-Aquí el fundamental es filtro de ruido y amplificador de setups: filtrar lo que no merece mirar en el gráfico y entender el contexto del resto. Lo importante no es saberlo todo de cada token sino revisar rápido los puntos clave y decidir: profundizar o pasar.
+**Fórmula de análisis rápido:**
+- Pasos 1-3 (15 minutos) — filtro "basura/no basura"
+- Paso 4 (2 minutos) — timing de entrada
+- Paso 5 (1 minuto) — decisión final
+
+**Si el token pasó los 5 pasos:**
+- ✅ Puedes pasar a análisis técnico para entrada
+- ✅ Tamaño de posición — por gestión de riesgos
+- ✅ Stop loss — obligatorio
+
+**Si el token falló en algún paso:**
+- ❌ Saltar o posición 3-5x menor de lo habitual
+- ❌ Stop loss — obligatorio
+
+Recuerda: El análisis fundamental no garantiza beneficio. Solo reduce riesgo de entrar en proyectos obviamente débiles. El análisis técnico da puntos de entrada y salida.
+
+Para más sobre gestión de riesgos: [Gestión de Riesgos para Traders Principiantes](/es/library/risk-management-crypto-trading-bots/).
 
 ## FAQ
 
-**¿Cuánto tiempo lleva el checklist en la práctica?**  
-La primera vez — 15–20 minutos. Cuando te acostumbres a las fuentes — 10–15 minutos por token.
+**¿Cuánto tiempo lleva el checklist en la práctica?**
 
-**¿Puedo prescindir de métricas on-chain?**  
-Sí, para un primer filtro bastan los pasos 1–3 (info básica, proyecto, tokenómica). On-chain añade contexto de ciclo y comportamiento de grandes holders; útil para un repaso más profundo — ver [métricas on-chain en FA](/es/library/onchain-metrics-fundamental-analysis/).
+Primera vez — 15-20 minutos. Una vez te acostumbras a las fuentes de datos — 10-15 minutos por token.
 
-**¿Qué hacer después del checklist?**  
-Si el token pasó el filtro — pasar al análisis técnico para la entrada: niveles, indicadores, volumen. Si no — pasar de largo o limitar mucho tamaño de posición y stop loss.
+**¿Puedo saltar las métricas on-chain?**
+
+Sí, para un primer filtro los pasos 1-3 (información básica, proyecto, tokenómica) son suficientes. On-chain añade contexto de ciclo y comportamiento de grandes holders; útil para un análisis más profundo — ver [métricas on-chain en FA](/es/library/onchain-metrics-fundamental-analysis/).
+
+**¿Qué hacer después del checklist?**
+
+Si el token pasó el filtro — pasa a análisis técnico para entrada: niveles, indicadores, volumen. Si no — o saltar o limitar estrictamente tamaño de posición y stop loss.
+
+**¿Qué servicios usar para el checklist?**
+
+- Información básica: CoinMarketCap, CoinGecko
+- Tokenómica: Token Unlocks, web del proyecto
+- On-chain: Glassnode, CryptoQuant, Arkham
+- Equipo y proyecto: Twitter, Discord, GitHub
+
+**¿Se puede operar solo por checklist?**
+
+No. El checklist solo filtra "basura". Para entrada usa análisis técnico: niveles, indicadores, volumen. El checklist responde "¿vale la pena mirar", el análisis técnico responde "cuándo entrar".
