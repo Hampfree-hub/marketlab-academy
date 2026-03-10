@@ -48,30 +48,97 @@ Practical example: on-chain and tokenomics show the asset is not overheated and 
 
 ## Framework: three steps for a trader
 
-You can split the fundamental check into three blocks. You don’t have to go deep in all at once — start with one and expand.
+You can split the fundamental check into three blocks. You don't have to go deep in all at once — start with one and expand.
 
-1. **Macro and narrative** — central bank rates, crypto regulation, main market “stories” (halving, ETF, sanctions, etc.). This is the context in which the whole market and individual coins move.
+### Step 1. Macro and narrative
 
-2. **Asset quality** — top coins with liquidity and history vs little-known tokens; technology, tokenomics, team and product. The goal is to filter out what isn’t worth looking at on the chart.
+Central bank rates, crypto regulation, main market "stories" (halving, ETF, sanctions, etc.). This is the context in which the whole market and individual coins move.
 
-3. **On-chain cycle context** — MVRV, exchange reserves, network activity. Helps see which phase of the cycle we’re in: accumulation, growth, distribution, or capitulation.
+**What to watch:**
+- Fed rate (interest rates in the US)
+- Inflation (CPI, PCE)
+- Regulatory news (SEC, crypto laws)
+- Narratives (halving, ETF, DeFi, NFT, AI)
+
+### Step 2. Asset quality
+
+Top coins with liquidity and history vs little-known tokens; technology, tokenomics, team and product. The goal is to filter out what isn't worth looking at on the chart.
+
+**Checklist:**
+- Top 100 by market cap (CoinMarketCap, CoinGecko)
+- Working product (website, documentation, GitHub)
+- Active community (Twitter, Discord, Telegram)
+- Transparent tokenomics (whitepaper, unlock schedule)
+
+### Step 3. On-chain cycle context
+
+MVRV, exchange reserves, network activity. Helps see which phase of the cycle we're in: accumulation, growth, distribution, or capitulation.
+
+**Key metrics:**
+- MVRV < 1 — undervaluation zone
+- Outflow from exchanges — accumulation
+- SOPR < 1 — capitulation
+- Whale activity — growing interest
 
 For a detailed look at on-chain metrics, see the [dedicated article](/en/library/onchain-metrics-fundamental-analysis/); for a quick token run-through, see the [15-minute checklist](/en/library/fundamental-analysis-checklist/).
 
+## Limitations of fundamental analysis
+
+FA is a powerful tool but not perfect.
+
+**Limitations:**
+- Doesn't give precise entry and exit points
+- Takes time to learn (30-60 minutes per asset)
+- Data can be incomplete or outdated
+- In crypto, high volatility overrides fundamentals on short timeframes
+
+**How to reduce risks:**
+- Combine FA with TA and risk management
+- Use checklists to speed up analysis
+- Keep up with updates (tokenomics, regulation)
+- Don't rely on a single data source
+
 ## Summary
 
-Fundamental analysis does not replace technical analysis; it complements it: it helps select assets and understand cycle context. A trader who uses both FA and TA is better at telling “pump for the sake of pump” from a trend with a basis and relies less on the chart alone.
+Fundamental analysis does not replace technical analysis; it complements it: it helps select assets and understand cycle context. A trader who uses both FA and TA is better at telling "pump for the sake of pump" from a trend with a basis and relies less on the chart alone.
+
+**Key takeaways:**
+- FA answers "what to buy," TA answers "when to enter"
+- In crypto, use on-chain metrics, tokenomics, team
+- Framework: macro → asset quality → on-chain context
+- Combine FA with TA and risk management
+
+For more on tokenomics, see [What Is Tokenomics](/en/library/what-is-tokenomics/).
 
 ## FAQ
 
-**What is fundamental analysis in simple terms?**  
-Assessing an asset by “intrinsic” data: for stocks — business and profit, for currencies — the economy, for crypto — technology, tokenomics, and blockchain data. The question: “Is this asset worth the money and is the market overheated?”
+**What is fundamental analysis in simple terms?**
 
-**How does FA in crypto differ from FA in stocks?**  
+Assessing an asset by "intrinsic" data: for stocks — business and profit, for currencies — the economy, for crypto — technology, tokenomics, and blockchain data. The question: "Is this asset worth the money and is the market overheated?"
+
+**How does FA in crypto differ from FA in stocks?**
+
 In crypto there are no IFRS reports. Instead you use on-chain metrics (MVRV, exchange reserves, coin flows), tokenomics (emission, unlocks), and assessment of technology and team. The goal is the same — to understand value and risks.
 
-**How to combine fundamental and technical analysis?**  
-First FA: “Is this asset worth looking at, is it overheated?” Then TA: “Where to enter and exit” by levels and indicators. FA sets context and filter, TA sets entry and exit points.
+**How to combine fundamental and technical analysis?**
 
-**Why do traders need on-chain metrics?**  
-They show how participants behave in the network (accumulation, selling, exchange reserves) and the phase of the cycle. They complement the chart: the chart says “how” price moves, on-chain says “why” and “how sustainable it is.”
+First FA: "Is this asset worth looking at, is it overheated?" Then TA: "Where to enter and exit" by levels and indicators. FA sets context and filter, TA sets entry and exit points.
+
+**Why do traders need on-chain metrics?**
+
+They show how participants behave in the network (accumulation, selling, exchange reserves) and the phase of the cycle. They complement the chart: the chart says "how" price moves, on-chain says "why" and "how sustainable it is."
+
+**How long does fundamental analysis take?**
+
+Initial assessment: 15-30 minutes (checklist). Deep analysis: 1-2 hours (tokenomics, team, competitors, on-chain). For regular assets, updating data once a week or before major events is enough.
+
+**What services to use for fundamental analysis?**
+
+- On-chain: Glassnode, CryptoQuant, Nansen
+- Tokenomics: Token Unlocks, Token Terminal
+- Aggregators: CoinMarketCap, CoinGecko
+- News: Twitter, Discord, Telegram of projects
+
+**Can you trade only by fundamentals?**
+
+No. FA doesn't give precise entry points. Even with strong fundamentals, an asset can fall for weeks or months. Use TA for entry and stop losses to protect capital.
