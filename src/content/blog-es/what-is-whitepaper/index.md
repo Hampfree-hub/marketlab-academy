@@ -21,6 +21,15 @@ Aunque están relacionados, whitepaper y roadmap no son lo mismo. El whitepaper 
 
 Los inversores deben tener en cuenta ambos: el whitepaper ayuda a valorar la solidez técnica y la originalidad; el roadmap, la viabilidad de la ejecución y el cumplimiento de plazos.
 
+**Diferencias clave:**
+
+| Parámetro | Whitepaper | Roadmap |
+|-----------|------------|---------|
+| **Propósito** | Descripción de tecnología y tokenómica | Plan de desarrollo por fases |
+| **Duración** | Largo plazo (rara vez actualizado) | Corto plazo (trimestre/año) |
+| **Audiencia** | Inversores, desarrolladores, partners | Comunidad, usuarios |
+| **Contenido** | Problema, solución, arquitectura, tokenómica | Fechas, releases, partnerships |
+
 ## Cómo se usa el whitepaper en proyectos cripto
 
 ### En el lanzamiento
@@ -124,6 +133,52 @@ Con el crecimiento del proyecto, el whitepaper puede actualizarse o ampliarse.
 **Referencias a otros proyectos:** pueden indicar adopción de tecnología contrastada o falta de originalidad.
 
 **Socios:** socios conocidos suman credibilidad, pero hay que verificar las afirmaciones.
+
+## Banderas rojas en whitepapers
+
+**❌ Sin descripción del problema:**
+- Solo frases vagas ("revolución", "próximo Bitcoin")
+- No está claro qué hace el proyecto
+
+**❌ Sin detalles técnicos:**
+- Solo marketing, sin arquitectura ni código
+- No está claro cómo funciona la tecnología
+
+**❌ Tokenómica sospechosa:**
+- 50%+ tokens al equipo sin vesting
+- Sin descripción de función del token
+- Emisión infinita sin límite
+
+**❌ Equipo anónimo:**
+- Sin nombres, solo nicknames
+- Sin enlaces a proyectos anteriores
+
+**❌ Promesas irreales:**
+- "Rentabilidad garantizada del 1000%"
+- "Matar a Bitcoin en 6 meses"
+
+**❌ Sin aviso legal:**
+- Sin advertencias de riesgo
+- Token presentado como inversión sin regulación
+
+## Ejemplos de whitepapers de calidad
+
+**Bitcoin (2008):**
+- Autor: Satoshi Nakamoto
+- Extensión: 9 páginas
+- Contenido: problema del doble gasto, solución PoW, economía de minería
+
+**Ethereum (2014):**
+- Autores: Vitalik Buterin y equipo
+- Extensión: 36 páginas
+- Contenido: contratos inteligentes, máquina virtual EVM, gas
+
+**Chainlink (2017):**
+- Autores: Sergey Nazarov y equipo
+- Extensión: 42 páginas
+- Contenido: oráculos, datos descentralizados, tokenómica LINK
+
+Los whitepapers de estos proyectos se han convertido en estándares de la industria: se estudian antes de invertir y se usan como referencia al crear documentación. Para un ejemplo de documentación moderna, puedes ver [Veles](https://veles.finance/invite/washmallay) — también tienen descripciones de tecnología y tokenómica.
 
 ## Resumen
 
