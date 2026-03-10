@@ -54,7 +54,7 @@ One red flag is reason for caution; several — better not to enter or to cap po
 
 Here fundamentals are a junk filter and setup amplifier: filter out what isn't worth looking at on the chart and understand context for the rest. The goal isn't to know everything about every token but to quickly check key points and decide: dig deeper or skip.
 
-For automated trading with advanced tools, visit **[Veles Finance](https://veles.finance/invite/washmallay)**.
+For automated trading with advanced tools, platforms like [Veles](https://veles.finance/invite/washmallay) offer built-in fundamental analysis features and automated execution based on checklist signals.
 
 ## FAQ
 

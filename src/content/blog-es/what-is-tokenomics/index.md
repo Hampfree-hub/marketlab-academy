@@ -40,7 +40,7 @@ La tokenómica es parte del análisis fundamental. Conviene verla junto con prod
 
 La tokenómica muestra cómo está estructurada la economía de un proyecto cripto. Es importante observar emisión, distribución y utilidad real del token. Desbloqueos abruptos y gran asignación al equipo son señales de alerta.
 
-Para trading automatizado basado en tokenomics, visita **[Veles Finance](https://veles.finance/invite/washmallay)**.
+Para trading automatizado basado en tokenomics, plataformas como [Veles](https://veles.finance/invite/washmallay) ofrecen seguimiento de tokenomics y ejecución automática basada en calendarios de unlock y métricas de oferta.
 
 ## FAQ
 

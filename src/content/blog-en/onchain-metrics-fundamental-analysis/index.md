@@ -64,7 +64,9 @@ On-chain analysis is powerful but not perfect. A large transfer can be an intern
 3. **Tie to technical analysis** — e.g. MVRV < 1 and coins leaving exchanges → look for long setups by levels and indicators; SOPR > 1 and mass inflow to exchanges → be cautious with new longs, check for distribution.
 4. **Check on history** — if you use [backtests](/en/library/what-are-backtests/), you can use on-chain conditions as a period filter (e.g. only go long when MVRV is below a threshold).
 
-On-chain data is not a replacement for the chart and indicators but a way to make decisions more informed: who is moving the market, where liquidity is concentrated, and which phase of the cycle you’re in. Together with fundamental and technical analysis, on-chain helps not just follow trends but better assess risks and opportunities.
+On-chain data is not a replacement for the chart and indicators but a way to make decisions more informed: who is moving the market, where liquidity is concentrated, and which phase of the cycle you're in. Together with fundamental and technical analysis, on-chain helps not just follow trends but better assess risks and opportunities.
+
+Platforms like [Veles](https://veles.finance/invite/washmallay) offer automated on-chain trading with built-in metrics and bots for signal-based execution.
 
 ## Summary
 
