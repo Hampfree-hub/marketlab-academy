@@ -17,41 +17,84 @@ El blockchain es un libro público: ahí quedan registrados todos los movimiento
 
 Los grandes movimientos on-chain suelen marcar la dirección del mercado.
 
-- **Monedas entrando a exchanges** — crece la oferta “para vender”; es posible corrección o presión vendedora.
-- **Monedas saliendo de exchanges a wallets** — acumulación; los participantes venden menos, la liquidez se “encierra”.
+- **Monedas entrando a exchanges** — crece la oferta "para vender"; es posible corrección o presión vendedora.
+- **Monedas saliendo de exchanges a wallets** — acumulación; los participantes venden menos, la liquidez se "encierra".
 
 Servicios como Glassnode o CryptoQuant muestran balances y flujos de exchanges. No toda transferencia grande es señal: hay movimientos internos, market makers, arbitraje. Mirar tendencia y volumen, no una sola transacción.
 
+**Ejemplo:** Si 50,000+ BTC salieron de exchanges en una semana, es señal de acumulación. Si entraron 30,000+ BTC — posible presión vendedora.
+
 ### 2. MVRV (Market Value to Realized Value)
 
-MVRV compara la capitalización de mercado con el valor “realizado” de las monedas (al precio del último movimiento). En esencia: cuánto valora el mercado el activo por encima o por debajo del precio medio de compra.
+MVRV compara la capitalización de mercado con el valor "realizado" de las monedas (al precio del último movimiento). En esencia: cuánto valora el mercado el activo por encima o por debajo del precio medio de compra.
 
-- **MVRV < 1** — precio de mercado por debajo del “realizado”; muchos mantienen en pérdidas. Suele leerse como infravaloración o capitulación.
+- **MVRV < 1** — precio de mercado por debajo del "realizado"; muchos mantienen en pérdidas. Suele leerse como infravaloración o capitulación.
 - **MVRV > 3–3,5** — fuerte sobrecalentamiento; muchos en beneficio, sube el incentivo a tomar beneficios. El riesgo de corrección es mayor.
 
 MVRV no da un punto exacto de compra/venta pero da contexto: en MVRV < 1 es más sensato buscar setups largos y no cargar cortos; en MVRV > 3 — más cautela al añadir al largo y atento a señales de distribución en el gráfico.
 
+**Datos históricos:**
+- Fondo 2018: MVRV ≈ 0.8
+- Pico 2021: MVRV ≈ 3.8
+- Fondo 2022 (FTX): MVRV ≈ 0.9
+
 ### 3. SOPR (Spent Output Profit Ratio)
 
-SOPR muestra si los participantes venden en beneficio o en pérdida (según el precio medio de los outputs “gastados”).
+SOPR muestra si los participantes venden en beneficio o en pérdida (según el precio medio de los outputs "gastados").
 
 - **SOPR > 1** — toma de beneficios; muchos vendedores en beneficio, el mercado puede enfriarse.
 - **SOPR < 1** — ventas en pérdida; a menudo ligado a capitulación y posible rebote.
 
 Como MVRV, SOPR se usa mejor como filtro de sentimiento, no como único disparador. Combinar con análisis técnico (niveles, volumen, [RSI](/es/library/technical-analysis-rsi/)) da decisiones más sólidas.
 
+**Variaciones:**
+- **aSOPR (adjusted SOPR)** — excluye transacciones menores a 1 hora (ruido)
+- **SOPR por grupo** — separado para ballenas (>1000 BTC), tiburones (100-1000 BTC), retail
+
 ### 4. Zonas de riesgo en futuros (liquidaciones)
 
-En mercados de futuros se acumulan posiciones con liquidaciones “colgando” por encima o por debajo. Analizar estas zonas ayuda a valorar el riesgo de movimientos bruscos.
+En mercados de futuros se acumulan posiciones con liquidaciones "colgando" por encima o por debajo. Analizar estas zonas ayuda a valorar el riesgo de movimientos bruscos.
 
 - **Muchos largos cerca de liquidación** — una caída puede desencadenar liquidaciones en cascada y acelerar la bajada.
 - **Cortos cerca de liquidación** — una subida puede provocar short squeeze y rebote fuerte al alza.
 
 Datos de liquidaciones hay, por ejemplo, en Coinglass. Útil para dimensionar posición y stop loss, no como sustituto de tu sistema de trading.
 
+**Ejemplo:** Si $500M en liquidaciones de cortos están apilados en $95,000, una ruptura por encima de $95,000 podría provocar un salto brusco a $98,000-100,000 debido a la reacción en cadena de cierres de posiciones.
+
 ### 5. Actividad de grandes holders
 
-Seguir wallets de grandes holders y flujos a nuevos proyectos muestra hacia dónde va el capital. Grandes inversores acumulando un activo — posible señal de interés; salida masiva a un nuevo token — cambio de foco. Esos datos están en Nansen, Arkham y similares. Interpretar con cuidado: las “ballenas” pueden crear pistas falsas o actuar en interés del market making.
+Seguir wallets de grandes holders y flujos a nuevos proyectos muestra hacia dónde va el capital. Grandes inversores acumulando un activo — posible señal de interés; salida masiva a un nuevo token — cambio de foco. Esos datos están en Nansen, Arkham y similares. Interpretar con cuidado: las "ballenas" pueden crear pistas falsas o actuar en interés del market making.
+
+**Clasificación de holders:**
+- **Ballenas:** >1,000 BTC (o equivalente)
+- **Tiburones:** 100-1,000 BTC
+- **Peces:** 10-100 BTC
+- **Retail:** <10 BTC
+
+## Servicios para análisis on-chain
+
+**Glassnode:**
+- Métricas: MVRV, SOPR, balances de exchanges, direcciones activas
+- Precios: gratis (básico), $29/mes (advanced)
+
+**CryptoQuant:**
+- Métricas: reservas de exchanges, flujos, ballenas, futuros
+- Precios: gratis (básico), $29/mes (pro)
+
+**Nansen:**
+- Métricas: wallets de ballenas, smart money, nuevos proyectos
+- Precios: desde $199/mes
+
+**Dune Analytics:**
+- Métricas: dashboards personalizados, DeFi, NFT
+- Precios: gratis (básico), $199/mes (pro)
+
+**Coinglass:**
+- Métricas: liquidaciones, interés abierto, ratio long/short
+- Precios: gratis
+
+Para automatización de trading con datos on-chain, plataformas como [Veles](https://veles.finance/invite/washmallay) ofrecen métricas integradas y bots para ejecutar señales.
 
 ## Limitaciones de los datos on-chain
 
