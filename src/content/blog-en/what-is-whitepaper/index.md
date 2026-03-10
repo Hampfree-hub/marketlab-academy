@@ -17,9 +17,18 @@ A whitepaper is the official document of a crypto project that outlines its tech
 
 ![Whitepaper structure and example token allocation in crypto project](./assets/what-is-whitepaper.png)
 
-Although whitepapers and roadmaps are related, they serve different purposes. A whitepaper is a strategic document that sets out the project’s theoretical basis; a roadmap is an action plan with development phases and timelines.
+Although whitepapers and roadmaps are related, they serve different purposes. A whitepaper is a strategic document that sets out the project's theoretical basis; a roadmap is an action plan with development phases and timelines.
 
 Investors should consider both: the whitepaper helps judge technical soundness and uniqueness of the idea, while the roadmap shows how realistic execution is and whether deadlines are kept.
+
+**Key differences:**
+
+| Parameter | Whitepaper | Roadmap |
+|-----------|------------|---------|
+| **Purpose** | Technology and tokenomics description | Development plan by phases |
+| **Duration** | Long-term (rarely updated) | Short-term (quarter/year) |
+| **Audience** | Investors, developers, partners | Community, users |
+| **Content** | Problem, solution, architecture, tokenomics | Dates, releases, partnerships |
 
 ## How Whitepapers Are Used in Crypto Projects
 
@@ -150,6 +159,52 @@ Website, whitepaper PDF, GitHub, docs, and community links (Telegram, Discord, T
 **References to other projects:** Can indicate proven tech adoption or lack of originality.
 
 **Partners:** Known partners add credibility, but claims should be verified.
+
+## Red Flags in Whitepapers
+
+**❌ No problem description:**
+- Only vague phrases ("revolution", "next Bitcoin")
+- Unclear what the project does
+
+**❌ No technical details:**
+- Only marketing, no architecture or code
+- Unclear how the technology works
+
+**❌ Suspicious tokenomics:**
+- 50%+ tokens to team without vesting
+- No description of token function
+- Infinite emission without cap
+
+**❌ Anonymous team:**
+- No names, only nicknames
+- No links to previous projects
+
+**❌ Unrealistic promises:**
+- "Guaranteed 1000% returns"
+- "Kill Bitcoin in 6 months"
+
+**❌ No legal disclaimer:**
+- No risk warnings
+- Token presented as investment without regulation
+
+## Quality Whitepaper Examples
+
+**Bitcoin (2008):**
+- Author: Satoshi Nakamoto
+- Length: 9 pages
+- Content: Double-spend problem, PoW solution, mining economics
+
+**Ethereum (2014):**
+- Authors: Vitalik Buterin and team
+- Length: 36 pages
+- Content: Smart contracts, EVM, gas
+
+**Chainlink (2017):**
+- Authors: Sergey Nazarov and team
+- Length: 42 pages
+- Content: Oracles, decentralized data, LINK tokenomics
+
+Whitepapers of these projects have become industry standards — they are studied before investing and used as references when creating documentation. For an example of modern documentation, you can look at [Veles](https://veles.finance/invite/washmallay) — they also have technology and tokenomics descriptions.
 
 ## Summary
 
