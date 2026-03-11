@@ -1,7 +1,7 @@
 ---
 title: 'Fundamental Analysis in Traditional Finance and Crypto'
 description: 'Why fundamental analysis matters as much as technical analysis. Classic vs crypto, on-chain metrics, a simple framework for traders. Short and to the point.'
-pubDate: '2026-02-07'
+pubDate: '2026-03-02'
 category: 'fundamental-analysis'
 ---
 

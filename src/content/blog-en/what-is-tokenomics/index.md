@@ -1,7 +1,7 @@
 ---
 title: 'Tokenomics (Simple Explanation)'
 description: 'Tokenomics is the economic design of a crypto project: supply, distribution, utility, emissions, burns, and unlock schedules. What to check and why it matters.'
-pubDate: '2026-01-24'
+pubDate: '2026-02-12'
 category: 'fundamental-analysis'
 ---
 

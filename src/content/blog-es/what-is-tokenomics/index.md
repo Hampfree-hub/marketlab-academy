@@ -1,7 +1,7 @@
 ---
 title: 'Qué es la tokenómica (explicación simple)'
 description: 'Tokenómica: diseño económico de un proyecto cripto — oferta, distribución, utilidad, emisiones, burns y calendario de unlocks. Qué revisar y por qué.'
-pubDate: '2026-01-24'
+pubDate: '2026-02-12'
 category: 'fundamental-analysis'
 ---
 

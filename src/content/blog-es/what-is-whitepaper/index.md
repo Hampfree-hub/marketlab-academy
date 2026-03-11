@@ -1,7 +1,7 @@
 ---
 title: 'Whitepaper en cripto: qué es y para qué sirve'
 description: 'Whitepaper en cripto: qué es, para qué sirve, cómo se usa. Diferencias con el roadmap, qué revisar al analizar proyectos e inversiones.'
-pubDate: '2026-01-24'
+pubDate: '2026-02-15'
 category: 'fundamental-analysis'
 ---
 
