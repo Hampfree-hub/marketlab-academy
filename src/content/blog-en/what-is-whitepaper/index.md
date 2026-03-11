@@ -13,6 +13,8 @@ A whitepaper is a foundational document when launching new crypto projects. It d
 
 A whitepaper is the official document of a crypto project that outlines its technical design, goals, and outlook. It usually covers the problem the project addresses, technical details, tokenomics, and development plans. It is the first and most important document to read before investing in a cryptocurrency or blockchain startup.
 
+**Important:** A whitepaper does not guarantee project success. It's a statement of intent, not financial reporting. Always do your own research (DYOR).
+
 ## Whitepaper vs Roadmap — What to Focus On
 
 ![Whitepaper structure and example token allocation in crypto project](./assets/what-is-whitepaper.png)
