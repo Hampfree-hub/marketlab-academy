@@ -46,6 +46,8 @@ El FA y el AT responden preguntas distintas. Tiene sentido usarlos en secuencia.
 
 Ejemplo práctico: on-chain y tokenómica muestran que el activo no está sobrecalentado y que grandes wallets acumulan. Entonces en el gráfico buscamos setups largos — niveles, [indicadores](/es/library/technical-analysis-rsi/), volumen. Al revés: si el FA apunta a sobrecalentamiento o unlocks masivos, es más sensato no añadir al largo y buscar puntos de toma de beneficios o cortos.
 
+![Análisis fundamental vs técnico: qué responde cada uno](./assets/Technical_sv_fundamental.png)
+
 ## Marco: tres pasos para el trader
 
 Puedes dividir la revisión fundamental en tres bloques. No hace falta profundizar en todos a la vez — empieza por uno y amplía.
@@ -79,6 +81,8 @@ MVRV, reservas en exchanges, actividad de la red. Ayuda a ver en qué fase del c
 - Salida de exchanges — acumulación
 - SOPR < 1 — capitulación
 - Actividad de ballenas — interés creciente
+
+![3 pasos del análisis fundamental: infografía](./assets/Infographics_fundamental_analysis.png)
 
 Para el detalle de métricas on-chain, ver el [artículo dedicado](/es/library/onchain-metrics-fundamental-analysis/); para un repaso rápido del token, el [checklist de 15 minutos](/es/library/fundamental-analysis-checklist/).
 

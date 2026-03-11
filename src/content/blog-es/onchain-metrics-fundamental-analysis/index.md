@@ -33,6 +33,8 @@ MVRV compara la capitalización de mercado con el valor "realizado" de las moned
 
 MVRV no da un punto exacto de compra/venta pero da contexto: en MVRV < 1 es más sensato buscar setups largos y no cargar cortos; en MVRV > 3 — más cautela al añadir al largo y atento a señales de distribución en el gráfico.
 
+![Gráfico MVRV de Bitcoin con zonas de infravaloración y sobrecalentamiento](./assets/MVRV_Bitcoin.png)
+
 **Datos históricos:**
 - Fondo 2018: MVRV ≈ 0.8
 - Pico 2021: MVRV ≈ 3.8
@@ -74,6 +76,8 @@ Seguir wallets de grandes holders y flujos a nuevos proyectos muestra hacia dón
 
 ## Servicios para análisis on-chain
 
+![Cómo funciona el análisis on-chain: diagrama](./assets/How_onchain_analysis_works.png)
+
 **Glassnode:**
 - Métricas: MVRV, SOPR, balances de exchanges, direcciones activas
 - Precios: gratis (básico), $29/mes (advanced)
@@ -81,6 +85,8 @@ Seguir wallets de grandes holders y flujos a nuevos proyectos muestra hacia dón
 **CryptoQuant:**
 - Métricas: reservas de exchanges, flujos, ballenas, futuros
 - Precios: gratis (básico), $29/mes (pro)
+
+![Ejemplo de dashboard de Glassnode con métrica SOPR](./assets/Glassnode_with_SOPR_metric.png)
 
 **Nansen:**
 - Métricas: wallets de ballenas, smart money, nuevos proyectos
@@ -93,6 +99,8 @@ Seguir wallets de grandes holders y flujos a nuevos proyectos muestra hacia dón
 **Coinglass:**
 - Métricas: liquidaciones, interés abierto, ratio long/short
 - Precios: gratis
+
+![Clasificación de holders: ballenas, tiburones, peces](./assets/Classification_of_holders_(whales,sharks,and_fish).png)
 
 Para automatización de trading con datos on-chain, plataformas como [Veles](https://veles.finance/invite/washmallay) ofrecen métricas integradas y bots para ejecutar señales.
 
