@@ -44,7 +44,18 @@ FA and TA answer different questions. It makes sense to use them in sequence.
 
 **Technical analysis answers:** “Where exactly to enter and exit in the next days or weeks?” “What levels and indicators confirm the scenario?”
 
-Practical example: on-chain and tokenomics show the asset is not overheated and large wallets are accumulating. Then you look for long setups on the chart — levels, [indicators](/en/library/technical-analysis-rsi/), volume. Conversely, if FA points to overheating or mass unlocks, it’s wiser not to add to longs and to look for take-profit or short setups.
+Practical example: on-chain and tokenomics show the asset is not overheated and large wallets are accumulating. Then you look for long setups on the chart — levels, [indicators](/en/library/technical-analysis-rsi/), volume. Conversely, if FA points to overheating or mass unlocks, it's wiser not to add to longs and to look for take-profit or short setups.
+
+**Decision Matrix:**
+
+| FA | TA | Decision |
+|----|----|----------|
+| ✅ Strong | ✅ Signal | Enter with full position |
+| ✅ Strong | ❌ No signal | Wait, asset in portfolio |
+| ❌ Weak | ✅ Signal | Skip or short trade |
+| ❌ Weak | ❌ No signal | Ignore asset |
+
+![Fundamental vs Technical Analysis: what each answers](./assets/Technical_sv_fundamental.png)
 
 ## Framework: three steps for a trader
 
