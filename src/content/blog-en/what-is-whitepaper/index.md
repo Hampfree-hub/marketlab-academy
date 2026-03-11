@@ -30,6 +30,8 @@ Investors should consider both: the whitepaper helps judge technical soundness a
 | **Audience** | Investors, developers, partners | Community, users |
 | **Content** | Problem, solution, architecture, tokenomics | Dates, releases, partnerships |
 
+![Whitepaper and litepaper structure comparison](./assets/Crypto_Whitepaper-Light_paper.png)
+
 ## How Whitepapers Are Used in Crypto Projects
 
 ### At Project Launch
@@ -203,6 +205,8 @@ Website, whitepaper PDF, GitHub, docs, and community links (Telegram, Discord, T
 - Authors: Sergey Nazarov and team
 - Length: 42 pages
 - Content: Oracles, decentralized data, LINK tokenomics
+
+![Quality whitepaper examples: Bitcoin, Ethereum, Chainlink](./assets/Bitcoin-Ethereum-Chainlink-schema.png)
 
 Whitepapers of these projects have become industry standards — they are studied before investing and used as references when creating documentation. For an example of modern documentation, you can look at [Veles](https://veles.finance/invite/washmallay) — they also have technology and tokenomics descriptions.
 

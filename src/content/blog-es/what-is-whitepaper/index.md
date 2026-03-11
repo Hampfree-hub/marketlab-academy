@@ -30,6 +30,8 @@ Los inversores deben tener en cuenta ambos: el whitepaper ayuda a valorar la sol
 | **Audiencia** | Inversores, desarrolladores, partners | Comunidad, usuarios |
 | **Contenido** | Problema, solución, arquitectura, tokenómica | Fechas, releases, partnerships |
 
+![Estructura de whitepaper y litepaper: comparación](./assets/Crypto_Whitepaper-Light_paper.png)
+
 ## Cómo se usa el whitepaper en proyectos cripto
 
 ### En el lanzamiento
@@ -177,6 +179,8 @@ Con el crecimiento del proyecto, el whitepaper puede actualizarse o ampliarse.
 - Autores: Sergey Nazarov y equipo
 - Extensión: 42 páginas
 - Contenido: oráculos, datos descentralizados, tokenómica LINK
+
+![Ejemplos de whitepapers de calidad: Bitcoin, Ethereum, Chainlink](./assets/Bitcoin-Ethereum-Chainlink-schema.png)
 
 Los whitepapers de estos proyectos se han convertido en estándares de la industria: se estudian antes de invertir y se usan como referencia al crear documentación. Para un ejemplo de documentación moderna, puedes ver [Veles](https://veles.finance/invite/washmallay) — también tienen descripciones de tecnología y tokenómica.
 
