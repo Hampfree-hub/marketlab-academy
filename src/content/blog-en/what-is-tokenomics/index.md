@@ -55,6 +55,8 @@ Key components:
 - Check dates of major unlocks
 - Avoid projects with 50%+ tokens in single hands
 
+![Cryptoproject token distribution scheme](./assets/Cryptoproject-token-distribution-scheme.png)
+
 **3. Burn mechanisms:**
 - Regular burns reduce supply
 - Example: BNB burns 20% of profits quarterly
@@ -70,6 +72,8 @@ Key components:
 **6. Inflation and emissions:**
 - How many new tokens are created annually?
 - How does this affect long-term price?
+
+![Token unlock schedule for team and investors](./assets/The-schedule-for-unlocking-the-tokens-of-the-team-and-investors.png)
 
 ## Red flags in tokenomics
 

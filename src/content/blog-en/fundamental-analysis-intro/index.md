@@ -80,6 +80,8 @@ MVRV, exchange reserves, network activity. Helps see which phase of the cycle we
 - SOPR < 1 — capitulation
 - Whale activity — growing interest
 
+![3 steps of fundamental analysis: infographic](./assets/Infographics_fundamental_analysis.png)
+
 For a detailed look at on-chain metrics, see the [dedicated article](/en/library/onchain-metrics-fundamental-analysis/); for a quick token run-through, see the [15-minute checklist](/en/library/fundamental-analysis-checklist/).
 
 ## Limitations of fundamental analysis

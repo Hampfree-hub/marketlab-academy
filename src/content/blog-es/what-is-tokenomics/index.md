@@ -55,6 +55,8 @@ Componentes clave:
 - Comprobar fechas de unlocks grandes
 - Evitar proyectos con 50%+ tokens en una mano
 
+![Esquema de distribución de tokens de proyecto cripto](./assets/Cryptoproject-token-distribution-scheme.png)
+
 **3. Mecanismos de quema (burn):**
 - Quemas regulares reducen oferta
 - Ejemplo: BNB quema 20% de beneficios trimestralmente
@@ -70,6 +72,8 @@ Componentes clave:
 **6. Inflación y emisiones:**
 - ¿Cuántos tokens nuevos se crean anualmente?
 - ¿Cómo afecta al precio a largo plazo?
+
+![Calendario de desbloqueo de tokens para equipo e inversores](./assets/The-schedule-for-unlocking-the-tokens-of-the-team-and-investors.png)
 
 ## Banderas rojas en tokenomics
 
