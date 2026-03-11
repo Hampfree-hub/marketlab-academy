@@ -1,7 +1,7 @@
 ---
 title: 'On-Chain Metrics: MVRV, SOPR, Whales'
 description: 'How to use on-chain data in fundamental analysis. MVRV, SOPR, coin flows to and from exchanges, liquidation zones. For intermediate traders and beginners — without oversimplifying.'
-pubDate: '2026-01-31'
+pubDate: '2026-02-14'
 category: 'fundamental-analysis'
 ---
 
