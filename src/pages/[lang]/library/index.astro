@@ -328,20 +328,51 @@ const breadcrumbItems = [
 				function renderPagination(totalPages: number) {
 					const container = document.getElementById('pagination');
 					if (!container) return;
-					
+
 					if (totalPages <= 1) {
 						container.innerHTML = '';
 						return;
 					}
 
 					let html = '';
-					for (let i = 1; i <= totalPages; i++) {
-						html += `
-							<button class="tag-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">
-								${i}
-							</button>
-						`;
+					
+					// Helper: создать кнопку страницы
+					const createPageBtn = (page: number, isCurrent: boolean) => {
+						return `<button class="tag-btn ${isCurrent ? 'active' : ''}" data-page="${page}">${page}</button>`;
+					};
+					
+					// Helper: создать многоточие
+					const createEllipsis = () => {
+						return `<span class="pagination-ellipsis">...</span>`;
+					};
+					
+					// Всегда показываем первую страницу
+					html += createPageBtn(1, currentPage === 1);
+					
+					// Если страниц больше 2
+					if (totalPages > 2) {
+						// Левое многоточие (если текущая > 3)
+						if (currentPage > 3) {
+							html += createEllipsis();
+						}
+						
+						// Показываем страницы вокруг текущей (current-1, current, current+1)
+						// Но только если они не первая и не последняя
+						for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
+							html += createPageBtn(i, currentPage === i);
+						}
+						
+						// Правое многоточие (если текущая < totalPages-2)
+						if (currentPage < totalPages - 2) {
+							html += createEllipsis();
+						}
 					}
+					
+					// Всегда показываем последнюю страницу (если страниц > 1)
+					if (totalPages > 1) {
+						html += createPageBtn(totalPages, currentPage === totalPages);
+					}
+					
 					container.innerHTML = html;
 
 					container.querySelectorAll('[data-page]').forEach(btn => {
