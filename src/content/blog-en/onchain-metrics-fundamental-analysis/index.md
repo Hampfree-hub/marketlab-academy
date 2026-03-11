@@ -33,6 +33,8 @@ MVRV compares market cap with the "realized" value of coins (at the price of las
 
 MVRV does not give a precise buy/sell point but sets context: in MVRV < 1 it's wiser to look for long setups and not overload shorts; at MVRV > 3 — be cautious adding to longs and watch for distribution on the chart.
 
+![Bitcoin MVRV chart with undervaluation and overheated zones](./assets/MVRV_Bitcoin.png)
+
 **Historical data:**
 - 2018 bottom: MVRV ≈ 0.8
 - 2021 peak: MVRV ≈ 3.8
@@ -74,6 +76,8 @@ Tracking large-holder wallets and flows into new projects shows where capital is
 
 ## Services for on-chain analysis
 
+![How on-chain analysis works: diagram](./assets/How_onchain_analysis_works.png)
+
 **Glassnode:**
 - Metrics: MVRV, SOPR, exchange balances, active addresses
 - Pricing: free (basic), $29/mo (advanced)
@@ -81,6 +85,8 @@ Tracking large-holder wallets and flows into new projects shows where capital is
 **CryptoQuant:**
 - Metrics: exchange reserves, flows, whales, futures
 - Pricing: free (basic), $29/mo (pro)
+
+![Glassnode dashboard with SOPR metric example](./assets/Glassnode_with_SOPR_metric.png)
 
 **Nansen:**
 - Metrics: whale wallets, smart money, new projects
@@ -93,6 +99,8 @@ Tracking large-holder wallets and flows into new projects shows where capital is
 **Coinglass:**
 - Metrics: liquidations, open interest, long/short ratio
 - Pricing: free
+
+![Holder classification: whales, sharks, fish](./assets/Classification_of_holders_(whales,sharks,and_fish).png)
 
 For on-chain trading automation, platforms like [Veles](https://veles.finance/invite/washmallay) offer built-in metrics and bots for signal-based execution.
 
