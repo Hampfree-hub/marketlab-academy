@@ -1,7 +1,7 @@
 ---
 title: 'Tokenomics Explained: Complete Guide (2026)'
 description: 'Tokenomics is the economic design of a crypto project: supply, distribution, vesting, burns, unlocks. Step-by-step checklist with examples (BTC, ETH, APT). What to check before investing.'
-pubDate: '2026-03-14'
+pubDate: '2026-02-12'
 category: 'fundamental-analysis'
 ---
 
