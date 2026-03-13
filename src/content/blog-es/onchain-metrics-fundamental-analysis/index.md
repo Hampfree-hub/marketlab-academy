@@ -1,39 +1,51 @@
 ---
-title: 'Métricas on-chain: MVRV, SOPR, ballenas'
-description: 'Cómo usar datos on-chain en el análisis fundamental. MVRV, SOPR, flujos de monedas a y desde exchanges, zonas de liquidación. Para traders intermedios y principiantes — sin simplificar de más.'
+title: 'Métricas On-Chain: MVRV, SOPR, Ballenas'
+description: 'Cómo usar datos on-chain en análisis fundamental. MVRV, SOPR, flujos de exchanges, zonas de liquidación. Para traders intermedios y principiantes — sin simplificación excesiva.'
 pubDate: '2026-03-11'
 category: 'fundamental-analysis'
 ---
 
-El análisis on-chain es trabajar con datos del propio blockchain: transacciones, wallets, flujos de activos. Si el análisis técnico muestra *cómo* se mueve el precio, on-chain explica *por qué* ocurre. Para el trader, las métricas on-chain son parte del análisis fundamental: ayudan a valorar el contexto del ciclo, zonas de sobrecalentamiento o infravaloración y el comportamiento de los grandes jugadores. En este artículo: métricas clave a seguir y cómo no sobrevalorar su papel.
+El análisis on-chain es trabajar con datos de la blockchain misma: transacciones, carteras, movimientos de activos. Si el análisis técnico muestra *cómo* se mueve el precio, el on-chain explica *por qué* sucede. Para traders, las métricas on-chain son parte del análisis fundamental: ayudan a evaluar contexto de ciclo, zonas de sobrecalentamiento o subvaluación y comportamiento de grandes jugadores. Este artículo cubre métricas clave a rastrear y cómo no sobreestimar su rol.
 
-## Por qué el trader usa datos on-chain
+## Por Qué los Traders Necesitan Datos On-Chain
 
-El blockchain es un libro público: ahí quedan registrados todos los movimientos, balances y flujos de monedas. El análisis on-chain revela huellas de grandes jugadores, zonas de acumulación y señales que en el gráfico aparecen tarde o no aparecen. No sustituye al análisis técnico sino que lo complementa: ayuda a elegir cuándo entrar o salir, tamaño de posición y nivel de agresividad. On-chain da contexto de ciclo y sentimiento de participantes; los puntos de entrada y salida se siguen buscando por niveles, indicadores y volumen en el gráfico.
+Blockchain es un libro público: todas las transferencias, saldos y movimientos de monedas están registrados allí. El análisis on-chain revela rastros de grandes jugadores, zonas de acumulación y señales que aparecen en el gráfico con retraso o no aparecen en absoluto. No reemplaza el análisis técnico, pero lo complementa: ayuda a elegir timing de entrada o salida, tamaño de posición y nivel de agresividad. El on-chain establece contexto de ciclo y sentimiento de participantes; los puntos específicos de entrada y salida aún se buscan por niveles, indicadores y volumen en el gráfico.
 
-## Cinco métricas on-chain para el contexto fundamental
+**Ventajas del análisis on-chain:**
+- Transparencia: todos los datos de blockchain pública
+- Menos retraso que el gráfico: grandes transferencias visibles inmediatamente
+- Contexto: entender quién mueve el mercado (ballenas, retail, exchanges)
+- Filtro de señales falsas: AT + on-chain = menos entradas falsas
 
-### 1. Flujos de monedas a y desde exchanges
+**Limitaciones:**
+- No todas las transacciones son señales (hay transferencias internas, OTC)
+- Los datos pueden retrasarse varios bloques
+- Métricas agregadas suavizan la imagen
+- Requiere interpretación en contexto
 
-Los grandes movimientos on-chain suelen marcar la dirección del mercado.
+## Cinco Métricas On-Chain para Contexto Fundamental
 
-- **Monedas entrando a exchanges** — crece la oferta "para vender"; es posible corrección o presión vendedora.
-- **Monedas saliendo de exchanges a wallets** — acumulación; los participantes venden menos, la liquidez se "encierra".
+### 1. Flujos de Exchanges (Entradas/Salidas)
 
-Servicios como Glassnode o CryptoQuant muestran balances y flujos de exchanges. No toda transferencia grande es señal: hay movimientos internos, market makers, arbitraje. Mirar tendencia y volumen, no una sola transacción.
+Grandes transferencias en blockchain a menudo establecen dirección del mercado.
 
-**Ejemplo:** Si 50,000+ BTC salieron de exchanges en una semana, es señal de acumulación. Si entraron 30,000+ BTC — posible presión vendedora.
+- **Monedas fluyendo a exchanges** — oferta "para venta" aumenta; corrección o presión de precio posible.
+- **Monedas saliendo de exchanges a carteras** — acumulación; participantes menos dispuestos a vender, liquidez "bloqueada."
+
+Servicios como Glassnode o CryptoQuant muestran saldos de exchanges y flujos. No cada transacción grande es señal: hay transferencias internas, market-makers, arbitraje. Mire tendencia y volumen, no transacción individual.
+
+**Ejemplo:** Si 50,000+ BTC salieron de exchanges en una semana, esta es señal de acumulación. Si 30,000+ BTC llegaron — posible presión de precio.
 
 ### 2. MVRV (Market Value to Realized Value)
 
-MVRV compara la capitalización de mercado con el valor "realizado" de las monedas (al precio del último movimiento). En esencia: cuánto valora el mercado el activo por encima o por debajo del precio medio de compra.
+MVRV compara capitalización de mercado con valor "realizado" de monedas (por precio del último movimiento). Esencialmente — cuánto valora el mercado el activo por encima o debajo del precio promedio de adquisición.
 
-- **MVRV < 1** — precio de mercado por debajo del "realizado"; muchos mantienen en pérdidas. Suele leerse como infravaloración o capitulación.
-- **MVRV > 3–3,5** — fuerte sobrecalentamiento; muchos en beneficio, sube el incentivo a tomar beneficios. El riesgo de corrección es mayor.
+- **MVRV < 1** — precio de mercado debajo de "realizado"; muchos manteniendo en pérdida. A menudo interpretado como zona de subvaluación o capitulación.
+- **MVRV > 3-3.5** — sobrecalentamiento fuerte; muchos en ganancia, tentación de tomar ganancias crece. Riesgo de corrección mayor.
 
-MVRV no da un punto exacto de compra/venta pero da contexto: en MVRV < 1 es más sensato buscar setups largos y no cargar cortos; en MVRV > 3 — más cautela al añadir al largo y atento a señales de distribución en el gráfico.
+MVRV no da punto exacto de "compra/venta," pero establece contexto: en zona MVRV < 1 es más sabio buscar setups largos y no sobrecargar short; en MVRV > 3 — más cuidadoso añadiendo a long y atento a signos de distribución en gráfico.
 
-![Gráfico MVRV de Bitcoin con zonas de infravaloración y sobrecalentamiento](./assets/MVRV_Bitcoin.png)
+![Gráfico MVRV de Bitcoin con Zonas de Subvaluación y Sobrecalentamiento](./assets/MVRV_Bitcoin.png)
 
 **Datos históricos:**
 - Fondo 2018: MVRV ≈ 0.8
@@ -42,96 +54,318 @@ MVRV no da un punto exacto de compra/venta pero da contexto: en MVRV < 1 es más
 
 ### 3. SOPR (Spent Output Profit Ratio)
 
-SOPR muestra si los participantes venden en beneficio o en pérdida (según el precio medio de los outputs "gastados").
+SOPR muestra si los participantes están vendiendo en ganancia o pérdida (por precio promedio de outputs "gastados").
 
-- **SOPR > 1** — toma de beneficios; muchos vendedores en beneficio, el mercado puede enfriarse.
-- **SOPR < 1** — ventas en pérdida; a menudo ligado a capitulación y posible rebote.
+- **SOPR > 1** — toma de ganancias; muchos vendedores en ganancia, mercado puede enfriarse.
+- **SOPR < 1** — ventas en pérdida; a menudo asociado con capitulación y posible rebote.
 
-Como MVRV, SOPR se usa mejor como filtro de sentimiento, no como único disparador. Combinar con análisis técnico (niveles, volumen, [RSI](/es/library/technical-analysis-rsi/)) da decisiones más sólidas.
+Como MVRV, SOPR es mejor usarlo como filtro de sentimiento, no único disparador. Combinación con análisis técnico (niveles, volumen, [RSI](/es/library/technical-analysis-rsi/)) da decisiones más estables.
 
 **Variaciones:**
 - **aSOPR (adjusted SOPR)** — excluye transacciones menores a 1 hora (ruido)
-- **SOPR por grupo** — separado para ballenas (>1000 BTC), tiburones (100-1000 BTC), retail
+- **SOPR por grupos** — separado para ballenas (>1000 BTC), tiburones (100-1000 BTC), retail
 
-### 4. Zonas de riesgo en futuros (liquidaciones)
+### 4. Zonas de Riesgo en Futuros (Liquidaciones)
 
-En mercados de futuros se acumulan posiciones con liquidaciones "colgando" por encima o por debajo. Analizar estas zonas ayuda a valorar el riesgo de movimientos bruscos.
+En mercados de futuros, se acumulan posiciones bajo las cuales "cuelgan" liquidaciones. Analizar estas zonas ayuda a evaluar riesgo de movimientos bruscos.
 
-- **Muchos largos cerca de liquidación** — una caída puede desencadenar liquidaciones en cascada y acelerar la bajada.
-- **Cortos cerca de liquidación** — una subida puede provocar short squeeze y rebote fuerte al alza.
+- **Muchas posiciones largas bajo amenaza de liquidación** — en caída de precio, posible liquidación en cascada y aceleración de caída.
+- **Shorts al borde de liquidación** — en subida, posible short-squeeze y rebote brusco hacia arriba.
 
-Datos de liquidaciones hay, por ejemplo, en Coinglass. Útil para dimensionar posición y stop loss, no como sustituto de tu sistema de trading.
+Datos de liquidaciones disponibles, por ejemplo, en Coinglass. Útil considerar al elegir tamaño de posición y stop-losses, no como reemplazo de propio sistema de trading.
 
-**Ejemplo:** Si $500M en liquidaciones de cortos están apilados en $95,000, una ruptura por encima de $95,000 podría provocar un salto brusco a $98,000-100,000 debido a la reacción en cadena de cierres de posiciones.
+**Ejemplo:** Si $500M de liquidaciones de shorts acumulados en nivel $95,000, en breakout above $95,000 posible salto brusco a $98,000-100,000 debido a reacción en cadena de cierres de posiciones.
 
-### 5. Actividad de grandes holders
+### 5. Actividad de Grandes Tenedores
 
-Seguir wallets de grandes holders y flujos a nuevos proyectos muestra hacia dónde va el capital. Grandes inversores acumulando un activo — posible señal de interés; salida masiva a un nuevo token — cambio de foco. Esos datos están en Nansen, Arkham y similares. Interpretar con cuidado: las "ballenas" pueden crear pistas falsas o actuar en interés del market making.
+Rastrear carteras de grandes tenedores y flujos hacia nuevos proyectos muestra hacia dónde se mueve el capital. Grandes inversores acumulando activo — posible señal de interés; retiro masivo hacia nuevo token — cambio de foco. Tales datos disponibles en Nansen, Arkham y servicios similares. Interpretar con precaución: "ballenas" pueden crear rastros falsos o actuar en intereses de market-making.
 
-**Clasificación de holders:**
+**Clasificación de tenedores:**
 - **Ballenas:** >1,000 BTC (o equivalente)
 - **Tiburones:** 100-1,000 BTC
 - **Peces:** 10-100 BTC
 - **Retail:** <10 BTC
 
-## Servicios para análisis on-chain
+## Servicios de Análisis On-Chain
 
-![Cómo funciona el análisis on-chain: diagrama](./assets/How_onchain_analysis_works.png)
+![Cómo Funciona el Análisis On-Chain: Diagrama](./assets/How_onchain_analysis_works.png)
 
 **Glassnode:**
-- Métricas: MVRV, SOPR, balances de exchanges, direcciones activas
+- Métricas: MVRV, SOPR, saldos de exchanges, direcciones activas
 - Precios: gratis (básico), $29/mes (advanced)
+- **Para:** inversores a largo plazo, analistas
 
 **CryptoQuant:**
 - Métricas: reservas de exchanges, flujos, ballenas, futuros
 - Precios: gratis (básico), $29/mes (pro)
-
-![Ejemplo de dashboard de Glassnode con métrica SOPR](./assets/Glassnode_with_SOPR_metric.png)
+- **Para:** traders, day trading
 
 **Nansen:**
-- Métricas: wallets de ballenas, smart money, nuevos proyectos
-- Precios: desde $199/mes
+- Métricas: carteras de ballenas, smart money, nuevos tokens
+- Precios: $199/mes (premium)
+- **Para:** usuarios avanzados, cazadores de alpha
 
-**Dune Analytics:**
-- Métricas: dashboards personalizados, DeFi, NFT
-- Precios: gratis (básico), $199/mes (pro)
+**Arkham Intelligence:**
+- Métricas: rastreo de carteras, conexiones entre direcciones
+- Precios: gratis (básico), $99/mes (pro)
+- **Para:** investigadores, periodistas
 
-**Coinglass:**
-- Métricas: liquidaciones, interés abierto, ratio long/short
-- Precios: gratis
+**Token Terminal:**
+- Métricas: ingresos de protocolos, P/E, usuarios activos
+- Precios: gratis (básico), $29/mes (pro)
+- **Para:** analistas fundamentales DeFi
 
-![Clasificación de holders: ballenas, tiburones, peces](./assets/Classification_of_holders_(whales,sharks,and_fish).png)
+## NuNet: Métricas Agregadas para Análisis Rápido
 
-Para automatización de trading con datos on-chain, plataformas como [Veles](https://veles.finance/invite/washmallay) ofrecen métricas integradas y bots para ejecutar señales.
+**NuNet** es un agregador de métricas on-chain que simplifica el análisis para traders. En lugar de mirar 10+ métricas por separado, NuNet las combina en indicadores únicos.
 
-## Limitaciones de los datos on-chain
+**Indicadores clave de NuNet:**
 
-El análisis on-chain es potente pero no perfecto. Una transferencia grande puede ser un movimiento interno o OTC, no una señal de mercado. Los datos a veces van con retraso; métricas agregadas (MVRV, SOPR) suavizan el cuadro. Para reducir riesgo, combina métricas on-chain con [análisis técnico](/es/library/technical-analysis-rsi/) y [volumen](/es/library/money-flow-index/) — así la estrategia depende menos de un solo grupo de señales y es más robusta ante trampas del mercado.
+**1. URC (Universal Risk Characteristic):**
+- Rango: 0-100
+- < 20: zona de acumulación (comprar)
+- 20-50: zona neutral
+- > 80: zona de sobrecalentamiento (vender)
 
-## Cómo integrar on-chain en tu proceso
+**2. BTC Power:**
+- Muestra dominancia de Bitcoin
+- Subiendo → altcoins debilitándose
+- Bajando → altcoins creciendo (altseason)
 
-1. **Recopilar datos** — Glassnode, CryptoQuant, Nansen, Dune Analytics: transacciones, reservas en exchanges, MVRV, SOPR.
-2. **Buscar contexto** — infravaloración (MVRV < 1), acumulación (salida de exchanges), riesgo de liquidaciones en futuros.
-3. **Vincular con análisis técnico** — p. ej. MVRV < 1 y monedas saliendo de exchanges → buscar setups largos por niveles e indicadores; SOPR > 1 y entrada masiva a exchanges → más cautela con nuevos largos, comprobar señales de distribución.
-4. **Comprobar en historia** — si usas [backtests](/es/library/what-are-backtests/), puedes usar condiciones on-chain como filtro de periodos (p. ej. solo ir largo cuando MVRV está por debajo de un umbral).
+**3. ETH/BTC Ratio:**
+- Relación de precio ETH a BTC
+- Subiendo → altseason
+- Bajando → dominancia BTC
 
-Los datos on-chain no sustituyen al gráfico ni a los indicadores, sino que ayudan a decidir con más criterio: quién mueve el mercado, dónde se concentra la liquidez y en qué fase del ciclo estás. Junto con análisis fundamental y técnico, on-chain ayuda no solo a seguir tendencias sino a valorar mejor riesgos y oportunidades.
+**Ventajas de NuNet:**
+- ✅ Ahorro de tiempo (1 métrica en lugar de 10)
+- ✅ Menos parálisis por análisis
+- ✅ Señales rápidas de entrada/salida
 
-Plataformas como [Veles](https://veles.finance/invite/washmallay) ofrecen trading automatizado con métricas on-chain y bots para ejecutar señales.
+**Desventajas de NuNet:**
+- ❌ Menos profundidad de análisis
+- ❌ Suscripción paga ($49/mes)
+- ❌ Funciona solo para BTC y ETH
+
+**Cómo usar:**
+- NuNet para contexto rápido (5 minutos)
+- Glassnode/CryptoQuant para análisis profundo (30-60 minutos)
+
+## Métricas para Altcoins: Qué Vigilar
+
+Las altcoins tienen su especificidad. Aquí están las métricas clave:
+
+### 1. TVL (Total Value Locked)
+
+**Qué es:** Valor total de tokens bloqueados en protocolo DeFi.
+
+**Dónde verificar:** DefiLlama, Token Terminal
+
+**Interpretación:**
+- TVL subiendo → interés en protocolo creciendo
+- TVL bajando → usuarios yéndose
+
+**Ejemplo:**
+- Uniswap TVL: $3B → $4B (+33%)
+- Conclusión: interés en protocolo creciendo, se puede considerar long token UNI
+
+### 2. Revenue (Ingresos del Protocolo)
+
+**Qué es:** Comisiones generadas por protocolo.
+
+**Dónde verificar:** Token Terminal, DefiLlama
+
+**Interpretación:**
+- Ingresos subiendo → protocolo ganando
+- Ingresos bajando → interés declining
+
+**P/E Ratio (Price-to-Earnings):**
+- Market cap / Ingresos anuales
+- P/E < 10: subvaluado
+- P/E > 50: sobrevaluado
+
+**Ejemplo:**
+- AAVE: Market Cap $1.5B, Ingresos $50M/año
+- P/E = 30 (valuación media)
+
+### 3. Direcciones Activas
+
+**Qué es:** Número de direcciones únicas usando protocolo.
+
+**Dónde verificar:** Glassnode, Dune Analytics
+
+**Interpretación:**
+- Direcciones subiendo → adopción creciendo
+- Direcciones bajando → interés declining
+
+**Ejemplo:**
+- Arbitrum: 100,000 → 200,000 direcciones/día (+100%)
+- Conclusión: adopción masiva, se puede considerar long ARB
+
+### 4. Token Unlocks
+
+**Qué es:** Calendario de desbloqueos de tokens para equipo, inversores, comunidad.
+
+**Dónde verificar:** TokenUnlocks.app, trackers de vesting
+
+**Interpretación:**
+- Desbloqueo grande en 7 días → riesgo de presión de precio
+- Sin desbloqueos por 3+ meses → seguro
+
+**Ejemplo:**
+- Aptos: 11.1M tokens desbloqueados 15 de octubre
+- Precio: -20% en semana después de desbloqueo
+
+## Ejemplos Prácticos: Cómo Usar On-Chain en Trading
+
+### Ejemplo 1: Comprando en el Fondo (Noviembre 2022)
+
+**Situación:** Colapso de FTX, pánico en mercado.
+
+**Señales on-chain:**
+- MVRV: 0.95 (< 1, zona de capitulación) ✅
+- SOPR: 0.85 (< 1, pérdidas masivas) ✅
+- Reservas de exchanges: +200,000 BTC por semana (pánico) ❌
+- Actividad de ballenas: salida de exchanges 50,000 BTC ✅
+
+**Decisión:**
+- 3 de 4 señales indican fondo
+- Entrada: $16,000-17,000
+- Stop-loss: $15,000
+- Take-profit: $25,000 (50%+)
+
+**Resultado:**
+- Fondo: $15,500 (noviembre 2022)
+- 3 meses después: $30,000 (+93%)
+
+### Ejemplo 2: Vendiendo en el Pico (Noviembre 2021)
+
+**Situación:** BTC actualiza máximo histórico.
+
+**Señales on-chain:**
+- MVRV: 3.8 (> 3, zona de sobrecalentamiento) ❌
+- SOPR: 1.5 (> 1, toma de ganancias masiva) ❌
+- Reservas de exchanges: +100,000 BTC en 2 semanas (ballenas vendiendo) ❌
+- Actividad de ballenas: salida masiva a stablecoins ❌
+
+**Decisión:**
+- 4 de 4 señales indican sobrecalentamiento
+- Tomar ganancias: $65,000-69,000
+- Mover a stablecoins (USDT, USDC)
+
+**Resultado:**
+- Pico: $69,000 (noviembre 2021)
+- 12 meses después: $15,500 (-77%)
+
+### Ejemplo 3: Altseason (2024)
+
+**Situación:** BTC subiendo, dominancia bajando.
+
+**Señales on-chain:**
+- BTC Power: bajando de 55% a 45% ✅
+- ETH/BTC Ratio: subiendo de 0.05 a 0.08 ✅
+- TVL de altcoins: +50% por mes ✅
+- Direcciones activas de altcoins: +100% ✅
+
+**Decisión:**
+- Rotación de BTC a altcoins
+- Comprar: ETH, SOL, AVAX, ARB
+- Stop-loss: -15%
+- Take-profit: +50-100%
+
+**Resultado:**
+- ETH: +80% en 2 meses
+- SOL: +150% en 2 meses
+- ARB: +200% en 2 meses
+
+## Limitaciones del Análisis On-Chain
+
+**Importante entender:**
+
+1. **No todas las transacciones son señales**
+   - Transferencias internas entre carteras
+   - Operaciones OTC (fuera de exchanges)
+   - Market-making
+
+2. **Los datos pueden retrasarse**
+   - MVRV, SOPR: 1-2 días de retraso
+   - Reservas de exchanges: tiempo real, pero no todos los exchanges transparentes
+
+3. **Las métricas agregadas suavizan la imagen**
+   - MVRV para toda la red ≠ MVRV para ballenas
+   - Mire métricas por grupos de tenedores
+
+4. **Manipulaciones posibles**
+   - Ballenas pueden crear rastros falsos
+   - Transferencias masivas a exchanges ≠ siempre venta
+
+**Cómo reducir riesgos:**
+- Combinar 3+ métricas (no depender de una)
+- Usar con análisis técnico (niveles, volumen)
+- Verificar contexto (noticias, narrativas)
+- Vigilar tendencia a largo plazo (no entrar en pánico por señal única)
 
 ## Resumen
 
-En resumen: los puntos clave están arriba; úsalos como checklist práctico y combínalos con gestión de riesgos.
+El análisis on-chain es herramienta poderosa para entender contexto de mercado y comportamiento de grandes jugadores. Combínelo con análisis técnico para imagen completa.
+
+**Conclusiones clave:**
+- On-chain muestra "por qué" se mueve el precio, AT muestra "cómo"
+- Métricas clave: MVRV, SOPR, flujos de exchanges, actividad de ballenas
+- Use NuNet para contexto rápido, Glassnode para análisis profundo
+- Combine 3+ métricas para confirmación
+- No dependa únicamente de on-chain para entrada/salida
+
+Más sobre tokenomics: [Qué es Tokenomics](/es/library/what-is-tokenomics/).
 
 ## FAQ
 
-**¿Qué es MVRV en pocas palabras?**  
-MVRV (Market Value to Realized Value) compara la capitalización de mercado actual con el valor “realizado” de las monedas (al precio del último movimiento). MVRV < 1 — muchos mantienen en pérdidas, suele leerse como infravaloración; MVRV > 3 — fuerte sobrecalentamiento, mayor riesgo de corrección.
+**¿Qué son las métricas on-chain?**
 
-**¿Dónde ver reservas en exchanges y flujos?**  
-Servicios como Glassnode, CryptoQuant y similares muestran balances de exchanges y flujos de monedas a y desde exchanges. Datos de liquidaciones en futuros — p. ej. Coinglass.
+Datos de la blockchain misma: transacciones, saldos de carteras, flujos de exchanges, actividad de tenedores. Muestran qué están haciendo los participantes dentro de la red.
 
-**¿On-chain sustituye al análisis técnico?**  
-No. On-chain complementa al análisis técnico: da contexto de ciclo y sentimiento de participantes. Los puntos de entrada y salida se siguen buscando por niveles, indicadores y volumen en el gráfico.
+**¿Dónde verificar métricas on-chain?**
 
+- Glassnode: MVRV, SOPR, saldos de exchanges
+- CryptoQuant: reservas de exchanges, flujos, ballenas
+- Nansen: carteras de ballenas, smart money
+- TokenUnlocks: calendarios de desbloqueo de tokens
+- DefiLlama: TVL para protocolos DeFi
 
+**¿Cómo interpretar MVRV?**
+
+- MVRV < 1: subvaluación (muchos en pérdida) — considerar comprar
+- MVRV 1-2: zona neutral
+- MVRV > 3: sobrecalentamiento (muchos en ganancia) — considerar tomar ganancias
+
+**¿Qué indican los flujos de exchanges?**
+
+- Salida de exchanges: acumulación (alcista)
+- Entrada a exchanges: posible venta (bajista)
+- Mire tendencia, no transacción individual
+
+**¿Puedo operar solo con on-chain?**
+
+No. On-chain no da puntos exactos de entrada. Use con análisis técnico: on-chain para contexto, AT para timing.
+
+**¿Con qué frecuencia verificar métricas on-chain?**
+
+- Activos Top-10: una vez por semana
+- Activos Top-100: una vez cada 2 semanas
+- Antes de eventos importantes: siempre verificar (desbloqueos, upgrades, regulaciones)
+
+**¿Qué es SOPR?**
+
+Spent Output Profit Ratio — muestra si los vendedores están en ganancia o pérdida. SOPR > 1: toma de ganancias, SOPR < 1: ventas en pérdida (capitulación).
+
+**¿Son confiables las señales de movimientos de ballenas?**
+
+No siempre. Las ballenas pueden crear rastros falsos o actuar en intereses de market-making. Combine con otras métricas y contexto.
+
+**¿Qué es NuNet?**
+
+Agregador de métricas on-chain que combina múltiples métricas en indicadores únicos (URC, BTC Power, ETH/BTC Ratio). Bueno para contexto rápido, menos profundidad que métricas individuales.
+
+**¿Cómo usar on-chain para altcoins?**
+
+Vigile TVL (DefiLlama), ingresos (Token Terminal), direcciones activas (Glassnode), desbloqueos de tokens (TokenUnlocks.app). Combine con dominancia de BTC y ratio ETH/BTC para timing de altseason.
