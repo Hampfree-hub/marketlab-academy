@@ -1,148 +1,295 @@
 ---
-title: 'Análisis fundamental en finanzas tradicionales y en cripto'
-description: 'Por qué el análisis fundamental importa tanto como el técnico. Clásico vs cripto, métricas on-chain, marco simple para traders. Breve y al grano.'
+title: 'Análisis Fundamental: Finanzas Tradicionales vs Crypto'
+description: 'Por qué el análisis fundamental es tan importante como el técnico. Clásico vs crypto, métricas on-chain, framework para traders. Corto y al grano.'
 pubDate: '2026-03-02'
 category: 'fundamental-analysis'
 ---
 
-El análisis fundamental ayuda a ver si un activo merece atención y si el mercado está sobrecalentado. En cripto no hay informes IFRS, pero sí métricas on-chain, tokenómica y macro. En este artículo: cómo el FA en cripto difiere de lo clásico y cómo combinarlo con el análisis técnico.
+El análisis fundamental ayuda a entender si un activo merece atención y si el mercado está sobrecalentado. En crypto no hay informes IFRS, pero hay métricas on-chain, tokenomics y macro. Este artículo cubre cómo el AF en crypto difiere de los clásicos y cómo combinarlo con el análisis técnico.
 
-## Por qué el fundamental importa para el trader
+## Introducción: Por Qué los Traders Necesitan Fundamentales
 
-La mayoría de traders empiezan con velas, niveles e indicadores. Lo fundamental parece “largo y complicado”, así que a menudo se deja para después. Sin ello, la decisión de entrar o no se apoya sobre todo en el gráfico: hay tendencia — entramos, no hay — esperamos. Pero el mismo gráfico puede ser el inicio de un movimiento fuerte o una trampa antes de un desplome. El análisis fundamental no da el punto de entrada exacto, pero ayuda a filtrar ruido y entender el contexto: ¿estamos más cerca de sobrecalentamiento o de una zona donde el activo ha rebotado en el pasado?
+La mayoría de traders comienzan con velas, niveles e indicadores. Los fundamentales parecen "largos y complicados," así que a menudo se posponen. Sin ellos, la decisión de "entrar o no" se basa principalmente en el gráfico: tendencia existe — entrar, sin tendencia — esperar. Pero el mismo gráfico puede ser tanto el inicio de un movimiento fuerte como una trampa antes de una caída. El análisis fundamental no da un punto de entrada exacto, pero ayuda a filtrar basura y entender el contexto: ¿estamos más cerca de sobrecalentamiento o de una zona donde el activo históricamente rebotó?
 
-Tiene sentido usar el FA como filtro: primero “¿merece la pena mirar este activo?”, luego el análisis técnico para el punto de entrada. Para una revisión en 15 minutos, ver el [checklist de análisis fundamental](/es/library/fundamental-analysis-checklist/).
+Tiene sentido usar AF como filtro: primero "¿vale la pena mirar este activo?" luego análisis técnico para punto de entrada. Más sobre cómo encajar la verificación en 15 minutos — en la [checklist de análisis fundamental](/es/library/fundamental-analysis-checklist/).
 
-## Qué es el análisis fundamental en lo clásico
+**Por qué importan los fundamentales:**
+- Filtro de basura: descarta proyectos débiles antes de entrar
+- Contexto de ciclo: entender dónde está el mercado (fondo, crecimiento, pico, caída)
+- Evaluación de riesgos: tokenomics, regulación, equipo
+- Perspectiva a largo plazo: el técnico da punto de entrada, los fundamentales dan razón para mantener
 
-En finanzas tradicionales, el análisis fundamental es la valoración del activo por su valor “intrínseco”, no solo por el precio en el gráfico.
+## Qué es Análisis Fundamental en Clásicos
 
-**Para acciones** se mira el negocio: ingresos, beneficio, deuda, múltiplos (p. ej. P/E — precio por acción entre beneficio por acción), dividendos, cuota de mercado. La pregunta: “¿Cuánto gana la empresa y el precio de la acción refleja eso?”
+En finanzas tradicionales, el análisis fundamental es evaluar un activo por su valor "intrínseco," no solo por el precio en un gráfico.
 
-**Para divisas** — la economía del país o zona: tipos de banco central, inflación, balanza comercial, desempleo. La pregunta: “¿La moneda es fuerte desde el punto de vista económico?”
+**Para acciones** miran el negocio: ingresos, ganancias, deuda, múltiplos (ej. P/E — relación precio-beneficio), dividendos, cuota de mercado. Pregunta: "¿Cuánto gana la empresa y cuánto refleja el precio de la acción eso?"
 
-En ambos casos el FA responde “qué comprar o mantener” y “¿pagamos de más?”, no “dónde colocar la orden”. El punto de entrada lo da el análisis técnico.
+**Para divisas** — en la economía del país o zona: tasas del banco central, inflación, balanza comercial, desempleo. Pregunta: "¿Es la divisa fuerte desde un punto de vista económico?"
 
-## Cómo difiere el fundamental en cripto
+**Para bonos** — en la solvencia del emisor: rating, deuda, flujos de efectivo. Pregunta: "¿Devolverá el emisor el dinero con intereses?"
 
-En cripto no hay reporting tipo IFRS ni banco central. No hay un “balance” único del proyecto en sentido clásico. Por eso el conjunto de datos es otro.
+En ambos casos, AF responde "qué comprar o mantener" y "¿estamos pagando de más?" no "en qué punto poner una orden." El análisis técnico da el punto de entrada.
 
-**Qué hay en su lugar:**
+**Fuentes de datos en clásicos:**
+- Estados financieros (10-K, 10-Q para USA)
+- Datos de bancos centrales y gobiernos (tasas, inflación, PIB)
+- Agencias de rating (Moody's, S&P, Fitch)
+- Agregadores de noticias (Bloomberg, Reuters)
 
-- **Tecnología y arquitectura de red** — cómo funciona el blockchain, velocidad, comisiones, seguridad.
-- **Métricas on-chain** — datos de la propia cadena: MVRV, NVT, reservas en exchanges, flujos de monedas. Muestran cómo se comportan los participantes “dentro” de la red. Más en el artículo sobre [métricas on-chain en el análisis fundamental](/es/library/onchain-metrics-fundamental-analysis/).
-- **Tokenómica** — emisión, límite de oferta, vesting, calendario de unlocks. La pregunta: ¿una salida masiva de monedas al mercado hundirá el precio?
-- **Equipo, comunidad, regulación** — quién está detrás del proyecto, si hay producto y comunidad reales, cómo cambia el marco regulatorio.
+## Cómo Difieren los Fundamentales de Crypto
 
-En resumen: en acciones el fundamental es “negocio y dinero”, en cripto es “red, incentivos y datos del blockchain”. El objetivo es el mismo — ver si el activo está sobrecalentado y si tiene base para interés a largo plazo.
+En crypto no hay informes IFRS y no hay banco central. No hay un "balance" único de proyecto en el sentido clásico. Así que el conjunto de datos es diferente.
 
-## Análisis fundamental y técnico: cómo se complementan
+**Qué existe en su lugar:**
 
-El FA y el AT responden preguntas distintas. Tiene sentido usarlos en secuencia.
+- **Tecnología y arquitectura de red** — cómo está estructurada la blockchain, velocidad, comisiones, seguridad.
+- **Métricas on-chain** — datos de la cadena misma: MVRV, NVT, reservas de exchanges, movimientos de monedas. Muestran cómo se comportan los participantes "dentro" de la red. Más detalles — en el [artículo de métricas on-chain](/es/library/onchain-metrics-fundamental-analysis/).
+- **Tokenomics** — emisión, límite de oferta, vesting, calendarios de desbloqueo. Pregunta: "¿Una liberación masiva de tokens hundirá el precio?"
+- **Equipo, comunidad, regulación** — quién está detrás del proyecto, ¿hay un producto vivo y comunidad?, ¿cómo cambia el panorama regulatorio?
 
-**El fundamental responde:** “¿Este activo merece atención?”, “¿Estamos más cerca de sobrecalentamiento o de infravaloración/capitulación?”, “¿Hay riesgos estructurales (tokenómica, regulación)?”
+Condicionalmente: en acciones fundamentales son "negocio y dinero," en crypto — "red, incentivos y datos de blockchain." El objetivo es el mismo — entender si el activo está sobrecalentado y si tiene base para interés a largo plazo.
 
-**El análisis técnico responde:** “¿Dónde entrar y salir en los próximos días o semanas?”, “¿Qué niveles e indicadores confirman el escenario?”
+**Fuentes de datos en crypto:**
+- Exploradores de blockchain (Etherscan, Blockchain.com)
+- Servicios on-chain (Glassnode, CryptoQuant, Nansen)
+- Agregadores de tokenomics (Token Unlocks, Token Terminal)
+- Redes sociales y comunidad (Twitter, Discord, Telegram)
 
-Ejemplo práctico: on-chain y tokenómica muestran que el activo no está sobrecalentado y que grandes wallets acumulan. Entonces en el gráfico buscamos setups largos — niveles, [indicadores](/es/library/technical-analysis-rsi/), volumen. Al revés: si el FA apunta a sobrecalentamiento o unlocks masivos, es más sensato no añadir al largo y buscar puntos de toma de beneficios o cortos.
+## Análisis Fundamental y Técnico: Cómo Trabajan Juntos
 
-![Análisis fundamental vs técnico: qué responde cada uno](./assets/Technical_sv_fundamental.png)
+AF y AT resuelven tareas diferentes. Tiene sentido usarlos secuencialmente.
 
-## Marco: tres pasos para el trader
+**Los fundamentales responden:** "¿Vale la pena prestar atención a este activo?", "¿Estamos más cerca de sobrecalentamiento o de subvaluación/capitulación?", "¿Hay riesgos estructurales (tokenomics, regulación)?"
 
-Puedes dividir la revisión fundamental en tres bloques. No hace falta profundizar en todos a la vez — empieza por uno y amplía.
+**El análisis técnico responde:** "¿Dónde exactamente entrar y salir en los próximos días o semanas?", "¿Qué niveles e indicadores confirman el escenario?"
 
-### Paso 1. Macro y narrativa
+Ejemplo práctico: on-chain y tokenomics muestran que el activo no está en zona de sobrecalentamiento y las carteras grandes están acumulando. Entonces en el gráfico buscamos setups largos — niveles, [indicadores](/es/library/technical-analysis-rsi/), volumen. Por el contrario: si AF indica sobrecalentamiento o desbloqueos masivos, es más sabio no añadir a largos y buscar puntos para tomar ganancias o cortos.
 
-Tipos de banco central, regulación cripto, "historias" del mercado (halving, ETF, sanciones, etc.). Es el contexto en el que se mueve todo el mercado y las monedas.
+**Matriz de decisiones:**
+
+| AF | AT | Decisión |
+|----|----|---------|
+| ✅ Fuerte | ✅ Señal | Entrar con posición completa |
+| ✅ Fuerte | ❌ Sin señal | Esperar, activo en portafolio |
+| ❌ Débil | ✅ Señal | Saltar o trade corto |
+| ❌ Débil | ❌ Sin señal | Ignorar activo |
+
+![Análisis Fundamental vs Técnico: Qué Responde Cada Uno](./assets/Technical_sv_fundamental.png)
+
+## Framework: Tres Pasos para Traders
+
+Es conveniente dividir la verificación fundamental en tres bloques. No hay que profundizar en todos a la vez — se puede empezar con uno y expandir.
+
+### Paso 1. Macro y Narrativa
+
+Tasas de bancos centrales, regulación crypto, principales "historias" del mercado (halving, ETF, sanciones, etc.). Este es el contexto en el que se mueve todo el mercado y las monedas individuales.
 
 **Qué vigilar:**
-- Tipo de la Fed (tipos de interés en EE.UU.)
+- Tasa de la Fed (tasas de interés en USA)
 - Inflación (CPI, PCE)
-- Noticias regulatorias (SEC, leyes cripto)
+- Noticias regulatorias (SEC, leyes crypto)
 - Narrativas (halving, ETF, DeFi, NFT, AI)
 
-### Paso 2. Calidad del activo
+**Dónde buscar:**
+- Calendario Económico (ForexFactory, Investing.com)
+- Twitter de reguladores (@SEC_News, @CFTC)
+- Medios crypto (CoinDesk, Cointelegraph, The Block)
 
-Monedas top con liquidez e historia frente a tokens poco conocidos; tecnología, tokenómica, equipo y producto. El objetivo es filtrar lo que no merece ni mirar el gráfico.
+**Ejemplo:**
+En 2024 la narrativa fue Bitcoin ETF. La aprobación de la SEC llevó a entrada de dinero institucional y crecimiento de BTC de $40,000 a $73,000. Quienes rastrearon el macro-contexto pudieron entrar con anticipación.
+
+### Paso 2. Calidad del Activo
+
+Top monedas con liquidez e historia vs tokens desconocidos; tecnología, tokenomics, equipo y producto. El objetivo es filtrar lo que no vale la pena ni mirar el gráfico.
 
 **Checklist:**
 - Top 100 por capitalización (CoinMarketCap, CoinGecko)
-- Producto funcional (web, documentación, GitHub)
+- Producto funcional (sitio web, documentación, GitHub)
 - Comunidad activa (Twitter, Discord, Telegram)
-- Tokenómica transparente (whitepaper, unlock schedule)
+- Tokenomics transparente (whitepaper, calendario de desbloqueos)
 
-### Paso 3. Contexto on-chain del ciclo
+**Banderas rojas:**
+- ❌ Equipo anónimo sin experiencia
+- ❌ Sin producto funcional (solo whitepaper)
+- ❌ Tokenomics con 50%+ al equipo sin vesting
+- ❌ Comunidad solo con bots y spam
 
-MVRV, reservas en exchanges, actividad de la red. Ayuda a ver en qué fase del ciclo estamos: acumulación, crecimiento, distribución o capitulación.
+**Ejemplo:**
+Comparemos dos proyectos:
+- **Proyecto A:** Top 50, equipo público, producto funcional, tokenomics con 15% al equipo (vesting 4 años)
+- **Proyecto B:** Top 500, anónimos, sin producto, 40% tokens al equipo sin vesting
+
+Conclusión: Proyecto A pasa el filtro, Proyecto B — bandera roja.
+
+### Paso 3. Contexto de Ciclo On-Chain
+
+MVRV, reservas de exchanges, actividad de red. Ayuda a entender en qué fase del ciclo estamos: acumulación, crecimiento, distribución o capitulación.
 
 **Métricas clave:**
-- MVRV < 1 — zona de infravaloración
+- MVRV < 1 — zona de subvaluación
 - Salida de exchanges — acumulación
 - SOPR < 1 — capitulación
 - Actividad de ballenas — interés creciente
 
-![3 pasos del análisis fundamental: infografía](./assets/Infographics_fundamental_analysis.png)
+**Fases del ciclo:**
 
-Para el detalle de métricas on-chain, ver el [artículo dedicado](/es/library/onchain-metrics-fundamental-analysis/); para un repaso rápido del token, el [checklist de 15 minutos](/es/library/fundamental-analysis-checklist/).
+| Fase | MVRV | Reservas Exchanges | Comportamiento | Estrategia |
+|------|------|------------------|----------|----------|
+| **Acumulación** | < 1 | Salida | Ballenas comprando | DCA, acumulación |
+| **Crecimiento** | 1-2 | Estables | Retail entrando | Long, trading |
+| **Distribución** | 2-3 | Entrada | Ballenas vendiendo | Tomar ganancias |
+| **Capitulación** | > 3 | Entrada brusca | Pánico, liquidaciones | Esperar fondo |
 
-## Limitaciones del análisis fundamental
+**Ejemplo:**
+En noviembre 2022 (caída FTX):
+- MVRV BTC: 0.95 (< 1, zona de subvaluación)
+- Reservas de exchanges: +200,000 BTC por semana (pánico)
+- SOPR: < 1 (pérdidas masivas)
 
-El FA es una herramienta potente pero no perfecta.
+Conclusión: Fase de capitulación. 3 meses después BTC creció de $15,500 a $30,000 (+93%).
+
+![3 Pasos del Análisis Fundamental: Infografía](./assets/Infographics_fundamental_analysis.png)
+
+Desglose detallado de métricas on-chain — en el [artículo separado](/es/library/onchain-metrics-fundamental-analysis/); escaneo rápido de token — en la [checklist de 15 minutos](/es/library/fundamental-analysis-checklist/).
+
+## Ejemplos Históricos: Cuando el AF Salvó de Pérdidas
+
+### Ejemplo 1: LUNA (2022) — Ignorar Fundamentales
+
+**Qué pasó:**
+- Tokenomics: stablecoin algorítmica UST, paridad vía quema de LUNA
+- Inflación: ilimitada (imprimir UST sin respaldo)
+- Reservas: $3B con market cap de UST $18B
+
+**Banderas rojas (ignoradas):**
+- ❌ Sin respaldo real (solo algoritmo)
+- ❌ Emisión ilimitada
+- ❌ Alta dependencia de un protocolo (Anchor Protocol, 20% APY)
+
+**Resultado:**
+- Mayo 2022: UST pierde paridad, LUNA cae de $80 a $0.0001 (-99.99%)
+- Inversores perdieron $40+B
+
+**Lección:** Tokenomics con emisión ilimitada = alto riesgo.
+
+### Ejemplo 2: BTC (2022) — AF Mostró el Fondo
+
+**Qué pasó:**
+- MVRV: < 1 (zona de capitulación)
+- Reservas de exchanges: salida 500,000+ BTC en 3 meses
+- SOPR: < 1 (pérdidas masivas)
+- Halving 2024: evento predecible
+
+**Banderas verdes:**
+- ✅ MVRV < 1 (históricamente zona de compra)
+- ✅ Salida de exchanges (acumulación)
+- ✅ Halving predecible en 1.5 años
+
+**Resultado:**
+- Fondo: $15,500 (noviembre 2022)
+- Diciembre 2024: pico $108,000 (+597%)
+
+**Lección:** Métricas on-chain mostraron el fondo antes que el gráfico.
+
+### Ejemplo 3: FTT (2022) — Concentración de Riesgos
+
+**Qué pasó:**
+- Token del exchange FTX
+- Tokenomics: 38% tokens al equipo, 33% a Alameda Research
+- Usar FTT como colateral para préstamos
+
+**Banderas rojas:**
+- ❌ 70%+ concentración en dos estructuras
+- ❌ FTT como colateral (dependencia circular)
+- ❌ Sin transparencia de reservas
+
+**Resultado:**
+- Noviembre 2022: colapso de FTX, FTT cae de $22 a $1 (-95%)
+- Inversores perdieron $8+B
+
+**Lección:** Concentración de tokens + falta de transparencia = alto riesgo.
+
+## Distribución de Tiempo: Cuánto Dedicar a Fundamentales
+
+**Para day trading (1-5 días):**
+- 10-15 minutos en checklist
+- Enfoque: tokenomics, desbloqueos, narrativas
+- AT: 80% tiempo, AF: 20%
+
+**Para swing trading (1-4 semanas):**
+- 30-60 minutos en análisis
+- Enfoque: on-chain, calidad de activo
+- AT: 60% tiempo, AF: 40%
+
+**Para inversiones a largo plazo (3+ meses):**
+- 2-4 horas en análisis profundo
+- Enfoque: macro, tecnología, equipo, tokenomics
+- AT: 30% tiempo, AF: 70%
+
+**Actualizaciones de datos:**
+- Activos Top-10: una vez por semana
+- Activos Top-100: una vez cada 2 semanas
+- Activos Top-500+: antes de cada entrada
+- Antes de eventos importantes: siempre reverificar (desbloqueos, upgrades, regulaciones)
+
+## Limitaciones del Análisis Fundamental
+
+El AF es una herramienta poderosa, pero no perfecta.
 
 **Limitaciones:**
 - No da puntos exactos de entrada y salida
-- Requiere tiempo para aprender (30-60 minutos por activo)
+- Requiere tiempo para estudiar (30-60 minutos por activo)
 - Los datos pueden estar incompletos o desactualizados
-- En cripto, la alta volatilidad anula el fundamental en plazos cortos
+- En crypto, la alta volatilidad anula los fundamentales en distancias cortas
 
 **Cómo reducir riesgos:**
-- Combinar FA con AT y gestión de riesgos
+- Combinar AF con AT y gestión de riesgo
 - Usar checklists para acelerar el análisis
-- Mantenerse actualizado (tokenómica, regulación)
+- Rastrear actualizaciones (tokenomics, regulación)
 - No depender de una sola fuente de datos
 
 ## Resumen
 
-El análisis fundamental no sustituye al técnico; lo complementa: ayuda a elegir activos y a entender el contexto del ciclo. Un trader que usa FA y AT distingue mejor el "bombeo por bombeo" de una tendencia con fundamento y depende menos solo del gráfico.
+El análisis fundamental es una herramienta indispensable para selección de activos y consideración del contexto de mercado. Combínelo con análisis técnico para una imagen completa.
 
 **Conclusiones clave:**
-- FA responde "qué comprar", AT responde "cuándo entrar"
-- En cripto, usa métricas on-chain, tokenómica, equipo
-- Marco: macro → calidad del activo → contexto on-chain
-- Combina FA con AT y gestión de riesgos
+- AF responde "qué comprar," AT responde "cuándo entrar"
+- En crypto, se usan métricas on-chain, tokenomics, equipo
+- Framework: macro → calidad de activo → contexto on-chain
+- Combine AF con AT y gestión de riesgo
 
-Para más sobre tokenómica, ver [Qué es Tokenómica](/es/library/what-is-tokenomics/).
+Más sobre tokenomics lea en el artículo [Qué es Tokenomics](/es/library/what-is-tokenomics/).
 
 ## FAQ
 
-**¿Qué es el análisis fundamental en pocas palabras?**
+**¿Qué es el análisis fundamental en términos simples?**
 
-Valorar el activo por datos "intrínsecos": en acciones — negocio y beneficio, en divisas — economía, en cripto — tecnología, tokenómica y datos del blockchain. La pregunta: "¿Este activo vale su dinero y el mercado está sobrecalentado?"
+Evaluación de un activo por datos "intrínsecos": para acciones — negocio y ganancias, para divisas — economía, para crypto — tecnología, tokenomics y datos de blockchain. Pregunta: "¿Vale este activo su dinero y está sobrecalentado el mercado?"
 
-**¿En qué se diferencia el FA en cripto del FA en acciones?**
+**¿En qué difiere el AF en crypto del AF en acciones?**
 
-En cripto no hay informes IFRS. En su lugar se usan métricas on-chain (MVRV, reservas en exchanges, flujos de monedas), tokenómica (emisión, unlocks), valoración de tecnología y equipo. El objetivo es el mismo — entender valor y riesgos.
+En crypto no hay informes IFRS. En su lugar, se usan métricas on-chain (MVRV, reservas de exchanges, movimientos de monedas), tokenomics (emisión, desbloqueos), evaluación de tecnología y equipo. El objetivo es el mismo — entender valor y riesgos.
 
 **¿Cómo combinar análisis fundamental y técnico?**
 
-Primero FA: "¿merece la pena mirar este activo, está sobrecalentado?". Luego AT: "dónde entrar y salir" por niveles e indicadores. El FA da contexto y filtro, el AT el punto de entrada y salida.
+Primero AF: "¿vale la pena mirar este activo, está sobrecalentado?" Luego AT: "¿dónde entrar y salir" por niveles e indicadores. AF establece contexto y filtro, AT — puntos de entrada y salida.
 
-**¿Para qué sirven las métricas on-chain al trader?**
+**¿Por qué necesita un trader métricas on-chain?**
 
-Muestran el comportamiento de los participantes en la red (acumulación, ventas, reservas en exchanges) y la fase del ciclo. Complementan el gráfico: el gráfico dice "cómo" se mueve el precio, on-chain "por qué" y "qué tan sostenible es".
+Muestran comportamiento de participantes en la red (acumulación, venta, reservas de exchanges) y fase del ciclo. Esto complementa el gráfico: el gráfico dice "cómo" se mueve el precio, on-chain — "por qué" y "cuán sostenible es."
 
-**¿Cuánto tiempo lleva el análisis fundamental?**
+**¿Cuánto tiempo toma el análisis fundamental?**
 
-Evaluación inicial: 15-30 minutos (checklist). Análisis profundo: 1-2 horas (tokenómica, equipo, competidores, on-chain). Para activos habituales, actualizar datos una vez por semana o antes de eventos importantes es suficiente.
+Evaluación inicial: 15-30 minutos (checklist). Análisis profundo: 1-2 horas (tokenomics, equipo, competidores, on-chain). Para activos permanentes, actualizar datos una vez por semana o antes de eventos importantes es suficiente.
 
 **¿Qué servicios usar para análisis fundamental?**
 
 - On-chain: Glassnode, CryptoQuant, Nansen
-- Tokenómica: Token Unlocks, Token Terminal
+- Tokenomics: Token Unlocks, Token Terminal
 - Agregadores: CoinMarketCap, CoinGecko
 - Noticias: Twitter, Discord, Telegram de proyectos
 
-**¿Se puede operar solo por fundamentales?**
+**¿Puedo operar solo con fundamentales?**
 
-No. El FA no da puntos exactos de entrada. Incluso con fundamentales fuertes, un activo puede caer semanas o meses. Usa AT para entrada y stop losses para proteger el capital.
+No. El AF no da puntos exactos de entrada. Incluso con fundamentales fuertes, un activo puede caer durante semanas o meses. Use AT para entrada y stop-losses para proteger el capital.
