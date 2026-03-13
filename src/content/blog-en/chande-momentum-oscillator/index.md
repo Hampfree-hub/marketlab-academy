@@ -112,6 +112,6 @@ Chande Momentum Oscillator (CMO) is a versatile oscillator that provides traders
 
 By using CMO in conjunction with other technical analysis tools, such as moving averages or Bollinger Bands, traders can significantly improve their trading decisions and enhance adaptability to changing market conditions. As with any indicator, practice and understanding its limitations are key to success.
 
-For automated trading, register on **Bybit**.
+For automated trading, register on **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)**.
 
 

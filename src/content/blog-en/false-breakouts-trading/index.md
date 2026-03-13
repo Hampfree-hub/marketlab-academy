@@ -164,5 +164,5 @@ You can, but it’s risky. It’s better to combine with other methods and alway
 
 ## Summary
 
-For automated trading, register on **Bybit**.
+For automated trading, register on **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)**.
 
