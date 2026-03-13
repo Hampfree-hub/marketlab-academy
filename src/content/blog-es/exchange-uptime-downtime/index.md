@@ -1,126 +1,351 @@
 ---
-title: 'Qué son el uptime y el downtime de una exchange'
-description: 'Uptime y downtime de una criptoexchange: qué son, cómo se mide la fiabilidad de la plataforma y qué tener en cuenta al elegir exchange para operar.'
+title: 'Tiempo de Actividad e Inactividad de Exchange Explicado'
+description: 'Tiempo de actividad y inactividad de exchange: qué es, cómo se mide la confiabilidad, qué buscar al elegir plataforma de trading.'
 pubDate: '2026-02-19'
 category: 'fundamental-analysis'
 ---
 
-Uptime y downtime son indicadores de disponibilidad del servicio: cuánto tiempo la exchange ha funcionado sin fallos y cuánto ha estado indisponible. Para el trader importan tanto la reputación de la plataforma como la fiabilidad de su infraestructura.
+Tiempo de actividad (uptime) y tiempo de inactividad (downtime) son métricas de disponibilidad de servicio: cuánto tiempo operó el exchange sin fallos y cuánto tiempo estuvo no disponible. Para traders, tanto la reputación de plataforma como la confiabilidad de infraestructura importan.
 
-En el artículo se explica qué son uptime y downtime, cómo se calculan, qué revisar al elegir exchange y cómo reducir riesgos durante las caídas.
+Este artículo cubre qué son uptime y downtime, cómo se calculan, qué buscar al elegir exchange y cómo reducir riesgos durante interrupciones.
 
-## Qué son uptime y downtime
+## Qué es Uptime y Downtime
 
-**Uptime** es la fracción de tiempo en que el servicio estuvo disponible y funcionando con normalidad. **Downtime** es el tiempo en que el servicio estuvo indisponible o con limitaciones graves. En pocas palabras: uptime responde a “qué porcentaje del tiempo la exchange estuvo disponible”, downtime a “cuánto tiempo estuvo caída o muy limitada”.
+**Uptime** — porción de tiempo cuando servicio estuvo disponible y operó normalmente. **Downtime** — tiempo cuando servicio no estuvo disponible u operó con limitaciones serias. Simplemente: uptime responde "qué porcentaje de tiempo estuvo disponible el exchange," downtime — "cuánto tiempo no funcionó o tuvo interrupciones."
 
-Suelen expresarse en porcentaje sobre un periodo (mes, año) o en horas/minutos de indisponibilidad. Fórmula del uptime:
+Ambas métricas usualmente expresadas en porcentajes por período (mes, año) o en horas/minutos de tiempo de inactividad. Fórmula de uptime:
 
-**Uptime (%) = (Tiempo en funcionamiento / Tiempo total del periodo) × 100**
+**Uptime (%) = (Tiempo de Operación / Tiempo Total de Período) × 100**
 
-Ejemplo: en un mes (720 horas) la exchange estuvo caída 3 horas. Uptime = (717 / 720) × 100 ≈ 99,58 %. Downtime = 3 horas o ~0,42 % del periodo.
+Por ejemplo, en un mes (720 horas) el exchange no estuvo disponible por 3 horas. Uptime = (717 / 720) × 100 ≈ 99.58%. Correspondientemente, downtime — 3 horas o about 0.42% de período.
 
-### Qué cuenta como downtime
+### Qué Cuenta como Downtime
 
-- Indisponibilidad total del sitio o la API (el usuario no puede entrar ni ejecutar peticiones).
-- Indisponibilidad parcial: fallan solo algunas funciones (p. ej. solo spot o solo futuros), operaciones suspendidas con interfaz activa.
-- Retrasos graves que hacen la ejecución de órdenes poco fiable o imposible en un tiempo razonable.
+- Inactividad completa de sitio web o API (usuario no puede iniciar sesión o ejecutar solicitud).
+- Inactividad parcial: funciones individuales no funcionan (ej. solo spot o solo futuros), trading detenido con interfaz funcionando.
+- Retrasos severos (lags) haciendo ejecución de órdenes no confiable o imposible en tiempo razonable.
 
-Los “cuelgues” breves de segundos pueden no aparecer en estadísticas públicas, pero si se repiten afectan a la calidad del trading. Entender la fiabilidad de la infraestructura ayuda a planificar el riesgo y a no concentrar posiciones críticas en una sola plataforma.
+Breves "congelamientos" técnicos por pocos segundos pueden no aparecer en estadísticas públicas, pero con repetición frecuente también afectan calidad de trading. Entender confiabilidad de infraestructura ayuda a planificar distribución de riesgos y no mantener posiciones críticas en plataforma única.
 
-## Por qué al trader le importa el uptime de la exchange
+## Por Qué Traders Deben Verificar Uptime de Exchange
 
-Durante un downtime el trader no puede gestionar bien las posiciones: cerrar una operación, cambiar el stop-loss o cancelar una orden. El precio sigue moviéndose mientras la exchange está caída — con una posición abierta eso es riesgo directo. En un mercado volátil incluso una caída corta puede tener consecuencias no deseadas.
+Durante downtime, trader no puede gestionar posiciones completamente: cerrar operación, cambiar stop-loss o cancelar orden. Precio continúa moviéndose durante este tiempo — con posición abierta esto es riesgo directo. En mercado volátil, incluso interrupción corta puede llevar a consecuencias indeseables.
 
-**Riesgos principales en caídas:**
+**Principales riesgos durante interrupciones:**
 
-- **No poder cerrar la posición** — el precio puede moverse en contra mientras la exchange está caída.
-- **Slippage y peor ejecución** — al recuperarse el servicio, las órdenes pueden ejecutarse tarde y a peor precio.
-- **Fallos de API** — los bots y scripts dejan de recibir datos y enviar órdenes; estrategias automáticas (incluidos [DCA](/es/library/dca-strategy-crypto/) o [grid](/es/library/grid-trading-crypto/)) no se ejecutan según lo previsto.
-- **Sin acceso a fondos** — retiros y a veces transferencias internas no están disponibles durante la caída.
+- **Incapacidad de cerrar posición** — precio puede moverse contra posición abierta mientras exchange no disponible.
+- **Deslizamiento y ejecución a peor precio** — después de restauración, órdenes pueden ejecutarse con retraso y a precio desfavorable.
+- **Fallos de API** — bots de trading y scripts dejan de recibir datos y enviar órdenes; estrategias automatizadas (incluyendo [DCA](/es/library/dca-strategy-crypto/) o [grid](/es/library/grid-trading-crypto/)) no se ejecutan según plan.
+- **Pérdida de acceso a fondos** — durante interrupción, retiros y a veces transferencias entre cuentas no disponibles.
 
-Cuanto mayor sea la parte del trading en una exchange y más críticas las posiciones, más importante es elegir plataformas con buen historial de uptime y comunicación clara en incidentes. Los principios generales de protección del capital se tratan en [gestión de riesgos en criptotrading con bots](/es/library/risk-management-crypto-trading-bots/).
+Mayor share de trading a través de exchange y más críticas las posiciones — más importante elegir plataformas con alto historial de uptime y comunicación adecuada durante incidentes.
 
-## Cómo se mide la disponibilidad de las exchanges
+**Importante:** No mantenga todos los fondos en un exchange. Distribuya activos a través de múltiples plataformas y carteras frías.
 
-La fiabilidad de la plataforma se valora con varias fuentes.
+## Cómo se Mide Disponibilidad de Exchange
 
-### Páginas de estado públicas
+Confiabilidad de plataforma evaluada desde múltiples fuentes.
 
-Muchas exchanges tienen una página de estado (status page) con el estado actual de los servicios (trading, API, retiros, interfaz web) e historial de incidentes. Así se ve la versión oficial: cuándo hubo fallo, qué sistemas se vieron afectados y cuándo se restableció el servicio.
+### Páginas de Estado Públicas
+
+Muchos exchanges mantienen página de estado donde se muestra estado actual de servicios (trading, API, retiros, interfaz web) e historial de incidentes. De ellas puede ver versión oficial: cuándo ocurrió interrupción, qué sistemas afectados y cuándo trabajo restaurado.
 
 **Ejemplos:**
 - Binance: status.binance.com
 - Bybit: status.bybit.com
 - Kraken: status.kraken.com
 
-### Informes de disponibilidad
+### Reportes de Disponibilidad
 
-Algunas exchanges publican informes mensuales o anuales con porcentajes de uptime por servicio. Sirven para comparar, pero la metodología puede variar (qué se considera "disponible", qué regiones y nodos se incluyen).
+Algunos exchanges publican reportes mensuales o anuales con porcentajes de uptime para servicios principales. Tales cifras útiles para comparación, pero metodología de cálculo puede diferir (qué exactamente contado como "disponible," qué regiones y nodos considerados).
 
-### Servicios de monitorización externos
+### Servicios de Monitoreo de Terceros
 
-Servicios independientes hacen ping periódico a sitios y APIs de exchanges desde distintos puntos y construyen gráficos de disponibilidad. Ayudan a valorar el uptime "desde fuera", pero la cobertura y frecuencia varían — conviene usarlos como una fuente más, no la única.
+Servicios independientes consultan periódicamente sitios web y APIs de exchanges desde diferentes puntos mundialmente y construyen gráficos de disponibilidad. Ayudan a evaluar uptime "desde fuera," pero cobertura y frecuencia de verificación varían por servicio — datos deben tomarse como adicional, no única fuente.
 
 **Ejemplos:**
 - DownDetector — quejas de usuarios en tiempo real
-- CryptoStatus — monitorización de exchanges y wallets cripto
+- CryptoStatus — monitoreo de exchanges y carteras crypto
 
-Al elegir exchange, conviene combinar: estado oficial, monitorización externa y comentarios de usuarios sobre incidentes recientes. Para trading automatizado, es importante elegir plataformas con uptime 99,5%+ — este tipo de exchanges están en la lista de plataformas soportadas en [Veles](https://veles.finance/invite/washmallay).
+Al elegir exchange, razonable combinar: mirar estado oficial, monitoreo externo y reseñas de usuarios sobre incidentes recientes. Para trading automatizado, importante elegir plataformas con 99.5%+ de uptime — tales disponibles en lista de exchanges soportados en [Veles](https://veles.finance/invite/washmallay).
 
-## Causas típicas del downtime
+## Causas Típicas de Downtime
 
-**Mantenimiento programado** — actualizaciones de sistemas, migraciones, ampliación de capacidad. Suele anunciarse y hacerse en ventanas de baja actividad. La indisponibilidad breve planificada sigue siendo downtime.
+**Mantenimiento programado** — actualizaciones de sistema, migración, expansión de capacidad. Usualmente anunciados con anticipación y conducidos durante horas de baja actividad. Breves ventanas de inactividad consideradas planificadas.
 
-**Sobrecarga** — un pico de tráfico (bomba, crash, listado de un activo muy demandado) provoca lag, timeouts o indisponibilidad total. La calidad de la infraestructura se pone a prueba en esos momentos.
+**Sobrecarga** — aumento brusco de tráfico (pump, caída, listing de activo popular) lleva a lags, timeouts o inactividad completa. Calidad de arquitectura y escalabilidad se manifiesta en tales momentos.
 
-**Ataques DDoS** — sobrecarga deliberada de la infraestructura. Las exchanges grandes suelen tener protección, pero los ataques pueden causar caídas breves o locales.
+**Ataques DDoS** — sobrecarga intencional de infraestructura. Exchanges grandes usualmente tienen protección, pero ataques pueden causar fallos a corto plazo o locales.
 
-**Incidentes internos** — fallos de hardware, despliegues incorrectos, factor humano. Reflejan la calidad operativa y la velocidad de respuesta.
+**Incidentes internos** — fallos de equipo, errores en actualizaciones, factor humano. Por ellos juzgado calidad de operaciones y velocidad de respuesta de equipo.
 
-**Factores externos** — problemas del proveedor cloud, caídas de red, sanciones o bloqueos en algunas regiones. No siempre dependen de la exchange pero afectan la disponibilidad para parte de los usuarios.
+**Intervenciones regulatorias** — bloqueos por autoridades, requisitos de detener trading para regiones específicas.
 
-Entender las causas ayuda a valorar la gravedad del incidente y con qué frecuencia puede repetirse algo similar. Para estrategias que dependen de que la exchange funcione de forma estable (p. ej. [trading en grid](/es/library/grid-trading-crypto/) o [backtests](/es/library/what-are-backtests/) seguidos de despliegue en vivo), el uptime y el historial de incidentes son criterios importantes al elegir plataforma.
+## Tabla: Uptime de Exchanges Populares (2025)
 
-## Qué revisar al elegir una exchange
+| Exchange | Uptime (2025) | Página de Estado | Incidentes | Downtime |
+|----------|---------------|-----------------|-----------|----------|
+| **Binance** | 99.95% | status.binance.com | 0 | ~4 horas/año |
+| **Bybit** | 99.9% | status.bybit.com | 1 | ~9 horas/año |
+| **Bitget** | 99.8% | status.bitget.com | 2 | ~18 horas/año |
+| **OKX** | 99.85% | status.okx.com | 1 | ~13 horas/año |
+| **BingX** | 99.7% | status.bingx.com | 3 | ~26 horas/año |
+| **Kraken** | 99.9% | status.kraken.com | 1 | ~9 horas/año |
+| **Coinbase** | 99.95% | status.coinbase.com | 0 | ~4 horas/año |
 
-Al elegir una plataforma para operar con cripto conviene tener en cuenta no solo comisiones y pares, sino también la fiabilidad.
+**Datos para 2025.** Fuentes: páginas de estado oficiales de exchanges.
 
-**Uptime e historial de incidentes** — con qué frecuencia y durante cuánto tiempo ha estado caída la exchange en el último año. Una caída corta puede ser excepcional; caídas repetidas o largas son una señal de alerta.
+**Qué significan porcentajes:**
+- **99.9% (tres nueves):** ~9 horas de downtime por año — buen indicador para exchange crypto
+- **99.95%:** ~4 horas de downtime por año — excelente indicador
+- **99.99% (cuatro nueves):** ~53 minutos de downtime por año — nivel de finanzas tradicionales
 
-**Transparencia** — existencia de página de estado, publicación de informes y postmortems (qué falló y qué se hizo). La voluntad de explicar los incidentes indica procesos maduros.
+**Conclusiones:**
+- Binance, Coinbase — líderes en confiabilidad (99.95%)
+- Bybit, Kraken — buen balance (99.9%)
+- Bitget, OKX — aceptable (99.8%)
+- BingX — requiere plataformas de respaldo (99.7%)
 
-**Comunicación en caídas** — con qué rapidez y claridad la plataforma informa (web, redes, email). Eso influye en la capacidad de reaccionar (p. ej. no abrir nuevas posiciones o mover la actividad a otra exchange).
+## Cómo Compensan Exchanges por Interrupciones
 
-**Canales de respaldo** — poder operar por app móvil si falla la web o al revés. Para trading algorítmico: estabilidad de la API y documentación sobre límites y restricciones bajo carga.
+**Importante:** Políticas de compensación pueden cambiar. Siempre verifique información actual en sitios web oficiales de exchanges.
 
-También ayuda no concentrar todo el capital en una sola plataforma y no depender de un único punto de fallo.
+**Principios generales:**
+
+### Binance
+
+**Compensación por:**
+- Interrupción >30 minutos
+- Incapacidad de cerrar posición
+- Errores técnicos en lado de exchange
+
+**Formato:**
+- Vouchers para comisiones de trading
+- Tokens BNB (raramente)
+
+**Dónde verificar:** Canal Oficial de Anuncios de Binance
+
+### Bybit
+
+**Compensación por:**
+- Interrupción >1 hora
+- API no disponible >30 minutos
+
+**Formato:**
+- Bonos a cuenta de trading
+- Cashback en comisiones
+
+**Dónde verificar:** Anuncios de Bybit
+
+### Bitget
+
+**Compensación por:**
+- Interrupción >2 horas
+- Incapacidad de retirar fondos
+
+**Formato:**
+- USDT de bono
+- Tasas aumentadas en Earn
+
+**Dónde verificar:** Centro de Soporte de Bitget
+
+### BingX
+
+**Compensación por:**
+- Interrupción >1 hora
+- Liquidaciones durante interrupción
+
+**Formato:**
+- Vouchers de comisiones
+- Fondo de seguros (caso por caso)
+
+**Dónde verificar:** Centro de Ayuda de BingX
+
+### OKX
+
+**Compensación por:**
+- Interrupción >30 minutos
+- Errores de ejecución de órdenes
+
+**Formato:**
+- Tokens OKB
+- Cashback en comisiones
+
+**Dónde verificar:** Soporte de OKX
+
+## Cómo Obtener Compensación
+
+**Instrucción paso a paso:**
+
+### Paso 1: Guardar Evidencia
+
+**Qué necesario:**
+- Capturas de pantalla de errores (404, 503, timeout)
+- Logs de API (si usa bots)
+- Tiempo de interrupción (inicio, fin)
+- Pérdidas (ganancia no realizada, pérdidas)
+
+**Ejemplo:**
+```
+Tiempo: 2024-03-15 14:30-16:00 UTC
+Error: API timeout (código 504)
+Pérdidas: Incapacidad de cerrar long de BTC, pérdida de $500
+```
+
+### Paso 2: Contactar Soporte
+
+**Dónde:**
+- Ticket de soporte en exchange
+- Twitter/X (apelación pública)
+- Canal de Telegram de exchange
+
+**Qué escribir:**
+- Descripción de problema
+- Duración de interrupción
+- Evidencia adjunta
+- Monto de compensación
+
+**Plantilla:**
+```
+Asunto: Compensación por interrupción 15.03.2024
+
+Hola,
+
+Durante interrupción de exchange (14:30-16:00 UTC) no pude cerrar posición.
+Adjunto capturas de errores y cálculo de pérdidas.
+
+Solicito compensación de $500.
+
+Capturas: [adjuntas]
+Logs de API: [adjuntos]
+
+Atentamente,
+[Su nombre]
+```
+
+### Paso 3: Esperar Respuesta
+
+**Tiempos:**
+- Binance: 3-5 días hábiles
+- Bybit: 2-4 días hábiles
+- Bitget: 5-7 días hábiles
+- BingX: 3-5 días hábiles
+- OKX: 2-4 días hábiles
+
+**Si denegado:**
+- Solicitar apelación
+- Contactar redes sociales (presión pública funciona)
+- Dejar reseña en Trustpilot, Reddit
+
+## Checklist: Cómo Elegir Exchange Confiable
+
+**Al elegir exchange, verifique:**
+
+### Criterios técnicos
+
+- [ ] Uptime >99.5% en último año
+- [ ] Página de estado pública
+- [ ] Historial de incidentes <5 por año
+- [ ] Protección DDoS (Cloudflare, AWS Shield)
+- [ ] Servidores de respaldo (distribución geo)
+
+### Criterios financieros
+
+- [ ] Proof of Reserves
+- [ ] Fondo de seguros >$100M
+- [ ] Política de compensación (transparente)
+- [ ] Auditoría de terceros
+
+### Criterios de reputación
+
+- [ ] Tiempo en mercado >3 años
+- [ ] Equipo público
+- [ ] Licencias (FinCEN, FCA, ASIC)
+- [ ] Reseñas de usuarios (Trustpilot >4.0)
+
+### Para trading automatizado
+
+- [ ] API uptime >99.5%
+- [ ] Límites de tasa adecuados (1000+ solicitudes/minuto)
+- [ ] Soporte WebSocket
+- [ ] Testnet disponible
+- [ ] Soporte en lista de [Veles](https://veles.finance/invite/washmallay)
+
+**Requisitos mínimos:**
+- Uptime: 99.5%+
+- Edad: 3+ años
+- Reservas: Proof of Reserves
+- Compensación: política transparente
+
+**Elección óptima:**
+- Binance, Bybit — para mayoría de traders
+- Bitget, OKX — para alternativa
+- BingX — solo como plataforma de respaldo
 
 ## Resumen
 
-Uptime y downtime indican cuán estable es una exchange. Para el trader es importante saber que durante una caída no puede gestionar posiciones con normalidad y los bots dejan de funcionar. La fiabilidad se valora con páginas de estado, informes y monitorización externa; al elegir exchange, conviene mirar historial de incidentes, transparencia y comunicación en caídas. Reducir riesgos ayuda diversificar plataformas y una gestión sensata del capital.
+Uptime y downtime de exchange son métricas clave de confiabilidad. Elija plataformas con alto historial de uptime y comunicación transparente durante incidentes.
+
+**Conclusiones clave:**
+- Uptime muestra confiabilidad de exchange, downtime — frecuencia de fallos
+- Verifique páginas de estado, monitoreo de terceros, reseñas de usuarios
+- Diversifique a través de múltiples exchanges y carteras frías
+- Para trading automatizado, elija plataformas con 99.5%+ de uptime
+- Conozca políticas de compensación de sus exchanges
+
+Más sobre trading automatizado: [Estrategia DCA](/es/library/dca-strategy-crypto/), [Trading Grid](/es/library/grid-trading-crypto/).
 
 ## FAQ
 
-**¿Qué es el uptime en pocas palabras?**
+**¿Qué es uptime de exchange?**
 
-Uptime es la fracción de tiempo en que el servicio (p. ej. una exchange) estuvo disponible y funcionando con normalidad. Se expresa en porcentaje: 99,9 % de uptime significa ~0,1 % de downtime en el periodo.
+Porcentaje de tiempo que exchange operó normalmente sin fallos. 99.9% uptime significa ~9 horas de downtime por año.
 
-**¿Por qué es peligroso el downtime de la exchange para el trader?**
+**¿Qué se considera buen uptime?**
 
-Durante el downtime no se puede entrar en la cuenta, cerrar posición, cambiar el stop ni cancelar una orden. El precio puede ir en contra y los bots dejan de ejecutar estrategias. Por eso importan tanto la estabilidad de la exchange como una gestión razonable del riesgo.
+- 99.9%: bueno para exchange crypto
+- 99.95%: excelente
+- 99.99%: nivel de finanzas tradicionales (grado bancario)
 
-**¿Cómo saber el uptime de una exchange?**
+**¿Dónde verificar uptime de exchange?**
 
-Revisar la página de estado oficial de la exchange y los informes de disponibilidad (si se publican), y los datos de servicios de monitorización independientes. Una sola fuente no basta — conviene contrastar varias.
+- Página de estado oficial (status.binance.com, status.bybit.com)
+- Monitores de terceros (DownDetector, CryptoStatus)
+- Reseñas de usuarios en Reddit, Trustpilot
 
-**¿Por qué las exchanges caen en bombas o crashes?**
+**¿Qué hacer durante interrupción de exchange?**
 
-Un pico repentino de tráfico sobrecarga servidores y red. La preparación de la infraestructura para picos de carga se pone a prueba en esos momentos; las plataformas más resilientes tienen caídas más cortas y menos frecuentes.
+- Verificar página de estado para información oficial
+- Contactar soporte vía ticket
+- Monitorear Twitter/X para actualizaciones
+- No entrar en pánico — mayoría de interrupciones resueltas en horas
 
-**¿Qué hacer si la exchange está caída y tengo una posición abierta?**
+**¿Puedo obtener compensación por downtime?**
 
-Tener un plan de antemano: p. ej. órdenes de stop duplicadas en otra plataforma (si se opera el mismo activo allí), o limitar el tamaño de posición en una sola exchange.
+Sí, muchos exchanges compensan por interrupciones >30-60 minutos. Contacte soporte con evidencia (capturas, logs, cálculo de pérdidas).
 
-**¿Hay que tener en cuenta el uptime al elegir exchange para bots?**
+**¿Cómo protegerme de downtime de exchange?**
 
-Sí. Los bots dependen de la API; en downtime o lag fuerte las órdenes no se ejecutan a tiempo y las estrategias (DCA, grid, etc.) se rompen. La estabilidad de la API y el historial de caídas son criterios importantes para el trading algorítmico.
+- Diversificar a través de múltiples exchanges
+- Mantener fondos de emergencia en cartera fría
+- Usar órdenes stop-loss
+- Monitorear posiciones regularmente
+
+**¿Es 99.7% uptime bueno?**
+
+Aceptable, pero no excelente. 99.7% = ~26 horas de downtime por año. Para trading serio, mejor elegir plataformas 99.9%+.
+
+**¿Qué es downtime de API?**
+
+Período cuando API de exchange no responde. Afecta bots de trading, estrategias automatizadas, apps de terceros. Usualmente más corto que downtime de sitio web.
+
+**¿Debo retirar durante interrupción?**
+
+Si interrupción prolongada (>6 horas) y sin comunicación de equipo — considerar retirar después de restauración. Pero usualmente interrupciones resueltas en 1-2 horas.
+
+**¿Cómo reportar interrupción de exchange?**
+
+- Publicar en Twitter/X etiquetando exchange
+- Dejar reseña en Trustpilot
+- Reportar a soporte vía ticket
+- Compartir experiencia en Reddit (r/CryptoCurrency)
