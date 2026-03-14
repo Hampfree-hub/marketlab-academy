@@ -1,7 +1,7 @@
 ---
 title: 'Token Unlocks: How Token Releases Affect Price'
 description: 'Token unlocks and vesting: what they are, how token releases affect cryptocurrency prices. Unlock calendars, historical examples APT, ARB, STRK, and protection strategies.'
-pubDate: '2026-03-15'
+pubDate: '2026-03-14'
 category: 'fundamental-analysis'
 ---
 

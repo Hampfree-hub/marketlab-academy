@@ -1,7 +1,7 @@
 ---
 title: 'Token Unlocks: Cómo las Liberaciones de Tokens Afectan el Precio'
 description: 'Token unlocks y vesting: qué son, cómo las liberaciones de tokens afectan los precios de criptomonedas. Calendarios de unlocks, ejemplos históricos APT, ARB, STRK y estrategias de protección.'
-pubDate: '2026-03-15'
+pubDate: '2026-03-14'
 category: 'fundamental-analysis'
 ---
 

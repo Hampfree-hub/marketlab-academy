@@ -1,7 +1,7 @@
 ---
 title: 'Token Unlocks: Как Разлоки Токенов Влияют на Цену'
 description: 'Token unlocks и вестинг: что это такое, как разлоки токенов влияют на цену криптовалюты. Календари разлоков, исторические примеры APT, ARB, STRK и стратегии защиты.'
-pubDate: '2026-03-15'
+pubDate: '2026-03-14'
 category: 'fundamental-analysis'
 ---
 
