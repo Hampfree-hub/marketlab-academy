@@ -102,7 +102,11 @@ Cuando gran cantidad de tokens llega al mercado:
 - ✅ Métricas: FDV, Market Cap, Circulating Supply
 - 🔗 [cryptorank.io/token-unlocks](https://cryptorank.io/token-unlocks)
 
-**4. Vesting Trackers (on-chain)**
+**4. Exchanges con Calendarios de Unlocks:**
+- **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)** — sección "Announcements" con calendario de listings y unlocks
+- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — notificaciones sobre nuevos tokens y eventos
+
+**5. Vesting Trackers (on-chain)**
 - ✅ Datos directamente desde blockchain
 - ✅ Para Ethereum, Solana, BSC
 - ✅ Requiere habilidades con exploradores de blockchain
@@ -156,6 +160,8 @@ Decisión: 🔴 NO COMPRAR — alto riesgo de dump
 ### Estrategia 2: Usar Unlocks para Entrada
 
 **Cómo ganar con unlocks:**
+
+Para trading de unlocks necesitas exchange con bajas comisiones y buen API. Recomendamos **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)** — excelente liquidez, bajas comisiones y bots de trading integrados para estrategias DCA.
 
 1. **Vender 1-2 semanas antes del unlock:**
    - Mercado se pone nervioso con anticipación
@@ -235,6 +241,37 @@ Sin Unlocks + Tendencia Alcista de BTC + Listing en Binance
 2. Evaluar tendencia general del mercado (BTC)
 3. Evitar comprar 1-2 semanas antes de gran unlock
 4. Usar unlocks para entrada en caída
+
+---
+
+## Tributación de Token Unlocks
+
+### Importante para Inversores
+
+**Pregunta:** ¿Pago impuestos al recibir tokens después del unlock?
+
+**La respuesta depende de la jurisdicción:**
+
+**🇺🇸 USA (IRS):**
+- Recibir tokens después de vesting = ingreso ordinario
+- Impuesto a tasa de ingreso (10-37%)
+- Base de costo = fair market value al recibir
+- Al vender después — capital gains tax
+
+**🇪🇺 UE (varía por país):**
+- Alemania: recibir tokens no tributa, solo venta
+- Francia: flat tax 30% en venta
+- Portugal: 0% impuesto crypto (si no eres trader profesional)
+
+**🇷🇺 Rusia:**
+- Recibir tokens = ingreso (NDFL 13-15%)
+- Impuesto se paga al vender tokens
+- Base = diferencia entre precio de venta y precio de recepción
+
+**Consejo práctico:** ¡Mantén registros de todos los unlocks! Usa servicios:
+- **Koinly** — cálculo automático de impuestos
+- **CoinTracker** — integración con exchanges
+- **TokenTax** — soporte para DeFi y staking
 
 ---
 

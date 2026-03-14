@@ -102,7 +102,11 @@ When large amount of tokens hits the market:
 - ✅ Metrics: FDV, Market Cap, Circulating Supply
 - 🔗 [cryptorank.io/token-unlocks](https://cryptorank.io/token-unlocks)
 
-**4. Vesting Trackers (on-chain)**
+**4. Exchanges with Unlock Calendars:**
+- **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)** — "Announcements" section with listing and unlock calendar
+- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — notifications about new tokens and events
+
+**5. Vesting Trackers (on-chain)**
 - ✅ Data directly from blockchain
 - ✅ For Ethereum, Solana, BSC
 - ✅ Requires blockchain explorer skills
@@ -156,6 +160,8 @@ Decision: 🔴 DO NOT BUY — high dump risk
 ### Strategy 2: Use Unlocks for Entry
 
 **How to profit from unlocks:**
+
+For trading unlocks you need exchange with low fees and good API. We recommend **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)** — excellent liquidity, low fees, and built-in trading bots for DCA strategies.
 
 1. **Sell 1-2 weeks before unlock:**
    - Market starts nervous in advance
@@ -235,6 +241,37 @@ No Unlocks + Bullish BTC Trend + Binance Listing
 2. Assess overall market trend (BTC)
 3. Avoid buying 1-2 weeks before large unlock
 4. Use unlocks for entry on dip
+
+---
+
+## Token Unlocks Taxation
+
+### Important for Investors
+
+**Question:** Do I pay tax when receiving tokens after unlock?
+
+**Answer depends on jurisdiction:**
+
+**🇺🇸 USA (IRS):**
+- Receiving tokens after vesting = ordinary income
+- Tax at income rate (10-37%)
+- Cost basis = fair market value at receipt
+- Upon later sale — capital gains tax
+
+**🇪🇺 EU (varies by country):**
+- Germany: receiving tokens not taxed, only sale
+- France: flat tax 30% on sale
+- Portugal: 0% crypto tax (if not professional trader)
+
+**🇷🇺 Russia:**
+- Receiving tokens = income (NDFL 13-15%)
+- Tax paid upon token sale
+- Basis = difference between sale price and receipt price
+
+**Practical advice:** Keep records of all unlocks! Use services:
+- **Koinly** — automatic tax calculation
+- **CoinTracker** — exchange integration
+- **TokenTax** — DeFi and staking support
 
 ---
 
