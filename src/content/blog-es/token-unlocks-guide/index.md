@@ -86,28 +86,28 @@ Cuando gran cantidad de tokens llega al mercado:
 
 ![Calendario de Token Unlocks en CoinMarketCap](./assets/cmc-unlocks.png)
 
-- ✅ Calendario completo de unlocks para 12 meses adelante
-- ✅ Integración con datos principales de tokens
-- ✅ Filtros por fecha, volumen, proyectos
-- ✅ Visualización: gráficos circulares de distribución
-- 🔗 [coinmarketcap.com/token-unlocks/](https://coinmarketcap.com/token-unlocks/)
+- Calendario completo de unlocks para 12 meses adelante
+- Integración con datos principales de tokens
+- Filtros por fecha, volumen, proyectos
+- Visualización: gráficos circulares de distribución
+- [coinmarketcap.com/token-unlocks/](https://coinmarketcap.com/token-unlocks/)
 
 **2. CryptoRank Token Unlocks**
 
 ![Calendario de Token Unlocks en CryptoRank](./assets/cr-unlocks.png)
 
-- ✅ Sección "Token Unlocks" con calendario detallado
-- ✅ Integración con datos de rondas de financiación
-- ✅ Métricas: FDV, Market Cap, Circulating Supply
-- ✅ Datos históricos sobre unlocks pasados
-- 🔗 [cryptorank.io/token-unlock](https://cryptorank.io/token-unlock)
+- Sección "Token Unlocks" con calendario detallado
+- Integración con datos de rondas de financiación
+- Métricas: FDV, Market Cap, Circulating Supply
+- Datos históricos sobre unlocks pasados
+- [cryptorank.io/token-unlock](https://cryptorank.io/token-unlock)
 
 **3. TokenUnlocks.app**
-- ✅ Servicio especializado solo para unlocks
-- ✅ Datos de vesting para 500+ proyectos
-- ✅ Gráficos de distribución de tokens
-- ✅ Notificaciones sobre próximos unlocks
-- 🔗 [tokenunlocks.app](https://tokenunlocks.app)
+- Servicio especializado solo para unlocks
+- Datos de vesting para 500+ proyectos
+- Gráficos de distribución de tokens
+- Notificaciones sobre próximos unlocks
+- [tokenunlocks.app](https://tokenunlocks.app)
 
 **4. Exchanges con Calendarios de Unlocks:**
 - **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)** — sección "Announcements" con calendario de listings y unlocks
