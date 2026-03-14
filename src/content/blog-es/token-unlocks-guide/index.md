@@ -83,22 +83,24 @@ Cuando gran cantidad de tokens llega al mercado:
 ### Servicios Gratuitos
 
 **1. CoinMarketCap Token Unlocks**
+
+![Calendario de Token Unlocks en CoinMarketCap](./assets/cmc-unlocks.png)
+
 - ✅ Calendario completo de unlocks para 12 meses adelante
 - ✅ Integración con datos principales de tokens
 - ✅ Filtros por fecha, volumen, proyectos
 - ✅ Visualización: gráficos circulares de distribución
 - 🔗 [coinmarketcap.com/token-unlocks/](https://coinmarketcap.com/token-unlocks/)
 
-![Calendario de Token Unlocks en CoinMarketCap](./assets/cmc-unlocks.png)
-
 **2. CryptoRank Token Unlocks**
+
+![Calendario de Token Unlocks en CryptoRank](./assets/cr-unlocks.png)
+
 - ✅ Sección "Token Unlocks" con calendario detallado
 - ✅ Integración con datos de rondas de financiación
 - ✅ Métricas: FDV, Market Cap, Circulating Supply
 - ✅ Datos históricos sobre unlocks pasados
 - 🔗 [cryptorank.io/token-unlock](https://cryptorank.io/token-unlock)
-
-![Calendario de Token Unlocks en CryptoRank](./assets/cr-unlocks.png)
 
 **3. TokenUnlocks.app**
 - ✅ Servicio especializado solo para unlocks
