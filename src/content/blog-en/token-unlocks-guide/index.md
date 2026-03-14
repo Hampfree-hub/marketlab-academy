@@ -83,30 +83,36 @@ When large amount of tokens hits the market:
 
 ### Free Services
 
-**1. TokenUnlocks.app**
+**1. CoinMarketCap Token Unlocks**
 - ✅ Full unlock calendar for 12 months ahead
+- ✅ Integration with main token data
+- ✅ Filters by date, volume, projects
+- ✅ Visualization: pie charts for distribution
+- 🔗 [coinmarketcap.com/token-unlocks/](https://coinmarketcap.com/token-unlocks/)
+
+![Token Unlocks Calendar on CoinMarketCap](./assets/cmc-unlocks.png)
+
+**2. CryptoRank Token Unlocks**
+- ✅ "Token Unlocks" section with detailed calendar
+- ✅ Integration with funding round data
+- ✅ Metrics: FDV, Market Cap, Circulating Supply
+- ✅ Historical data on past unlocks
+- 🔗 [cryptorank.io/token-unlock](https://cryptorank.io/token-unlock)
+
+![Token Unlocks Calendar on CryptoRank](./assets/cr-unlocks.png)
+
+**3. TokenUnlocks.app**
+- ✅ Specialized service only for unlocks
 - ✅ Vesting data for 500+ projects
 - ✅ Token distribution charts
 - ✅ Notifications about upcoming unlocks
 - 🔗 [tokenunlocks.app](https://tokenunlocks.app)
 
-**2. TokenUnlocks.co**
-- ✅ Calendar with date and volume filters
-- ✅ Historical data on past unlocks
-- ✅ Project "tokenomics" rating
-- 🔗 [tokenunlocks.co](https://tokenunlocks.co)
-
-**3. CryptoRank.io**
-- ✅ "Token Unlocks" section with calendar
-- ✅ Integration with funding round data
-- ✅ Metrics: FDV, Market Cap, Circulating Supply
-- 🔗 [cryptorank.io/token-unlocks](https://cryptorank.io/token-unlocks)
-
 **4. Exchanges with Unlock Calendars:**
 - **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)** — "Announcements" section with listing and unlock calendar
 - **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — notifications about new tokens and events
 
-**5. Vesting Trackers (on-chain)**
+**5. On-chain Trackers (Advanced)**
 - ✅ Data directly from blockchain
 - ✅ For Ethereum, Solana, BSC
 - ✅ Requires blockchain explorer skills
