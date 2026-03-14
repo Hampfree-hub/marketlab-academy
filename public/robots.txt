@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
+# Запретить индексацию страниц с параметрами фильтрации (технические URL)
+Disallow: /*?cat=
+Disallow: /*?q=
+Disallow: /*?sort=
+Disallow: /*?page=
+
+# Запретить индексацию временных и служебных страниц
+Disallow: /maintenance/
+
 Sitemap: https://marketlab-academy.org/sitemap-index.xml
