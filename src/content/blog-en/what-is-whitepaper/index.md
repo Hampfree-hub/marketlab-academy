@@ -1,6 +1,6 @@
 ---
-title: 'Whitepaper in Crypto: What It Is and Why It Matters'
-description: 'Whitepaper in cryptocurrency: what it is, why it matters, how it's used. Differences from roadmap, what to look for when analyzing projects and evaluating investments.'
+title: "Whitepaper in Crypto: What It Is and Why It Matters"
+description: "Whitepaper in cryptocurrency: what it is, why it matters, how it's used. Differences from roadmap, what to look for when analyzing projects and evaluating investments."
 pubDate: '2026-02-15'
 category: 'fundamental-analysis'
 ---
