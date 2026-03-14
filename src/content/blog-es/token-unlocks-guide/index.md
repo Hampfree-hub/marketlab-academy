@@ -3,7 +3,6 @@ title: 'Token Unlocks: Cómo las Liberaciones de Tokens Afectan el Precio'
 description: 'Token unlocks y vesting: qué son, cómo las liberaciones de tokens afectan los precios de criptomonedas. Calendarios de unlocks, ejemplos históricos APT, ARB, STRK y estrategias de protección.'
 pubDate: '2026-03-15'
 category: 'fundamental-analysis'
-draft: true
 ---
 
 Token unlocks son liberaciones programadas de tokens previamente bloqueados al mercado. Después del unlock, inversores, miembros del equipo y asesores pueden vender sus tokens, creando presión sobre el precio. Este artículo cubre qué son los token unlocks, cómo afectan el precio, dónde verificar calendarios de unlocks y cómo protegerse de consecuencias negativas.

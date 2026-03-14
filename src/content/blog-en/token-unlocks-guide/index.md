@@ -3,7 +3,6 @@ title: 'Token Unlocks: How Token Releases Affect Price'
 description: 'Token unlocks and vesting: what they are, how token releases affect cryptocurrency prices. Unlock calendars, historical examples APT, ARB, STRK, and protection strategies.'
 pubDate: '2026-03-15'
 category: 'fundamental-analysis'
-draft: true
 ---
 
 Token unlocks are scheduled releases of previously locked tokens onto the market. After unlock, investors, team members, and advisors can sell their tokens, creating price pressure. This article covers what token unlocks are, how they affect price, where to check unlock calendars, and how to protect from negative consequences.
