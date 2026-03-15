@@ -1,7 +1,7 @@
 ---
 title: 'Staking de Criptomonedas en 2026: Guía Completa para Principiantes'
 description: 'Staking de cripto: cómo ganar con Proof-of-Stake. Rentabilidad, riesgos, selección de monedas, pools vs nodos. Datos actualizados de 2026.'
-pubDate: '2026-03-15'
+pubDate: '2026-03-16'
 category: 'algo-trading'
 draft: true
 ---
