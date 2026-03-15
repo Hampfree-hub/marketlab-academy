@@ -182,7 +182,7 @@ draft: true
 
 ### Шаг 2: Выбор способа
 
-**Для новичков:** Биржа ([Bybit](https://www.bybit.com/invite?ref=PWMD24), [Binance](https://www.binance.com/), [Bitget](https://www.bitget.com/ru/referral/register?clacCode=23EHR2VD))
+**Для новичков:** Биржа ([Bybit](https://www.bybit.com/invite?ref=PWMD24), [Bitget](https://www.bitget.com/ru/referral/register?clacCode=23EHR2VD), [BingX](https://bingxdao.com/invite/CUBDBG/))
 
 **Почему:**
 - Простота (2 клика)
@@ -207,7 +207,10 @@ draft: true
 
 **Готово!** Вознаграждение начнёт начисляться через 1-3 дня.
 
-**Реферальная ссылка:** Зарегистрируйтесь на [Bybit](https://www.bybit.com/invite?ref=PWMD24) с реферальным кодом для снижения комиссий.
+**Реферальные ссылки:**
+- [Bybit](https://www.bybit.com/invite?ref=PWMD24) — снижение комиссий
+- [Bitget](https://www.bitget.com/ru/referral/register?clacCode=23EHR2VD) — бонусы для новичков
+- [BingX](https://bingxdao.com/invite/CUBDBG/) — социальный трейдинг
 
 ---
 

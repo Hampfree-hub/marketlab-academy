@@ -182,7 +182,7 @@ En 2026, el staking sigue siendo una de las formas más populares de ganar en cr
 
 ### Paso 2: Elegir Método
 
-**Para principiantes:** Exchange ([Bybit](https://www.bybit.com/invite?ref=PWMD24), [Binance](https://www.binance.com/), [Bitget](https://www.bitget.com/ru/referral/register?clacCode=23EHR2VD))
+**Para principiantes:** Exchange ([Bybit](https://www.bybit.com/invite?ref=PWMD24), [Bitget](https://www.bitget.com/referral/register?clacCode=23EHR2VD), [BingX](https://bingxdao.com/invite/CUBDBG/))
 
 **Por qué:**
 - Simplicidad (2 clics)
@@ -207,7 +207,10 @@ En 2026, el staking sigue siendo una de las formas más populares de ganar en cr
 
 **¡Listo!** Las recompensas comenzarán a acumularse en 1-3 días.
 
-**Referido:** Regístrate en [Bybit](https://www.bybit.com/invite?ref=PWMD24) con código de referido para comisiones reducidas.
+**Enlaces de referido:**
+- [Bybit](https://www.bybit.com/invite?ref=PWMD24) — comisiones reducidas
+- [Bitget](https://www.bitget.com/referral/register?clacCode=23EHR2VD) — bonos para principiantes
+- [BingX](https://bingxdao.com/invite/CUBDBG/) — trading social
 
 ---
 

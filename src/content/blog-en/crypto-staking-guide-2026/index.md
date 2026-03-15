@@ -182,7 +182,7 @@ In 2026, staking remains one of the most popular ways to earn in crypto. In this
 
 ### Step 2: Choose Method
 
-**For beginners:** Exchange ([Bybit](https://www.bybit.com/invite?ref=PWMD24), [Binance](https://www.binance.com/), [Bitget](https://www.bitget.com/ru/referral/register?clacCode=23EHR2VD))
+**For beginners:** Exchange ([Bybit](https://www.bybit.com/invite?ref=PWMD24), [Bitget](https://www.bitget.com/referral/register?clacCode=23EHR2VD), [BingX](https://bingxdao.com/invite/CUBDBG/))
 
 **Why:**
 - Simplicity (2 clicks)
@@ -207,7 +207,10 @@ In 2026, staking remains one of the most popular ways to earn in crypto. In this
 
 **Done!** Rewards will start accruing in 1-3 days.
 
-**Referral:** Register on [Bybit](https://www.bybit.com/invite?ref=PWMD24) with referral code for reduced fees.
+**Referral links:**
+- [Bybit](https://www.bybit.com/invite?ref=PWMD24) — reduced fees
+- [Bitget](https://www.bitget.com/referral/register?clacCode=23EHR2VD) — newbie bonuses
+- [BingX](https://bingxdao.com/invite/CUBDBG/) — social trading
 
 ---
 
