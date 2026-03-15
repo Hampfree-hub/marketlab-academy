@@ -327,11 +327,3 @@ No Unlocks + Bullish BTC Trend + Binance Listing
 - CryptoRank.io — integration with funding rounds
 
 **Remember:** Token unlocks are not a death sentence, but an opportunity. Proper preparation allows not only to avoid losses, but also to profit from others' panic.
-
----
-
-## Related Materials
-
-- [What is Tokenomics](/en/library/what-is-tokenomics/) — basic tokenomics guide
-- [Fundamental Analysis: Checklist](/en/library/fundamental-analysis-checklist/) — how to analyze projects
-- [Risk Management in Crypto Trading](/en/library/risk-management-crypto-trading-bots/) — risk management in trading

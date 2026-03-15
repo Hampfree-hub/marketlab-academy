@@ -327,11 +327,3 @@ Sin Unlocks + Tendencia Alcista de BTC + Listing en Binance
 - CryptoRank.io — integración con rondas de financiación
 
 **Recuerda:** Token unlocks no son una sentencia de muerte, sino una oportunidad. La preparación adecuada permite no solo evitar pérdidas, sino también ganar con el pánico de otros.
-
----
-
-## Materiales Relacionados
-
-- [Qué es Tokenomics](/es/library/what-is-tokenomics/) — guía básica de tokenomics
-- [Análisis Fundamental: Checklist](/es/library/fundamental-analysis-checklist/) — cómo analizar proyectos
-- [Gestión de Riesgo en Crypto Trading](/es/library/risk-management-crypto-trading-bots/) — gestión de riesgos en trading
