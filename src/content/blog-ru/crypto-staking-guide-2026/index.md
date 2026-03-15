@@ -141,6 +141,8 @@ draft: true
 - **SOL:** Marinade Finance, Jito
 - **DOT/ATOM:** Пулы в кошельках (Polkadot.js, Keplr)
 
+![Интерфейс стейкинга ETH на Lido.fi: главная страница с формой ввода суммы и текущей доходностью](./assets/Lido.fi—home_page.png)
+
 **Для кого:** Средние суммы ($1000-$10,000), опытные пользователи
 
 ---
@@ -180,7 +182,7 @@ draft: true
 
 ### Шаг 2: Выбор способа
 
-**Для новичков:** Биржа (Bybit, Binance, Bitget)
+**Для новичков:** Биржа ([Bybit](https://www.bybit.com/invite?ref=PWMD24), [Binance](https://www.binance.com/), [Bitget](https://www.bitget.com/ru/referral/register?clacCode=23EHR2VD))
 
 **Почему:**
 - Простота (2 клика)
@@ -204,6 +206,8 @@ draft: true
 5. Подтвердите
 
 **Готово!** Вознаграждение начнёт начисляться через 1-3 дня.
+
+**Реферальная ссылка:** Зарегистрируйтесь на [Bybit](https://www.bybit.com/invite?ref=PWMD24) с реферальным кодом для снижения комиссий.
 
 ---
 
@@ -240,6 +244,8 @@ draft: true
 Используйте онлайн-калькуляторы:
 - [StakingRewards.com](https://www.stakingrewards.com/)
 - [CryptoRank Staking](https://cryptorank.io/staking)
+
+![Калькулятор доходности на StakingRewards.com: форма ввода суммы, выбор монеты и расчёт годовой/месячной прибыли](./assets/StakingRewards.com—yield_calculator.png)
 
 ---
 
