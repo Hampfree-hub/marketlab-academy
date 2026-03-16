@@ -42,16 +42,18 @@ En 2026, el staking sigue siendo una de las formas más populares de ganar en cr
 
 | Moneda | Rentabilidad Anual | Mín. Cantidad | Período de Bloqueo | Riesgo |
 |--------|-------------------|--------------|-------------------|--------|
-| **Ethereum (ETH)** | 3-5% | 0.01 ETH (vía pools) | Ninguno (flexible) | Bajo |
+| **Ethereum (ETH)** | 3-4% | 0.01 ETH (vía pools) | Ninguno (flexible) | Bajo |
 | **Cardano (ADA)** | 3-4% | 1 ADA | Ninguno | Bajo |
-| **Solana (SOL)** | 5-6% | 0.01 SOL | Ninguno | Bajo |
-| **Polkadot (DOT)** | 7-8% | 1 DOT | 28 días | Medio |
-| **Cosmos (ATOM)** | 10-15% | 1 ATOM | 21 días | Medio |
-| **Avalanche (AVAX)** | 6-7% | 25 AVAX | 2 semanas | Bajo |
+| **Solana (SOL)** | 6-8% | 0.01 SOL | Ninguno | Bajo |
+| **Polkadot (DOT)** | 5-16% | 1 DOT | 28 días | Medio |
+| **Cosmos (ATOM)** | 8-15% | 1 ATOM | 21 días | Medio |
+| **Avalanche (AVAX)** | hasta 7.65% | 25 AVAX | 2 semanas | Bajo |
 | **Polygon (POL)** | 3-4% | 1 POL | Ninguno | Bajo |
-| **Algorand (ALGO)** | 4% | 1 ALGO | Ninguno | Bajo |
+| **Algorand (ALGO)** | ~4% (varía) | 1 ALGO | Ninguno | Bajo |
 | **Tezos (XTZ)** | 4-5% | 1 XTZ | 7 días | Bajo |
 | **VeChain (VET)** | 2-3% (vía VTHO) | 1 VET | Ninguno | Bajo |
+
+*Los datos son aproximados, el rendimiento exacto depende del validador, exchange o pool.*
 
 **Datos a marzo de 2026.** Fuentes: StakingRewards.com, sitios web oficiales de proyectos.
 
@@ -59,9 +61,9 @@ En 2026, el staking sigue siendo una de las formas más populares de ganar en cr
 
 1. **Rentabilidad Anual (APY):**
    - 3-5% — conservador (ETH, ADA, POL)
-   - 5-8% — medio (SOL, AVAX, DOT)
-   - 10-15% — alto (ATOM)
-   - 15%+ — alto riesgo (proyectos nuevos)
+   - 5-8% — medio (SOL, AVAX)
+   - 8-16% — alto (DOT, ATOM)
+   - 16%+ — alto riesgo (proyectos nuevos)
 
 2. **Período de Bloqueo:**
    - Ninguno — puedes retirar en cualquier momento
@@ -171,7 +173,7 @@ En 2026, el staking sigue siendo una de las formas más populares de ganar en cr
 
 **Recomendaciones para principiantes:**
 - **ETH** — la más confiable, 3-4% anual
-- **SOL** — alta rentabilidad, 5-6% anual
+- **SOL** — alta rentabilidad, 6-8% anual
 - **ADA** — sin bloqueo, 3-4% anual
 
 ### Paso 2: Elegir Método
@@ -230,11 +232,11 @@ Recompensa Anual = Cantidad × APY / 100
 - Por año: $1500 × 0.07 = **$105** (0.7 SOL)
 - Por mes: **$8.75** (0.058 SOL)
 
-**Ejemplo 3: ATOM, $2000, 18% APY**
+**Ejemplo 3: ATOM, $2000, 12% APY**
 - Cantidad: 200 ATOM ($2000)
-- APY: 18%
-- Por año: $2000 × 0.18 = **$360** (36 ATOM)
-- Por mes: **$30** (3 ATOM)
+- APY: 12%
+- Por año: $2000 × 0.12 = **$240** (24 ATOM)
+- Por mes: **$20** (2 ATOM)
 
 ### Calculadora de Staking
 
@@ -310,7 +312,7 @@ Usa calculadoras en línea:
 
 | Método | Rentabilidad | Riesgo | Liquidez | Para quién |
 |--------|--------------|--------|----------|------------|
-| **Staking** | 3-15% anual | Bajo | Alta | Conservadores |
+| **Staking** | 3-16% anual | Bajo | Alta | Conservadores |
 | **Trading** | -100% a +500% | Alto | Alta | Traders experimentados |
 | **Lending** | 5-15% anual | Medio | Media | Riesgo medio |
 | **Yield Farming** | 20-100% anual | Alto | Baja | DeFi experimentado |
@@ -333,10 +335,10 @@ Usa calculadoras en línea:
 
 **Estrategia óptima para principiantes:**
 - 50% ETH (3-4% anual, bajo riesgo)
-- 30% SOL (5-6% anual, riesgo medio)
-- 20% ATOM (10-15% anual, riesgo medio)
+- 30% SOL (6-8% anual, riesgo medio)
+- 20% ADA o DOT (3-16% anual, riesgo medio)
 
-**Rentabilidad esperada:** 5-8% anual en dólares + apreciación del precio de las monedas.
+**Rentabilidad esperada:** 4-8% anual en dólares + apreciación del precio de las monedas.
 
 **Recursos útiles:**
 

@@ -42,16 +42,18 @@ In 2026, staking remains one of the most popular ways to earn in crypto. In this
 
 | Coin | Annual Yield | Min. Amount | Lock-up Period | Risk |
 |------|--------------|-------------|----------------|------|
-| **Ethereum (ETH)** | 3-5% | 0.01 ETH (via pools) | None (flexible) | Low |
+| **Ethereum (ETH)** | 3-4% | 0.01 ETH (via pools) | None (flexible) | Low |
 | **Cardano (ADA)** | 3-4% | 1 ADA | None | Low |
-| **Solana (SOL)** | 5-6% | 0.01 SOL | None | Low |
-| **Polkadot (DOT)** | 7-8% | 1 DOT | 28 days | Medium |
-| **Cosmos (ATOM)** | 10-15% | 1 ATOM | 21 days | Medium |
-| **Avalanche (AVAX)** | 6-7% | 25 AVAX | 2 weeks | Low |
+| **Solana (SOL)** | 6-8% | 0.01 SOL | None | Low |
+| **Polkadot (DOT)** | 5-16% | 1 DOT | 28 days | Medium |
+| **Cosmos (ATOM)** | 8-15% | 1 ATOM | 21 days | Medium |
+| **Avalanche (AVAX)** | up to 7.65% | 25 AVAX | 2 weeks | Low |
 | **Polygon (POL)** | 3-4% | 1 POL | None | Low |
-| **Algorand (ALGO)** | 4% | 1 ALGO | None | Low |
+| **Algorand (ALGO)** | ~4% (varies) | 1 ALGO | None | Low |
 | **Tezos (XTZ)** | 4-5% | 1 XTZ | 7 days | Low |
 | **VeChain (VET)** | 2-3% (via VTHO) | 1 VET | None | Low |
+
+*Data is approximate, exact yield depends on validator, exchange, or pool.*
 
 **Data as of March 2026.** Sources: StakingRewards.com, official project websites.
 
@@ -59,9 +61,9 @@ In 2026, staking remains one of the most popular ways to earn in crypto. In this
 
 1. **Annual Yield (APY):**
    - 3-5% — conservative (ETH, ADA, POL)
-   - 5-8% — medium (SOL, AVAX, DOT)
-   - 10-15% — high (ATOM)
-   - 15%+ — high risk (new projects)
+   - 5-8% — medium (SOL, AVAX)
+   - 8-16% — high (DOT, ATOM)
+   - 16%+ — high risk (new projects)
 
 2. **Lock-up Period:**
    - None — can withdraw anytime
@@ -171,7 +173,7 @@ In 2026, staking remains one of the most popular ways to earn in crypto. In this
 
 **Recommendations for beginners:**
 - **ETH** — most reliable, 3-4% annually
-- **SOL** — high yield, 5-6% annually
+- **SOL** — high yield, 6-8% annually
 - **ADA** — no lock-up, 3-4% annually
 
 ### Step 2: Choose Method
@@ -230,11 +232,11 @@ Annual Reward = Amount × APY / 100
 - Per year: $1500 × 0.07 = **$105** (0.7 SOL)
 - Per month: **$8.75** (0.058 SOL)
 
-**Example 3: ATOM, $2000, 18% APY**
+**Example 3: ATOM, $2000, 12% APY**
 - Amount: 200 ATOM ($2000)
-- APY: 18%
-- Per year: $2000 × 0.18 = **$360** (36 ATOM)
-- Per month: **$30** (3 ATOM)
+- APY: 12%
+- Per year: $2000 × 0.12 = **$240** (24 ATOM)
+- Per month: **$20** (2 ATOM)
 
 ### Staking Calculator
 
@@ -310,7 +312,7 @@ Use online calculators:
 
 | Method | Yield | Risk | Liquidity | For whom |
 |--------|-------|------|-----------|----------|
-| **Staking** | 3-15% annually | Low | High | Conservative |
+| **Staking** | 3-16% annually | Low | High | Conservative |
 | **Trading** | -100% to +500% | High | High | Experienced traders |
 | **Lending** | 5-15% annually | Medium | Medium | Medium risk |
 | **Yield Farming** | 20-100% annually | High | Low | Experienced DeFi |
@@ -333,10 +335,10 @@ Use online calculators:
 
 **Optimal strategy for beginner:**
 - 50% ETH (3-4% annually, low risk)
-- 30% SOL (5-6% annually, medium risk)
-- 20% ATOM (10-15% annually, medium risk)
+- 30% SOL (6-8% annually, medium risk)
+- 20% ADA or DOT (3-16% annually, medium risk)
 
-**Expected yield:** 5-8% annually in dollars + coin price appreciation.
+**Expected yield:** 4-8% annually in dollars + coin price appreciation.
 
 **Useful resources:**
 
