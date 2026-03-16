@@ -7,7 +7,7 @@ category: 'algo-trading'
 
 La diversificación es distribuir capital y riesgo: a través de activos, estrategias y plataformas. Una posición, un bot o un exchange pueden fallar; la diversificación no garantiza ganancias pero reduce la posibilidad de perder todo por un solo factor.
 
-En esta parte — por qué diversificar y qué mirar primero. En [Parte 2](/es/library/diversification-trading-system-part-2/) — cómo establecer reglas de entrada/salida y configurar bots; en [Parte 3](/es/library/diversification-trading-system-part-3/) — monitoreo, ajuste y errores comunes.
+En esta parte — por qué diversificar y qué mirar primero. En [Parte 2](https://marketlab-academy.org/es/library/diversification-trading-system-part-2/) — cómo establecer reglas de entrada/salida y configurar bots; en [Parte 3](https://marketlab-academy.org/es/library/diversification-trading-system-part-3/) — monitoreo, ajuste y errores comunes.
 
 ## Por Qué los Traders Diversifican
 
@@ -26,18 +26,18 @@ Puedes comenzar con una cantidad pequeña — por ejemplo, $20. La idea es proba
 
 ## Diversificación por Activos
 
-Mejor no mantener todo el capital en un activo: las correlaciones entre monedas son altas pero no 100% — un drawdown en un activo golpea una parte del portafolio, no todo el depósito. Cuando un altcoin colapsa, otras posiciones (por ejemplo, BTC, ETH u otro activo) pueden comportarse de manera diferente. Los activos principales como BTC y ETH son la base de muchos portafolios; para más sobre conceptos básicos de cripto ver [Conceptos básicos de Bitcoin](/es/library/bitcoin-basics/). Establece acciones y límites por activo de antemano y no los excedas: por ejemplo, no más del 20-30% del depósito en un activo, el resto distribuido.
+Mejor no mantener todo el capital en un activo: las correlaciones entre monedas son altas pero no 100% — un drawdown en un activo golpea una parte del portafolio, no todo el depósito. Cuando un altcoin colapsa, otras posiciones (por ejemplo, BTC, ETH u otro activo) pueden comportarse de manera diferente. Los activos principales como BTC y ETH son la base de muchos portafolios; para más sobre conceptos básicos de cripto ver [Conceptos básicos de Bitcoin](https://marketlab-academy.org/es/library/bitcoin-basics/). Establece acciones y límites por activo de antemano y no los excedas: por ejemplo, no más del 20-30% del depósito en un activo, el resto distribuido.
 
 ![Ejemplo de diversificación por activos: principales + altcoins](./assets/diversification-pie-chart.png)
 *Fig. 2. Ejemplo de asignación de portafolio: BTC, ETH y altcoins*
 
 ## Diversificación por Estrategias y Bots
 
-No concentres todo el volumen en un bot o una estrategia: [DCA](/es/library/dca-strategy-crypto/) y [trading de cuadrícula (grid)](/es/library/grid-trading-crypto/) resuelven diferentes tareas y se comportan de manera diferente en diferentes condiciones de mercado. DCA promedia la entrada en el tiempo; grid trabaja en un rango. En una tendencia fuerte una estrategia puede tener drawdown, otra ganancias; en un mercado lateral — lo opuesto. Distribuir capital entre varios bots y estrategias reduce la dependencia de una "línea de la cadena." Para reglas de capital ver [gestión de riesgo en trading cripto](/es/library/risk-management-crypto-trading-bots/).
+No concentres todo el volumen en un bot o una estrategia: [DCA](https://marketlab-academy.org/es/library/dca-strategy-crypto/) y [trading de cuadrícula (grid)](https://marketlab-academy.org/es/library/grid-trading-crypto/) resuelven diferentes tareas y se comportan de manera diferente en diferentes condiciones de mercado. DCA promedia la entrada en el tiempo; grid trabaja en un rango. En una tendencia fuerte una estrategia puede tener drawdown, otra ganancias; en un mercado lateral — lo opuesto. Distribuir capital entre varios bots y estrategias reduce la dependencia de una "línea de la cadena." Para reglas de capital ver [gestión de riesgo en trading cripto](https://marketlab-academy.org/es/library/risk-management-crypto-trading-bots/).
 
 ## Diversificación por Plataformas
 
-Mejor no mantener todo el volumen en un exchange: uptime, límites de retiro y reputación importan. Durante downtime prolongado o problemas de retiro el acceso a fondos es limitado; si todo está en una plataforma — el riesgo es mayor. Qué buscar al elegir y cómo evaluar la confiabilidad — en el artículo sobre [uptime y downtime del exchange](/es/library/exchange-uptime-downtime/).
+Mejor no mantener todo el volumen en un exchange: uptime, límites de retiro y reputación importan. Durante downtime prolongado o problemas de retiro el acceso a fondos es limitado; si todo está en una plataforma — el riesgo es mayor. Qué buscar al elegir y cómo evaluar la confiabilidad — en el artículo sobre [uptime y downtime del exchange](https://marketlab-academy.org/es/library/exchange-uptime-downtime/).
 
 **Diversificación por subcuentas**
 
@@ -52,7 +52,7 @@ En Market Lab, usamos 3-4 subcuentas con un total de más de 200 activos — est
 
 ## Resumen
 
-La diversificación es parte de la configuración de un sistema de trading, no un fin en sí mismo. El objetivo es reducir el riesgo de perder todo el capital debido a un activo, una estrategia o una plataforma. Siguiente — [Parte 2: cómo construir y configurar el sistema](/es/library/diversification-trading-system-part-2/).
+La diversificación es parte de la configuración de un sistema de trading, no un fin en sí mismo. El objetivo es reducir el riesgo de perder todo el capital debido a un activo, una estrategia o una plataforma. Siguiente — [Parte 2: cómo construir y configurar el sistema](https://marketlab-academy.org/es/library/diversification-trading-system-part-2/).
 
 ## FAQ
 

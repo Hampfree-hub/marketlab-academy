@@ -213,7 +213,7 @@ Un diario de trading es parte integral del sistema de gestión de riesgo:
 - **Disciplina de stop-loss** — registrar todas las pérdidas, sin "heroísmo"
 - **Análisis riesgo/beneficio** — estadísticas para optimización
 
-Más sobre protección de capital en el artículo sobre [gestión de riesgo en trading cripto](/es/library/risk-management-crypto-trading-bots/).
+Más sobre protección de capital en el artículo sobre [gestión de riesgo en trading cripto](https://marketlab-academy.org/es/library/risk-management-crypto-trading-bots/).
 
 ## Errores Comunes al Llevar un Diario
 

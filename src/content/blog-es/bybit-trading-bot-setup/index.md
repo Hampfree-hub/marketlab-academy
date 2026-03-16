@@ -104,7 +104,7 @@ Un bot de trading de Bybit es un programa automatizado que opera en el exchange 
 Sí, es seguro, siempre que tomes las precauciones de seguridad adecuadas, como establecer restricciones de IP para las claves API y otorgar solo los permisos necesarios (sin permisos de retirada).
 
 **3. ¿Qué estrategias se pueden implementar?**
-Los bots pueden implementar una amplia gama de estrategias, desde simples promedios de costes (DCA) y trading de cuadrícula hasta algoritmos más complejos basados en análisis técnico. Un ejemplo es la [Estrategia Prisma 5.5](/es/library/prisma-5-5-strategy-settings/).
+Los bots pueden implementar una amplia gama de estrategias, desde simples promedios de costes (DCA) y trading de cuadrícula hasta algoritmos más complejos basados en análisis técnico. Un ejemplo es la [Estrategia Prisma 5.5](https://marketlab-academy.org/es/library/prisma-5-5-strategy-settings/).
 
 **4. ¿Puedo usar un bot sin conocimientos de programación?**
 Sí. Plataformas como Veles ofrecen interfaces intuitivas donde puedes configurar bots sin necesidad de codificación. Solo necesitas entender la lógica de trading.
@@ -114,9 +114,9 @@ Primero, revisa tus ajustes y las claves API. Desactiva el bot y examina los reg
 
 ## Materiales relacionados
 
-*   [Cómo funciona el análisis técnico](/es/library/what-is-technical-analysis/)
-*   [Qué es el bot DCA](/es/library/dca-strategy-crypto/)
-*   [Gestión de riesgos](/es/library/risk-management-crypto-trading-bots/)
+*   [Cómo funciona el análisis técnico](https://marketlab-academy.org/es/library/what-is-technical-analysis/)
+*   [Qué es el bot DCA](https://marketlab-academy.org/es/library/dca-strategy-crypto/)
+*   [Gestión de riesgos](https://marketlab-academy.org/es/library/risk-management-crypto-trading-bots/)
 
 ## Resumen
 

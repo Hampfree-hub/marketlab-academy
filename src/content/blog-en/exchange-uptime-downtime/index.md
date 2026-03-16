@@ -35,7 +35,7 @@ During downtime, trader can't fully manage positions: close trade, change stop-l
 
 - **Inability to close position** — price may move against open position while exchange is unavailable.
 - **Slippage and execution at worse price** — after restoration, orders may execute with delay and at unfavorable price.
-- **API failures** — trading bots and scripts stop receiving data and sending orders; automated strategies (including [DCA](/en/library/dca-strategy-crypto/) or [grid](/en/library/grid-trading-crypto/)) don't execute as planned.
+- **API failures** — trading bots and scripts stop receiving data and sending orders; automated strategies (including [DCA](https://marketlab-academy.org/en/library/dca-strategy-crypto/) or [grid](https://marketlab-academy.org/en/library/grid-trading-crypto/)) don't execute as planned.
 - **Loss of access to funds** — during outage, withdrawals and sometimes transfers between accounts unavailable.
 
 Higher share of trading through exchange and more critical positions — more important to choose platforms with high uptime history and adequate communication during incidents.
@@ -293,7 +293,7 @@ Exchange uptime and downtime are key reliability metrics. Choose platforms with 
 - For automated trading, choose 99.5%+ uptime platforms
 - Know compensation policies of your exchanges
 
-More on automated trading: [DCA Strategy](/en/library/dca-strategy-crypto/), [Grid Trading](/en/library/grid-trading-crypto/).
+More on automated trading: [DCA Strategy](https://marketlab-academy.org/en/library/dca-strategy-crypto/), [Grid Trading](https://marketlab-academy.org/en/library/grid-trading-crypto/).
 
 ## FAQ
 

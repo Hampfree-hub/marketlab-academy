@@ -7,16 +7,16 @@ category: 'algo-trading'
 
 A trading system is a set of rules: when to enter and exit, how much to risk, how to allocate capital. Without clear rules, decisions become emotional and inconsistent; with rules it’s easier to keep discipline and evaluate results.
 
-In this part — how to build a basic system and align it with diversification from [Part 1](/en/library/diversification-trading-system-part-1/). In [Part 3](/en/library/diversification-trading-system-part-3/) — monitoring, tuning, and common mistakes.
+In this part — how to build a basic system and align it with diversification from [Part 1](https://marketlab-academy.org/en/library/diversification-trading-system-part-1/). In [Part 3](https://marketlab-academy.org/en/library/diversification-trading-system-part-3/) — monitoring, tuning, and common mistakes.
 
 ## What is a trading system
 
-A trading system is explicit rules instead of impulses: when to enter and exit, what position size to allow, where to set stop losses and take profits. Without such rules, decisions depend on mood and market noise; one "gut" trade leads to the next and the outcome is hard to evaluate. With rules you can test the system on history ([backtests](/en/library/what-are-backtests/)), compare results with expectations and adjust parameters if needed.
+A trading system is explicit rules instead of impulses: when to enter and exit, what position size to allow, where to set stop losses and take profits. Without such rules, decisions depend on mood and market noise; one "gut" trade leads to the next and the outcome is hard to evaluate. With rules you can test the system on history ([backtests](https://marketlab-academy.org/en/library/what-are-backtests/)), compare results with expectations and adjust parameters if needed.
 
 ![Trading system flowchart: from signal to result](./assets/trading-system-flowchart.png)
 *Fig. 1. Trading system flowchart: entry rules, position size, stop-loss, exit*
 
-A basic system includes: entry and exit criteria, position size and risk per trade, choice and configuration of bots in line with diversification by assets and venues from [Part 1](/en/library/diversification-trading-system-part-1/).
+A basic system includes: entry and exit criteria, position size and risk per trade, choice and configuration of bots in line with diversification by assets and venues from [Part 1](https://marketlab-academy.org/en/library/diversification-trading-system-part-1/).
 
 ## Entry and exit rules
 
@@ -24,15 +24,15 @@ Entry criteria come from technical analysis or strategy logic: e.g. support leve
 
 ## Position size and risk per trade
 
-Risk per trade is the share of the deposit you are willing to lose in one trade; from it depend position size and distance to stop loss. Example: $1000 deposit, 1% risk per trade — $10; with a 5% stop from entry price, position size must not lead to more than $10 loss. Set a maximum and don’t exceed it. So one bad trade doesn’t hit the whole capital; a string of losses is also limited. Many recommend no more than 1–2% per trade; with strong diversification, slightly higher risk per idea can be acceptable if overall portfolio risk is under control. For our approach see [risk management in crypto trading](/en/library/risk-management-crypto-trading-bots/).
+Risk per trade is the share of the deposit you are willing to lose in one trade; from it depend position size and distance to stop loss. Example: $1000 deposit, 1% risk per trade — $10; with a 5% stop from entry price, position size must not lead to more than $10 loss. Set a maximum and don’t exceed it. So one bad trade doesn’t hit the whole capital; a string of losses is also limited. Many recommend no more than 1–2% per trade; with strong diversification, slightly higher risk per idea can be acceptable if overall portfolio risk is under control. For our approach see [risk management in crypto trading](https://marketlab-academy.org/en/library/risk-management-crypto-trading-bots/).
 
 ## Choosing and configuring bots
 
-DCA and [grid trading](/en/library/grid-trading-crypto/) solve different tasks: trigger conditions and limits per bot are set separately. DCA averages entry over time; grid trades in a range. To connect to an exchange you’ll need API keys and an understanding of position limits — step by step in [setting up a bot on Bybit](/en/library/bybit-trading-bot-setup/). Don’t concentrate all volume in one bot: allocation across several strategies and pairs should match diversification by assets and venues from Part 1. Before launch check: position limits don’t exceed your risk per trade and overall portfolio risk.
+DCA and [grid trading](https://marketlab-academy.org/en/library/grid-trading-crypto/) solve different tasks: trigger conditions and limits per bot are set separately. DCA averages entry over time; grid trades in a range. To connect to an exchange you’ll need API keys and an understanding of position limits — step by step in [setting up a bot on Bybit](https://marketlab-academy.org/en/library/bybit-trading-bot-setup/). Don’t concentrate all volume in one bot: allocation across several strategies and pairs should match diversification by assets and venues from Part 1. Before launch check: position limits don’t exceed your risk per trade and overall portfolio risk.
 
 ## Summary
 
-System = entry/exit rules + position size and risk + diversification by assets, strategies, and venues. Next — [Part 3: tuning for yourself and common mistakes](/en/library/diversification-trading-system-part-3/).
+System = entry/exit rules + position size and risk + diversification by assets, strategies, and venues. Next — [Part 3: tuning for yourself and common mistakes](https://marketlab-academy.org/en/library/diversification-trading-system-part-3/).
 
 ## FAQ
 
@@ -46,7 +46,7 @@ Start with 1–2. When they work stably — add more. 3–5 strategies is usuall
 
 **Do I need to test the system on history?**
 
-Yes, required. [Backtests](/en/library/what-are-backtests/) show drawdowns and past system behavior.
+Yes, required. [Backtests](https://marketlab-academy.org/en/library/what-are-backtests/) show drawdowns and past system behavior.
 
 **What risk management for DCA bots?**
 

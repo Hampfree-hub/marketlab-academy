@@ -9,7 +9,7 @@ Bitcoin is the first cryptocurrency, built on blockchain. The core idea is decen
 
 ## What is Bitcoin
 
-**Bitcoin (BTC)** is a [digital currency](/en/library/what-is-digital-currency-in-simple-terms/) that exists only in digital form. It was created as an alternative to traditional money for secure, fast, and decentralized transactions. Its key feature is the blockchain — a cryptographically secured ledger of transactions.
+**Bitcoin (BTC)** is a [digital currency](https://marketlab-academy.org/en/library/what-is-digital-currency-in-simple-terms/) that exists only in digital form. It was created as an alternative to traditional money for secure, fast, and decentralized transactions. Its key feature is the blockchain — a cryptographically secured ledger of transactions.
 
 ## History
 
@@ -47,7 +47,7 @@ The process of confirming transactions and creating new blocks. Miners solve har
 
 ### 4. Supply cap
 Total supply is capped at **21 million** coins.
-- **Halving:** Every 210,000 blocks (~4 years) the mining reward is cut in half. This limits inflation. See [What Is Bitcoin Halving](/en/library/what-is-bitcoin-halving/).
+- **Halving:** Every 210,000 blocks (~4 years) the mining reward is cut in half. This limits inflation. See [What Is Bitcoin Halving](https://marketlab-academy.org/en/library/what-is-bitcoin-halving/).
 
 ## What Bitcoin is used for
 
@@ -96,7 +96,7 @@ You can get BTC via:
 
 Bitcoin is a groundbreaking technology that changed how we think about money. Despite volatility, it remains a core asset for many investors thanks to its unique design and fixed supply.
 
-For more on the basics, see [Bitcoin Basics](/en/library/bitcoin-basics/) and [What Is Digital Currency](/en/library/what-is-digital-currency-in-simple-terms/).
+For more on the basics, see [Bitcoin Basics](https://marketlab-academy.org/en/library/bitcoin-basics/) and [What Is Digital Currency](https://marketlab-academy.org/en/library/what-is-digital-currency-in-simple-terms/).
 
 ## FAQ
 

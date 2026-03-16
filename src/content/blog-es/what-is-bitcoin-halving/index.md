@@ -9,7 +9,7 @@ category: 'crypto'
 
 El halving es un evento recurrente en la red de Bitcoin, previsto por su creador, Satoshi Nakamoto. El nombre viene del inglés “halving” (“reducir a la mitad”). El mecanismo es simple: aproximadamente cada cuatro años, la recompensa que reciben los mineros por añadir un bloque se reduce a la mitad.
 
-Este proceso está en el protocolo de Bitcoin para controlar la emisión y limitar la inflación. Si los mineros siempre ganaran lo mismo, la oferta total de BTC crecería demasiado y podría devaluar el activo. Gracias al halving, la emisión de nuevos bitcoin se ralentiza hasta alcanzar el límite de 21 millones de monedas. Para más sobre [cómo funcionan Bitcoin y el blockchain](/es/library/bitcoin-basics/), véase el artículo dedicado.
+Este proceso está en el protocolo de Bitcoin para controlar la emisión y limitar la inflación. Si los mineros siempre ganaran lo mismo, la oferta total de BTC crecería demasiado y podría devaluar el activo. Gracias al halving, la emisión de nuevos bitcoin se ralentiza hasta alcanzar el límite de 21 millones de monedas. Para más sobre [cómo funcionan Bitcoin y el blockchain](https://marketlab-academy.org/es/library/bitcoin-basics/), véase el artículo dedicado.
 
 ## Qué ocurre en un halving
 
@@ -17,7 +17,7 @@ Cuando hay un halving, se activa un cambio en el código que reduce la recompens
 
 El halving no es solo un ajuste técnico, sino un mecanismo económico importante. Genera escasez artificial, similar a la del oro, que con el tiempo es más difícil de extraer. Por eso muchos inversores y analistas siguen este evento de cerca, esperando posible subida del precio del BTC.
 
-Para entender mejor las cripto y su economía conviene conocer las [monedas digitales](/es/library/what-is-digital-currency-in-simple-terms/) y los [fundamentos de Bitcoin](/es/library/bitcoin-basics/).
+Para entender mejor las cripto y su economía conviene conocer las [monedas digitales](https://marketlab-academy.org/es/library/what-is-digital-currency-in-simple-terms/) y los [fundamentos de Bitcoin](https://marketlab-academy.org/es/library/bitcoin-basics/).
 
 ## Cuándo será el próximo halving de Bitcoin
 
@@ -69,7 +69,7 @@ La razón principal es la oferta y la demanda. Si se emiten menos bitcoin nuevos
 
 Históricamente, el BTC ha tendido a subir tras los halvings. En 2012 subió casi 100 veces en un año. En 2016–2017, unas 10 veces. En 2020–2021, más de 3 veces, y tras 2024, más de 2 veces.
 
-Conviene recordar que el halving no es el único factor. Las condiciones macro, la regulación, las mejoras tecnológicas y el sentimiento de los inversores también cuentan y añaden volatilidad. Para entender mejor Bitcoin, consulta la [guía completa de Bitcoin](/es/library/what-bitcoin-everything-you-need-know/), que cubre historia, principios y minería en detalle.
+Conviene recordar que el halving no es el único factor. Las condiciones macro, la regulación, las mejoras tecnológicas y el sentimiento de los inversores también cuentan y añaden volatilidad. Para entender mejor Bitcoin, consulta la [guía completa de Bitcoin](https://marketlab-academy.org/es/library/what-bitcoin-everything-you-need-know/), que cubre historia, principios y minería en detalle.
 
 Para trading de Bitcoin con bajas comisiones, regístrate en **Bybit**.
 

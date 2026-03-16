@@ -22,8 +22,8 @@ Risk management in crypto is becoming more relevant due to market instability an
 Trading often mentions the "golden rule" of 1-2% risk per trade: don't risk more than this share of your deposit in a single trade. We follow a slightly different approach: capital is distributed across many assets and strategies, meaning it's constantly at work. Our risk per idea is slightly higher (around 2.5%), but thanks to strict diversification and clear exit rules, we consider this approach no less safe — and in some conditions even safer. It has helped us survive multiple corrections without breaking the system.
 
 - **Cap risk per trade/cycle.** Set a maximum loss for one idea or one bot cycle and don't exceed it.
-- **Setting stop-losses.** The limit allows you to cut losses early, before the market turns against you. Read more about stop-losses in the article about [trailing stop](/en/library/what-is-trailing-stop).
-- **Asset diversification.** Distributing capital between different tokens helps reduce overall portfolio volatility. Learn more about combining asset diversification, strategies, and platforms in the series [Diversification and Trading System Setup](/en/library/diversification-trading-system-part-1/).
+- **Setting stop-losses.** The limit allows you to cut losses early, before the market turns against you. Read more about stop-losses in the article about [trailing stop](https://marketlab-academy.org/en/library/what-is-trailing-stop).
+- **Asset diversification.** Distributing capital between different tokens helps reduce overall portfolio volatility. Learn more about combining asset diversification, strategies, and platforms in the series [Diversification and Trading System Setup](https://marketlab-academy.org/en/library/diversification-trading-system-part-1/).
 
 All these measures form the basis of money management rules and allow even a beginner to calculate risk management in trading.
 
@@ -33,7 +33,7 @@ One effective tool for risk management control is keeping a trading journal. Tra
 
 There are specialized platforms for trade tracking, such as [TraderMake.Money](https://tradermake.money/ru/trader/Marketlab/?ref=Jx9LLm). At Market Lab, we use TMM in test mode to analyze our own trading on one of our Bybit subaccounts (public data since 14.02.2026).
 
-More on keeping a trading journal in the separate article [Trading Journal](/en/library/trading-journal-guide/).
+More on keeping a trading journal in the separate article [Trading Journal](https://marketlab-academy.org/en/library/trading-journal-guide/).
 
 ## How to Use Risk Management When Trading with Bots
 
@@ -95,7 +95,7 @@ It makes sense not to ignore filters for bot start. They are responsible for bot
 
 Trading signals and indicators are used to configure filters:
 
-- **RSI, CCI, Bollinger Bands, MACD, EMA** — reflect the relative strength of the trend. Learn more about the [RSI indicator](/en/library/technical-analysis-rsi) and other technical analysis tools.
+- **RSI, CCI, Bollinger Bands, MACD, EMA** — reflect the relative strength of the trend. Learn more about the [RSI indicator](https://marketlab-academy.org/en/library/technical-analysis-rsi) and other technical analysis tools.
 - **24-hour trading volume indicator** — you shouldn't trade a coin whose trading volume over the past 24 hours is too low. To track this indicator, you can pay attention to the liquidity coefficient of the trading asset.
 
 ## Psychology and Self-Discipline of a Trader
@@ -110,7 +110,7 @@ Common mistakes of most crypto traders:
 
 - **Trading without stop-losses** — one of the most dangerous mistakes. Even when trading with bots, you need to set a maximum drawdown at which the bot stops working.
 - **Excessive risk per trade** — exceeding the chosen limit for one idea/cycle. If you determined 2.5% risk per trade, don't increase it "as an exception."
-- **Lack of clear strategy/diversification** — concentration on one asset, one exchange, or one strategy. More on the correct approach in the series [Diversification and Trading System Setup](/en/library/diversification-trading-system-part-1/).
+- **Lack of clear strategy/diversification** — concentration on one asset, one exchange, or one strategy. More on the correct approach in the series [Diversification and Trading System Setup](https://marketlab-academy.org/en/library/diversification-trading-system-part-1/).
 - **Ignoring analytics** — trading without market analysis, without keeping a trade journal. Statistics help understand which setups work and which don't.
 - **Overtrading** — the desire to "win back" after a loss or increase volume after a series of profits. Emotional decisions destroy the system.
 - **No monitoring** — "set and forget." Bots require periodic checks: order execution, API operation, configuration correctness.
@@ -119,7 +119,7 @@ All this can lead to irreversible losses and deposit drain. To reduce risks, it'
 
 ## Using Backtests for Optimization
 
-Before launching a bot on a real account, it's important to test the strategy on historical data. [Backtesting](/en/library/what-are-backtests) allows you to identify weaknesses in the strategy and optimize risk management parameters. Most problems related to not understanding where to place stops/takes and the like will be solved at the testing stage.
+Before launching a bot on a real account, it's important to test the strategy on historical data. [Backtesting](https://marketlab-academy.org/en/library/what-are-backtests) allows you to identify weaknesses in the strategy and optimize risk management parameters. Most problems related to not understanding where to place stops/takes and the like will be solved at the testing stage.
 
 **How to conduct backtests:**
 - **Historical data** — use data for a sufficiently long period (minimum 3-6 months)
@@ -132,7 +132,7 @@ Before launching a bot on a real account, it's important to test the strategy on
 
 Exchange reliability is an important element of risk management. When choosing a platform, pay attention to:
 
-- **Uptime and stability** — frequent API failures can lead to unexecuted orders. More in the article on [exchange uptime and downtime](/en/library/exchange-uptime-downtime/).
+- **Uptime and stability** — frequent API failures can lead to unexecuted orders. More in the article on [exchange uptime and downtime](https://marketlab-academy.org/en/library/exchange-uptime-downtime/).
 - **Withdrawal limits** — ensure withdrawal limits match your volumes
 - **Reputation** — study the exchange's history, user reviews, insurance fund availability
 - **API support** — bots need stable API with sufficient request limits

@@ -47,11 +47,11 @@ Williams %R generates signals when leaving extreme zones:
 
 Because %R is leading, it can give false signals in strong trends. It is often combined with:
 
-- **Williams %R + [RSI](/en/library/technical-analysis-rsi):** filters false signals by comparing two oscillators.
+- **Williams %R + [RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi):** filters false signals by comparing two oscillators.
 - **Williams %R + EMA 50/200:** confirms signals in line with the longer-term trend.
 - **Williams %R + volume indicators:** volume spikes on exits from overbought/oversold zones add confidence.
-- **Williams %R + [Bollinger Bands](/en/library/bollinger-bands/):** spots when price is at extreme distance from the average.
-- **Williams %R + [MFI](/en/library/money-flow-index/):** combines momentum and volume for stronger confirmation.
+- **Williams %R + [Bollinger Bands](https://marketlab-academy.org/en/library/bollinger-bands/):** spots when price is at extreme distance from the average.
+- **Williams %R + [MFI](https://marketlab-academy.org/en/library/money-flow-index/):** combines momentum and volume for stronger confirmation.
 
 ![Williams %R combined with RSI and moving averages](./assets/Zones-WPR-RSI-EMA.png)
 
@@ -63,7 +63,7 @@ Beginners benefit from its simple interpretation, but need discipline when the m
 
 ## Summary
 
-Williams %R shows overbought/oversold zones (-20/-80). Use with trend indicators to filter false signals. Works well with [RSI](/en/library/technical-analysis-rsi/) and [MFI](/en/library/money-flow-index/) for confirmation. Best suited for short- and medium-term trading in sideways markets.
+Williams %R shows overbought/oversold zones (-20/-80). Use with trend indicators to filter false signals. Works well with [RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi/) and [MFI](https://marketlab-academy.org/en/library/money-flow-index/) for confirmation. Best suited for short- and medium-term trading in sideways markets.
 
 For automated Williams %R strategies, traders often use platforms like [Veles](https://veles.finance/invite/washmallay) — a popular service for running trading bots.
 

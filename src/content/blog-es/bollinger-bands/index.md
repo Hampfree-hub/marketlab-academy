@@ -9,7 +9,7 @@ Las **bandas de Bollinger** son un indicador de volatilidad que consta de tres l
 
 ## Qué son las bandas de Bollinger
 
-El indicador fue desarrollado por John Bollinger en los años 80. La idea central es que el precio se mueve la mayor parte del tiempo dentro de las bandas, y el toque o la salida de estos límites a menudo precede a una reversión o corrección. En el análisis técnico, se agrupan con otros indicadores de volatilidad como el [ATR](/es/library/atr-and-atr-percent/).
+El indicador fue desarrollado por John Bollinger en los años 80. La idea central es que el precio se mueve la mayor parte del tiempo dentro de las bandas, y el toque o la salida de estos límites a menudo precede a una reversión o corrección. En el análisis técnico, se agrupan con otros indicadores de volatilidad como el [ATR](https://marketlab-academy.org/es/library/atr-and-atr-percent/).
 
 ## Cómo se calculan las bandas de Bollinger
 
@@ -19,7 +19,7 @@ El cálculo se basa en tres valores:
 *   **Desviación estándar:** se calcula sobre las mismas N velas y muestra qué tanto se desvía el precio de su media.
 *   **Bandas superior e inferior:** línea media más/menos (K × desviación estándar). Normalmente K = 2.
 
-Configuración típica: 20 periodos y multiplicador 2. En [timeframes](/es/library/timeframes-trading/) menores se puede reducir el periodo para aumentar la sensibilidad.
+Configuración típica: 20 periodos y multiplicador 2. En [timeframes](https://marketlab-academy.org/es/library/timeframes-trading/) menores se puede reducir el periodo para aumentar la sensibilidad.
 
 ## Interpretación: sobrecompra y sobreventa
 
@@ -31,7 +31,7 @@ El toque de la **banda inferior** suele interpretarse como sobreventa, sugiriend
 
 Enfoque clásico:
 
-*   **Compra potencial:** el precio toca o rompe la banda inferior, luego se revierte y cierra dentro de las bandas. Se recomienda confirmación con el [RSI](/es/library/technical-analysis-rsi/) o [Williams %R](/es/library/williams-percent-range-r/).
+*   **Compra potencial:** el precio toca o rompe la banda inferior, luego se revierte y cierra dentro de las bandas. Se recomienda confirmación con el [RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi/) o [Williams %R](https://marketlab-academy.org/es/library/williams-percent-range-r/).
 *   **Venta potencial:** el precio toca o rompe la banda superior, luego se revierte y cierra dentro de las bandas.
 
 ## Combinación con otros indicadores
@@ -51,7 +51,7 @@ Debido a la alta volatilidad de las criptomonedas, las bandas suelen expandirse 
 *   El estrangulamiento de las bandas precede a picos de volatilidad.
 *   Combinar con osciladores mejora la calidad de las señales.
 
-**Materiales relacionados:** [ATR y ATR%](/es/library/atr-and-atr-percent/), [Falsos rompimientos](/es/library/false-breakouts-trading/), [Patrones de bandera y banderín](/es/library/flag-and-pennant-patterns/).
+**Materiales relacionados:** [ATR y ATR%](https://marketlab-academy.org/es/library/atr-and-atr-percent/), [Falsos rompimientos](https://marketlab-academy.org/es/library/false-breakouts-trading/), [Patrones de bandera y banderín](https://marketlab-academy.org/es/library/flag-and-pennant-patterns/).
 
 
 ## Resumen

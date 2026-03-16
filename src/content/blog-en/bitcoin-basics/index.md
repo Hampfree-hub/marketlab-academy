@@ -181,7 +181,7 @@ A blockchain is a chain of blocks, each containing transaction information. Bloc
 
 **How is Bitcoin different from regular money?**
 
-Bitcoin is decentralized (no single governing body), has limited supply (maximum 21 million coins), and operates on blockchain technology. Learn more about the differences in the article on [digital currencies](/en/library/what-is-digital-currency-in-simple-terms/).
+Bitcoin is decentralized (no single governing body), has limited supply (maximum 21 million coins), and operates on blockchain technology. Learn more about the differences in the article on [digital currencies](https://marketlab-academy.org/en/library/what-is-digital-currency-in-simple-terms/).
 
 **What is mining?**
 
@@ -193,7 +193,7 @@ Bitcoin uses cryptography to protect transactions, making it secure. However, se
 
 **Where can I buy Bitcoin?**
 
-Bitcoin can be purchased through cryptocurrency exchanges, online exchangers, or payment systems. For more details, see [Bitcoin Basics](/en/library/bitcoin-basics/).
+Bitcoin can be purchased through cryptocurrency exchanges, online exchangers, or payment systems. For more details, see [Bitcoin Basics](https://marketlab-academy.org/en/library/bitcoin-basics/).
 
 ## Summary
 

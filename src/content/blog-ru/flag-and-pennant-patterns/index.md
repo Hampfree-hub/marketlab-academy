@@ -89,9 +89,9 @@ category: 'technical-analysis'
 
 Паттерны флаг и вымпел работают лучше в комбинации с другими инструментами технического анализа:
 
-- **[RSI](/ru/library/technical-analysis-rsi)** — для подтверждения зон перекупленности/перепроданности
-- **[MFI](/ru/library/money-flow-index)** — для анализа объемов и подтверждения пробоя
-- **[Свечные паттерны](/ru/library/what-are-doji-candles)** — для дополнительного подтверждения сигнала
+- **[RSI](https://marketlab-academy.org/ru/library/technical-analysis-rsi)** — для подтверждения зон перекупленности/перепроданности
+- **[MFI](https://marketlab-academy.org/ru/library/money-flow-index)** — для анализа объемов и подтверждения пробоя
+- **[Свечные паттерны](https://marketlab-academy.org/ru/library/what-are-doji-candles)** — для дополнительного подтверждения сигнала
 
 ## Типичные ошибки
 
@@ -119,7 +119,7 @@ category: 'technical-analysis'
 - Открывать позицию при подтверждении объемом
 - Устанавливать стоп-лосс и тейк-профит
 
-Перед использованием в реальной торговле рекомендуется протестировать стратегию на исторических данных через [бэктестинг](/ru/library/what-are-backtests).
+Перед использованием в реальной торговле рекомендуется протестировать стратегию на исторических данных через [бэктестинг](https://marketlab-academy.org/ru/library/what-are-backtests).
 
 ## FAQ
 
@@ -148,7 +148,7 @@ category: 'technical-analysis'
 Паттерны флаг и вымпел — надёжные сигналы продолжения тренда. В сочетании с индикаторами и анализом объёмов они дают высокую точность.
 
 Начать торговлю можно на проверенных биржах:
-- **Bybit** — отличный выбор для работы с [торговыми ботами](/ru/library/bybit-trading-bot-setup/)
+- **Bybit** — отличный выбор для работы с [торговыми ботами](https://marketlab-academy.org/ru/library/bybit-trading-bot-setup/)
 - **[Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD)** — удобный интерфейс и бонусы
 - **BingX** — социальный трейдинг и копитрейдинг
 

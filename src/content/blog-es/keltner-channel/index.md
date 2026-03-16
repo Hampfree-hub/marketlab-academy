@@ -5,7 +5,7 @@ pubDate: '2026-02-27'
 category: 'technical-analysis'
 ---
 
-**El Canal de Keltner (Keltner Channel)** es un indicador de volatilidad construido alrededor de una Media Móvil Exponencial (EMA) con bandas basadas en el Average True Range (ATR). En los sistemas de trading modernos como [Prisma 5.5](/es/library/prisma-5-5-strategy-settings/), se utiliza como filtro de volatilidad y señal de ruptura.
+**El Canal de Keltner (Keltner Channel)** es un indicador de volatilidad construido alrededor de una Media Móvil Exponencial (EMA) con bandas basadas en el Average True Range (ATR). En los sistemas de trading modernos como [Prisma 5.5](https://marketlab-academy.org/es/library/prisma-5-5-strategy-settings/), se utiliza como filtro de volatilidad y señal de ruptura.
 
 ## ¿Qué es el Canal de Keltner?
 
@@ -54,7 +54,7 @@ Un estrechamiento del canal indica calma en el mercado (acumulación), que gener
 ### 4. Fuerza de la tendencia
 El ángulo de inclinación del canal muestra la fuerza de la tendencia actual. Inclinación empinada hacia arriba — tendencia bajista fuerte, inclinación superficial — tendencia débil. Si el canal está "horizontal" — no hay tendencia, el mercado está plano.
 
-## Configuración en [Prisma 5.5](/es/library/prisma-5-5-strategy-settings/)
+## Configuración en [Prisma 5.5](https://marketlab-academy.org/es/library/prisma-5-5-strategy-settings/)
 
 En la estrategia Prisma 5.5 en la plataforma Veles, la configuración del Canal de Keltner está optimizada para capturar impulsos locales en el marco temporal de 15 minutos:
 

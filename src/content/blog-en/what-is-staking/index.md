@@ -190,7 +190,7 @@ To start staking Ethereum on Bybit:
 5. Specify the amount and staking term
 6. Confirm the operation
 
-Learn more about setting up trading bots on Bybit in the article on [setting up a trading bot on Bybit](/en/library/bybit-trading-bot-setup).
+Learn more about setting up trading bots on Bybit in the article on [setting up a trading bot on Bybit](https://marketlab-academy.org/en/library/bybit-trading-bot-setup).
 
 ## How to Start Staking
 

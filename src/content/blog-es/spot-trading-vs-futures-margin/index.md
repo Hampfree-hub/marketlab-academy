@@ -9,14 +9,14 @@ draft: false
 Comprender la diferencia entre el trading spot (al contado), el margen y los futuros es fundamental para cualquier criptotrayder. Cada uno de estos instrumentos tiene sus propias características, riesgos y objetivos.
 
 ## Trading spot (Spot)
-Es el tipo de trading más sencillo y seguro. Compras el activo real (por ejemplo, BTC o ETH) y te conviertes en su dueño. Puedes leer más sobre esto en nuestra [guía de trading spot](/es/library/what-is-spot-trading/).
+Es el tipo de trading más sencillo y seguro. Compras el activo real (por ejemplo, BTC o ETH) y te conviertes en su dueño. Puedes leer más sobre esto en nuestra [guía de trading spot](https://marketlab-academy.org/es/library/what-is-spot-trading/).
 
 *   **Propiedad:** Puedes retirar la criptomoneda comprada a tu billetera fría.
 *   **Riesgo de liquidación:** No existe. Incluso si el precio cae un 90%, conservarás la misma cantidad de monedas.
 *   **Apalancamiento:** No hay. Operas solo con tus propios fondos.
 *   **Objetivo:** Inversión a largo plazo y acumulación segura.
 
-Para automatizar el trading spot, nuestra [estrategia ELDER 2.0](/es/library/spot-strategy-elder-20/) es ideal.
+Para automatizar el trading spot, nuestra [estrategia ELDER 2.0](https://marketlab-academy.org/es/library/spot-strategy-elder-20/) es ideal.
 
 ## Trading de margen (Margin)
 Consiste en operar utilizando fondos prestados que proporciona el exchange.

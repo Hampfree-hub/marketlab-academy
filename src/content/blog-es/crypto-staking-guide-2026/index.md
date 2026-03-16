@@ -346,7 +346,7 @@ Usa calculadoras en línea:
 
 **Recursos útiles:**
 
-Antes de comenzar el staking, recomendamos estudiar [conceptos básicos de tokenomics](/es/library/what-is-tokenomics/) para evaluación de riesgos del proyecto, [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/) para gestión de capital, y [estrategia DCA](/es/library/dca-strategy-crypto/) para compras graduales de monedas.
+Antes de comenzar el staking, recomendamos estudiar [conceptos básicos de tokenomics](https://marketlab-academy.org/es/library/what-is-tokenomics/) para evaluación de riesgos del proyecto, [gestión de riesgos](https://marketlab-academy.org/es/library/risk-management-crypto-trading-bots/) para gestión de capital, y [estrategia DCA](https://marketlab-academy.org/es/library/dca-strategy-crypto/) para compras graduales de monedas.
 
 ---
 

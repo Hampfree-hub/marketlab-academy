@@ -185,7 +185,7 @@ Un blockchain es una cadena de bloques, cada uno contiene información de transa
 
 **¿En qué se diferencia Bitcoin del dinero regular?**
 
-Bitcoin está descentralizado (no hay un organismo rector único), tiene oferta limitada (máximo 21 millones de monedas) y opera sobre tecnología blockchain. Aprende más sobre las diferencias en el artículo sobre [monedas digitales](/es/library/what-is-digital-currency-in-simple-terms/).
+Bitcoin está descentralizado (no hay un organismo rector único), tiene oferta limitada (máximo 21 millones de monedas) y opera sobre tecnología blockchain. Aprende más sobre las diferencias en el artículo sobre [monedas digitales](https://marketlab-academy.org/es/library/what-is-digital-currency-in-simple-terms/).
 
 **¿Qué es la minería?**
 
@@ -197,4 +197,4 @@ Bitcoin usa criptografía para proteger transacciones, haciéndolo seguro. Sin e
 
 **¿Dónde se puede comprar Bitcoin?**
 
-Bitcoin se puede comprar a través de exchanges de criptomonedas, intercambiadores en línea o sistemas de pago. Para más detalles, consulta [Fundamentos de Bitcoin](/es/library/bitcoin-basics/).
+Bitcoin se puede comprar a través de exchanges de criptomonedas, intercambiadores en línea o sistemas de pago. Para más detalles, consulta [Fundamentos de Bitcoin](https://marketlab-academy.org/es/library/bitcoin-basics/).

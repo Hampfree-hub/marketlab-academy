@@ -90,9 +90,9 @@ Método clásico:
 
 Los patrones suelen mejorar combinados con otros instrumentos:
 
-- **[RSI](/es/library/technical-analysis-rsi)** — contexto de sobrecompra/sobreventa
-- **[MFI](/es/library/money-flow-index)** — presión de volumen en la ruptura
-- **[Patrones de velas](/es/library/what-are-doji-candles)** — confirmación adicional
+- **[RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi)** — contexto de sobrecompra/sobreventa
+- **[MFI](https://marketlab-academy.org/es/library/money-flow-index)** — presión de volumen en la ruptura
+- **[Patrones de velas](https://marketlab-academy.org/es/library/what-are-doji-candles)** — confirmación adicional
 
 ## Errores típicos
 
@@ -116,7 +116,7 @@ En M1–M15 hay mucho ruido. Mejor H4+.
 
 Se pueden automatizar: detección del patrón, espera de ruptura, filtro por volumen y gestión de stops/targets.
 
-Antes de operar en real, valida reglas con **[backtesting](/es/library/what-are-backtests)**.
+Antes de operar en real, valida reglas con **[backtesting](https://marketlab-academy.org/es/library/what-are-backtests)**.
 
 ## Resumen
 
@@ -136,5 +136,5 @@ No. Existen falsas rupturas. Espera cierres y confirmación.
 
 H4 y D1 suelen ser más fiables.
 
-**Conclusión:** son patrones útiles si se operan con confirmación (cierre fuera + volumen) y buen control de riesgo. Prueba las reglas con **[backtesting](/es/library/what-are-backtests)**.
+**Conclusión:** son patrones útiles si se operan con confirmación (cierre fuera + volumen) y buen control de riesgo. Prueba las reglas con **[backtesting](https://marketlab-academy.org/es/library/what-are-backtests)**.
 

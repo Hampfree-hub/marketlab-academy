@@ -18,7 +18,7 @@ Las pruebas ayudan a identificar fortalezas y debilidades y a optimizar parámet
 ### Objetivos principales del backtesting
 
 1. **Evaluar el rendimiento** — ¿La estrategia fue rentable en el pasado? ¿Qué tan estable fue?
-2. **Optimizar parámetros** — Encontrar mejores ajustes para indicadores, stops y objetivos. Por ejemplo, con el [indicador RSI](/es/library/technical-analysis-rsi) se pueden probar distintos periodos y niveles de sobrecompra/sobreventa.
+2. **Optimizar parámetros** — Encontrar mejores ajustes para indicadores, stops y objetivos. Por ejemplo, con el [indicador RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi) se pueden probar distintos periodos y niveles de sobrecompra/sobreventa.
 3. **Valorar el riesgo** — Drawdown máximo, rachas perdedoras y volatilidad de la rentabilidad. Clave para la gestión de capital.
 4. **Comprobar robustez** — ¿Funciona en mercados en tendencia, laterales, volátiles y tranquilos?
 5. **Comparar estrategias** — Comparar de forma objetiva distintos enfoques.
@@ -34,7 +34,7 @@ Las pruebas ayudan a identificar fortalezas y debilidades y a optimizar parámet
 
 ### 1. TradingView
 
-TradingView usa **Pine Script** para definir la lógica de entrada/salida. El Strategy Tester calcula rentabilidad, drawdown máximo, profit factor y número de operaciones. Útil para pruebas rápidas y visuales. Se pueden probar estrategias basadas en [patrones de velas](/es/library/what-are-doji-candles) como el doji junto con otras señales.
+TradingView usa **Pine Script** para definir la lógica de entrada/salida. El Strategy Tester calcula rentabilidad, drawdown máximo, profit factor y número de operaciones. Útil para pruebas rápidas y visuales. Se pueden probar estrategias basadas en [patrones de velas](https://marketlab-academy.org/es/library/what-are-doji-candles) como el doji junto con otras señales.
 
 ### 2. Python (Backtrader, VectorBT, etc.)
 
@@ -50,7 +50,7 @@ Los parámetros se ajustan según los resultados de las pruebas. El objetivo no 
 
 ### Riesgo de overfitting
 
-El **overfitting** consiste en adaptar demasiado la estrategia al pasado, de modo que falla en vivo. Evítalo con: walk‑forward, pruebas en distintos periodos y activos, no optimizar demasiados parámetros a la vez y validar con datos out‑of‑sample. En estrategias basadas en el [indicador MFI](/es/library/money-flow-index), conviene probar distintos periodos y niveles de sobrecompra/sobreventa.
+El **overfitting** consiste en adaptar demasiado la estrategia al pasado, de modo que falla en vivo. Evítalo con: walk‑forward, pruebas en distintos periodos y activos, no optimizar demasiados parámetros a la vez y validar con datos out‑of‑sample. En estrategias basadas en el [indicador MFI](https://marketlab-academy.org/es/library/money-flow-index), conviene probar distintos periodos y niveles de sobrecompra/sobreventa.
 
 ## Limitaciones de los backtests
 

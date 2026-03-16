@@ -7,7 +7,7 @@ category: 'technical-analysis'
 
 Technical analysis is the basis for decision-making for most traders. One of the most recognisable and important elements of candlestick analysis is the **doji** pattern. These candles reflect a moment of indecision in the market and often act as a precursor to a reversal or pause in the trend.
 
-The article explains what doji are, what types exist, how to interpret them correctly, and how to use them in trading. It also covers common mistakes when analysing doji and how to combine them with [indicators](/en/library/technical-analysis-rsi) and [backtesting](/en/library/what-are-backtests) of strategies.
+The article explains what doji are, what types exist, how to interpret them correctly, and how to use them in trading. It also covers common mistakes when analysing doji and how to combine them with [indicators](https://marketlab-academy.org/en/library/technical-analysis-rsi) and [backtesting](https://marketlab-academy.org/en/library/what-are-backtests) of strategies.
 
 ## What Are Doji Candles
 
@@ -21,7 +21,7 @@ The term "doji" comes from Japanese candlestick analysis. Literally it is linked
 
 ### Relation to Other Candlestick Patterns
 
-Doji belong to the family of reversal and continuation patterns. They are often combined with other candlestick patterns (engulfing, pin bars), as well as with the [Money Flow Index (MFI)](/en/library/money-flow-index) and support/resistance levels. A single doji alone rarely provides enough reason to enter; context and confirmation matter.
+Doji belong to the family of reversal and continuation patterns. They are often combined with other candlestick patterns (engulfing, pin bars), as well as with the [Money Flow Index (MFI)](https://marketlab-academy.org/en/library/money-flow-index) and support/resistance levels. A single doji alone rarely provides enough reason to enter; context and confirmation matter.
 
 ## Main Types of Doji Candles
 
@@ -55,7 +55,7 @@ A doji on the chart often serves as a warning of a shift in sentiment or a pause
 
 ### At the Top of a Trend
 
-A doji after an extended rally can mean buyers are losing control and momentum is fading. A gravestone or long-legged doji on high volume is especially telling. Wait for confirmation from the next candle or [indicator signals](/en/library/technical-analysis-rsi) before considering a short.
+A doji after an extended rally can mean buyers are losing control and momentum is fading. A gravestone or long-legged doji on high volume is especially telling. Wait for confirmation from the next candle or [indicator signals](https://marketlab-academy.org/en/library/technical-analysis-rsi) before considering a short.
 
 A strong uptrend often ends not with a sharp drop but with a "hang": several candles with small bodies, including doji. That is a decision zone—profit-taking by some and dip-buying by others. Once the next candle closes clearly lower, especially below the doji low, the odds of a shift increase.
 
@@ -89,11 +89,11 @@ The pattern is most reliable at strong historical support or resistance. On high
 
 ### Combining with Indicators and Backtesting
 
-Doji can be used in trading systems together with [RSI](/en/library/technical-analysis-rsi), [MFI](/en/library/money-flow-index), and other tools. For example: a dragonfly at support plus RSI in oversold territory gives a stronger long signal than a doji alone. Before going live, [backtest](/en/library/what-are-backtests) any strategy on historical data.
+Doji can be used in trading systems together with [RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi), [MFI](https://marketlab-academy.org/en/library/money-flow-index), and other tools. For example: a dragonfly at support plus RSI in oversold territory gives a stronger long signal than a doji alone. Before going live, [backtest](https://marketlab-academy.org/en/library/what-are-backtests) any strategy on historical data.
 
 ### Short Example
 
-"Doji at level" strategy: on the daily chart, price approaches strong support and a dragonfly forms. Volume is above average, [RSI](/en/library/technical-analysis-rsi) is oversold. Entry—after the next candle closes above the doji high. Stop—below the doji low or below support. Such a setup is worth testing via [backtest](/en/library/what-are-backtests).
+"Doji at level" strategy: on the daily chart, price approaches strong support and a dragonfly forms. Volume is above average, [RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi) is oversold. Entry—after the next candle closes above the doji high. Stop—below the doji low or below support. Such a setup is worth testing via [backtest](https://marketlab-academy.org/en/library/what-are-backtests).
 
 ## Mistakes When Interpreting Doji
 
@@ -127,14 +127,14 @@ Briefly: the key points are above; use them as a practical checklist and combine
 
 **Which doji is best for entry?** Dragonflies at support often feature in upside reversals; gravestones at resistance in downside reversals. A long-legged doji can precede a turn either way. In all cases, location, volume, and confirmation matter more than the "type" alone.
 
-**Should doji be combined with indicators?** Yes. Confirmation with [RSI](/en/library/technical-analysis-rsi) or [MFI](/en/library/money-flow-index) overbought/oversold zones and support/resistance improves reliability.
+**Should doji be combined with indicators?** Yes. Confirmation with [RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi) or [MFI](https://marketlab-academy.org/en/library/money-flow-index) overbought/oversold zones and support/resistance improves reliability.
 
 **On which timeframes are doji more reliable?** On daily and higher (4H, weekly). On lower (M1–M15) there is more noise; a single doji less often gives a robust signal.
 
-**Can you trade only with doji?** Theoretically yes, but in practice doji work better as one element of a system: together with trend, levels, volume, and indicators. [Backtesting](/en/library/what-are-backtests) helps check how such a combination performed in the past.
+**Can you trade only with doji?** Theoretically yes, but in practice doji work better as one element of a system: together with trend, levels, volume, and indicators. [Backtesting](https://marketlab-academy.org/en/library/what-are-backtests) helps check how such a combination performed in the past.
 
 **How does doji differ from other reversal candles?** Doji emphasise indecision: open ≈ close. Patterns like engulfing or pin bars show one side already in control. Doji are often a "warning"; the others are already "action".
 
 ---
 
-**Bottom line:** Doji candles are a useful technical analysis tool but work best together with context, levels, volume, and indicators. Confirmation from the next candle and stop-losses are recommended. Strategies using doji should be [tested on history](/en/library/what-are-backtests) before live trading. Different doji types—dragonfly, gravestone, long-legged—convey different meaning depending on where they appear; the key to using them lies in context and confirmation, not in the candle shape alone.
+**Bottom line:** Doji candles are a useful technical analysis tool but work best together with context, levels, volume, and indicators. Confirmation from the next candle and stop-losses are recommended. Strategies using doji should be [tested on history](https://marketlab-academy.org/en/library/what-are-backtests) before live trading. Different doji types—dragonfly, gravestone, long-legged—convey different meaning depending on where they appear; the key to using them lies in context and confirmation, not in the candle shape alone.

@@ -10,7 +10,7 @@ Understanding the difference between spot, margin, and futures trading is a core
 
 ## Spot Trading
 
-Spot is the simplest and generally the safest form of trading. You buy the actual asset (for example, BTC or ETH), which becomes your property once the trade is settled. For a deeper dive, see our [guide to spot trading](/en/library/what-is-spot-trading/).
+Spot is the simplest and generally the safest form of trading. You buy the actual asset (for example, BTC or ETH), which becomes your property once the trade is settled. For a deeper dive, see our [guide to spot trading](https://marketlab-academy.org/en/library/what-is-spot-trading/).
 
 - **Ownership:** Purchased crypto can be withdrawn to your cold wallet.
 - **No liquidation risk:** Even if the price drops 99%, your assets remain yours.

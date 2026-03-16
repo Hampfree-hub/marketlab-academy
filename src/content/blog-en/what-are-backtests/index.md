@@ -18,7 +18,7 @@ Testing helps identify strengths and weaknesses and optimize parameters (e.g. st
 ### Main Goals of Backtesting
 
 1. **Evaluate strategy performance** — Did the strategy profit in the past? How stable was it?
-2. **Optimize parameters** — Find better settings for indicators, stops, and targets. For example, with the [RSI indicator](/en/library/technical-analysis-rsi) traders can test different periods and overbought/oversold levels.
+2. **Optimize parameters** — Find better settings for indicators, stops, and targets. For example, with the [RSI indicator](https://marketlab-academy.org/en/library/technical-analysis-rsi) traders can test different periods and overbought/oversold levels.
 3. **Assess risk** — Max drawdown, losing streaks, and volatility of returns. Crucial for capital management.
 4. **Check robustness** — Does the strategy work across trending, sideways, volatile, and calm markets?
 5. **Compare strategies** — Objectively compare different approaches.
@@ -34,7 +34,7 @@ Testing helps identify strengths and weaknesses and optimize parameters (e.g. st
 
 ### 1. TradingView
 
-TradingView uses **Pine Script** to define entry/exit logic. The Strategy Tester computes profitability, max drawdown, profit factor, and trade count. Good for visual, quick checks. Strategies based on [candlestick patterns](/en/library/what-are-doji-candles) such as doji can be tested together with other signals.
+TradingView uses **Pine Script** to define entry/exit logic. The Strategy Tester computes profitability, max drawdown, profit factor, and trade count. Good for visual, quick checks. Strategies based on [candlestick patterns](https://marketlab-academy.org/en/library/what-are-doji-candles) such as doji can be tested together with other signals.
 
 ![Strategy tester window: equity curve, trade count, and win rate](./assets/Example-of-backtest-results.png)
 
@@ -52,7 +52,7 @@ Parameters are tuned from test results. The goal is not only maximum profit but 
 
 ### Overfitting Risk
 
-**Overfitting** means the strategy is fitted too closely to history and fails live. Avoid it by: using walk‑forward tests, testing on different periods and assets, not optimizing too many parameters at once, and validating on out‑of‑sample data. For strategies based on the [MFI indicator](/en/library/money-flow-index), test various periods and overbought/oversold levels.
+**Overfitting** means the strategy is fitted too closely to history and fails live. Avoid it by: using walk‑forward tests, testing on different periods and assets, not optimizing too many parameters at once, and validating on out‑of‑sample data. For strategies based on the [MFI indicator](https://marketlab-academy.org/en/library/money-flow-index), test various periods and overbought/oversold levels.
 
 ### What Is Parameter Optimization
 

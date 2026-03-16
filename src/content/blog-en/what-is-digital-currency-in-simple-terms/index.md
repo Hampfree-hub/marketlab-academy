@@ -19,7 +19,7 @@ Many of today’s digital assets are built on blockchain — a distributed ledge
 
 Digital money falls into three main groups:
 
-1. **Decentralized cryptocurrencies:** Run by users and algorithms (e.g. [Bitcoin](/en/library/bitcoin-basics/)).
+1. **Decentralized cryptocurrencies:** Run by users and algorithms (e.g. [Bitcoin](https://marketlab-academy.org/en/library/bitcoin-basics/)).
 2. **Central bank digital currencies (CBDC):** Issued by central banks and legal tender.
 3. **Corporate digital money:** In-house currencies of platforms or payment systems.
 

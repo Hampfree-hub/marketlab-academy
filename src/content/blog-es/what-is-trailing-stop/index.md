@@ -41,7 +41,7 @@ Los trailing stops pueden ejecutarse como órdenes a mercado (rápidas, pero con
 
 Hasta que se activa, el trailing stop no aparece en el libro de órdenes. A diferencia de una orden límite, no es visible, lo que puede reducir la exposición a caza de stops.
 
-Usar bien el trailing stop ayuda a asegurar beneficios en distintas condiciones de volatilidad. Si operas cripto, merece la pena probarlo, también con bots. Para comprobar cómo se comportan estrategias con stops, los [backtests](/es/library/what-are-backtests/) son útiles; para el timing de salidas, el [RSI](/es/library/technical-analysis-rsi/) puede complementar el enfoque. El [oscilador Williams %R](/es/library/williams-percent-range-r/) también puede ayudar a identificar zonas de giro.
+Usar bien el trailing stop ayuda a asegurar beneficios en distintas condiciones de volatilidad. Si operas cripto, merece la pena probarlo, también con bots. Para comprobar cómo se comportan estrategias con stops, los [backtests](https://marketlab-academy.org/es/library/what-are-backtests/) son útiles; para el timing de salidas, el [RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi/) puede complementar el enfoque. El [oscilador Williams %R](https://marketlab-academy.org/es/library/williams-percent-range-r/) también puede ayudar a identificar zonas de giro.
 
 ## Resumen
 

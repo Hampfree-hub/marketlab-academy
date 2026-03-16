@@ -59,7 +59,7 @@ SOPR muestra si los participantes están vendiendo en ganancia o pérdida (por p
 - **SOPR > 1** — toma de ganancias; muchos vendedores en ganancia, mercado puede enfriarse.
 - **SOPR < 1** — ventas en pérdida; a menudo asociado con capitulación y posible rebote.
 
-Como MVRV, SOPR es mejor usarlo como filtro de sentimiento, no único disparador. Combinación con análisis técnico (niveles, volumen, [RSI](/es/library/technical-analysis-rsi/)) da decisiones más estables.
+Como MVRV, SOPR es mejor usarlo como filtro de sentimiento, no único disparador. Combinación con análisis técnico (niveles, volumen, [RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi/)) da decisiones más estables.
 
 **Variaciones:**
 - **aSOPR (adjusted SOPR)** — excluye transacciones menores a 1 hora (ruido)
@@ -316,7 +316,7 @@ El análisis on-chain es herramienta poderosa para entender contexto de mercado 
 - Combine 3+ métricas para confirmación
 - No dependa únicamente de on-chain para entrada/salida
 
-Más sobre tokenomics: [Qué es Tokenomics](/es/library/what-is-tokenomics/).
+Más sobre tokenomics: [Qué es Tokenomics](https://marketlab-academy.org/es/library/what-is-tokenomics/).
 
 ## FAQ
 

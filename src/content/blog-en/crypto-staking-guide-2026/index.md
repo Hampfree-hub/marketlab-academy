@@ -1,5 +1,5 @@
 ---
-title: 'Cryptocurrency Staking in 2026: Complete Beginner's Guide'
+title: "Cryptocurrency Staking in 2026: Complete Beginner's Guide"
 description: 'Crypto staking: how to earn on Proof-of-Stake. Yield, risks, coin selection, pools vs nodes. Actual 2026 data.'
 pubDate: '2026-03-16'
 category: 'algo-trading'
@@ -346,7 +346,7 @@ Use online calculators:
 
 **Useful resources:**
 
-Before starting staking, we recommend studying [tokenomics basics](/en/library/what-is-tokenomics/) for project risk assessment, [risk management](/en/library/risk-management-crypto-trading-bots/) for capital management, and [DCA strategy](/en/library/dca-strategy-crypto/) for gradual coin purchases.
+Before starting staking, we recommend studying [tokenomics basics](https://marketlab-academy.org/en/library/what-is-tokenomics/) for project risk assessment, [risk management](https://marketlab-academy.org/en/library/risk-management-crypto-trading-bots/) for capital management, and [DCA strategy](https://marketlab-academy.org/en/library/dca-strategy-crypto/) for gradual coin purchases.
 
 ---
 

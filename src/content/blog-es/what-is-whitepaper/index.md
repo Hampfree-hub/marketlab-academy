@@ -5,7 +5,7 @@ pubDate: '2026-02-15'
 category: 'fundamental-analysis'
 ---
 
-Whitepaper (libro blanco) es documento fundamental al lanzar nuevos proyectos crypto. El documento contiene descripción detallada de tecnología, objetivos, [tokenomics](/es/library/what-is-tokenomics/) y otros aspectos importantes del proyecto crypto. Inversores interesados y usuarios se refieren al Whitepaper para entender cuán prometedor es el proyecto, qué problemas resuelve y qué beneficios aporta.
+Whitepaper (libro blanco) es documento fundamental al lanzar nuevos proyectos crypto. El documento contiene descripción detallada de tecnología, objetivos, [tokenomics](https://marketlab-academy.org/es/library/what-is-tokenomics/) y otros aspectos importantes del proyecto crypto. Inversores interesados y usuarios se refieren al Whitepaper para entender cuán prometedor es el proyecto, qué problemas resuelve y qué beneficios aporta.
 
 ## Qué es Whitepaper
 
@@ -254,7 +254,7 @@ Whitepaper es documento fundamental de proyecto crypto. Ayuda a inversores a eva
 - Verifique equipo, código, asociaciones, estatus legal
 - Whitepaper no garantiza éxito — DYOR
 
-Más sobre tokenomics: [Qué es Tokenomics](/es/library/what-is-tokenomics/).
+Más sobre tokenomics: [Qué es Tokenomics](https://marketlab-academy.org/es/library/what-is-tokenomics/).
 
 ## FAQ
 

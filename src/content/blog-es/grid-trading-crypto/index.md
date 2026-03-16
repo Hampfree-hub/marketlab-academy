@@ -20,7 +20,7 @@ En el artículo se explica cómo se estructura la estrategia grid, cuándo funci
 - **Número de niveles** — cuántas órdenes de compra y venta. Depende del paso y del ancho del rango.
 - **Tamaño por nivel** — volumen o cantidad por orden. Puede ser igual en todos los niveles o variar (p. ej. más en el centro del rango).
 
-El grid no exige predecir la tendencia; la estrategia asume que el precio oscilará dentro del rango elegido. Para más sobre trading en rango, ver [estrategias para mercado lateral](/es/library/sideways-trend-strategies/).
+El grid no exige predecir la tendencia; la estrategia asume que el precio oscilará dentro del rango elegido. Para más sobre trading en rango, ver [estrategias para mercado lateral](https://marketlab-academy.org/es/library/sideways-trend-strategies/).
 
 ## Cómo funciona la red en la práctica
 
@@ -30,7 +30,7 @@ El precio baja de 63 000 a 61 200 USD — se ejecutan dos órdenes de compra, se
 
 Cuanto más se mueva el precio dentro del rango sin salir de él durante mucho tiempo, más ciclos de este tipo y más efectivo el grid. Si el precio sale por arriba o por abajo del rango y no vuelve, la red queda con una posición de un solo lado (todas las compras o todas las ventas ejecutadas); el resultado depende entonces del movimiento posterior del precio y de la configuración (stops, desplazamiento de la red, etc.).
 
-Antes de operar en vivo, conviene comprobar los parámetros del grid con [backtesting](/es/library/what-are-backtests/) sobre datos históricos: elegir rango, paso y tamaño según la volatilidad del activo y las comisiones de la exchange.
+Antes de operar en vivo, conviene comprobar los parámetros del grid con [backtesting](https://marketlab-academy.org/es/library/what-are-backtests/) sobre datos históricos: elegir rango, paso y tamaño según la volatilidad del activo y las comisiones de la exchange.
 
 ![Esquema de la red de órdenes grid: rango de precios, niveles de compra y venta](./assets/the-scheme-of-the-grid-of-orders.png)
 
@@ -44,13 +44,13 @@ El grid rinde mejor en **mercado lateral (rango)** — cuando el precio se mueve
 - Volatilidad suficiente dentro del rango — el precio llega con regularidad a los niveles de la red, no se queda en una banda estrecha.
 - Estabilidad relativa de los límites — el rango no se desplaza ni se rompe con frecuencia.
 
-En tendencia fuerte en una dirección el grid es arriesgado: el precio sale del rango, se ejecutan todas las órdenes de un lado y el otro no participa — queda una posición grande de un solo lado sin cobertura de la red. Por eso el grid se considera una estrategia de [mercado lateral](/es/library/sideways-trend-strategies/) y de rango, no de tendencia.
+En tendencia fuerte en una dirección el grid es arriesgado: el precio sale del rango, se ejecutan todas las órdenes de un lado y el otro no participa — queda una posición grande de un solo lado sin cobertura de la red. Por eso el grid se considera una estrategia de [mercado lateral](https://marketlab-academy.org/es/library/sideways-trend-strategies/) y de rango, no de tendencia.
 
 ## Riesgos de la estrategia grid
 
 **Salida del precio del rango** — la amenaza principal. Si el precio se va por encima o por debajo del rango y se queda allí, la red acumula posición de un solo lado (solo compras o solo ventas ejecutadas). La rentabilidad y la drawdown dependen entonces del movimiento posterior del precio y de si hay stop-loss o límites de posición.
 
-**Acumulación de un solo lado** — incluso dentro del rango, un movimiento prolongado en una dirección puede ejecutar más a menudo un lado de la red. Hace falta controlar la posición total y el riesgo (tamaño por nivel, límites de depósito). Aquí aplican los principios de [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/).
+**Acumulación de un solo lado** — incluso dentro del rango, un movimiento prolongado en una dirección puede ejecutar más a menudo un lado de la red. Hace falta controlar la posición total y el riesgo (tamaño por nivel, límites de depósito). Aquí aplican los principios de [gestión de riesgos](https://marketlab-academy.org/es/library/risk-management-crypto-trading-bots/).
 
 **Comisiones** — con ejecuciones frecuentes de órdenes las comisiones se comen parte del beneficio. En redes de paso pequeño y alta frecuencia es especialmente visible; en backtest hay que incluir comisiones y slippage.
 
@@ -58,9 +58,9 @@ En tendencia fuerte en una dirección el grid es arriesgado: el precio sale del 
 
 ## Grid y otras estrategias
 
-**Grid y DCA** — objetivos distintos. [DCA](/es/library/dca-strategy-crypto/) son compras regulares por cantidad fija en el tiempo para acumular y promediar la entrada. Grid gana con las oscilaciones dentro de un rango de precios mediante muchas parejas compra–venta. DCA no exige vender; el grid se basa en ciclos compra/venta.
+**Grid y DCA** — objetivos distintos. [DCA](https://marketlab-academy.org/es/library/dca-strategy-crypto/) son compras regulares por cantidad fija en el tiempo para acumular y promediar la entrada. Grid gana con las oscilaciones dentro de un rango de precios mediante muchas parejas compra–venta. DCA no exige vender; el grid se basa en ciclos compra/venta.
 
-**Grid y mercado lateral** — el grid es una de las estrategias formalizadas de trading en rango. Contexto más amplio (cómo identificar el rango, otros enfoques como range trading u osciladores) en [estrategias para mercado lateral](/es/library/sideways-trend-strategies/).
+**Grid y mercado lateral** — el grid es una de las estrategias formalizadas de trading en rango. Contexto más amplio (cómo identificar el rango, otros enfoques como range trading u osciladores) en [estrategias para mercado lateral](https://marketlab-academy.org/es/library/sideways-trend-strategies/).
 
 **Grid y backtests** — antes de lanzar una red en vivo tiene sentido comprobar rango, paso y tamaño sobre datos históricos y tener en cuenta comisiones; los fundamentos del backtesting se explican en un artículo aparte del blog.
 
@@ -80,7 +80,7 @@ El grid funciona mejor en mercado lateral (rango), cuando el precio oscila dentr
 
 **¿En qué se diferencia el grid del DCA?**
 
-DCA son compras regulares por cantidad fija en el tiempo (acumulación, promedio de entrada). Grid son muchas órdenes en un rango de precios para ganar con oscilaciones; hacen falta compras y ventas. Sobre DCA, ver [estrategia DCA en cripto](/es/library/dca-strategy-crypto/).
+DCA son compras regulares por cantidad fija en el tiempo (acumulación, promedio de entrada). Grid son muchas órdenes en un rango de precios para ganar con oscilaciones; hacen falta compras y ventas. Sobre DCA, ver [estrategia DCA en cripto](https://marketlab-academy.org/es/library/dca-strategy-crypto/).
 
 **¿Qué riesgos tiene el grid?**
 

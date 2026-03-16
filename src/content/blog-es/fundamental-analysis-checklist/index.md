@@ -5,9 +5,9 @@ pubDate: '2026-02-23'
 category: 'fundamental-analysis'
 ---
 
-De "esto es complicado" a "tengo un checklist de 15 minutos". El objetivo es escanear rápidamente un token y decidir: profundizar o saltar. El checklist no reemplaza el análisis profundo, pero ayuda a filtrar lo que no vale la pena ni mirar el gráfico. Introducción al análisis fundamental y conexión con análisis técnico — en el [artículo de visión general](/es/library/fundamental-analysis-intro/).
+De "esto es complicado" a "tengo un checklist de 15 minutos". El objetivo es escanear rápidamente un token y decidir: profundizar o saltar. El checklist no reemplaza el análisis profundo, pero ayuda a filtrar lo que no vale la pena ni mirar el gráfico. Introducción al análisis fundamental y conexión con análisis técnico — en el [artículo de visión general](https://marketlab-academy.org/es/library/fundamental-analysis-intro/).
 
-**Importante:** Este checklist es un filtro "basura/no basura", no una recomendación de compra. Para análisis profundo de tokenomics ver [Qué es Tokenomics](/es/library/what-is-tokenomics/), para métricas on-chain — [Análisis On-Chain](/es/library/onchain-metrics-fundamental-analysis/).
+**Importante:** Este checklist es un filtro "basura/no basura", no una recomendación de compra. Para análisis profundo de tokenomics ver [Qué es Tokenomics](https://marketlab-academy.org/es/library/what-is-tokenomics/), para métricas on-chain — [Análisis On-Chain](https://marketlab-academy.org/es/library/onchain-metrics-fundamental-analysis/).
 
 ## Paso 1. Información Básica (3 minutos)
 
@@ -67,7 +67,7 @@ De "esto es complicado" a "tengo un checklist de 15 minutos". El objetivo es esc
 
 **Decisión:** Si 2+ banderas rojas — saltar.
 
-**Más detalles:** [Qué es Tokenomics](/es/library/what-is-tokenomics/) — métricas, tipos de tokens, ejemplos.
+**Más detalles:** [Qué es Tokenomics](https://marketlab-academy.org/es/library/what-is-tokenomics/) — métricas, tipos de tokens, ejemplos.
 
 ## Fundamental de 15 Minutos: Algoritmo Paso a Paso
 
@@ -336,7 +336,7 @@ Conclusión: salida de exchanges, señal de acumulación
 
 **Recuerde:** El análisis fundamental no garantiza ganancias. Solo reduce el riesgo de entrar en proyectos obviamente débiles. El análisis técnico da puntos de entrada y salida.
 
-Más sobre gestión de riesgo: [Gestión de Riesgo para Traders Principiantes](/es/library/risk-management-crypto-trading-bots/).
+Más sobre gestión de riesgo: [Gestión de Riesgo para Traders Principiantes](https://marketlab-academy.org/es/library/risk-management-crypto-trading-bots/).
 
 ## FAQ
 
@@ -346,7 +346,7 @@ En el primer paso — 15-20 minutos. Cuando se acostumbre a las fuentes de datos
 
 **¿Puedo saltar las métricas on-chain?**
 
-Sí, para filtro inicial los pasos 1-3 son suficientes (información básica, proyecto, tokenomics). On-chain agrega contexto de ciclo y comportamiento de grandes tenedores; para análisis profundo útil — ver [métricas on-chain en AF](/es/library/onchain-metrics-fundamental-analysis/).
+Sí, para filtro inicial los pasos 1-3 son suficientes (información básica, proyecto, tokenomics). On-chain agrega contexto de ciclo y comportamiento de grandes tenedores; para análisis profundo útil — ver [métricas on-chain en AF](https://marketlab-academy.org/es/library/onchain-metrics-fundamental-analysis/).
 
 **¿Qué hacer después del checklist?**
 

@@ -47,11 +47,11 @@ Por último, los objetivos de beneficio: niveles en los que tomar ganancias. Muc
 
 ### Indicadores y fundamento
 
-Las señales se construyen con factores técnicos y fundamentales. En lo técnico se usan a menudo [RSI](/es/library/technical-analysis-rsi/), MACD, medias móviles y soportes/resistencias. Sirven para analizar precio, tendencias, sobrecompra/sobreventa y proponer entradas y salidas.
+Las señales se construyen con factores técnicos y fundamentales. En lo técnico se usan a menudo [RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi/), MACD, medias móviles y soportes/resistencias. Sirven para analizar precio, tendencias, sobrecompra/sobreventa y proponer entradas y salidas.
 
 El análisis fundamental incluye noticias, eventos, actualizaciones de proyectos, partnerships y nuevas funciones. Una declaración de un gran inversor o un listing en un exchange top pueden justificar una señal de compra. El volumen también cuenta, al confirmar la fuerza de la tendencia y zonas de entrada.
 
-En sistemas algorítmicos se usan métodos automáticos (p. ej. machine learning, modelos estadísticos). Esas señales suelen ser más rápidas y coherentes que el análisis manual. Para comprobar su efectividad conviene [hacer backtests](/es/library/what-are-backtests/).
+En sistemas algorítmicos se usan métodos automáticos (p. ej. machine learning, modelos estadísticos). Esas señales suelen ser más rápidas y coherentes que el análisis manual. Para comprobar su efectividad conviene [hacer backtests](https://marketlab-academy.org/es/library/what-are-backtests/).
 
 ## Dónde encontrar señales
 
@@ -83,7 +83,7 @@ Las señales pueden usarse a mano o con bots. Si se usan bots, configurarlos bie
 
 Adaptarse al régimen de mercado. En un uptrend fuerte, centrarse en señales alcistas; en lateral, plantearse operativas más cortas o scalping. Ajustar el uso a la fase actual.
 
-No seguir cada señal a ciegas. Formar criterio propio, revisar entradas pasadas y aprender a distinguir señales fuertes de débiles. Eso mejora tanto resultados como crecimiento como trader. Para comprobar la efectividad de las señales, [probar estrategias con backtests](/es/library/what-are-backtests/) es esencial, y el [indicador RSI](/es/library/technical-analysis-rsi/) es una fuente común de señales. Para análisis de volumen y zonas de entrada, el [índice de flujo de dinero (MFI)](/es/library/money-flow-index/) puede ser útil. Para trading automatizado, se pueden usar bots de trading en Bybit.
+No seguir cada señal a ciegas. Formar criterio propio, revisar entradas pasadas y aprender a distinguir señales fuertes de débiles. Eso mejora tanto resultados como crecimiento como trader. Para comprobar la efectividad de las señales, [probar estrategias con backtests](https://marketlab-academy.org/es/library/what-are-backtests/) es esencial, y el [indicador RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi/) es una fuente común de señales. Para análisis de volumen y zonas de entrada, el [índice de flujo de dinero (MFI)](https://marketlab-academy.org/es/library/money-flow-index/) puede ser útil. Para trading automatizado, se pueden usar bots de trading en Bybit.
 
 ## Resumen
 

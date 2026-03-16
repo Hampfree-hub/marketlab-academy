@@ -47,11 +47,11 @@ Finally, profit targets — levels at which to take profit. Signals often includ
 
 ### Indicators and Rationale
 
-Signals are built on technical and fundamental factors. Technically, common tools include [RSI](/en/library/technical-analysis-rsi/), MACD, moving averages, and support/resistance. They help analyse price, trends, overbought/oversold conditions, and suggest entries and exits.
+Signals are built on technical and fundamental factors. Technically, common tools include [RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi/), MACD, moving averages, and support/resistance. They help analyse price, trends, overbought/oversold conditions, and suggest entries and exits.
 
 Fundamental analysis covers news, events, project updates, partnerships, and new features. A major investor’s statement or a top exchange listing can justify a buy signal. Volume also matters, confirming trend strength and entry zones.
 
-In algo systems, automated methods (e.g. machine learning, statistical models) are used. Such signals are often faster and more consistent than manual analysis. To check effectiveness, it is important to [backtest strategies](/en/library/what-are-backtests/).
+In algo systems, automated methods (e.g. machine learning, statistical models) are used. Such signals are often faster and more consistent than manual analysis. To check effectiveness, it is important to [backtest strategies](https://marketlab-academy.org/en/library/what-are-backtests/).
 
 ## Where to Find Trading Signals
 
@@ -83,7 +83,7 @@ Signals can be used manually or via bots. If using bots, configure them properly
 
 Adapt to market regime. In a strong uptrend, focus on bullish signals; in sideways markets, consider shorter-term or scalping setups. Adjust usage to the current phase.
 
-Do not follow every signal blindly. Build your own view, review past entries, and learn to tell strong from weak signals. That supports both performance and growth as a trader. For testing signal effectiveness, [backtesting strategies](/en/library/what-are-backtests/) is essential, and the [RSI indicator](/en/library/technical-analysis-rsi/) is one common source of signals. For volume and entry zone analysis, the [Money Flow Index (MFI)](/en/library/money-flow-index/) can be helpful. For automated trading, trading bots on Bybit can be used.
+Do not follow every signal blindly. Build your own view, review past entries, and learn to tell strong from weak signals. That supports both performance and growth as a trader. For testing signal effectiveness, [backtesting strategies](https://marketlab-academy.org/en/library/what-are-backtests/) is essential, and the [RSI indicator](https://marketlab-academy.org/en/library/technical-analysis-rsi/) is one common source of signals. For volume and entry zone analysis, the [Money Flow Index (MFI)](https://marketlab-academy.org/en/library/money-flow-index/) can be helpful. For automated trading, trading bots on Bybit can be used.
 
 ## Summary
 

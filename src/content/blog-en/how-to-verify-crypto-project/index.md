@@ -12,7 +12,7 @@ draft: true
 > **Level:** Beginner — Intermediate
 > **Goal:** Filter out 90% of junk projects before deep analysis
 
-**Important:** This checklist is a "junk/not junk" filter, not a buy recommendation. For deep analysis, see [Fundamental Analysis: 15-Minute Checklist](/en/library/fundamental-analysis-checklist/).
+**Important:** This checklist is a "junk/not junk" filter, not a buy recommendation. For deep analysis, see [Fundamental Analysis: 15-Minute Checklist](https://marketlab-academy.org/en/library/fundamental-analysis-checklist/).
 
 **Why this matters:**
 
@@ -488,7 +488,7 @@ Checking new L2 project:
 
 **Deep analysis:**
 
-For more detailed check, use [extended 15-minute checklist](/en/library/fundamental-analysis-checklist/), which includes tokenomics and on-chain metrics check. Also recommend studying [tokenomics basics](/en/library/what-is-tokenomics/) and [risk management](/en/library/risk-management-crypto-trading-bots/) for risk assessment.
+For more detailed check, use [extended 15-minute checklist](https://marketlab-academy.org/en/library/fundamental-analysis-checklist/), which includes tokenomics and on-chain metrics check. Also recommend studying [tokenomics basics](https://marketlab-academy.org/en/library/what-is-tokenomics/) and [risk management](https://marketlab-academy.org/en/library/risk-management-crypto-trading-bots/) for risk assessment.
 
 ---
 

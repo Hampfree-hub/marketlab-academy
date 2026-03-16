@@ -35,7 +35,7 @@ Durante downtime, trader no puede gestionar posiciones completamente: cerrar ope
 
 - **Incapacidad de cerrar posición** — precio puede moverse contra posición abierta mientras exchange no disponible.
 - **Deslizamiento y ejecución a peor precio** — después de restauración, órdenes pueden ejecutarse con retraso y a precio desfavorable.
-- **Fallos de API** — bots de trading y scripts dejan de recibir datos y enviar órdenes; estrategias automatizadas (incluyendo [DCA](/es/library/dca-strategy-crypto/) o [grid](/es/library/grid-trading-crypto/)) no se ejecutan según plan.
+- **Fallos de API** — bots de trading y scripts dejan de recibir datos y enviar órdenes; estrategias automatizadas (incluyendo [DCA](https://marketlab-academy.org/es/library/dca-strategy-crypto/) o [grid](https://marketlab-academy.org/es/library/grid-trading-crypto/)) no se ejecutan según plan.
 - **Pérdida de acceso a fondos** — durante interrupción, retiros y a veces transferencias entre cuentas no disponibles.
 
 Mayor share de trading a través de exchange y más críticas las posiciones — más importante elegir plataformas con alto historial de uptime y comunicación adecuada durante incidentes.
@@ -293,7 +293,7 @@ Uptime y downtime de exchange son métricas clave de confiabilidad. Elija plataf
 - Para trading automatizado, elija plataformas con 99.5%+ de uptime
 - Conozca políticas de compensación de sus exchanges
 
-Más sobre trading automatizado: [Estrategia DCA](/es/library/dca-strategy-crypto/), [Trading Grid](/es/library/grid-trading-crypto/).
+Más sobre trading automatizado: [Estrategia DCA](https://marketlab-academy.org/es/library/dca-strategy-crypto/), [Trading Grid](https://marketlab-academy.org/es/library/grid-trading-crypto/).
 
 ## FAQ
 

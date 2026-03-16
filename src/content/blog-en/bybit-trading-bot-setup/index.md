@@ -57,7 +57,7 @@ Common parameters:
 - grid step / number of orders (for grid bots)
 - stop-loss / take-profit logic
 
-For risk rules, see **[Risk Management for Crypto Trading Bots](/en/library/risk-management-crypto-trading-bots)** (draft).
+For risk rules, see **[Risk Management for Crypto Trading Bots](https://marketlab-academy.org/en/library/risk-management-crypto-trading-bots)** (draft).
 
 ## Step 6: Launch and monitor
 
@@ -116,7 +116,7 @@ Yes, but with limitations. For full access to exchange features, it is recommend
 
 ## Summary
 
-Setting up a trading bot on Bybit is the first step towards automating trading. A correctly configured bot and well-tuned risk management allow you to trade efficiently 24/7. Before launching a bot, it is recommended to test the strategy on [backtests](/en/library/what-are-backtests/).
+Setting up a trading bot on Bybit is the first step towards automating trading. A correctly configured bot and well-tuned risk management allow you to trade efficiently 24/7. Before launching a bot, it is recommended to test the strategy on [backtests](https://marketlab-academy.org/en/library/what-are-backtests/).
 
 Register on **Bybit** and start automated trading.
 

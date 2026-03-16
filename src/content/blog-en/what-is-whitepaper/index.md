@@ -5,7 +5,7 @@ pubDate: '2026-02-15'
 category: 'fundamental-analysis'
 ---
 
-Whitepaper (white paper) is a foundational document when launching new crypto projects. The document contains detailed description of technology, goals, [tokenomics](/en/library/what-is-tokenomics/) and other important aspects of crypto project. Interested investors and users refer to Whitepaper to understand how promising the project is, what problems it solves and what benefits it brings.
+Whitepaper (white paper) is a foundational document when launching new crypto projects. The document contains detailed description of technology, goals, [tokenomics](https://marketlab-academy.org/en/library/what-is-tokenomics/) and other important aspects of crypto project. Interested investors and users refer to Whitepaper to understand how promising the project is, what problems it solves and what benefits it brings.
 
 ## What is Whitepaper
 
@@ -254,7 +254,7 @@ Whitepaper is foundational document of crypto project. It helps investors assess
 - Verify team, code, partnerships, legal status
 - Whitepaper doesn't guarantee success — DYOR
 
-More on tokenomics: [What is Tokenomics](/en/library/what-is-tokenomics/).
+More on tokenomics: [What is Tokenomics](https://marketlab-academy.org/en/library/what-is-tokenomics/).
 
 ## FAQ
 

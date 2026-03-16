@@ -41,7 +41,7 @@ Trailing stops can be executed as market orders (fast, but possible slippage) or
 
 Until it triggers, the trailing stop is not visible in the order book. Unlike a limit order, it does not appear in the book, which can make it less exposed to stop-hunting.
 
-Using a trailing stop well helps lock in profits across different volatility regimes. If you trade crypto, it is worth testing it, including with bots. For checking how strategies with stops perform, [backtesting](/en/library/what-are-backtests/) is useful; for exit timing, the [RSI](/en/library/technical-analysis-rsi/) can complement your approach. The [Williams %R oscillator](/en/library/williams-percent-range-r/) can also help identify reversal zones.
+Using a trailing stop well helps lock in profits across different volatility regimes. If you trade crypto, it is worth testing it, including with bots. For checking how strategies with stops perform, [backtesting](https://marketlab-academy.org/en/library/what-are-backtests/) is useful; for exit timing, the [RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi/) can complement your approach. The [Williams %R oscillator](https://marketlab-academy.org/en/library/williams-percent-range-r/) can also help identify reversal zones.
 
 ## Summary
 

@@ -7,7 +7,7 @@ category: 'algo-trading'
 
 **Prisma 5.5** — авторская стратегия платформы [Veles](https://veles.finance/invite/washmallay) для автоматической торговли. В этой статье — полный разбор настроек: какие индикаторы используются для входа, как выставить сетку ордеров и на каких парах запускать.
 
-**Важно:** перед использованием любой стратегии ознакомьтесь с [управлением рисками](/ru/library/risk-management-crypto-trading-bots/) и серией [Диверсификация и настройка торговой системы](/ru/library/diversification-trading-system-part-1/).
+**Важно:** перед использованием любой стратегии ознакомьтесь с [управлением рисками](https://marketlab-academy.org/ru/library/risk-management-crypto-trading-bots/) и серией [Диверсификация и настройка торговой системы](https://marketlab-academy.org/ru/library/diversification-trading-system-part-1/).
 
 ## Что такое Prisma 5.5
 Prisma 5.5 — это высокочастотная торговая стратегия, разработанная для работы на волатильном крипторынке. Она сочетает в себе фильтры тренда и осцилляторы для поиска оптимальных точек входа в Long позиции.
@@ -19,16 +19,16 @@ Prisma 5.5 — это высокочастотная торговая страт
 
 Для открытия позиции в Prisma 5.5 используются следующие индикаторы:
 
-1. **[CMO (Chande Momentum Oscillator)](/ru/library/chande-momentum-oscillator/)**  
+1. **[CMO (Chande Momentum Oscillator)](https://marketlab-academy.org/ru/library/chande-momentum-oscillator/)**  
    • Период: 14  
    • Уровни: ±50  
    • Условие: CMO  ниже −50 (зона перепроданности) перед входом в Long, выше +50 — усиление импульса вверх.
 
-2. **[Bollinger Bands](/ru/library/bollinger-bands/)**   
+2. **[Bollinger Bands](https://marketlab-academy.org/ru/library/bollinger-bands/)**   
    • Период: 20, Отклонение: 2  
    • Условие: Цена вблизи или ниже нижней полосы Боллинджера.
 
-3. **[RSI (Relative Strength Index)](/ru/library/technical-analysis-rsi/)**   
+3. **[RSI (Relative Strength Index)](https://marketlab-academy.org/ru/library/technical-analysis-rsi/)**   
    • Период: 14  
    • Уровень: 30  
    • Условие: RSI ниже 30 — подтверждение перепроданности по импульсу.
@@ -62,7 +62,7 @@ Prisma 5.5 — это высокочастотная торговая страт
 Prisma 5.5 представляет собой сбалансированную стратегию для автоматизации торговли на спотовом и фьючерсном рынках с умеренным уровнем риска. Важно контролировать уровень маржи и соблюдать правила диверсификации для обеспечения стабильности торговой системы.
 
 Для начала работы доступны проверенные платформы:
-- **Bybit** — одна из ведущих бирж для работы с [торговыми ботами](/ru/library/bybit-trading-bot-setup/).
+- **Bybit** — одна из ведущих бирж для работы с [торговыми ботами](https://marketlab-academy.org/ru/library/bybit-trading-bot-setup/).
 - **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — площадка с удобным интерфейсом и бонусами для новых пользователей.
 - **BingX** — популярная платформа для социального трейдинга и копитрейдинга.
 

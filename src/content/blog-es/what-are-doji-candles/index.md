@@ -7,7 +7,7 @@ category: 'technical-analysis'
 
 El análisis técnico es la base de las decisiones para la mayoría de los traders. Uno de los elementos más reconocibles e importantes del análisis de velas es el patrón **doji**. Estas velas reflejan un momento de indecisión en el mercado y suelen actuar como preaviso de reversión o pausa en la tendencia.
 
-En el artículo se explica qué son las doji, qué tipos hay, cómo interpretarlas bien y cómo usarlas en el trading. También se describen errores habituales al analizarlas y cómo combinarlas con [indicadores](/es/library/technical-analysis-rsi) y [backtesting](/es/library/what-are-backtests) de estrategias.
+En el artículo se explica qué son las doji, qué tipos hay, cómo interpretarlas bien y cómo usarlas en el trading. También se describen errores habituales al analizarlas y cómo combinarlas con [indicadores](https://marketlab-academy.org/es/library/technical-analysis-rsi) y [backtesting](https://marketlab-academy.org/es/library/what-are-backtests) de estrategias.
 
 ## Qué son las velas doji
 
@@ -21,7 +21,7 @@ El término "doji" viene del análisis de velas japonés. Literalmente se asocia
 
 ### Relación con otros patrones de velas
 
-Las doji pertenecen a la familia de patrones de reversión y continuación. Se combinan a menudo con otros patrones (envolvente, pin bar) y con el [Índice de Flujo de Dinero (MFI)](/es/library/money-flow-index) y niveles de soporte/resistencia. Una sola doji rara vez basta para entrar; importan el contexto y la confirmación.
+Las doji pertenecen a la familia de patrones de reversión y continuación. Se combinan a menudo con otros patrones (envolvente, pin bar) y con el [Índice de Flujo de Dinero (MFI)](https://marketlab-academy.org/es/library/money-flow-index) y niveles de soporte/resistencia. Una sola doji rara vez basta para entrar; importan el contexto y la confirmación.
 
 ## Principales tipos de velas doji
 
@@ -55,7 +55,7 @@ Una doji en el gráfico suele actuar como aviso de cambio de sentimiento o pausa
 
 ### En el techo de una tendencia
 
-Una doji tras una subida prolongada puede indicar que los compradores pierden control y el impulso se agota. Una lápida o doji de piernas largas con volumen alto es especialmente revelador. Conviene esperar confirmación de la vela siguiente o de [señales de indicadores](/es/library/technical-analysis-rsi) antes de plantearse ventas.
+Una doji tras una subida prolongada puede indicar que los compradores pierden control y el impulso se agota. Una lápida o doji de piernas largas con volumen alto es especialmente revelador. Conviene esperar confirmación de la vela siguiente o de [señales de indicadores](https://marketlab-academy.org/es/library/technical-analysis-rsi) antes de plantearse ventas.
 
 Una tendencia alcista fuerte suele acabar no con un desplome, sino con un "enganche": varias velas de cuerpo pequeño, incluida doji. Es una zona de decisión—unos toman beneficios, otros compran correcciones. Cuando la vela siguiente cierra claramente por debajo, sobre todo del mínimo de la doji, aumentan las probabilidades de cambio.
 
@@ -89,11 +89,11 @@ El patrón es más fiable en soportes y resistencias históricos fuertes. En tem
 
 ### Combinación con indicadores y backtesting
 
-Las doji pueden usarse en sistemas de trading junto con [RSI](/es/library/technical-analysis-rsi), [MFI](/es/library/money-flow-index) y otras herramientas. Por ejemplo: libélula en soporte más RSI en sobreventa da una señal de compra más sólida que una doji sola. Antes de operar en vivo, conviene [hacer backtest](/es/library/what-are-backtests) de la estrategia con datos históricos.
+Las doji pueden usarse en sistemas de trading junto con [RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi), [MFI](https://marketlab-academy.org/es/library/money-flow-index) y otras herramientas. Por ejemplo: libélula en soporte más RSI en sobreventa da una señal de compra más sólida que una doji sola. Antes de operar en vivo, conviene [hacer backtest](https://marketlab-academy.org/es/library/what-are-backtests) de la estrategia con datos históricos.
 
 ### Ejemplo breve
 
-Estrategia "doji en nivel": en gráfico diario, el precio se acerca a un soporte fuerte y se forma una libélula. Volumen por encima de la media, [RSI](/es/library/technical-analysis-rsi) en sobreventa. Entrada—tras el cierre de la vela siguiente por encima del máximo de la doji. Stop—por debajo del mínimo de la doji o del soporte. Vale la pena [probarlo en backtest](/es/library/what-are-backtests).
+Estrategia "doji en nivel": en gráfico diario, el precio se acerca a un soporte fuerte y se forma una libélula. Volumen por encima de la media, [RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi) en sobreventa. Entrada—tras el cierre de la vela siguiente por encima del máximo de la doji. Stop—por debajo del mínimo de la doji o del soporte. Vale la pena [probarlo en backtest](https://marketlab-academy.org/es/library/what-are-backtests).
 
 ## Errores al interpretar doji
 
@@ -125,15 +125,15 @@ Para trading automatizado de patrones de velas, regístrate en **[Bybit](https:/
 
 **¿Qué doji usar para entrar?** Las libélulas en soporte suelen aparecer en reversiones al alza; las lápidas en resistencia, en reversiones a la baja. La doji de piernas largas puede anticipar giro en cualquier sentido. En todos los casos importan más el lugar, el volumen y la confirmación que el "tipo" en sí.
 
-**¿Hay que combinar doji con indicadores?** Sí. La confirmación con zonas de sobrecompra/sobreventa de [RSI](/es/library/technical-analysis-rsi) o [MFI](/es/library/money-flow-index) y con soportes/resistencias mejora la fiabilidad.
+**¿Hay que combinar doji con indicadores?** Sí. La confirmación con zonas de sobrecompra/sobreventa de [RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi) o [MFI](https://marketlab-academy.org/es/library/money-flow-index) y con soportes/resistencias mejora la fiabilidad.
 
 **¿En qué temporalidades son más fiables las doji?** En diario y superiores (4H, semanal). En bajas (M1–M15) hay más ruido; una sola doji da menos veces una señal robusta.
 
-**¿Se puede operar solo con doji?** En teoría sí, pero en la práctica funcionan mejor como un elemento más del sistema: junto con tendencia, niveles, volumen e indicadores. El [backtesting](/es/library/what-are-backtests) ayuda a comprobar cómo se habría comportado esa combinación en el pasado.
+**¿Se puede operar solo con doji?** En teoría sí, pero en la práctica funcionan mejor como un elemento más del sistema: junto con tendencia, niveles, volumen e indicadores. El [backtesting](https://marketlab-academy.org/es/library/what-are-backtests) ayuda a comprobar cómo se habría comportado esa combinación en el pasado.
 
 **¿En qué se diferencia la doji de otras velas de reversión?** La doji subraya la indecisión: apertura ≈ cierre. Patrones como envolvente o pin bar muestran que un lado ya domina. Las doji suelen ser "aviso"; los otros ya son "acción".
 
 ## Resumen
 
-Las velas doji son una herramienta útil de análisis técnico, pero rinden más junto con contexto, niveles, volumen e indicadores. Se recomienda usar confirmación de la vela siguiente y aplicar siempre stop-loss. Las estrategias con doji conviene [probarlas en histórico](/es/library/what-are-backtests) antes de operar en vivo. Los distintos tipos—libélula, lápida, piernas largas—aportan matices según el lugar del gráfico; la clave está en contexto y confirmación, no solo en la forma de la vela.
+Las velas doji son una herramienta útil de análisis técnico, pero rinden más junto con contexto, niveles, volumen e indicadores. Se recomienda usar confirmación de la vela siguiente y aplicar siempre stop-loss. Las estrategias con doji conviene [probarlas en histórico](https://marketlab-academy.org/es/library/what-are-backtests) antes de operar en vivo. Los distintos tipos—libélula, lápida, piernas largas—aportan matices según el lugar del gráfico; la clave está en contexto y confirmación, no solo en la forma de la vela.
 

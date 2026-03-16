@@ -70,8 +70,8 @@ Un escenario típico: mecha larga fuera del nivel y cierre de vuelta dentro. Cua
 
 ### Estrategia 2: Filtros con indicadores
 
-- **[RSI](/es/library/technical-analysis-rsi)** — si el RSI está extremo, el rompimiento puede ser menos fiable
-- **[MFI](/es/library/money-flow-index)** — si el MFI no confirma presión/volumen, puede ser señal falsa
+- **[RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi)** — si el RSI está extremo, el rompimiento puede ser menos fiable
+- **[MFI](https://marketlab-academy.org/es/library/money-flow-index)** — si el MFI no confirma presión/volumen, puede ser señal falsa
 - **Bandas de Bollinger** — salida y retorno rápido puede sugerir fake-out
 
 ### Estrategia 3: Rango + fake-outs
@@ -90,7 +90,7 @@ Un escenario típico: mecha larga fuera del nivel y cierre de vuelta dentro. Cua
 
 ## Trading algorítmico
 
-La lógica se puede automatizar: detección de niveles, filtro por cierre/volumen, ejecución con gestión de riesgo. Antes de operar en real, valida con **[backtesting](/es/library/what-are-backtests)**.
+La lógica se puede automatizar: detección de niveles, filtro por cierre/volumen, ejecución con gestión de riesgo. Antes de operar en real, valida con **[backtesting](https://marketlab-academy.org/es/library/what-are-backtests)**.
 
 ## FAQ
 
@@ -122,7 +122,7 @@ Las órdenes stop-loss son esenciales para limitar pérdidas. Coloca tu stop-los
 
 ### 3. Combina con otras herramientas
 
-Ningún método de trading es infalible por sí solo. Combina la identificación de falsos rompimientos con otras herramientas de análisis técnico como [RSI (Índice de Fuerza Relativa)](/es/library/technical-analysis-rsi/), [MACD (Convergencia/Divergencia de Medias Móviles)](/es/library/what-is-macd/), [Bandas de Bollinger](/es/library/bollinger-bands/) o el análisis de volumen. Por ejemplo, un falso rompimiento con bajo volumen podría ser una señal más fuerte.
+Ningún método de trading es infalible por sí solo. Combina la identificación de falsos rompimientos con otras herramientas de análisis técnico como [RSI (Índice de Fuerza Relativa)](https://marketlab-academy.org/es/library/technical-analysis-rsi/), [MACD (Convergencia/Divergencia de Medias Móviles)](https://marketlab-academy.org/es/library/what-is-macd/), [Bandas de Bollinger](https://marketlab-academy.org/es/library/bollinger-bands/) o el análisis de volumen. Por ejemplo, un falso rompimiento con bajo volumen podría ser una señal más fuerte.
 
 ## Resumen
 

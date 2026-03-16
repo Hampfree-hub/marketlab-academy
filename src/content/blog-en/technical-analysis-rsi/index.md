@@ -51,7 +51,7 @@ RSI calculation is based on comparing average values of price increases and decr
 
 The standard calculation period is 14 candles, but traders can use other values. Short periods (e.g., 9) make the indicator more sensitive, while long periods (e.g., 21) make it smoother.
 
-It is important to understand that RSI is calculated only based on candle closing prices. Trading volumes are not considered, unlike the [Money Flow Index (MFI)](/en/library/money-flow-index/), which includes volumes in its calculations.
+It is important to understand that RSI is calculated only based on candle closing prices. Trading volumes are not considered, unlike the [Money Flow Index (MFI)](https://marketlab-academy.org/en/library/money-flow-index/), which includes volumes in its calculations.
 
 ## How to Interpret RSI Values
 
@@ -87,7 +87,7 @@ Bearish divergence is considered a sell signal, especially if it forms in the ov
 
 ![Example of bearish RSI divergence with indicator forming lower high while price rises](./assets/rsi-bearish-divergence.png)
 
-RSI divergences are particularly effective in the cryptocurrency market, where volatility allows such patterns to be clearly seen. However, it is important to confirm divergence signals with other indicators, support/resistance levels, or [candlestick patterns](/en/library/what-are-doji-candles/), such as doji or engulfing patterns.
+RSI divergences are particularly effective in the cryptocurrency market, where volatility allows such patterns to be clearly seen. However, it is important to confirm divergence signals with other indicators, support/resistance levels, or [candlestick patterns](https://marketlab-academy.org/en/library/what-are-doji-candles/), such as doji or engulfing patterns.
 
 ## Using RSI in Cryptocurrency Trading
 
@@ -99,13 +99,13 @@ The cryptocurrency market is characterized by high volatility and specific chara
 
 **Trending and Sideways Markets:** In sideways trends, RSI effectively shows overbought and oversold conditions. In strong trends, the indicator can remain in extreme zones for extended periods, requiring additional signal filtering.
 
-**Signal Confirmation:** In the cryptocurrency market, it is especially important to confirm RSI signals with other indicators. For example, combining RSI with the [Money Flow Index (MFI)](/en/library/money-flow-index/) can increase the reliability of trading signals, as MFI accounts for trading volumes.
+**Signal Confirmation:** In the cryptocurrency market, it is especially important to confirm RSI signals with other indicators. For example, combining RSI with the [Money Flow Index (MFI)](https://marketlab-academy.org/en/library/money-flow-index/) can increase the reliability of trading signals, as MFI accounts for trading volumes.
 
 ![Comparison of RSI and Money Flow Index MFI charts on the same timeframe](./assets/rsi-vs-mfi-comparison.png)
 
 ## How to Use RSI in Trading Strategies
 
-RSI can be applied in various trading strategies, from scalping to long-term investments. Before applying an RSI strategy, it is recommended to conduct [backtesting](/en/library/what-are-backtests/) to evaluate effectiveness on historical data. Main approaches:
+RSI can be applied in various trading strategies, from scalping to long-term investments. Before applying an RSI strategy, it is recommended to conduct [backtesting](https://marketlab-academy.org/en/library/what-are-backtests/) to evaluate effectiveness on historical data. Main approaches:
 
 **Level Bounce Strategy:** Enter a position when RSI reaches extreme zones (below 30 or above 70) with expectation of return to average values. Stop-loss is set beyond the opposite extreme.
 
@@ -139,13 +139,13 @@ Like any technical indicator, RSI has its strengths and weaknesses.
 
 **Wide Availability:** The indicator is present on all popular trading platforms and requires no additional configuration.
 
-A similar indicator is [Williams Percent Range](/en/library/williams-percent-range-r/), which also measures price momentum and can be used in combination with RSI to increase signal reliability.
+A similar indicator is [Williams Percent Range](https://marketlab-academy.org/en/library/williams-percent-range-r/), which also measures price momentum and can be used in combination with RSI to increase signal reliability.
 
 ### Disadvantages
 
 **False Signals:** In trending markets, RSI can remain in extreme zones for extended periods, generating false reversal signals.
 
-**No Volume Consideration:** RSI is calculated only based on price and does not account for trading volumes, unlike the [Money Flow Index (MFI)](/en/library/money-flow-index/).
+**No Volume Consideration:** RSI is calculated only based on price and does not account for trading volumes, unlike the [Money Flow Index (MFI)](https://marketlab-academy.org/en/library/money-flow-index/).
 
 **Lagging:** Like most oscillators, RSI can lag with signals in rapidly changing markets.
 
@@ -163,7 +163,7 @@ There are no optimal values. RSI is interpreted depending on market conditions. 
 
 **Is RSI better than MFI?**
 
-Not better or worse—they are different tools. RSI analyzes only price, while [MFI accounts for trading volumes](/en/library/money-flow-index/). Both indicators can complement each other in comprehensive analysis. A similar oscillator is also [Williams Percent Range](/en/library/williams-percent-range-r/), which operates in an inverted range.
+Not better or worse—they are different tools. RSI analyzes only price, while [MFI accounts for trading volumes](https://marketlab-academy.org/en/library/money-flow-index/). Both indicators can complement each other in comprehensive analysis. A similar oscillator is also [Williams Percent Range](https://marketlab-academy.org/en/library/williams-percent-range-r/), which operates in an inverted range.
 
 **How often does RSI give false signals?**
 
@@ -183,4 +183,4 @@ Technically yes, but in practice RSI is more reliable in combination with other 
 
 ## Summary
 
-RSI is one of the most reliable technical analysis indicators, proven by decades of practice. The indicator makes it possible to effectively identify overbought and oversold zones, as well as detect divergences earlier than they become obvious on the price chart. Maximum efficiency is achieved by combining with other analysis tools: [Williams %R](/en/library/williams-percent-range-r/), [MFI](/en/library/money-flow-index/), and volume analysis. For automated RSI strategies, traders often use platforms like [Veles](https://veles.finance/invite/washmallay) — a popular service for running trading bots.
+RSI is one of the most reliable technical analysis indicators, proven by decades of practice. The indicator makes it possible to effectively identify overbought and oversold zones, as well as detect divergences earlier than they become obvious on the price chart. Maximum efficiency is achieved by combining with other analysis tools: [Williams %R](https://marketlab-academy.org/en/library/williams-percent-range-r/), [MFI](https://marketlab-academy.org/en/library/money-flow-index/), and volume analysis. For automated RSI strategies, traders often use platforms like [Veles](https://veles.finance/invite/washmallay) — a popular service for running trading bots.

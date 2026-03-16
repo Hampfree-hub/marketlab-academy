@@ -387,7 +387,7 @@ draft: true
 
 **Полезные материалы:**
 
-Перед началом стейкинга рекомендуем изучить [основы токеномики](/ru/library/what-is-tokenomics/) для оценки рисков проекта, [риск-менеджмент](/ru/library/risk-management-crypto-trading-bots/) для управления капиталом и [DCA стратегию](/ru/library/dca-strategy-crypto/) для постепенной покупки монет.
+Перед началом стейкинга рекомендуем изучить [основы токеномики](https://marketlab-academy.org/ru/library/what-is-tokenomics/) для оценки рисков проекта, [риск-менеджмент](https://marketlab-academy.org/ru/library/risk-management-crypto-trading-bots/) для управления капиталом и [DCA стратегию](https://marketlab-academy.org/ru/library/dca-strategy-crypto/) для постепенной покупки монет.
 
 ---
 

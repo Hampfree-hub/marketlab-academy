@@ -92,9 +92,9 @@ Example: if the flagpole is 100 points, the target is ~100 points from the break
 
 Flags and pennants often work better when combined with other tools:
 
-- **[RSI](/en/library/technical-analysis-rsi)** — to confirm overbought/oversold context
-- **[MFI](/en/library/money-flow-index)** — to confirm breakout pressure with volume
-- **[Candlestick patterns](/en/library/what-are-doji-candles)** — for extra confirmation
+- **[RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi)** — to confirm overbought/oversold context
+- **[MFI](https://marketlab-academy.org/en/library/money-flow-index)** — to confirm breakout pressure with volume
+- **[Candlestick patterns](https://marketlab-academy.org/en/library/what-are-doji-candles)** — for extra confirmation
 
 ## Common mistakes
 
@@ -123,7 +123,7 @@ These patterns can be used in bots. A bot can:
 - validate with volume filters
 - place stop-loss and take-profit automatically
 
-Before going live, test the logic on historical data with **[backtesting](/en/library/what-are-backtests)**.
+Before going live, test the logic on historical data with **[backtesting](https://marketlab-academy.org/en/library/what-are-backtests)**.
 
 ## Summary
 
@@ -151,4 +151,4 @@ Technically yes, but the reliability drops on lower timeframes. Prefer H4+ when 
 
 A real breakout often comes with volume expansion and a candle close beyond the boundary; a false breakout frequently snaps back inside the pattern quickly.
 
-**Summary:** Flags and pennants are effective continuation tools when traded with confirmation (breakout close + volume) and proper risk control. Always test your rules via **[backtesting](/en/library/what-are-backtests)**.
+**Summary:** Flags and pennants are effective continuation tools when traded with confirmation (breakout close + volume) and proper risk control. Always test your rules via **[backtesting](https://marketlab-academy.org/en/library/what-are-backtests)**.

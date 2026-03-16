@@ -47,11 +47,11 @@ El Williams %R genera señales al salir de las zonas extremas:
 
 Al ser adelantado, puede dar señales falsas en tendencias fuertes. Suele combinarse con:
 
-- **Williams %R + [RSI](/es/library/technical-analysis-rsi):** filtra señales falsas comparando dos osciladores.
+- **Williams %R + [RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi):** filtra señales falsas comparando dos osciladores.
 - **Williams %R + EMA 50/200:** confirma señales en la dirección de la tendencia a largo plazo.
 - **Williams %R + indicadores de volumen:** picos de volumen al salir de sobrecompra/sobreventa refuerzan la señal.
-- **Williams %R + [Bandas de Bollinger](/es/library/bollinger-bands/):** detecta cuándo el precio se aleja mucho de la media.
-- **Williams %R + [MFI](/es/library/money-flow-index):** combina momento y volumen para confirmación más fuerte.
+- **Williams %R + [Bandas de Bollinger](https://marketlab-academy.org/es/library/bollinger-bands/):** detecta cuándo el precio se aleja mucho de la media.
+- **Williams %R + [MFI](https://marketlab-academy.org/es/library/money-flow-index):** combina momento y volumen para confirmación más fuerte.
 
 ![Williams %R combinado con RSI y medias móviles](./assets/Zones-WPR-RSI-EMA.png)
 
@@ -63,7 +63,7 @@ Para principiantes es útil por su interpretación sencilla, pero requiere disci
 
 ## Resumen
 
-Williams %R muestra zonas de sobrecompra/sobreventa (-20/-80). Úsalo con indicadores de tendencia para filtrar señales falsas. Funciona bien con [RSI](/es/library/technical-analysis-rsi) y [MFI](/es/library/money-flow-index) para confirmación. Mejor para trading a corto y medio plazo en mercados laterales.
+Williams %R muestra zonas de sobrecompra/sobreventa (-20/-80). Úsalo con indicadores de tendencia para filtrar señales falsas. Funciona bien con [RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi) y [MFI](https://marketlab-academy.org/es/library/money-flow-index) para confirmación. Mejor para trading a corto y medio plazo en mercados laterales.
 
 ## FAQ
 

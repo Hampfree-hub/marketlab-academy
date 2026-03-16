@@ -11,7 +11,7 @@ El análisis fundamental ayuda a entender si un activo merece atención y si el 
 
 La mayoría de traders comienzan con velas, niveles e indicadores. Los fundamentales parecen "largos y complicados," así que a menudo se posponen. Sin ellos, la decisión de "entrar o no" se basa principalmente en el gráfico: tendencia existe — entrar, sin tendencia — esperar. Pero el mismo gráfico puede ser tanto el inicio de un movimiento fuerte como una trampa antes de una caída. El análisis fundamental no da un punto de entrada exacto, pero ayuda a filtrar basura y entender el contexto: ¿estamos más cerca de sobrecalentamiento o de una zona donde el activo históricamente rebotó?
 
-Tiene sentido usar AF como filtro: primero "¿vale la pena mirar este activo?" luego análisis técnico para punto de entrada. Más sobre cómo encajar la verificación en 15 minutos — en la [checklist de análisis fundamental](/es/library/fundamental-analysis-checklist/).
+Tiene sentido usar AF como filtro: primero "¿vale la pena mirar este activo?" luego análisis técnico para punto de entrada. Más sobre cómo encajar la verificación en 15 minutos — en la [checklist de análisis fundamental](https://marketlab-academy.org/es/library/fundamental-analysis-checklist/).
 
 **Por qué importan los fundamentales:**
 - Filtro de basura: descarta proyectos débiles antes de entrar
@@ -44,7 +44,7 @@ En crypto no hay informes IFRS y no hay banco central. No hay un "balance" únic
 **Qué existe en su lugar:**
 
 - **Tecnología y arquitectura de red** — cómo está estructurada la blockchain, velocidad, comisiones, seguridad.
-- **Métricas on-chain** — datos de la cadena misma: MVRV, NVT, reservas de exchanges, movimientos de monedas. Muestran cómo se comportan los participantes "dentro" de la red. Más detalles — en el [artículo de métricas on-chain](/es/library/onchain-metrics-fundamental-analysis/).
+- **Métricas on-chain** — datos de la cadena misma: MVRV, NVT, reservas de exchanges, movimientos de monedas. Muestran cómo se comportan los participantes "dentro" de la red. Más detalles — en el [artículo de métricas on-chain](https://marketlab-academy.org/es/library/onchain-metrics-fundamental-analysis/).
 - **Tokenomics** — emisión, límite de oferta, vesting, calendarios de desbloqueo. Pregunta: "¿Una liberación masiva de tokens hundirá el precio?"
 - **Equipo, comunidad, regulación** — quién está detrás del proyecto, ¿hay un producto vivo y comunidad?, ¿cómo cambia el panorama regulatorio?
 
@@ -64,7 +64,7 @@ AF y AT resuelven tareas diferentes. Tiene sentido usarlos secuencialmente.
 
 **El análisis técnico responde:** "¿Dónde exactamente entrar y salir en los próximos días o semanas?", "¿Qué niveles e indicadores confirman el escenario?"
 
-Ejemplo práctico: on-chain y tokenomics muestran que el activo no está en zona de sobrecalentamiento y las carteras grandes están acumulando. Entonces en el gráfico buscamos setups largos — niveles, [indicadores](/es/library/technical-analysis-rsi/), volumen. Por el contrario: si AF indica sobrecalentamiento o desbloqueos masivos, es más sabio no añadir a largos y buscar puntos para tomar ganancias o cortos.
+Ejemplo práctico: on-chain y tokenomics muestran que el activo no está en zona de sobrecalentamiento y las carteras grandes están acumulando. Entonces en el gráfico buscamos setups largos — niveles, [indicadores](https://marketlab-academy.org/es/library/technical-analysis-rsi/), volumen. Por el contrario: si AF indica sobrecalentamiento o desbloqueos masivos, es más sabio no añadir a largos y buscar puntos para tomar ganancias o cortos.
 
 **Matriz de decisiones:**
 
@@ -151,7 +151,7 @@ Conclusión: Fase de capitulación. 3 meses después BTC creció de $15,500 a $3
 
 ![3 Pasos del Análisis Fundamental: Infografía](./assets/Infographics_fundamental_analysis.png)
 
-Desglose detallado de métricas on-chain — en el [artículo separado](/es/library/onchain-metrics-fundamental-analysis/); escaneo rápido de token — en la [checklist de 15 minutos](/es/library/fundamental-analysis-checklist/).
+Desglose detallado de métricas on-chain — en el [artículo separado](https://marketlab-academy.org/es/library/onchain-metrics-fundamental-analysis/); escaneo rápido de token — en la [checklist de 15 minutos](https://marketlab-academy.org/es/library/fundamental-analysis-checklist/).
 
 ## Ejemplos Históricos: Cuando el AF Salvó de Pérdidas
 
@@ -259,7 +259,7 @@ El análisis fundamental es una herramienta indispensable para selección de act
 - Framework: macro → calidad de activo → contexto on-chain
 - Combine AF con AT y gestión de riesgo
 
-Más sobre tokenomics lea en el artículo [Qué es Tokenomics](/es/library/what-is-tokenomics/).
+Más sobre tokenomics lea en el artículo [Qué es Tokenomics](https://marketlab-academy.org/es/library/what-is-tokenomics/).
 
 ## FAQ
 

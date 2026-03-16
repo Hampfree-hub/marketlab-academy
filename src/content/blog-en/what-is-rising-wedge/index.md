@@ -51,7 +51,7 @@ With futures or leverage, the rising wedge becomes even more important. It can b
 
 In volatile crypto markets, bots are increasingly used. Many can detect chart patterns, including the rising wedge, and place trades automatically.
 
-Understanding and using the rising wedge correctly can improve trading results. It can be combined with other tools, such as the [RSI](/en/library/technical-analysis-rsi/) or [doji candles](/en/library/what-are-doji-candles/), for better timing. For volume and momentum analysis, the [Money Flow Index (MFI)](/en/library/money-flow-index/) is useful, and for identifying overbought zones, the [Williams %R oscillator](/en/library/williams-percent-range-r/) can help.
+Understanding and using the rising wedge correctly can improve trading results. It can be combined with other tools, such as the [RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi/) or [doji candles](https://marketlab-academy.org/en/library/what-are-doji-candles/), for better timing. For volume and momentum analysis, the [Money Flow Index (MFI)](https://marketlab-academy.org/en/library/money-flow-index/) is useful, and for identifying overbought zones, the [Williams %R oscillator](https://marketlab-academy.org/en/library/williams-percent-range-r/) can help.
 
 ## Summary
 

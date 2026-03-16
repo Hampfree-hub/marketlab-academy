@@ -9,7 +9,7 @@ Bitcoin es la primera criptomoneda, basada en blockchain. La idea central es la 
 
 ## Qué es Bitcoin
 
-**Bitcoin (BTC)** es una [moneda digital](/es/library/what-is-digital-currency-in-simple-terms/) que existe solo en formato digital. Se creó como alternativa al dinero tradicional para transacciones seguras, rápidas y descentralizadas. Su rasgo clave es el blockchain: un registro de transacciones protegido por criptografía.
+**Bitcoin (BTC)** es una [moneda digital](https://marketlab-academy.org/es/library/what-is-digital-currency-in-simple-terms/) que existe solo en formato digital. Se creó como alternativa al dinero tradicional para transacciones seguras, rápidas y descentralizadas. Su rasgo clave es el blockchain: un registro de transacciones protegido por criptografía.
 
 ## Historia
 
@@ -47,7 +47,7 @@ Proceso de confirmar transacciones y crear nuevos bloques. Los mineros resuelven
 
 ### 4. Límite de emisión
 El total está limitado a **21 millones** de monedas.
-- **Halving:** Cada 210.000 bloques (~4 años) la recompensa de minería se reduce a la mitad. Así se limita la inflación. Ver [Qué es el halving de Bitcoin](/es/library/what-is-bitcoin-halving/).
+- **Halving:** Cada 210.000 bloques (~4 años) la recompensa de minería se reduce a la mitad. Así se limita la inflación. Ver [Qué es el halving de Bitcoin](https://marketlab-academy.org/es/library/what-is-bitcoin-halving/).
 
 ## Para qué sirve Bitcoin
 
@@ -96,7 +96,7 @@ Puedes obtener BTC mediante:
 
 Bitcoin es una tecnología que cambió la forma de entender el dinero. Pese a la volatilidad, sigue siendo un activo central para muchos inversores gracias a su diseño y oferta limitada.
 
-Para más bases, consulta [Fundamentos de Bitcoin](/es/library/bitcoin-basics/) y [Qué es la moneda digital](/es/library/what-is-digital-currency-in-simple-terms/).
+Para más bases, consulta [Fundamentos de Bitcoin](https://marketlab-academy.org/es/library/bitcoin-basics/) y [Qué es la moneda digital](https://marketlab-academy.org/es/library/what-is-digital-currency-in-simple-terms/).
 
 ## FAQ
 

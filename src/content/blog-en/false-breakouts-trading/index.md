@@ -83,8 +83,8 @@ When price breaks a level and quickly returns, you can trade against the breakou
 
 Indicators can help filter weak breakouts:
 
-- **[RSI](/en/library/technical-analysis-rsi)** — if RSI is already stretched, the breakout can be less reliable
-- **[MFI](/en/library/money-flow-index)** — if MFI doesn’t confirm pressure with volume, the move may fail
+- **[RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi)** — if RSI is already stretched, the breakout can be less reliable
+- **[MFI](https://marketlab-academy.org/en/library/money-flow-index)** — if MFI doesn’t confirm pressure with volume, the move may fail
 - **Bollinger Bands** — a quick “pop” outside the band and return can hint at a fake-out
 
 ### Strategy 3: Range trading with fake-outs
@@ -134,7 +134,7 @@ False breakout logic can be automated. A bot can:
 3. filter by volume + candle closes
 4. execute fade entries with fixed risk rules
 
-Before trading live, validate the rules via **[backtesting](/en/library/what-are-backtests)**.
+Before trading live, validate the rules via **[backtesting](https://marketlab-academy.org/en/library/what-are-backtests)**.
 
 ## FAQ
 
@@ -156,9 +156,9 @@ You can, but it’s risky. It’s better to combine with other methods and alway
 
 **How can indicators help?**
 
-**[RSI](/en/library/technical-analysis-rsi)** and **[MFI](/en/library/money-flow-index)** can help judge whether the breakout has real participation and pressure. If indicators don’t confirm, the move may be a trap.
+**[RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi)** and **[MFI](https://marketlab-academy.org/en/library/money-flow-index)** can help judge whether the breakout has real participation and pressure. If indicators don’t confirm, the move may be a trap.
 
-## Summary — and tradable — when you identify them correctly, use filters (volume/structure), and manage risk. Always validate your rules with **[backtesting](/en/library/what-are-backtests)**.
+## Summary — and tradable — when you identify them correctly, use filters (volume/structure), and manage risk. Always validate your rules with **[backtesting](https://marketlab-academy.org/en/library/what-are-backtests)**.
 
 
 

@@ -62,10 +62,10 @@ Una discrepancia entre la dirección del movimiento del precio y del indicador a
 
 ## Uso en la estrategia ELDER 2.0
 
-En la [estrategia spot ELDER 2.0](/es/library/spot-strategy-elder-20/), el indicador CMO se utiliza como uno de los tres filtros principales:
+En la [estrategia spot ELDER 2.0](https://marketlab-academy.org/es/library/spot-strategy-elder-20/), el indicador CMO se utiliza como uno de los tres filtros principales:
 
 - **Marco temporal:** dependiendo de la configuración del bot (M15 / H1 / H4).
-- **Condición de entrada:** el CMO debe estar por debajo de **−50** (zona de sobreventa profunda) en combinación con señales de las [Bandas de Bollinger](/es/library/bollinger-bands/) y el [Estocástico](/es/library/stochastic-oscillator/).
+- **Condición de entrada:** el CMO debe estar por debajo de **−50** (zona de sobreventa profunda) en combinación con señales de las [Bandas de Bollinger](https://marketlab-academy.org/es/library/bollinger-bands/) y el [Estocástico](https://marketlab-academy.org/es/library/stochastic-oscillator/).
 - **Condición de salida:** el CMO por encima de **+50** (zona de sobrecompra) en combinación con confirmación de otros indicadores.
 
 | Indicador | Rol en ELDER 2.0 |
@@ -92,7 +92,7 @@ El CMO no usa doble suavizado, por lo que reacciona más rápido a los cambios d
 
 **¿Se puede usar el CMO para futuros?**
 
-Sí, el CMO funciona en cualquier mercado. Sin embargo, la estrategia ELDER 2.0 está optimizada específicamente para [trading spot](/es/library/what-is-spot-trading/) sin apalancamiento.
+Sí, el CMO funciona en cualquier mercado. Sin embargo, la estrategia ELDER 2.0 está optimizada específicamente para [trading spot](https://marketlab-academy.org/es/library/what-is-spot-trading/) sin apalancamiento.
 
 ## Resumen
 
@@ -100,7 +100,7 @@ El CMO es una herramienta potente para determinar la fuerza de la tendencia y lo
 
 Comienza a operar en exchanges probados:
 
-- **Bybit** — una excelente opción para trabajar con [bots de trading](/es/library/bybit-trading-bot-setup/)
+- **Bybit** — una excelente opción para trabajar con [bots de trading](https://marketlab-academy.org/es/library/bybit-trading-bot-setup/)
 - **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — interfaz amigable y bonificaciones
 - **BingX** — trading social y copytrading
 

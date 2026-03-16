@@ -20,7 +20,7 @@ This article covers how a grid strategy is set up, when it works best, risks, an
 - **Number of levels** — how many buy/sell orders. Depends on step size and range width.
 - **Size per level** — volume or amount per order. Can be the same on all levels or vary (e.g. larger near the middle).
 
-Grid does not require a trend forecast; it assumes price will oscillate inside the chosen band. For more on range trading, see [strategies for sideways markets](/en/library/sideways-trend-strategies/).
+Grid does not require a trend forecast; it assumes price will oscillate inside the chosen band. For more on range trading, see [strategies for sideways markets](https://marketlab-academy.org/en/library/sideways-trend-strategies/).
 
 ## How the Grid Works in Practice
 
@@ -30,7 +30,7 @@ Price drops from $63,000 to $61,200 — two buy orders fill, position builds. Pr
 
 The more often price moves inside the range without leaving it for long, the more such cycles and the more effective the grid. If price breaks above or below and does not return, the grid is left with a one-sided position (all buys or all sells filled); outcome then depends on further price action and settings (stops, grid shift, etc.).
 
-Before going live, grid parameters are best checked with [backtesting](/en/library/what-are-backtests/) on historical data: choose range, step, and size to match asset volatility and exchange fees.
+Before going live, grid parameters are best checked with [backtesting](https://marketlab-academy.org/en/library/what-are-backtests/) on historical data: choose range, step, and size to match asset volatility and exchange fees.
 
 ![Grid order scheme: price range, buy and sell levels](./assets/the-scheme-of-the-grid-of-orders.png)
 
@@ -44,13 +44,13 @@ Grid works best in **sideways (range) markets** — when price moves in a horizo
 - Enough volatility inside the range — price regularly reaches grid levels instead of staying in a narrow band.
 - Relatively stable boundaries — the range does not shift or break often.
 
-In a strong one-way trend, grid is risky: price leaves the range, one side of the grid fills, the other does not — a large one-sided position without grid hedging. So grid is a [sideways-market](/en/library/sideways-trend-strategies/) strategy, not a trend-following one.
+In a strong one-way trend, grid is risky: price leaves the range, one side of the grid fills, the other does not — a large one-sided position without grid hedging. So grid is a [sideways-market](https://marketlab-academy.org/en/library/sideways-trend-strategies/) strategy, not a trend-following one.
 
 ## Risks of Grid Strategy
 
 **Price leaving the range** — the main threat. If price moves above or below the range and stays there, the grid accumulates a one-sided position (only buys or only sells filled). P&L and drawdown then depend on further price movement and whether there are stops or position limits.
 
-**One-sided accumulation** — even inside the range, a prolonged move in one direction can fill one side of the grid more often. Control total position and risk (size per level, deposit limits). [Risk-management](/en/library/risk-management-crypto-trading-bots/) principles apply here.
+**One-sided accumulation** — even inside the range, a prolonged move in one direction can fill one side of the grid more often. Control total position and risk (size per level, deposit limits). [Risk-management](https://marketlab-academy.org/en/library/risk-management-crypto-trading-bots/) principles apply here.
 
 **Fees** — frequent order fills eat into profit. On high-frequency grids with small steps this is especially visible; backtests must include fees and slippage.
 
@@ -58,9 +58,9 @@ In a strong one-way trend, grid is risky: price leaves the range, one side of th
 
 ## Grid vs Other Strategies
 
-**Grid vs DCA** — different goals. [DCA](/en/library/dca-strategy-crypto/) is time-based fixed-amount purchases for accumulation and averaging entry. Grid profits from swings inside a price range via many buy–sell pairs. DCA does not require selling; grid is built on buy/sell cycles.
+**Grid vs DCA** — different goals. [DCA](https://marketlab-academy.org/en/library/dca-strategy-crypto/) is time-based fixed-amount purchases for accumulation and averaging entry. Grid profits from swings inside a price range via many buy–sell pairs. DCA does not require selling; grid is built on buy/sell cycles.
 
-**Grid and sideways trend** — grid is one formalized range-trading strategy. Broader context (how to spot a range, other approaches like range trading and oscillators) is in [trading strategies for sideways markets](/en/library/sideways-trend-strategies/).
+**Grid and sideways trend** — grid is one formalized range-trading strategy. Broader context (how to spot a range, other approaches like range trading and oscillators) is in [trading strategies for sideways markets](https://marketlab-academy.org/en/library/sideways-trend-strategies/).
 
 **Grid and backtests** — before running a grid live, it makes sense to test range, step, and size on historical data and account for fees; backtesting basics are covered in a separate blog article.
 
@@ -76,11 +76,11 @@ Grid is a set of buy and sell orders in a price range. As price moves up and dow
 
 **When is grid strategy effective?**
 
-Grid works best in a sideways (range) market, when price oscillates inside the range for a long time and does not leave it far. For more on that, see [strategies for sideways markets](/en/library/sideways-trend-strategies/).
+Grid works best in a sideways (range) market, when price oscillates inside the range for a long time and does not leave it far. For more on that, see [strategies for sideways markets](https://marketlab-academy.org/en/library/sideways-trend-strategies/).
 
 **How does grid differ from DCA?**
 
-DCA is regular fixed-amount purchases over time (accumulation, averaging entry). Grid is many orders in a price range to profit from swings; both buys and sells are required. For DCA, see [DCA strategy in crypto](/en/library/dca-strategy-crypto/).
+DCA is regular fixed-amount purchases over time (accumulation, averaging entry). Grid is many orders in a price range to profit from swings; both buys and sells are required. For DCA, see [DCA strategy in crypto](https://marketlab-academy.org/en/library/dca-strategy-crypto/).
 
 **What are the risks of grid?**
 
@@ -99,7 +99,7 @@ Grid is a distinct strategy (range trading). The same account can be split betwe
 Grid trading is a powerful tool for working in a sideways trend. With the right parameters and risk management, it allows you to profit from price fluctuations.
 
 You can start trading on proven exchanges:
-- **Bybit** — an excellent choice for working with [trading bots](/en/library/bybit-trading-bot-setup/)
+- **Bybit** — an excellent choice for working with [trading bots](https://marketlab-academy.org/en/library/bybit-trading-bot-setup/)
 - **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — user-friendly interface and bonuses
 - **BingX** — social trading and copy trading
 

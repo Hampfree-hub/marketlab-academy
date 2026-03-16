@@ -213,7 +213,7 @@ A trading journal is an integral part of the risk management system:
 - **Stop-loss discipline** — recording all losses, no "heroism"
 - **Risk/reward analysis** — statistics for optimization
 
-More on capital protection in the article on [risk management in crypto trading](/en/library/risk-management-crypto-trading-bots/).
+More on capital protection in the article on [risk management in crypto trading](https://marketlab-academy.org/en/library/risk-management-crypto-trading-bots/).
 
 ## Common Mistakes When Keeping a Journal
 

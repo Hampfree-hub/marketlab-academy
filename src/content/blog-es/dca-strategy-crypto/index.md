@@ -21,7 +21,7 @@ La idea es sencilla: en lugar de intentar acertar el momento de entrada con una 
 - **Intervalo** — regularidad: semanal, quincenal, mensual. A menor intervalo con la misma suma, mayor suavizado.
 - **Horizonte** — la estrategia está pensada para acumulación a largo plazo; la especulación a corto es otro uso.
 
-DCA no exige predecir la dirección del mercado y reduce la presión de elegir el “momento ideal” de entrada. Para más sobre bases del criptomercado, ver [Fundamentos de Bitcoin](/es/library/bitcoin-basics/).
+DCA no exige predecir la dirección del mercado y reduce la presión de elegir el “momento ideal” de entrada. Para más sobre bases del criptomercado, ver [Fundamentos de Bitcoin](https://marketlab-academy.org/es/library/bitcoin-basics/).
 
 ## Cómo funciona DCA en la práctica
 
@@ -42,7 +42,7 @@ Total gastado 400 USD, unidades compradas 8,17. Precio medio de entrada: 400 / 8
 - **DCA mensual** — más fácil de cumplir, menos comisiones, menos “puntos” de promedio.
 - **Cantidad** — según presupuesto y horizonte; las compras regulares deben ser asumibles sin comprometer las finanzas personales.
 
-En el volátil mercado cripto, DCA encaja bien con objetivos de acumulación a largo plazo. Para comparar enfoques de entrada, [backtesting](/es/library/what-are-backtests/) ayuda a evaluar estrategias sobre historia.
+En el volátil mercado cripto, DCA encaja bien con objetivos de acumulación a largo plazo. Para comparar enfoques de entrada, [backtesting](https://marketlab-academy.org/es/library/what-are-backtests/) ayuda a evaluar estrategias sobre historia.
 
 ## Ventajas e inconvenientes del DCA en cripto
 
@@ -59,7 +59,7 @@ En el volátil mercado cripto, DCA encaja bien con objetivos de acumulación a l
 - **Comisiones** — compras frecuentes implican más operaciones y más comisiones; en cantidades pequeñas puede notarse.
 - **Sin protección en mercado bajista prolongado** — DCA solo promedia la entrada; no protege de una caída prolongada.
 
-DCA encaja bien con la [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/) en el trading: no conviene invertir dinero imprescindible o prestado.
+DCA encaja bien con la [gestión de riesgos](https://marketlab-academy.org/es/library/risk-management-crypto-trading-bots/) en el trading: no conviene invertir dinero imprescindible o prestado.
 
 ## DCA y trading algorítmico
 
@@ -70,7 +70,7 @@ En trading algorítmico, DCA se implementa con bots DCA: un script o servicio en
 - Intervalo (diario, semanal, mensual).
 - Opcional: límites de precio (no comprar por encima/debajo de un nivel).
 
-El bot evita tener que entrar cada vez en la exchange y ejecutar la operación a mano. Antes de operar en vivo, conviene probar lógica y parámetros con backtesting y en demo o tamaño pequeño; los parámetros de riesgo (parte del capital en DCA, límites) deben seguir las reglas generales de [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/).
+El bot evita tener que entrar cada vez en la exchange y ejecutar la operación a mano. Antes de operar en vivo, conviene probar lógica y parámetros con backtesting y en demo o tamaño pequeño; los parámetros de riesgo (parte del capital en DCA, límites) deben seguir las reglas generales de [gestión de riesgos](https://marketlab-academy.org/es/library/risk-management-crypto-trading-bots/).
 
 ## Cuándo encaja DCA y cuándo no
 
@@ -78,7 +78,7 @@ El bot evita tener que entrar cada vez en la exchange y ejecutar la operación a
 
 - En acumulación de cripto a largo plazo (horizonte de un año o más).
 - Cuando no se busca o no se puede “cazar” el mínimo exacto.
-- En mercado lateral o volátil, cuando una compra única grande es psicológica o financieramente costosa. Para operar en rango, ver [estrategias para mercado lateral](/es/library/sideways-trend-strategies/).
+- En mercado lateral o volátil, cuando una compra única grande es psicológica o financieramente costosa. Para operar en rango, ver [estrategias para mercado lateral](https://marketlab-academy.org/es/library/sideways-trend-strategies/).
 
 **DCA encaja menos:**
 
@@ -107,11 +107,11 @@ La frecuencia depende del presupuesto y la comodidad: semanal da más suavizado 
 
 **¿Hay que hacer backtesting del DCA?**
 
-Para un “comprar N USD cada periodo” simple, un backtest muestra el precio medio de entrada y el resultado histórico. Para un bot DCA con reglas adicionales (límites, stops), backtest y prueba en demo ayudan a comprobar lógica y comisiones. Más en [qué son los backtests](/es/library/what-are-backtests/).
+Para un “comprar N USD cada periodo” simple, un backtest muestra el precio medio de entrada y el resultado histórico. Para un bot DCA con reglas adicionales (límites, stops), backtest y prueba en demo ayudan a comprobar lógica y comisiones. Más en [qué son los backtests](https://marketlab-academy.org/es/library/what-are-backtests/).
 
 **¿En qué se diferencia DCA del grid trading?**
 
-DCA son compras en el tiempo por cantidad fija, normalmente en una dirección (acumulación). Grid es una red de órdenes de compra y venta en un rango de precios, ganando con las oscilaciones dentro del rango. Sobre grid, ver [trading en grid](/es/library/grid-trading-crypto/).
+DCA son compras en el tiempo por cantidad fija, normalmente en una dirección (acumulación). Grid es una red de órdenes de compra y venta en un rango de precios, ganando con las oscilaciones dentro del rango. Sobre grid, ver [trading en grid](https://marketlab-academy.org/es/library/grid-trading-crypto/).
 
 **¿DCA es bueno para principiantes?**
 

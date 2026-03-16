@@ -12,7 +12,7 @@ draft: true
 > **Уровень:** Начинающий — Средний
 > **Цель:** Отсеять 90% мусорных проектов до глубокого анализа
 
-**Важно:** Этот чек-лист — фильтр «мусор/не мусор», а не рекомендация к покупке. Для глубокого анализа см. [Фундаментальный анализ: чек-лист на 15 минут](/ru/library/fundamental-analysis-checklist/).
+**Важно:** Этот чек-лист — фильтр «мусор/не мусор», а не рекомендация к покупке. Для глубокого анализа см. [Фундаментальный анализ: чек-лист на 15 минут](https://marketlab-academy.org/ru/library/fundamental-analysis-checklist/).
 
 **Почему это важно:**
 
@@ -488,7 +488,7 @@ Binance (2023):
 
 **Глубокий анализ:**
 
-Для более детальной проверки используйте [расширенный чек-лист на 15 минут](/ru/library/fundamental-analysis-checklist/), который включает проверку токеномики и ончейн-метрик. Также рекомендуем изучить [основы токеномики](/ru/library/what-is-tokenomics/) и [риск-менеджмент](/ru/library/risk-management-crypto-trading-bots/) для оценки рисков.
+Для более детальной проверки используйте [расширенный чек-лист на 15 минут](https://marketlab-academy.org/ru/library/fundamental-analysis-checklist/), который включает проверку токеномики и ончейн-метрик. Также рекомендуем изучить [основы токеномики](https://marketlab-academy.org/ru/library/what-is-tokenomics/) и [риск-менеджмент](https://marketlab-academy.org/ru/library/risk-management-crypto-trading-bots/) для оценки рисков.
 
 ---
 

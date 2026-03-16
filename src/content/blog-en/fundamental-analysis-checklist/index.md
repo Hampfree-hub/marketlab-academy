@@ -5,9 +5,9 @@ pubDate: '2026-02-23'
 category: 'fundamental-analysis'
 ---
 
-From "this is complicated" to "I have a 15-minute checklist". The goal is to quickly scan a token and decide: dig deeper or skip. The checklist doesn't replace deep analysis, but helps filter out what's not worth even looking at the chart. Introduction to fundamental analysis and connection with technical analysis — in the [overview article](/en/library/fundamental-analysis-intro/).
+From "this is complicated" to "I have a 15-minute checklist". The goal is to quickly scan a token and decide: dig deeper or skip. The checklist doesn't replace deep analysis, but helps filter out what's not worth even looking at the chart. Introduction to fundamental analysis and connection with technical analysis — in the [overview article](https://marketlab-academy.org/en/library/fundamental-analysis-intro/).
 
-**Important:** This checklist is a "junk/not junk" filter, not a buy recommendation. For deep tokenomics analysis see [What is Tokenomics](/en/library/what-is-tokenomics/), for on-chain metrics — [On-Chain Analysis](/en/library/onchain-metrics-fundamental-analysis/).
+**Important:** This checklist is a "junk/not junk" filter, not a buy recommendation. For deep tokenomics analysis see [What is Tokenomics](https://marketlab-academy.org/en/library/what-is-tokenomics/), for on-chain metrics — [On-Chain Analysis](https://marketlab-academy.org/en/library/onchain-metrics-fundamental-analysis/).
 
 ## Step 1. Basic Information (3 minutes)
 
@@ -67,7 +67,7 @@ From "this is complicated" to "I have a 15-minute checklist". The goal is to qui
 
 **Decision:** If 2+ red flags — skip.
 
-**More details:** [What is Tokenomics](/en/library/what-is-tokenomics/) — metrics, token types, examples.
+**More details:** [What is Tokenomics](https://marketlab-academy.org/en/library/what-is-tokenomics/) — metrics, token types, examples.
 
 ## 15-Minute Fundamental: Step-by-Step Algorithm
 
@@ -336,7 +336,7 @@ Conclusion: outflow from exchanges, accumulation signal
 
 **Remember:** Fundamental analysis doesn't guarantee profit. It only reduces risk of entering obviously weak projects. Technical analysis gives entry and exit points.
 
-More on risk management: [Risk Management for Beginner Traders](/en/library/risk-management-crypto-trading-bots/).
+More on risk management: [Risk Management for Beginner Traders](https://marketlab-academy.org/en/library/risk-management-crypto-trading-bots/).
 
 ## FAQ
 
@@ -346,7 +346,7 @@ On first pass — 15-20 minutes. When you get used to data sources — can fit i
 
 **Can I skip on-chain metrics?**
 
-Yes, for initial filter steps 1-3 are enough (basic info, project, tokenomics). On-chain adds cycle context and large holder behavior; for deep dive useful — see [on-chain metrics in FA](/en/library/onchain-metrics-fundamental-analysis/).
+Yes, for initial filter steps 1-3 are enough (basic info, project, tokenomics). On-chain adds cycle context and large holder behavior; for deep dive useful — see [on-chain metrics in FA](https://marketlab-academy.org/en/library/onchain-metrics-fundamental-analysis/).
 
 **What to do after the checklist?**
 

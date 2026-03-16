@@ -9,32 +9,32 @@ category: 'algo-trading'
 
 ## Why ELDER 2.0?
 
-This strategy was developed for working on the [spot market](/en/library/what-is-spot-trading/), where there is no liquidation risk. The key idea is to enter a position in small parts when overbought/oversold signals appear and average down on pullbacks.
+This strategy was developed for working on the [spot market](https://marketlab-academy.org/en/library/what-is-spot-trading/), where there is no liquidation risk. The key idea is to enter a position in small parts when overbought/oversold signals appear and average down on pullbacks.
 
 **Advantages of the approach:**
 
 - Trading without leverage — no liquidation risk
 - Position averaging instead of stop-losses
-- Automation via [exchange trading bots](/en/library/bybit-trading-bot-setup/)
+- Automation via [exchange trading bots](https://marketlab-academy.org/en/library/bybit-trading-bot-setup/)
 - Proven effectiveness in various market conditions
 
 ## Three Pillars of the ELDER 2.0 Strategy
 
 ### 1. Stochastic Oscillator — the main signal
 
-**Function:** Identifying overbought and oversold zones for entry points. Read more about how the [Stochastic indicator](/en/library/stochastic-oscillator/) works in a separate article.
+**Function:** Identifying overbought and oversold zones for entry points. Read more about how the [Stochastic indicator](https://marketlab-academy.org/en/library/stochastic-oscillator/) works in a separate article.
 
 **Settings:** 14, 3, 3. Oversold zone: 20, Overbought zone: 80.
 
 ### 2. Bollinger Bands — volatility filter
 
-**Function:** Signal confirmation during price stretches. Learn more about [Bollinger Bands and their application](/en/library/bollinger-bands/).
+**Function:** Signal confirmation during price stretches. Learn more about [Bollinger Bands and their application](https://marketlab-academy.org/en/library/bollinger-bands/).
 
 **Settings:** Period 20, Deviation 2.0.
 
 ### 3. CMO (Chande Momentum Oscillator) — momentum filter
 
-**Function:** Filtering out false signals. A detailed breakdown of the [CMO indicator](/en/library/chande-momentum-oscillator/) will help to better understand its role.
+**Function:** Filtering out false signals. A detailed breakdown of the [CMO indicator](https://marketlab-academy.org/en/library/chande-momentum-oscillator/) will help to better understand its role.
 
 **Settings:** Period 14, Filtration zone: from −50 to +50.
 

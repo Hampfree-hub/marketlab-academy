@@ -31,7 +31,7 @@ To get started, you'll need an account on a reliable exchange. [Bybit](https://w
 
 Many guides suggest risking no more than 1–2% per trade. We use a different approach: capital spread across many assets and strategies, slightly higher risk per idea (~2.5%), but with diversification it has helped us through several corrections. Either way, set a clear limit per idea and stick to it — e.g. with $100, cap risk per idea at $2–3.
 
-For our full approach see **[Risk Management for Crypto Trading Bots](/en/library/risk-management-crypto-trading-bots)** .
+For our full approach see **[Risk Management for Crypto Trading Bots](https://marketlab-academy.org/en/library/risk-management-crypto-trading-bots)** .
 
 ### 2) Start with conservative strategies
 
@@ -79,7 +79,7 @@ Alternative (with bots):
 
 ## Backtesting
 
-Before you scale up, validate your strategy logic via **[backtesting](/en/library/what-are-backtests)**.
+Before you scale up, validate your strategy logic via **[backtesting](https://marketlab-academy.org/en/library/what-are-backtests)**.
 
 ## Strategies for Trading with a Small Deposit
 

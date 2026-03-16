@@ -51,7 +51,7 @@ El cálculo de RSI se basa en comparar los valores promedio de aumentos y dismin
 
 El período de cálculo estándar es de 14 velas, pero los traders pueden usar otros valores. Períodos cortos (por ejemplo, 9) hacen el indicador más sensible, mientras que períodos largos (por ejemplo, 21) lo hacen más suave.
 
-Es importante entender que RSI se calcula solo basándose en los precios de cierre de las velas. Los volúmenes de trading no se consideran, a diferencia del [Índice de Flujo de Dinero (MFI)](/es/library/money-flow-index/), que incluye volúmenes en sus cálculos.
+Es importante entender que RSI se calcula solo basándose en los precios de cierre de las velas. Los volúmenes de trading no se consideran, a diferencia del [Índice de Flujo de Dinero (MFI)](https://marketlab-academy.org/es/library/money-flow-index/), que incluye volúmenes en sus cálculos.
 
 ## Cómo Interpretar los Valores de RSI
 
@@ -87,7 +87,7 @@ La divergencia bajista se considera una señal de venta, especialmente si se for
 
 ![Ejemplo de divergencia bajista RSI con el indicador formando un máximo más bajo mientras el precio sube](./assets/rsi-bearish-divergence.png)
 
-Las divergencias RSI son particularmente efectivas en el mercado de criptomonedas, donde la volatilidad permite ver claramente tales patrones. Sin embargo, es importante confirmar las señales de divergencia con otros indicadores, niveles de soporte/resistencia o [patrones de velas](/es/library/what-are-doji-candles/), como doji o patrones de engullimiento.
+Las divergencias RSI son particularmente efectivas en el mercado de criptomonedas, donde la volatilidad permite ver claramente tales patrones. Sin embargo, es importante confirmar las señales de divergencia con otros indicadores, niveles de soporte/resistencia o [patrones de velas](https://marketlab-academy.org/es/library/what-are-doji-candles/), como doji o patrones de engullimiento.
 
 ## Uso de RSI en Trading de Criptomonedas
 
@@ -99,13 +99,13 @@ El mercado de criptomonedas se caracteriza por alta volatilidad y característic
 
 **Mercados con Tendencia y Laterales:** En tendencias laterales, RSI muestra efectivamente condiciones de sobrecompra y sobreventa. En tendencias fuertes, el indicador puede permanecer en zonas extremas durante períodos prolongados, requiriendo filtrado adicional de señales.
 
-**Confirmación de Señales:** En el mercado de criptomonedas, es especialmente importante confirmar las señales RSI con otros indicadores. Por ejemplo, combinar RSI con el [Índice de Flujo de Dinero (MFI)](/es/library/money-flow-index/) puede aumentar la confiabilidad de las señales de trading, ya que MFI tiene en cuenta los volúmenes de trading.
+**Confirmación de Señales:** En el mercado de criptomonedas, es especialmente importante confirmar las señales RSI con otros indicadores. Por ejemplo, combinar RSI con el [Índice de Flujo de Dinero (MFI)](https://marketlab-academy.org/es/library/money-flow-index/) puede aumentar la confiabilidad de las señales de trading, ya que MFI tiene en cuenta los volúmenes de trading.
 
 ![Comparación de gráficos RSI e Índice de Flujo de Dinero MFI en el mismo marco temporal](./assets/rsi-vs-mfi-comparison.png)
 
 ## Cómo Usar RSI en Estrategias de Trading
 
-RSI puede aplicarse en varias estrategias de trading, desde scalping hasta inversiones a largo plazo. Antes de aplicar una estrategia con RSI, se recomienda realizar [backtesting](/es/library/what-are-backtests/) para evaluar la efectividad en datos históricos. Enfoques principales:
+RSI puede aplicarse en varias estrategias de trading, desde scalping hasta inversiones a largo plazo. Antes de aplicar una estrategia con RSI, se recomienda realizar [backtesting](https://marketlab-academy.org/es/library/what-are-backtests/) para evaluar la efectividad en datos históricos. Enfoques principales:
 
 **Estrategia de Rebote de Niveles:** Entrar en una posición cuando RSI alcanza zonas extremas (por debajo de 30 o por encima de 70) con expectativa de retorno a valores promedio. El stop-loss se establece más allá del extremo opuesto.
 
@@ -139,13 +139,13 @@ Como cualquier indicador técnico, RSI tiene sus fortalezas y debilidades.
 
 **Amplia Disponibilidad:** El indicador está presente en todas las plataformas de trading populares y no requiere configuración adicional.
 
-Un indicador similar es [Williams Percent Range](/es/library/williams-percent-range-r/), que también mide el momentum del precio y puede usarse en combinación con RSI para aumentar la confiabilidad de las señales.
+Un indicador similar es [Williams Percent Range](https://marketlab-academy.org/es/library/williams-percent-range-r/), que también mide el momentum del precio y puede usarse en combinación con RSI para aumentar la confiabilidad de las señales.
 
 ### Desventajas
 
 **Señales Falsas:** En mercados con tendencia, RSI puede permanecer en zonas extremas durante períodos prolongados, generando señales falsas de reversión.
 
-**Sin Consideración de Volúmenes:** RSI se calcula solo basándose en el precio y no tiene en cuenta los volúmenes de trading, a diferencia del [Índice de Flujo de Dinero (MFI)](/es/library/money-flow-index/).
+**Sin Consideración de Volúmenes:** RSI se calcula solo basándose en el precio y no tiene en cuenta los volúmenes de trading, a diferencia del [Índice de Flujo de Dinero (MFI)](https://marketlab-academy.org/es/library/money-flow-index/).
 
 **Retraso:** Como la mayoría de los osciladores, RSI puede retrasarse con las señales en mercados que cambian rápidamente.
 
@@ -167,7 +167,7 @@ No hay valores óptimos. RSI se interpreta dependiendo de las condiciones del me
 
 **¿RSI es mejor que MFI?**
 
-No mejor ni peor: son herramientas diferentes. RSI analiza solo el precio, mientras que [MFI tiene en cuenta los volúmenes de trading](/es/library/money-flow-index/). Ambos indicadores pueden complementarse entre sí en análisis integral. Un oscilador similar es también [Williams Percent Range](/es/library/williams-percent-range-r/), que opera en un rango invertido.
+No mejor ni peor: son herramientas diferentes. RSI analiza solo el precio, mientras que [MFI tiene en cuenta los volúmenes de trading](https://marketlab-academy.org/es/library/money-flow-index/). Ambos indicadores pueden complementarse entre sí en análisis integral. Un oscilador similar es también [Williams Percent Range](https://marketlab-academy.org/es/library/williams-percent-range-r/), que opera en un rango invertido.
 
 **¿Con qué frecuencia RSI da señales falsas?**
 

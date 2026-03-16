@@ -22,8 +22,8 @@ La gestión de riesgo en cripto se vuelve más relevante debido a la inestabilid
 En trading se menciona a menudo la "regla de oro" del 1-2% de riesgo por operación: no arriesgues más de esta parte de tu depósito en una sola operación. Seguimos un enfoque ligeramente diferente: el capital está distribuido en muchos activos y estrategias, lo que significa que está constantemente en trabajo. Nuestro riesgo por idea es ligeramente mayor (alrededor del 2.5%), pero gracias a la estricta diversificación y reglas de salida claras, consideramos este enfoque no menos seguro — y en algunas condiciones incluso más seguro. Nos ha ayudado a sobrevivir múltiples correcciones sin romper el sistema.
 
 - **Límite de riesgo por operación/ciclo.** Establece una pérdida máxima para una idea o un ciclo de bot y no la excedas.
-- **Establecer stop-losses.** El límite permite cortar pérdidas temprano, antes de que el mercado se vuelva en tu contra. Lee más sobre stop-losses en el artículo sobre [trailing stop](/es/library/what-is-trailing-stop).
-- **Diversificación de activos.** Distribuir capital entre diferentes tokens ayuda a reducir la volatilidad general del portafolio. Aprende más sobre combinar diversificación de activos, estrategias y plataformas en la serie [Diversificación y Configuración del Sistema de Trading](/es/library/diversification-trading-system-part-1/).
+- **Establecer stop-losses.** El límite permite cortar pérdidas temprano, antes de que el mercado se vuelva en tu contra. Lee más sobre stop-losses en el artículo sobre [trailing stop](https://marketlab-academy.org/es/library/what-is-trailing-stop).
+- **Diversificación de activos.** Distribuir capital entre diferentes tokens ayuda a reducir la volatilidad general del portafolio. Aprende más sobre combinar diversificación de activos, estrategias y plataformas en la serie [Diversificación y Configuración del Sistema de Trading](https://marketlab-academy.org/es/library/diversification-trading-system-part-1/).
 
 Todas estas medidas forman la base de las reglas de gestión de dinero y permiten incluso a un principiante calcular la gestión de riesgo en trading.
 
@@ -33,7 +33,7 @@ Una herramienta efectiva para el control de la gestión de riesgo es mantener un
 
 Existen plataformas especializadas para el registro de operaciones, como [TraderMake.Money](https://tradermake.money/ru/trader/Marketlab/?ref=Jx9LLm). En Market Lab usamos TMM en modo de prueba para analizar nuestro propio trading en una de nuestras subcuentas de Bybit (datos públicos desde 14.02.2026).
 
-Más sobre mantener un diario de trading en el artículo separado [Diario de Trading](/es/library/trading-journal-guide/).
+Más sobre mantener un diario de trading en el artículo separado [Diario de Trading](https://marketlab-academy.org/es/library/trading-journal-guide/).
 
 ## Cómo Usar la Gestión de Riesgo al Operar con Bots
 
@@ -95,7 +95,7 @@ Tiene sentido no ignorar los filtros para el inicio del bot. Son responsables de
 
 Señales de trading e indicadores se usan para configurar filtros:
 
-- **RSI, CCI, Bandas de Bollinger, MACD, EMA** — reflejan la fuerza relativa de la tendencia. Aprende más sobre el [indicador RSI](/es/library/technical-analysis-rsi) y otras herramientas de análisis técnico.
+- **RSI, CCI, Bandas de Bollinger, MACD, EMA** — reflejan la fuerza relativa de la tendencia. Aprende más sobre el [indicador RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi) y otras herramientas de análisis técnico.
 - **Indicador de volumen de trading de 24 horas** — no debes operar una moneda cuyo volumen de trading en las últimas 24 horas sea demasiado bajo. Para rastrear este indicador, puedes prestar atención al coeficiente de liquidez del activo de trading.
 
 ## Psicología y Autodisciplina del Trader
@@ -110,7 +110,7 @@ Errores comunes de la mayoría de los traders de cripto:
 
 - **Operar sin stop-losses** — uno de los errores más peligrosos. Incluso al operar con bots, necesitas establecer un drawdown máximo en el que el bot deja de funcionar.
 - **Riesgo excesivo por operación** — exceder el límite elegido para una idea/ciclo. Si determinaste un riesgo del 2.5% por operación, no lo aumentes "como excepción."
-- **Falta de estrategia/diversificación clara** — concentración en un activo, un exchange o una estrategia. Más sobre el enfoque correcto en la serie [Diversificación y Configuración del Sistema de Trading](/es/library/diversification-trading-system-part-1/).
+- **Falta de estrategia/diversificación clara** — concentración en un activo, un exchange o una estrategia. Más sobre el enfoque correcto en la serie [Diversificación y Configuración del Sistema de Trading](https://marketlab-academy.org/es/library/diversification-trading-system-part-1/).
 - **Ignorar el análisis** — operar sin análisis de mercado, sin mantener un diario de operaciones. Las estadísticas ayudan a entender qué setups funcionan y cuáles no.
 - **Sobreoperación** — el deseo de "recuperarse" después de una pérdida o aumentar el volumen después de una serie de ganancias. Las decisiones emocionales destruyen el sistema.
 - **Sin monitoreo** — "configurar y olvidar." Los bots requieren verificaciones periódicas: ejecución de órdenes, funcionamiento de API, corrección de configuración.
@@ -119,7 +119,7 @@ Todo esto puede llevar a pérdidas irreversibles y drenaje del depósito. Para r
 
 ## Uso de Backtests para Optimización
 
-Antes de lanzar un bot en una cuenta real, es importante probar la estrategia en datos históricos. [Backtesting](/es/library/what-are-backtests) te permite identificar debilidades en la estrategia y optimizar parámetros de gestión de riesgo. La mayoría de los problemas relacionados con no entender dónde colocar stops/takes y similares se resolverán en la etapa de prueba.
+Antes de lanzar un bot en una cuenta real, es importante probar la estrategia en datos históricos. [Backtesting](https://marketlab-academy.org/es/library/what-are-backtests) te permite identificar debilidades en la estrategia y optimizar parámetros de gestión de riesgo. La mayoría de los problemas relacionados con no entender dónde colocar stops/takes y similares se resolverán en la etapa de prueba.
 
 **Cómo realizar backtests:**
 - **Datos históricos** — usa datos durante un período suficientemente largo (mínimo 3-6 meses)
@@ -132,7 +132,7 @@ Antes de lanzar un bot en una cuenta real, es importante probar la estrategia en
 
 La confiabilidad del exchange es un elemento importante de la gestión de riesgo. Al elegir una plataforma, presta atención a:
 
-- **Uptime y estabilidad** — fallos frecuentes de API pueden llevar a órdenes no ejecutadas. Más en el artículo sobre [uptime y downtime del exchange](/es/library/exchange-uptime-downtime/).
+- **Uptime y estabilidad** — fallos frecuentes de API pueden llevar a órdenes no ejecutadas. Más en el artículo sobre [uptime y downtime del exchange](https://marketlab-academy.org/es/library/exchange-uptime-downtime/).
 - **Límites de retiro** — asegúrate de que los límites de retiro coincidan con tus volúmenes
 - **Reputación** — estudia la historia del exchange, reseñas de usuarios, disponibilidad de fondo de seguro
 - **Soporte de API** — los bots necesitan API estable con límites de solicitud suficientes

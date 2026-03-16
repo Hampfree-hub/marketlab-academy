@@ -13,7 +13,7 @@ Existen muchos indicadores probados en el trading. Sin embargo, solo una pequeñ
 
 Este indicador fue desarrollado por **Gene Wilder**, un pionero en el análisis técnico que también creó herramientas populares como el Relative Strength Index (RSI) y Average True Range (ATR). MFI fue presentado por primera vez en su libro "New Concepts in Technical Trading Systems" (Nuevos Conceptos en Sistemas de Trading Técnico), publicado en 1978.
 
-**Money Flow Index** a menudo se denomina "versión mejorada del RSI", ya que a diferencia del [RSI](/es/library/technical-analysis-rsi), que analiza solo el movimiento del precio, el **Índice de Flujo de Dinero MFI** incluye en su cálculo también el volumen de operaciones. MFI es una herramienta para medir la velocidad del movimiento del precio y es similar al RSI en interpretación, pero tiene una fórmula de cálculo diferente que, entre otras cosas, tiene en cuenta el volumen de operaciones. Para esto, se comparan los llamados **flujos de dinero positivos** y **flujos de dinero negativos**.
+**Money Flow Index** a menudo se denomina "versión mejorada del RSI", ya que a diferencia del [RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi), que analiza solo el movimiento del precio, el **Índice de Flujo de Dinero MFI** incluye en su cálculo también el volumen de operaciones. MFI es una herramienta para medir la velocidad del movimiento del precio y es similar al RSI en interpretación, pero tiene una fórmula de cálculo diferente que, entre otras cosas, tiene en cuenta el volumen de operaciones. Para esto, se comparan los llamados **flujos de dinero positivos** y **flujos de dinero negativos**.
 
 **Flujos de dinero positivos** son los flujos de los compradores invertidos en un instrumento de trading que hacen que su precio suba. **Flujos de dinero negativos**, por el contrario, son formados por vendedores que crean volumen de oferta en el mercado, y cuando hay exceso, pueden contribuir a la caída del precio.
 
@@ -52,7 +52,7 @@ La característica de MFI en el trading de cripto es que permite identificar fas
 
 Otra característica importante del uso del indicador **Money Flow Index** en el trading de criptomonedas es analizar zonas de sobrecompra y sobreventa bajo condiciones de volatilidad aguda. A diferencia de los mercados tradicionales, donde el índice estar en zonas extremas (por debajo de 20 o por encima de 80) más a menudo señala una reversión inminente, en cripto un activo puede permanecer allí mucho más tiempo. Sin embargo, es la velocidad de salida de estas zonas lo que a menudo se convierte en la señal principal. Por ejemplo, si después de una larga estancia por debajo de 20 MFI sube bruscamente por encima de 30, esto puede significar que la fase bajista está completa y el mercado está listo para el crecimiento.
 
-Los traders de cripto también usan MFI para confirmar señales de otros indicadores. Si el [RSI](/es/library/technical-analysis-rsi) muestra sobrecompra, pero MFI es neutral, la señal se considera débil. Si ambas herramientas coinciden, la probabilidad de reversión se vuelve significativamente mayor.
+Los traders de cripto también usan MFI para confirmar señales de otros indicadores. Si el [RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi) muestra sobrecompra, pero MFI es neutral, la señal se considera débil. Si ambas herramientas coinciden, la probabilidad de reversión se vuelve significativamente mayor.
 
 Otra aplicación importante del índice es trabajar con patrones de análisis técnico. Cuando se forma un patrón de bandera alcista o bajista en el gráfico, el Money Flow Index ayuda a entender si este patrón está confirmado por la presencia de liquidez. Si cuando la bandera rompe hacia arriba MFI también sube, la señal de compra se vuelve más confiable. Si el indicador no apoya el movimiento, existe riesgo de un falso rompimiento.
 
@@ -64,7 +64,7 @@ El **Índice de Flujo de Dinero (MFI)** puede aplicarse en diferentes escenarios
 
 Otra forma de usar el Índice de Flujo de Dinero está relacionada con divergencias (divergencia entre la dinámica del precio y los indicadores técnicos). Si el precio actualiza un máximo, pero MFI muestra una caída, esto indica debilitamiento del poder de compra y probabilidad de reversión. Una situación similar surge cuando el precio cae, pero MFI forma dinámicas crecientes: esta es ya una señal para un posible rebote. Este enfoque es más útil en el trading de cripto, donde hay grandes jugadores en el mercado, y su actividad puede notarse precisamente a través del análisis de la relación entre precio y volumen.
 
-Un elemento importante de la aplicación del Índice de Flujo de Dinero es filtrar señales del [RSI](/es/library/technical-analysis-rsi). Dado que MFI tiene en cuenta el volumen, sus señales a menudo se consideran de mayor calidad. Por ejemplo, si el RSI muestra sobrecompra, pero MFI permanece en una zona neutral, muchos traders ignoran esta señal, entendiendo que no hay un flujo real de capital hacia el mercado. Al mismo tiempo, no se puede decir inequívocamente que MFI sea mejor que RSI, pero precisamente por la consideración del volumen, se considera más informativo y a menudo actúa como un filtro confiable.
+Un elemento importante de la aplicación del Índice de Flujo de Dinero es filtrar señales del [RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi). Dado que MFI tiene en cuenta el volumen, sus señales a menudo se consideran de mayor calidad. Por ejemplo, si el RSI muestra sobrecompra, pero MFI permanece en una zona neutral, muchos traders ignoran esta señal, entendiendo que no hay un flujo real de capital hacia el mercado. Al mismo tiempo, no se puede decir inequívocamente que MFI sea mejor que RSI, pero precisamente por la consideración del volumen, se considera más informativo y a menudo actúa como un filtro confiable.
 
 ![Comparación de MFI y RSI: ambos osciladores debajo del gráfico de precio](./assets/rsi-vs-mfi-comparison.png)
 
@@ -101,7 +101,7 @@ El valor óptimo se considera el rango de 40–60, cuando el mercado está en eq
 
 **¿MFI es mejor que RSI?**
 
-No siempre mejor, pero más informativo. El [RSI](/es/library/technical-analysis-rsi) analiza solo el precio, mientras que MFI agrega volumen, haciéndolo más preciso.
+No siempre mejor, pero más informativo. El [RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi) analiza solo el precio, mientras que MFI agrega volumen, haciéndolo más preciso.
 
 **¿Cuál es la diferencia entre MFI alto y bajo?**
 
@@ -109,7 +109,7 @@ MFI alto (por encima de 80) indica fuerte flujo de entrada de capital y probable
 
 **¿Se puede usar el Money Flow Index por separado?**
 
-Técnicamente sí, pero en la práctica es más confiable en combinación con otros indicadores de trading de cripto. Se recomienda combinar MFI con [RSI](/es/library/technical-analysis-rsi), [Williams %R](/es/library/williams-percent-range-r) y usar [backtesting](/es/library/what-are-backtests) para probar estrategias.
+Técnicamente sí, pero en la práctica es más confiable en combinación con otros indicadores de trading de cripto. Se recomienda combinar MFI con [RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi), [Williams %R](https://marketlab-academy.org/es/library/williams-percent-range-r) y usar [backtesting](https://marketlab-academy.org/es/library/what-are-backtests) para probar estrategias.
 
 **¿MFI es adecuado para estrategias a largo plazo?**
 

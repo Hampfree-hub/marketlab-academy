@@ -263,7 +263,7 @@ Si el proyecto pasa los 6 puntos — se puede considerar para inversión. Si 3-5
 
 Buena tokenomics estimula participación a largo plazo, es transparente y tiene mecánicas claras de influencia en el precio. Antes de invertir, estudiar whitepaper, unlock schedule y comparar con competidores.
 
-Para más sobre análisis de proyectos desde documentación, leer el artículo [Whitepaper](/es/library/what-is-whitepaper/).
+Para más sobre análisis de proyectos desde documentación, leer el artículo [Whitepaper](https://marketlab-academy.org/es/library/what-is-whitepaper/).
 
 ## FAQ
 

@@ -13,7 +13,7 @@ Sí, pero hay limitaciones:
 
 - menos margen para posiciones
 - las comisiones pueden pesar más como % del resultado — conviene tenerlo en cuenta al elegir exchange y frecuencia
-- diversificar es más difícil. Cómo hacerlo con poco capital: [Diversificación y configuración del sistema de trading](/es/library/diversification-trading-system-part-1/)
+- diversificar es más difícil. Cómo hacerlo con poco capital: [Diversificación y configuración del sistema de trading](https://marketlab-academy.org/es/library/diversification-trading-system-part-1/)
 
 También hay ventajas:
 
@@ -27,7 +27,7 @@ Para empezar, necesitas una cuenta en un exchange confiable. [Bybit](https://www
 
 ### 1) Límite de riesgo por operación/idea
 
-Muchas guías recomiendan no arriesgar más del 1–2% por operación. Nosotros usamos otro enfoque: capital repartido entre muchos activos y estrategias, riesgo por idea un poco mayor (~2,5%), pero la diversificación nos ha ayudado a pasar varias correcciones. Lo importante es fijar un límite claro por idea y respetarlo (p. ej. con $100, limitar el riesgo por idea a $2–3). Más en [Gestión de riesgos en trading con bots](/es/library/risk-management-crypto-trading-bots/).
+Muchas guías recomiendan no arriesgar más del 1–2% por operación. Nosotros usamos otro enfoque: capital repartido entre muchos activos y estrategias, riesgo por idea un poco mayor (~2,5%), pero la diversificación nos ha ayudado a pasar varias correcciones. Lo importante es fijar un límite claro por idea y respetarlo (p. ej. con $100, limitar el riesgo por idea a $2–3). Más en [Gestión de riesgos en trading con bots](https://marketlab-academy.org/es/library/risk-management-crypto-trading-bots/).
 
 ### 2) Estrategias conservadoras
 
@@ -56,7 +56,7 @@ Los bots ayudan a ejecutar reglas sin emociones, pero no eliminan el riesgo.
 
 ## Backtesting
 
-Antes de escalar, valida con **[backtesting](/es/library/what-are-backtests)**.
+Antes de escalar, valida con **[backtesting](https://marketlab-academy.org/es/library/what-are-backtests)**.
 
 ## Resumen
 

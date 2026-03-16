@@ -13,7 +13,7 @@ There are many proven indicators in trading. However, only a small portion of th
 
 This indicator was developed by **Gene Wilder**, a pioneer in technical analysis who also created such popular tools as the Relative Strength Index (RSI) and Average True Range (ATR). MFI was first introduced in his book "New Concepts in Technical Trading Systems," published in 1978.
 
-**Money Flow Index** is often called an "improved version of RSI" because, unlike [RSI](/en/library/technical-analysis-rsi), which analyzes only price movement, **Money Flow Index MFI** also includes trading volume in its calculation. MFI is a tool for measuring the speed of price movement and is similar to RSI in interpretation, but has a different calculation formula that, among other things, takes trading volume into account. For this, so-called **positive money flows** and **negative money flows** are compared.
+**Money Flow Index** is often called an "improved version of RSI" because, unlike [RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi), which analyzes only price movement, **Money Flow Index MFI** also includes trading volume in its calculation. MFI is a tool for measuring the speed of price movement and is similar to RSI in interpretation, but has a different calculation formula that, among other things, takes trading volume into account. For this, so-called **positive money flows** and **negative money flows** are compared.
 
 **Positive money flows** are buyer flows invested in a trading instrument that cause its price to rise. **Negative money flows**, on the contrary, are formed by sellers who create supply volume in the market, and when in excess, can contribute to price decline.
 
@@ -52,7 +52,7 @@ The feature of MFI in crypto trading is that it allows identifying accumulation 
 
 Another important feature of using the **Money Flow Index** indicator in cryptocurrency trading is analyzing overbought and oversold zones under conditions of sharp volatility. Unlike traditional markets, where the index being in extreme zones (below 20 or above 80) more often signals an upcoming reversal, in crypto an asset can stay there much longer. However, it is the speed of exit from these zones that often becomes the main signal. For example, if after a long stay below 20 MFI sharply rises above 30, this can mean that the bearish phase is complete and the market is ready for growth.
 
-Crypto traders also use MFI to confirm signals from other indicators. If [RSI](/en/library/technical-analysis-rsi) shows overbought, but MFI is neutral, the signal is considered weak. If both tools coincide, the probability of a reversal becomes significantly higher.
+Crypto traders also use MFI to confirm signals from other indicators. If [RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi) shows overbought, but MFI is neutral, the signal is considered weak. If both tools coincide, the probability of a reversal becomes significantly higher.
 
 Another important application of the index is working with technical analysis patterns. When a bullish or bearish flag pattern forms on the chart, the Money Flow Index helps understand whether this pattern is confirmed by liquidity presence. If when the flag breaks upward MFI also rises, the buy signal becomes more reliable. If the indicator does not support the movement, there is a risk of a false breakout.
 
@@ -64,7 +64,7 @@ For long-term investors, **Money Flow Index values in trading** also have their 
 
 Another way to use the Money Flow Index is related to divergences (divergence between price dynamics and technical indicators). If price updates a high, but MFI shows a decline, this indicates weakening buying power and reversal probability. A similar situation arises when price falls, but MFI forms rising dynamics—this is already a signal for a possible bounce. This approach is most useful in crypto trading, where large players are present in the market, and their activity can be noticed precisely through analyzing the ratio of price and volume.
 
-An important element of applying the Money Flow Index is filtering [RSI](/en/library/technical-analysis-rsi) signals. Since MFI takes volume into account, its signals are often considered higher quality. For example, if RSI shows overbought, but MFI remains in a neutral zone, many traders ignore this signal, understanding that there is no real capital inflow into the market. At the same time, it cannot be said unequivocally that MFI is better than RSI, but precisely because of volume consideration, it is considered more informative and often acts as a reliable filter.
+An important element of applying the Money Flow Index is filtering [RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi) signals. Since MFI takes volume into account, its signals are often considered higher quality. For example, if RSI shows overbought, but MFI remains in a neutral zone, many traders ignore this signal, understanding that there is no real capital inflow into the market. At the same time, it cannot be said unequivocally that MFI is better than RSI, but precisely because of volume consideration, it is considered more informative and often acts as a reliable filter.
 
 ![Comparison of MFI and RSI: both oscillators below the price chart](./assets/rsi-vs-mfi-comparison.png)
 
@@ -91,7 +91,7 @@ To summarize, **Money Flow Index** is universal and can be applied both for scal
 
 ## Summary
 
-MFI combines price and volume to measure buying/selling pressure. Use it with [RSI](/en/library/technical-analysis-rsi) or [Williams %R](/en/library/williams-percent-range-r) for confirmation. Backtest before live trading. For automated MFI-based strategies, traders often use platforms like [Veles](https://veles.finance/invite/washmallay) — a popular service for running trading bots.
+MFI combines price and volume to measure buying/selling pressure. Use it with [RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi) or [Williams %R](https://marketlab-academy.org/en/library/williams-percent-range-r) for confirmation. Backtest before live trading. For automated MFI-based strategies, traders often use platforms like [Veles](https://veles.finance/invite/washmallay) — a popular service for running trading bots.
 
 ## FAQ
 
@@ -101,7 +101,7 @@ The optimal value is considered the range of 40–60, when the market is in equi
 
 **Is MFI better than RSI?**
 
-Not always better, but more informative. [RSI](/en/library/technical-analysis-rsi) analyzes only price, while MFI adds volume, making it more accurate.
+Not always better, but more informative. [RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi) analyzes only price, while MFI adds volume, making it more accurate.
 
 **What is the difference between high and low MFI?**
 
@@ -109,7 +109,7 @@ High MFI (above 80) indicates strong capital inflow and probable overbought cond
 
 **Can Money Flow Index be used separately?**
 
-Technically yes, but in practice it is more reliable in combination with other crypto trading indicators. It is recommended to combine MFI with [RSI](/en/library/technical-analysis-rsi), [Williams %R](/en/library/williams-percent-range-r), and use [backtesting](/en/library/what-are-backtests) to test strategies.
+Technically yes, but in practice it is more reliable in combination with other crypto trading indicators. It is recommended to combine MFI with [RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi), [Williams %R](https://marketlab-academy.org/en/library/williams-percent-range-r), and use [backtesting](https://marketlab-academy.org/en/library/what-are-backtests) to test strategies.
 
 **Is MFI suitable for long-term strategies?**
 

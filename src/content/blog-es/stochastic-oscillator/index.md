@@ -28,7 +28,7 @@ Donde C es el precio de cierre, L_n es el mínimo de n períodos, H_n es el máx
 
 ### Configuración recomendada
 
-Para la mayoría de las estrategias, incluyendo la [estrategia spot ELDER 2.0](/es/library/spot-strategy-elder-20/), se utilizan los siguientes parámetros:
+Para la mayoría de las estrategias, incluyendo la [estrategia spot ELDER 2.0](https://marketlab-academy.org/es/library/spot-strategy-elder-20/), se utilizan los siguientes parámetros:
 - **Período %K:** 14
 - **Slowing (desaceleración):** 3
 - **Período %D:** 3
@@ -55,7 +55,7 @@ Si el precio marca un nuevo máximo pero el Stochastic no (divergencia bajista),
 
 ## Uso en la estrategia ELDER 2.0
 
-En la estrategia [ELDER 2.0](/es/library/spot-strategy-elder-20/), el Stochastic actúa en conjunto con las [Bandas de Bollinger](/es/library/bollinger-bands/) y el [Oscilador de Momentum Chande (CMO)](/es/library/chande-momentum-oscillator/).
+En la estrategia [ELDER 2.0](https://marketlab-academy.org/es/library/spot-strategy-elder-20/), el Stochastic actúa en conjunto con las [Bandas de Bollinger](https://marketlab-academy.org/es/library/bollinger-bands/) y el [Oscilador de Momentum Chande (CMO)](https://marketlab-academy.org/es/library/chande-momentum-oscillator/).
 
 En este sistema, el Stochastic actúa como «disparador»: la señal para buscar un punto de entrada surge cuando cae por debajo de 20, en la zona de sobreventa profunda.
 
@@ -82,15 +82,15 @@ Para trading a corto plazo en M15: %K=14, Slowing=3, %D=3. Para señales más su
 
 **¿Se puede usar el Stochastic en tendencia?**
 
-El oscilador tiende a dar señales falsas en tendencias fuertes. Se recomienda combinarlo con filtros de tendencia, como las [Bandas de Bollinger](/es/library/bollinger-bands/).
+El oscilador tiende a dar señales falsas en tendencias fuertes. Se recomienda combinarlo con filtros de tendencia, como las [Bandas de Bollinger](https://marketlab-academy.org/es/library/bollinger-bands/).
 
 **¿En qué se diferencia el Stochastic del CMO?**
 
-El [CMO](/es/library/chande-momentum-oscillator/) mide el impulso puro directamente sin doble suavizado, mientras que el Stochastic compara el precio de cierre con el rango High-Low.
+El [CMO](https://marketlab-academy.org/es/library/chande-momentum-oscillator/) mide el impulso puro directamente sin doble suavizado, mientras que el Stochastic compara el precio de cierre con el rango High-Low.
 
 ## Resumen
 
-Indicadores clave como el [Índice de Flujo de Dinero (MFI)](/es/library/money-flow-index/) y las [Bandas de Bollinger](/es/library/bollinger-bands/) complementan el análisis, ofreciendo una imagen más completa del mercado.
+Indicadores clave como el [Índice de Flujo de Dinero (MFI)](https://marketlab-academy.org/es/library/money-flow-index/) y las [Bandas de Bollinger](https://marketlab-academy.org/es/library/bollinger-bands/) complementan el análisis, ofreciendo una imagen más completa del mercado.
 
 El oscilador estocástico es una herramienta eficaz para encontrar puntos de entrada en el volátil mercado de criptomonedas. Como cualquier oscilador, puede dar señales falsas en tendencias fuertes, por lo que debe usarse con filtros de tendencia o volatilidad.
 

@@ -7,7 +7,7 @@ category: 'algo-trading'
 
 Diversification is spreading capital and risk: across assets, strategies, and venues. One position, one bot, or one exchange can fail; diversification does not guarantee profit but reduces the chance of losing everything to a single factor.
 
-In this part — why to diversify and what to look at first. In [Part 2](/en/library/diversification-trading-system-part-2/) — how to set entry/exit rules and configure bots; in [Part 3](/en/library/diversification-trading-system-part-3/) — monitoring, tuning, and common mistakes.
+In this part — why to diversify and what to look at first. In [Part 2](https://marketlab-academy.org/en/library/diversification-trading-system-part-2/) — how to set entry/exit rules and configure bots; in [Part 3](https://marketlab-academy.org/en/library/diversification-trading-system-part-3/) — monitoring, tuning, and common mistakes.
 
 ## Why traders diversify
 
@@ -26,18 +26,18 @@ You can start with a small amount — e.g. $20. The idea is to test the system o
 
 ## Diversification by assets
 
-Better not keep all capital in one asset: correlations between coins are high but not 100% — a drawdown in one asset hits a share of the portfolio, not the whole deposit. When one altcoin crashes, other positions (e.g. BTC, ETH or another asset) may behave differently. Core assets like BTC and ETH are the base of many portfolios; for more on crypto basics see [Bitcoin basics](/en/library/bitcoin-basics/). Set shares and limits per asset in advance and don't exceed them: e.g. no more than 20–30% of the deposit in one asset, the rest spread.
+Better not keep all capital in one asset: correlations between coins are high but not 100% — a drawdown in one asset hits a share of the portfolio, not the whole deposit. When one altcoin crashes, other positions (e.g. BTC, ETH or another asset) may behave differently. Core assets like BTC and ETH are the base of many portfolios; for more on crypto basics see [Bitcoin basics](https://marketlab-academy.org/en/library/bitcoin-basics/). Set shares and limits per asset in advance and don't exceed them: e.g. no more than 20–30% of the deposit in one asset, the rest spread.
 
 ![Example of diversification by assets: core + altcoins](./assets/diversification-pie-chart.png)
 *Fig. 2. Portfolio allocation example: BTC, ETH and altcoins*
 
 ## Diversification by strategies and bots
 
-Don’t concentrate all volume in one bot or one strategy: [DCA](/en/library/dca-strategy-crypto/) and [grid trading](/en/library/grid-trading-crypto/) solve different tasks and behave differently in different market conditions. DCA averages entry over time; grid works in a range. In a strong trend one strategy may draw down, another profit; in a sideways market — the opposite. Spreading capital across several bots and strategies reduces dependence on one “conveyor line.” For capital rules see [risk management in crypto trading](/en/library/risk-management-crypto-trading-bots/).
+Don’t concentrate all volume in one bot or one strategy: [DCA](https://marketlab-academy.org/en/library/dca-strategy-crypto/) and [grid trading](https://marketlab-academy.org/en/library/grid-trading-crypto/) solve different tasks and behave differently in different market conditions. DCA averages entry over time; grid works in a range. In a strong trend one strategy may draw down, another profit; in a sideways market — the opposite. Spreading capital across several bots and strategies reduces dependence on one “conveyor line.” For capital rules see [risk management in crypto trading](https://marketlab-academy.org/en/library/risk-management-crypto-trading-bots/).
 
 ## Diversification by venues
 
-Better not keep all volume on one exchange: uptime, withdrawal limits, and reputation matter. During long downtime or withdrawal issues access to funds is limited; if everything is on one venue — risk is higher. What to look for when choosing and how to assess reliability — in the article on [exchange uptime and downtime](/en/library/exchange-uptime-downtime/).
+Better not keep all volume on one exchange: uptime, withdrawal limits, and reputation matter. During long downtime or withdrawal issues access to funds is limited; if everything is on one venue — risk is higher. What to look for when choosing and how to assess reliability — in the article on [exchange uptime and downtime](https://marketlab-academy.org/en/library/exchange-uptime-downtime/).
 
 **Diversification by subaccounts**
 
@@ -52,7 +52,7 @@ At Market Lab, we use 3-4 subaccounts with a total of 200+ assets — this allow
 
 ## Summary
 
-Diversification is part of setting up a trading system, not an end in itself. The goal is to reduce the risk of losing all capital due to one asset, one strategy, or one venue. Next — [Part 2: how to build and configure the system](/en/library/diversification-trading-system-part-2/).
+Diversification is part of setting up a trading system, not an end in itself. The goal is to reduce the risk of losing all capital due to one asset, one strategy, or one venue. Next — [Part 2: how to build and configure the system](https://marketlab-academy.org/en/library/diversification-trading-system-part-2/).
 
 ## FAQ
 

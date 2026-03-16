@@ -30,8 +30,8 @@ Un **mercado lateral (range)** es una fase de consolidación donde el precio osc
 
 ### Indicadores útiles
 
-- **[RSI](/es/library/technical-analysis-rsi)** — en rangos suele moverse alrededor del centro (aprox. 40–60)
-- **[MFI](/es/library/money-flow-index)** — ayuda a ver si hay entrada/salida real de capital
+- **[RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi)** — en rangos suele moverse alrededor del centro (aprox. 40–60)
+- **[MFI](https://marketlab-academy.org/es/library/money-flow-index)** — ayuda a ver si hay entrada/salida real de capital
 - medias móviles — el precio suele “cortar” las MAs sin separación tendencial
 
 ![Osciladores en rango: RSI/MFI ayudan a detectar extremos dentro del rango](./assets/oscillators-in-range.png)
@@ -69,7 +69,7 @@ Un **mercado lateral (range)** es una fase de consolidación donde el precio osc
 
 **Reglas:**
 
-1. usar **[RSI](/es/library/technical-analysis-rsi)** o **[MFI](/es/library/money-flow-index)**
+1. usar **[RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi)** o **[MFI](https://marketlab-academy.org/es/library/money-flow-index)**
 
 2. comprar cuando RSI < 30 y el precio está cerca del soporte
 3. vender cuando RSI > 70 y el precio está cerca de la resistencia
@@ -79,14 +79,14 @@ Un **mercado lateral (range)** es una fase de consolidación donde el precio osc
 
 **Idea:** usar fake-outs más allá de los límites del rango para entrar de vuelta al rango.
 
-Lee más en **[Falsos rompimientos en trading](/es/library/false-breakouts-trading)**.
+Lee más en **[Falsos rompimientos en trading](https://marketlab-academy.org/es/library/false-breakouts-trading)**.
 
 ## Gestión de riesgo en rangos
 
 Reglas básicas:
 
 1. stop-loss obligatorio
-2. limitar el riesgo por operación/idea (p.ej. 1–2% o según tu enfoque; ver [gestión de riesgo](/es/library/risk-management-crypto-trading-bots/))
+2. limitar el riesgo por operación/idea (p.ej. 1–2% o según tu enfoque; ver [gestión de riesgo](https://marketlab-academy.org/es/library/risk-management-crypto-trading-bots/))
 3. tamaño de posición acorde al ancho del rango
 4. diversificar (no concentrar todo en un solo rango)
 
@@ -111,17 +111,17 @@ Desde días hasta meses, dependiendo del marco temporal.
 
 **¿Qué indicadores funcionan mejor en rangos?**
 
-Osciladores como **[RSI](/es/library/technical-analysis-rsi)**, **[MFI](/es/library/money-flow-index)** y **[Williams %R](/es/library/williams-percent-range-r)** suelen ser más útiles que indicadores tendenciales.
+Osciladores como **[RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi)**, **[MFI](https://marketlab-academy.org/es/library/money-flow-index)** y **[Williams %R](https://marketlab-academy.org/es/library/williams-percent-range-r)** suelen ser más útiles que indicadores tendenciales.
 
-**Conclusión:** los rangos se pueden operar con lógica clara (range/grid), control de riesgo y validación con **[backtesting](/es/library/what-are-backtests)**.
+**Conclusión:** los rangos se pueden operar con lógica clara (range/grid), control de riesgo y validación con **[backtesting](https://marketlab-academy.org/es/library/what-are-backtests)**.
 
 
 ## Materiales relacionados
 
-**Fundamentos y estrategias:** Después de dominar los conceptos básicos, asegúrese de estudiar nuestra estrategia principal [ELDER 2.0](/es/library/spot-strategy-elder-20/), diseñada específicamente para el mercado spot. Además, comprenda [la diferencia entre spot, margen y futuros](/es/library/spot-trading-vs-futures-margin/).
+**Fundamentos y estrategias:** Después de dominar los conceptos básicos, asegúrese de estudiar nuestra estrategia principal [ELDER 2.0](https://marketlab-academy.org/es/library/spot-strategy-elder-20/), diseñada específicamente para el mercado spot. Además, comprenda [la diferencia entre spot, margen y futuros](https://marketlab-academy.org/es/library/spot-trading-vs-futures-margin/).
 
-**Herramientas y automatización:** Para aumentar la eficiencia, utilice indicadores técnicos como el [Oscilador Estocástico](/es/library/stochastic-oscillator/) y las [Bandas de Bollinger](/es/library/bollinger-bands/). Una guía paso a paso sobre [cómo configurar un bot de trading en Bybit](/es/library/bybit-trading-bot-setup/) le ayudará a automatizar los procesos.
+**Herramientas y automatización:** Para aumentar la eficiencia, utilice indicadores técnicos como el [Oscilador Estocástico](https://marketlab-academy.org/es/library/stochastic-oscillator/) y las [Bandas de Bollinger](https://marketlab-academy.org/es/library/bollinger-bands/). Una guía paso a paso sobre [cómo configurar un bot de trading en Bybit](https://marketlab-academy.org/es/library/bybit-trading-bot-setup/) le ayudará a automatizar los procesos.
 
-**Experiencia y riesgos:** Aprenda [cómo empezar a operar con un depósito pequeño](/es/library/how-to-start-trading-small-deposit/) y asegúrese de estudiar los fundamentos de la [gestión de riesgos](/es/library/risk-management-crypto-trading-bots/) y consulte nuestro [diario de depósito real](/es/library/surviving-drawdown-diary/).
+**Experiencia y riesgos:** Aprenda [cómo empezar a operar con un depósito pequeño](https://marketlab-academy.org/es/library/how-to-start-trading-small-deposit/) y asegúrese de estudiar los fundamentos de la [gestión de riesgos](https://marketlab-academy.org/es/library/risk-management-crypto-trading-bots/) y consulte nuestro [diario de depósito real](https://marketlab-academy.org/es/library/surviving-drawdown-diary/).
 
 Si le interesa esta estrategia y desea seguir el desarrollo de nuestro proyecto, visite la página [Sobre nosotros](/es/about/) — allí hablamos de nuestra misión y de cómo puede apoyar la startup.

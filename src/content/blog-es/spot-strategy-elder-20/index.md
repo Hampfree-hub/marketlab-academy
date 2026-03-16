@@ -9,32 +9,32 @@ category: 'algo-trading'
 
 ## ¿Por qué elegir ELDER 2.0?
 
-Esta estrategia fue desarrollada para trabajar en el [mercado spot](/es/library/what-is-spot-trading/), donde no existe el riesgo de liquidación. La idea central es entrar en la posición en pequeñas partes cuando aparecen señales de sobrecompra/sobreventa y promediar durante las caídas de precio.
+Esta estrategia fue desarrollada para trabajar en el [mercado spot](https://marketlab-academy.org/es/library/what-is-spot-trading/), donde no existe el riesgo de liquidación. La idea central es entrar en la posición en pequeñas partes cuando aparecen señales de sobrecompra/sobreventa y promediar durante las caídas de precio.
 
 **Ventajas del enfoque:**
 
 - Trabajo sin apalancamiento — sin riesgo de liquidación
 - Promediación de posiciones en lugar de stop-loss
-- Automatización a través de [bots de trading en exchanges](/es/library/bybit-trading-bot-setup/)
+- Automatización a través de [bots de trading en exchanges](https://marketlab-academy.org/es/library/bybit-trading-bot-setup/)
 - Eficacia confirmada en diversas condiciones de mercado
 
 ## Los tres pilares de la estrategia ELDER 2.0
 
 ### 1. Stochastic Oscillator — señal principal
 
-**Función:** Determinación de zonas de sobrecompra y sobreventa para los puntos de entrada. Lee más sobre el funcionamiento del [indicador Stochastic](/es/library/stochastic-oscillator/) en un artículo dedicado.
+**Función:** Determinación de zonas de sobrecompra y sobreventa para los puntos de entrada. Lee más sobre el funcionamiento del [indicador Stochastic](https://marketlab-academy.org/es/library/stochastic-oscillator/) en un artículo dedicado.
 
 **Configuración:** 14, 3, 3. Zona de sobreventa: 20, Zona de sobrecompra: 80.
 
 ### 2. Bollinger Bands — filtro de volatilidad
 
-**Función:** Confirmación de señales en momentos de expansión del precio. Aprende más sobre las [Bandas de Bollinger y su aplicación](/es/library/bollinger-bands/).
+**Función:** Confirmación de señales en momentos de expansión del precio. Aprende más sobre las [Bandas de Bollinger y su aplicación](https://marketlab-academy.org/es/library/bollinger-bands/).
 
 **Configuración:** Período 20, Desviación 2.0.
 
 ### 3. CMO (Chande Momentum Oscillator) — filtro de impulso
 
-**Función:** Filtrado de señales falsas. Un análisis detallado del [indicador CMO](/es/library/chande-momentum-oscillator/) ayudará a entender mejor su rol.
+**Función:** Filtrado de señales falsas. Un análisis detallado del [indicador CMO](https://marketlab-academy.org/es/library/chande-momentum-oscillator/) ayudará a entender mejor su rol.
 
 **Configuración:** Período 14, Zona de filtrado: de −50 a +50.
 
