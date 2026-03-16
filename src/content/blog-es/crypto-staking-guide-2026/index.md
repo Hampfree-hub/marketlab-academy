@@ -8,9 +8,6 @@ draft: false
 
 # Staking de Criptomonedas en 2026: Guía Completa para Principiantes
 
-> **Tiempo de lectura:** 15-20 minutos
-> **Nivel:** Principiante — Intermedio
-> **Actualidad:** Marzo 2026
 
 **Staking** es una forma de ingreso pasivo en criptomonedas con algoritmo de consenso Proof-of-Stake (PoS). Bloqueas tus monedas en la red para apoyar las operaciones del blockchain y recibes recompensas por ello.
 

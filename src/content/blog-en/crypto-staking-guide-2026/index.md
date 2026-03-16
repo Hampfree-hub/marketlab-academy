@@ -8,9 +8,6 @@ draft: false
 
 # Cryptocurrency Staking in 2026: Complete Beginner's Guide
 
-> **Reading time:** 15-20 minutes
-> **Level:** Beginner — Intermediate
-> **Actual:** March 2026
 
 **Staking** is a way of passive income on cryptocurrencies with Proof-of-Stake (PoS) consensus algorithm. You lock your coins in the network to support blockchain operations and receive rewards for it.
 
