@@ -32,7 +32,7 @@ In 2026, staking remains one of the most popular ways to earn in crypto. In this
 | **Entry threshold** | Expensive equipment | From 1 coin (depends on network) |
 | **Yield** | Depends on price and difficulty | Fixed % annually |
 
-**Important:** Bitcoin **cannot** be staked — it uses Proof-of-Work. But you can use analogues (e.g., staking wrapped tokens).
+**Important:** Bitcoin **cannot** be staked — it uses Proof-of-Work. Wrapped tokens (wBTC, renBTC) are simply tokens on other blockchains, backed by BTC. They don't provide Bitcoin staking yields, but can be used in DeFi for yield (e.g., liquidity provision).
 
 ---
 
@@ -44,24 +44,24 @@ In 2026, staking remains one of the most popular ways to earn in crypto. In this
 |------|--------------|-------------|----------------|------|
 | **Ethereum (ETH)** | 3-5% | 0.01 ETH (via pools) | None (flexible) | Low |
 | **Cardano (ADA)** | 3-4% | 1 ADA | None | Low |
-| **Solana (SOL)** | 6-8% | 0.01 SOL | None | Low |
-| **Polkadot (DOT)** | 10-12% | 1 DOT | 28 days | Medium |
-| **Cosmos (ATOM)** | 15-20% | 1 ATOM | 21 days | Medium |
-| **Avalanche (AVAX)** | 8-10% | 25 AVAX | 2 weeks | Low |
-| **Polygon (MATIC)** | 5-7% | 1 MATIC | None | Low |
-| **Algorand (ALGO)** | 5-6% | 1 ALGO | None | Low |
-| **Tezos (XTZ)** | 5-6% | 1 XTZ | 7 days | Low |
-| **VeChain (VET)** | 2-3% | 1 VET | None | Low |
+| **Solana (SOL)** | 5-6% | 0.01 SOL | None | Low |
+| **Polkadot (DOT)** | 7-8% | 1 DOT | 28 days | Medium |
+| **Cosmos (ATOM)** | 10-15% | 1 ATOM | 21 days | Medium |
+| **Avalanche (AVAX)** | 6-7% | 25 AVAX | 2 weeks | Low |
+| **Polygon (POL)** | 3-4% | 1 POL | None | Low |
+| **Algorand (ALGO)** | 4% | 1 ALGO | None | Low |
+| **Tezos (XTZ)** | 4-5% | 1 XTZ | 7 days | Low |
+| **VeChain (VET)** | 2-3% (via VTHO) | 1 VET | None | Low |
 
 **Data as of March 2026.** Sources: StakingRewards.com, official project websites.
 
 ### What to Look for When Choosing a Coin
 
 1. **Annual Yield (APY):**
-   - 3-5% — conservative (ETH, ADA)
-   - 5-10% — medium (SOL, AVAX)
-   - 10-20% — high (ATOM, DOT)
-   - 20%+ — high risk (new projects)
+   - 3-5% — conservative (ETH, ADA, POL)
+   - 5-8% — medium (SOL, AVAX, DOT)
+   - 10-15% — high (ATOM)
+   - 15%+ — high risk (new projects)
 
 2. **Lock-up Period:**
    - None — can withdraw anytime
@@ -170,8 +170,8 @@ In 2026, staking remains one of the most popular ways to earn in crypto. In this
 - Flexible withdrawal (no lock-up)
 
 **Recommendations for beginners:**
-- **ETH** — most reliable, 3-5% annually
-- **SOL** — high yield, 6-8% annually
+- **ETH** — most reliable, 3-4% annually
+- **SOL** — high yield, 5-6% annually
 - **ADA** — no lock-up, 3-4% annually
 
 ### Step 2: Choose Method
@@ -310,7 +310,7 @@ Use online calculators:
 
 | Method | Yield | Risk | Liquidity | For whom |
 |--------|-------|------|-----------|----------|
-| **Staking** | 3-20% annually | Low | High | Conservative |
+| **Staking** | 3-15% annually | Low | High | Conservative |
 | **Trading** | -100% to +500% | High | High | Experienced traders |
 | **Lending** | 5-15% annually | Medium | Medium | Medium risk |
 | **Yield Farming** | 20-100% annually | High | Low | Experienced DeFi |
@@ -332,11 +332,11 @@ Use online calculators:
 5. Keep records for taxes
 
 **Optimal strategy for beginner:**
-- 50% ETH (3-5% annually, low risk)
-- 30% SOL (6-8% annually, medium risk)
-- 20% ATOM (15-20% annually, high risk)
+- 50% ETH (3-4% annually, low risk)
+- 30% SOL (5-6% annually, medium risk)
+- 20% ATOM (10-15% annually, medium risk)
 
-**Expected yield:** 6-10% annually in dollars + coin price appreciation.
+**Expected yield:** 5-8% annually in dollars + coin price appreciation.
 
 **Useful resources:**
 
