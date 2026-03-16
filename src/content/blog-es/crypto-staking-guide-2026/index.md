@@ -313,11 +313,11 @@ Usa calculadoras en línea:
 
 | Método | Rentabilidad | Riesgo | Liquidez | Para quién |
 |--------|--------------|--------|----------|------------|
-| **Staking** | 3-20% anual | 🟢 Bajo | Alta | Conservadores |
-| **Trading** | -100% a +500% | 🔴 Alto | Alta | Traders experimentados |
-| **Lending** | 5-15% anual | 🟡 Medio | Media | Riesgo medio |
-| **Yield Farming** | 20-100% anual | 🔴 Alto | Baja | DeFi experimentado |
-| **Airdrops** | 0-1000% único | 🟡 Medio | Baja | Cazadores |
+| **Staking** | 3-20% anual | Bajo | Alta | Conservadores |
+| **Trading** | -100% a +500% | Alto | Alta | Traders experimentados |
+| **Lending** | 5-15% anual | Medio | Media | Riesgo medio |
+| **Yield Farming** | 20-100% anual | Alto | Baja | DeFi experimentado |
+| **Airdrops** | 0-1000% único | Medio | Baja | Cazadores |
 
 **Conclusión:** El staking es el método más conservador con rendimiento predecible.
 
@@ -328,11 +328,11 @@ Usa calculadoras en línea:
 **Staking en 2026** es una forma confiable de ingreso pasivo en criptomonedas Proof-of-Stake.
 
 **Reglas principales:**
-1. ✅ Elige monedas top-20 (bajo riesgo)
-2. ✅ Usa exchanges para cantidades pequeñas (< $1000)
-3. ✅ Evita bloqueos > 28 días
-4. ✅ Diversifica (3-5 monedas)
-5. ✅ Mantén registros para impuestos
+1. Elige monedas top-20 (bajo riesgo)
+2. Usa exchanges para cantidades pequeñas (< $1000)
+3. Evita bloqueos > 28 días
+4. Diversifica (3-5 monedas)
+5. Mantén registros para impuestos
 
 **Estrategia óptima para principiantes:**
 - 50% ETH (3-5% anual, bajo riesgo)

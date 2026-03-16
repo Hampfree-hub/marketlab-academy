@@ -326,10 +326,10 @@ Optimism (OP):
 
 | Nivel | Inversores | Ejemplos | Confiabilidad |
 |-------|------------|----------|---------------|
-| **Nivel 1** | VCs Top | a16z, Paradigm, Sequoia | ✅ Alta |
-| **Nivel 2** | Fondos conocidos | Coinbase Ventures, Binance Labs | ✅ Media |
-| **Nivel 3** | Fondos regionales | Local VC, Angel Group | 🟡 Baja |
-| **Nivel 4** | Desconocidos | "Crypto Fund", "Blockchain Capital" | ❌ Muy baja |
+| **Nivel 1** | VCs Top | a16z, Paradigm, Sequoia | Alta |
+| **Nivel 2** | Fondos conocidos | Coinbase Ventures, Binance Labs | Media |
+| **Nivel 3** | Fondos regionales | Local VC, Angel Group | Baja |
+| **Nivel 4** | Desconocidos | "Crypto Fund", "Blockchain Capital" | Muy baja |
 
 ---
 
@@ -469,16 +469,16 @@ Binance (2023):
 
 Verificando nuevo proyecto L2:
 
-1. Equipo: ✅ Público, experiencia en Ethereum Foundation
-2. Producto: ✅ Testnet funcionando, GitHub activo
-3. Tokenomics: 🟡 40% al equipo (vesting de 2 años)
-4. Liquidez: ✅ Top-150, volumen $5M
-5. Comunidad: ✅ 50,000 Twitter, 5,000 Discord
-6. Asociaciones: ✅ Polygon, Chainlink (confirmado)
-7. Inversores: ✅ a16z, Paradigm
-8. Roadmap: ✅ Cumpliendo promesas
-9. Competidores: 🟡 Arbitrum, Optimism dominan
-10. Regulatorio: ✅ Sin demandas, jurisdicción EE.UU.
+1. Equipo: Público, experiencia en Ethereum Foundation
+2. Producto: Testnet funcionando, GitHub activo
+3. Tokenomics: 40% al equipo (vesting de 2 años)
+4. Liquidez: Top-150, volumen $5M
+5. Comunidad: 50,000 Twitter, 5,000 Discord
+6. Asociaciones: Polygon, Chainlink (confirmado)
+7. Inversores: a16z, Paradigm
+8. Roadmap: Cumpliendo promesas
+9. Competidores: Arbitrum, Optimism dominan
+10. Regulatorio: Sin demandas, jurisdicción EE.UU.
 
 **Resultado:** 8 de 10 "Bien" → se puede considerar más profundo
 

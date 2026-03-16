@@ -313,11 +313,11 @@ Use online calculators:
 
 | Method | Yield | Risk | Liquidity | For whom |
 |--------|-------|------|-----------|----------|
-| **Staking** | 3-20% annually | 🟢 Low | High | Conservative |
-| **Trading** | -100% to +500% | 🔴 High | High | Experienced traders |
-| **Lending** | 5-15% annually | 🟡 Medium | Medium | Medium risk |
-| **Yield Farming** | 20-100% annually | 🔴 High | Low | Experienced DeFi |
-| **Airdrops** | 0-1000% one-time | 🟡 Medium | Low | Hunters |
+| **Staking** | 3-20% annually | Low | High | Conservative |
+| **Trading** | -100% to +500% | High | High | Experienced traders |
+| **Lending** | 5-15% annually | Medium | Medium | Medium risk |
+| **Yield Farming** | 20-100% annually | High | Low | Experienced DeFi |
+| **Airdrops** | 0-1000% one-time | Medium | Low | Hunters |
 
 **Conclusion:** Staking is the most conservative method with predictable yield.
 
@@ -328,11 +328,11 @@ Use online calculators:
 **Staking in 2026** is a reliable way of passive income on Proof-of-Stake cryptocurrencies.
 
 **Main rules:**
-1. ✅ Choose top-20 coins (low risk)
-2. ✅ Use exchanges for small amounts (< $1000)
-3. ✅ Avoid lock-ups > 28 days
-4. ✅ Diversify (3-5 coins)
-5. ✅ Keep records for taxes
+1. Choose top-20 coins (low risk)
+2. Use exchanges for small amounts (< $1000)
+3. Avoid lock-ups > 28 days
+4. Diversify (3-5 coins)
+5. Keep records for taxes
 
 **Optimal strategy for beginner:**
 - 50% ETH (3-5% annually, low risk)
