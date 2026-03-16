@@ -3,7 +3,7 @@ title: 'Cómo Verificar un Proyecto Cripto Antes de Comprar: Checklist de 10 Pun
 description: 'Checklist paso a paso para verificar proyecto cripto antes de invertir. Equipo, tokenomics, producto, comunidad, banderas rojas. 10 minutos para verificar.'
 pubDate: '2026-03-16'
 category: 'fundamental-analysis'
-draft: true
+draft: false
 ---
 
 # Cómo Verificar un Proyecto Cripto Antes de Comprar: Checklist de 10 Puntos
@@ -529,5 +529,5 @@ Presta atención especial a:
 ---
 
 **Checklist creado:** 15 de marzo de 2026
-**Estado:** Borrador (draft: true)
+**Estado:** Borrador (draft: false)
 **Palabras:** ~2,800 (listo para publicación)

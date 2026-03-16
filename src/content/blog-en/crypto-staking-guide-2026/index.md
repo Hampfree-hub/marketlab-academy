@@ -3,7 +3,7 @@ title: "Cryptocurrency Staking in 2026: Complete Beginner's Guide"
 description: 'Crypto staking: how to earn on Proof-of-Stake. Yield, risks, coin selection, pools vs nodes. Actual 2026 data.'
 pubDate: '2026-03-16'
 category: 'algo-trading'
-draft: true
+draft: false
 ---
 
 # Cryptocurrency Staking in 2026: Complete Beginner's Guide
@@ -375,5 +375,5 @@ ETH staking via pool (Lido, Rocket Pool) or top exchange (Bybit, Binance).
 ---
 
 **Guide created:** March 15, 2026
-**Status:** Draft (draft: true)
+**Status:** Draft (draft: false)
 **Words:** ~2,200 (ready for publication)

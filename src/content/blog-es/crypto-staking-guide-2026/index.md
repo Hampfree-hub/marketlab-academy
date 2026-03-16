@@ -3,7 +3,7 @@ title: 'Staking de Criptomonedas en 2026: Guía Completa para Principiantes'
 description: 'Staking de cripto: cómo ganar con Proof-of-Stake. Rentabilidad, riesgos, selección de monedas, pools vs nodos. Datos actualizados de 2026.'
 pubDate: '2026-03-16'
 category: 'algo-trading'
-draft: true
+draft: false
 ---
 
 # Staking de Criptomonedas en 2026: Guía Completa para Principiantes
@@ -375,5 +375,5 @@ Staking de ETH vía pool (Lido, Rocket Pool) o exchange top (Bybit, Binance).
 ---
 
 **Guía creada:** 15 de marzo de 2026
-**Estado:** Borrador (draft: true)
+**Estado:** Borrador (draft: false)
 **Palabras:** ~2,200 (lista para publicación)

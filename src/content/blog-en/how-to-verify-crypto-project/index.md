@@ -3,7 +3,7 @@ title: 'How to Verify a Crypto Project Before Buying: 10-Point Checklist'
 description: 'Step-by-step checklist for crypto project verification before investing. Team, tokenomics, product, community, red flags. 10 minutes to check.'
 pubDate: '2026-03-16'
 category: 'fundamental-analysis'
-draft: true
+draft: false
 ---
 
 # How to Verify a Crypto Project Before Buying: 10-Point Checklist
@@ -529,5 +529,5 @@ Pay special attention to:
 ---
 
 **Checklist created:** March 15, 2026
-**Status:** Draft (draft: true)
+**Status:** Draft (draft: false)
 **Words:** ~2,800 (ready for publication)
