@@ -6,8 +6,6 @@ category: 'fundamental-analysis'
 draft: false
 ---
 
-# Cómo Verificar un Proyecto Cripto Antes de Comprar: Checklist de 10 Puntos
-
 **Importante:** Este checklist es un filtro "basura/no basura", no una recomendación de compra. Para análisis profundo, ver [Análisis Fundamental: Checklist de 15 Minutos](https://marketlab-academy.org/es/library/fundamental-analysis-checklist/).
 
 **Por qué importa:**

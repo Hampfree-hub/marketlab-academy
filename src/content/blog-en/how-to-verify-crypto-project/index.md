@@ -6,8 +6,6 @@ category: 'fundamental-analysis'
 draft: false
 ---
 
-# How to Verify a Crypto Project Before Buying: 10-Point Checklist
-
 **Important:** This checklist is a "junk/not junk" filter, not a buy recommendation. For deep analysis, see [Fundamental Analysis: 15-Minute Checklist](https://marketlab-academy.org/en/library/fundamental-analysis-checklist/).
 
 **Why this matters:**
