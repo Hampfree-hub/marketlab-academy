@@ -372,8 +372,4 @@ Yes, in most countries. Rewards are income (13-15% НДФЛ in Russia, 10-37% in
 
 ETH staking via pool (Lido, Rocket Pool) or top exchange (Bybit, Binance).
 
----
 
-**Guide created:** March 15, 2026
-**Status:** Draft (draft: false)
-**Words:** ~2,200 (ready for publication)

@@ -372,8 +372,4 @@ Sí, en la mayoría de países. Las recompensas son ingresos (13-15% НДФЛ en
 
 Staking de ETH vía pool (Lido, Rocket Pool) o exchange top (Bybit, Binance).
 
----
 
-**Guía creada:** 15 de marzo de 2026
-**Estado:** Borrador (draft: false)
-**Palabras:** ~2,200 (lista para publicación)

@@ -526,8 +526,4 @@ Presta atención especial a:
 - Código: ¿hay auditoría? (Certik, Hacken)
 - Comunidad: ¿personas reales o bots?
 
----
 
-**Checklist creado:** 15 de marzo de 2026
-**Estado:** Borrador (draft: false)
-**Palabras:** ~2,800 (listo para publicación)
