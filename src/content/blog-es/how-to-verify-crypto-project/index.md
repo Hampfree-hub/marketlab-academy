@@ -8,10 +8,6 @@ draft: false
 
 # Cómo Verificar un Proyecto Cripto Antes de Comprar: Checklist de 10 Puntos
 
-> **Tiempo de verificación:** 10-15 minutos
-> **Nivel:** Principiante — Intermedio
-> **Objetivo:** Filtrar 90% de proyectos basura antes del análisis profundo
-
 **Importante:** Este checklist es un filtro "basura/no basura", no una recomendación de compra. Para análisis profundo, ver [Análisis Fundamental: Checklist de 15 Minutos](https://marketlab-academy.org/es/library/fundamental-analysis-checklist/).
 
 **Por qué importa:**

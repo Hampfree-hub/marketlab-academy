@@ -8,10 +8,6 @@ draft: false
 
 # How to Verify a Crypto Project Before Buying: 10-Point Checklist
 
-> **Time to check:** 10-15 minutes
-> **Level:** Beginner — Intermediate
-> **Goal:** Filter out 90% of junk projects before deep analysis
-
 **Important:** This checklist is a "junk/not junk" filter, not a buy recommendation. For deep analysis, see [Fundamental Analysis: 15-Minute Checklist](https://marketlab-academy.org/en/library/fundamental-analysis-checklist/).
 
 **Why this matters:**
