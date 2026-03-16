@@ -2,7 +2,7 @@
 title: "Cryptocurrency Staking in 2026: Complete Beginner's Guide"
 description: 'Crypto staking: how to earn on Proof-of-Stake. Yield, risks, coin selection, pools vs nodes. Actual 2026 data.'
 pubDate: '2026-03-16'
-category: 'algo-trading'
+category: 'crypto'
 draft: false
 ---
 
