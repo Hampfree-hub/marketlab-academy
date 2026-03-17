@@ -9,6 +9,12 @@ export default defineConfig({
 	site: 'https://marketlab-academy.org',
 	base: '/',
 	integrations: [mdx(), sitemap()],
+	image: {
+		// Отключаем оптимизацию изображений — сохраняем оригинальный формат (PNG)
+		service: {
+			entrypoint: 'astro/assets/services/noop',
+		},
+	},
 	vite: {
 		// Кэш вне node_modules — меньше конфликтов с IDE/антивирусом на Windows
 		cacheDir: '.vite',
