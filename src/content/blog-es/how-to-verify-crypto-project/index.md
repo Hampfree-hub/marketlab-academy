@@ -49,6 +49,8 @@ Todas estas banderas rojas son visibles en 5 minutos. El checklist de abajo ayud
 3. Verifica experiencia: ¿trabajaron en empresas conocidas?
 4. Googlea nombres + "scam" o "fraud" (por si acaso)
 
+![Verificación del equipo del proyecto en LinkedIn: perfil del CEO con experiencia laboral y educación](./assets/Linkedin-Logo.png)
+
 **Ejemplo de buen equipo:**
 
 Arbitrum (ARB):
@@ -88,6 +90,8 @@ SafeMoon (2021):
 2. Revisa la pestaña "Commits": ¿hay actividad en el último mes?
 3. Revisa el número de desarrolladores: ¿1-2 personas o equipo?
 4. Abre la documentación: ¿está claramente descrito el producto?
+
+![Verificando actividad de GitHub: página del repositorio de Chainlink con commits y número de desarrolladores](./assets/Github smartcontractkit chainlink.png)
 
 **Ejemplo de buen producto:**
 
@@ -130,6 +134,8 @@ BitConnect (2016-2018):
 3. Abre Token Unlocks → revisa el calendario de desbloqueo
 4. Encuentra la sección "Token Distribution" en el Whitepaper
 
+![Tokenomics en CoinMarketCap: relación entre Circulating Supply y Max Supply](./assets/Tokenomics on CoinMarketCap.png)
+
 **Ejemplo de buena tokenomics:**
 
 Ethereum (ETH):
@@ -154,6 +160,8 @@ FTX Token (FTT, 2022):
 | **Equipo** | <15% | 15-25% | >25% |
 | **Vesting** | 3+ años | 2-3 años | <1 año |
 | **Inflación** | <5% | 5-15% | >15% |
+
+![Calendario de desbloqueo de tokens y vesting: schedule de liberación de tokens del equipo e inversores](./assets/Token Unlock And Vesting Schedules.png)
 
 ---
 

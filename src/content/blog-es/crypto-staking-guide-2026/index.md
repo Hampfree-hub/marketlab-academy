@@ -57,6 +57,8 @@ En 2026, el staking sigue siendo una de las formas más populares de ganar en cr
 
 **Datos a marzo de 2026.** Fuentes: StakingRewards.com, sitios web oficiales de proyectos.
 
+![Tabla de rentabilidad de staking: comparación de APY para diferentes monedas (ETH, SOL, ATOM, DOT)](./assets/Staking profitability table.png)
+
 ### Qué Buscar al Elegir una Moneda
 
 1. **Rentabilidad Anual (APY):**
@@ -94,6 +96,8 @@ En 2026, el staking sigue siendo una de las formas más populares de ganar en cr
 | **Complejidad** | Baja (2 clics) | Media | Alta |
 | **Riesgos** | Hack del exchange | Contrato inteligente | Slashing, tiempo de inactividad |
 | **Para quién** | Principiantes, <$1000 | $1000-$10,000 | $10,000+, técnicos |
+
+![Proveedores de staking: comparación de rentabilidad y confiabilidad (Nansen)](./assets/Staking Rewards Providers Nansen.png)
 
 ---
 

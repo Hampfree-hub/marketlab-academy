@@ -49,6 +49,8 @@ All these red flags are visible in 5 minutes. The checklist below will help avoi
 3. Check experience: did they work in known companies?
 4. Google names + "scam" or "fraud" (just in case)
 
+![Checking project team on LinkedIn: CEO profile with work experience and education](./assets/Linkedin-Logo.png)
+
 **Example of good team:**
 
 Arbitrum (ARB):
@@ -88,6 +90,8 @@ SafeMoon (2021):
 2. Check "Commits" tab: any activity in last month?
 3. Check number of developers: 1-2 people or team?
 4. Open documentation: is product clearly described?
+
+![Checking GitHub activity: Chainlink repository page with commits and developer count](./assets/Github smartcontractkit chainlink.png)
 
 **Example of good product:**
 
@@ -130,6 +134,8 @@ BitConnect (2016-2018):
 3. Open Token Unlocks → check unlock schedule
 4. Find "Token Distribution" section in Whitepaper
 
+![Tokenomics on CoinMarketCap: Circulating Supply vs Max Supply ratio](./assets/Tokenomics on CoinMarketCap.png)
+
 **Example of good tokenomics:**
 
 Ethereum (ETH):
@@ -154,6 +160,8 @@ FTX Token (FTT, 2022):
 | **Team** | <15% | 15-25% | >25% |
 | **Vesting** | 3+ years | 2-3 years | <1 year |
 | **Inflation** | <5% | 5-15% | >15% |
+
+![Token unlock and vesting schedule: calendar of team and investor token unlocks](./assets/Token Unlock And Vesting Schedules.png)
 
 ---
 
