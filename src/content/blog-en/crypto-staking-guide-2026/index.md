@@ -57,7 +57,7 @@ In 2026, staking remains one of the most popular ways to earn in crypto. In this
 
 **Data as of March 2026.** Sources: StakingRewards.com, official project websites.
 
-![Staking profitability table: APY comparison for different coins (ETH, SOL, ATOM, DOT)](./assets/Staking profitability table.png)
+![Staking profitability table: APY comparison for different coins (ETH, SOL, ATOM, DOT)](./assets/staking-profitability-table.png)
 
 ### What to Look for When Choosing a Coin
 
@@ -97,7 +97,7 @@ In 2026, staking remains one of the most popular ways to earn in crypto. In this
 | **Risks** | Exchange hack | Smart contract | Slashing, downtime |
 | **For whom** | Beginners, <$1000 | $1000-$10,000 | $10,000+, tech-savvy |
 
-![Staking providers: yield and reliability comparison (Nansen)](./assets/Staking Rewards Providers Nansen.png)
+![Staking providers: yield and reliability comparison (Nansen)](./assets/staking-rewards-providers-nansen.png)
 
 ---
 

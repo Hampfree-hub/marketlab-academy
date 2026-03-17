@@ -57,7 +57,7 @@ draft: false
 
 **Данные на март 2026.** Источники: StakingRewards.com, официальные сайты проектов.
 
-![Таблица доходности стейкинга: сравнение APY для разных монет (ETH, SOL, ATOM, DOT)](./assets/Staking profitability table.png)
+![Таблица доходности стейкинга: сравнение APY для разных монет (ETH, SOL, ATOM, DOT)](./assets/staking-profitability-table.png)
 
 ### На что смотреть при выборе монеты
 
@@ -97,7 +97,7 @@ draft: false
 | **Риски** | Взлом биржи | Смарт-контракт | Слэшинг, простой |
 | **Для кого** | Новички, <$1000 | $1000-$10,000 | $10,000+, технари |
 
-![Провайдеры стейкинга: сравнение доходности и надёжности (Nansen)](./assets/Staking Rewards Providers Nansen.png)
+![Провайдеры стейкинга: сравнение доходности и надёжности (Nansen)](./assets/staking-rewards-providers-nansen.png)
 
 ---
 
