@@ -91,7 +91,7 @@ SafeMoon (2021):
 3. Посмотрите количество разработчиков: 1-2 человека или команда?
 4. Откройте документацию: понятно ли описан продукт?
 
-![Проверка активности GitHub: страница репозитория Chainlink с коммитами и количеством разработчиков](./assets/Github smartcontractkit chainlink.png)
+![Проверка активности GitHub: страница репозитория Chainlink с коммитами и количеством разработчиков](./assets/github-chainlink.png)
 
 **Пример хорошего продукта:**
 
@@ -134,7 +134,7 @@ BitConnect (2016-2018):
 3. Откройте Token Unlocks → посмотрите график разлоков
 4. Найдите в Whitepaper раздел «Token Distribution»
 
-![График разлоков токенов и вестинга: календарь разблокировки токенов команды и инвесторов](./assets/Token Unlock And Vesting Schedules.png)
+![График разлоков токенов и вестинга: календарь разблокировки токенов команды и инвесторов](./assets/token-unlock-schedule.png)
 
 **Пример хорошей токеномики:**
 
@@ -161,7 +161,7 @@ FTX Token (FTT, 2022):
 | **Вестинг** | 3+ года | 2-3 года | <1 года |
 | **Инфляция** | <5% | 5-15% | >15% |
 
-![Токеномика на CoinMarketCap: соотношение Circulating Supply и Max Supply](./assets/Tokenomics on CoinMarketCap.png)
+![Токеномика на CoinMarketCap: соотношение Circulating Supply и Max Supply](./assets/tokenomics-cmc.png)
 
 ---
 

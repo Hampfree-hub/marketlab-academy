@@ -91,7 +91,7 @@ SafeMoon (2021):
 3. Check number of developers: 1-2 people or team?
 4. Open documentation: is product clearly described?
 
-![Checking GitHub activity: Chainlink repository page with commits and developer count](./assets/Github smartcontractkit chainlink.png)
+![Checking GitHub activity: Chainlink repository page with commits and developer count](./assets/github-chainlink.png)
 
 **Example of good product:**
 
@@ -134,7 +134,7 @@ BitConnect (2016-2018):
 3. Open Token Unlocks → check unlock schedule
 4. Find "Token Distribution" section in Whitepaper
 
-![Tokenomics on CoinMarketCap: Circulating Supply vs Max Supply ratio](./assets/Tokenomics on CoinMarketCap.png)
+![Tokenomics on CoinMarketCap: Circulating Supply vs Max Supply ratio](./assets/tokenomics-cmc.png)
 
 **Example of good tokenomics:**
 
@@ -161,7 +161,7 @@ FTX Token (FTT, 2022):
 | **Vesting** | 3+ years | 2-3 years | <1 year |
 | **Inflation** | <5% | 5-15% | >15% |
 
-![Token unlock and vesting schedule: calendar of team and investor token unlocks](./assets/Token Unlock And Vesting Schedules.png)
+![Token unlock and vesting schedule: calendar of team and investor token unlocks](./assets/token-unlock-schedule.png)
 
 ---
 

@@ -91,7 +91,7 @@ SafeMoon (2021):
 3. Revisa el número de desarrolladores: ¿1-2 personas o equipo?
 4. Abre la documentación: ¿está claramente descrito el producto?
 
-![Verificando actividad de GitHub: página del repositorio de Chainlink con commits y número de desarrolladores](./assets/Github smartcontractkit chainlink.png)
+![Verificando actividad de GitHub: página del repositorio de Chainlink con commits y número de desarrolladores](./assets/github-chainlink.png)
 
 **Ejemplo de buen producto:**
 
@@ -134,7 +134,7 @@ BitConnect (2016-2018):
 3. Abre Token Unlocks → revisa el calendario de desbloqueo
 4. Encuentra la sección "Token Distribution" en el Whitepaper
 
-![Tokenomics en CoinMarketCap: relación entre Circulating Supply y Max Supply](./assets/Tokenomics on CoinMarketCap.png)
+![Tokenomics en CoinMarketCap: relación entre Circulating Supply y Max Supply](./assets/tokenomics-cmc.png)
 
 **Ejemplo de buena tokenomics:**
 
@@ -161,7 +161,7 @@ FTX Token (FTT, 2022):
 | **Vesting** | 3+ años | 2-3 años | <1 año |
 | **Inflación** | <5% | 5-15% | >15% |
 
-![Calendario de desbloqueo de tokens y vesting: schedule de liberación de tokens del equipo e inversores](./assets/Token Unlock And Vesting Schedules.png)
+![Calendario de desbloqueo de tokens y vesting: schedule de liberación de tokens del equipo e inversores](./assets/token-unlock-schedule.png)
 
 ---
 
