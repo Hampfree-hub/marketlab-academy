@@ -16,8 +16,8 @@ interface Props {
 	description: string;
 	metaOgTitle?: string; // OG заголовок для соцсетей (опционально)
 	readingTime?: number; // Время чтения в минутах (вычисляется автоматически)
-	pubDate?: Date;
-	updatedDate?: Date;
+	pubDate?: Date | string;
+	updatedDate?: Date | string;
 	heroImage?: string;
 	bannerImage?: string;
 	category?: string;
@@ -27,6 +27,10 @@ interface Props {
 	headings?: { depth: number; slug: string; text: string }[];
 	customBreadcrumbs?: { label: string; href?: string }[];
 }
+
+// Helper to convert string to Date (Astro 5 collections return dates as strings)
+const toDate = (d: Date | string | undefined): Date | undefined =>
+	d ? (typeof d === 'string' ? new Date(d) : d) : undefined;
 
 const { title, description, metaOgTitle, readingTime, pubDate, updatedDate, heroImage, bannerImage, category, tags, faq, postId, headings, customBreadcrumbs } = Astro.props;
 const displayImage = heroImage || bannerImage;
@@ -69,6 +73,8 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 		
 		{/* Schema.org Article */}
 		{pubDate && (() => {
+			const pubDateObj = toDate(pubDate)!;
+			const updatedDateObj = toDate(updatedDate);
 			// TS: держим как any, т.к. поле image добавляется условно
 			const articleSchema: any = {
 				"@context": "https://schema.org",
@@ -79,8 +85,8 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 					"@type": "Person",
 					"name": "Hampfree"
 				},
-				"datePublished": pubDate.toISOString(),
-				"dateModified": updatedDate ? updatedDate.toISOString() : pubDate.toISOString(),
+				"datePublished": pubDateObj.toISOString(),
+				"dateModified": updatedDateObj ? updatedDateObj.toISOString() : pubDateObj.toISOString(),
 				"publisher": {
 					"@type": "Organization",
 					"name": "MarketLab Academy",
