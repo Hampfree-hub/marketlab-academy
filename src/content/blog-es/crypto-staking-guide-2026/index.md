@@ -141,7 +141,7 @@ En 2026, el staking sigue siendo una de las formas más populares de ganar en cr
 - **SOL:** Marinade Finance, Jito
 - **DOT/ATOM:** Pools en carteras (Polkadot.js, Keplr)
 
-![Interfaz de staking de ETH en Lido.fi: página principal con formulario de entrada de cantidad y APY actual](./assets/Lido.fi—home_page.png)
+![Interfaz de staking de ETH en Lido.fi: página principal con formulario de entrada de cantidad y APY actual](./assets/Lido.fi-home_page.png)
 
 **Para quién:** Cantidades medias ($1000-$10,000), usuarios experimentados
 
@@ -248,7 +248,7 @@ Usa calculadoras en línea:
 - [StakingRewards.com](https://www.stakingrewards.com/)
 - [CryptoRank Staking](https://cryptorank.io/staking)
 
-![Calculadora de rendimiento en StakingRewards.com: formulario de entrada de cantidad, selección de moneda y cálculo de ganancia anual/mensual](./assets/StakingRewards.com—yield_calculator.png)
+![Calculadora de rendimiento en StakingRewards.com: formulario de entrada de cantidad, selección de moneda y cálculo de ganancia anual/mensual](./assets/StakingRewards.com-yield_calculator.png)
 
 ---
 

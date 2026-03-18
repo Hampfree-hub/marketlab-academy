@@ -141,7 +141,7 @@ In 2026, staking remains one of the most popular ways to earn in crypto. In this
 - **SOL:** Marinade Finance, Jito
 - **DOT/ATOM:** Pools in wallets (Polkadot.js, Keplr)
 
-![ETH staking interface on Lido.fi: main page with amount input form and current APY](./assets/Lido.fi—home_page.png)
+![ETH staking interface on Lido.fi: main page with amount input form and current APY](./assets/Lido.fi-home_page.png)
 
 **For whom:** Medium amounts ($1000-$10,000), experienced users
 
@@ -248,7 +248,7 @@ Use online calculators:
 - [StakingRewards.com](https://www.stakingrewards.com/)
 - [CryptoRank Staking](https://cryptorank.io/staking)
 
-![StakingRewards.com yield calculator: amount input form, coin selection, and annual/monthly profit calculation](./assets/StakingRewards.com—yield_calculator.png)
+![StakingRewards.com yield calculator: amount input form, coin selection, and annual/monthly profit calculation](./assets/StakingRewards.com-yield_calculator.png)
 
 ---
 

@@ -141,7 +141,7 @@ draft: false
 - **SOL:** Marinade Finance, Jito
 - **DOT/ATOM:** Пулы в кошельках (Polkadot.js, Keplr)
 
-![Интерфейс стейкинга ETH на Lido.fi: главная страница с формой ввода суммы и текущей доходностью](./assets/Lido.fi—home_page.png)
+![Интерфейс стейкинга ETH на Lido.fi: главная страница с формой ввода суммы и текущей доходностью](./assets/Lido.fi-home_page.png)
 
 **Для кого:** Средние суммы ($1000-$10,000), опытные пользователи
 
@@ -248,7 +248,7 @@ draft: false
 - [StakingRewards.com](https://www.stakingrewards.com/)
 - [CryptoRank Staking](https://cryptorank.io/staking)
 
-![Калькулятор доходности на StakingRewards.com: форма ввода суммы, выбор монеты и расчёт годовой/месячной прибыли](./assets/StakingRewards.com—yield_calculator.png)
+![Калькулятор доходности на StakingRewards.com: форма ввода суммы, выбор монеты и расчёт годовой/месячной прибыли](./assets/StakingRewards.com-yield_calculator.png)
 
 ---
 
