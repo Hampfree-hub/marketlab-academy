@@ -150,3 +150,8 @@ Sí, pero hay que vigilar el riesgo total. No invertir todo el dinero en una est
     <img src="/og/ad/veles-simple_en.png" alt="Veles: Cryptocurrency is simple" style="max-width: 728px; width: 100%; height: auto;" />
   </a>
 </div>
+
+Puedes empezar a operar en exchanges probados:
+- **Bybit** — excelente para [bots de trading](https://www.bybit.com/es/invite?ref=PWMD24)
+- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — interfaz fácil y bonos
+- **BingX** — trading social y copy trading

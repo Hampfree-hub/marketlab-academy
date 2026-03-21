@@ -125,6 +125,9 @@ Setting up a trading bot on Bybit is the first step towards automating trading. 
   </a>
 </div>
 
-Register on **Bybit** and start automated trading.
+You can start trading on proven exchanges:
+- **Bybit** — excellent for [trading bots](https://www.bybit.com/en/invite?ref=PWMD24)
+- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — user-friendly interface and bonuses
+- **BingX** — social trading and copy trading
 
 
