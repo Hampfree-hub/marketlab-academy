@@ -1,4 +1,4 @@
----
+У на ---
 title: 'DCA-стратегия (усреднение) в крипто'
 description: 'Что такое DCA в криптовалютах: как работает стратегия усреднения, плюсы и минусы, как применять на практике и в чём отличия от разовой покупки.'
 pubDate: '2026-01-30'
@@ -216,7 +216,7 @@ DCA лучше всего подходит для крупных активов 
 <!-- Veles Banner -->
 <div style="text-align: center; margin: 3rem 0;">
   <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
-    <img src="/og/ad/veles-simple_ru.png" alt="Veles: Криптовалюта — это просто" style="max-width: 728px; width: 100%; height: auto;" />
+    <img src="/og/ad/veles-algo_ru.png" alt="Veles: Криптовалюта — это просто" style="max-width: 728px; width: 100%; height: auto;" />
   </a>
 </div>
 

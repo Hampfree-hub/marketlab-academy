@@ -1,4 +1,4 @@
----
+В---
 title: 'DCA Strategy (Dollar Cost Averaging) in Crypto'
 description: 'What DCA is in cryptocurrencies: how the averaging strategy works, pros and cons, how to apply it in practice, and how it differs from lump-sum buying.'
 pubDate: '2026-01-30'
@@ -125,7 +125,7 @@ DCA is an effective and relatively safe investment method that minimizes risks f
 <!-- Veles Banner -->
 <div style="text-align: center; margin: 3rem 0;">
   <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
-    <img src="/og/ad/veles-simple_en.png" alt="Veles: Cryptocurrency is simple" style="max-width: 728px; width: 100%; height: auto;" />
+    <img src="/og/ad/veles-algo_ru.png" alt="Veles: Cryptocurrency is simple" style="max-width: 728px; width: 100%; height: auto;" />
   </a>
 </div>
 

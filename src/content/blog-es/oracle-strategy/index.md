@@ -54,7 +54,7 @@ Esta estrategia de trading ha empezado recientemente a probarse en una cuenta de
 <!-- Veles Banner -->
 <div style="text-align: center; margin: 3rem 0;">
   <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
-    <img src="/og/ad/veles-time_en.png" alt="Veles: Free your time" style="max-width: 728px; width: 100%; height: auto;" />
+    <img src="/og/ad/veles-algo_ru.png" alt="Veles: Free your time" style="max-width: 728px; width: 100%; height: auto;" />
   </a>
 </div>
 

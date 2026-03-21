@@ -297,7 +297,7 @@ Grid — это сетка ордеров на покупку и продажу 
 <!-- Veles Banner -->
 <div style="text-align: center; margin: 3rem 0;">
   <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
-    <img src="/og/ad/veles-simple_ru.png" alt="Veles: Криптовалюта — это просто" style="max-width: 728px; width: 100%; height: auto;" />
+    <img src="/og/ad/veles-algo_ru.png" alt="Veles: Криптовалюта — это просто" style="max-width: 728px; width: 100%; height: auto;" />
   </a>
 </div>
 
