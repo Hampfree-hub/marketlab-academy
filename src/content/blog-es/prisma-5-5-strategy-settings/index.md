@@ -60,9 +60,9 @@ Se recomienda usar pares líquidos con alto volumen de operaciones:
 Prisma 5.5 es una estrategia equilibrada para automatizar el trading en spot y futuros con un nivel de riesgo moderado. Es fundamental controlar los niveles de margen y cumplir con las reglas de diversificación para garantizar la estabilidad del sistema de trading.
 
 Existen plataformas verificadas disponibles para comenzar a operar:
-- **Bybit** — uno de los principales exchanges para trabajar con [bots de trading](https://marketlab-academy.org/es/library/bybit-trading-bot-setup/).
+- **[Bybit](https://www.bybit.com/es/invite?ref=PWMD24)** — uno de los principales exchanges para trabajar con bots de trading.
 - **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — una plataforma con interfaz amigable y bonos para nuevos usuarios.
-- **BingX** — una opción popular para social trading y copy trading.
+- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — una opción popular para social trading y copy trading.
 
 ---
 

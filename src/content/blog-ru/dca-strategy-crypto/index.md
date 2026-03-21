@@ -213,4 +213,11 @@ DCA — это когда регулярно (например, раз в нед
 
 DCA лучше всего подходит для крупных активов с высокой ликвидностью (Bitcoin, Ethereum). Для альткоинов с высокой волатильностью и риском обесценивания стратегия может быть менее эффективной. Всегда оценивайте фундаментальные факторы проекта: команду, технологию, токеномику, adopцию.
 
+<!-- Veles Banner -->
+<div style="text-align: center; margin: 3rem 0;">
+  <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
+    <img src="/og/ad/veles-simple_ru.png" alt="Veles: Криптовалюта — это просто" style="max-width: 728px; width: 100%; height: auto;" />
+  </a>
+</div>
+
 

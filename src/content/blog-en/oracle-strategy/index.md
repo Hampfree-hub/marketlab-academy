@@ -51,6 +51,13 @@ This trading strategy has recently started testing on a BingX copy-master accoun
 
 ![ORACLE 1.1 strategy profitability and total P/L on BingX: 7-day chart and top pairs by contribution](./assets/oracle-bingx-pnl.png)
 
+<!-- Veles Banner -->
+<div style="text-align: center; margin: 3rem 0;">
+  <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
+    <img src="/og/ad/veles-time_en.png" alt="Veles: Free your time — Veles bots trade while you sleep" style="max-width: 728px; width: 100%; height: auto;" />
+  </a>
+</div>
+
 ## Link to diversification and risk
 
 One bot’s settings are part of the overall system. How to avoid concentrating all volume in one strategy, spread capital across assets and venues, and reduce risk load is covered in the [Diversification and trading system setup](https://marketlab-academy.org/en/library/diversification-trading-system-part-1/) series. Connecting to an exchange via API and basic steps are in [setting up the bot on Bybit](https://marketlab-academy.org/en/library/bybit-trading-bot-setup/); [risk management](https://marketlab-academy.org/en/library/risk-management-crypto-trading-bots/) principles apply to ORACLE 1.1 as well.
