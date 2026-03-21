@@ -93,3 +93,8 @@ Sí. Sobre historia se comprueba con qué frecuencia el precio se queda en el ra
 **¿Se puede combinar grid con otras estrategias?**
 
 El grid es una estrategia distinta (trading en rango). La misma cuenta se puede repartir entre enfoques (p. ej. parte grid, parte DCA), pero sin superar la gestión global del riesgo y teniendo en cuenta que el grid exige seguir el rango y la posición.
+
+Puedes empezar a operar en exchanges probados:
+- **[Bybit](https://www.bybit.com/es/invite?ref=PWMD24)** — excelente para bots de trading
+- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — interfaz fácil y bonos
+- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — trading social y copy trading
