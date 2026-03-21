@@ -54,7 +54,7 @@ This trading strategy has recently started testing on a BingX copy-master accoun
 <!-- Veles Banner -->
 <div style="text-align: center; margin: 3rem 0;">
   <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
-    <img src="/og/ad/veles-algo_ru.png" alt="Veles: Free your time — Veles bots trade while you sleep" style="max-width: 728px; width: 100%; height: auto;" />
+    <img src="/og/ad/veles-time_en.png" alt="Veles: Free your time — Veles bots trade while you sleep" style="max-width: 728px; width: 100%; height: auto;" />
   </a>
 </div>
 
