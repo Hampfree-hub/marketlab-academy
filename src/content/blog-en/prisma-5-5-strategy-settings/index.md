@@ -88,5 +88,12 @@ Prisma 5.5 uses oscillators to enter oversold zones — this only works for rebo
 
 According to backtests — 100–300% annually. Real returns depend on market, settings, and risk management. Expect drawdowns of 20–40%.
 
+<!-- Veles Banner -->
+<div style="text-align: center; margin: 3rem 0;">
+  <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
+    <img src="/og/ad/veles-time_en.png" alt="Veles: Free your time" style="max-width: 728px; width: 100%; height: auto;" />
+  </a>
+</div>
+
 ---
 

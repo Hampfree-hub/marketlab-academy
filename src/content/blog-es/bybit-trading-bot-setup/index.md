@@ -143,3 +143,10 @@ Sí, el bot debe estar en línea 24/7. Usar VPS (servidor virtual) o hosting en 
 **¿Se pueden usar varios bots simultáneamente?**
 
 Sí, pero hay que vigilar el riesgo total. No invertir todo el dinero en una estrategia. Diversificar entre bots y pares.
+
+<!-- Veles Banner -->
+<div style="text-align: center; margin: 3rem 0;">
+  <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
+    <img src="/og/ad/veles-simple_en.png" alt="Veles: Cryptocurrency is simple" style="max-width: 728px; width: 100%; height: auto;" />
+  </a>
+</div>

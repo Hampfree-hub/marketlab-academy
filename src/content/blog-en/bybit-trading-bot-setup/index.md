@@ -118,6 +118,13 @@ Yes, but with limitations. For full access to exchange features, it is recommend
 
 Setting up a trading bot on Bybit is the first step towards automating trading. A correctly configured bot and well-tuned risk management allow you to trade efficiently 24/7. Before launching a bot, it is recommended to test the strategy on [backtests](https://marketlab-academy.org/en/library/what-are-backtests/).
 
+<!-- Veles Banner -->
+<div style="text-align: center; margin: 3rem 0;">
+  <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
+    <img src="/og/ad/veles-simple_en.png" alt="Veles: Cryptocurrency is simple" style="max-width: 728px; width: 100%; height: auto;" />
+  </a>
+</div>
+
 Register on **Bybit** and start automated trading.
 
 
