@@ -206,6 +206,37 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 		<Footer />
 
 		<script is:inline>
+			// Track banner clicks (GA4)
+			function trackBannerClick(element) {
+				if (typeof gtag === 'undefined') return;
+				
+				const bannerId = element.dataset.bannerId || 'unknown';
+				const bannerName = element.dataset.bannerName || 'Unknown';
+				const bannerLink = element.dataset.bannerLink || '';
+				const category = document.querySelector('article')?.dataset.category || '';
+				const lang = document.querySelector('html')?.lang || 'ru';
+				const pathname = window.location.pathname;
+				
+				// Send event to GA4
+				gtag('event', 'referral_banner_click', {
+					event_category: 'referral',
+					event_label: bannerName,
+					banner_id: bannerId,
+					banner_link: bannerLink,
+					article_category: category,
+					article_lang: lang,
+					article_path: pathname,
+					transport_type: 'beacon',
+				});
+				
+				// Also track as outbound link
+				gtag('event', 'click', {
+					event_category: 'outbound',
+					event_label: bannerLink,
+					transport_type: 'beacon',
+				});
+			}
+
 			// Banner data by category (responsive, localized)
 			function getBannerForCategory(category, lang) {
 				// Veles for algo-trading (ALL languages)
@@ -363,7 +394,11 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 						target="_blank"
 						rel="nofollow sponsored"
 						class="ad-banner-link"
+						data-banner-id="${bannerData.id || 'unknown'}"
+						data-banner-name="${bannerData.title.replace(/"/g, '&quot;')}"
+						data-banner-link="${bannerData.link}"
 						style="--bg-start:${bannerData.colors.bgStart};--bg-end:${bannerData.colors.bgEnd};--text-color:${bannerData.colors.text};--cta-bg:${bannerData.colors.ctaBg};--cta-text:${bannerData.colors.ctaText};--border-color:${bannerData.colors.border};"
+						onclick="trackBannerClick(this)"
 					>
 						<div class="ad-banner-content">
 							<div class="text-block">
