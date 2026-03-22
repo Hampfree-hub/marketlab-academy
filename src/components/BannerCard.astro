@@ -1,0 +1,184 @@
+---
+// Переиспользуемый компонент реферального баннера
+// Можно использовать в статьях вручную или через автовставку
+
+import type { AdBanner } from '../config/ad-banners';
+
+export interface Props {
+  banner: AdBanner;
+  lang?: 'ru' | 'en' | 'es';
+  className?: string;
+}
+
+const { banner, lang = 'ru', className = '' } = Astro.props;
+
+// Формируем финальную ссылку
+const finalLink = banner.link.startsWith('/') 
+  ? banner.link.replace('{lang}', lang)
+  : banner.link;
+---
+
+<div class={`ad-banner-container ${className}`}>
+  <a
+    href={finalLink}
+    target="_blank"
+    rel="nofollow sponsored"
+    class="ad-banner-link"
+    style={{
+      '--bg-start': banner.colors.bgStart,
+      '--bg-end': banner.colors.bgEnd,
+      '--text-color': banner.colors.text,
+      '--cta-bg': banner.colors.ctaBg,
+      '--cta-text': banner.colors.ctaText,
+      '--border-color': banner.colors.border,
+    }}
+  >
+    <div class="ad-banner-content">
+      <h3 class="ad-banner-title">{banner.title}</h3>
+      <p class="ad-banner-subtitle">{banner.subtitle}</p>
+      <span class="ad-banner-cta">{banner.cta}</span>
+    </div>
+  </a>
+</div>
+
+<style>
+  .ad-banner-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+
+  .ad-banner-link {
+    display: block;
+    background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+    border: 4px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ad-banner-link:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Scanlines effect */
+  .ad-banner-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.05) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .ad-banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+
+  .ad-banner-title {
+    font-family: 'Press Start 2P', monospace;
+    font-size: clamp(1rem, 2vw + 0.5rem, 1.5rem);
+    color: var(--text-color);
+    margin: 0 0 1rem 0;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .ad-banner-subtitle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: clamp(0.85rem, 1.5vw + 0.5rem, 1.1rem);
+    color: var(--text-color);
+    margin: 0 0 1.5rem 0;
+    opacity: 0.9;
+    line-height: 1.5;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ad-banner-cta {
+    display: inline-block;
+    font-family: 'Press Start 2P', monospace;
+    font-size: clamp(0.75rem, 1.2vw + 0.5rem, 1rem);
+    background: var(--cta-bg);
+    color: var(--cta-text);
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #000;
+    border-radius: 4px;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .ad-banner-link:hover .ad-banner-cta {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .ad-banner-container {
+      margin: 2rem auto;
+      padding: 0 0.75rem;
+    }
+
+    .ad-banner-link {
+      padding: 1.5rem;
+    }
+
+    .ad-banner-title {
+      font-size: clamp(0.85rem, 2vw + 0.5rem, 1.1rem);
+    }
+
+    .ad-banner-subtitle {
+      font-size: clamp(0.75rem, 1.2vw + 0.5rem, 0.9rem);
+    }
+
+    .ad-banner-cta {
+      font-size: clamp(0.65rem, 1vw + 0.5rem, 0.85rem);
+      padding: 0.6rem 1.2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .ad-banner-container {
+      margin: 1.5rem auto;
+      padding: 0 0.5rem;
+    }
+
+    .ad-banner-link {
+      padding: 1rem;
+      border-width: 3px;
+    }
+
+    .ad-banner-title {
+      font-size: clamp(0.75rem, 2vw + 0.4rem, 0.95rem);
+    }
+
+    .ad-banner-subtitle {
+      font-size: clamp(0.65rem, 1vw + 0.4rem, 0.8rem);
+    }
+
+    .ad-banner-cta {
+      font-size: clamp(0.55rem, 1vw + 0.4rem, 0.75rem);
+      padding: 0.5rem 1rem;
+      box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+    }
+  }
+</style>

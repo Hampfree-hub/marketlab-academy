@@ -7,7 +7,8 @@
     "build": "npx astro build",
     "preview": "npx astro preview",
     "astro": "npx astro",
-    "generate-og": "node scripts/generate-og-images.mjs"
+    "generate-og": "node scripts/generate-og-images.mjs",
+    "generate-ads": "node scripts/generate-ad-banners.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",

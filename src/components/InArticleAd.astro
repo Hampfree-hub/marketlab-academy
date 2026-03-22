@@ -1,0 +1,40 @@
+---
+// Автоматическая вставка реферального баннера в статью
+// Используется в BlogPost.astro для вставки после N-го H2
+
+import BannerCard from '../components/BannerCard.astro';
+import { findBestAdBanner, getBannerLink } from '../config/ad-banners';
+
+export interface Props {
+  category: string;
+  lang: 'ru' | 'en' | 'es';
+  h2Index?: number; // После какого по счёту H2 вставлять (0-based, default: 1 = после 2-го)
+}
+
+const { category, lang, h2Index = 1 } = Astro.props;
+
+// Находим лучший баннер для данной категории и языка
+const banner = findBestAdBanner(category, lang);
+const link = getBannerLink(banner, lang);
+---
+
+<BannerCard banner={banner} lang={lang} className="in-article-ad" />
+
+<style>
+  .in-article-ad {
+    /* Переопределяем margin для вставки внутри статьи */
+    margin: 3rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    .in-article-ad {
+      margin: 2rem 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .in-article-ad {
+      margin: 1.5rem 0;
+    }
+  }
+</style>
