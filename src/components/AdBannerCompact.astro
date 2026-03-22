@@ -39,7 +39,10 @@ const finalLink = banner.link.startsWith('/')
         <div class="title">{banner.title}</div>
         <div class="subtitle">{banner.subtitle}</div>
       </div>
-      <div class="cta">{banner.cta}</div>
+      <div class="cta">
+        {banner.cta.replace('→', '')}
+        <span class="cta-arrow"></span>
+      </div>
     </div>
   </a>
 </div>
@@ -148,7 +151,9 @@ const finalLink = banner.link.startsWith('/')
   }
 
   .cta {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     font-family: 'Press Start 2P', monospace;
     font-size: clamp(10px, 1.5vw + 8px, 12px);
     background: var(--cta-bg);
@@ -160,6 +165,17 @@ const finalLink = banner.link.startsWith('/')
     white-space: nowrap;
     flex-shrink: 0;
     margin: 0;
+  }
+
+  .cta-arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid currentColor;
+    line-height: 0;
+    vertical-align: middle;
   }
 
   /* Mobile responsive */
@@ -176,10 +192,13 @@ const finalLink = banner.link.startsWith('/')
     .ad-banner-content {
       gap: 12px;
       flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
     }
 
     .text-block {
       min-width: 100%;
+      text-align: center;
     }
 
     .title {
@@ -198,6 +217,7 @@ const finalLink = banner.link.startsWith('/')
       padding: 7px 14px;
       white-space: normal;
       word-wrap: break-word;
+      justify-content: center;
     }
   }
 

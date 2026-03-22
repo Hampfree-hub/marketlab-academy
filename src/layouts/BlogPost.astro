@@ -370,7 +370,10 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 								<div class="title">${bannerData.title}</div>
 								<div class="subtitle">${bannerData.subtitle}</div>
 							</div>
-							<div class="cta">${bannerData.cta}</div>
+							<div class="cta">
+								${bannerData.cta.replace('→', '')}
+								<span class="cta-arrow"></span>
+							</div>
 						</div>
 					</a>
 					<style>
@@ -467,7 +470,9 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 							overflow-wrap: break-word;
 						}
 						.cta {
-							display: inline-block;
+							display: inline-flex;
+							align-items: center;
+							gap: 6px;
 							font-family: 'Press Start 2P', monospace;
 							font-size: clamp(10px, 1.5vw + 8px, 12px);
 							background: var(--cta-bg);
@@ -480,15 +485,28 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 							flex-shrink: 0;
 							margin: 0;
 						}
+						.cta-arrow {
+							display: inline-block;
+							width: 0;
+							height: 0;
+							border-top: 5px solid transparent;
+							border-bottom: 5px solid transparent;
+							border-left: 7px solid currentColor;
+							line-height: 0;
+							vertical-align: middle;
+						}
 						@media (max-width: 480px) {
 							.in-article-ad-container { margin: 1.5rem auto; padding: 0 0.75rem; }
 							.ad-banner-link { padding: 16px 18px; }
 							.ad-banner-content { 
 								gap: 12px; 
 								flex-wrap: wrap;
+								justify-content: center;
+								text-align: center;
 							}
 							.text-block {
 								min-width: 100%;
+								text-align: center;
 							}
 							.title {
 								font-size: 11px;
@@ -504,6 +522,7 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 								padding: 7px 14px;
 								white-space: normal;
 								word-wrap: break-word;
+								justify-content: center;
 							}
 						}
 						@media (max-width: 360px) {
