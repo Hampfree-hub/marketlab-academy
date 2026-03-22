@@ -206,14 +206,30 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 		<Footer />
 
 		<script is:inline>
-			// Banner data by category (compact 728x90 style)
+			// Banner data by category (responsive, localized)
 			function getBannerForCategory(category, lang) {
-				// Veles for algo-trading (RU only)
-				if (category === 'algo-trading' && lang === 'ru') {
+				// Veles for algo-trading (ALL languages)
+				if (category === 'algo-trading') {
+					const velesTitles = {
+						ru: 'Veles: Торговые боты',
+						en: 'Veles: Trading Bots',
+						es: 'Veles: Bots de Trading',
+					};
+					const velesSubtitles = {
+						ru: 'Автоматизируй торговлю на криптобиржах',
+						en: 'Automate trading on crypto exchanges',
+						es: 'Automatiza el trading en criptobolsas',
+					};
+					const velesCtas = {
+						ru: 'Попробовать →',
+						en: 'Try now →',
+						es: 'Probar →',
+					};
+
 					return {
-						title: 'Veles: Торговые боты',
-						subtitle: 'Автоматизируй торговлю на криптобиржах',
-						cta: 'Попробовать →',
+						title: velesTitles[lang] || velesTitles.ru,
+						subtitle: velesSubtitles[lang] || velesSubtitles.ru,
+						cta: velesCtas[lang] || velesCtas.ru,
 						link: 'https://veles.finance/invite/washmallay',
 						colors: {
 							bgStart: '#1A1F2E',
@@ -360,23 +376,27 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 					<style>
 						.in-article-ad-container {
 							width: 100%;
-							max-width: 728px;
+							max-width: 100%;
 							margin: 2rem auto;
 							padding: 0 1rem;
 							display: block;
+							box-sizing: border-box;
 						}
 						.ad-banner-link {
 							display: block;
 							background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
 							border: 2px solid var(--border-color);
 							border-radius: 4px;
-							padding: 12px 20px;
+							padding: 18px 20px;
 							text-decoration: none;
 							transition: transform 0.2s ease, box-shadow 0.2s ease;
 							position: relative;
 							overflow: hidden;
 							width: 100%;
+							max-width: 100%;
 							box-sizing: border-box;
+							height: auto;
+							min-height: 120px;
 						}
 						.ad-banner-link:hover {
 							transform: scale(1.02);
@@ -425,7 +445,7 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 						}
 						.title {
 							font-family: 'Press Start 2P', monospace;
-							font-size: clamp(10px, 1.5vw + 8px, 12px);
+							font-size: clamp(11px, 2vw + 8px, 14px);
 							color: var(--text-color);
 							line-height: 1.3;
 							text-transform: uppercase;
@@ -435,7 +455,7 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 						}
 						.subtitle {
 							font-family: 'JetBrains Mono', monospace;
-							font-size: clamp(8px, 1vw + 6px, 9px);
+							font-size: clamp(9px, 1.5vw + 6px, 11px);
 							color: var(--text-color);
 							opacity: 0.9;
 							line-height: 1.4;
@@ -446,10 +466,10 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 						.cta {
 							display: inline-block;
 							font-family: 'Press Start 2P', monospace;
-							font-size: clamp(8px, 1vw + 6px, 9px);
+							font-size: clamp(9px, 1.5vw + 6px, 11px);
 							background: var(--cta-bg);
 							color: var(--cta-text);
-							padding: 6px 14px;
+							padding: 7px 16px;
 							border: 1px solid #000;
 							border-radius: 3px;
 							white-space: nowrap;
@@ -462,16 +482,16 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 						}
 						@media (max-width: 480px) {
 							.in-article-ad-container { margin: 1.5rem auto; padding: 0 0.75rem; }
-							.ad-banner-link { padding: 10px 14px; }
+							.ad-banner-link { padding: 14px 16px; min-height: 100px; }
 							.ad-banner-content { gap: 10px; }
-							.cta { padding: 5px 10px; }
+							.cta { padding: 6px 12px; }
 						}
 						@media (max-width: 360px) {
 							.in-article-ad-container { padding: 0 0.5rem; }
-							.ad-banner-link { padding: 8px 12px; }
-							.title { font-size: 9px; }
-							.subtitle { font-size: 7px; }
-							.cta { font-size: 7px; padding: 4px 8px; }
+							.ad-banner-link { padding: 12px 14px; min-height: 90px; }
+							.title { font-size: 10px; }
+							.subtitle { font-size: 8px; }
+							.cta { font-size: 8px; padding: 5px 10px; }
 						}
 					</style>
 				`;
