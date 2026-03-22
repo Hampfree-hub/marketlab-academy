@@ -140,7 +140,7 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 		<Header />
 		<main class="container">
 			<div class="layout-grid">
-				<article class="fade-in">
+				<article class="fade-in" data-category={category || ''}>
 					<Breadcrumb items={breadcrumbItems} />
 					
 					{pubDate && (
@@ -307,8 +307,8 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 
 			// Insert ad banner after 2nd H2
 			(function insertAdBanner() {
-				const category = '{category}';
-				const lang = '{lang}';
+				const category = document.querySelector('article')?.dataset.category || '';
+				const lang = document.querySelector('html')?.lang || 'ru';
 				const h2Index = 1; // After 2nd H2 (0-based index)
 
 				const article = document.querySelector('article .prose');
@@ -335,7 +335,9 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 					</a>
 				`;
 
-				targetH2.parentNode?.insertBefore(bannerContainer, targetH2.nextSibling);
+				if (targetH2.parentNode) {
+					targetH2.parentNode.insertBefore(bannerContainer, targetH2.nextSibling);
+				}
 			})();
 		</script>
 	</body>
