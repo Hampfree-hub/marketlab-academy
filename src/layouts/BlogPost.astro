@@ -437,7 +437,7 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 							display: flex;
 							flex-direction: column;
 							gap: 6px;
-							overflow: hidden;
+							overflow: visible;
 							min-width: 0;
 						}
 						.title {
@@ -446,10 +446,12 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 							color: var(--text-color);
 							line-height: 1.4;
 							text-transform: uppercase;
-							white-space: nowrap;
-							overflow: hidden;
-							text-overflow: ellipsis;
+							white-space: normal;
+							overflow: visible;
+							text-overflow: clip;
 							margin: 0;
+							word-wrap: break-word;
+							overflow-wrap: break-word;
 						}
 						.subtitle {
 							font-family: 'JetBrains Mono', monospace;
@@ -457,10 +459,12 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 							color: var(--text-color);
 							opacity: 0.9;
 							line-height: 1.5;
-							white-space: nowrap;
-							overflow: hidden;
-							text-overflow: ellipsis;
+							white-space: normal;
+							overflow: visible;
+							text-overflow: clip;
 							margin: 0;
+							word-wrap: break-word;
+							overflow-wrap: break-word;
 						}
 						.cta {
 							display: inline-block;
@@ -479,15 +483,35 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 						@media (max-width: 480px) {
 							.in-article-ad-container { margin: 1.5rem auto; padding: 0 0.75rem; }
 							.ad-banner-link { padding: 16px 18px; }
-							.ad-banner-content { gap: 12px; }
-							.cta { padding: 7px 14px; }
+							.ad-banner-content { 
+								gap: 12px; 
+								flex-wrap: wrap;
+							}
+							.text-block {
+								min-width: 100%;
+							}
+							.title {
+								font-size: 11px;
+								white-space: normal;
+								word-wrap: break-word;
+							}
+							.subtitle {
+								font-size: 9px;
+								white-space: normal;
+								word-wrap: break-word;
+							}
+							.cta { 
+								padding: 7px 14px;
+								white-space: normal;
+								word-wrap: break-word;
+							}
 						}
 						@media (max-width: 360px) {
 							.in-article-ad-container { padding: 0 0.5rem; }
 							.ad-banner-link { padding: 14px 16px; }
-							.title { font-size: 11px; }
-							.subtitle { font-size: 9px; }
-							.cta { font-size: 9px; padding: 6px 12px; }
+							.title { font-size: 10px; }
+							.subtitle { font-size: 8px; }
+							.cta { font-size: 8px; padding: 6px 12px; }
 						}
 					</style>
 				`;
