@@ -64,7 +64,7 @@ const BASE_URL = import.meta.env.BASE_URL?.endsWith('/')
 			
 			// Priority: stored > browser > region > fallback
 			const detected = stored || browser || region || 'ru';
-			const base = {BASE_URL};
+			const base = '/';
 
 			// Ensure base ends with "/" and redirect to /{lang}/ under that base
 			window.location.replace(base + detected + '/');
