@@ -122,10 +122,3 @@ Sí. DCA no exige predecir el precio ni análisis complejos; se fija cantidad e 
 
 DCA es un método de inversión efectivo y relativamente seguro que minimiza los riesgos de la alta volatilidad del mercado. Es adecuado tanto para principiantes como para inversores experimentados que buscan crecimiento a largo plazo. Recuerde: DCA no garantiza ganancias, especialmente durante períodos prolongados de caída. Invierta regularmente, diversifique y prepárese para el largo plazo.
 
-<!-- Veles Banner -->
-<div style="text-align: center; margin: 3rem 0;">
-  <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
-    <img src="/og/ad/veles-simple_en.png" alt="Veles: Cryptocurrency is simple" style="max-width: 728px; width: 100%; height: auto;" />
-  </a>
-</div>
-

@@ -94,13 +94,6 @@ Sí. Sobre historia se comprueba con qué frecuencia el precio se queda en el ra
 
 El grid es una estrategia distinta (trading en rango). La misma cuenta se puede repartir entre enfoques (p. ej. parte grid, parte DCA), pero sin superar la gestión global del riesgo y teniendo en cuenta que el grid exige seguir el rango y la posición.
 
-<!-- Veles Banner -->
-<div style="text-align: center; margin: 3rem 0;">
-  <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
-    <img src="/og/ad/veles-simple_en.png" alt="Veles: Cryptocurrency is simple" style="max-width: 728px; width: 100%; height: auto;" />
-  </a>
-</div>
-
 Puedes empezar a operar en exchanges probados:
 - **[Bybit](https://www.bybit.com/es/invite?ref=PWMD24)** — excelente para bots de trading
 - **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — interfaz fácil y bonos

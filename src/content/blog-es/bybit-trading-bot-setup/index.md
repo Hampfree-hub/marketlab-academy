@@ -144,13 +144,6 @@ Sí, el bot debe estar en línea 24/7. Usar VPS (servidor virtual) o hosting en 
 
 Sí, pero hay que vigilar el riesgo total. No invertir todo el dinero en una estrategia. Diversificar entre bots y pares.
 
-<!-- Veles Banner -->
-<div style="text-align: center; margin: 3rem 0;">
-  <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
-    <img src="/og/ad/veles-simple_en.png" alt="Veles: Cryptocurrency is simple" style="max-width: 728px; width: 100%; height: auto;" />
-  </a>
-</div>
-
 Puedes empezar a operar en exchanges probados:
 - **[Bybit](https://www.bybit.com/es/invite?ref=PWMD24)** — excelente para bots de trading
 - **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — interfaz fácil y bonos

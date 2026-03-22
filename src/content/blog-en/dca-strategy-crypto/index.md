@@ -122,12 +122,5 @@ Yes. DCA does not require price forecasting or complex analysis; you set amount 
 
 DCA is an effective and relatively safe investment method that minimizes risks from high market volatility. It suits both beginners and experienced investors for long-term growth. Remember: DCA doesn't guarantee profit, especially during prolonged downturns. Invest regularly, diversify, and be prepared for the long term.
 
-<!-- Veles Banner -->
-<div style="text-align: center; margin: 3rem 0;">
-  <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
-    <img src="/og/ad/veles-simple_en.png" alt="Veles: Cryptocurrency is simple" style="max-width: 728px; width: 100%; height: auto;" />
-  </a>
-</div>
-
 For automated DCA strategies, register on **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)**.
 

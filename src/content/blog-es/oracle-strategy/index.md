@@ -51,13 +51,6 @@ Esta estrategia de trading ha empezado recientemente a probarse en una cuenta de
 
 ![Rentabilidad y P/L total de la estrategia ORACLE 1.1 en BingX: gráfico 7 días y principales pares por contribución](./assets/oracle-bingx-pnl.png)
 
-<!-- Veles Banner -->
-<div style="text-align: center; margin: 3rem 0;">
-  <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
-    <img src="/og/ad/veles-time_en.png" alt="Veles: Free your time" style="max-width: 728px; width: 100%; height: auto;" />
-  </a>
-</div>
-
 ## Relación con diversificación y riesgo
 
 La configuración de un bot es parte del sistema global. Cómo no concentrar todo el volumen en una estrategia, repartir capital entre activos y plataformas y reducir la carga de riesgo está en la serie [Diversificación y configuración del sistema de trading](https://marketlab-academy.org/es/library/diversification-trading-system-part-1/). Conexión al exchange por API y pasos básicos en [configuración del bot en Bybit](https://marketlab-academy.org/es/library/bybit-trading-bot-setup/); los principios de [gestión de riesgos](https://marketlab-academy.org/es/library/risk-management-crypto-trading-bots/) se aplican también a ORACLE 1.1.

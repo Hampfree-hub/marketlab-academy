@@ -94,13 +94,6 @@ Prisma 5.5 использует осцилляторы для входа в пе
 
 По бэктестам — 100–300% годовых. Реальная доходность зависит от рынка, настроек и управления рисками. Ожидайте просадок 20–40%.
 
-<!-- Veles Banner -->
-<div style="text-align: center; margin: 3rem 0;">
-  <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
-    <img src="/og/ad/veles-time_ru.png" alt="Veles: Освободи свое время — боты Veles торгуют пока ты спишь" style="max-width: 728px; width: 100%; height: auto;" />
-  </a>
-</div>
-
 ---
 
 

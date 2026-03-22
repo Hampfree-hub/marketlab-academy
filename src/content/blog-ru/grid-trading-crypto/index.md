@@ -294,13 +294,6 @@ Grid — это сетка ордеров на покупку и продажу 
 
 Сеточная торговля — мощный инструмент для работы в боковом тренде. С правильными параметрами и риск-менеджментом она позволяет зарабатывать на колебаниях цены.
 
-<!-- Veles Banner -->
-<div style="text-align: center; margin: 3rem 0;">
-  <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
-    <img src="/og/ad/veles-simple_ru.png" alt="Veles: Криптовалюта — это просто" style="max-width: 728px; width: 100%; height: auto;" />
-  </a>
-</div>
-
 Начать торговлю можно на проверенных биржах:
 - **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24)** — отличный выбор для работы с торговыми ботами
 - **[Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD)** — удобный интерфейс и бонусы

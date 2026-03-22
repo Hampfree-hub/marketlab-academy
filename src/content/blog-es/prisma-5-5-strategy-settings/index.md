@@ -88,12 +88,5 @@ Prisma 5.5 usa osciladores para entrar en zonas de sobreventa — esto solo func
 
 Según backtests — 100–300% anuales. Los rendimientos reales dependen del mercado, configuración y gestión de riesgos. Esperar drawdowns de 20–40%.
 
-<!-- Veles Banner -->
-<div style="text-align: center; margin: 3rem 0;">
-  <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
-    <img src="/og/ad/veles-time_en.png" alt="Veles: Free your time" style="max-width: 728px; width: 100%; height: auto;" />
-  </a>
-</div>
-
 ---
 
