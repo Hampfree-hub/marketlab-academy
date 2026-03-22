@@ -221,9 +221,9 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 						es: 'Automatiza el trading en criptobolsas',
 					};
 					const velesCtas = {
-						ru: 'Попробовать →',
-						en: 'Try now →',
-						es: 'Probar →',
+						ru: 'Попробовать',
+						en: 'Try now',
+						es: 'Probar',
 					};
 
 					return {
@@ -232,12 +232,12 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 						cta: velesCtas[lang] || velesCtas.ru,
 						link: 'https://veles.finance/invite/washmallay',
 						colors: {
-							bgStart: '#1A1F2E',
-							bgEnd: '#2D7A6E',
+							bgStart: '#2D1B69',    // Глубокий фиолетовый
+							bgEnd: '#1A0F3D',      // Тёмный индиго
 							text: '#E5E5E5',
-							ctaBg: '#00D800',
-							ctaText: '#1A202C',
-							border: '#3CBCFC',
+							ctaBg: '#F97316',      // Приглушённый оранжевый
+							ctaText: '#FFFFFF',
+							border: '#8B5CF6',
 						},
 					};
 				}
@@ -260,9 +260,9 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 					es: 'Spot, futuros, bajas comisiones',
 				};
 				const ctas = {
-					ru: 'Регистрация →',
-					en: 'Sign up →',
-					es: 'Registrarse →',
+					ru: 'Регистрация',
+					en: 'Sign up',
+					es: 'Registrarse',
 				};
 
 				return {
@@ -271,12 +271,12 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 					cta: ctas[lang] || ctas.ru,
 					link: bybitLinks[lang] || bybitLinks.ru,
 					colors: {
-						bgStart: '#1E1E2F',
-						bgEnd: '#2D3748',
-						text: '#E5E5E5',
-						ctaBg: '#3CBCFC',
-						ctaText: '#1A202C',
-						border: '#00D800',
+						bgStart: '#1A1D26',    // Тёмный серо-чёрный
+						bgEnd: '#0D0E12',      // Почти чёрный
+						text: '#FFFFFF',
+						ctaBg: '#F7A600',      // Фирменный оранжевый
+						ctaText: '#000000',
+						border: '#F7A600',
 					},
 				};
 			}

@@ -1,5 +1,6 @@
 // Конфигурация реферальных баннеров
 // Все ссылки и параметры в одном месте для удобного обновления
+// Цвета подобраны по брендбукам + адаптированы для 8-bit стиля блога
 
 export type AdBanner = {
   id: string;
@@ -43,84 +44,104 @@ export function getReferralLink(platform: keyof typeof REFERRAL_LINKS, lang: str
   return (link as Record<string, string>)[lang] || link.ru;
 }
 
-// Конфигурация всех баннеров (компактные 728×150, спокойные цвета)
+// Конфигурация всех баннеров (8-bit стиль, спокойные цвета)
 export const AD_BANNERS: AdBanner[] = [
-  // Veles — для статей по алготрейдингу (RU)
+  // Veles — для статей по алготрейдингу (все языки)
   {
     id: 'veles-algo',
-    title: 'Veles: Торговые боты',
-    subtitle: 'Автоматизируй торговлю на криптобиржах',
-    cta: 'Попробовать →',
+    title: 'Veles: Trading Bots',
+    subtitle: 'Automate trading on crypto exchanges',
+    cta: 'Try now →',
     link: getReferralLink('veles', 'ru'),
     categories: ['algo-trading'],
-    languages: ['ru'],
+    languages: ['ru', 'en', 'es'],
     priority: 10,
     colors: {
-      bgStart: '#1A1F2E',
-      bgEnd: '#2D7A6E',
-      text: '#E5E5E5',
-      ctaBg: '#00D800',
-      ctaText: '#1A202C',
-      border: '#3CBCFC',
+      bgStart: '#2D1B69',    // Глубокий фиолетовый
+      bgEnd: '#1A0F3D',      // Тёмный индиго
+      text: '#E5E5E5',       // Светло-серый текст
+      ctaBg: '#F97316',      // Приглушённый оранжевый
+      ctaText: '#FFFFFF',    // Белый текст кнопки
+      border: '#8B5CF6',     // Светло-фиолетовая рамка
     },
   },
 
   // Bybit — универсальный баннер
   {
     id: 'bybit-general',
-    title: 'Bybit: Криптобиржа',
-    subtitle: 'Спот, фьючерсы, низкие комиссии',
-    cta: 'Регистрация →',
+    title: 'Bybit: Crypto Exchange',
+    subtitle: 'Spot, futures, low fees',
+    cta: 'Sign up →',
     link: getReferralLink('bybit', 'ru'),
     languages: ['ru', 'en', 'es'],
     priority: 5,
     colors: {
-      bgStart: '#1E1E2F',
-      bgEnd: '#2D3748',
-      text: '#E5E5E5',
-      ctaBg: '#3CBCFC',
-      ctaText: '#1A202C',
-      border: '#00D800',
+      bgStart: '#1A1D26',    // Тёмный серо-чёрный
+      bgEnd: '#0D0E12',      // Почти чёрный
+      text: '#FFFFFF',       // Белый текст
+      ctaBg: '#F7A600',      // Фирменный оранжевый
+      ctaText: '#000000',    // Чёрный текст на оранжевом
+      border: '#F7A600',     // Оранжевая рамка
     },
   },
 
   // FinBazar — для фундаментального анализа
   {
     id: 'finbazar-fundamental',
-    title: 'FinBazar: Ончейн',
-    subtitle: 'Аналитика и сигналы для трейдера',
-    cta: 'Инструменты →',
+    title: 'FinBazar: On-Chain',
+    subtitle: 'Analytics and signals for traders',
+    cta: 'Tools →',
     link: getReferralLink('finbazar', 'ru'),
     categories: ['fundamental-analysis', 'crypto'],
-    languages: ['ru'],
+    languages: ['ru', 'en', 'es'],
     priority: 8,
     colors: {
-      bgStart: '#0F2027',
-      bgEnd: '#2C5364',
-      text: '#E5E5E5',
-      ctaBg: '#FFB347',
-      ctaText: '#0F2027',
-      border: '#FFD966',
+      bgStart: '#064E3B',    // Тёмно-изумрудный
+      bgEnd: '#022C22',      // Очень тёмный зелёный
+      text: '#E5E5E5',       // Светло-серый
+      ctaBg: '#10B981',      // Изумрудный
+      ctaText: '#FFFFFF',
+      border: '#34D399',     // Светло-изумрудная рамка
     },
   },
 
   // BingX — для копи-трейдинга
   {
     id: 'bingx-copy',
-    title: 'BingX: Копитрейдинг',
-    subtitle: 'Копируй сделки успешных трейдеров',
-    cta: 'Начать →',
+    title: 'BingX: Copy Trading',
+    subtitle: 'Copy successful traders',
+    cta: 'Start →',
     link: getReferralLink('bingx', 'ru'),
     categories: ['algo-trading', 'technical-analysis'],
     languages: ['ru', 'en', 'es'],
     priority: 7,
     colors: {
-      bgStart: '#1A1F2E',
-      bgEnd: '#2D7A6E',
-      text: '#E5E5E5',
-      ctaBg: '#FFD966',
-      ctaText: '#1A202C',
-      border: '#3CBCFC',
+      bgStart: '#0A0E27',    // Тёмно-синий
+      bgEnd: '#1A237E',      // Насыщенный синий
+      text: '#FFFFFF',       // Белый текст
+      ctaBg: '#00D4FF',      // Ярко-голубой
+      ctaText: '#0A0E27',    // Тёмный текст на голубом
+      border: '#00B4D8',     // Голубая рамка
+    },
+  },
+
+  // Bitget — дополнительный баннер
+  {
+    id: 'bitget-copy',
+    title: 'Bitget: Copy Trading',
+    subtitle: 'Copy pro traders instantly',
+    cta: 'Start →',
+    link: getReferralLink('bitget', 'ru'),
+    categories: ['algo-trading', 'technical-analysis'],
+    languages: ['ru', 'en', 'es'],
+    priority: 6,
+    colors: {
+      bgStart: '#0B1E1A',    // Тёмный бирюзовый фон
+      bgEnd: '#051410',      // Очень тёмный
+      text: '#FFFFFF',       // Белый текст
+      ctaBg: '#00C9A7',      // Фирменный бирюзовый
+      ctaText: '#000000',    // Чёрный текст
+      border: '#14D0BB',     // Светло-бирюзовая рамка
     },
   },
 
@@ -128,18 +149,18 @@ export const AD_BANNERS: AdBanner[] = [
   {
     id: 'default-academy',
     title: 'MarketLab Academy',
-    subtitle: 'Автоматизация, сигналы, аналитика',
-    cta: 'Библиотека →',
+    subtitle: 'Automation, signals, analytics',
+    cta: 'Library →',
     link: '/{lang}/library/',
     priority: 0,
     languages: ['ru', 'en', 'es'],
     colors: {
-      bgStart: '#2D3748',
-      bgEnd: '#1A202C',
-      text: '#E5E5E5',
-      ctaBg: '#00D800',
+      bgStart: '#2D3748',    // Тёмный серо-синий
+      bgEnd: '#1A202C',      // Тёмный серый
+      text: '#E5E5E5',       // Светло-серый
+      ctaBg: '#00D800',      // NES зелёный
       ctaText: '#1A202C',
-      border: '#3CBCFC',
+      border: '#3CBCFC',     // NES синий
     },
   },
 ];
