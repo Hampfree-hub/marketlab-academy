@@ -9,14 +9,24 @@ export interface Props {
   banner: AdBanner;
   lang?: 'ru' | 'en' | 'es';
   className?: string;
+  slug?: string; // Для UTM-меток
 }
 
-const { banner, lang = 'ru', className = '' } = Astro.props;
+const { banner, lang = 'ru', className = '', slug = 'unknown' } = Astro.props;
 
-// Формируем финальную ссылку
-const finalLink = banner.link.startsWith('/') 
+// Build UTM-tagged link
+const utmSource = 'marketlab-blog';
+const utmMedium = 'referral-banner';
+const utmCampaign = banner.id;
+const utmContent = slug;
+const utmTerm = banner.categories?.[0] || 'general';
+
+const utmParams = `?utm_source=${utmSource}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&utm_content=${utmContent}&utm_term=${utmTerm}`;
+const finalLink = banner.link.startsWith('/')
   ? banner.link.replace('{lang}', lang)
-  : banner.link;
+  : banner.link.includes('?')
+    ? `${banner.link}&utm_source=${utmSource}&utm_medium=${utmMedium}&utm_campaign=${utmCampaign}&utm_content=${utmContent}&utm_term=${utmTerm}`
+    : `${banner.link}${utmParams}`;
 ---
 
 <div class={`ad-banner-container ${className}`}>

@@ -372,6 +372,8 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 			(function insertAdBanner() {
 				const category = document.querySelector('article')?.dataset.category || '';
 				const lang = document.querySelector('html')?.lang || 'ru';
+				const pathname = window.location.pathname;
+				const slug = pathname.split('/').filter(Boolean)[2] || 'unknown';
 				const h2Index = 1; // After 2nd H2 (0-based index)
 
 				const article = document.querySelector('article .prose');
@@ -382,6 +384,12 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 
 				const targetH2 = h2s[h2Index];
 				const bannerData = getBannerForCategory(category, lang);
+				
+				// Build UTM-tagged link
+				const utmParams = `?utm_source=marketlab-blog&utm_medium=referral-banner&utm_campaign=${bannerData.id}&utm_content=${slug}&utm_term=${category}`;
+				const finalLink = bannerData.link.includes('?') 
+					? `${bannerData.link}&utm_source=marketlab-blog&utm_medium=referral-banner&utm_campaign=${bannerData.id}&utm_content=${slug}&utm_term=${category}`
+					: `${bannerData.link}${utmParams}`;
 
 				const bannerContainer = document.createElement('div');
 				bannerContainer.className = 'in-article-ad-container';
@@ -390,13 +398,13 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 
 				bannerContainer.innerHTML = `
 					<a
-						href="${bannerData.link}"
+						href="${finalLink}"
 						target="_blank"
 						rel="nofollow sponsored"
 						class="ad-banner-link"
-						data-banner-id="${bannerData.id || 'unknown'}"
+						data-banner-id="${bannerData.id}"
 						data-banner-name="${bannerData.title.replace(/"/g, '&quot;')}"
-						data-banner-link="${bannerData.link}"
+						data-banner-link="${finalLink}"
 						style="--bg-start:${bannerData.colors.bgStart};--bg-end:${bannerData.colors.bgEnd};--text-color:${bannerData.colors.text};--cta-bg:${bannerData.colors.ctaBg};--cta-text:${bannerData.colors.ctaText};--border-color:${bannerData.colors.border};"
 						onclick="trackBannerClick(this)"
 					>
