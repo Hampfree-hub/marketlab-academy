@@ -2,7 +2,11 @@
 
 **Образовательный блог о трейдинге в ретро-стиле 8-bit NES**
 
-**Последнее обновление:** 14 марта 2026 г.
+**Последнее обновление:** 23 марта 2026 г.  
+**Статус:** ✅ Production-ready
+
+**Сайт:** [marketlab-academy.org](https://marketlab-academy.org)  
+**Приватный репо:** [hampfreeblog-private](https://github.com/Hampfree-hub/hampfreeblog-private)
 
 ---
 
@@ -82,7 +86,7 @@ npm run preview
 
 **Использование:**
 ```css
-.category-badge { 
+.category-badge {
   background-color: var(--cat-crypto); /* Или другая категория */
   color: white; /* Белый текст читается на всех цветах */
 }
@@ -91,6 +95,7 @@ npm run preview
 ### Компоненты
 
 - **Banner** — 8-bit баннеры для статей
+- **BannerCard** — реферальные баннеры (Veles, Bybit, FinBazar, BingX, Bitget)
 - **FAQ** — автоматическая стилизация FAQ секций
 - **RelatedPosts** — связанные посты
 - **SubscribeForm** — форма подписки на рассылку
@@ -123,14 +128,13 @@ title: "Заголовок"  # До 100 символов, H1
 description: "Описание (150-160 символов для SEO)"
 pubDate: '2026-01-15'  # Формат: YYYY-MM-DD
 category: 'crypto'  # Одна из 4 категорий
-tags: ['bitcoin', 'basics']  # Опционально, 1-3 тега
 ---
 
 # Заголовок статьи
 
 Контент статьи...
 
-**Примечание:** 
+**Примечание:**
 - Баннеры генерируются автоматически через компонент `<Banner>`
 - `readingTime` вычисляется автоматически (слова / 200)
 - Для OG тегов используется `title` (metaOgTitle не используем)
@@ -146,6 +150,8 @@ tags: ['bitcoin', 'basics']  # Опционально, 1-3 тега
 - **TypeScript** — типизация
 - **Markdown** — контент блога
 - **CSS** — 8-bit стили
+- **GA4** — Google Analytics 4 (отслеживание кликов, UTM-метки)
+- **GitHub Actions** — автоматический деплой на GitHub Pages
 
 ---
 
@@ -187,6 +193,24 @@ OG изображения автоматически генерируются п
 
 ---
 
+## 📊 Аналитика
+
+### GA4 Отслеживание
+
+- **Событие:** `referral_banner_click` (клики по реферальным баннерам)
+- **Параметры:** `banner_id`, `banner_name`, `article_category`, `article_lang`, `article_path`
+- **UTM-метки:** Автоматически добавляются ко всем реферальным ссылкам
+- **Документация:** Приватный репо → `docs/04-reports/2026-03/GA4_BANNER_TRACKING.md`
+
+### Реферальные баннеры
+
+- **Автовставка:** После 2-го H2 в каждой статье
+- **Компонент:** `BannerCard.astro` (ручная вставка в MDX)
+- **Конфигурация:** `src/config/ad-banners.ts`
+- **Баннеры:** Veles, Bybit, FinBazar, BingX, Bitget, Default
+
+---
+
 ## 📚 Документация
 
 - `docs/` — публичная документация проекта
@@ -196,14 +220,18 @@ OG изображения автоматически генерируются п
 
 ## ✅ Статус проекта
 
-**Текущая версия:** Активная разработка
+**Текущая версия:** Production-ready
 
 **Что готово:**
 - ✅ 8-bit дизайн-система
 - ✅ Интернационализация (RU, EN, ES)
-- ✅ Компоненты (Banner, FAQ, RelatedPosts, SubscribeForm)
+- ✅ Компоненты (Banner, BannerCard, FAQ, RelatedPosts, SubscribeForm)
 - ✅ Поиск и фильтрация статей
 - ✅ Адаптивный дизайн
+- ✅ Реферальные баннеры с UTM-метками
+- ✅ GA4 отслеживание кликов
+- ✅ Автоматический деплой на GitHub Pages
+- ✅ OG изображения для соцсетей
 
 ---
 
