@@ -424,7 +424,7 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 							width: 100%;
 							max-width: var(--max-width-post, 800px);
 							margin: 2rem auto;
-							padding: 0 1rem;
+							padding: 0;
 							display: block;
 							box-sizing: border-box;
 						}
@@ -539,7 +539,7 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 							vertical-align: middle;
 						}
 						@media (max-width: 768px) {
-							.in-article-ad-container { margin: 2rem auto; }
+							.in-article-ad-container { margin: 2rem auto; padding: 0; }
 							.ad-banner-content {
 								flex-direction: column;
 								align-items: center;
@@ -558,14 +558,14 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 							}
 						}
 						@media (max-width: 480px) {
-							.in-article-ad-container { padding: 0 0.75rem; }
+							.in-article-ad-container { padding: 0; }
 							.ad-banner-link { padding: 16px 18px; }
 							.title { font-size: 11px; }
 							.subtitle { font-size: 9px; }
 							.cta { padding: 7px 16px; min-width: 180px; }
 						}
 						@media (max-width: 360px) {
-							.in-article-ad-container { padding: 0 0.5rem; }
+							.in-article-ad-container { padding: 0; }
 							.ad-banner-link { padding: 14px 16px; }
 							.title { font-size: 10px; }
 							.subtitle { font-size: 8px; }
