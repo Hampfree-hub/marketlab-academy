@@ -1,7 +1,7 @@
 ---
 title: 'Bitcoin ETF в 2026: как инвестировать в BTC через биржу'
 description: 'Bitcoin ETF для начинающих и продвинутых: что это, как купить, комиссии BlackRock и Fidelity. Сравнение с прямой покупкой BTC, налоги, риски. Полный гайд 2026.'
-pubDate: '2026-03-24'
+pubDate: '2026-03-18'
 category: 'crypto'
 draft: true
 ---
