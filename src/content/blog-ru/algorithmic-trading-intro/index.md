@@ -344,9 +344,9 @@ draft: true
 - **Минусы:** Нужен код, настройка
 
 **Готовые платформы:**
-- **3Commas:** DCA, Grid, бэктест
 - **Veles:** Алготрейдинг для крипты, бэктесты, облачные боты — [попробовать Veles](https://veles.finance/invite/washmallay)
-- **Gainium:** Grid, DCA, маркет-мейкинг
+- **Gainium:** Grid, DCA, маркет-мейкинг (бесплатно до 2 ботов)
+- **3Commas:** DCA, Grid, Trailing
 - **Antbot:** Копитрейдинг, сигналы
 - **Ginarea:** Платформа для алготрейдинга с гибкими настройками
 
@@ -445,10 +445,10 @@ draft: true
 
 ### Для новичков (без кода)
 
-- **3Commas:** DCA, Grid, Trailing
-- **Cryptohopper:** Готовые стратегии, маркетплейс
 - **Veles:** Облачные боты, бэктесты, простой интерфейс — [попробовать Veles](https://veles.finance/invite/washmallay)
 - **Gainium:** Grid, DCA, маркет-мейкинг (бесплатно до 2 ботов)
+- **3Commas:** DCA, Grid, Trailing
+- **Cryptohopper:** Готовые стратегии, маркетплейс
 - **Antbot:** Сигналы, копитрейдинг
 - **TradingView:** Сигналы, алерты, Pine Script
 
