@@ -148,12 +148,12 @@ Algorithms free you from emotions, save time, and allow 24/7 trading. In crypto,
 - Profit: +46%
 
 **Pros:**
-- вњ… Catches big moves
-- вњ… Simple logic
+- Catches big moves
+- Simple logic
 
 **Cons:**
-- вќЊ Loses in sideways (frequent false signals)
-- вќЊ Lag (enters late)
+- Loses in sideways (frequent false signals)
+- Lag (enters late)
 
 ### 2. Counter-Trend Strategies
 
@@ -171,12 +171,12 @@ Algorithms free you from emotions, save time, and allow 24/7 trading. In crypto,
 - Profit: +12.5%
 
 **Pros:**
-- вњ… Works in sideways
-- вњ… Fast trades
+- Works in sideways
+- Fast trades
 
 **Cons:**
-- вќЊ Dangerous in strong trend (can catch a falling knife)
-- вќЊ Requires precise entry points
+- Dangerous in strong trend (can catch a falling knife)
+- Requires precise entry points
 
 ### 3. Arbitrage (for Advanced)
 
@@ -195,14 +195,14 @@ Algorithms free you from emotions, save time, and allow 24/7 trading. In crypto,
 - More realistic: futures arbitrage (basis trading), pair arbitrage
 
 **Pros:**
-- вњ… Low risk (market doesn't matter)
-- вњ… Predictable profit (if you made it)
+- Low risk (market doesn't matter)
+- Predictable profit (if you made it)
 
 **Cons:**
-- вќЊ Need capital on two exchanges
-- вќЊ Fees eat profit
-- вќЊ Competition with HFT (need low latency)
-- вќЊ Not recommended for capital < $10,000
+- Need capital on two exchanges
+- Fees eat profit
+- Competition with HFT (need low latency)
+- Not recommended for capital < $10,000
 
 ### 4. Market Making
 
@@ -224,13 +224,13 @@ Algorithms free you from emotions, save time, and allow 24/7 trading. In crypto,
 Exchanges pay makers for providing liquidity. Maker fee is often negative (e.g., -0.005% to -0.025%), meaning you get paid for placing limit orders.
 
 **Pros:**
-- вњ… Profit in any market
-- вњ… Exchanges pay rebates
+- Profit in any market
+- Exchanges pay rebates
 
 **Cons:**
-- вќЊ Risk of one-sided position (price moved, order stayed)
-- вќЊ Requires constant monitoring
-- вќЊ Need large capital for noticeable profit
+- Risk of one-sided position (price moved, order stayed)
+- Requires constant monitoring
+- Need large capital for noticeable profit
 
 ### 5. DCA (Dollar Cost Averaging)
 

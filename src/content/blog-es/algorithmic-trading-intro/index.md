@@ -147,12 +147,12 @@ Los algoritmos te liberan de las emociones, ahorran tiempo y permiten operar 24/
 - Ganancia: +46%
 
 **Pros:**
-- ✅ Captura grandes movimientos
-- ✅ Lógica simple
+- Captura grandes movimientos
+- Lógica simple
 
 **Contras:**
-- ❌ Pierde en lateral (señales falsas frecuentes)
-- ❌ Retraso (entra tarde)
+- Pierde en lateral (señales falsas frecuentes)
+- Retraso (entra tarde)
 
 ### 2. Estrategias Contrarian
 
@@ -170,12 +170,12 @@ Los algoritmos te liberan de las emociones, ahorran tiempo y permiten operar 24/
 - Ganancia: +12.5%
 
 **Pros:**
-- ✅ Funciona en lateral
-- ✅ Operaciones rápidas
+- Funciona en lateral
+- Operaciones rápidas
 
 **Contras:**
-- ❌ Peligroso en tendencia fuerte (puede atrapar un cuchillo cayendo)
-- ❌ Requiere puntos de entrada precisos
+- Peligroso en tendencia fuerte (puede atrapar un cuchillo cayendo)
+- Requiere puntos de entrada precisos
 
 ### 3. Arbitraje (para Avanzados)
 
@@ -194,14 +194,14 @@ Los algoritmos te liberan de las emociones, ahorran tiempo y permiten operar 24/
 - Más realista: arbitraje de futuros (basis trading), arbitraje de pares
 
 **Pros:**
-- ✅ Bajo riesgo (el mercado no importa)
-- ✅ Ganancia predecible (si lo lograste)
+- Bajo riesgo (el mercado no importa)
+- Ganancia predecible (si lo lograste)
 
 **Contras:**
-- ❌ Necesitas capital en dos exchanges
-- ❌ Las comisiones se comen la ganancia
-- ❌ Competencia con HFT (necesitas baja latencia)
-- ❌ No recomendado para capital < $10,000
+- Necesitas capital en dos exchanges
+- Las comisiones se comen la ganancia
+- Competencia con HFT (necesitas baja latencia)
+- No recomendado para capital < $10,000
 
 ### 4. Market Making
 
@@ -223,13 +223,13 @@ Los algoritmos te liberan de las emociones, ahorran tiempo y permiten operar 24/
 Los exchanges pagan a los makers por proporcionar liquidez. La comisión del maker es a menudo negativa (ej. -0.005% a -0.025%), lo que significa que te pagan por colocar órdenes límite.
 
 **Pros:**
-- ✅ Ganancia en cualquier mercado
-- ✅ Los exchanges pagan rebates
+- Ganancia en cualquier mercado
+- Los exchanges pagan rebates
 
 **Contras:**
-- ❌ Riesgo de posición unilateral (el precio se movió, la orden se quedó)
-- ❌ Requiere monitoreo constante
-- ❌ Necesitas gran capital para ganancia notable
+- Riesgo de posición unilateral (el precio se movió, la orden se quedó)
+- Requiere monitoreo constante
+- Necesitas gran capital para ganancia notable
 
 ### 5. DCA (Dollar Cost Averaging)
 
@@ -247,13 +247,13 @@ Los exchanges pagan a los makers por proporcionar liquidez. La comisión del mak
 - Total: $300 / 0.00549 BTC = $54,645 precio promedio
 
 **Pros:**
-- ✅ Sin emociones
-- ✅ Promedio de volatilidad
-- ✅ Adecuado para inversiones a largo plazo
+- Sin emociones
+- Promedio de volatilidad
+- Adecuado para inversiones a largo plazo
 
 **Contras:**
-- ❌ No maximiza la ganancia (podrías haber comprado en el fondo)
-- ❌ Requiere disciplina
+- No maximiza la ganancia (podrías haber comprado en el fondo)
+- Requiere disciplina
 
 ### 6. Grid Trading
 
@@ -272,12 +272,12 @@ Los exchanges pagan a los makers por proporcionar liquidez. La comisión del mak
 - Repetido 10 veces → +$10,000
 
 **Pros:**
-- ✅ Funciona en lateral (70% del tiempo)
-- ✅ Automático, 24/7
+- Funciona en lateral (70% del tiempo)
+- Automático, 24/7
 
 **Contras:**
-- ❌ Peligroso en tendencia (el precio salió del rango)
-- ❌ Requiere gran capital (muchas órdenes)
+- Peligroso en tendencia (el precio salió del rango)
+- Requiere gran capital (muchas órdenes)
 - ⚠️ **Importante:** Si el precio sale del rango, el bot puede terminar con una bolsa llena de activos en pérdida (compró todo, no vendió).
 
 ---
@@ -489,14 +489,14 @@ Junto con el algoritmo, se recomienda llevar un [diario de trading](https://mark
 4. El algoritmo no reemplaza el pensamiento, lo mejora
 
 **Para quién es el trading algorítmico:**
-- ✅ Traders que quieren automatizar la rutina
-- ✅ Inversores para DCA y rebalanceo
-- ✅ Desarrolladores que aman código + finanzas
+- Traders que quieren automatizar la rutina
+- Inversores para DCA y rebalanceo
+- Desarrolladores que aman código + finanzas
 
 **Para quién NO es:**
-- ❌ Esperando un "botón de dinero" (el algoritmo es una herramienta, no magia)
-- ❌ No listo para aprender (código, estadística, riesgos)
-- ❌ Quiere 100% de garantías (no existen incluso con algoritmo)
+- Esperando un "botón de dinero" (el algoritmo es una herramienta, no magia)
+- No listo para aprender (código, estadística, riesgos)
+- Quiere 100% de garantías (no existen incluso con algoritmo)
 
 ---
 
