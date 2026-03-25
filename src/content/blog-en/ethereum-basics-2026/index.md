@@ -114,14 +114,14 @@ Decentralized exchange (DEX):
 4. No intermediary, no KYC
 
 **Advantages:**
-- ✅ Automatic execution (no need to trust a person)
-- ✅ Transparency (code is open)
-- ✅ Censorship resistance (no one can shut it down)
+- Automatic execution (no need to trust a person)
+- Transparency (code is open)
+- Censorship resistance (no one can shut it down)
 
 **Disadvantages:**
-- ❌ Code bugs = loss of funds (irreversible)
-- ❌ Fees for every action
-- ❌ Difficulty upgrading (contract cannot be modified)
+- Code bugs = loss of funds (irreversible)
+- Fees for every action
+- Difficulty upgrading (contract cannot be modified)
 
 ### Gas (Gas) — Network Fee
 
@@ -278,14 +278,14 @@ Fee = Gas Used × Gas Price
 4. Fees: $0.01-0.10 per swap
 
 **Advantages:**
-- ✅ Low fees ($0.01-0.10 vs $1-50)
-- ✅ High speed (~100-4,000 TPS)
-- ✅ Ethereum compatibility (same addresses, keys)
+- Low fees ($0.01-0.10 vs $1-50)
+- High speed (~100-4,000 TPS)
+- Ethereum compatibility (same addresses, keys)
 
 **Disadvantages:**
-- ❌ Need to use bridge (additional step)
-- ❌ Some protocols not yet ported
-- ❌ Withdrawal to mainnet can take 7 days (Optimistic)
+- Need to use bridge (additional step)
+- Some protocols not yet ported
+- Withdrawal to mainnet can take 7 days (Optimistic)
 
 **Recommendation:** For small amounts (< $1,000) use Layer 2. For large amounts — Ethereum mainnet.
 
@@ -350,13 +350,13 @@ Fee = Gas Used × Gas Price
 
 ### Security: Checklist
 
-- ✅ Seed phrase: write on paper, store in safe
-- ✅ 2FA: Google Authenticator (not SMS!)
-- ✅ Address verification: first and last 4 characters
-- ✅ Test transaction: before large amount
-- ❌ Don't store more than 10% of capital on exchange
-- ❌ Don't click links from emails (phishing)
-- ❌ Don't give wallet access to third parties
+- Seed phrase: write on paper, store in safe
+- 2FA: Google Authenticator (not SMS!)
+- Address verification: first and last 4 characters
+- Test transaction: before large amount
+- Don't store more than 10% of capital on exchange
+- Don't click links from emails (phishing)
+- Don't give wallet access to third parties
 
 ---
 
@@ -396,15 +396,15 @@ Fee = Gas Used × Gas Price
 4. Stake ETH for passive income (3-5% annually)
 
 **Who Ethereum is for:**
-- ✅ dApp developers
-- ✅ DeFi and NFT users
-- ✅ Long-term investors
-- ✅ Stakers
+- dApp developers
+- DeFi and NFT users
+- Long-term investors
+- Stakers
 
 **Who it's NOT for:**
-- ❌ Payments only (BTC is better)
-- ❌ Don't trust smart contracts
-- ❌ Want 100% anonymity
+- Payments only (BTC is better)
+- Don't trust smart contracts
+- Want 100% anonymity
 
 ---
 

@@ -312,14 +312,14 @@ On futures rollover, the fund loses 2.1% of value. Over a year, such losses can 
 4. Understand risks (counterparty, fees, regulation)
 
 **Who ETFs are for:**
-- ✅ Retail investors without crypto exchange experience
-- ✅ Retirement accounts (IRA, 401k)
-- ✅ Institutional investors
+- Retail investors without crypto exchange experience
+- Retirement accounts (IRA, 401k)
+- Institutional investors
 
 **Who ETFs are NOT for:**
-- ❌ Want to use Bitcoin for payments
-- ❌ Don't trust traditional finance
-- ❌ Want to stake or provide liquidity
+- Want to use Bitcoin for payments
+- Don't trust traditional finance
+- Want to stake or provide liquidity
 
 ---
 

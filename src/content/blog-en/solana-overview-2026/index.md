@@ -372,14 +372,14 @@ Contracts that don't conflict execute in parallel. This increases throughput hun
 
 ### Security: Checklist
 
-- ✅ Seed phrase: write on paper, store in safe
-- ✅ 2FA: Google Authenticator (not SMS!)
-- ✅ Address verification: first and last 4 characters
-- ✅ Test transaction: before large amount
-- ❌ Don't store more than 10% of capital on exchange
-- ❌ Don't click links from emails (phishing)
-- ❌ Don't give wallet access to third parties
-- ❌ Don't connect wallet to suspicious dApps
+- Seed phrase: write on paper, store in safe
+- 2FA: Google Authenticator (not SMS!)
+- Address verification: first and last 4 characters
+- Test transaction: before large amount
+- Don't store more than 10% of capital on exchange
+- Don't click links from emails (phishing)
+- Don't give wallet access to third parties
+- Don't connect wallet to suspicious dApps
 
 ---
 
@@ -419,15 +419,15 @@ Contracts that don't conflict execute in parallel. This increases throughput hun
 4. Diversify risks (not everything in SOL)
 
 **Who Solana is for:**
-- ✅ High-load dApp developers
-- ✅ DeFi and NFT users (low fees)
-- ✅ Traders (high speed)
-- ✅ Stakers (6-8% annually)
+- High-load dApp developers
+- DeFi and NFT users (low fees)
+- Traders (high speed)
+- Stakers (6-8% annually)
 
 **Who it's NOT for:**
-- ❌ Maximum decentralization (BTC, ETH better)
-- ❌ Don't trust PoH (new mechanism)
-- ❌ Want 100% anonymity
+- Maximum decentralization (BTC, ETH better)
+- Don't trust PoH (new mechanism)
+- Want 100% anonymity
 
 ---
 
