@@ -3,7 +3,7 @@ title: 'Ethereum Explained: What It Is, How It Works, Why ETH Matters'
 description: 'Ethereum for beginners: blockchain, smart contracts, gas, staking. How ETH differs from Bitcoin. Complete guide 2026.'
 pubDate: '2026-03-15'
 category: 'crypto'
-draft: true
+draft: false
 ---
 
 **Ethereum** — a decentralized blockchain platform for launching smart contracts and decentralized applications (dApps). Unlike Bitcoin, which was created as digital currency, Ethereum was conceived as a "world computer" for programmable financial operations.

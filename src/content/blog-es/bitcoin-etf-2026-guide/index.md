@@ -1,9 +1,9 @@
 ---
 title: 'Bitcoin ETF en 2026: Cómo Invertir en BTC a Través de la Bolsa'
 description: 'Bitcoin ETF para principiantes y avanzados: qué es, cómo comprar, comisiones de BlackRock y Fidelity. Comparación con compra directa de BTC, impuestos, riesgos. Guía completa 2026.'
-pubDate: '2026-03-24'
+pubDate: '2026-03-18'
 category: 'crypto'
-draft: true
+draft: false
 ---
 
 **Bitcoin ETF (fondo cotizado en bolsa)** — instrumento de inversión para comprar Bitcoin a través de una cuenta de corretaje tradicional sin necesidad de almacenar criptomoneda tú mismo. En 2026, los inversores tienen acceso a varios tipos de Bitcoin ETFs: spot, de futuros y apalancados.

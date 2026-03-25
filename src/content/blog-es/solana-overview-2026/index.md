@@ -3,7 +3,7 @@ title: 'Solana en 2026: Guía Completa del Ecosistema, Tokenomics, Staking'
 description: 'Solana (SOL) para principiantes y avanzados: cómo funciona el blockchain, tokenomics de SOL, staking, ecosistema DeFi y NFT. Riesgos y perspectivas.'
 pubDate: '2026-03-24'
 category: 'crypto'
-draft: true
+draft: false
 ---
 
 **Solana** — un blockchain de alto rendimiento para aplicaciones descentralizadas (dApps) con capacidad de hasta 65,000 transacciones por segundo y comisiones ~$0.00025. A diferencia de Ethereum, Solana utiliza un mecanismo de consenso único Proof-of-History (PoH) para lograr alta velocidad.

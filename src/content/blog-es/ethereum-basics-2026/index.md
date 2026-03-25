@@ -3,7 +3,7 @@ title: 'Ethereum en Términos Simples: Qué Es, Cómo Funciona, Por Qué Importa
 description: 'Ethereum para principiantes: blockchain, contratos inteligentes, gas, staking. Cómo se diferencia ETH de Bitcoin. Guía completa 2026.'
 pubDate: '2026-03-15'
 category: 'crypto'
-draft: true
+draft: false
 ---
 
 **Ethereum** — una plataforma blockchain descentralizada para lanzar contratos inteligentes y aplicaciones descentralizadas (dApps). A diferencia de Bitcoin, que se creó como moneda digital, Ethereum fue concebido como una "computadora mundial" para operaciones financieras programables.

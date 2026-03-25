@@ -1,9 +1,9 @@
 ---
 title: 'Bitcoin ETF in 2026: How to Invest in BTC via Stock Exchange'
 description: 'Bitcoin ETF for beginners and advanced: what it is, how to buy, BlackRock and Fidelity fees. Comparison with direct BTC purchase, taxes, risks. Complete guide 2026.'
-pubDate: '2026-03-24'
+pubDate: '2026-03-18'
 category: 'crypto'
-draft: true
+draft: false
 ---
 
 **Bitcoin ETF (exchange-traded fund)** — investment instrument for buying Bitcoin through a traditional brokerage account without needing to store cryptocurrency yourself. In 2026, investors have access to several types of Bitcoin ETFs: spot, futures, and leveraged.

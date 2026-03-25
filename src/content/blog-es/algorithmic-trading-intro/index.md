@@ -3,7 +3,7 @@ title: 'Trading Algorítmico: Del Palo del Hombre de las Cavernas a los Bots Cry
 description: 'Trading algorítmico para principiantes: qué es un algoritmo de trading, historia desde reglas simples hasta IA. Mercados crypto, plataformas tradicionales, automatización de estrategias.'
 pubDate: '2026-03-10'
 category: 'algo-trading'
-draft: true
+draft: false
 ---
 
 **Trading algorítmico** — uso de reglas predefinidas (algoritmos) para comprar y vender activos. Pensándolo bien, cuando un hombre de las cavernas recogió un palo y rodó una enorme roca fuera del camino — eso también es un algoritmo: "Si la roca bloquea el camino → recoger palo → rodar roca."
