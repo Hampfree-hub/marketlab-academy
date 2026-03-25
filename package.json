@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "npx astro dev",
     "build": "npx astro build",
+    "build:full": "npx astro build && npm run generate-og",
     "preview": "npx astro preview",
     "astro": "npx astro",
     "generate-og": "node scripts/generate-og-images.mjs",
