@@ -166,7 +166,7 @@ Contracts that don't conflict execute in parallel. This increases throughput hun
 
 **In circulation:**
 - ~430 million SOL (March 2026)
-- ~340 million SOL staked (79% of circulating supply)
+- ~260-280 million SOL staked (~60-65% of circulating supply)
 
 ### Comparison: SOL vs ETH
 

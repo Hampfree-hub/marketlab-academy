@@ -166,7 +166,7 @@ Los contratos que no entran en conflicto se ejecutan en paralelo. Esto aumenta e
 
 **En circulación:**
 - ~430 millones de SOL (marzo 2026)
-- ~340 millones de SOL en staking (79% del supply circulante)
+- ~260-280 millones de SOL en staking (~60-65% del supply circulante)
 
 ### Comparación: SOL vs ETH
 
