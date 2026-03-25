@@ -67,7 +67,6 @@ Bitcoin is like a calculator (one function: transfers). Ethereum is like a smart
 - Problem: fees up to $50-100 per transaction
 
 ![Ethereum Price Chart 2021-2026 with Key Events](./assets/eth-price-chart-2021-2026.png)
-*ETH price journey from $1,400 (2017) to $200+ (2025). Key events: ICO boom, DeFi Summer, The Merge, ETF approval.*
 
 ### 2022: The Merge — Transition to Proof-of-Stake
 
@@ -148,7 +147,6 @@ Fee = Gas Used × Gas Price
 **Gwei** — a unit of gas price measurement (1 gwei = 0.000000001 ETH).
 
 ![Ethereum Gas Fees Chart 2020-2026](./assets/eth-gas-chart.png)
-*Ethereum fees range from $1-5 in calm times to $50-100 at peak. Layer 2 solves this problem.*
 
 ---
 
@@ -292,7 +290,6 @@ Fee = Gas Used × Gas Price
 **Recommendation:** For small amounts (< $1,000) use Layer 2. For large amounts — Ethereum mainnet.
 
 ![Arbitrum Bridge Interface for Transferring ETH to Layer 2](./assets/arbitrum-bridge.png)
-*Arbitrum Bridge: transferring ETH from Ethereum mainnet to Arbitrum takes ~10-15 minutes, fees ~$1-5.*
 
 ---
 

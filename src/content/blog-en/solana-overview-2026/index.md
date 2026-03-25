@@ -86,7 +86,6 @@ Solana uses Proof-of-History (PoH) + Proof-of-Stake (PoS). PoH creates "timestam
 - Institutional interest (Visa accepts USDC on Solana)
 
 ![Solana Price Chart 2021-2026 with FTX Crash and Recovery](./assets/sol-price-chart-2021-2026.png)
-*SOL journey from $1.50 (2021) to $260 (ATH), then crash to $8 (FTX) and recovery to $200+ (2025).*
 
 ---
 
@@ -246,7 +245,6 @@ Contracts that don't conflict execute in parallel. This increases throughput hun
 **TVL (Total Value Locked):** $5-10 billion (fluctuates)
 
 ![Solana TVL Chart from DeFiLlama](./assets/solana-tvl-chart-defilama.png)
-*SOL TVL: drop to $200M after FTX and recovery to $5-10B (2024-2025).*
 
 **Advantages:**
 - Fees: $0.00025 per swap
@@ -371,7 +369,6 @@ Contracts that don't conflict execute in parallel. This increases throughput hun
 - From $10,000: hardware wallet (Ledger Nano X)
 
 ![Phantom Wallet Home Page](./assets/the-home-page-of-the-phantom-wallet.png)
-*Phantom — the most popular Solana wallet: buy, send, stake, and view NFTs in one interface.*
 
 ### Security: Checklist
 

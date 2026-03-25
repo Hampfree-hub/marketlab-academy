@@ -96,7 +96,6 @@ Algorithms free you from emotions, save time, and allow 24/7 trading. In crypto,
 - Scandals: Flash Crash 2010 (1000-point drop in minutes)
 
 ![HFT share of US trading volume 2000-2020](./assets/trading-volume-chart.png)
-*HFT share of US trading volume peaked in 2010, then stabilized at 50-60%.*
 
 ### 2010-2020: Cryptocurrencies and Retail Bots
 
@@ -354,7 +353,6 @@ IF loss > 5% в†’ STOP-LOSS
 - **Cons:** Limited logic vs Python
 
 ![MA Crossover Strategy on TradingView Pine Script](./assets/tradingview-pine-script-ma-crossover-strategy.png)
-*Simple TradingView strategy: MA(50) and MA(200) crossover generates buy signals (green markers) and sell signals (red markers).*
 
 **Python Libraries:**
 - Backtrader, Freqtrade, CCXT

@@ -85,7 +85,6 @@ Buying Bitcoin ETF doesn't require:
 - Bitcoin reached new ATH ($100,000+ in 2025)
 
 ![iShares Bitcoin Trust (IBIT) — Largest Bitcoin ETF](./assets/ishares-bitcoin-trust.png)
-*BlackRock IBIT: $35+ billion AUM, 0.25% fee, one of the most successful ETFs in history.*
 
 ---
 

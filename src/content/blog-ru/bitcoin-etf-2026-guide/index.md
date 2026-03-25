@@ -85,7 +85,6 @@ ETF на золото. Вместо покупки физических слит
 - Bitcoin достиг нового ATH ($100,000+ в 2025 году)
 
 ![iShares Bitcoin Trust (IBIT) — крупнейший Bitcoin ETF](./assets/ishares-bitcoin-trust.png)
-*BlackRock IBIT: $35+ млрд под управлением, комиссия 0.25%, один из самых успешных ETF в истории.*
 
 ---
 
