@@ -442,6 +442,8 @@ Sobrecarga de red, bugs en el cliente del validador, ataques. Sin caídas desde 
 
 Nuevo cliente de validador de Jump Crypto. Aumentará el throughput a 1 millón de TPS y mejorará la confiabilidad. Lanzamiento esperado en 2026.
 
-**¿Cómo comprar SOL en EE.UU./Europa/Rusia?**
+**¿Cómo comprar SOL en diferentes regiones?**
 
-En EE.UU./Europa: Coinbase, Binance, Kraken. En Rusia: Bybit, BingX (vía P2P). Almacenar mejor en billetera de hardware (Ledger) o software (Phantom, Solflare).
+- **EE.UU./Europa:** Coinbase, Binance, Kraken
+- **Región CIS:** Bybit, BingX (vía P2P)
+- Almacenar mejor en billetera de hardware (Ledger) o software (Phantom, Solflare)

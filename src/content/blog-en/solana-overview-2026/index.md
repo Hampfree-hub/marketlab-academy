@@ -457,6 +457,8 @@ Network overload, validator client bugs, attacks. No outages since January 2024.
 
 New validator client from Jump Crypto. Will increase throughput to 1 million TPS and improve reliability. Launch expected in 2026.
 
-**How to buy SOL in US/Europe/Russia?**
+**How to buy SOL in different regions?**
 
-In US/Europe: Coinbase, Binance, Kraken. In Russia: Bybit, BingX (via P2P). Store better on hardware wallet (Ledger) or software (Phantom, Solflare).
+- **US/Europe:** Coinbase, Binance, Kraken
+- **CIS region:** Bybit, BingX (via P2P)
+- Store better on hardware wallet (Ledger) or software (Phantom, Solflare)

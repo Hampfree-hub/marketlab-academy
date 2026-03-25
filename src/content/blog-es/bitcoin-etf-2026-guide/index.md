@@ -162,6 +162,8 @@ En la prórroga de futuros, el fondo pierde 2.1% del valor. En un año, tales p�
 
 ## Impuestos sobre Bitcoin ETF
 
+**Nota:** Las reglas fiscales varían según el país. A continuación, ejemplos para varias jurisdicciones.
+
 ### Estados Unidos
 
 **Ganancias de capital a corto plazo** (< 1 año):
@@ -170,15 +172,15 @@ En la prórroga de futuros, el fondo pierde 2.1% del valor. En un año, tales p�
 **Ganancias de capital a largo plazo** (> 1 año):
 - Tasa impositiva: 0%, 15% o 20%
 
-**Formulario:** 1099-DIV del corredor
+**Formulario:** 1099-B (informe del corredor sobre ventas de valores)
 
-### Rusia
+### Países CIS y otros
 
-**Impuesto sobre ingresos personales (NDFL):**
-- Tasa: 13% (hasta 5 millones de rub), 15% (más de)
-- Beneficio: IIS (deducción del 13% en contribuciones hasta 400 mil rub)
+**Impuesto sobre ingresos personales:**
+- Tasa: generalmente 13-15% (en algunos países CIS)
+- En algunos países: el corredor retiene automáticamente el impuesto
 
-**Importante:** El corredor retiene automáticamente el impuesto al vender
+**Nota:** El tratamiento fiscal de las recompensas de staking varía. Consulta a un profesional de impuestos.
 
 ### Unión Europea
 
@@ -323,9 +325,9 @@ No. Bitcoin no genera flujo de efectivo, por lo que no hay dividendos.
 
 BlackRock IBIT — $35+ mil millones en activos bajo gestión (marzo 2026).
 
-**¿Puedo comprar Bitcoin ETF en Rusia?**
+**¿Puedo comprar Bitcoin ETF en mi país?**
 
-A través de corredores rusos — no. A través de corredores extranjeros — sí, pero hay restricciones cambiarias.
+Depende de tu jurisdicción. En EE.UU. — a través de cualquier corredor (Interactive Brokers, Robinhood). En algunos países — a través de corredores extranjeros, pero puede haber restricciones cambiarias. En ciertas regiones, el acceso al ETF está limitado por requisitos regulatorios.
 
 **¿Debo pagar impuestos al comprar ETF?**
 

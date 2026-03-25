@@ -176,6 +176,8 @@ On futures rollover, the fund loses 2.1% of value. Over a year, such losses can 
 
 ## Bitcoin ETF Taxes
 
+**Note:** Tax rules vary by country. Below are examples for several jurisdictions.
+
 ### United States
 
 **Short-term capital gains** (< 1 year):
@@ -186,13 +188,13 @@ On futures rollover, the fund loses 2.1% of value. Over a year, such losses can 
 
 **Form:** 1099-B (broker's report on securities sales)
 
-### Russia
+### CIS and Other Countries
 
-**Personal income tax (NDFL):**
-- Rate: 13% (up to 5M rub), 15% (above)
-- Benefit: IIS (13% deduction on contributions up to 400K rub)
+**Personal income tax:**
+- Rate: usually 13-15% (in some CIS countries)
+- In some countries: broker automatically withholds tax on sale
 
-**Important:** Broker automatically withholds tax on sale
+**Note:** Tax treatment of staking rewards varies. Consult a tax professional for your jurisdiction.
 
 ### European Union
 
@@ -337,9 +339,9 @@ No. Bitcoin doesn't generate cash flow, so there are no dividends.
 
 BlackRock IBIT — $35+ billion under management (March 2026).
 
-**Can I buy Bitcoin ETF in Russia?**
+**Can I buy Bitcoin ETF in my country?**
 
-Through Russian brokers — no. Through foreign brokers — yes, but there are currency restrictions.
+It depends on your jurisdiction. In the US — through any broker (Interactive Brokers, Robinhood). In some countries — through foreign brokers, but currency restrictions may apply. In certain regions, ETF access is limited due to regulatory requirements.
 
 **Do I pay tax when buying ETF?**
 

@@ -366,7 +366,7 @@ You'll get less in dollars, but coin amount grows. If you don't sell — loss is
 
 **Do I need to pay taxes?**
 
-Yes, in most countries. Rewards are income (13-15% НДФЛ in Russia, 10-37% in US).
+Yes, in most countries. Rewards are income (13-15% in some CIS countries, 10-37% in US, rates vary in EU).
 
 **What's the most reliable option?**
 
