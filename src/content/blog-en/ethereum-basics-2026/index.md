@@ -66,6 +66,9 @@ Bitcoin is like a calculator (one function: transfers). Ethereum is like a smart
 - TVL (Total Value Locked): $1 billion → $15 billion
 - Problem: fees up to $50-100 per transaction
 
+![Ethereum Price Chart 2021-2026 with Key Events](./assets/eth-price-chart-2021-2026.png)
+*ETH price journey from $1,400 (2017) to $200+ (2025). Key events: ICO boom, DeFi Summer, The Merge, ETF approval.*
+
 ### 2022: The Merge — Transition to Proof-of-Stake
 
 **September 15, 2022:** Ethereum transitioned from Proof-of-Work to Proof-of-Stake.
@@ -143,6 +146,9 @@ Fee = Gas Used × Gas Price
 - Fee: 21,000 × 20 gwei = 0.00042 ETH (~$1-5 in calm times, $50-100 at peak)
 
 **Gwei** — a unit of gas price measurement (1 gwei = 0.000000001 ETH).
+
+![Ethereum Gas Fees Chart 2020-2026](./assets/eth-gas-chart.png)
+*Ethereum fees range from $1-5 in calm times to $50-100 at peak. Layer 2 solves this problem.*
 
 ---
 
@@ -256,6 +262,17 @@ Fee = Gas Used × Gas Price
 - **Polygon zkEVM:** Ethereum compatibility
 - **Mechanics:** ZK-proofs of transaction validity
 
+### Layer 2 Solutions Comparison
+
+| Solution | Type | TVL (billions $) | Fees | Withdrawal to Mainnet |
+|----------|------|------------------|------|----------------------|
+| **Arbitrum** | Optimistic | 3-5 | $0.01-0.10 | 7 days |
+| **Optimism** | Optimistic | 1-2 | $0.01-0.10 | 7 days |
+| **Base** | Optimistic | 1-2 | $0.01-0.10 | 7 days |
+| **zkSync Era** | ZK | 0.5-1 | $0.01-0.05 | Instant |
+| **Starknet** | ZK | 0.3-0.5 | $0.01-0.05 | Instant |
+| **Polygon zkEVM** | ZK | 0.1-0.3 | $0.01-0.05 | Instant |
+
 **How to start using Layer 2:**
 1. Buy ETH on exchange
 2. Bridge to L2 via Arbitrum Bridge, Optimism Gateway
@@ -273,6 +290,9 @@ Fee = Gas Used × Gas Price
 - ❌ Withdrawal to mainnet can take 7 days (Optimistic)
 
 **Recommendation:** For small amounts (< $1,000) use Layer 2. For large amounts — Ethereum mainnet.
+
+![Arbitrum Bridge Interface for Transferring ETH to Layer 2](./assets/arbitrum-bridge.png)
+*Arbitrum Bridge: transferring ETH from Ethereum mainnet to Arbitrum takes ~10-15 minutes, fees ~$1-5.*
 
 ---
 

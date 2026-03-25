@@ -84,6 +84,9 @@ Buying Bitcoin ETF doesn't require:
 - BlackRock IBIT became one of the most successful ETFs in history
 - Bitcoin reached new ATH ($100,000+ in 2025)
 
+![iShares Bitcoin Trust (IBIT) — Largest Bitcoin ETF](./assets/ishares-bitcoin-trust.png)
+*BlackRock IBIT: $35+ billion AUM, 0.25% fee, one of the most successful ETFs in history.*
+
 ---
 
 ## Spot vs Futures ETFs: What's the Difference
@@ -142,6 +145,18 @@ On futures rollover, the fund loses 2.1% of value. Over a year, such losses can 
 - Fidelity
 - E*TRADE
 - Robinhood
+
+### Brokers Comparison for Bitcoin ETF
+
+| Broker | Min. Deposit | Fee | ETF Access | IRA/401(k) |
+|--------|--------------|-----|------------|------------|
+| **Interactive Brokers** | $0 | $0 | ✅ | ✅ |
+| **Fidelity** | $0 | $0 | ✅ | ✅ |
+| **Charles Schwab** | $0 | $0 | ✅ | ✅ |
+| **Robinhood** | $0 | $0 | ✅ | ❌ |
+| **E*TRADE** | $0 | $0 | ✅ | ✅ |
+
+**Fees:** $0 for ETF trading (all major brokers)
 
 ### Step 2: Choose ETF
 

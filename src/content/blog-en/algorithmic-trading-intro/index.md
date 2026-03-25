@@ -95,6 +95,9 @@ Algorithms free you from emotions, save time, and allow 24/7 trading. In crypto,
 - 60-70% of trading volume in US
 - Scandals: Flash Crash 2010 (1000-point drop in minutes)
 
+![HFT share of US trading volume 2000-2020](./assets/trading-volume-chart.png)
+*HFT share of US trading volume peaked in 2010, then stabilized at 50-60%.*
+
 ### 2010-2020: Cryptocurrencies and Retail Bots
 
 **2010:** Bitcoin starts trading on exchanges.
@@ -350,6 +353,9 @@ IF loss > 5% в†’ STOP-LOSS
 - **Pros:** Free, many cryptocurrencies, cloud-based
 - **Cons:** Limited logic vs Python
 
+![MA Crossover Strategy on TradingView Pine Script](./assets/tradingview-pine-script-ma-crossover-strategy.png)
+*Simple TradingView strategy: MA(50) and MA(200) crossover generates buy signals (green markers) and sell signals (red markers).*
+
 **Python Libraries:**
 - Backtrader, Freqtrade, CCXT
 - **Pros:** Full freedom, free
@@ -457,12 +463,26 @@ Alongside the algorithm, it's recommended to keep a [trading journal](https://ma
 
 ### For Beginners (No Code)
 
-- **Veles:** Cloud bots, backtests, simple interface вЂ” [try Veles](https://veles.finance/invite/washmallay) *(affiliate link)*
+- **Veles:** Cloud bots, backtests, simple interface — [try Veles](https://veles.finance/invite/washmallay) *(affiliate link)*
 - **Gainium:** Grid, DCA, market making (free up to 2 bots)
 - **3Commas:** DCA, Grid, Trailing
 - **Cryptohopper:** Ready strategies, marketplace
 - **Antbot:** Signals, copy trading
 - **TradingView:** Signals, alerts, Pine Script (gold standard for visual backtesting)
+
+### Algo Trading Platforms Comparison
+
+| Platform | Type | Difficulty | Cost | Crypto | Forex/CFD | Backtests |
+|----------|------|------------|------|--------|-----------|-----------|
+| **Veles** | Cloud | ⭐ | Free | ✅ | ❌ | ✅ |
+| **Gainium** | Cloud | ⭐ | Freemium | ✅ | ❌ | ✅ |
+| **3Commas** | Cloud | ⭐⭐ | $20-100/mo | ✅ | ❌ | ⚠️ |
+| **TradingView** | Web | ⭐⭐ | $0-15/mo | ✅ | ✅ | ✅ |
+| **MT4/MT5** | Desktop | ⭐⭐⭐ | Free | ❌ | ✅ | ✅ |
+| **Python + CCXT** | Code | ⭐⭐⭐⭐ | Free | ✅ | ❌ | ✅ |
+| **QuantConnect** | Cloud | ⭐⭐⭐⭐⭐ | $0-1000/mo | ✅ | ✅ | ✅ |
+
+**Difficulty:** ⭐ Very Easy | ⭐⭐⭐⭐⭐ Requires Programming
 
 ### For Advanced (Code)
 
