@@ -52,7 +52,7 @@ const rubricColors = {
 	'general': '#00D800'
 };
 
-// Generate OG image using Puppeteer
+// Generate OG image for blog posts
 async function generateOGImage(data, browser, outputPath) {
 	try {
 		const rubric = data.rubric || (() => {
@@ -101,6 +101,36 @@ async function generateOGImage(data, browser, outputPath) {
 		return true;
 	} catch (error) {
 		console.error(`[OG Images] Error generating image for ${data.slug}:`, error);
+		return false;
+	}
+}
+
+// Generate OG image for homepage (special template)
+async function generateHomepageOGImage(data, browser, outputPath) {
+	try {
+		console.log(`[OG Images] Generating homepage image for: ${data.lang}`);
+
+		const templatePath = path.join(__dirname, 'og-homepage-template.html');
+		let html = await readFile(templatePath, 'utf-8');
+
+		html = html
+			.replace(/\{\{TITLE\}\}/g, data.title || '')
+			.replace(/\{\{SUBTITLE\}\}/g, data.subtitle || '');
+
+		const page = await browser.newPage();
+		await page.setViewport({ width: 1200, height: 630 });
+		await page.setContent(html, { waitUntil: 'networkidle0' });
+		await page.evaluateHandle(() => document.fonts.ready);
+
+		const screenshot = await page.screenshot({ type: 'png', clip: { x: 0, y: 0, width: 1200, height: 630 } });
+		await page.close();
+
+		const dir = path.dirname(outputPath);
+		if (!existsSync(dir)) { await mkdir(dir, { recursive: true }); }
+		await writeFile(outputPath, screenshot);
+		return true;
+	} catch (error) {
+		console.error(`[OG Images] Error generating homepage image for ${data.lang}:`, error);
 		return false;
 	}
 }
@@ -168,7 +198,7 @@ async function main() {
 			}, browser, outputPath);
 		}
 
-		// Homepage Images (Multilingual)
+		// Homepage Images (Multilingual) - using special template
 		const homeConfigs = [
 			{ lang: 'ru', title: 'MarketLab Academy', subtitle: 'Блог о трейдинге, криптовалюте и автоматизации торговли' },
 			{ lang: 'en', title: 'MarketLab Academy', subtitle: 'Blog about trading, cryptocurrency and trading automation' },
@@ -176,19 +206,15 @@ async function main() {
 		];
 
 		for (const config of homeConfigs) {
-			await generateOGImage({
-				...config,
-				category: 'general',
-				slug: 'homepage'
-			}, browser, path.join(ogDir, `${config.lang}-homepage.png`));
-			
+			await generateHomepageOGImage(config, browser, path.join(ogDir, `${config.lang}-homepage.png`));
+
 			// Legacy fallback for root
 			if (config.lang === 'ru') {
-				await generateOGImage({ ...config, category: 'general', slug: 'homepage' }, browser, path.join(ogDir, 'homepage.png'));
+				await generateHomepageOGImage(config, browser, path.join(ogDir, 'homepage.png'));
 			}
 		}
 
-		// About Page Images (Multilingual)
+		// About Page Images (Multilingual) - using special template
 		const aboutConfigs = [
 			{ lang: 'ru', title: 'О проекте', subtitle: 'MarketLab Academy — блог о трейдинге, где главное — люди и их опыт.' },
 			{ lang: 'en', title: 'About Project', subtitle: 'MarketLab Academy — a trading blog where people and their experience come first.' },
@@ -196,11 +222,7 @@ async function main() {
 		];
 
 		for (const config of aboutConfigs) {
-			await generateOGImage({
-				...config,
-				category: 'general',
-				slug: 'about'
-			}, browser, path.join(ogDir, `${config.lang}-about.png`));
+			await generateHomepageOGImage(config, browser, path.join(ogDir, `${config.lang}-about.png`));
 		}
 
 	} finally {

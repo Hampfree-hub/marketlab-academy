@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>OG Homepage</title>
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		:root {
+			--nes-bg-primary: #050608;
+			--nes-text-primary: #E5E5E5;
+			--nes-text-secondary: #B0B0B0;
+			--nes-accent-green: #00D800;
+			--nes-accent-blue: #3CBCFC;
+		}
+
+		body {
+			width: 1200px;
+			height: 630px;
+			margin: 0;
+			padding: 0;
+			font-family: 'Press Start 2P', monospace;
+			background: var(--nes-bg-primary);
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.homepage-banner {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background: 
+				repeating-linear-gradient(
+					0deg,
+					transparent,
+					transparent 2px,
+					rgba(0, 216, 0, 0.03) 2px,
+					rgba(0, 216, 0, 0.03) 4px
+				),
+				linear-gradient(
+					135deg,
+					var(--nes-bg-primary) 0%,
+					rgba(0, 216, 0, 0.08) 50%,
+					var(--nes-bg-primary) 100%
+				);
+		}
+
+		.logo-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 48px;
+			text-align: center;
+		}
+
+		.logo-text {
+			font-family: 'Press Start 2P', monospace;
+			font-size: 3.5rem;
+			color: var(--nes-accent-green);
+			text-transform: uppercase;
+			letter-spacing: 4px;
+			text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+			line-height: 1.3;
+		}
+
+		.tagline {
+			font-family: 'JetBrains Mono', monospace;
+			font-size: 1.4rem;
+			color: var(--nes-text-secondary);
+			max-width: 800px;
+			line-height: 1.6;
+			text-align: center;
+		}
+
+		.features {
+			display: flex;
+			gap: 32px;
+			margin-top: 32px;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.feature-item {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			font-family: 'JetBrains Mono', monospace;
+			font-size: 1rem;
+			color: var(--nes-accent-blue);
+			padding: 12px 20px;
+			border: 2px solid rgba(60, 188, 252, 0.3);
+			background: rgba(0, 0, 0, 0.3);
+		}
+
+		.feature-icon {
+			width: 20px;
+			height: 20px;
+			background: var(--nes-accent-green);
+			display: inline-block;
+		}
+
+		/* Pixel art decoration - corners */
+		.corner {
+			position: absolute;
+			width: 60px;
+			height: 60px;
+			border: 4px solid rgba(0, 216, 0, 0.2);
+		}
+
+		.corner-tl {
+			top: 40px;
+			left: 40px;
+			border-right: none;
+			border-bottom: none;
+		}
+
+		.corner-tr {
+			top: 40px;
+			right: 40px;
+			border-left: none;
+			border-bottom: none;
+		}
+
+		.corner-bl {
+			bottom: 40px;
+			left: 40px;
+			border-right: none;
+			border-top: none;
+		}
+
+		.corner-br {
+			bottom: 40px;
+			right: 40px;
+			border-left: none;
+			border-top: none;
+		}
+
+		/* Scanline effect */
+		.homepage-banner::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: repeating-linear-gradient(
+				rgba(0, 0, 0, 0.08),
+				rgba(0, 0, 0, 0.08) 1px,
+				transparent 1px,
+				transparent 4px
+			);
+			pointer-events: none;
+			z-index: 1;
+		}
+
+		.content-wrapper {
+			position: relative;
+			z-index: 2;
+		}
+	</style>
+</head>
+<body>
+	<div class="homepage-banner">
+		<!-- Corner decorations -->
+		<div class="corner corner-tl"></div>
+		<div class="corner corner-tr"></div>
+		<div class="corner corner-bl"></div>
+		<div class="corner corner-br"></div>
+
+		<div class="content-wrapper">
+			<div class="logo-container">
+				<h1 class="logo-text">{{TITLE}}</h1>
+				<p class="tagline">{{SUBTITLE}}</p>
+				
+				<div class="features">
+					<div class="feature-item">
+						<span class="feature-icon"></span>
+						<span>Трейдинг</span>
+					</div>
+					<div class="feature-item">
+						<span class="feature-icon"></span>
+						<span>Криптовалюты</span>
+					</div>
+					<div class="feature-item">
+						<span class="feature-icon"></span>
+						<span>Алготрейдинг</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
