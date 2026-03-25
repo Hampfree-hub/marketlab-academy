@@ -49,9 +49,9 @@ In 2026, staking remains one of the most popular ways to earn in crypto. In this
 | **Cosmos (ATOM)** | 8-15% | 1 ATOM | 21 days | Medium |
 | **Avalanche (AVAX)** | up to 7.65% | 25 AVAX | 2 weeks | Low |
 | **Polygon (POL)** | 3-4% | 1 POL | None | Low |
-| **Algorand (ALGO)** | ~4% (varies) | 1 ALGO | None | Low |
+| **Algorand (ALGO)** | ~4% (automatic) | 1 ALGO | None (rewards for holding) | Low |
 | **Tezos (XTZ)** | 4-5% | 1 XTZ | 7 days | Low |
-| **VeChain (VET)** | 2-3% (via VTHO) | 1 VET | None | Low |
+| **VeChain (VET)** | 2-3% (in VTHO gas token) | 1 VET | None | Low |
 
 *Data is approximate, exact yield depends on validator, exchange, or pool.*
 
@@ -95,7 +95,7 @@ In 2026, staking remains one of the most popular ways to earn in crypto. In this
 | **Withdrawal** | Flexible (depends on exchange) | Depends on pool | 28 days (ETH) |
 | **Complexity** | Low (2 clicks) | Medium | High |
 | **Risks** | Exchange hack | Smart contract | Slashing, downtime |
-| **For whom** | Beginners, <$1000 | $1000-$10,000 | $10,000+, tech-savvy |
+| **For whom** | Beginners, <$1000 | $1000-$10,000 | $50,000+, tech-savvy |
 
 ![Staking providers: yield and reliability comparison (Nansen)](./assets/staking-rewards-providers-nansen.png)
 
@@ -340,7 +340,7 @@ Use online calculators:
 **Optimal strategy for beginner:**
 - 50% ETH (3-4% annually, low risk)
 - 30% SOL (6-8% annually, medium risk)
-- 20% ADA or DOT (3-16% annually, medium risk)
+- 20% ADA or ATOM (3-15% annually, medium risk)
 
 **Expected yield:** 4-8% annually in dollars + coin price appreciation.
 

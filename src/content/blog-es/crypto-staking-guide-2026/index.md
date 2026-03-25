@@ -49,9 +49,9 @@ En 2026, el staking sigue siendo una de las formas más populares de ganar en cr
 | **Cosmos (ATOM)** | 8-15% | 1 ATOM | 21 días | Medio |
 | **Avalanche (AVAX)** | hasta 7.65% | 25 AVAX | 2 semanas | Bajo |
 | **Polygon (POL)** | 3-4% | 1 POL | Ninguno | Bajo |
-| **Algorand (ALGO)** | ~4% (varía) | 1 ALGO | Ninguno | Bajo |
+| **Algorand (ALGO)** | ~4% (automático) | 1 ALGO | Ninguno (recompensas por tenencia) | Bajo |
 | **Tezos (XTZ)** | 4-5% | 1 XTZ | 7 días | Bajo |
-| **VeChain (VET)** | 2-3% (vía VTHO) | 1 VET | Ninguno | Bajo |
+| **VeChain (VET)** | 2-3% (en VTHO token de gas) | 1 VET | Ninguno | Bajo |
 
 *Los datos son aproximados, el rendimiento exacto depende del validador, exchange o pool.*
 
@@ -95,7 +95,7 @@ En 2026, el staking sigue siendo una de las formas más populares de ganar en cr
 | **Retiro** | Flexible (depende del exchange) | Depende del pool | 28 días (ETH) |
 | **Complejidad** | Baja (2 clics) | Media | Alta |
 | **Riesgos** | Hack del exchange | Contrato inteligente | Slashing, tiempo de inactividad |
-| **Para quién** | Principiantes, <$1000 | $1000-$10,000 | $10,000+, técnicos |
+| **Para quién** | Principiantes, <$1000 | $1000-$10,000 | $50,000+, técnicos |
 
 ![Proveedores de staking: comparación de rentabilidad y confiabilidad (Nansen)](./assets/staking-rewards-providers-nansen.png)
 
@@ -340,7 +340,7 @@ Usa calculadoras en línea:
 **Estrategia óptima para principiantes:**
 - 50% ETH (3-4% anual, bajo riesgo)
 - 30% SOL (6-8% anual, riesgo medio)
-- 20% ADA o DOT (3-16% anual, riesgo medio)
+- 20% ADA o ATOM (3-15% anual, riesgo medio)
 
 **Rentabilidad esperada:** 4-8% anual en dólares + apreciación del precio de las monedas.
 
