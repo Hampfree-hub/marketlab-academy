@@ -112,14 +112,14 @@ Exchange descentralizado (DEX):
 4. Sin intermediario, sin KYC
 
 **Ventajas:**
-- ✅ Ejecución automática (no necesitas confiar en una persona)
-- ✅ Transparencia (el código es abierto)
-- ✅ Resistencia a la censura (nadie puede cerrarlo)
+- Ejecución automática (no necesitas confiar en una persona)
+- Transparencia (el código es abierto)
+- Resistencia a la censura (nadie puede cerrarlo)
 
 **Desventajas:**
-- ❌ Bugs en el código = pérdida de fondos (irreversible)
-- ❌ Comisiones por cada acción
-- ❌ Dificultad de actualización (el contrato no se puede modificar)
+- Bugs en el código = pérdida de fondos (irreversible)
+- Comisiones por cada acción
+- Dificultad de actualización (el contrato no se puede modificar)
 
 ### Gas (Gas) — Comisión de Red
 
@@ -263,14 +263,14 @@ Comisión = Gas Usado × Precio del Gas
 4. Comisiones: $0.01-0.10 por swap
 
 **Ventajas:**
-- ✅ Comisiones bajas ($0.01-0.10 vs $1-50)
-- ✅ Alta velocidad (~100-4,000 TPS)
-- ✅ Compatibilidad con Ethereum (mismas direcciones, claves)
+- Comisiones bajas ($0.01-0.10 vs $1-50)
+- Alta velocidad (~100-4,000 TPS)
+- Compatibilidad con Ethereum (mismas direcciones, claves)
 
 **Desventajas:**
-- ❌ Necesitas usar puente (paso adicional)
-- ❌ Algunos protocolos aún no están portados
-- ❌ El retiro a mainnet puede tomar 7 días (Optimistic)
+- Necesitas usar puente (paso adicional)
+- Algunos protocolos aún no están portados
+- El retiro a mainnet puede tomar 7 días (Optimistic)
 
 **Recomendación:** Para cantidades pequeñas (< $1,000) usa Layer 2. Para cantidades grandes — Ethereum mainnet.
 
@@ -333,13 +333,13 @@ Comisión = Gas Usado × Precio del Gas
 
 ### Seguridad: Lista de Verificación
 
-- ✅ Seed phrase: escribir en papel, guardar en caja fuerte
-- ✅ 2FA: Google Authenticator (¡no SMS!)
-- ✅ Verificación de direcciones: primeros y últimos 4 caracteres
-- ✅ Transacción de prueba: antes de cantidad grande
-- ❌ No almacenar más del 10% del capital en exchange
-- ❌ No hacer clic en enlaces de correos (phishing)
-- ❌ No dar acceso a la billetera a terceros
+- Seed phrase: escribir en papel, guardar en caja fuerte
+- 2FA: Google Authenticator (¡no SMS!)
+- Verificación de direcciones: primeros y últimos 4 caracteres
+- Transacción de prueba: antes de cantidad grande
+- No almacenar más del 10% del capital en exchange
+- No hacer clic en enlaces de correos (phishing)
+- No dar acceso a la billetera a terceros
 
 ---
 
@@ -379,15 +379,15 @@ Comisión = Gas Usado × Precio del Gas
 4. Hacer staking de ETH para ingresos pasivos (3-5% anual)
 
 **Para quién es Ethereum:**
-- ✅ Desarrolladores de dApps
-- ✅ Usuarios de DeFi y NFT
-- ✅ Inversores a largo plazo
-- ✅ Stakers
+- Desarrolladores de dApps
+- Usuarios de DeFi y NFT
+- Inversores a largo plazo
+- Stakers
 
 **Para quién NO es:**
-- ❌ Solo para pagos (BTC es mejor)
-- ❌ No confías en contratos inteligentes
-- ❌ Quieres 100% anonimato
+- Solo para pagos (BTC es mejor)
+- No confías en contratos inteligentes
+- Quieres 100% anonimato
 
 ---
 

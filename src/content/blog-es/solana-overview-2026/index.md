@@ -357,14 +357,14 @@ Los contratos que no entran en conflicto se ejecutan en paralelo. Esto aumenta e
 
 ### Seguridad: Lista de Verificación
 
-- ✅ Seed phrase: escribir en papel, guardar en caja fuerte
-- ✅ 2FA: Google Authenticator (¡no SMS!)
-- ✅ Verificación de direcciones: primeros y últimos 4 caracteres
-- ✅ Transacción de prueba: antes de cantidad grande
-- ❌ No almacenar más del 10% del capital en exchange
-- ❌ No hacer clic en enlaces de correos (phishing)
-- ❌ No dar acceso a la billetera a terceros
-- ❌ No conectar la billetera a dApps sospechosas
+- Seed phrase: escribir en papel, guardar en caja fuerte
+- 2FA: Google Authenticator (¡no SMS!)
+- Verificación de direcciones: primeros y últimos 4 caracteres
+- Transacción de prueba: antes de cantidad grande
+- No almacenar más del 10% del capital en exchange
+- No hacer clic en enlaces de correos (phishing)
+- No dar acceso a la billetera a terceros
+- No conectar la billetera a dApps sospechosas
 
 ---
 
@@ -404,15 +404,15 @@ Los contratos que no entran en conflicto se ejecutan en paralelo. Esto aumenta e
 4. Diversificar riesgos (no todo en SOL)
 
 **Para quién es Solana:**
-- ✅ Desarrolladores de dApps de alta carga
-- ✅ Usuarios de DeFi y NFT (comisiones bajas)
-- ✅ Traders (alta velocidad)
-- ✅ Stakers (6-8% anual)
+- Desarrolladores de dApps de alta carga
+- Usuarios de DeFi y NFT (comisiones bajas)
+- Traders (alta velocidad)
+- Stakers (6-8% anual)
 
 **Para quién NO es:**
-- ❌ Máxima descentralización (BTC, ETH mejor)
-- ❌ No confías en PoH (nuevo mecanismo)
-- ❌ Quieres 100% anonimato
+- Máxima descentralización (BTC, ETH mejor)
+- No confías en PoH (nuevo mecanismo)
+- Quieres 100% anonimato
 
 ---
 

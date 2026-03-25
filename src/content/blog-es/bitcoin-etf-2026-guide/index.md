@@ -298,14 +298,14 @@ En la prórroga de futuros, el fondo pierde 2.1% del valor. En un año, tales p�
 4. Comprender los riesgos (contraparte, comisiones, regulación)
 
 **Para quién son los ETFs:**
-- ✅ Inversores minoristas sin experiencia en exchanges de cripto
-- ✅ Cuentas de jubilación (IRA, 401k)
-- ✅ Inversores institucionales
+- Inversores minoristas sin experiencia en exchanges de cripto
+- Cuentas de jubilación (IRA, 401k)
+- Inversores institucionales
 
 **Para quién NO son los ETFs:**
-- ❌ Quieres usar Bitcoin para pagos
-- ❌ No confías en las finanzas tradicionales
-- ❌ Quieres hacer staking o proporcionar liquidez
+- Quieres usar Bitcoin para pagos
+- No confías en las finanzas tradicionales
+- Quieres hacer staking o proporcionar liquidez
 
 ---
 
