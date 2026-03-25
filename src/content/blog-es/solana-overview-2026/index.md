@@ -165,8 +165,8 @@ Los contratos que no entran en conflicto se ejecutan en paralelo. Esto aumenta e
 - 10% — Comunidad y Ecosistema
 
 **En circulación:**
-- ~430 millones de SOL (marzo 2026)
-- ~260-280 millones de SOL en staking (~60-65% del supply circulante)
+- ~572 millones de SOL (marzo 2026, datos de CoinMarketCap)
+- ~340-350 millones de SOL en staking (~60% del supply circulante)
 
 ### Comparación: SOL vs ETH
 
@@ -420,7 +420,7 @@ Los contratos que no entran en conflicto se ejecutan en paralelo. Esto aumenta e
 
 **¿Cuánto SOL hay en circulación?**
 
-~430 millones de SOL (marzo 2026). Inflación ~5% anual, disminuyendo a 1.5%.
+~572 millones de SOL (marzo 2026, datos de CoinMarketCap). Inflación ~5% anual, disminuyendo a 1.5%.
 
 **¿Se puede minar Solana?**
 

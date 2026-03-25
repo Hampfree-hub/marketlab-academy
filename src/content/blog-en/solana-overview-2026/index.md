@@ -167,8 +167,8 @@ Contracts that don't conflict execute in parallel. This increases throughput hun
 - 10% — Community & Ecosystem
 
 **In circulation:**
-- ~430 million SOL (March 2026)
-- ~260-280 million SOL staked (~60-65% of circulating supply)
+- ~572 million SOL (March 2026, CoinMarketCap data)
+- ~340-350 million SOL staked (~60% of circulating supply)
 
 ### Comparison: SOL vs ETH
 
@@ -435,7 +435,7 @@ Contracts that don't conflict execute in parallel. This increases throughput hun
 
 **How much SOL is in circulation?**
 
-~430 million SOL (March 2026). Inflation ~5% annually, decreasing to 1.5%.
+~572 million SOL (March 2026, CoinMarketCap data). Inflation ~5% annually, decreasing to 1.5%.
 
 **Can you mine Solana?**
 

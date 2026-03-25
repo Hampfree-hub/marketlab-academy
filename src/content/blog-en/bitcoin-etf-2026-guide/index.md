@@ -184,7 +184,7 @@ On futures rollover, the fund loses 2.1% of value. Over a year, such losses can 
 **Long-term capital gains** (> 1 year):
 - Tax rate: 0%, 15%, or 20%
 
-**Form:** 1099-DIV from broker
+**Form:** 1099-B (broker's report on securities sales)
 
 ### Russia
 
