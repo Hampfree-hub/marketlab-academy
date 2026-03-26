@@ -113,9 +113,21 @@ async function generateHomepageOGImage(data, browser, outputPath) {
 		const templatePath = path.join(__dirname, 'og-homepage-template.html');
 		let html = await readFile(templatePath, 'utf-8');
 
+		// Feature translations
+		const featureTranslations = {
+			ru: { f1: 'Трейдинг', f2: 'Криптовалюты', f3: 'Алготрейдинг' },
+			en: { f1: 'Trading', f2: 'Cryptocurrency', f3: 'Algo Trading' },
+			es: { f1: 'Trading', f2: 'Criptomonedas', f3: 'Algo Trading' }
+		};
+
+		const features = featureTranslations[data.lang] || featureTranslations.ru;
+
 		html = html
 			.replace(/\{\{TITLE\}\}/g, data.title || '')
-			.replace(/\{\{SUBTITLE\}\}/g, data.subtitle || '');
+			.replace(/\{\{SUBTITLE\}\}/g, data.subtitle || '')
+			.replace(/\{\{FEATURE1\}\}/g, features.f1)
+			.replace(/\{\{FEATURE2\}\}/g, features.f2)
+			.replace(/\{\{FEATURE3\}\}/g, features.f3);
 
 		const page = await browser.newPage();
 		await page.setViewport({ width: 1200, height: 630 });
