@@ -464,6 +464,21 @@ Junto con el algoritmo, se recomienda llevar un [diario de trading](https://mark
 - **Antbot:** Señales, copy trading
 - **TradingView:** Señales, alertas, Pine Script (estándar de oro para backtesting visual)
 
+### Comparación de Plataformas de Trading Algorítmico
+
+| Plataforma | Tipo | Dificultad | Costo | Crypto | Forex/CFD | Backtests |
+|------------|------|------------|-------|--------|-----------|-----------|
+| **Veles** | Nube | ⭐ | Gratis | ✅ | ❌ | ✅ |
+| **Gainium** | Nube | ⭐ | Freemium | ✅ | ❌ | ✅ |
+| **Ginarea** | Nube | ⭐⭐ | Freemium | ✅ | ✅ | ⚠️ Parcial |
+| **3Commas** | Nube | ⭐⭐ | $20-100/mes | ✅ | ❌ | ⚠️ |
+| **TradingView** | Web | ⭐⭐ | $0-15/mes | ✅ | ✅ | ✅ |
+| **MT4/MT5** | Escritorio | ⭐⭐⭐ | Gratis | ❌ | ✅ | ✅ |
+| **Python + CCXT** | Código | ⭐⭐⭐⭐ | Gratis | ✅ | ❌ | ✅ |
+| **QuantConnect** | Nube | ⭐⭐⭐⭐⭐ | $0-1000/mes | ✅ | ✅ | ✅ |
+
+**Nivel de dificultad:** ⭐ Muy fácil | ⭐⭐⭐⭐⭐ Requiere programación
+
 ### Para Avanzados (Código)
 
 - **Python + CCXT:** Librería para exchanges (gratis)

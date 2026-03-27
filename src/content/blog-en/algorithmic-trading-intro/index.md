@@ -473,6 +473,7 @@ Alongside the algorithm, it's recommended to keep a [trading journal](https://ma
 |----------|------|------------|------|--------|-----------|-----------|
 | **Veles** | Cloud | ⭐ | Free | ✅ | ❌ | ✅ |
 | **Gainium** | Cloud | ⭐ | Freemium | ✅ | ❌ | ✅ |
+| **Ginarea** | Cloud | ⭐⭐ | Freemium | ✅ | ✅ | ⚠️ Partial |
 | **3Commas** | Cloud | ⭐⭐ | $20-100/mo | ✅ | ❌ | ⚠️ |
 | **TradingView** | Web | ⭐⭐ | $0-15/mo | ✅ | ✅ | ✅ |
 | **MT4/MT5** | Desktop | ⭐⭐⭐ | Free | ❌ | ✅ | ✅ |
