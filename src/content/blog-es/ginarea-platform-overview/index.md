@@ -1,7 +1,7 @@
 ---
 title: 'Ginarea: Plataforma de Algo Trading con Constructor Visual'
-description: 'Ginarea — constructor de bots de trading para criptomonedas. Creación visual de estrategias, automatización, analítica. Resumen de funciones y configuración.'
-pubDate: '2026-03-27'
+description: 'Ginarea — constructor de bots de crypto trading. Creación visual de estrategias, 5 tipos de bots, indicadores. Gratis, OKX/Bybit/BitMEX. Resumen completo.'
+pubDate: '2026-03-28'
 category: 'algo-trading'
 draft: true
 ---
