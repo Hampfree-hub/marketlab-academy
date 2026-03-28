@@ -1,14 +1,14 @@
 ---
 title: 'Veles: Cryptocurrency Trading Automation Platform'
-description: 'Veles Finance — cloud platform for algo trading. Grid bots, DCA, backtests, ready-made strategies. Features overview, fees, setup.'
+description: 'Veles Finance — cloud algo trading platform from $10. Grid bots, DCA, backtests, ready strategies. 20% fee, 7 exchanges, Android/iOS app.'
 pubDate: '2026-03-10'
 category: 'algo-trading'
 draft: true
 ---
 
-**Veles** — cloud platform for cryptocurrency trading automation. Allows creating trading bots without programming, testing strategies on history, and running them 24/7.
+**Veles** — cloud platform for cryptocurrency trading automation. Allows creating trading bots without programming, testing strategies on history, and running them 24/7. If you're just getting started with automation, we recommend reading our [introduction to algo trading](/en/library/algorithmic-trading-intro/) first.
 
-**For whom:** Traders with small capital ($10+) who want to automate trading without learning programming.
+**For whom:** Traders with small capital (from $10) who want to automate trading without learning programming.
 
 <!-- Veles Banner -->
 <div style="text-align: center; margin: 3rem 0;">
@@ -119,7 +119,7 @@ Veles supports two main types of trading bots:
 
 ### 2. DCA Bots (Averaging)
 
-**Principle:** Buys at regular intervals or on price drop.
+**Principle:** Buys at regular intervals or on price drop. Learn more about averaging strategy in our [DCA crypto guide](/en/library/dca-strategy-crypto/).
 
 **How it works:**
 - You set base purchase amount
@@ -258,7 +258,7 @@ Veles supports two main types of trading bots:
 | **Cloud** | No need to keep PC on 24/7 |
 | **Backtests** | Can test strategy before launch |
 | **Ready strategies** | Community settings showcase |
-| **Telegram bot** | Notifications and monitoring |
+| **Telegram bot + mobile apps** | Notifications and monitoring 24/7 |
 | **Multi-exchange** | 7+ exchanges in one platform |
 
 ### Cons
@@ -268,7 +268,7 @@ Veles supports two main types of trading bots:
 | **Centralization** | Veles dependency (if servers down — bots don't work) |
 | **Limited functionality** | No complex strategies (like in Python) |
 | **20% Fee** | Can be high with large profit |
-| **No mobile app** | Web interface and Telegram only |
+| **Mobile app** | Basic functionality (setup via web) |
 
 ---
 
@@ -288,6 +288,25 @@ Veles supports two main types of trading bots:
 - Deposit < $10 (not enough to launch bot)
 - Need complex strategies (HFT, arbitrage, ML)
 - Don't trust cloud services (want full control)
+
+---
+
+### 8. Mobile App
+
+**Veles has mobile apps for Android and iOS** — launched in January 2026 with push notifications support.
+
+**Features:**
+- View active bots and statistics
+- Push notifications on trades and events
+- Duplicate notifications from Telegram bot
+- Monitor profit and losses
+
+![Veles Active Bot Statistics](./assets/active-bot-statistics-veles.png)
+
+**Limitations:**
+- Basic functionality (bot setup via web interface)
+
+**For whom:** Traders who want to monitor bots 24/7 without constant PC access.
 
 ---
 
