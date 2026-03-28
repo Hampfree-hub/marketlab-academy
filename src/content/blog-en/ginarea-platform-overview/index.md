@@ -1,12 +1,12 @@
 ---
 title: 'Ginarea: Algo Trading Platform with Visual Builder'
-description: 'Ginarea — cryptocurrency trading bot builder. Visual strategy creation, automation, analytics. Features overview and setup.'
-pubDate: '2026-03-27'
+description: 'Ginarea — crypto trading bot builder. Visual strategy creation, 5 bot types, indicators. Free, OKX/Bybit/BitMEX. Full review.'
+pubDate: '2026-03-28'
 category: 'algo-trading'
 draft: true
 ---
 
-**Ginarea** — platform for creating trading bots using a visual builder. Allows automating trading without programming, using ready bot types and indicators.
+**Ginarea** — platform for creating trading bots using a visual builder. Allows automating trading without programming, using ready bot types and indicators. If you're just getting started with automation, we recommend reading our [introduction to algo trading](/en/library/algorithmic-trading-intro/) first.
 
 **For whom:** Traders who want to automate trading but can't program.
 
@@ -14,7 +14,7 @@ draft: true
 
 ## What is Ginarea
 
-**Ginarea (Grow Investments Area)** is a free bots platform for automated trading on centralized exchanges. Unlike ready bots (like Veles), here you choose bot type and configure parameters for your strategy.
+**Ginarea (Grow Investments Area)** is a free bots platform for automated trading on centralized exchanges. Unlike ready bots ([like Veles](/en/library/veles-platform-overview/)), here you choose bot type and configure parameters for your strategy.
 
 **Main idea:** Provide simple and effective automation tools without complex programming.
 
@@ -191,7 +191,7 @@ draft: true
 
 ### ❌ Not suitable if:
 
-- Need ready solutions (better Veles, Gainium)
+- Need ready solutions (better [Veles](/en/library/veles-platform-overview/), Gainium)
 - Don't understand technical indicators
 - Deposit < $200 (fees will eat profit)
 - Want to trade on spot (crypto without leverage)
