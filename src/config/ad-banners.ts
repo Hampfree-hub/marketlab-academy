@@ -104,15 +104,15 @@ export const AD_BANNERS: AdBanner[] = [
     },
   },
 
-  // FinBazar — для фундаментального анализа
+  // FinBazar — для фундаментального анализа (только RU, СНГ-аудитория)
   {
     id: 'finbazar-fundamental',
     title: 'FinBazar: On-Chain',
     subtitle: 'Analytics and signals for traders',
-    cta: 'Tools →',
+    cta: 'Инструменты →',
     link: getReferralLink('finbazar', 'ru'),
     categories: ['fundamental-analysis'],
-    languages: ['ru', 'en', 'es'],
+    languages: ['ru'],  // Только русская аудитория!
     priority: 10,
     colors: {
       bgStart: '#064E3B',    // Тёмно-изумрудный
