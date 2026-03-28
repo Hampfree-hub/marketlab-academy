@@ -3,7 +3,6 @@ title: 'Veles: Cryptocurrency Trading Automation Platform'
 description: 'Veles Finance — cloud algo trading platform from $10. Grid bots, DCA, backtests, ready strategies. 20% fee, 7 exchanges, Android/iOS app.'
 pubDate: '2026-03-10'
 category: 'algo-trading'
-draft: true
 ---
 
 **Veles** — cloud platform for cryptocurrency trading automation. Allows creating trading bots without programming, testing strategies on history, and running them 24/7. If you're just getting started with automation, we recommend reading our [introduction to algo trading](/en/library/algorithmic-trading-intro/) first.

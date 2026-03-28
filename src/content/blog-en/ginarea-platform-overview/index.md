@@ -3,7 +3,6 @@ title: 'Ginarea: Crypto Trading Bot Builder for Algorithmic Trading'
 description: 'Ginarea — crypto trading bot builder. Visual strategy creation, 5 bot types, indicators. Free, OKX/Bybit/BitMEX. Full review.'
 pubDate: '2026-03-28'
 category: 'algo-trading'
-draft: true
 ---
 
 **Ginarea** — platform for creating trading bots using a visual builder. Allows automating trading without programming, using ready bot types and indicators. If you're just getting started with automation, we recommend reading our [introduction to algo trading](/en/library/algorithmic-trading-intro/) first.

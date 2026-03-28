@@ -3,7 +3,6 @@ title: 'Veles: Plataforma de Automatización de Trading de Criptomonedas'
 description: 'Veles Finance — plataforma cloud de algo trading desde $10. Bots Grid, DCA, backtests, estrategias. Comisión 20%, 7 exchanges, app Android/iOS.'
 pubDate: '2026-03-10'
 category: 'algo-trading'
-draft: true
 ---
 
 **Veles** — plataforma en la nube para automatización de trading de criptomonedas. Permite crear bots de trading sin programar, probar estrategias en histórico y ejecutarlas 24/7. Si recién comienzas con automatización, recomendamos leer nuestra [introducción al algo trading](/es/library/algorithmic-trading-intro/) primero.
