@@ -9,13 +9,6 @@ category: 'algo-trading'
 
 **Для кого:** Трейдеров с небольшим капиталом (от $10), которые хотят автоматизировать торговлю без изучения программирования.
 
-<!-- Veles Banner -->
-<div style="text-align: center; margin: 3rem 0;">
-  <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
-    <img src="/og/ad/veles-simple_ru.png" alt="Veles" style="max-width: 728px; width: 100%; height: auto;" />
-  </a>
-</div>
-
 ## Что такое Veles
 
 **Veles Finance** — это SaaS-платформа (Software as a Service) для автоматизации торговли криптовалютой. Не нужно устанавливать ПО, настраивать серверы или писать код — всё работает в облаке.
