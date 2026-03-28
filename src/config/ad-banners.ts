@@ -124,6 +124,44 @@ export const AD_BANNERS: AdBanner[] = [
     },
   },
 
+  // BingX — универсальный баннер (социальный трейдинг)
+  {
+    id: 'bingx-general',
+    title: 'BingX: Crypto Exchange',
+    subtitle: 'Social trading, low fees',
+    cta: 'Get started →',
+    link: getReferralLink('bingx', 'ru'),
+    languages: ['ru', 'en', 'es'],
+    priority: 6,
+    colors: {
+      bgStart: '#0A0E27',    // Тёмно-синий
+      bgEnd: '#1A237E',      // Насыщенный синий
+      text: '#FFFFFF',       // Белый текст
+      ctaBg: '#00D4FF',      // Ярко-голубой
+      ctaText: '#0A0E27',    // Тёмный текст на голубом
+      border: '#00B4D8',     // Голубая рамка
+    },
+  },
+
+  // Bitget — универсальный баннер (фьючерсы, спот)
+  {
+    id: 'bitget-general',
+    title: 'Bitget: Crypto Exchange',
+    subtitle: 'Futures, spot, copy trading',
+    cta: 'Sign up →',
+    link: getReferralLink('bitget', 'ru'),
+    languages: ['ru', 'en', 'es'],
+    priority: 5,
+    colors: {
+      bgStart: '#0B1E1A',    // Тёмный бирюзовый
+      bgEnd: '#051410',      // Очень тёмный
+      text: '#FFFFFF',       // Белый текст
+      ctaBg: '#00C9A7',      // Фирменный бирюзовый
+      ctaText: '#000000',    // Чёрный текст
+      border: '#14D0BB',     // Светло-бирюзовая рамка
+    },
+  },
+
   // Default — MarketLab Academy (fallback)
   {
     id: 'default-academy',
