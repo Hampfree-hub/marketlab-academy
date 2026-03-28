@@ -23,7 +23,7 @@ draft: true
 1. **Constructor visual** — configuración de bots vía interfaz clara
 2. **Tipos de bots** — Default, Auto Grid, Dynamic, Indicator Grid, DCA
 3. **Analítica** — estadísticas de trading, análisis de resultados
-4. **Multi-exchange** — OKX, Bybit, BitMEX
+4. **Multi-exchange** — OKX, Bybit, BitMEX, KuCoin
 5. **Auto Grid** — ajuste automático de rejilla en movimiento de precio
 6. **Gratis** — plataforma con tier gratuito (programa de afiliados para desarrollo)
 

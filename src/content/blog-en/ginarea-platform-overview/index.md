@@ -23,7 +23,7 @@ draft: true
 1. **Visual builder** — bot setup via clear interface
 2. **Bot types** — Default, Auto Grid, Dynamic, Indicator Grid, DCA
 3. **Analytics** — trading statistics, results analysis
-4. **Multi-exchange** — OKX, Bybit, BitMEX
+4. **Multi-exchange** — OKX, Bybit, BitMEX, KuCoin
 5. **Auto Grid** — automatic grid adjustment on price movement
 6. **Free** — platform with free tier (affiliate program for development)
 
@@ -34,10 +34,11 @@ draft: true
 | **OKX** | Crypto (spot + futures) | ✅ Full support |
 | **Bybit** | Crypto (spot + futures) | ✅ Full support |
 | **BitMEX** | Crypto (futures) | ✅ Full support |
+| **KuCoin** | Crypto (spot + futures) | ✅ Full support |
 
 ![Ginarea Dashboard](./assets/ginarea-dashboard.png)
 
-**Important:** Ginarea supports spot and futures on OKX and Bybit, plus futures on BitMEX. Unified trading account required (Bybit) or trading account (OKX).
+**Important:** Ginarea supports spot and futures on OKX, Bybit and KuCoin, plus futures on BitMEX. Unified trading account required (Bybit) or trading account (OKX/KuCoin).
 
 ### Minimum Requirements
 
