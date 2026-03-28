@@ -349,20 +349,22 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 					let bannerId = 'bybit-general'; // fallback
 
 					if (category === 'algo-trading') {
-						bannerId = 'veles-algo';
+						// Исключаем статьи-обзоры платформ (veles-platform-overview, ginarea-platform-overview)
+						const isPlatformReview = slug.includes('platform-overview') || slug.includes('veles') || slug.includes('ginarea');
+						bannerId = isPlatformReview ? 'bybit-general' : 'veles-algo';
 					} else if (category === 'fundamental-analysis' && lang === 'ru') {
 						bannerId = 'finbazar-fundamental'; // Только для RU!
 					} else if (category === 'fundamental-analysis' && (lang === 'en' || lang === 'es')) {
 						bannerId = 'bybit-general'; // EN/ES → Bybit
 					} else if (category === 'crypto') {
 						// Баланс: 50% Bybit, 50% Bitget
-						bannerId = (slug.includes('staking') || slug.includes('defi') || slug.includes('token')) 
-							? 'bitget-general' 
+						bannerId = (slug.includes('staking') || slug.includes('defi') || slug.includes('token'))
+							? 'bitget-general'
 							: 'bybit-general';
 					} else if (category === 'technical-analysis') {
 						// Баланс: 50% BingX, 50% Bitget
-						bannerId = (slug.includes('rsi') || slug.includes('macd') || slug.includes('bollinger')) 
-							? 'bingx-general' 
+						bannerId = (slug.includes('rsi') || slug.includes('macd') || slug.includes('bollinger'))
+							? 'bingx-general'
 							: 'bitget-general';
 					} else {
 						// fallback: Bitget → Bybit → BingX
