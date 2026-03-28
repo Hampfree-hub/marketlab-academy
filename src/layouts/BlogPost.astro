@@ -381,20 +381,31 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 
 			// Insert ad banner after 2nd H2 (responsive HTML/CSS, not PNG)
 			(function insertAdBanner() {
+				console.log('[DEBUG] insertAdBanner started');
 				const category = document.querySelector('article')?.dataset.category || '';
 				const lang = document.querySelector('html')?.lang || 'ru';
 				const pathname = window.location.pathname;
 				const slug = pathname.split('/').filter(Boolean)[2] || 'unknown';
 				const h2Index = 1; // After 2nd H2 (0-based index)
 
+				console.log('[DEBUG] category:', category, 'lang:', lang, 'slug:', slug);
+
 				const article = document.querySelector('article .prose');
-				if (!article) return;
+				if (!article) {
+					console.log('[DEBUG] article .prose not found');
+					return;
+				}
 
 				const h2s = Array.from(article.querySelectorAll('h2'));
-				if (h2s.length <= h2Index) return;
+				console.log('[DEBUG] H2 count:', h2s.length);
+				if (h2s.length <= h2Index) {
+					console.log('[DEBUG] Not enough H2 tags');
+					return;
+				}
 
 				const targetH2 = h2s[h2Index];
 				const bannerData = getBannerForCategory(category, lang);
+				console.log('[DEBUG] bannerData:', bannerData);
 				
 				// Build UTM-tagged link
 				const utmParams = `?utm_source=marketlab-blog&utm_medium=referral-banner&utm_campaign=${bannerData.id}&utm_content=${slug}&utm_term=${category}`;
