@@ -179,6 +179,58 @@ draft: true
 
 ---
 
+## Ginarea Calculators
+
+**Instead of backtests, Ginarea provides calculators for bot parameters** — they help select optimal settings before launching with real money.
+
+### Grid Calculator
+
+**What it does:**
+- Calculates number of grids within specified range
+- Shows profit per grid
+- Optimizes parameters for deposit
+
+**How to use:**
+1. Set price range (min/max)
+2. Specify deposit
+3. Get optimal grid count and profit
+
+**Example:**
+- Range: $90,000 - $100,000 (BTC)
+- Deposit: $200
+- Result: 10 grids, ~$2-5 profit per grid
+
+### DCA Calculator
+
+**What it does:**
+- Calculates position averaging levels
+- Shows average entry price
+- Optimizes averaging step
+
+**How to use:**
+1. Set base purchase amount
+2. Specify averaging step (% or fixed)
+3. Get entry levels table
+
+**Example:**
+- Base purchase: $50
+- Averaging step: 5% drop
+- Multiplier: 1.5x
+- Result: 5 levels, average entry 12% below current
+
+### Community Calculator
+
+**Recommended tool:** [Ginarea Calculator](https://ramonhitramon.github.io/ginarea_calculator/) (unofficial)
+
+**Features:**
+- Calculate parameters for all bot types (Default, Auto Grid, Dynamic, Indicator Grid, DCA)
+- Optimize for deposit and risk
+- Export settings for import to Ginarea
+
+**Important:** Calculators don't replace backtests — they show strategy mathematics, not historical effectiveness. Use with chart and indicators analysis.
+
+---
+
 ## For Whom Ginarea
 
 ### ✅ Suitable if:
