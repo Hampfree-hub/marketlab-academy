@@ -34,10 +34,11 @@ draft: true
 | **OKX** | Crypto (spot + futuros) | ✅ Soporte completo |
 | **Bybit** | Crypto (spot + futuros) | ✅ Soporte completo |
 | **BitMEX** | Crypto (futuros) | ✅ Soporte completo |
+| **KuCoin** | Crypto (spot + futuros) | ✅ Soporte completo |
 
 ![Dashboard Ginarea](./assets/ginarea-dashboard.png)
 
-**Importante:** Ginarea se especializa en futuros (crypto), el trading spot es limitado. Se requiere cuenta de trading unificada (Bybit) o cuenta de trading (OKX).
+**Importante:** Ginarea soporta spot y futuros en OKX, Bybit y KuCoin, además de futuros en BitMEX. Se requiere cuenta de trading unificada (Bybit) o cuenta de trading (OKX/KuCoin).
 
 ### Requisitos Mínimos
 
