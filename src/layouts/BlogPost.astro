@@ -349,9 +349,9 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 					let bannerId = 'bybit-general'; // fallback
 
 					if (category === 'algo-trading') {
-						// Исключаем статьи-обзоры платформ (veles-platform-overview, ginarea-platform-overview)
-						const isPlatformReview = slug.includes('platform-overview') || slug.includes('veles') || slug.includes('ginarea');
-						bannerId = isPlatformReview ? 'bybit-general' : 'veles-algo';
+						// Исключаем статью Ginarea (там Bybit), Veles оставляем с баннером Veles
+						const isGinarea = slug.includes('ginarea');
+						bannerId = isGinarea ? 'bybit-general' : 'veles-algo';
 					} else if (category === 'fundamental-analysis' && lang === 'ru') {
 						bannerId = 'finbazar-fundamental'; // Только для RU!
 					} else if (category === 'fundamental-analysis' && (lang === 'en' || lang === 'es')) {
