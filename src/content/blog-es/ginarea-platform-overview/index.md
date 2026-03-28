@@ -238,7 +238,7 @@ draft: true
 - Quieres crear propias estrategias (no bots listos)
 - Entiendes indicadores técnicos
 - Depósito: $500-5,000
-- Operas en futuros (crypto con apalancamiento)
+- Operas en futuros o spot (crypto)
 - Listo para aprender (constructor requiere tiempo para dominar)
 
 ### ❌ No adecuado si:
@@ -246,7 +246,7 @@ draft: true
 - Necesitas soluciones listas (mejor [Veles](/es/library/veles-platform-overview/), Gainium)
 - No entiendes indicadores técnicos
 - Depósito < $200 (comisiones comerán ganancia)
-- Quieres operar en spot (crypto sin apalancamiento)
+- Quieres operar sin análisis de mercado
 
 ---
 

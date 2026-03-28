@@ -37,7 +37,7 @@ draft: true
 
 ![Ginarea Dashboard](./assets/ginarea-dashboard.png)
 
-**Important:** Ginarea specializes in futures (crypto), spot trading is limited. Unified trading account required (Bybit) or trading account (OKX).
+**Important:** Ginarea supports spot and futures on OKX and Bybit, plus futures on BitMEX. Unified trading account required (Bybit) or trading account (OKX).
 
 ### Minimum Requirements
 
@@ -238,7 +238,7 @@ draft: true
 - Want to create own strategies (not ready bots)
 - Understand technical indicators
 - Deposit: $500-5,000
-- Trade on futures (crypto with leverage)
+- Trade on futures or spot (crypto)
 - Ready to learn (builder requires time to master)
 
 ### ❌ Not suitable if:
@@ -246,7 +246,7 @@ draft: true
 - Need ready solutions (better [Veles](/en/library/veles-platform-overview/), Gainium)
 - Don't understand technical indicators
 - Deposit < $200 (fees will eat profit)
-- Want to trade on spot (crypto without leverage)
+- Want to trade without market analysis
 
 ---
 
