@@ -119,7 +119,7 @@ Veles soporta dos tipos principales de bots de trading:
 
 ### 2. Bots DCA (Promediado)
 
-**Principio:** Compra en intervalos regulares o en caída de precio.
+**Principio:** Compra en intervalos regulares o en caída de precio. Aprende más sobre la estrategia de promediado en nuestra [guía de DCA en crypto](/es/library/dca-strategy-crypto/).
 
 **Cómo funciona:**
 - Estableces cantidad base de compra
@@ -258,7 +258,7 @@ Veles soporta dos tipos principales de bots de trading:
 | **Nube** | No necesitas tener PC encendido 24/7 |
 | **Backtests** | Puedes probar estrategia antes de lanzar |
 | **Estrategias listas** | Escaparate de configuraciones de la comunidad |
-| **Bot de Telegram** | Notificaciones y monitoreo |
+| **Bot de Telegram + apps móviles** | Notificaciones y monitoreo 24/7 |
 | **Multi-exchange** | 7+ exchanges en una plataforma |
 
 ### Contras
@@ -268,7 +268,7 @@ Veles soporta dos tipos principales de bots de trading:
 | **Centralización** | Dependencia de Veles (si servidores caen — bots no funcionan) |
 | **Funcionalidad limitada** | No hay estrategias complejas (como en Python) |
 | **Comisión 20%** | Puede ser alta con gran ganancia |
-| **Sin app móvil** | Solo interfaz web y Telegram |
+| **App móvil** | Funcionalidad básica (configuración vía web) |
 
 ---
 
@@ -288,6 +288,25 @@ Veles soporta dos tipos principales de bots de trading:
 - Depósito < $10 (no suficiente para lanzar bot)
 - Necesitas estrategias complejas (HFT, arbitraje, ML)
 - No confías en servicios en la nube (quieres control total)
+
+---
+
+### 8. App Móvil
+
+**Veles tiene apps móviles para Android y iOS** — lanzadas en enero 2026 con soporte para notificaciones push.
+
+**Funciones:**
+- Ver bots activos y estadísticas
+- Notificaciones push sobre operaciones y eventos
+- Duplicar notificaciones del bot de Telegram
+- Monitorear ganancias y pérdidas
+
+![Estadísticas de Bot Activo Veles](./assets/active-bot-statistics-veles.png)
+
+**Limitaciones:**
+- Funcionalidad básica (configuración de bots vía interfaz web)
+
+**Para quién:** Traders que quieren monitorear bots 24/7 sin acceso constante al PC.
 
 ---
 
