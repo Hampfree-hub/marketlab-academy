@@ -6,7 +6,7 @@ category: 'algo-trading'
 draft: true
 ---
 
-**Ginarea** — plataforma para crear bots de trading usando un constructor visual. Permite automatizar trading sin programar, usando tipos de bots listos e indicadores.
+**Ginarea** — plataforma para crear bots de trading usando un constructor visual. Permite automatizar trading sin programar, usando tipos de bots listos e indicadores. Si recién comienzas con automatización, recomendamos leer nuestra [introducción al algo trading](/es/library/algorithmic-trading-intro/) primero.
 
 **Para quién:** Traders que quieren automatizar trading pero no saben programar.
 
@@ -14,7 +14,7 @@ draft: true
 
 ## Qué es Ginarea
 
-**Ginarea (Grow Investments Area)** es una plataforma de bots gratuitos para trading automatizado en exchanges centralizados. A diferencia de bots listos (como Veles), aquí eliges tipo de bot y configuras parámetros para tu estrategia.
+**Ginarea (Grow Investments Area)** es una plataforma de bots gratuitos para trading automatizado en exchanges centralizados. A diferencia de bots listos ([como Veles](/es/library/veles-platform-overview/)), aquí eliges tipo de bot y configuras parámetros para tu estrategia.
 
 **Idea principal:** Proporcionar herramientas de automatización simples y efectivas sin programación compleja.
 
@@ -179,6 +179,58 @@ draft: true
 
 ---
 
+## Calculadoras Ginarea
+
+**En lugar de backtests, Ginarea ofrece calculadoras para parámetros de bots** — ayudan a seleccionar configuraciones óptimas antes de lanzar con dinero real.
+
+### Calculadora Grid
+
+**Qué hace:**
+- Calcula número de grids en rango especificado
+- Muestra ganancia por grid
+- Optimiza parámetros para depósito
+
+**Cómo usar:**
+1. Establece rango de precio (min/max)
+2. Especifica depósito
+3. Obtiene número óptimo de grids y ganancia
+
+**Ejemplo:**
+- Rango: $90,000 - $100,000 (BTC)
+- Depósito: $200
+- Resultado: 10 grids, ~$2-5 ganancia por grid
+
+### Calculadora DCA
+
+**Qué hace:**
+- Calcula niveles de promediado de posición
+- Muestra precio promedio de entrada
+- Optimiza paso de promediado
+
+**Cómo usar:**
+1. Establece cantidad base de compra
+2. Especifica paso de promediado (% o fijo)
+3. Obtiene tabla de niveles de entrada
+
+**Ejemplo:**
+- Compra base: $50
+- Paso de promediado: 5% caída
+- Multiplicador: 1.5x
+- Resultado: 5 niveles, precio promedio 12% debajo del actual
+
+### Calculadora de la Comunidad
+
+**Herramienta recomendada:** [Calculadora Ginarea](https://ramonhitramon.github.io/ginarea_calculator/) (no oficial)
+
+**Funciones:**
+- Calcular parámetros para todos los tipos de bots (Default, Auto Grid, Dynamic, Indicator Grid, DCA)
+- Optimizar para depósito y riesgo
+- Exportar configuraciones para importar en Ginarea
+
+**Importante:** Las calculadoras no reemplazan backtests — muestran matemáticas de la estrategia, no su efectividad histórica. Usar con análisis de gráfico e indicadores.
+
+---
+
 ## Para Quién Ginarea
 
 ### ✅ Adecuado si:
@@ -191,7 +243,7 @@ draft: true
 
 ### ❌ No adecuado si:
 
-- Necesitas soluciones listas (mejor Veles, Gainium)
+- Necesitas soluciones listas (mejor [Veles](/es/library/veles-platform-overview/), Gainium)
 - No entiendes indicadores técnicos
 - Depósito < $200 (comisiones comerán ganancia)
 - Quieres operar en spot (crypto sin apalancamiento)
