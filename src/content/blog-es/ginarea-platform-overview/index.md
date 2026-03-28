@@ -9,8 +9,6 @@ category: 'algo-trading'
 
 **Para quién:** Traders que quieren automatizar trading pero no saben programar.
 
----
-
 ## Qué es Ginarea
 
 **Ginarea (Grow Investments Area)** es una plataforma de bots gratuitos para trading automatizado en exchanges centralizados. A diferencia de bots listos ([como Veles](/es/library/veles-platform-overview/)), aquí eliges tipo de bot y configuras parámetros para tu estrategia.
@@ -44,8 +42,6 @@ category: 'algo-trading'
 - **Spot:** Desde 200 USDT para lanzar bot
 - **Futuros:** Desde 200 USDT en cuenta de trading unificada
 - **Contratos inversos:** Desde 200 USDT
-
----
 
 ## Cómo Funciona Ginarea
 
@@ -143,8 +139,6 @@ category: 'algo-trading'
 
 **Para quién:** Inversiones a largo plazo, acumulación de posición.
 
----
-
 ## Comisiones
 
 **Ginarea es completamente gratis.** La plataforma gana en rebate de comisión del exchange (IB rebate) — esta es práctica estándar.
@@ -152,8 +146,6 @@ category: 'algo-trading'
 **Gastos:**
 1. **Comisiones del exchange:** 0.02-0.1% por operación (depende del exchange y volumen)
 2. **Slippage:** Diferencia entre precio esperado y ejecución real
-
----
 
 ## Pros y Contras Ginarea
 
@@ -175,8 +167,6 @@ category: 'algo-trading'
 | **Indicadores limitados** | No hay indicadores personalizados (solo integrados) |
 | **Sin backtests** | No puedes probar estrategia en datos históricos (hay calculadoras) |
 | **Sin paper trading** | No hay prueba en cuenta demo |
-
----
 
 ## Calculadoras Ginarea
 
@@ -228,8 +218,6 @@ category: 'algo-trading'
 
 **Importante:** Las calculadoras no reemplazan backtests — muestran matemáticas de la estrategia, no su efectividad histórica. Usar con análisis de gráfico e indicadores.
 
----
-
 ## Para Quién Ginarea
 
 ### ✅ Adecuado si:
@@ -247,13 +235,9 @@ category: 'algo-trading'
 - Depósito < $200 (comisiones comerán ganancia)
 - Quieres operar sin análisis de mercado
 
----
-
 ## Alternativas Ginarea
 
 **Comparación de plataformas para algo trading** la cubrimos en detalle en nuestra [guía de plataformas de trading algorítmico](/es/library/algorithmic-trading-intro/). Allí encontrarás comparación detallada de Veles, Ginarea, Gainium y otras plataformas.
-
----
 
 ## FAQ
 
@@ -277,8 +261,6 @@ Sí, la ganancia de trading está gravada (13% para residentes de Rusia). Ginare
 **¿Puedo usar estrategias listas?**
 
 Sí, el marketplace de Ginarea tiene cientos de estrategias listas (pagas y gratis).
-
----
 
 ## Probar Ginarea
 

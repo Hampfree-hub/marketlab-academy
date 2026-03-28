@@ -16,8 +16,6 @@ category: 'algo-trading'
   </a>
 </div>
 
----
-
 ## Qué es Veles
 
 **Veles Finance** es una plataforma SaaS (Software as a Service) para automatización de trading de criptomonedas. No necesitas instalar software, configurar servidores ni escribir código — todo funciona en la nube.
@@ -48,8 +46,6 @@ category: 'algo-trading'
 ![Dashboard Veles](./assets/veles-dashboard.png)
 
 **Importante:** Veles no almacena fondos — las operaciones van directamente a tu exchange vía claves API.
-
----
 
 ## Cómo Funciona Veles
 
@@ -89,8 +85,6 @@ Tú → Veles (nube) → Exchange (API) → Ejecución de órdenes
    ```
 
 **Importante:** Una conexión puede usarse en múltiples bots.
-
----
 
 ## Tipos de Bots Veles
 
@@ -147,8 +141,6 @@ Veles soporta dos tipos principales de bots de trading:
 
 **Para quién:** Traders experimentados, cobertura de posiciones.
 
----
-
 ## Estrategias Listas Veles
 
 **Veles proporciona un escaparate de estrategias listas** — configuraciones de bots que puedes copiar y ejecutar sin profundo entendimiento de indicadores.
@@ -191,8 +183,6 @@ Veles soporta dos tipos principales de bots de trading:
 
 **[Más sobre estrategia Elder 2.0](/es/library/spot-strategy-elder-20/)**
 
----
-
 ## Backtests
 
 **Veles proporciona simulador de trading en datos históricos** — puedes probar una estrategia antes de ejecutar con dinero real.
@@ -208,8 +198,6 @@ Veles soporta dos tipos principales de bots de trading:
 ![Resultados Backtest Veles](./assets/backtest-results.png)
 
 **Importante:** Los backtests muestran cómo habría funcionado la estrategia en el pasado, pero no garantizan retornos futuros.
-
----
 
 ## Comisiones
 
@@ -243,8 +231,6 @@ Veles soporta dos tipos principales de bots de trading:
 **Bonos:**
 - Hasta 5 USDT por completar tareas (creación de clave API, suscripciones, etc.)
 
----
-
 ## Pros y Contras Veles
 
 ### Pros
@@ -268,8 +254,6 @@ Veles soporta dos tipos principales de bots de trading:
 | **Funcionalidad limitada** | No hay estrategias complejas (como en Python) |
 | **Comisión 20%** | Puede ser alta con gran ganancia |
 | **App móvil** | Funcionalidad básica (configuración vía web) |
-
----
 
 ## Para Quién Veles
 
@@ -307,8 +291,6 @@ Veles soporta dos tipos principales de bots de trading:
 
 **Para quién:** Traders que quieren monitorear bots 24/7 sin acceso constante al PC.
 
----
-
 ## Alternativas Veles
 
 | Plataforma | Pros | Contras | Para quién |
@@ -317,8 +299,6 @@ Veles soporta dos tipos principales de bots de trading:
 | **Ginarea** | Constructor visual, futuros | Menos exchanges, sin backtests | Avanzados |
 | **3Commas** | Muchas funciones, app móvil | Caro ($20-100/mes), backtests complejos | Experimentados |
 | **Python + CCXT** | Libertad total, gratis | Necesita código, configuración de servidor | Desarrolladores |
-
----
 
 ## FAQ
 
@@ -347,8 +327,6 @@ Sí, si las claves son solo para trading (sin retiro). Veles no puede retirar fo
 **¿Cuáles son las comisiones de Veles?**
 
 20% de ganancia de operación, máximo 50 USDT por mes (spot + futuros por separado). Si los bots no generan ganancia — no se cobra comisión.
-
----
 
 ## Probar Veles
 

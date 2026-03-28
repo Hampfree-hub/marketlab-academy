@@ -9,8 +9,6 @@ category: 'algo-trading'
 
 **For whom:** Traders who want to automate trading but can't program.
 
----
-
 ## What is Ginarea
 
 **Ginarea (Grow Investments Area)** is a free bots platform for automated trading on centralized exchanges. Unlike ready bots ([like Veles](/en/library/veles-platform-overview/)), here you choose bot type and configure parameters for your strategy.
@@ -44,8 +42,6 @@ category: 'algo-trading'
 - **Spot:** From 200 USDT to launch bot
 - **Futures:** From 200 USDT on unified trading account
 - **Inverse contracts:** From 200 USDT
-
----
 
 ## How Ginarea Works
 
@@ -143,8 +139,6 @@ category: 'algo-trading'
 
 **For whom:** Long-term investments, position accumulation.
 
----
-
 ## Fees
 
 **Ginarea is completely free.** Platform earns on exchange commission rebate (IB rebate) — this is standard practice.
@@ -152,8 +146,6 @@ category: 'algo-trading'
 **Expenses:**
 1. **Exchange fees:** 0.02-0.1% per trade (depends on exchange and volume)
 2. **Slippage:** Difference between expected and actual execution price
-
----
 
 ## Pros and Cons Ginarea
 
@@ -175,8 +167,6 @@ category: 'algo-trading'
 | **Limited indicators** | No custom indicators (only built-in) |
 | **No backtests** | Can't test strategy on historical data (calculators available) |
 | **No paper trading** | No demo account testing |
-
----
 
 ## Ginarea Calculators
 
@@ -228,8 +218,6 @@ category: 'algo-trading'
 
 **Important:** Calculators don't replace backtests — they show strategy mathematics, not historical effectiveness. Use with chart and indicators analysis.
 
----
-
 ## For Whom Ginarea
 
 ### ✅ Suitable if:
@@ -247,13 +235,9 @@ category: 'algo-trading'
 - Deposit < $200 (fees will eat profit)
 - Want to trade without market analysis
 
----
-
 ## Ginarea Alternatives
 
 **Platform comparison for algo trading** we covered in detail in our [algorithmic trading platforms overview](/en/library/algorithmic-trading-intro/). You'll find detailed comparison of Veles, Ginarea, Gainium and other platforms there.
-
----
 
 ## FAQ
 
@@ -277,8 +261,6 @@ Yes, trading profit is taxed (13% for Russia residents). Ginarea provides export
 **Can I use ready strategies?**
 
 Yes, Ginarea marketplace has hundreds of ready strategies (paid and free).
-
----
 
 ## Try Ginarea
 

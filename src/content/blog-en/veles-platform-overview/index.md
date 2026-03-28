@@ -16,8 +16,6 @@ category: 'algo-trading'
   </a>
 </div>
 
----
-
 ## What is Veles
 
 **Veles Finance** is a SaaS (Software as a Service) platform for cryptocurrency trading automation. No need to install software, configure servers, or write code — everything works in the cloud.
@@ -48,8 +46,6 @@ category: 'algo-trading'
 ![Veles Dashboard](./assets/veles-dashboard.png)
 
 **Important:** Veles does not store funds — trades go directly through your exchange via API keys.
-
----
 
 ## How Veles Works
 
@@ -89,8 +85,6 @@ You → Veles (cloud) → Exchange (API) → Order execution
    ```
 
 **Important:** One connection can be used in multiple bots.
-
----
 
 ## Veles Bot Types
 
@@ -147,8 +141,6 @@ Veles supports two main types of trading bots:
 
 **For whom:** Experienced traders, position hedging.
 
----
-
 ## Ready-Made Strategies Veles
 
 **Veles provides a showcase of ready-made strategies** — bot settings that can be copied and launched without deep understanding of indicators.
@@ -191,8 +183,6 @@ Veles supports two main types of trading bots:
 
 **[More on Elder 2.0 strategy](/en/library/spot-strategy-elder-20/)**
 
----
-
 ## Backtests
 
 **Veles provides historical data trading simulator** — you can test a strategy before launching with real money.
@@ -208,8 +198,6 @@ Veles supports two main types of trading bots:
 ![Backtest Results Veles](./assets/backtest-results.png)
 
 **Important:** Backtests show how strategy would have worked in the past, but don't guarantee future returns.
-
----
 
 ## Fees
 
@@ -243,8 +231,6 @@ Veles supports two main types of trading bots:
 **Bonuses:**
 - Up to 5 USDT for completing tasks (API key creation, subscriptions, etc.)
 
----
-
 ## Pros and Cons Veles
 
 ### Pros
@@ -268,8 +254,6 @@ Veles supports two main types of trading bots:
 | **Limited functionality** | No complex strategies (like in Python) |
 | **20% Fee** | Can be high with large profit |
 | **Mobile app** | Basic functionality (setup via web) |
-
----
 
 ## For Whom Veles
 
@@ -307,8 +291,6 @@ Veles supports two main types of trading bots:
 
 **For whom:** Traders who want to monitor bots 24/7 without constant PC access.
 
----
-
 ## Veles Alternatives
 
 | Platform | Pros | Cons | For whom |
@@ -317,8 +299,6 @@ Veles supports two main types of trading bots:
 | **Ginarea** | Visual builder, futures | Fewer exchanges, no backtests | Advanced |
 | **3Commas** | Many features, mobile app | Expensive ($20-100/month), complex backtests | Experienced |
 | **Python + CCXT** | Full freedom, free | Need code, server setup | Developers |
-
----
 
 ## FAQ
 
@@ -347,8 +327,6 @@ Yes, if keys are for trading only (no withdrawal). Veles can't withdraw funds �
 **What are Veles fees?**
 
 20% of trade profit, maximum 50 USDT per month (spot + futures separately). If bots don't make profit — fee is not charged.
-
----
 
 ## Try Veles
 
