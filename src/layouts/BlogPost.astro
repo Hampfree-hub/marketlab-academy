@@ -293,6 +293,147 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 				observer.observe(header);
 			});
 
+			// Add banner styles to head (once)
+			if (!document.getElementById('banner-styles')) {
+				const styleEl = document.createElement('style');
+				styleEl.id = 'banner-styles';
+				styleEl.textContent = `
+					.in-article-ad-container {
+						width: 100%;
+						max-width: var(--max-width-post, 800px);
+						margin: 2rem auto;
+						padding: 0;
+						display: block;
+						box-sizing: border-box;
+					}
+					.ad-banner-link {
+						display: block;
+						background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+						border-radius: 0;
+						padding: 20px 24px;
+						text-decoration: none !important;
+						position: relative;
+						overflow: hidden;
+						width: 100%;
+						max-width: 100%;
+						box-sizing: border-box;
+						border: 4px solid var(--border-color);
+					}
+					.ad-banner-link::before {
+						content: "";
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background: repeating-linear-gradient(
+							rgba(0, 0, 0, 0.05),
+							rgba(0, 0, 0, 0.05) 1px,
+							transparent 1px,
+							transparent 4px
+						);
+						pointer-events: none;
+						z-index: 1;
+					}
+					.ad-banner-content {
+						position: relative;
+						z-index: 2;
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						justify-content: space-between;
+						gap: 16px;
+						width: 100%;
+					}
+					.text-block {
+						flex: 1;
+						display: flex;
+						flex-direction: column;
+						gap: 6px;
+						overflow: visible;
+						min-width: 0;
+					}
+					.title {
+						font-family: 'Press Start 2P', monospace;
+						font-size: clamp(12px, 2vw + 10px, 16px);
+						color: var(--text-color);
+						line-height: 1.4;
+						text-transform: uppercase;
+						margin: 0;
+						white-space: normal;
+						overflow: visible;
+						text-overflow: clip;
+						word-wrap: break-word;
+						overflow-wrap: break-word;
+					}
+					.subtitle {
+						font-family: 'JetBrains Mono', monospace;
+						font-size: clamp(10px, 1.5vw + 8px, 12px);
+						color: var(--text-color);
+						opacity: 0.9;
+						line-height: 1.5;
+						white-space: normal;
+						overflow: visible;
+						text-overflow: clip;
+						margin: 0;
+						word-wrap: break-word;
+						overflow-wrap: break-word;
+					}
+					.cta {
+						display: inline-flex;
+						align-items: center;
+						gap: 6px;
+						font-family: 'Press Start 2P', monospace;
+						font-size: clamp(10px, 1.5vw + 8px, 12px);
+						background: var(--cta-bg);
+						color: var(--cta-text);
+						padding: 8px 16px;
+						border: 2px solid #000;
+						box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+						text-transform: uppercase;
+						white-space: nowrap;
+						flex-shrink: 0;
+						margin: 0;
+					}
+					.cta-arrow {
+						display: inline-block;
+						width: 0;
+						height: 0;
+						border-top: 5px solid transparent;
+						border-bottom: 5px solid transparent;
+						border-left: 7px solid currentColor;
+						line-height: 0;
+						vertical-align: middle;
+					}
+					@media (max-width: 768px) {
+						.in-article-ad-container { margin: 2rem auto; padding: 0; }
+						.ad-banner-content {
+							flex-direction: column;
+							align-items: center;
+							text-align: center;
+							gap: 12px;
+						}
+						.text-block { width: 100%; text-align: center; }
+						.cta { white-space: nowrap; width: auto; min-width: 200px; max-width: 300px; justify-content: center; }
+					}
+					@media (max-width: 480px) {
+						.in-article-ad-container { padding: 0; }
+						.ad-banner-link { padding: 16px 18px; }
+						.title { font-size: 11px; }
+						.subtitle { font-size: 9px; }
+						.cta { padding: 7px 16px; min-width: 180px; }
+					}
+					@media (max-width: 360px) {
+						.in-article-ad-container { padding: 0; }
+						.ad-banner-link { padding: 14px 16px; }
+						.title { font-size: 10px; }
+						.subtitle { font-size: 8px; }
+						.cta { font-size: 8px; padding: 6px 14px; min-width: 160px; }
+					}
+				`;
+				document.head.appendChild(styleEl);
+			}
+
 			// Insert ad banner after 2nd H2 (responsive HTML/CSS, not PNG)
 			document.addEventListener('DOMContentLoaded', function() {
 				console.log('[DEBUG] DOMContentLoaded, starting insertAdBanner');
@@ -443,160 +584,6 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 							</div>
 						</div>
 					</a>
-					<style>
-						.in-article-ad-container {
-							width: 100%;
-							max-width: var(--max-width-post, 800px);
-							margin: 2rem auto;
-							padding: 0;
-							display: block;
-							box-sizing: border-box;
-						}
-						.ad-banner-link {
-							display: block;
-							background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
-							border-radius: 0;
-							padding: 20px 24px;
-							text-decoration: none !important;
-							position: relative;
-							overflow: hidden;
-							width: 100%;
-							max-width: 100%;
-							box-sizing: border-box;
-						}
-						.ad-banner-link::before {
-							content: "";
-							position: absolute;
-							top: 0;
-							left: 0;
-							width: 100%;
-							height: 100%;
-							background: repeating-linear-gradient(
-								rgba(0, 0, 0, 0.05),
-								rgba(0, 0, 0, 0.05) 1px,
-								transparent 1px,
-								transparent 4px
-							);
-							pointer-events: none;
-							z-index: 1;
-						}
-						.ad-banner-link::after {
-							content: "";
-							position: absolute;
-							top: 6px;
-							left: 6px;
-							right: 6px;
-							bottom: 6px;
-							border: 2px solid var(--border-color);
-							border-radius: 0;
-							pointer-events: none;
-							z-index: 1;
-						}
-						.ad-banner-content {
-							position: relative;
-							z-index: 2;
-							display: flex;
-							flex-direction: row;
-							align-items: center;
-							justify-content: space-between;
-							gap: 16px;
-							width: 100%;
-						}
-						.text-block {
-							flex: 1;
-							display: flex;
-							flex-direction: column;
-							gap: 6px;
-							overflow: visible;
-							min-width: 0;
-						}
-						.title {
-							font-family: 'Press Start 2P', monospace;
-							font-size: clamp(12px, 2vw + 10px, 16px);
-							color: var(--text-color);
-							line-height: 1.4;
-							text-transform: uppercase;
-							white-space: normal;
-							overflow: visible;
-							text-overflow: clip;
-							margin: 0;
-							word-wrap: break-word;
-							overflow-wrap: break-word;
-						}
-						.subtitle {
-							font-family: 'JetBrains Mono', monospace;
-							font-size: clamp(10px, 1.5vw + 8px, 12px);
-							color: var(--text-color);
-							opacity: 0.9;
-							line-height: 1.5;
-							white-space: normal;
-							overflow: visible;
-							text-overflow: clip;
-							margin: 0;
-							word-wrap: break-word;
-							overflow-wrap: break-word;
-						}
-						.cta {
-							display: inline-flex;
-							align-items: center;
-							gap: 6px;
-							font-family: 'Press Start 2P', monospace;
-							font-size: clamp(10px, 1.5vw + 8px, 12px);
-							background: var(--cta-bg);
-							color: var(--cta-text);
-							padding: 8px 16px;
-							border: 2px solid #000;
-							box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
-							text-transform: uppercase;
-							white-space: nowrap;
-							flex-shrink: 0;
-							margin: 0;
-						}
-						.cta-arrow {
-							display: inline-block;
-							width: 0;
-							height: 0;
-							border-top: 5px solid transparent;
-							border-bottom: 5px solid transparent;
-							border-left: 7px solid currentColor;
-							line-height: 0;
-							vertical-align: middle;
-						}
-						@media (max-width: 768px) {
-							.in-article-ad-container { margin: 2rem auto; padding: 0; }
-							.ad-banner-content {
-								flex-direction: column;
-								align-items: center;
-								text-align: center;
-								gap: 12px;
-							}
-							.text-block {
-								width: 100%;
-								text-align: center;
-							}
-							.cta {
-								white-space: nowrap;
-								width: auto;
-								min-width: 200px;
-								max-width: 300px;
-								justify-content: center;
-							}
-						}
-						@media (max-width: 480px) {
-							.in-article-ad-container { padding: 0; }
-							.ad-banner-link { padding: 16px 18px; }
-							.title { font-size: 11px; }
-							.subtitle { font-size: 9px; }
-							.cta { padding: 7px 16px; min-width: 180px; }
-						}
-						@media (max-width: 360px) {
-							.in-article-ad-container { padding: 0; }
-							.ad-banner-link { padding: 14px 16px; }
-							.title { font-size: 10px; }
-							.subtitle { font-size: 8px; }
-							.cta { font-size: 8px; padding: 6px 14px; min-width: 160px; }
-						}
-					</style>
 				`;
 
 				if (targetH2.parentNode) {
@@ -607,5 +594,3 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 				}
 			});
 		</script>
-	</body>
-</html>
