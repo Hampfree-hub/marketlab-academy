@@ -238,77 +238,80 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 			}
 
 			// Banner data by category (responsive, localized)
+			// Используем findBestAdBanner из ad-banners.ts
 			function getBannerForCategory(category, lang) {
-				// Veles for algo-trading (ALL languages)
-				if (category === 'algo-trading') {
-					const velesTitles = {
-						ru: 'Veles: Торговые боты',
-						en: 'Veles: Trading Bots',
-						es: 'Veles: Bots de Trading',
-					};
-					const velesSubtitles = {
-						ru: 'Автоматизируй торговлю на криптобиржах',
-						en: 'Automate trading on crypto exchanges',
-						es: 'Automatiza el trading en criptobolsas',
-					};
-					const velesCtas = {
-						ru: 'Попробовать',
-						en: 'Try now',
-						es: 'Probar',
-					};
-
-					return {
-						title: velesTitles[lang] || velesTitles.ru,
-						subtitle: velesSubtitles[lang] || velesSubtitles.ru,
-						cta: velesCtas[lang] || velesCtas.ru,
+				// Словарь переводов для баннеров
+				const bannerTranslations = {
+					'veles-algo': {
+						title: { ru: 'Veles: Торговые боты', en: 'Veles: Trading Bots', es: 'Veles: Bots de Trading' },
+						subtitle: { ru: 'Автоматизируй торговлю на криптобиржах', en: 'Automate trading on crypto exchanges', es: 'Automatiza el trading en criptobolsas' },
+						cta: { ru: 'Попробовать', en: 'Try now', es: 'Probar' },
 						link: 'https://veles.finance/invite/washmallay',
-						colors: {
-							bgStart: '#2D1B69',    // Глубокий фиолетовый
-							bgEnd: '#1A0F3D',      // Тёмный индиго
-							text: '#E5E5E5',
-							ctaBg: '#F97316',      // Приглушённый оранжевый
-							ctaText: '#FFFFFF',
-							border: '#8B5CF6',
-						},
-					};
+						colors: { bgStart: '#2D1B69', bgEnd: '#1A0F3D', text: '#E5E5E5', ctaBg: '#F97316', ctaText: '#FFFFFF', border: '#8B5CF6' }
+					},
+					'bybit-general': {
+						title: { ru: 'Bybit: Криптобиржа', en: 'Bybit: Crypto Exchange', es: 'Bybit: Exchange Crypto' },
+						subtitle: { ru: 'Спот, фьючерсы, низкие комиссии', en: 'Spot, futures, low fees', es: 'Spot, futuros, bajas comisiones' },
+						cta: { ru: 'Регистрация', en: 'Sign up', es: 'Registrarse' },
+						link: { ru: 'https://www.bybit.com/ru-RU/invite?ref=PWMD24', en: 'https://www.bybit.com/en/invite?ref=PWMD24', es: 'https://www.bybit.com/es/invite?ref=PWMD24' },
+						colors: { bgStart: '#1A1D26', bgEnd: '#0D0E12', text: '#FFFFFF', ctaBg: '#F7A600', ctaText: '#000000', border: '#F7A600' }
+					},
+					'finbazar-fundamental': {
+						title: { ru: 'FinBazar: On-Chain', en: 'FinBazar: On-Chain', es: 'FinBazar: On-Chain' },
+						subtitle: { ru: 'Аналитика и сигналы для трейдеров', en: 'Analytics and signals for traders', es: 'Analítica y señales para traders' },
+						cta: { ru: 'Инструменты', en: 'Tools', es: 'Herramientas' },
+						link: 'https://finbazar.ru/profile/Hampfree/?ref=9483974260',
+						colors: { bgStart: '#064E3B', bgEnd: '#022C22', text: '#E5E5E5', ctaBg: '#10B981', ctaText: '#FFFFFF', border: '#34D399' }
+					},
+					'bingx-general': {
+						title: { ru: 'BingX: Криптобиржа', en: 'BingX: Crypto Exchange', es: 'BingX: Exchange Crypto' },
+						subtitle: { ru: 'Социальный трейдинг, низкие комиссии', en: 'Social trading, low fees', es: 'Trading social, bajas comisiones' },
+						cta: { ru: 'Начать', en: 'Get started', es: 'Comenzar' },
+						link: 'https://bingxdao.com/invite/CUBDBG/',
+						colors: { bgStart: '#0A0E27', bgEnd: '#1A237E', text: '#FFFFFF', ctaBg: '#00D4FF', ctaText: '#0A0E27', border: '#00B4D8' }
+					},
+					'bitget-general': {
+						title: { ru: 'Bitget: Криптобиржа', en: 'Bitget: Crypto Exchange', es: 'Bitget: Exchange Crypto' },
+						subtitle: { ru: 'Фьючерсы, спот, копи-трейдинг', en: 'Futures, spot, copy trading', es: 'Futuros, spot, copy trading' },
+						cta: { ru: 'Регистрация', en: 'Sign up', es: 'Registrarse' },
+						link: { ru: 'https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD', en: 'https://www.bitget.com/en/referral/register?from=referral&clacCode=23EHR2VD', es: 'https://www.bitget.com/es/referral/register?from=referral&clacCode=23EHR2VD' },
+						colors: { bgStart: '#0B1E1A', bgEnd: '#051410', text: '#FFFFFF', ctaBg: '#00C9A7', ctaText: '#000000', border: '#14D0BB' }
+					},
+					'default-academy': {
+						title: { ru: 'MarketLab Academy', en: 'MarketLab Academy', es: 'MarketLab Academy' },
+						subtitle: { ru: 'Автоматизация, сигналы, аналитика', en: 'Automation, signals, analytics', es: 'Automatización, señales, analítica' },
+						cta: { ru: 'Библиотека', en: 'Library', es: 'Biblioteca' },
+						link: '/{lang}/library/',
+						colors: { bgStart: '#2D3748', bgEnd: '#1A202C', text: '#E5E5E5', ctaBg: '#00D800', ctaText: '#1A202C', border: '#3CBCFC' }
+					}
+				};
+
+				// Логика выбора баннера по категории и языку
+				let bannerId = 'bybit-general'; // fallback
+
+				if (category === 'algo-trading') {
+					bannerId = 'veles-algo';
+				} else if (category === 'fundamental-analysis' && lang === 'ru') {
+					bannerId = 'finbazar-fundamental'; // Только для RU!
+				} else if (category === 'crypto') {
+					bannerId = 'bybit-general';
+				} else if (category === 'technical-analysis') {
+					bannerId = 'bingx-general';
+				} else {
+					// fallback: Bybit → BingX → Bitget
+					bannerId = 'bybit-general';
 				}
 
-				// Bybit for others with translations
-				const bybitLinks = {
-					ru: 'https://www.bybit.com/ru-RU/invite?ref=PWMD24',
-					en: 'https://www.bybit.com/en/invite?ref=PWMD24',
-					es: 'https://www.bybit.com/es/invite?ref=PWMD24',
-				};
-
-				const titles = {
-					ru: 'Bybit: Криптобиржа',
-					en: 'Bybit: Crypto Exchange',
-					es: 'Bybit: Exchange Crypto',
-				};
-				const subtitles = {
-					ru: 'Спот, фьючерсы, низкие комиссии',
-					en: 'Spot, futures, low fees',
-					es: 'Spot, futuros, bajas comisiones',
-				};
-				const ctas = {
-					ru: 'Регистрация',
-					en: 'Sign up',
-					es: 'Registrarse',
-				};
+				const banner = bannerTranslations[bannerId];
+				const link = typeof banner.link === 'string' ? banner.link : (banner.link[lang] || banner.link.ru);
 
 				return {
-					title: titles[lang] || titles.ru,
-					subtitle: subtitles[lang] || subtitles.ru,
-					cta: ctas[lang] || ctas.ru,
-					link: bybitLinks[lang] || bybitLinks.ru,
-					colors: {
-						bgStart: '#1A1D26',    // Тёмный серо-чёрный
-						bgEnd: '#0D0E12',      // Почти чёрный
-						text: '#FFFFFF',
-						ctaBg: '#F7A600',      // Фирменный оранжевый
-						ctaText: '#000000',
-						border: '#F7A600',
-					},
+					id: bannerId,
+					title: banner.title[lang] || banner.title.ru,
+					subtitle: banner.subtitle[lang] || banner.subtitle.ru,
+					cta: banner.cta[lang] || banner.cta.ru,
+					link: link,
+					colors: banner.colors
 				};
 			}
 
