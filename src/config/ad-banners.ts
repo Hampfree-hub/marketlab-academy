@@ -66,7 +66,7 @@ export const AD_BANNERS: AdBanner[] = [
     },
   },
 
-  // Bybit — универсальный баннер
+  // Bybit — универсальный баннер (основной для algo-trading)
   {
     id: 'bybit-general',
     title: 'Bybit: Crypto Exchange',
@@ -74,7 +74,7 @@ export const AD_BANNERS: AdBanner[] = [
     cta: 'Sign up →',
     link: getReferralLink('bybit', 'ru'),
     languages: ['ru', 'en', 'es'],
-    priority: 5,
+    priority: 10,
     colors: {
       bgStart: '#1A1D26',    // Тёмный серо-чёрный
       bgEnd: '#0D0E12',      // Почти чёрный
@@ -82,6 +82,25 @@ export const AD_BANNERS: AdBanner[] = [
       ctaBg: '#F7A600',      // Фирменный оранжевый
       ctaText: '#000000',    // Чёрный текст на оранжевом
       border: '#F7A600',     // Оранжевая рамка
+    },
+  },
+
+  // Bybit — альтернативный баннер (для diversification)
+  {
+    id: 'bybit-alternative',
+    title: 'Bybit: Trade Crypto',
+    subtitle: 'Low fees, high liquidity',
+    cta: 'Get started →',
+    link: getReferralLink('bybit', 'ru'),
+    languages: ['ru', 'en', 'es'],
+    priority: 8,
+    colors: {
+      bgStart: '#0D0E12',    // Почти чёрный
+      bgEnd: '#1A1D26',      // Тёмный серо-чёрный
+      text: '#E5E5E5',       // Светло-серый текст
+      ctaBg: '#F7A600',      // Оранжевый
+      ctaText: '#000000',
+      border: '#F7A600',
     },
   },
 
@@ -94,7 +113,7 @@ export const AD_BANNERS: AdBanner[] = [
     link: getReferralLink('finbazar', 'ru'),
     categories: ['fundamental-analysis', 'crypto'],
     languages: ['ru', 'en', 'es'],
-    priority: 8,
+    priority: 7,
     colors: {
       bgStart: '#064E3B',    // Тёмно-изумрудный
       bgEnd: '#022C22',      // Очень тёмный зелёный
@@ -102,46 +121,6 @@ export const AD_BANNERS: AdBanner[] = [
       ctaBg: '#10B981',      // Изумрудный
       ctaText: '#FFFFFF',
       border: '#34D399',     // Светло-изумрудная рамка
-    },
-  },
-
-  // BingX — для копи-трейдинга
-  {
-    id: 'bingx-copy',
-    title: 'BingX: Copy Trading',
-    subtitle: 'Copy successful traders',
-    cta: 'Start →',
-    link: getReferralLink('bingx', 'ru'),
-    categories: ['algo-trading', 'technical-analysis'],
-    languages: ['ru', 'en', 'es'],
-    priority: 7,
-    colors: {
-      bgStart: '#0A0E27',    // Тёмно-синий
-      bgEnd: '#1A237E',      // Насыщенный синий
-      text: '#FFFFFF',       // Белый текст
-      ctaBg: '#00D4FF',      // Ярко-голубой
-      ctaText: '#0A0E27',    // Тёмный текст на голубом
-      border: '#00B4D8',     // Голубая рамка
-    },
-  },
-
-  // Bitget — дополнительный баннер
-  {
-    id: 'bitget-copy',
-    title: 'Bitget: Copy Trading',
-    subtitle: 'Copy pro traders instantly',
-    cta: 'Start →',
-    link: getReferralLink('bitget', 'ru'),
-    categories: ['algo-trading', 'technical-analysis'],
-    languages: ['ru', 'en', 'es'],
-    priority: 6,
-    colors: {
-      bgStart: '#0B1E1A',    // Тёмный бирюзовый фон
-      bgEnd: '#051410',      // Очень тёмный
-      text: '#FFFFFF',       // Белый текст
-      ctaBg: '#00C9A7',      // Фирменный бирюзовый
-      ctaText: '#000000',    // Чёрный текст
-      border: '#14D0BB',     // Светло-бирюзовая рамка
     },
   },
 
