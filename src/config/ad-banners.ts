@@ -111,9 +111,9 @@ export const AD_BANNERS: AdBanner[] = [
     subtitle: 'Analytics and signals for traders',
     cta: 'Tools →',
     link: getReferralLink('finbazar', 'ru'),
-    categories: ['fundamental-analysis', 'crypto'],
+    categories: ['fundamental-analysis'],
     languages: ['ru', 'en', 'es'],
-    priority: 7,
+    priority: 10,
     colors: {
       bgStart: '#064E3B',    // Тёмно-изумрудный
       bgEnd: '#022C22',      // Очень тёмный зелёный
@@ -124,15 +124,36 @@ export const AD_BANNERS: AdBanner[] = [
     },
   },
 
-  // BingX — универсальный баннер (социальный трейдинг)
+  // Bybit — универсальный баннер (для crypto и fallback)
+  {
+    id: 'bybit-general',
+    title: 'Bybit: Crypto Exchange',
+    subtitle: 'Spot, futures, low fees',
+    cta: 'Sign up →',
+    link: getReferralLink('bybit', 'ru'),
+    categories: ['crypto'],
+    languages: ['ru', 'en', 'es'],
+    priority: 10,
+    colors: {
+      bgStart: '#1A1D26',    // Тёмный серо-чёрный
+      bgEnd: '#0D0E12',      // Почти чёрный
+      text: '#FFFFFF',       // Белый текст
+      ctaBg: '#F7A600',      // Фирменный оранжевый
+      ctaText: '#000000',    // Чёрный текст на оранжевом
+      border: '#F7A600',     // Оранжевая рамка
+    },
+  },
+
+  // BingX — для технического анализа
   {
     id: 'bingx-general',
     title: 'BingX: Crypto Exchange',
     subtitle: 'Social trading, low fees',
     cta: 'Get started →',
     link: getReferralLink('bingx', 'ru'),
+    categories: ['technical-analysis'],
     languages: ['ru', 'en', 'es'],
-    priority: 6,
+    priority: 10,
     colors: {
       bgStart: '#0A0E27',    // Тёмно-синий
       bgEnd: '#1A237E',      // Насыщенный синий
@@ -143,7 +164,7 @@ export const AD_BANNERS: AdBanner[] = [
     },
   },
 
-  // Bitget — универсальный баннер (фьючерсы, спот)
+  // Bitget — универсальный fallback
   {
     id: 'bitget-general',
     title: 'Bitget: Crypto Exchange',

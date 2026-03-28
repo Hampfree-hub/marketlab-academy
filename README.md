@@ -97,7 +97,7 @@ npm run preview
 ### Компоненты
 
 - **Banner** — 8-bit баннеры для статей
-- **BannerCard** — реферальные баннеры (Veles, Bybit, FinBazar, Default)
+- **BannerCard** — реферальные баннеры (Veles, Bybit, BingX, Bitget, FinBazar, Default)
 - **FAQ** — автоматическая стилизация FAQ секций
 - **RelatedPosts** — связанные посты
 - **SubscribeForm** — форма подписки на рассылку
@@ -209,7 +209,7 @@ OG изображения автоматически генерируются п
 - **Автовставка:** После 2-го H2 в каждой статье
 - **Компонент:** `BannerCard.astro` (ручная вставка в MDX)
 - **Конфигурация:** `src/config/ad-banners.ts`
-- **Баннеры:** Veles, Bybit, FinBazar, Default
+- **Баннеры:** Veles, Bybit, BingX, Bitget, FinBazar, Default
 
 ---
 
