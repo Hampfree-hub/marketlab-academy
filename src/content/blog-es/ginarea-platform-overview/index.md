@@ -40,7 +40,7 @@ draft: true
 
 **Importante:** Ginarea soporta spot y futuros en OKX, Bybit y KuCoin, además de futuros en BitMEX. Se requiere cuenta de trading unificada (Bybit) o cuenta de trading (OKX/KuCoin).
 
-### Requisitos Mínimos
+### Requisitos Mínimos (Recomendaciones)
 
 - **Spot:** Desde 200 USDT para lanzar bot
 - **Futuros:** Desde 200 USDT en cuenta de trading unificada
@@ -174,8 +174,7 @@ draft: true
 |------------|-------------|
 | **Complejidad** | Principiantes necesitan tiempo para aprender constructor |
 | **Indicadores limitados** | No hay indicadores personalizados (solo integrados) |
-| **Sin app móvil** | Solo interfaz web |
-| **Sin backtests** | No puedes probar estrategia en datos históricos |
+| **Sin backtests** | No puedes probar estrategia en datos históricos (hay calculadoras) |
 | **Sin paper trading** | No hay prueba en cuenta demo |
 
 ---
@@ -253,13 +252,7 @@ draft: true
 
 ## Alternativas Ginarea
 
-| Plataforma | Pros | Contras | Para quién |
-|------------|------|---------|------------|
-| **Veles** | Bots listos, más simple | Sin constructor, menos flexibilidad | Principiantes |
-| **Gainium** | Gratis hasta 2 bots | Estrategias simples, sin backtests | Prueba |
-| **3Commas** | Muchas funciones, app móvil | Caro, backtests complejos | Experimentados |
-| **TradingView + Pine Script** | Lenguaje potente, backtests | Necesita código (Pine Script) | Desarrolladores |
-| **Python + Backtrader** | Libertad total | Necesita código, configuración | Programadores |
+**Comparación de plataformas para algo trading** la cubrimos en detalle en nuestra [guía de plataformas de trading algorítmico](/es/library/algorithmic-trading-intro/). Allí encontrarás comparación detallada de Veles, Ginarea, Gainium y otras plataformas.
 
 ---
 

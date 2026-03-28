@@ -40,7 +40,7 @@ draft: true
 
 **Important:** Ginarea supports spot and futures on OKX, Bybit and KuCoin, plus futures on BitMEX. Unified trading account required (Bybit) or trading account (OKX/KuCoin).
 
-### Minimum Requirements
+### Minimum Requirements (Recommendations)
 
 - **Spot:** From 200 USDT to launch bot
 - **Futures:** From 200 USDT on unified trading account
@@ -67,7 +67,7 @@ draft: true
 
 1. **Choose bot type:** Default, Auto Grid, Dynamic, Indicator Grid, DCA
 2. **Fill fields:** Exchange, strategy, trading pair, type, direction, bot name
-3. **Setup indicators:** EMA, RSI, MA, SMMA, ATR, ATR%, Supertrend
+3. **Setup indicators (if used in strategy):** EMA, RSI, MA, SMMA, ATR, ATR%, Supertrend
 4. **Risk management:** Stop-loss, take-profit, position size
 
 **Indicator Grid setup example:**
@@ -174,8 +174,7 @@ draft: true
 |--------------|-------------|
 | **Complexity** | Beginners need time to learn builder |
 | **Limited indicators** | No custom indicators (only built-in) |
-| **No mobile app** | Web interface only |
-| **No backtests** | Can't test strategy on historical data |
+| **No backtests** | Can't test strategy on historical data (calculators available) |
 | **No paper trading** | No demo account testing |
 
 ---
@@ -253,13 +252,7 @@ draft: true
 
 ## Ginarea Alternatives
 
-| Platform | Pros | Cons | For whom |
-|----------|------|------|----------|
-| **Veles** | Ready bots, simpler | No builder, less flexibility | Beginners |
-| **Gainium** | Free up to 2 bots | Simple strategies, no backtests | Test |
-| **3Commas** | Many features, mobile app | Expensive, complex backtests | Experienced |
-| **TradingView + Pine Script** | Powerful language, backtests | Need code (Pine Script) | Developers |
-| **Python + Backtrader** | Full freedom | Need code, setup | Programmers |
+**Platform comparison for algo trading** we covered in detail in our [algorithmic trading platforms overview](/en/library/algorithmic-trading-intro/). You'll find detailed comparison of Veles, Ginarea, Gainium and other platforms there.
 
 ---
 
