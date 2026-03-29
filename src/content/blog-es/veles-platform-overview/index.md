@@ -9,13 +9,6 @@ category: 'algo-trading'
 
 **Para quién:** Traders con pequeño capital (desde $10) que quieren automatizar trading sin aprender programación.
 
-<!-- Veles Banner -->
-<div style="text-align: center; margin: 3rem 0;">
-  <a href="https://veles.finance/invite/washmallay" target="_blank" rel="nofollow sponsored">
-    <img src="/og/ad/veles-simple_ru.png" alt="Veles" style="max-width: 728px; width: 100%; height: auto;" />
-  </a>
-</div>
-
 ## Qué es Veles
 
 **Veles Finance** es una plataforma SaaS (Software as a Service) para automatización de trading de criptomonedas. No necesitas instalar software, configurar servidores ni escribir código — todo funciona en la nube.

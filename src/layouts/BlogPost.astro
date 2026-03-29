@@ -437,7 +437,7 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 			// Insert ad banner after 2nd H2 (responsive HTML/CSS, not PNG)
 			document.addEventListener('DOMContentLoaded', function() {
 				console.log('[DEBUG] DOMContentLoaded, starting insertAdBanner');
-				
+
 				// Add banner styles to head
 				const bannerStyles = `
 					.in-article-ad-container { width: 100%; max-width: var(--max-width-post, 800px); margin: 2rem auto; padding: 0; display: block; box-sizing: border-box; }
@@ -458,9 +458,18 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 				styleEl.textContent = bannerStyles;
 				document.head.appendChild(styleEl);
 
-				// Banner data by category (responsive, localized)
-				function getBannerForCategory(category, lang) {
-					// Словарь переводов для баннеров
+				// Import banner logic from central config
+				const category = document.querySelector('article')?.dataset.category || '';
+				const lang = document.querySelector('html')?.lang || 'ru';
+				const pathname = window.location.pathname;
+				const slug = pathname.split('/').filter(Boolean)[2] || 'unknown';
+				const h2Index = 1; // After 2nd H2 (0-based index)
+
+				console.log('[DEBUG] category:', category, 'lang:', lang, 'slug:', slug);
+
+				// Banner data by category (responsive, localized) - imported from ad-banners.ts
+				function getBannerForCategory(category, lang, slug) {
+					// Словарь переводов для баннеров (копия из ad-banners.ts для client-side use)
 					const bannerTranslations = {
 						'veles-algo': {
 							title: { ru: 'Veles: Торговые боты', en: 'Veles: Trading Bots', es: 'Veles: Bots de Trading' },
@@ -544,14 +553,6 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 						colors: banner.colors
 					};
 				}
-
-				const category = document.querySelector('article')?.dataset.category || '';
-				const lang = document.querySelector('html')?.lang || 'ru';
-				const pathname = window.location.pathname;
-				const slug = pathname.split('/').filter(Boolean)[2] || 'unknown';
-				const h2Index = 1; // After 2nd H2 (0-based index)
-
-				console.log('[DEBUG] category:', category, 'lang:', lang, 'slug:', slug);
 
 				const article = document.querySelector('article .prose');
 				if (!article) {
