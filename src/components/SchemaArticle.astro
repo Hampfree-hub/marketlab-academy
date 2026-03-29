@@ -1,0 +1,110 @@
+---
+/**
+ * Schema.org Article Component
+ * Добавляет JSON-LD разметку для статей блога
+ * 
+ * @see https://schema.org/Article
+ * @see https://developers.google.com/search/docs/appearance/structured-data/article
+ */
+
+export interface Props {
+  /** Заголовок статьи */
+  title: string;
+  /** Описание статьи (meta description) */
+  description: string;
+  /** Дата публикации (ISO 8601) */
+  pubDate: string;
+  /** Автор (по умолчанию MarketLab Academy) */
+  author?: string;
+  /** URL изображения (og:image) */
+  image?: string;
+  /** Категория статьи */
+  category: string;
+  /** Язык статьи (ru/en/es) */
+  lang?: 'ru' | 'en' | 'es';
+}
+
+const {
+  title,
+  description,
+  pubDate,
+  author = 'MarketLab Academy',
+  image,
+  category,
+  lang = 'ru'
+} = Astro.props;
+
+// Формируем canonical URL
+const canonicalURL = new URL(Astro.url.pathname, 'https://marketlab-academy.org');
+
+// Формируем URL изображения (если есть)
+const imageUrl = image ? new URL(image, canonicalURL).href : '';
+
+// Категория на английском для schema.org
+const categoryMap: Record<string, string> = {
+  'algo-trading': 'Algorithmic Trading',
+  'technical-analysis': 'Technical Analysis',
+  'fundamental-analysis': 'Fundamental Analysis',
+  'crypto': 'Cryptocurrency'
+};
+
+const articleSection = categoryMap[category] || category;
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {title},
+  "description": {description},
+  "image": {imageUrl || 'https://marketlab-academy.org/og/default.png'},
+  "datePublished": "{pubDate}",
+  "dateModified": "{pubDate}",
+  "author": {
+    "@type": "Organization",
+    "name": "MarketLab Academy",
+    "url": "https://marketlab-academy.org"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MarketLab Academy",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://marketlab-academy.org/logo.svg",
+      "width": 600,
+      "height": 60
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{canonicalURL.href}"
+  },
+  "articleSection": {articleSection},
+  "inLanguage": "{lang === 'ru' ? 'ru-RU' : lang === 'es' ? 'es-ES' : 'en-US'}",
+  "wordCount": {Astro.props.wordCount || 0}
+}
+</script>
+
+---
+
+## 📝 Примечание
+
+Этот компонент добавляет структурированные данные Schema.org для:
+- ✅ Улучшения сниппетов в поиске
+- ✅ Поддержки Google Rich Results
+- ✅ Лучшего понимания контента поисковиками
+
+**Использование:**
+```astro
+---
+import SchemaArticle from '../components/SchemaArticle.astro';
+---
+
+<SchemaArticle
+  title={frontmatter.title}
+  description={frontmatter.description}
+  pubDate={frontmatter.pubDate}
+  category={frontmatter.category}
+  lang={lang}
+/>
+```
