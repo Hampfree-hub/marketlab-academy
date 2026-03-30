@@ -1,5 +1,5 @@
 ---
-title: 'Cómo Verificar un Proyecto Cripto Antes de Comprar: Checklist de 10 Puntos'
+title: 'Verificar Proyecto Cripto: Checklist de 10 Puntos (Evita Scams 2026)'
 description: 'Checklist paso a paso para verificar proyecto cripto antes de invertir. Equipo, tokenomics, producto, comunidad, banderas rojas. 10 minutos para verificar.'
 pubDate: '2026-03-16'
 category: 'fundamental-analysis'

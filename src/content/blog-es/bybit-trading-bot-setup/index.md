@@ -1,6 +1,6 @@
 ---
-title: 'Cómo configurar un bot de trading en Bybit'
-description: 'Guía paso a paso: crear API keys de forma segura, conectar un bot, elegir estrategia y lanzar automatización en Bybit.'
+title: 'Cómo Configurar Bot de Trading en Bybit: API Keys, Estrategia 2026'
+description: 'Guía paso a paso para configurar bot en Bybit: crear API keys de forma segura, conectar plataforma externa, elegir estrategia. Automatiza tu trading en 2026.'
 pubDate: '2026-02-05'
 category: 'algo-trading'
 ---

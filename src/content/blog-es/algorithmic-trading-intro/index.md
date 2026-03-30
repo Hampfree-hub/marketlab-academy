@@ -1,5 +1,5 @@
 ---
-title: 'Trading Algorítmico: Del Palo del Hombre de las Cavernas a los Bots Crypto'
+title: 'Trading Algorítmico 2026: Guía para Principiantes (Bots, IA)'
 description: 'Trading algorítmico para principiantes: qué es un algoritmo de trading, historia desde reglas simples hasta IA. Mercados crypto, plataformas tradicionales, automatización de estrategias.'
 pubDate: '2026-03-10'
 category: 'algo-trading'
