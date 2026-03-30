@@ -1,5 +1,5 @@
 ---
-title: 'Keltner Channel'
+title: 'Keltner Channel Indicator: Settings, Breakouts, Trading Strategies'
 description: 'Keltner Channel — a volatility indicator based on EMA and ATR: settings, breakout zones, and use in spot trading strategies.'
 pubDate: '2026-02-27'
 category: 'technical-analysis'
