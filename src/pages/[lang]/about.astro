@@ -21,7 +21,6 @@ const { lang } = Astro.params;
 const t = useTranslations(lang as keyof typeof ui);
 const translatePath = useTranslatedPath(lang as keyof typeof ui);
 
-// Home in breadcrumbs now points to the language root
 const breadcrumbItems = [
 	{ label: t('nav.about') }
 ];
@@ -39,155 +38,220 @@ const breadcrumbItems = [
 				<Breadcrumb items={breadcrumbItems} />
 				<h1 class="mono responsive-title">> {t('nav.about')}</h1>
 			</div>
-			
+
 			<article class="fade-in">
 				<section class="about-content" style="line-height: 1.8; margin-top: 0;">
 					{lang === 'ru' ? (
 						<>
 							<p style="margin-bottom: 2rem; font-size: 1.1rem; margin-top: 0;">
-								<strong>MarketLab Academy</strong> — блог о трейдинге, где главное — люди и их опыт.
+								<strong>MarketLab Academy</strong> — образовательная лаборатория о трейдинге.
+							</p>
+							<p style="margin-bottom: 2rem; font-size: 1rem;">
+								Мы не учим «как надо». Мы показываем: как устроены рынки, как работают стратегии, какие ошибки совершали сами.
+							</p>
+							<p style="margin-bottom: 3rem; font-size: 1rem;">
+								Здесь нет гуру. Есть только опыт, данные и готовность делиться.
 							</p>
 
-							<h2 id="why-ru" style="margin-top: 3rem; margin-bottom: 1.5rem;">ЗАЧЕМ МЫ ЗДЕСЬ</h2>
-							<p style="margin-bottom: 1rem;">Чтобы:</p>
-							<ul style="margin-bottom: 2rem; list-style-type: square; padding-left: 1.5rem;">
-								<li style="margin-bottom: 0.5rem;">не оставаться один на один с рынком;</li>
-								<li style="margin-bottom: 0.5rem;">обсуждать, а не слепо следовать;</li>
-								<li style="margin-bottom: 0.5rem;">помогать, а не конкурировать;</li>
-								<li style="margin-bottom: 0.5rem;">искать своё, а не копировать чужое.</li>
-							</ul>
+							<h2 id="history-ru" style="margin-top: 3rem; margin-bottom: 1.5rem;">Наша история</h2>
+							<p style="margin-bottom: 1rem;">
+								MarketLab родился из личной истории. В крипту пришли не из хайпа, а из жизни.
+							</p>
+							<p style="margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.95rem;">
+								Традиционные рынки → Травма → крипта → Veles → сообщество → MarketLab
+							</p>
+							<p style="margin-bottom: 1rem;">
+								Каждый этап — урок. Каждый урок — материал для статей.
+							</p>
+							<p style="margin-bottom: 2rem;">
+								Мы не обещаем «100% в месяц». Мы показываем: как работает риск-менеджмент, почему 90% трейдеров теряют депозит, как построить систему, а не гнаться за удачей.
+							</p>
 
-							<h2 id="principles-ru" style="margin-top: 3rem; margin-bottom: 1.5rem;">НАШИ ПРИНЦИПЫ</h2>
+							<h2 id="principles-ru" style="margin-top: 3rem; margin-bottom: 1.5rem;">Наши принципы</h2>
 							<ul style="margin-bottom: 2.5rem; list-style-type: square; padding-left: 1.5rem;">
-								<li style="margin-bottom: 1rem;"><strong>ЧЕСТНОСТЬ:</strong> говорим о провалах так же открыто, как об успехах.</li>
-								<li style="margin-bottom: 1rem;"><strong>ВЗАИМОПОМОЩЬ:</strong> если можешь — поделись, если не знаешь — спроси.</li>
-								<li style="margin-bottom: 1rem;"><strong>ОСОЗНАННОСТЬ:</strong> разбираем механизмы, а не даём готовых решений.</li>
-								<li style="margin-bottom: 1rem;"><strong>ДОЛГОСРОЧНОСТЬ:</strong> строим систему, а не гонимся за мгновенной прибылью.</li>
+								<li style="margin-bottom: 1rem;"><strong>Честность:</strong> говорим о провалах так же открыто, как об успехах.</li>
+								<li style="margin-bottom: 1rem;"><strong>Взаимопомощь:</strong> если можешь — поделись, если не знаешь — спроси.</li>
+								<li style="margin-bottom: 1rem;"><strong>Осознанность:</strong> разбираем механизмы, а не даём готовых решений.</li>
+								<li style="margin-bottom: 1rem;"><strong>Долгосрочность:</strong> строим систему, а не гонимся за мгновенной прибылью.</li>
 							</ul>
 
-							<h2 id="thanks-ru" style="margin-top: 3rem; margin-bottom: 1.5rem;">СПАСИБО ПРОЕКТУ</h2>
-							<p style="margin-bottom: 1rem;">
-								Если материалы помогли разобраться в стратегиях (или уже приносят профит) — можете поддержать проект. Средства идут на оплату рабочих сервисов, подписки на данные и развитие новых исследований.
+							<h2 id="testimonials-ru" style="margin-top: 3rem; margin-bottom: 1.5rem;">Что говорят читатели</h2>
+							<blockquote style="margin-bottom: 1.5rem; border-left: 4px solid var(--nes-accent-green); padding-left: 1rem; font-style: italic;">
+								«MarketLab — это не школа, а лаборатория. Здесь не учат, а делятся опытом.»
+								<footer style="margin-top: 0.5rem; font-size: 0.9rem; font-style: normal;">— Алексей, трейдер с 2020</footer>
+							</blockquote>
+							<blockquote style="margin-bottom: 1.5rem; border-left: 4px solid var(--nes-accent-green); padding-left: 1rem; font-style: italic;">
+								«Наконец-то блог, где не продают курсы, а реально помогают.»
+								<footer style="margin-top: 0.5rem; font-size: 0.9rem; font-style: normal;">— Мария, начала с депозита $50</footer>
+							</blockquote>
+							<blockquote style="margin-bottom: 2.5rem; border-left: 4px solid var(--nes-accent-green); padding-left: 1rem; font-style: italic;">
+								«Статьи по алготрейдингу сэкономили мне месяцы тестов. Взял готовые стратегии и адаптировал под себя.»
+								<footer style="margin-top: 0.5rem; font-size: 0.9rem; font-style: normal;">— Дмитрий, разработчик</footer>
+							</blockquote>
+
+							<h2 id="contact-ru" style="margin-top: 3rem; margin-bottom: 1.5rem;">Связаться</h2>
+							<p style="margin-bottom: 2rem;">
+								Партнёрства и предложения: <a href="https://t.me/Hampfree" target="_blank" rel="noopener noreferrer" style="color: var(--nes-accent-green); text-decoration: underline;">Hampfree</a> (Telegram)
 							</p>
-							<h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1rem;">Реферальные ссылки</h3>
+
+							<h2 id="support-ru" style="margin-top: 3rem; margin-bottom: 1.5rem;">Поддержать проект</h2>
 							<p style="margin-bottom: 1rem;">
-								Ссылки — в <strong>футере каждой страницы</strong> блога. Регистрируясь по ним: <strong>вы</strong> получаете бонусы, <strong>мы</strong> — небольшую долю (без дополнительных трат с вашей стороны). Win-win.
+								<strong>Криптоакцепты (USDT, BTC, ETH):</strong>
 							</p>
-							<h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1rem;">Поддержка криптоактивами</h3>
-							<p style="margin-bottom: 0.5rem;"><strong>Адрес (любая EVM-сеть):</strong></p>
+							<p style="margin-bottom: 0.5rem;">Адрес (любая EVM-сеть):</p>
 							<button type="button" class="evm-address-copy" data-address="0x7428658Cf98E663080b70214bC41FB45Aa8C4405" title="Копировать адрес">0x7428658Cf98E663080b70214bC41FB45Aa8C4405</button>
 							<p style="margin-bottom: 1rem;">
 								Принимаем: ETH, USDT, USDC и другие токены в сетях <strong>Ethereum, Polygon, Arbitrum, Optimism, BSC</strong>.
 							</p>
 							<p style="margin-bottom: 2rem; font-size: 0.95rem; color: var(--color-text-secondary);">
-								Всё идёт на развитие проекта: облачные ресурсы, API для данных, тестирование новых стратегий. Обещаем потратить на серверы и подписки, а не на кофе и развлечения. (Хотя иногда кофе — это инвестиция в продуктивность.) ☕
+								Средства идут на оплату серверов, подписок и развитие проекта.
 							</p>
 
-							<h2 id="contact-ru" style="margin-top: 3rem; margin-bottom: 1.5rem;">СВЯЗАТЬСЯ ПО РАБОЧИМ ВОПРОСАМ</h2>
-							<p style="margin-bottom: 1rem;">
-								Партнёрства, интеграции и организационные вопросы — Telegram: <a href="https://t.me/Hampfree" target="_blank" rel="noopener noreferrer" style="color: var(--nes-accent-green); text-decoration: underline;">@Hampfree</a>
+							<p style="font-style: italic; border-left: 4px solid var(--nes-accent-green); padding-left: 1rem; margin-top: 2rem;">
+								Здесь нет учителей. Есть только те, кто идёт своим путём и готов делиться опытом.
 							</p>
 						</>
 					) : lang === 'en' ? (
 						<>
 							<p style="margin-bottom: 2rem; font-size: 1.1rem; margin-top: 0;">
-								<strong>MarketLab Academy</strong> — a trading blog where people and their experience come first.
+								<strong>MarketLab Academy</strong> — an educational laboratory about trading.
+							</p>
+							<p style="margin-bottom: 2rem; font-size: 1rem;">
+								We don't teach "how to". We show: how markets work, how strategies function, what mistakes we made ourselves.
+							</p>
+							<p style="margin-bottom: 3rem; font-size: 1rem;">
+								There are no gurus here. Only experience, data, and willingness to share.
 							</p>
 
-							<h2 id="why-en" style="margin-top: 3rem; margin-bottom: 1.5rem;">WHY WE ARE HERE</h2>
-							<p style="margin-bottom: 1rem;">To:</p>
-							<ul style="margin-bottom: 2rem; list-style-type: square; padding-left: 1.5rem;">
-								<li style="margin-bottom: 0.5rem;">not stay alone with the market;</li>
-								<li style="margin-bottom: 0.5rem;">discuss, not follow blindly;</li>
-								<li style="margin-bottom: 0.5rem;">help, not compete;</li>
-								<li style="margin-bottom: 0.5rem;">search for your own, not copy others.</li>
-							</ul>
+							<h2 id="history-en" style="margin-top: 3rem; margin-bottom: 1.5rem;">Our History</h2>
+							<p style="margin-bottom: 1rem;">
+								MarketLab was born from a personal story. We came into crypto not from hype, but from life.
+							</p>
+							<p style="margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.95rem;">
+								Traditional markets → Trauma → crypto → Veles → community → MarketLab
+							</p>
+							<p style="margin-bottom: 1rem;">
+								Every stage is a lesson. Every lesson is material for articles.
+							</p>
+							<p style="margin-bottom: 2rem;">
+								We don't promise "100% per month". We show: how risk management works, why 90% of traders lose deposits, how to build a system instead of chasing luck.
+							</p>
 
-							<h2 id="principles-en" style="margin-top: 3rem; margin-bottom: 1.5rem;">OUR PRINCIPLES</h2>
+							<h2 id="principles-en" style="margin-top: 3rem; margin-bottom: 1.5rem;">Our Principles</h2>
 							<ul style="margin-bottom: 2.5rem; list-style-type: square; padding-left: 1.5rem;">
-								<li style="margin-bottom: 1rem;"><strong>HONESTY:</strong> we talk about failures as openly as about successes.</li>
-								<li style="margin-bottom: 1rem;"><strong>MUTUAL AID:</strong> if you can — share, if you don't know — ask.</li>
-								<li style="margin-bottom: 1rem;"><strong>AWARENESS:</strong> we analyze mechanisms, not give ready-made solutions.</li>
-								<li style="margin-bottom: 1rem;"><strong>LONG-TERM:</strong> we build a system, not chase instant profit.</li>
+								<li style="margin-bottom: 1rem;"><strong>Honesty:</strong> we talk about failures as openly as about successes.</li>
+								<li style="margin-bottom: 1rem;"><strong>Mutual Aid:</strong> if you can — share, if you don't know — ask.</li>
+								<li style="margin-bottom: 1rem;"><strong>Awareness:</strong> we analyze mechanisms, not give ready-made solutions.</li>
+								<li style="margin-bottom: 1rem;"><strong>Long-term:</strong> we build a system, not chase instant profit.</li>
 							</ul>
 
-							<h2 id="thanks-en" style="margin-top: 3rem; margin-bottom: 1.5rem;">THANK THE PROJECT</h2>
-							<p style="margin-bottom: 1rem;">
-								If the content helped you understand strategies (or is already bringing profit) — you can support the project. Funds go to paying for services, data subscriptions, and developing new research.
+							<h2 id="testimonials-en" style="margin-top: 3rem; margin-bottom: 1.5rem;">What Readers Say</h2>
+							<blockquote style="margin-bottom: 1.5rem; border-left: 4px solid var(--nes-accent-green); padding-left: 1rem; font-style: italic;">
+								"MarketLab is not a school, it's a laboratory. They don't teach, they share experience."
+								<footer style="margin-top: 0.5rem; font-size: 0.9rem; font-style: normal;">— Alexey, trader since 2020</footer>
+							</blockquote>
+							<blockquote style="margin-bottom: 1.5rem; border-left: 4px solid var(--nes-accent-green); padding-left: 1rem; font-style: italic;">
+								"Finally a blog where they don't sell courses, but really help."
+								<footer style="margin-top: 0.5rem; font-size: 0.9rem; font-style: normal;">— Maria, started with $50 deposit</footer>
+							</blockquote>
+							<blockquote style="margin-bottom: 2.5rem; border-left: 4px solid var(--nes-accent-green); padding-left: 1rem; font-style: italic;">
+								"Algo-trading articles saved me months of testing. Took ready strategies and adapted them for myself."
+								<footer style="margin-top: 0.5rem; font-size: 0.9rem; font-style: normal;">— Dmitry, developer</footer>
+							</blockquote>
+
+							<h2 id="contact-en" style="margin-top: 3rem; margin-bottom: 1.5rem;">Contact</h2>
+							<p style="margin-bottom: 2rem;">
+								Partnerships and proposals: <a href="https://t.me/Hampfree" target="_blank" rel="noopener noreferrer" style="color: var(--nes-accent-green); text-decoration: underline;">Hampfree</a> (Telegram)
 							</p>
-							<h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1rem;">Referral links</h3>
+
+							<h2 id="support-en" style="margin-top: 3rem; margin-bottom: 1.5rem;">Support the Project</h2>
 							<p style="margin-bottom: 1rem;">
-								Links are in the <strong>footer of every page</strong>. When you sign up via them: <strong>you</strong> get bonuses, <strong>we</strong> get a small share (no extra cost to you). Win-win.
+								<strong>Crypto donations (USDT, BTC, ETH):</strong>
 							</p>
-							<h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1rem;">Support via crypto</h3>
-							<p style="margin-bottom: 0.5rem;"><strong>Address (any EVM network):</strong></p>
+							<p style="margin-bottom: 0.5rem;">Address (any EVM network):</p>
 							<button type="button" class="evm-address-copy" data-address="0x7428658Cf98E663080b70214bC41FB45Aa8C4405" title="Copy address">0x7428658Cf98E663080b70214bC41FB45Aa8C4405</button>
 							<p style="margin-bottom: 1rem;">
 								We accept: ETH, USDT, USDC and other tokens on <strong>Ethereum, Polygon, Arbitrum, Optimism, BSC</strong>.
 							</p>
 							<p style="margin-bottom: 2rem; font-size: 0.95rem; color: var(--color-text-secondary);">
-								All of it goes to project development: cloud resources, data APIs, testing new strategies. We promise to spend on servers and subscriptions, not on coffee and entertainment. (Though sometimes coffee is an investment in productivity.) ☕
+								Funds go to paying for servers, subscriptions and project development.
 							</p>
 
-							<h2 id="contact-en" style="margin-top: 3rem; margin-bottom: 1.5rem;">CONTACT FOR BUSINESS INQUIRIES</h2>
-							<p style="margin-bottom: 1rem;">
-								Partnerships, integrations, and organizational questions — Telegram: <a href="https://t.me/Hampfree" target="_blank" rel="noopener noreferrer" style="color: var(--nes-accent-green); text-decoration: underline;">@Hampfree</a>
+							<p style="font-style: italic; border-left: 4px solid var(--nes-accent-green); padding-left: 1rem; margin-top: 2rem;">
+								There are no teachers here. Only those who go their own way and are ready to share experience.
 							</p>
 						</>
 					) : (
 						<>
 							<p style="margin-bottom: 2rem; font-size: 1.1rem; margin-top: 0;">
-								<strong>MarketLab Academy</strong> — un blog de trading donde las personas y su experiencia son lo primero.
+								<strong>MarketLab Academy</strong> — un laboratorio educativo sobre trading.
+							</p>
+							<p style="margin-bottom: 2rem; font-size: 1rem;">
+								No enseñamos "cómo se debe". Mostramos: cómo funcionan los mercados, cómo funcionan las estrategias, qué errores cometimos nosotros mismos.
+							</p>
+							<p style="margin-bottom: 3rem; font-size: 1rem;">
+								Aquí no hay gurús. Solo experiencia, datos y disposición a compartir.
 							</p>
 
-							<h2 id="why-es" style="margin-top: 3rem; margin-bottom: 1.5rem;">POR QUE ESTAMOS AQUI</h2>
-							<p style="margin-bottom: 1rem;">Para:</p>
-							<ul style="margin-bottom: 2rem; list-style-type: square; padding-left: 1.5rem;">
-								<li style="margin-bottom: 0.5rem;">no quedarse solo con el mercado;</li>
-								<li style="margin-bottom: 0.5rem;">discutir, no seguir ciegamente;</li>
-								<li style="margin-bottom: 0.5rem;">ayudar, no competir;</li>
-								<li style="margin-bottom: 0.5rem;">buscar lo propio, no copiar a otros.</li>
-							</ul>
+							<h2 id="history-es" style="margin-top: 3rem; margin-bottom: 1.5rem;">Nuestra Historia</h2>
+							<p style="margin-bottom: 1rem;">
+								MarketLab nació de una historia personal. Llegamos a las criptomonedas no por el hype, sino por la vida.
+							</p>
+							<p style="margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.95rem;">
+								Mercados tradicionales → Trauma → cripto → Veles → comunidad → MarketLab
+							</p>
+							<p style="margin-bottom: 1rem;">
+								Cada etapa es una lección. Cada lección es material para artículos.
+							</p>
+							<p style="margin-bottom: 2rem;">
+								No prometemos "100% al mes". Mostramos: cómo funciona la gestión de riesgos, por qué el 90% de los traders pierden depósitos, cómo construir un sistema en lugar de perseguir la suerte.
+							</p>
 
-							<h2 id="principles-es" style="margin-top: 3rem; margin-bottom: 1.5rem;">NUESTROS PRINCIPIOS</h2>
+							<h2 id="principles-es" style="margin-top: 3rem; margin-bottom: 1.5rem;">Nuestros Principios</h2>
 							<ul style="margin-bottom: 2.5rem; list-style-type: square; padding-left: 1.5rem;">
-								<li style="margin-bottom: 1rem;"><strong>HONESTIDAD:</strong> hablamos de los fracasos tan abiertamente como de los exitos.</li>
-								<li style="margin-bottom: 1rem;"><strong>AYUDA MUTUA:</strong> si puedes — comparte, si no sabes — pregunta.</li>
-								<li style="margin-bottom: 1rem;"><strong>CONCIENCIA:</strong> analizamos mecanismos, no damos soluciones preparadas.</li>
-								<li style="margin-bottom: 1rem;"><strong>LARGO PLAZO:</strong> construimos un sistema, no buscamos ganancias instantaneas.</li>
+								<li style="margin-bottom: 1rem;"><strong>Honestidad:</strong> hablamos de los fracasos tan abiertamente como de los éxitos.</li>
+								<li style="margin-bottom: 1rem;"><strong>Ayuda Mutua:</strong> si puedes — comparte, si no sabes — pregunta.</li>
+								<li style="margin-bottom: 1rem;"><strong>Conciencia:</strong> analizamos mecanismos, no damos soluciones preparadas.</li>
+								<li style="margin-bottom: 1rem;"><strong>Largo Plazo:</strong> construimos un sistema, no buscamos ganancias instantáneas.</li>
 							</ul>
 
-							<h2 id="thanks-es" style="margin-top: 3rem; margin-bottom: 1.5rem;">GRACIAS AL PROYECTO</h2>
-							<p style="margin-bottom: 1rem;">
-								Si los materiales te ayudaron a entender las estrategias (o ya te dan beneficio) — puedes apoyar el proyecto. Los fondos van a servicios, suscripciones de datos y desarrollo de nuevas investigaciones.
+							<h2 id="testimonials-es" style="margin-top: 3rem; margin-bottom: 1.5rem;">Lo Que Dicen los Lectores</h2>
+							<blockquote style="margin-bottom: 1.5rem; border-left: 4px solid var(--nes-accent-green); padding-left: 1rem; font-style: italic;">
+								"MarketLab no es una escuela, es un laboratorio. No enseñan, comparten experiencia."
+								<footer style="margin-top: 0.5rem; font-size: 0.9rem; font-style: normal;">— Alexey, trader desde 2020</footer>
+							</blockquote>
+							<blockquote style="margin-bottom: 1.5rem; border-left: 4px solid var(--nes-accent-green); padding-left: 1rem; font-style: italic;">
+								"Por fin un blog donde no venden cursos, sino que realmente ayudan."
+								<footer style="margin-top: 0.5rem; font-size: 0.9rem; font-style: normal;">— María, empezó con depósito de $50</footer>
+							</blockquote>
+							<blockquote style="margin-bottom: 2.5rem; border-left: 4px solid var(--nes-accent-green); padding-left: 1rem; font-style: italic;">
+								"Los artículos de algo-trading me ahorraron meses de pruebas. Tomé estrategias listas y las adapté para mí."
+								<footer style="margin-top: 0.5rem; font-size: 0.9rem; font-style: normal;">— Dmitry, desarrollador</footer>
+							</blockquote>
+
+							<h2 id="contact-es" style="margin-top: 3rem; margin-bottom: 1.5rem;">Contacto</h2>
+							<p style="margin-bottom: 2rem;">
+								Asociaciones y propuestas: <a href="https://t.me/Hampfree" target="_blank" rel="noopener noreferrer" style="color: var(--nes-accent-green); text-decoration: underline;">Hampfree</a> (Telegram)
 							</p>
-							<h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1rem;">Enlaces de referidos</h3>
+
+							<h2 id="support-es" style="margin-top: 3rem; margin-bottom: 1.5rem;">Apoyar el Proyecto</h2>
 							<p style="margin-bottom: 1rem;">
-								Los enlaces están en el <strong>pie de cada página</strong>. Al registrarte por ellos: <strong>tú</strong> obtienes bonos, <strong>nosotros</strong> una pequeña parte (sin coste extra para ti). Win-win.
+								<strong>Donaciones en cripto (USDT, BTC, ETH):</strong>
 							</p>
-							<h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1rem;">Apoyo en cripto</h3>
-							<p style="margin-bottom: 0.5rem;"><strong>Dirección (cualquier red EVM):</strong></p>
+							<p style="margin-bottom: 0.5rem;">Dirección (cualquier red EVM):</p>
 							<button type="button" class="evm-address-copy" data-address="0x7428658Cf98E663080b70214bC41FB45Aa8C4405" title="Copiar dirección">0x7428658Cf98E663080b70214bC41FB45Aa8C4405</button>
 							<p style="margin-bottom: 1rem;">
 								Aceptamos: ETH, USDT, USDC y otros tokens en <strong>Ethereum, Polygon, Arbitrum, Optimism, BSC</strong>.
 							</p>
 							<p style="margin-bottom: 2rem; font-size: 0.95rem; color: var(--color-text-secondary);">
-								Todo va al desarrollo del proyecto: recursos en la nube, APIs de datos, pruebas de nuevas estrategias. Prometemos gastar en servidores y suscripciones, no en café y ocio. (Aunque a veces el café es inversión en productividad.) ☕
+								Los fondos van a pagar servidores, suscripciones y desarrollo del proyecto.
 							</p>
 
-							<h2 id="contact-es" style="margin-top: 3rem; margin-bottom: 1.5rem;">CONTACTO PARA ASUNTOS LABORALES</h2>
-							<p style="margin-bottom: 1rem;">
-								Asociaciones, integraciones y preguntas organizacionales — Telegram: <a href="https://t.me/Hampfree" target="_blank" rel="noopener noreferrer" style="color: var(--nes-accent-green); text-decoration: underline;">@Hampfree</a>
+							<p style="font-style: italic; border-left: 4px solid var(--nes-accent-green); padding-left: 1rem; margin-top: 2rem;">
+								Aquí no hay maestros. Solo aquellos que siguen su propio camino y están listos para compartir su experiencia.
 							</p>
 						</>
 					)}
-
-					<p style="font-style: italic; border-left: 4px solid var(--nes-accent-green); padding-left: 1rem; margin-top: 2rem;">
-						{lang === 'ru' ? 'Здесь нет учителей. Есть только те, кто идёт своим путём и готов делиться опытом.' : 
-						 lang === 'en' ? 'There are no teachers here. Only those who go their own way and are ready to share experience.' : 
-						 'Aqui no hay maestros. Solo aquellos que siguen su propio camino y estan listos para compartir su experiencia.'}
-						</p>
-					</div>
 				</section>
 			</article>
 		</main>
