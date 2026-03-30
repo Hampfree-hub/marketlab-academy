@@ -266,8 +266,6 @@ Sí, el marketplace de Ginarea tiene cientos de estrategias listas (pagas y grat
 
 **[Registrarse en Ginarea](https://ginarea.com)** y empezar a automatizar trading.
 
-*Plataforma completamente gratis — el servicio gana en rebate de comisión del exchange.*
-
 ---
 
 **Fuentes:**

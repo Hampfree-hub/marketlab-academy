@@ -266,8 +266,6 @@ Yes, Ginarea marketplace has hundreds of ready strategies (paid and free).
 
 **[Register on Ginarea](https://ginarea.com)** and start automating trading.
 
-*Platform is completely free — service earns on exchange commission rebate.*
-
 ---
 
 **Sources:**
