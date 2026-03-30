@@ -615,3 +615,9 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 				}
 			});
 		</script>
+
+		{/* Отслеживание кликов по внешним ссылкам (GA4) — Issue #91 */}
+		<script>
+			import { initOutboundTracking } from '../utils/outbound-tracking';
+			initOutboundTracking();
+		</script>
