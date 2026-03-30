@@ -1,6 +1,6 @@
 ---
-title: 'ORACLE 1.1: Strategy Settings on Four Indicators'
-description: 'Overview of ORACLE 1.1 settings: Bollinger Bands, ATR%, ROC, Williams %R on timeframes H1→M5, backtests and BingX test.'
+title: 'ORACLE 1.1: 4-Indicator Strategy Settings (H1→M5)'
+description: 'ORACLE 1.1 settings: Bollinger Bands, ATR%, ROC, Williams %R on timeframes. Backtests, BingX test. Veles strategy setup guide.'
 pubDate: '2026-02-03'
 category: 'algo-trading'
 ---

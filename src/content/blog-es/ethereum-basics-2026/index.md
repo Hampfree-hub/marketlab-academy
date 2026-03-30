@@ -1,6 +1,6 @@
 ---
-title: 'Ethereum en Términos Simples: Qué Es, Cómo Funciona, Por Qué Importa ETH'
-description: 'Ethereum para principiantes: blockchain, contratos inteligentes, gas, staking. Cómo se diferencia ETH de Bitcoin. Guía completa 2026.'
+title: 'Ethereum (ETH): Blockchain, Contratos Inteligentes, Staking 2026'
+description: 'Guía completa de Ethereum para principiantes: blockchain, contratos inteligentes, gas, staking. Diferencias ETH vs Bitcoin. Comienza en 2026.'
 pubDate: '2026-03-15'
 category: 'crypto'
 draft: false
