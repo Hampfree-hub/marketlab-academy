@@ -11,7 +11,7 @@ category: 'technical-analysis'
 
 Да, начать торговать криптовалютами можно даже с небольшого депозита. Ключ к успеху — не размер начального капитала, а правильный подход к управлению рисками и выбор подходящих стратегий. Многие профессиональные трейдеры начинали с небольших сумм, постепенно наращивая капитал за счет дисциплинированной торговли.
 
-Для начала торговли достаточно зарегистрироваться на надёжной бирже. Например, [Bybit](https://www.bybit.com/invite?ref=PWMD24) или [Bitget](https://www.bitget.com/ru/referral/register?clacCode=23EHR2VD) подходят для новичков: удобный интерфейс, низкие комиссии и возможность торговли с малых сумм.
+Для начала торговли достаточно зарегистрироваться на надёжной бирже. Например, [Bybit](https://www.bybit.com/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=how-to-start-trading-small-deposit) или [Bitget](https://www.bitget.com/ru/referral/register?clacCode=23EHR2VD&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=how-to-start-trading-small-deposit) подходят для новичков: удобный интерфейс, низкие комиссии и возможность торговли с малых сумм.
 
 Важно понимать, что торговля с малой суммой имеет свои особенности:
 

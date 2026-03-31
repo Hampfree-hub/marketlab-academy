@@ -47,7 +47,7 @@ Ya en marcha:
 - **Rublo digital:** Rusia está probando una plataforma para pagos minoristas y mayoristas.
 - **Euro digital:** La UE prepara su lanzamiento en los próximos años.
 
-Para trading de criptomonedas con bajas comisiones, regístrate en **[Bybit](https://www.bybit.com/invite?ref=PWMD24)**.
+Para trading de criptomonedas con bajas comisiones, regístrate en **[Bybit](https://www.bybit.com/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=what-is-digital-currency-in-simple-terms)**.
 
 ## Resumen
 

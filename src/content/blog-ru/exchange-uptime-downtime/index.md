@@ -67,7 +67,7 @@ category: 'fundamental-analysis'
 - DownDetector — жалобы пользователей в реальном времени
 - CryptoStatus — мониторинг криптобирж и кошельков
 
-При выборе биржи разумно совмещать: смотреть и официальный статус, и внешний мониторинг, и отзывы пользователей о недавних инцидентах. Для автоматической торговли важно выбирать площадки с аптаймом 99,5%+ — такие есть в списке поддерживаемых бирж на [Veles](https://veles.finance/invite/washmallay).
+При выборе биржи разумно совмещать: смотреть и официальный статус, и внешний мониторинг, и отзывы пользователей о недавних инцидентах. Для автоматической торговли важно выбирать площадки с аптаймом 99,5%+ — такие есть в списке поддерживаемых бирж на [Veles](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=exchange-uptime-downtime).
 
 ## Типичные причины даунтайма
 
@@ -269,7 +269,7 @@ category: 'fundamental-analysis'
 - [ ] Rate limits адекватные (1000+ запросов/минуту)
 - [ ] WebSocket поддержка
 - [ ] Тестовая сеть (testnet)
-- [ ] Поддержка в списке [Veles](https://veles.finance/invite/washmallay)
+- [ ] Поддержка в списке [Veles](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=exchange-uptime-downtime)
 
 **Минимальные требования:**
 - Аптайм: 99.5%+

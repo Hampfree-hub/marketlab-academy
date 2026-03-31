@@ -53,7 +53,7 @@ En mercados cripto volátiles, los bots son cada vez más usados. Muchos detecta
 
 Entender y usar bien la cuña alcista puede mejorar los resultados. Puede combinarse con otras herramientas, como el [RSI](https://marketlab-academy.org/es/library/technical-analysis-rsi/) o las [velas doji](https://marketlab-academy.org/es/library/what-are-doji-candles/), para afinar el timing. Para análisis de volumen e impulso, el [índice de flujo de dinero (MFI)](https://marketlab-academy.org/es/library/money-flow-index/) es útil, y para identificar zonas de sobrecompra, el [oscilador Williams %R](https://marketlab-academy.org/es/library/williams-percent-range-r/) puede ayudar.
 
-Para trading automatizado de patrones, regístrate en **[Bybit](https://www.bybit.com/invite?ref=PWMD24)**.
+Para trading automatizado de patrones, regístrate en **[Bybit](https://www.bybit.com/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=what-is-rising-wedge)**.
 
 ## Resumen
 

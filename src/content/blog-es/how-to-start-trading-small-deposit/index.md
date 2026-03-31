@@ -21,7 +21,7 @@ También hay ventajas:
 - aprendizaje con "errores baratos"
 - disciplina forzada
 
-Para empezar, necesitas una cuenta en un exchange confiable. [Bybit](https://www.bybit.com/invite?ref=PWMD24) y [Bitget](https://www.bitget.com/ru/referral/register?clacCode=23EHR2VD) son adecuados para principiantes: interfaz intuitiva, comisiones bajas y soporte para operaciones pequeñas.
+Para empezar, necesitas una cuenta en un exchange confiable. [Bybit](https://www.bybit.com/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=how-to-start-trading-small-deposit) y [Bitget](https://www.bitget.com/ru/referral/register?clacCode=23EHR2VD&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=how-to-start-trading-small-deposit) son adecuados para principiantes: interfaz intuitiva, comisiones bajas y soporte para operaciones pequeñas.
 
 ## Principios base
 

@@ -201,9 +201,9 @@ category: 'crypto'
 Биткоин возник как революционная идея децентрализованных финансов без посредников. Понимание его основ — первый шаг в мир криптовалютной торговли.
 
 Начать торговлю можно на проверенных биржах:
-- **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24)** — отличный выбор для работы с торговыми ботами
-- **[Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD)** — удобный интерфейс и бонусы
-- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — социальный трейдинг и копитрейдинг
+- **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=bitcoin-basics)** — отличный выбор для работы с торговыми ботами
+- **[Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=bitcoin-basics)** — удобный интерфейс и бонусы
+- **[BingX](https://bingxdao.com/invite/CUBDBG/?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=bitcoin-basics)** — социальный трейдинг и копитрейдинг
 
 ---
 

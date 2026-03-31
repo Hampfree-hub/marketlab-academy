@@ -110,8 +110,8 @@ Cuando gran cantidad de tokens llega al mercado:
 - [tokenunlocks.app](https://tokenunlocks.app)
 
 **4. Exchanges con Calendarios de Unlocks:**
-- **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)** — sección "Announcements" con calendario de listings y unlocks
-- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — notificaciones sobre nuevos tokens y eventos
+- **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=token-unlocks-guide)** — sección "Announcements" con calendario de listings y unlocks
+- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=token-unlocks-guide)** — notificaciones sobre nuevos tokens y eventos
 
 **5. On-chain Trackers (Avanzado)**
 - ✅ Datos directamente desde blockchain
@@ -168,7 +168,7 @@ Decisión: 🔴 NO COMPRAR — alto riesgo de dump
 
 **Cómo ganar con unlocks:**
 
-Para trading de unlocks necesitas exchange con bajas comisiones y buen API. Recomendamos **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)** — excelente liquidez, bajas comisiones y bots de trading integrados para estrategias DCA.
+Para trading de unlocks necesitas exchange con bajas comisiones y buen API. Recomendamos **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=token-unlocks-guide)** — excelente liquidez, bajas comisiones y bots de trading integrados para estrategias DCA.
 
 1. **Vender 1-2 semanas antes del unlock:**
    - Mercado se pone nervioso con anticipación

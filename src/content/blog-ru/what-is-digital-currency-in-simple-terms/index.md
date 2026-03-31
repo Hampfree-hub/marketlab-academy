@@ -48,7 +48,7 @@ category: 'crypto'
 - **Цифровой рубль:** Россия активно тестирует платформу для розничных и оптовых платежей.
 - **Цифровой евро:** Евросоюз готовится к запуску в ближайшие годы.
 
-Для торговли криптовалютами с низкими комиссиями, зарегистрируйтесь на **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24).
+Для торговли криптовалютами с низкими комиссиями, зарегистрируйтесь на **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=what-is-digital-currency-in-simple-terms).
 
 ## Итог
 

@@ -164,5 +164,5 @@ You can, but it’s risky. It’s better to combine with other methods and alway
 
 ## Summary
 
-For automated trading, register on **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)**.
+For automated trading, register on **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=false-breakouts-trading)**.
 

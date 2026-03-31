@@ -101,7 +101,7 @@ CMO is a powerful tool for determining trend strength and points of exhaustion. 
 Start trading on proven exchanges:
 
 - **Bybit** — an excellent choice for working with [trading bots](https://marketlab-academy.org/en/library/bybit-trading-bot-setup/)
-- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — user-friendly interface and bonuses
+- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=chande-momentum-oscillator)** — user-friendly interface and bonuses
 - **BingX** — social trading and copy trading
 
 ---
@@ -112,6 +112,6 @@ Chande Momentum Oscillator (CMO) is a versatile oscillator that provides traders
 
 By using CMO in conjunction with other technical analysis tools, such as moving averages or Bollinger Bands, traders can significantly improve their trading decisions and enhance adaptability to changing market conditions. As with any indicator, practice and understanding its limitations are key to success.
 
-For automated trading, register on **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)**.
+For automated trading, register on **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=chande-momentum-oscillator)**.
 
 

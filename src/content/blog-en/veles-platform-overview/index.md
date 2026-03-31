@@ -50,7 +50,7 @@ You → Veles (cloud) → Exchange (API) → Order execution
    Backtests, statistics, notifications
 ```
 
-1. **[Registration](https://veles.finance/invite/washmallay):** Create Veles account *(affiliate link)*
+1. **[Registration](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=veles-platform-overview):** Create Veles account *(affiliate link)*
 2. **Exchange connection:** Add API keys (trading only, no withdrawal!)
 3. **Bot setup:** Choose bot type, strategy, parameters
 4. **Launch:** Bot starts trading 24/7
@@ -323,7 +323,7 @@ Yes, if keys are for trading only (no withdrawal). Veles can't withdraw funds �
 
 ## Try Veles
 
-**[Register on Veles](https://veles.finance/invite/washmallay)** and start automating trading today.
+**[Register on Veles](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=veles-platform-overview)** and start automating trading today.
 
 *Affiliate link: registration gives benefits to both us and you.*
 

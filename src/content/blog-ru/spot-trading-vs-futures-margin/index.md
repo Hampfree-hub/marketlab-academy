@@ -17,7 +17,7 @@ draft: false
 - **Плечо:** Нет. Торговля ведётся только на собственные средства.
 - **Цель:** Долгосрочное инвестирование и безопасное накопление.
 
-Для автоматизации спотовой торговли идеально подходит [стратегия ELDER 2.0](https://marketlab-academy.org/ru/library/spot-strategy-elder-20/). Начать торговлю можно на надёжных биржах, например [Bybit](https://www.bybit.com/invite?ref=PWMD24) или [Bitget](https://www.bitget.com/ru/referral/register?clacCode=23EHR2VD).
+Для автоматизации спотовой торговли идеально подходит [стратегия ELDER 2.0](https://marketlab-academy.org/ru/library/spot-strategy-elder-20/). Начать торговлю можно на надёжных биржах, например [Bybit](https://www.bybit.com/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=spot-trading-vs-futures-margin) или [Bitget](https://www.bitget.com/ru/referral/register?clacCode=23EHR2VD&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=spot-trading-vs-futures-margin).
 
 ## Маржинальная торговля (Margin)
 

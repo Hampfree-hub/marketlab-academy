@@ -182,7 +182,7 @@ En 2026, el staking sigue siendo una de las formas más populares de ganar en cr
 
 ### Paso 2: Elegir Método
 
-**Para principiantes:** Exchange ([Bybit](https://www.bybit.com/invite?ref=PWMD24), [Bitget](https://www.bitget.com/referral/register?clacCode=23EHR2VD), [BingX](https://bingxdao.com/invite/CUBDBG/))
+**Para principiantes:** Exchange ([Bybit](https://www.bybit.com/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=crypto-staking-guide-2026), [Bitget](https://www.bitget.com/referral/register?clacCode=23EHR2VD&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=crypto-staking-guide-2026), [BingX](https://bingxdao.com/invite/CUBDBG/?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=crypto-staking-guide-2026))
 
 **Por qué:**
 - Simplicidad (2 clics)
@@ -208,9 +208,9 @@ En 2026, el staking sigue siendo una de las formas más populares de ganar en cr
 **¡Listo!** Las recompensas comenzarán a acumularse en 1-3 días.
 
 **Enlaces de referido:**
-- [Bybit](https://www.bybit.com/invite?ref=PWMD24) — comisiones reducidas
-- [Bitget](https://www.bitget.com/referral/register?clacCode=23EHR2VD) — bonos para principiantes
-- [BingX](https://bingxdao.com/invite/CUBDBG/) — trading social
+- [Bybit](https://www.bybit.com/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=crypto-staking-guide-2026) — comisiones reducidas
+- [Bitget](https://www.bitget.com/referral/register?clacCode=23EHR2VD&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=crypto-staking-guide-2026) — bonos para principiantes
+- [BingX](https://bingxdao.com/invite/CUBDBG/?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=crypto-staking-guide-2026) — trading social
 
 ---
 

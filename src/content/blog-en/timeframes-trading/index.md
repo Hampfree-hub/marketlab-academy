@@ -54,7 +54,7 @@ Cryptocurrencies trade around the clock; volume and volatility can change a lot 
 - Timeframe is the interval of one candle (M1, H4, D1, etc.). It drives "noise", number of signals, and strategy type.
 - Lower (M1–M15) for scalping and fast entries; higher (H4, D1) for trend and swing.
 - Indicator periods are set in candles of the chosen timeframe; settings are best checked in [backtests](https://marketlab-academy.org/en/library/what-are-backtests/).
-- Multi-timeframe analysis: trend on the higher timeframe, entry on the lower one — helps filter false signals. For automated multi-timeframe strategies, traders often use platforms like [Veles](https://veles.finance/invite/washmallay) — a popular service for running trading bots.
+- Multi-timeframe analysis: trend on the higher timeframe, entry on the lower one — helps filter false signals. For automated multi-timeframe strategies, traders often use platforms like [Veles](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=timeframes-trading) — a popular service for running trading bots.
 
 ## FAQ
 

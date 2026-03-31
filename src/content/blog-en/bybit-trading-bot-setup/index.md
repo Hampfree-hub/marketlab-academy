@@ -7,7 +7,7 @@ category: 'algo-trading'
 
 Automating trading on Bybit lets you trade 24/7 without constantly watching the market. Register at Bybit (referral link) if you don’t have an account yet.
 
-This guide is for connecting **external** bot platforms or services to Bybit via API; Bybit's built-in tools on the exchange do not require API keys. You can use Bybit's built-in bots or connect bots from other automation platforms — for example [Veles](https://veles.finance/invite/washmallay) (referral link: signing up via it benefits both you and us). If you connect an external platform and need help, reach out; contacts are on the [About](/en/about/) page.
+This guide is for connecting **external** bot platforms or services to Bybit via API; Bybit's built-in tools on the exchange do not require API keys. You can use Bybit's built-in bots or connect bots from other automation platforms — for example [Veles](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=bybit-trading-bot-setup) (referral link: signing up via it benefits both you and us). If you connect an external platform and need help, reach out; contacts are on the [About](/en/about/) page.
 
 Walkthrough: what you need, how to create API keys, how to connect them to your bot platform, and which mistakes to avoid.
 
@@ -119,8 +119,8 @@ Yes, but with limitations. For full access to exchange features, it is recommend
 Setting up a trading bot on Bybit is the first step towards automating trading. A correctly configured bot and well-tuned risk management allow you to trade efficiently 24/7. Before launching a bot, it is recommended to test the strategy on [backtests](https://marketlab-academy.org/en/library/what-are-backtests/).
 
 You can start trading on proven exchanges:
-- **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)** — excellent for trading bots
-- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — user-friendly interface and bonuses
-- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — social trading and copy trading
+- **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=bybit-trading-bot-setup)** — excellent for trading bots
+- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=bybit-trading-bot-setup)** — user-friendly interface and bonuses
+- **[BingX](https://bingxdao.com/invite/CUBDBG/?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=bybit-trading-bot-setup)** — social trading and copy trading
 
 

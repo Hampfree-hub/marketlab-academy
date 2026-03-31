@@ -199,4 +199,4 @@ Bitcoin can be purchased through cryptocurrency exchanges, online exchangers, or
 
 Bitcoin is the first decentralized cryptocurrency with a capped supply. It serves as digital gold and a hedge against inflation. Learn the basics before investing.
 
-For buying Bitcoin with low fees, register on **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)**.
+For buying Bitcoin with low fees, register on **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=bitcoin-basics)**.

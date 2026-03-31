@@ -5,7 +5,7 @@ pubDate: '2026-02-03'
 category: 'algo-trading'
 ---
 
-ORACLE версии 1.1 — набор настроек стратегии, в которой сигнал формируется по согласованию четырёх индикаторов на разных [таймфреймах](https://marketlab-academy.org/ru/library/timeframes-trading/): от старшего к младшему идут полосы Боллинджера, ATR%, ROC и Williams %R. Настроить и запустить стратегию можно на платформе алготрейдинга Veles [реферальная ссылка](https://veles.finance/invite/washmallay). Ниже — архитектура настроек, какие движения вытягиваем, годовые бэктесты и ссылка на тестовый аккаунт копимастера на BingX.
+ORACLE версии 1.1 — набор настроек стратегии, в которой сигнал формируется по согласованию четырёх индикаторов на разных [таймфреймах](https://marketlab-academy.org/ru/library/timeframes-trading/): от старшего к младшему идут полосы Боллинджера, ATR%, ROC и Williams %R. Настроить и запустить стратегию можно на платформе алготрейдинга Veles [реферальная ссылка](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=oracle-strategy). Ниже — архитектура настроек, какие движения вытягиваем, годовые бэктесты и ссылка на тестовый аккаунт копимастера на BingX.
 
 **Важно:** данная система в данный момент находится в тестовом режиме. Результаты на BingX носят информационный характер; перед использованием стратегии ознакомьтесь с [управлением рисками](https://marketlab-academy.org/ru/library/risk-management-crypto-trading-bots/) и серией [Диверсификация и настройка торговой системы](https://marketlab-academy.org/ru/library/diversification-trading-system-part-1/).
 

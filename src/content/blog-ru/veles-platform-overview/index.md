@@ -50,7 +50,7 @@ category: 'algo-trading'
    Бэктесты, статистика, уведомления
 ```
 
-1. **[Регистрация](https://veles.finance/invite/washmallay):** Создаёте аккаунт на Veles *(партнёрская ссылка)*
+1. **[Регистрация](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=veles-platform-overview):** Создаёте аккаунт на Veles *(партнёрская ссылка)*
 2. **Подключение биржи:** Добавляете API-ключи (только торговля, без вывода!)
 3. **Настройка бота:** Выбираете тип бота, стратегию, параметры
 4. **Запуск:** Бот начинает торговать 24/7
@@ -323,7 +323,7 @@ Veles поддерживает два основных типа торговых
 
 ## Попробовать Veles
 
-**[Зарегистрироваться на Veles](https://veles.finance/invite/washmallay)** и начать автоматизировать торговлю уже сегодня.
+**[Зарегистрироваться на Veles](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=veles-platform-overview)** и начать автоматизировать торговлю уже сегодня.
 
 *Партнёрская ссылка: регистрация даёт преимущества и нам, и вам.*
 

@@ -101,7 +101,7 @@ El CMO es una herramienta potente para determinar la fuerza de la tendencia y lo
 Comienza a operar en exchanges probados:
 
 - **Bybit** — una excelente opción para trabajar con [bots de trading](https://marketlab-academy.org/es/library/bybit-trading-bot-setup/)
-- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — interfaz amigable y bonificaciones
+- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=chande-momentum-oscillator)** — interfaz amigable y bonificaciones
 - **BingX** — trading social y copytrading
 
 ---

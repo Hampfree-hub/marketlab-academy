@@ -65,7 +65,7 @@ Beginners benefit from its simple interpretation, but need discipline when the m
 
 Williams %R shows overbought/oversold zones (-20/-80). Use with trend indicators to filter false signals. Works well with [RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi/) and [MFI](https://marketlab-academy.org/en/library/money-flow-index/) for confirmation. Best suited for short- and medium-term trading in sideways markets.
 
-For automated Williams %R strategies, traders often use platforms like [Veles](https://veles.finance/invite/washmallay) — a popular service for running trading bots.
+For automated Williams %R strategies, traders often use platforms like [Veles](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=williams-percent-range-r) — a popular service for running trading bots.
 
 ## FAQ
 

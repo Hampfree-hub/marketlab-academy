@@ -42,7 +42,7 @@ category: 'crypto'
 
 Стейблкоины — важная часть криптоэкосистемы: они связывают её с фиатом и делают удобнее расчёты и DeFi. Главное помнить о рисках эмитента и регуляторных ограничениях.
 
-Для торговли и DeFi с низкими комиссиями, зарегистрируйтесь на **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24).
+Для торговли и DeFi с низкими комиссиями, зарегистрируйтесь на **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=what-are-stablecoins).
 
 ## FAQ
 

@@ -73,7 +73,7 @@ category: 'crypto'
 
 Однако важно понимать, что халвинг является не единственным фактором, влияющим на цену. Макроэкономическая ситуация, регулирование, технологические обновления и настроения инвесторов также стоят не на последнем месте и тем самым повышают волатильность актива. Для более глубокого понимания Биткоина полезно изучить [полное руководство по Биткоину](https://marketlab-academy.org/ru/library/what-bitcoin-everything-you-need-know/), где подробно описаны история, принципы работы и майнинг криптовалюты.
 
-Для торговли Bitcoin с низкими комиссиями, зарегистрируйтесь на **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24).
+Для торговли Bitcoin с низкими комиссиями, зарегистрируйтесь на **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=what-is-bitcoin-halving).
 
 ## Итог
 

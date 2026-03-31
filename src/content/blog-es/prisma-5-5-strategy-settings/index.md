@@ -5,7 +5,7 @@ pubDate: '2026-02-28'
 category: 'algo-trading'
 ---
 
-**Prisma 5.5** es una estrategia propia de la plataforma [Veles](https://veles.finance/invite/washmallay) para el trading automatizado. En este artículo presentamos un desglose completo de la configuración: qué indicadores se utilizan para la entrada, cómo configurar la cuadrícula de órdenes y en qué pares ejecutarla.
+**Prisma 5.5** es una estrategia propia de la plataforma [Veles](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=prisma-5-5-strategy-settings) para el trading automatizado. En este artículo presentamos un desglose completo de la configuración: qué indicadores se utilizan para la entrada, cómo configurar la cuadrícula de órdenes y en qué pares ejecutarla.
 
 **Importante:** Antes de utilizar cualquier estrategia, familiarícese con la [gestión de riesgos](https://marketlab-academy.org/es/library/risk-management-crypto-trading-bots/) y la serie [Diversificación y Configuración del Sistema de Trading](https://marketlab-academy.org/es/library/diversification-trading-system-part-1/).
 
@@ -60,9 +60,9 @@ Se recomienda usar pares líquidos con alto volumen de operaciones:
 Prisma 5.5 es una estrategia equilibrada para automatizar el trading en spot y futuros con un nivel de riesgo moderado. Es fundamental controlar los niveles de margen y cumplir con las reglas de diversificación para garantizar la estabilidad del sistema de trading.
 
 Existen plataformas verificadas disponibles para comenzar a operar:
-- **[Bybit](https://www.bybit.com/es/invite?ref=PWMD24)** — uno de los principales exchanges para trabajar con bots de trading.
-- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD)** — una plataforma con interfaz amigable y bonos para nuevos usuarios.
-- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — una opción popular para social trading y copy trading.
+- **[Bybit](https://www.bybit.com/es/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=prisma-5-5-strategy-settings)** — uno de los principales exchanges para trabajar con bots de trading.
+- **[Bitget](https://www.bitget.com/referral/register?from=referral&clacCode=23EHR2VD&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=prisma-5-5-strategy-settings)** — una plataforma con interfaz amigable y bonos para nuevos usuarios.
+- **[BingX](https://bingxdao.com/invite/CUBDBG/?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=prisma-5-5-strategy-settings)** — una opción popular para social trading y copy trading.
 
 ---
 

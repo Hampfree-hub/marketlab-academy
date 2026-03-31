@@ -50,7 +50,7 @@ Tú → Veles (nube) → Exchange (API) → Ejecución de órdenes
    Backtests, estadísticas, notificaciones
 ```
 
-1. **[Registro](https://veles.finance/invite/washmallay):** Crear cuenta en Veles *(enlace de afiliado)*
+1. **[Registro](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=veles-platform-overview):** Crear cuenta en Veles *(enlace de afiliado)*
 2. **Conexión del exchange:** Añadir claves API (¡solo trading, sin retiro!)
 3. **Configuración del bot:** Elegir tipo de bot, estrategia, parámetros
 4. **Inicio:** El bot comienza a operar 24/7
@@ -323,7 +323,7 @@ Sí, si las claves son solo para trading (sin retiro). Veles no puede retirar fo
 
 ## Probar Veles
 
-**[Registrarse en Veles](https://veles.finance/invite/washmallay)** y empezar a automatizar trading hoy.
+**[Registrarse en Veles](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=veles-platform-overview)** y empezar a automatizar trading hoy.
 
 *Enlace de afiliado: el registro da beneficios tanto a nosotros como a ti.*
 

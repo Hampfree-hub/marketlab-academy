@@ -321,7 +321,7 @@ SOPR показывает, продают ли участники в плюс и
 
 ![Классификация держателей: киты, акулы, рыбы](./assets/Classification_of_holders_(whales,sharks,and_fish).png)
 
-Для автоматизации торговли на основе ончейн-данных можно использовать платформу [Veles](https://veles.finance/invite/washmallay) — там есть встроенные метрики и боты для работы с ончейн-сигналами.
+Для автоматизации торговли на основе ончейн-данных можно использовать платформу [Veles](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=onchain-metrics-fundamental-analysis) — там есть встроенные метрики и боты для работы с ончейн-сигналами.
 
 ## Подводные камни ончейн-данных
 

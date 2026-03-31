@@ -91,7 +91,7 @@ To summarize, **Money Flow Index** is universal and can be applied both for scal
 
 ## Summary
 
-MFI combines price and volume to measure buying/selling pressure. Use it with [RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi) or [Williams %R](https://marketlab-academy.org/en/library/williams-percent-range-r) for confirmation. Backtest before live trading. For automated MFI-based strategies, traders often use platforms like [Veles](https://veles.finance/invite/washmallay) — a popular service for running trading bots.
+MFI combines price and volume to measure buying/selling pressure. Use it with [RSI](https://marketlab-academy.org/en/library/technical-analysis-rsi) or [Williams %R](https://marketlab-academy.org/en/library/williams-percent-range-r) for confirmation. Backtest before live trading. For automated MFI-based strategies, traders often use platforms like [Veles](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=money-flow-index) — a popular service for running trading bots.
 
 ## FAQ
 

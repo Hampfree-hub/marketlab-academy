@@ -49,7 +49,7 @@ draft: false
 
 ## Преимущества спотовой торговли
 
-**Простота и доступность** — не нужно разбираться в сложных механизмах деривативов. Покупка актива по текущей цене доступна даже новичкам. Для начала торговли достаточно зарегистрироваться на надёжной бирже, например [Bybit](https://www.bybit.com/invite?ref=PWMD24) или [Bitget](https://www.bitget.com/ru/referral/register?clacCode=23EHR2VD).
+**Простота и доступность** — не нужно разбираться в сложных механизмах деривативов. Покупка актива по текущей цене доступна даже новичкам. Для начала торговли достаточно зарегистрироваться на надёжной бирже, например [Bybit](https://www.bybit.com/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=what-is-spot-trading) или [Bitget](https://www.bitget.com/ru/referral/register?clacCode=23EHR2VD&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=what-is-spot-trading).
 
 1. **Безопасность (отсутствие ликвидации):** Вы не можете потерять весь депозит из-за колебаний цены, так как не используете плечо.
 2. **Простота:** Понятная механика покупки и владения.

@@ -67,7 +67,7 @@ Servicios independientes consultan periódicamente sitios web y APIs de exchange
 - DownDetector — quejas de usuarios en tiempo real
 - CryptoStatus — monitoreo de exchanges y carteras crypto
 
-Al elegir exchange, razonable combinar: mirar estado oficial, monitoreo externo y reseñas de usuarios sobre incidentes recientes. Para trading automatizado, importante elegir plataformas con 99.5%+ de uptime — tales disponibles en lista de exchanges soportados en [Veles](https://veles.finance/invite/washmallay).
+Al elegir exchange, razonable combinar: mirar estado oficial, monitoreo externo y reseñas de usuarios sobre incidentes recientes. Para trading automatizado, importante elegir plataformas con 99.5%+ de uptime — tales disponibles en lista de exchanges soportados en [Veles](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=exchange-uptime-downtime).
 
 ## Causas Típicas de Downtime
 
@@ -269,7 +269,7 @@ Atentamente,
 - [ ] Límites de tasa adecuados (1000+ solicitudes/minuto)
 - [ ] Soporte WebSocket
 - [ ] Testnet disponible
-- [ ] Soporte en lista de [Veles](https://veles.finance/invite/washmallay)
+- [ ] Soporte en lista de [Veles](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=exchange-uptime-downtime)
 
 **Requisitos mínimos:**
 - Uptime: 99.5%+

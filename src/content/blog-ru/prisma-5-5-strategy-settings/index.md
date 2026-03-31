@@ -5,7 +5,7 @@ pubDate: '2026-02-28'
 category: 'algo-trading'
 ---
 
-**Prisma 5.5** — авторская стратегия платформы [Veles](https://veles.finance/invite/washmallay) для автоматической торговли. В этой статье — полный разбор настроек: какие индикаторы используются для входа, как выставить сетку ордеров и на каких парах запускать.
+**Prisma 5.5** — авторская стратегия платформы [Veles](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=prisma-5-5-strategy-settings) для автоматической торговли. В этой статье — полный разбор настроек: какие индикаторы используются для входа, как выставить сетку ордеров и на каких парах запускать.
 
 **Важно:** перед использованием любой стратегии ознакомьтесь с [управлением рисками](https://marketlab-academy.org/ru/library/risk-management-crypto-trading-bots/) и серией [Диверсификация и настройка торговой системы](https://marketlab-academy.org/ru/library/diversification-trading-system-part-1/).
 
@@ -52,7 +52,7 @@ Prisma 5.5 — это высокочастотная торговая страт
 [✖️ 🌪 BINGX UNI PRISMA 5.5](https://veles.finance/share/zslhm)
 
 ## Как запустить Prisma 5.5 на Veles
-1. Зарегистрируйтесь на [Veles](https://veles.finance/invite/washmallay) и привяжите API-ключ биржи.
+1. Зарегистрируйтесь на [Veles](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=prisma-5-5-strategy-settings) и привяжите API-ключ биржи.
 2. Перейдите в раздел **«Боты»** и создайте нового бота с параметрами стратегии, либо свяжитесь с автором для получения готовых настроек.
 3. Нажмите **«Копировать»**, выберите торговую пару и укажите выделенный депозит.
 4. Проверьте параметры через кнопку «Рассчитать» и нажмите **«Запустить»**.
@@ -62,9 +62,9 @@ Prisma 5.5 — это высокочастотная торговая страт
 Prisma 5.5 представляет собой сбалансированную стратегию для автоматизации торговли на спотовом и фьючерсном рынках с умеренным уровнем риска. Важно контролировать уровень маржи и соблюдать правила диверсификации для обеспечения стабильности торговой системы.
 
 Для начала работы доступны проверенные платформы:
-- **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24)** — одна из ведущих бирж для работы с торговыми ботами.
-- **[Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD)** — площадка с удобным интерфейсом и бонусами для новых пользователей.
-- **[BingX](https://bingxdao.com/invite/CUBDBG/)** — популярная платформа для социального трейдинга и копитрейдинга.
+- **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=prisma-5-5-strategy-settings)** — одна из ведущих бирж для работы с торговыми ботами.
+- **[Bitget](https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=prisma-5-5-strategy-settings)** — площадка с удобным интерфейсом и бонусами для новых пользователей.
+- **[BingX](https://bingxdao.com/invite/CUBDBG/?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=prisma-5-5-strategy-settings)** — популярная платформа для социального трейдинга и копитрейдинга.
 
 ---
 
@@ -98,4 +98,4 @@ Prisma 5.5 использует осцилляторы для входа в пе
 
 
 
-Для автоматизации торговли рекомендуется использовать **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24)**.
+Для автоматизации торговли рекомендуется использовать **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=prisma-5-5-strategy-settings)**.

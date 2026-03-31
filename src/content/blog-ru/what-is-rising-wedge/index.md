@@ -53,7 +53,7 @@ category: 'technical-analysis'
 
 Понимание и правильное использование восходящего клина в трейдинге может значительно повысить эффективность торговых стратегий. Этот паттерн можно интегрировать в более сложные стратегии, сочетая его с другими инструментами технического анализа, такими как [индикатор RSI](https://marketlab-academy.org/ru/library/technical-analysis-rsi/) или [свечи доджи](https://marketlab-academy.org/ru/library/what-are-doji-candles/), для повышения точности прогнозов. Для анализа объёмов и импульса полезен [индекс денежного потока (MFI)](https://marketlab-academy.org/ru/library/money-flow-index/), а для определения зон перекупленности — [осциллятор Williams %R](https://marketlab-academy.org/ru/library/williams-percent-range-r/).
 
-Для автоматической торговли по паттернам, зарегистрируйтесь на **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24).
+Для автоматической торговли по паттернам, зарегистрируйтесь на **[Bybit](https://www.bybit.com/ru-RU/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=what-is-rising-wedge).
 
 ## Итог
 

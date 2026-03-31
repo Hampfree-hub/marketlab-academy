@@ -64,7 +64,7 @@ ATR does not show direction — only the size of swings. It is used together wit
 - ATR is the average true range of price over the period; it shows volatility in price units. ATR% is ATR as a percentage of price, useful for comparing assets.
 - True Range = max(High−Low, |High−PrevClose|, |Low−PrevClose|); ATR is smoothed TR (often period 14).
 - ATR is used to set stop-losses (e.g. 1.5–2 × ATR) and trailing stops, and to adapt position size to volatility.
-- In crypto, ATR helps adjust stops and risk to a changing market. For automated ATR-based strategies, traders often use platforms like [Veles](https://veles.finance/invite/washmallay) — a popular service for running trading bots.
+- In crypto, ATR helps adjust stops and risk to a changing market. For automated ATR-based strategies, traders often use platforms like [Veles](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=atr-and-atr-percent) — a popular service for running trading bots.
 
 ## FAQ
 

@@ -57,7 +57,7 @@ Understanding and using the rising wedge correctly can improve trading results. 
 
 The rising wedge is a bearish reversal pattern that forms after an uptrend. It shows weakening momentum and often precedes a breakdown. Confirm with volume and combine with other indicators.
 
-For automated pattern trading, register on **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24)**.
+For automated pattern trading, register on **[Bybit](https://www.bybit.com/en/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=what-is-rising-wedge)**.
 
 ## FAQ
 

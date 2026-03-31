@@ -182,7 +182,7 @@ In 2026, staking remains one of the most popular ways to earn in crypto. In this
 
 ### Step 2: Choose Method
 
-**For beginners:** Exchange ([Bybit](https://www.bybit.com/invite?ref=PWMD24), [Bitget](https://www.bitget.com/referral/register?clacCode=23EHR2VD), [BingX](https://bingxdao.com/invite/CUBDBG/))
+**For beginners:** Exchange ([Bybit](https://www.bybit.com/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=crypto-staking-guide-2026), [Bitget](https://www.bitget.com/referral/register?clacCode=23EHR2VD&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=crypto-staking-guide-2026), [BingX](https://bingxdao.com/invite/CUBDBG/?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=crypto-staking-guide-2026))
 
 **Why:**
 - Simplicity (2 clicks)
@@ -208,9 +208,9 @@ In 2026, staking remains one of the most popular ways to earn in crypto. In this
 **Done!** Rewards will start accruing in 1-3 days.
 
 **Referral links:**
-- [Bybit](https://www.bybit.com/invite?ref=PWMD24) — reduced fees
-- [Bitget](https://www.bitget.com/referral/register?clacCode=23EHR2VD) — newbie bonuses
-- [BingX](https://bingxdao.com/invite/CUBDBG/) — social trading
+- [Bybit](https://www.bybit.com/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=crypto-staking-guide-2026) — reduced fees
+- [Bitget](https://www.bitget.com/referral/register?clacCode=23EHR2VD&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=crypto-staking-guide-2026) — newbie bonuses
+- [BingX](https://bingxdao.com/invite/CUBDBG/?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=crypto-staking-guide-2026) — social trading
 
 ---
 

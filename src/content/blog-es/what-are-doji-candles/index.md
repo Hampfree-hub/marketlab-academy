@@ -117,7 +117,7 @@ En temporalidades bajas hay más ruido. Las doji suelen ser más útiles en 4H, 
 
 Una doji con volumen anormalmente bajo puede ser una vela "parada" sin mucho significado. Una doji con pico de volumen suele ser más informativa y precede más a menudo movimientos relevantes.
 
-Para trading automatizado de patrones de velas, regístrate en **[Bybit](https://www.bybit.com/invite?ref=PWMD24)**.
+Para trading automatizado de patrones de velas, regístrate en **[Bybit](https://www.bybit.com/invite?ref=PWMD24&utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=what-are-doji-candles)**.
 
 ## FAQ
 

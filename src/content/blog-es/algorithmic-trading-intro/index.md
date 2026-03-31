@@ -356,7 +356,7 @@ SI pérdida > 5% → STOP-LOSS
 - **Contras:** Necesitas programar, configurar
 
 **Plataformas Listas:**
-- **Veles:** Trading algorítmico crypto, backtests, bots en la nube — [probar Veles](https://veles.finance/invite/washmallay) *(enlace de afiliado)*
+- **Veles:** Trading algorítmico crypto, backtests, bots en la nube — [probar Veles](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=algorithmic-trading-intro) *(enlace de afiliado)*
 - **Gainium:** Grid, DCA, market making (gratis hasta 2 bots)
 - **3Commas:** DCA, Grid, Trailing
 - **Antbot:** Copy trading, señales
@@ -457,7 +457,7 @@ Junto con el algoritmo, se recomienda llevar un [diario de trading](https://mark
 
 ### Para Principiantes (Sin Código)
 
-- **Veles:** Bots en la nube, backtests, interfaz simple — [probar Veles](https://veles.finance/invite/washmallay) *(enlace de afiliado)*
+- **Veles:** Bots en la nube, backtests, interfaz simple — [probar Veles](https://veles.finance/invite/washmallay?utm_source=marketlab-blog&utm_medium=article-link&utm_campaign=algorithmic-trading-intro) *(enlace de afiliado)*
 - **Gainium:** Grid, DCA, market making (gratis hasta 2 bots)
 - **3Commas:** DCA, Grid, Trailing
 - **Cryptohopper:** Estrategias listas, marketplace
