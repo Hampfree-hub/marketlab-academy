@@ -63,10 +63,12 @@ Market Cap = Token Price × Circulating Supply
 
 **Formula:**
 ```
-P/S = Market Cap / Annual Revenue
+P/S = Market Cap / Annual Protocol Revenue
 ```
 
 **Where to get data:** Token Terminal, DefiLlama
+
+⚠️ **Important:** For DeFi protocols, "revenue" = protocol fees, but not always token holder earnings. For example, Uniswap collects fees, but fee switch may not be activated.
 
 **Interpretation:**
 | P/S | Valuation |
@@ -75,7 +77,7 @@ P/S = Market Cap / Annual Revenue
 | 5-20 | Fair |
 | > 20 | Overvalued (expensive) |
 
-**Example (March 2026):**
+**Example (illustrative data):**
 | Project | Revenue (year) | Market Cap | P/S |
 |---------|---------------|------------|-----|
 | Uniswap | $180M | $4.5B | 25x |
@@ -87,12 +89,13 @@ P/S = Market Cap / Annual Revenue
 **Limitations:**
 - Doesn't work for projects without revenue (L1, memecoins)
 - Revenue ≠ profit (protocol can be unprofitable)
+- For some protocols, revenue is not distributed to token holders
 
 ---
 
 ## Method 3: P/E Ratio (Price-to-Earnings)
 
-**For which projects:** Protocols with profit (Maker, Lido)
+**For which projects:** Protocols with profit (Maker, some L2s)
 
 **Formula:**
 ```
@@ -101,6 +104,8 @@ P/E = Market Cap / Net Earnings (Protocol Earnings)
 
 **Where to get data:** Token Terminal ("Earnings" section)
 
+⚠️ **Important:** P/E for crypto protocols is a conditional metric. Earnings depend on tokenomics (burns, fee distribution, emission).
+
 **Interpretation:**
 | P/E | Valuation |
 |-----|-----------|
@@ -108,14 +113,14 @@ P/E = Market Cap / Net Earnings (Protocol Earnings)
 | 15-30 | Fair |
 | > 30 | Overvalued |
 
-**Example:**
+**Example (illustrative data):**
 - **Maker (MKR):** P/E = 18x → fair
-- **Lido (LDO):** P/E = 45x → expensive
+- **Protocol with stable revenue:** P/E = 25x → above average
 
 **Limitations:**
-- Works only for profitable protocols
-- Most crypto projects are unprofitable
-- For crypto, this is "Protocol Earnings", not classic P/E (earnings = fees - token emissions)
+- Works only for protocols with stable earnings
+- Many crypto projects are unprofitable or don't distribute earnings
+- P/E is highly volatile in crypto
 
 ---
 
@@ -132,6 +137,8 @@ NVT = Market Cap / Transaction Volume (24h, in $)
 
 **Where to get data:** Glassnode, CoinMetrics
 
+⚠️ **Important:** NVT for high-throughput networks (Solana, Sui) may be understated due to high transaction volume (including spam, MEV bots). Compare NVT only within similar architecture networks.
+
 **Interpretation:**
 | NVT | Valuation |
 |-----|-----------|
@@ -139,18 +146,19 @@ NVT = Market Cap / Transaction Volume (24h, in $)
 | 20-50 | Fair |
 | > 50 | Network overvalued (low transactions) |
 
-**Example (March 2026):**
+**Example (illustrative data):**
 | Network | Market Cap | Volume (24h) | NVT |
 |---------|------------|-------------|-----|
 | Bitcoin | $1.8T | $45B | 40x |
 | Ethereum | $380B | $12B | 32x |
 | Solana | $85B | $8B | 11x |
 
-**Conclusion:** Solana is cheaper by NVT (more transactions per $ of cap).
+**Conclusion:** Solana is cheaper by NVT, but consider transaction quality (Solana has many high-frequency operations).
 
 **Limitations:**
 - Volume volatility (can be abnormally high/low)
 - Doesn't account for L2 transactions (for Ethereum)
+- Different transaction quality across networks
 
 ---
 
@@ -167,20 +175,23 @@ MVRV = Market Cap / Realized Cap
 
 **Where to get data:** Glassnode, CryptoQuant
 
+⚠️ **Important:** MVRV > 3 doesn't always mean market peak — in bull cycles the metric can stay above 3 for extended periods. MVRV < 1 indicates accumulation zone, but doesn't guarantee immediate reversal.
+
 **Interpretation:**
 | MVRV | Valuation |
 |------|-----------|
-| < 1 | Token undervalued (market at loss) |
+| < 1 | Token undervalued (market at loss, accumulation zone) |
 | 1-2 | Fair |
-| > 3 | Token overvalued (market at profit) |
+| > 3 | Token overvalued (market at profit, correction possible) |
 
-**Example (Bitcoin):**
-- MVRV < 1 → market bottom (buy)
-- MVRV > 3 → market peak (sell)
+**Example (Bitcoin, historical data):**
+- MVRV < 1 → often coincided with market bottom
+- MVRV > 3 → often preceded corrections
 
 **Limitations:**
 - Works only for Bitcoin and large L1s
 - Requires on-chain data
+- In bull cycles can stay > 3 for long periods
 
 ---
 
@@ -271,27 +282,29 @@ Value = 100/1.15 + 100/1.15² + ... + 100/1.15⁵ = $335M
 
 ## Practice: Let's Value Bitcoin and Ethereum
 
-### Bitcoin (March 2026)
+⚠️ **Important:** Data is illustrative. P/S for Bitcoin is not a classic metric — it's the ratio to network fees. For "digital gold", high P/S is historical norm during growth periods.
+
+### Bitcoin (illustrative data)
 
 | Metric | Value | Valuation |
 |---------|-------|-----------|
 | Market Cap | $1.8T | — |
 | NVT | 40x | ✅ Fair |
 | MVRV | 2.1 | ✅ Fair |
-| P/S (via fees) | ~100x | ⚠️ Expensive |
+| P/S (via fees) | ~100x | ⚠️ Above historical average |
 
-**Conclusion:** Bitcoin is fairly valued by on-chain metrics, but expensive by fees.
+**Conclusion:** Bitcoin is fairly valued by on-chain metrics. High P/S via fees is normal for growth periods (high network activity).
 
-### Ethereum (March 2026)
+### Ethereum (illustrative data)
 
 | Metric | Value | Valuation |
 |---------|-------|-----------|
 | Market Cap | $380B | — |
 | NVT | 32x | ✅ Fair |
-| P/S | 32x | ⚠️ Above average |
+| P/S (network fees) | 32x | ⚠️ Above average |
 | TVL / Market Cap | 14% | ✅ Good |
 
-**Conclusion:** Ethereum is fairly valued, but P/S is higher than competitors (Solana).
+**Conclusion:** Ethereum is fairly valued, but P/S is higher than competitors (Solana). Note that part of fees are burned (EIP-1559).
 
 ---
 
@@ -299,18 +312,20 @@ Value = 100/1.15 + 100/1.15² + ... + 100/1.15⁵ = $335M
 
 **Task:** Compare two project types for investment.
 
+⚠️ **Important:** Data is illustrative. Always check current metrics at the time of analysis.
+
 ### L1 (Solana)
 
 | Metric | Value | Valuation |
 |---------|-------|-----------|
 | Market Cap | $85B | Top 5 |
 | NVT | 11x | ✅ Cheap |
-| P/S | N/A | No revenue |
+| P/S (network fees) | ~50x | ⚠️ Above average |
 | Active Addresses (24h) | 1.2M | ✅ High activity |
 | TVL | $8B | ✅ Growing |
 | Unlocks (6 months) | 8% | ✅ Low |
 
-**Conclusion:** Solana is cheaper by NVT, high activity, but no revenue.
+**Conclusion:** Solana is cheaper by NVT, high activity, but consider transaction quality (many high-frequency operations).
 
 ### DeFi (Maker)
 
@@ -395,13 +410,15 @@ Value = 100/1.15 + 100/1.15² + ... + 100/1.15⁵ = $335M
 
 ## Valuation Tools
 
+⚠️ **Important:** Subscription prices may change. Check current pricing on service websites.
+
 | Tool | What It Provides | Price |
 |------|------------------|-------|
-| **Token Terminal** | Revenue, P/E, P/S | Free / $299 |
+| **Token Terminal** | Revenue, P/E, P/S | Free / from $299 |
 | **DefiLlama** | TVL, protocols | Free |
-| **Glassnode** | NVT, MVRV, on-chain | Free / $29 |
+| **Glassnode** | NVT, MVRV, on-chain | Free / from $29 |
 | **CoinGecko** | Market cap, volume | Free |
-| **CryptoQuant** | On-chain metrics | Free / $29 |
+| **CryptoQuant** | On-chain metrics | Free / from $29 |
 
 ---
 
@@ -434,7 +451,7 @@ Use **NVT** and **MVRV** for Bitcoin. NVT shows the ratio of market cap to trans
 
 **Does P/E work for memecoins?**
 
-No. P/E requires earnings, and memecoins don't generate revenue. For memecoins, check only market cap, trading volume, and token unlocks.
+Classic memecoins without utility model don't generate revenue — P/E is not applicable. However, by 2026 there are memecoins with fee distribution models (e.g., memecoin + DeFi). For such projects, P/E can be calculated, but this is rather an exception.
 
 **Where to check token unlocks?**
 
