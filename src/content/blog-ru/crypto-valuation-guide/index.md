@@ -452,11 +452,3 @@ MVRV = Рыночная капитализация / Реализованная 
 **Почему разблокировки токенов важны?**
 
 Разблокировки создают давление на цену. Если 20-30% токенов выйдет на рынок одновременно, инвесторы и команда могут начать продавать. Проверяйте календарь разлоков перед покупкой.
-
----
-
-## Читайте также
-
-- [Фундаментальный анализ: чек-лист](https://marketlab-academy.org/ru/library/fundamental-analysis-checklist/) — быстрая проверка токена
-- [Ончейн-метрики](https://marketlab-academy.org/ru/library/onchain-metrics-fundamental-analysis/) — MVRV, NVT, SOPR
-- [Токеномика](https://marketlab-academy.org/ru/library/what-is-tokenomics/) — базовое руководство

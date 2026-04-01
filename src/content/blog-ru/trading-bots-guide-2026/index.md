@@ -477,14 +477,3 @@ tags: ['алготрейдинг', 'торговые боты', 'DCA', 'сетк
 **Можно ли потерять больше депозита?**
 
 На спотовой торговле — нет (макс. убыток = депозит). На фьючерсах с плечом — можно, если нет стоп-лосса. Всегда используйте стоп-лосс.
-
----
-
-## Читайте также
-
-- [Алгоритмический трейдинг: введение](https://marketlab-academy.org/ru/library/algorithmic-trading-intro/) — основы алготрейдинга
-- [DCA-стратегия](https://marketlab-academy.org/ru/library/dca-strategy-crypto/) — усреднение стоимости
-- [Сеточная торговля](https://marketlab-academy.org/ru/library/grid-trading-crypto/) — бот-сетка
-- [Bybit: настройка ботов](https://marketlab-academy.org/ru/library/bybit-trading-bot-setup/) — практический гайд
-- [Veles: обзор платформы](https://marketlab-academy.org/ru/library/veles-platform-overview/)
-- [Управление рисками](https://marketlab-academy.org/ru/library/risk-management-crypto-trading-bots/)
