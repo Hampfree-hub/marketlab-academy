@@ -2,7 +2,6 @@
 title: 'Valoración de Criptomonedas: Cómo Determinar el Valor Justo de un Token en 2026'
 description: 'Métodos de valoración de criptomonedas: P/S, P/E, NVT, MVRV. Cómo entender si un token está sobrevalorado o infravalorado. Comparación con competidores, señales de alerta.'
 pubDate: '2026-03-31'
-draft: true
 category: 'fundamental-analysis'
 ---
 

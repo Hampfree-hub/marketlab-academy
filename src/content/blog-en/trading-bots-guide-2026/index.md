@@ -2,7 +2,6 @@
 title: 'Trading Bots for Beginners: Complete Guide 2026'
 description: 'What is a trading bot and how to choose one. Bot types (DCA, grid, arbitrage), setup, risks. Step-by-step guide for beginners.'
 pubDate: '2026-03-31'
-draft: true
 category: 'algo-trading'
 ---
 
@@ -41,6 +40,8 @@ This guide covers everything a beginner needs: from choosing a bot to first prof
 - Buy ETH worth $100 every Monday
 - Price doesn't matter — amount is fixed
 
+![Bybit DCA Bot — DCA strategy setup interface](./assets/bybit-dca-bot.png)
+
 **Pros:**
 - ✅ Averages entry price
 - ✅ No need to time the market
@@ -67,6 +68,8 @@ This guide covers everything a beginner needs: from choosing a bot to first prof
 - Range: $2000–$3000 (ETH)
 - Grid step: $100
 - Bot buys at $2000, $2100, $2200… and sells at $2900, $2800, $2700…
+
+![Bybit Grid Bot — order grid between support and resistance](./assets/bybit-grid-bot.png)
 
 **Pros:**
 - ✅ Works in sideways
@@ -157,7 +160,7 @@ This guide covers everything a beginner needs: from choosing a bot to first prof
 **For whom:** Traders who understand technical analysis.
 
 **Examples:**
-- Veles Prisma Strategy
+- Veles Prisma Strategy — [detailed review with backtests and settings](/en/library/veles-platform-overview/)
 - 3Commas Signal Bot
 - Custom bots on Pine Script
 
@@ -427,12 +430,13 @@ This guide covers everything a beginner needs: from choosing a bot to first prof
 |----------|------|---------|------------|----------|
 | **Bybit** | Built-in bots | $100 | 0.1% | Beginners |
 | **Veles** | Cloud bots | $50 | 0.1% | Beginners / Intermediate |
+| **Ginarea** | Bot builder | $0 | 0% (affiliate) | Beginners / Advanced |
 | **3Commas** | SaaS | $0 | $29/month | Intermediate |
 | **Cryptohopper** | SaaS | $0 | $29/month | Intermediate |
 | **Hummingbot** | Custom | $1000+ | 0% | Professionals |
 | **HaasOnline** | Custom | $500+ | 0.05% | Professionals |
 
-**Recommendation for beginners:** Bybit or Veles (built-in bots, low entry threshold).
+**Recommendation for beginners:** Bybit or Veles (built-in bots, low entry threshold). For more control — [Ginarea](/en/library/ginarea-platform-overview/) (builder with free tier).
 
 ---
 

@@ -2,7 +2,6 @@
 title: 'Bots de Trading para Principiantes: Guía Completa 2026'
 description: 'Qué es un bot de trading y cómo elegirlo. Tipos de bots (DCA, grid, arbitraje), configuración, riesgos. Guía paso a paso para principiantes.'
 pubDate: '2026-03-31'
-draft: true
 category: 'algo-trading'
 ---
 
@@ -41,6 +40,8 @@ Esta guía cubre todo lo que un principiante necesita: desde elegir un bot hasta
 - Comprar ETH por $100 cada lunes
 - El precio no importa — la cantidad es fija
 
+![Bybit DCA Bot — interfaz de configuración de estrategia DCA](./assets/bybit-dca-bot.png)
+
 **Pros:**
 - ✅ Promedia el precio de entrada
 - ✅ No necesitas cronometrar el mercado
@@ -67,6 +68,8 @@ Esta guía cubre todo lo que un principiante necesita: desde elegir un bot hasta
 - Rango: $2000–$3000 (ETH)
 - Paso de grid: $100
 - El bot compra en $2000, $2100, $2200… y vende en $2900, $2800, $2700…
+
+![Bybit Grid Bot — cuadrícula de órdenes entre soporte y resistencia](./assets/bybit-grid-bot.png)
 
 **Pros:**
 - ✅ Funciona en lateral
@@ -157,7 +160,7 @@ Esta guía cubre todo lo que un principiante necesita: desde elegir un bot hasta
 **Para quién:** Traders que entienden análisis técnico.
 
 **Ejemplos:**
-- Veles Prisma Strategy
+- Veles Prisma Strategy — [revisión detallada con backtests y configuración](/es/library/veles-platform-overview/)
 - 3Commas Signal Bot
 - Bots personalizados en Pine Script
 
@@ -427,12 +430,13 @@ Esta guía cubre todo lo que un principiante necesita: desde elegir un bot hasta
 |------------|------|----------|----------|------------|
 | **Bybit** | Bots integrados | $100 | 0.1% | Principiantes |
 | **Veles** | Bots en la nube | $50 | 0.1% | Principiantes / Intermedios |
+| **Ginarea** | Constructor de bots | $0 | 0% (afiliado) | Principiantes / Avanzados |
 | **3Commas** | SaaS | $0 | $29/mes | Intermedios |
 | **Cryptohopper** | SaaS | $0 | $29/mes | Intermedios |
 | **Hummingbot** | Personalizados | $1000+ | 0% | Profesionales |
 | **HaasOnline** | Personalizados | $500+ | 0.05% | Profesionales |
 
-**Recomendación para principiantes:** Bybit o Veles (bots integrados, bajo umbral de entrada).
+**Recomendación para principiantes:** Bybit o Veles (bots integrados, bajo umbral de entrada). Para más control — [Ginarea](/es/library/ginarea-platform-overview/) (constructor con plan gratuito).
 
 ---
 
