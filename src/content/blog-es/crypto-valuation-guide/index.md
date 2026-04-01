@@ -63,10 +63,12 @@ Capitalización = Precio del Token × Suministro Circulante
 
 **Fórmula:**
 ```
-P/S = Capitalización / Ingresos Anuales
+P/S = Capitalización / Ingresos Anuales del Protocolo
 ```
 
 **Dónde obtener datos:** Token Terminal, DefiLlama
+
+⚠️ **Importante:** Para protocolos DeFi, "ingresos" = comisiones del protocolo, pero no siempre ganancias de holders de tokens. Por ejemplo, Uniswap cobra comisiones, pero fee switch puede no estar activado.
 
 **Interpretación:**
 | P/S | Valoración |
@@ -75,7 +77,7 @@ P/S = Capitalización / Ingresos Anuales
 | 5-20 | Justo |
 | > 20 | Sobrevalorado (caro) |
 
-**Ejemplo (marzo 2026):**
+**Ejemplo (datos ilustrativos):**
 | Proyecto | Ingresos (año) | Capitalización | P/S |
 |----------|----------------|----------------|-----|
 | Uniswap | $180M | $4.5B | 25x |
@@ -87,12 +89,13 @@ P/S = Capitalización / Ingresos Anuales
 **Limitaciones:**
 - No funciona para proyectos sin ingresos (L1, memecoins)
 - Ingresos ≠ beneficios (el protocolo puede ser deficitario)
+- Para algunos protocolos, los ingresos no se distribuyen a holders de tokens
 
 ---
 
 ## Método 3: Ratio P/E (Precio-Beneficios)
 
-**Para qué proyectos:** Protocolos con beneficios (Maker, Lido)
+**Para qué proyectos:** Protocolos con beneficios (Maker, algunos L2)
 
 **Fórmula:**
 ```
@@ -101,6 +104,8 @@ P/E = Capitalización / Beneficios Netos (Protocol Earnings)
 
 **Dónde obtener datos:** Token Terminal (sección "Earnings")
 
+⚠️ **Importante:** P/E para protocolos cripto es un indicador condicional. Los beneficios dependen de la tokenomics (quemas, distribución de comisiones, emisión).
+
 **Interpretación:**
 | P/E | Valoración |
 |-----|------------|
@@ -108,14 +113,14 @@ P/E = Capitalización / Beneficios Netos (Protocol Earnings)
 | 15-30 | Justo |
 | > 30 | Sobrevalorado |
 
-**Ejemplo:**
+**Ejemplo (datos ilustrativos):**
 - **Maker (MKR):** P/E = 18x → justo
-- **Lido (LDO):** P/E = 45x → caro
+- **Protocolo con ingresos estables:** P/E = 25x → sobre promedio
 
 **Limitaciones:**
-- Funciona solo para protocolos rentables
-- La mayoría de proyectos cripto son deficitarios
-- Para cripto es "Protocol Earnings", no P/E clásico (beneficios = comisiones - emisiones de tokens)
+- Funciona solo para protocolos con beneficios estables
+- Muchos proyectos cripto son deficitarios o no distribuyen beneficios
+- P/E es muy volátil en cripto
 
 ---
 
@@ -132,6 +137,8 @@ NVT = Capitalización / Volumen de Transacciones (24h, en $)
 
 **Dónde obtener datos:** Glassnode, CoinMetrics
 
+⚠️ **Importante:** NVT para redes de alto rendimiento (Solana, Sui) puede estar subestimado debido al gran volumen de transacciones (incluyendo spam, bots MEV). Compara NVT solo dentro de redes con arquitectura similar.
+
 **Interpretación:**
 | NVT | Valoración |
 |-----|------------|
@@ -139,18 +146,19 @@ NVT = Capitalización / Volumen de Transacciones (24h, en $)
 | 20-50 | Justo |
 | > 50 | Red sobrevalorada (bajas transacciones) |
 
-**Ejemplo (marzo 2026):**
+**Ejemplo (datos ilustrativos):**
 | Red | Capitalización | Volumen (24h) | NVT |
 |---------|---------------|-------------|-----|
 | Bitcoin | $1.8T | $45B | 40x |
 | Ethereum | $380B | $12B | 32x |
 | Solana | $85B | $8B | 11x |
 
-**Conclusión:** Solana es más barata por NVT (más transacciones por $ de capitalización).
+**Conclusión:** Solana es más barata por NVT, pero considera la calidad de transacciones (muchas operaciones de alta frecuencia).
 
 **Limitaciones:**
 - Volatilidad del volumen (puede ser anormalmente alto/bajo)
 - No tiene en cuenta transacciones L2 (para Ethereum)
+- Diferente calidad de transacciones en distintas redes
 
 ---
 
@@ -167,20 +175,23 @@ MVRV = Capitalización / Capitalización Realizada
 
 **Dónde obtener datos:** Glassnode, CryptoQuant
 
+⚠️ **Importante:** MVRV > 3 no siempre significa pico del mercado — en ciclos alcistas la métrica puede permanecer sobre 3 durante períodos prolongados. MVRV < 1 indica zona de acumulación, pero no garantiza un reversal inmediato.
+
 **Interpretación:**
 | MVRV | Valoración |
 |------|------------|
-| < 1 | Token infravalorado (mercado en pérdidas) |
+| < 1 | Token infravalorado (mercado en pérdidas, zona de acumulación) |
 | 1-2 | Justo |
-| > 3 | Token sobrevalorado (mercado en ganancias) |
+| > 3 | Token sobrevalorado (mercado en ganancias, corrección posible) |
 
-**Ejemplo (Bitcoin):**
-- MVRV < 1 → fondo del mercado (comprar)
-- MVRV > 3 → pico del mercado (vender)
+**Ejemplo (Bitcoin, datos históricos):**
+- MVRV < 1 → a menudo coincidía con el fondo del mercado
+- MVRV > 3 → a menudo precedía correcciones
 
 **Limitaciones:**
 - Funciona solo para Bitcoin y L1 grandes
 - Requiere datos on-chain
+- En ciclos alcistas puede permanecer > 3 por largo tiempo
 
 ---
 
@@ -271,27 +282,29 @@ Valor = 100/1.15 + 100/1.15² + ... + 100/1.15⁵ = $335M
 
 ## Práctica: Valoremos Bitcoin y Ethereum
 
-### Bitcoin (marzo 2026)
+⚠️ **Importante:** Datos ilustrativos. P/S para Bitcoin no es una métrica clásica — es la relación con las comisiones de red. Para "oro digital", P/S alto es la norma histórica en períodos de crecimiento.
+
+### Bitcoin (datos ilustrativos)
 
 | Métrica | Valor | Valoración |
 |---------|-------|------------|
 | Capitalización | $1.8T | — |
 | NVT | 40x | ✅ Justo |
 | MVRV | 2.1 | ✅ Justo |
-| P/S (vía comisiones) | ~100x | ⚠️ Caro |
+| P/S (vía comisiones) | ~100x | ⚠️ Sobre promedio histórico |
 
-**Conclusión:** Bitcoin está justamente valorado por métricas on-chain, pero caro por comisiones.
+**Conclusión:** Bitcoin está justamente valorado por métricas on-chain. P/S alto por comisiones es normal en períodos de crecimiento (alta actividad de red).
 
-### Ethereum (marzo 2026)
+### Ethereum (datos ilustrativos)
 
 | Métrica | Valor | Valoración |
 |---------|-------|------------|
 | Capitalización | $380B | — |
 | NVT | 32x | ✅ Justo |
-| P/S | 32x | ⚠️ Sobre promedio |
+| P/S (comisiones de red) | 32x | ⚠️ Sobre promedio |
 | TVL / Capitalización | 14% | ✅ Bueno |
 
-**Conclusión:** Ethereum está justamente valorado, pero P/S es más alto que competidores (Solana).
+**Conclusión:** Ethereum está justamente valorado, pero P/S es más alto que competidores (Solana). Considera que parte de las comisiones se queman (EIP-1559).
 
 ---
 
@@ -299,18 +312,20 @@ Valor = 100/1.15 + 100/1.15² + ... + 100/1.15⁵ = $335M
 
 **Tarea:** Comparar dos tipos de proyectos para inversión.
 
+⚠️ **Importante:** Datos ilustrativos. Siempre verifica métricas actuales al momento del análisis.
+
 ### L1 (Solana)
 
 | Métrica | Valor | Valoración |
 |---------|-------|------------|
 | Capitalización | $85B | Top 5 |
 | NVT | 11x | ✅ Barato |
-| P/S | N/A | Sin ingresos |
+| P/S (comisiones de red) | ~50x | ⚠️ Sobre promedio |
 | Direcciones Activas (24h) | 1.2M | ✅ Alta actividad |
 | TVL | $8B | ✅ Creciendo |
 | Desbloqueos (6 meses) | 8% | ✅ Bajos |
 
-**Conclusión:** Solana es más barata por NVT, alta actividad, pero sin ingresos.
+**Conclusión:** Solana es más barata por NVT, alta actividad, pero considera la calidad de transacciones (muchas operaciones de alta frecuencia).
 
 ### DeFi (Maker)
 
@@ -395,13 +410,15 @@ Valor = 100/1.15 + 100/1.15² + ... + 100/1.15⁵ = $335M
 
 ## Herramientas de Valoración
 
+⚠️ **Importante:** Los precios de suscripciones pueden cambiar. Verifica tarifas actuales en los sitios web de los servicios.
+
 | Herramienta | Qué Proporciona | Precio |
 |-------------|-----------------|--------|
-| **Token Terminal** | Ingresos, P/E, P/S | Gratis / $299 |
+| **Token Terminal** | Ingresos, P/E, P/S | Gratis / desde $299 |
 | **DefiLlama** | TVL, protocolos | Gratis |
-| **Glassnode** | NVT, MVRV, on-chain | Gratis / $29 |
+| **Glassnode** | NVT, MVRV, on-chain | Gratis / desde $29 |
 | **CoinGecko** | Capitalización, volumen | Gratis |
-| **CryptoQuant** | Métricas on-chain | Gratis / $29 |
+| **CryptoQuant** | Métricas on-chain | Gratis / desde $29 |
 
 ---
 
@@ -434,7 +451,7 @@ Usa **NVT** y **MVRV** para Bitcoin. NVT muestra la ratio de capitalización a v
 
 **¿Funciona P/E para memecoins?**
 
-No. P/E requiere ganancias, y los memecoins no generan ingresos. Para memecoins, verifica solo capitalización, volumen de trading y desbloqueos de tokens.
+Los memecoins clásicos sin modelo utilitario no generan ingresos — P/E no es aplicable. Sin embargo, para 2026 existen memecoins con modelos de distribución de comisiones (ej. memecoin + DeFi). Para tales proyectos, se puede calcular P/E, pero es más bien una excepción.
 
 **¿Dónde verificar desbloqueos de tokens?**
 
