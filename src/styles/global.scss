@@ -120,6 +120,66 @@ a:hover {
   outline-offset: 4px;
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   TABLES (Match content width)
+   ═══════════════════════════════════════════════════════════════ */
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-base) 0;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  table {
+    display: table;
+    overflow-x: visible;
+  }
+}
+
+thead {
+  background: var(--color-card-bg);
+  border: 2px solid var(--color-border);
+}
+
+tbody {
+  border: 2px solid var(--color-border);
+}
+
+th, td {
+  padding: var(--spacing-sm) var(--spacing-base);
+  text-align: left;
+  border: 1px solid var(--color-border);
+}
+
+th {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-primary);
+  font-weight: bold;
+}
+
+td {
+  color: var(--color-text-secondary);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HORIZONTAL RULES (Minimal visibility)
+   ═══════════════════════════════════════════════════════════════ */
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: var(--spacing-lg) 0;
+  opacity: 0.3;
+}
+
 .container {
   width: 100%;
   max-width: var(--max-width);

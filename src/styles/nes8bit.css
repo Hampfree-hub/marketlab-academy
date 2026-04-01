@@ -234,65 +234,6 @@ p {
   color: var(--nes-text-secondary);
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   TABLES (Match content width)
-   ═══════════════════════════════════════════════════════════════ */
-
-table {
-  width: 100%;
-  max-width: 100%;
-  border-collapse: collapse;
-  margin: var(--nes-space-md) 0;
-  font-size: 0.9rem;
-  overflow-x: auto;
-  display: block;
-}
-
-@media (min-width: 768px) {
-  table {
-    display: table;
-    overflow-x: visible;
-  }
-}
-
-thead {
-  background: var(--nes-bg-tertiary);
-  border: 2px solid var(--nes-border-primary);
-}
-
-tbody {
-  border: 2px solid var(--nes-border-primary);
-}
-
-th, td {
-  padding: var(--nes-space-sm) var(--nes-space-md);
-  text-align: left;
-  border: 1px solid var(--nes-border-primary);
-}
-
-th {
-  font-family: 'Press Start 2P', 'Courier New', monospace;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--nes-text-primary);
-}
-
-td {
-  color: var(--nes-text-secondary);
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   HORIZONTAL RULES (Minimal visibility)
-   ═══════════════════════════════════════════════════════════════ */
-
-hr {
-  border: none;
-  border-top: 1px solid var(--nes-border-primary);
-  margin: var(--nes-space-lg) 0;
-  opacity: 0.3;
-}
-
 a {
   color: var(--color-link);
   text-decoration: none;
