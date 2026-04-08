@@ -64,7 +64,7 @@ Not a silver bullet, but this flexible approach lets you control an open positio
 
 ## Current Configuration
 
-One of the configurations currently running on one of the accounts (stats are available in our [open trading journal](https://tradermake.money/ru/trader/Marketlab)):
+One of the configurations currently running on one of the accounts (stats are available in our [open trading journal](https://tradermake.money/trader/Marketlab)):
 
 - [With_God dynamic ADA](https://ginarea.org/bots/6330385602?tab=share)
 
