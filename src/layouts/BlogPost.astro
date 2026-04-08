@@ -506,6 +506,13 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 							link: { ru: 'https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD', en: 'https://www.bitget.com/en/referral/register?from=referral&clacCode=23EHR2VD', es: 'https://www.bitget.com/es/referral/register?from=referral&clacCode=23EHR2VD' },
 							colors: { bgStart: '#0B1E1A', bgEnd: '#051410', text: '#FFFFFF', ctaBg: '#00C9A7', ctaText: '#000000', border: '#14D0BB' }
 						},
+						'bitmex-algo': {
+							title: { ru: 'BitMEX: Криптобиржа', en: 'BitMEX: Crypto Exchange', es: 'BitMEX: Exchange Crypto' },
+							subtitle: { ru: 'Фьючерсы, низкие комиссии, высокая ликвидность', en: 'Futures, low fees, high liquidity', es: 'Futuros, bajas comisiones, alta liquidez' },
+							cta: { ru: 'Регистрация', en: 'Sign up', es: 'Registrarse' },
+							link: 'https://www.bitmex.com/app/register/LcYXS3',
+							colors: { bgStart: '#0D1117', bgEnd: '#161B22', text: '#FFFFFF', ctaBg: '#125BFF', ctaText: '#FFFFFF', border: '#125BFF' }
+						},
 						'default-academy': {
 							title: { ru: 'MarketLab Academy', en: 'MarketLab Academy', es: 'MarketLab Academy' },
 							subtitle: { ru: 'Автоматизация, сигналы, аналитика', en: 'Automation, signals, analytics', es: 'Automatización, señales, analítica' },
@@ -519,9 +526,9 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 					let bannerId = 'bybit-general'; // fallback
 
 					if (category === 'algo-trading') {
-						// Исключаем статью Ginarea (там Bybit), Veles оставляем с баннером Veles
+						// Ginarea-статьи → BitMEX (упоминают BitMEX), Veles → Veles
 						const isGinarea = slug.includes('ginarea');
-						bannerId = isGinarea ? 'bybit-general' : 'veles-algo';
+						bannerId = isGinarea ? 'bitmex-algo' : 'veles-algo';
 					} else if (category === 'fundamental-analysis' && lang === 'ru') {
 						bannerId = 'finbazar-fundamental'; // Только для RU!
 					} else if (category === 'fundamental-analysis' && (lang === 'en' || lang === 'es')) {
