@@ -575,7 +575,7 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 				}
 
 				const targetH2 = h2s[h2Index];
-				const bannerData = getBannerForCategory(category, lang);
+				const bannerData = getBannerForCategory(category, lang, slug);
 				console.log('[DEBUG] bannerData:', bannerData);
 				
 				// Build UTM-tagged link
