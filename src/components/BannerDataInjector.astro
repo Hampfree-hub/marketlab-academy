@@ -12,5 +12,6 @@ const bannerDataJson = JSON.stringify(BANNER_TRANSLATIONS, null, 0);
 
 <script is:inline define:vars={{ bannerDataJson }}>
   // Данные баннеров — автогенерированы из ad-banners.ts (НЕ редактировать вручную!)
-  const BANNER_DATA = JSON.parse(bannerDataJson);
+  // ВАЖНО: объявляем в глобальной области (без var/let/const), чтобы BlogPost.astro мог читать
+  window.BANNER_DATA = JSON.parse(bannerDataJson);
 </script>
