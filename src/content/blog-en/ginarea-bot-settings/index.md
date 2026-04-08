@@ -1,208 +1,91 @@
 ---
-title: 'Ginarea: Detailed Trading Bot Setup Guide'
-description: 'Step-by-step bot setup in Ginarea: Default, Auto Grid, DCA, Indicator Grid. Practical guide with examples and screenshots.'
-pubDate: '2026-04-01'
+title: 'Ginarea: Detailed Trading Bot Setup'
+description: 'Our experience setting up trading bots on Ginarea: Dynamic, P&L trailing, asset selection, and specific configurations.'
+pubDate: '2026-04-08'
 draft: true
 category: 'algo-trading'
 ---
 
-**Ginarea** is a platform for creating trading bots with a strategy builder. This article provides detailed setup instructions for each bot type with examples and screenshots.
+> ⚠️ **Disclaimer:** This review and configurations are not investment advice or a guide to action. Cryptocurrency trading involves the risk of capital loss. Always refer to the official platform documentation: [Ginarea Documentation](https://ginareas-organization.gitbook.io/ginarea.org/nastroiki-botov).
 
-**Related articles:**
-- [Ginarea: Platform Overview](/en/library/ginarea-platform-overview/) — features and pricing
-- [Trading Bots for Beginners](/en/library/trading-bots-guide-2026/) — complete guide
+**Ginarea** — a platform for creating trading bots with a visual strategy constructor. This article shares our hands-on experience with the platform and specific Dynamic bot configurations. For a general overview of the platform, check out the [Ginarea platform overview](/en/library/ginarea-platform-overview/), and for algo trading basics — the [trading bots guide](/en/library/trading-bots-guide-2026/). Metrics for asset evaluation, mentioned in the context of coin selection, are covered in the [introduction to fundamental analysis](/en/library/fundamental-analysis-intro/).
 
----
+## Our Journey with the Platform
 
-## Preparation: Connecting an Exchange
+We first encountered Ginarea a few years ago, but returned to it more seriously in 2026. The test deposit was modest — around **$300 on a Bybit sub-account** (after [a liquidation on one of the accounts](https://t.me/hampfree_market_lab/26)). Later, as we scaled up the direction, we added another ~$100.
 
-⚠️ **Important:** Before setting up a bot, you need to connect API keys.
+Testing on BitMEX ran on an even smaller deposit — **$50–60**.
 
-1. Register on an exchange (Bybit, OKX, KuCoin)
-2. Create API keys in account settings
-3. In Ginarea, go to "Exchanges" → "Add Exchange"
-4. Paste API Key and Secret Key
-5. Test the connection
+To refresh our skills and ease into trading on each exchange, we started with the minimum number of assets and the minimum order size. Only after calibrating the settings did we add new assets, closely monitoring the initial margin level.
 
----
+## Starting Asset Set
 
-## Bot Types in Ginarea
+This is not a general recommendation — just what we started with ourselves. Before launching a bot on any asset, it's advisable to study its characteristics and review at least a year of price chart data.
 
-**Available types:**
-1. **Default** — basic bot for simple trading
-2. **Auto Grid** — automatic grid with price adaptation
-3. **DCA** — dollar-cost averaging
-4. **Indicator Grid** — grid + indicators for signal filtering
-5. **Dynamic** — dynamic parameter adjustment
+### Bybit
 
----
+| Asset | Notes |
+|-------|-------|
+| **CRO/USDT** | Base asset for calibration |
+| **CRV/USDT** | Volatile, shows grid bot mechanics well |
+| **HBAR/USDT** | Stable, predictable behavior |
+| **1000PEPE/USDT** | Caused the most trouble — memecoin with sharp swings |
+| **TIA/USDT** | In a slight drawdown at the time of writing |
+| **UMA/USDT** | Least expected performance, went into drawdown — likely due to initial calibration. Chart evened out later |
+| **SOL/USDT** | Added as one of the last, when we [shared market updates](https://t.me/hampfree_market_lab/38) |
 
-## 1. Default Bot: Basic Setup
+### BitMEX
 
-**For whom:** Beginners who want to try automation.
+| Asset | Notes |
+|-------|-------|
+| **ADA/USDT** | Calm asset, good for learning |
+| **SUI/USDT** | Promising L1, interesting dynamics |
+| **XRP/USDT** | Classic, predictable behavior |
+| **SOL/USDT** | Same as the Bybit account |
+| **LTC/USDT** | Interesting to study behavior specifically in 2026 |
+| **ETH/USDT** | Favorite of the BitMEX asset pool. Thanks to more stable and balanced [metrics](/en/library/fundamental-analysis-intro/), the profit chart is smoother — at the time of writing, the ETH configuration has already locked in decent profit over 5 times |
 
-**Setup steps:**
+Bot types, mechanics, and configuration details are thoroughly described in the [official Ginarea documentation](https://ginareas-organization.gitbook.io/ginarea.org/nastroiki-botov) — we recommend studying it before launching. Below is our experience and observations on Dynamic, which is currently running.
 
-1. Go to "Bots" → "Create Bot" → "Default"
-2. Select exchange and trading pair (e.g., BTC/USDT)
-3. Configure parameters:
-   - **Order amount:** minimum amount on exchange (e.g., $10)
-   - **Direction:** Long / Short / Neutral
-   - **Stop-loss:** % loss for automatic closure
-   - **Take-profit:** % profit for fixation
+## P&L Trailing: A Critical Setting
 
-4. Start the bot and monitor statistics
+We strongly recommend carefully reviewing the [P&L trailing settings](https://ginareas-organization.gitbook.io/ginarea.org/nastroiki-botov/nastroiki-p-and-l-treilinga) in the official docs first.
 
----
+**Our configuration for the current market:**
 
-## 2. Auto Grid: Automatic Grid
+- **Distance:** 4%
+- **Trailing %:** 60%
 
-**For whom:** Traders who trade in sideways.
+This means that when the price moves more than 4% away — **60% of the profit** from closed orders within the position is used to cover hanging orders outside the range.
 
-**Setup steps:**
+Not a silver bullet, but this flexible approach lets you control an open position quickly and conveniently. In critical moments we switched to **1%/90%** — it bailed us out of deep drawdown a couple of times.
 
-1. Go to "Bots" → "Create Bot" → "Auto Grid"
-2. Select exchange and pair
-3. Configure parameters:
-   - **Price range:** min and max price for grid
-   - **Number of levels:** how many orders in grid (5-20)
-   - **Amount per level:** amount of each order
-   - **Auto-adjustment:** on/off (adaptation to price movement)
+![P&L trailing settings in Ginarea with 4% distance and 60% trailing](./assets/P&L-tracking-settings.png)
 
-4. Start the bot
+## Current Configuration
 
----
+One of the configurations currently running on one of the accounts (stats are available in our [open trading journal](https://tradermake.money/ru/trader/Marketlab)):
 
-## 3. DCA: Dollar-Cost Averaging
+- [With_God dynamic ADA](https://ginarea.org/bots/6330385602?tab=share)
 
-**For whom:** Conservative investors for long-term accumulation.
+![Public statistics for With_God dynamic ETH bot on Ginarea](./assets/with-god-dynamic-eth.png)
 
-**Setup steps:**
+> 💡 **Tip:** Study other people's public bot settings — it's a great way to understand the logic and find ideas for your own bots.
 
-1. Go to "Bots" → "Create Bot" → "DCA"
-2. Select exchange and pair
-3. Configure parameters:
-   - **Purchase amount:** fixed amount (e.g., $50)
-   - **Interval:** how often to buy (1 hour, 4 hours, 1 day, 1 week)
-   - **Direction:** Long / Short
-   - **Stop condition:** when to stop purchases
+## Key Observation
 
-4. Start the bot
+If you start trading 10 assets simultaneously — margin gets spread too thin. Better to start with 1–3 assets, then gradually add more.
 
----
+![Bot order and trade statistics in Ginarea](./assets/bot-statistics-orders.png)
 
-## 4. Indicator Grid: Grid + Indicators
+## Takeaways
 
-**For whom:** Experienced traders who use technical analysis.
+Here's what we learned from working with Ginarea:
 
-**Setup steps:**
+1. **Start small.** Minimum deposit, 1–2 assets, minimum orders. Only scale up after you understand how the bot behaves.
+2. **P&L trailing saves you.** The 4%/60% config works well in the current market, and 1%/90% has already bailed us out in critical moments.
+3. **Watch your margin.** Each new asset adds load to the initial margin. Add them gradually.
+4. **Docs are your foundation.** Ginarea keeps updating, and the official instructions have details that aren't obvious at first glance.
+5. **Analytics matter.** Check bot stats regularly — don't just launch and forget. Drawdown, number of trades, average profit per trade — all of this helps you adjust settings in time.
 
-1. Go to "Bots" → "Create Bot" → "Indicator Grid"
-2. Select exchange and pair
-3. Configure parameters:
-   - **Price range:** min and max price
-   - **Number of levels:** 5-20
-   - **Indicator:** RSI, MACD, Bollinger Bands
-   - **Entry condition:** when to open positions (e.g., RSI < 30)
-   - **Exit condition:** when to close positions (e.g., RSI > 70)
-
-4. Start the bot
-
----
-
-## 5. Dynamic: Dynamic Adjustment
-
-**For whom:** Advanced users for adaptation to market conditions.
-
-**Setup steps:**
-
-1. Go to "Bots" → "Create Bot" → "Dynamic"
-2. Select exchange and pair
-3. Configure parameters:
-   - **Base strategy:** Default / Grid / DCA
-   - **Adaptation parameters:** how to change parameters with price movement
-   - **Recalculation frequency:** how often to recalculate parameters
-
-4. Start the bot
-
----
-
-## Analytics and Statistics
-
-**Where to view:**
-
-1. Go to "Analytics" section
-2. Select bot from list
-3. View metrics:
-   - **Total profit:** % and $
-   - **Number of trades:** total and per period
-   - **Average check:** average profit/loss per trade
-   - **Drawdown:** maximum decline from peak
-   - **Runtime:** how long bot has been active
-
----
-
-## Common Setup Mistakes
-
-### Mistake 1: Too Wide Grid Range
-
-**Problem:** Grid doesn't trigger, price doesn't reach levels.
-
-**Solution:** Reduce range, use Auto Grid with auto-adjustment.
-
----
-
-### Mistake 2: Too Small Order Amount
-
-**Problem:** Exchange rejects orders (below minimum).
-
-**Solution:** Check minimum order amount on exchange, adjust bot accordingly.
-
----
-
-### Mistake 3: No Stop-Loss
-
-**Problem:** Strong movement against bot — large losses.
-
-**Solution:** Always set stop-loss (5-10% of deposit).
-
----
-
-## Summary
-
-**Key takeaways:**
-1. Default — for beginners (simple setup)
-2. Auto Grid — for sideways (automatic adaptation)
-3. DCA — for accumulation (averaging long-term)
-4. Indicator Grid — for experienced (grid + indicators)
-5. Dynamic — for advanced (dynamic adjustment)
-
-**Next step:** [Trading Bots for Beginners](/en/library/trading-bots-guide-2026/) — complete guide to bot types and strategies.
-
----
-
-## FAQ
-
-**How much does Ginarea cost?**
-
-Ginarea is free to use. The platform earns through affiliate programs (exchange commissions).
-
-**Which exchanges are supported?**
-
-OKX, Bybit, BitMEX, KuCoin. Full list available in "Exchanges" section after connection.
-
-**Is programming required to set up a bot?**
-
-No. Ginarea is a visual builder, setup through interface without code.
-
-**Can I run multiple bots simultaneously?**
-
-Yes. Number of bots is unlimited. Recommended to start with 1-2 bots for testing.
-
-**How to withdraw bot profits?**
-
-Profits remain on the exchange. Withdraw through exchange interface ("Wallet" → "Withdraw").
-
-**What to do if the bot is unprofitable?**
-
-Check settings: grid range, order amount, stop-loss. If necessary, stop the bot and adjust parameters.
+**Further reading:** [Trading Bots for Beginners](/en/library/trading-bots-guide-2026/) — a complete guide to bot types and strategies.
