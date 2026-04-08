@@ -283,12 +283,12 @@ export const BANNER_TRANSLATIONS: Record<string, {
     cta: { ru: 'Регистрация', en: 'Sign up', es: 'Registrarse' },
     link: 'https://www.bitmex.com/app/register/LcYXS3',
     colors: {
-      bgStart: '#0D1117',     // Тёмный серо-синий (близко к чёрному)
-      bgEnd: '#161B22',       // Тёмный угольно-синий
+      bgStart: '#1A0A0A',     // Тёмный с красным оттенком
+      bgEnd: '#0D0606',       // Почти чёрный с тёплым тоном
       text: '#FFFFFF',        // Белый текст
-      ctaBg: '#125BFF',       // Фирменный синий BitMEX
-      ctaText: '#FFFFFF',     // Белый текст на синем
-      border: '#125BFF',      // Синяя рамка (бренд BitMEX)
+      ctaBg: '#FF0201',       // Фирменный красный BitMEX
+      ctaText: '#FFFFFF',     // Белый текст на красном
+      border: '#FF0201',      // Красная рамка (бренд BitMEX)
     }
   },
 

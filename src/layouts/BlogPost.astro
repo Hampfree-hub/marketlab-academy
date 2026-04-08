@@ -7,6 +7,7 @@ import ScrollTop from '../components/ScrollTop.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import Banner from '../components/Banner.astro';
+import BannerDataInjector from '../components/BannerDataInjector.astro';
 import FAQ from '../components/FAQ.astro';
 import Disclaimer from '../components/Disclaimer.astro';
 import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
@@ -203,6 +204,7 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 
 			<ScrollTop />
 		</main>
+		<BannerDataInjector />
 		<Footer />
 
 		<script is:inline>
@@ -467,61 +469,8 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 
 				console.log('[DEBUG] category:', category, 'lang:', lang, 'slug:', slug);
 
-				// Banner data by category (responsive, localized) - imported from ad-banners.ts
+				// Banner data from BannerDataInjector (единый источник — ad-banners.ts)
 				function getBannerForCategory(category, lang, slug) {
-					// Словарь переводов для баннеров (копия из ad-banners.ts для client-side use)
-					const bannerTranslations = {
-						'veles-algo': {
-							title: { ru: 'Veles: Торговые боты', en: 'Veles: Trading Bots', es: 'Veles: Bots de Trading' },
-							subtitle: { ru: 'Автоматизируй торговлю на криптобиржах', en: 'Automate trading on crypto exchanges', es: 'Automatiza el trading en criptobolsas' },
-							cta: { ru: 'Попробовать', en: 'Try now', es: 'Probar' },
-							link: 'https://veles.finance/invite/washmallay',
-							colors: { bgStart: '#2D1B69', bgEnd: '#1A0F3D', text: '#E5E5E5', ctaBg: '#F97316', ctaText: '#FFFFFF', border: '#8B5CF6' }
-						},
-						'bybit-general': {
-							title: { ru: 'Bybit: Криптобиржа', en: 'Bybit: Crypto Exchange', es: 'Bybit: Exchange Crypto' },
-							subtitle: { ru: 'Спот, фьючерсы, низкие комиссии', en: 'Spot, futures, low fees', es: 'Spot, futuros, bajas comisiones' },
-							cta: { ru: 'Регистрация', en: 'Sign up', es: 'Registrarse' },
-							link: { ru: 'https://www.bybit.com/ru-RU/invite?ref=PWMD24', en: 'https://www.bybit.com/en/invite?ref=PWMD24', es: 'https://www.bybit.com/es/invite?ref=PWMD24' },
-							colors: { bgStart: '#1A1D26', bgEnd: '#0D0E12', text: '#FFFFFF', ctaBg: '#F7A600', ctaText: '#000000', border: '#F7A600' }
-						},
-						'finbazar-fundamental': {
-							title: { ru: 'FinBazar: On-Chain', en: 'FinBazar: On-Chain', es: 'FinBazar: On-Chain' },
-							subtitle: { ru: 'Аналитика и сигналы для трейдеров', en: 'Analytics and signals for traders', es: 'Analítica y señales para traders' },
-							cta: { ru: 'Инструменты', en: 'Tools', es: 'Herramientas' },
-							link: 'https://finbazar.ru/profile/Hampfree/?ref=9483974260',
-							colors: { bgStart: '#064E3B', bgEnd: '#022C22', text: '#E5E5E5', ctaBg: '#10B981', ctaText: '#FFFFFF', border: '#34D399' }
-						},
-						'bingx-general': {
-							title: { ru: 'BingX: Криптобиржа', en: 'BingX: Crypto Exchange', es: 'BingX: Exchange Crypto' },
-							subtitle: { ru: 'Социальный трейдинг, низкие комиссии', en: 'Social trading, low fees', es: 'Trading social, bajas comisiones' },
-							cta: { ru: 'Начать', en: 'Get started', es: 'Comenzar' },
-							link: 'https://bingxdao.com/invite/CUBDBG/',
-							colors: { bgStart: '#0A0E27', bgEnd: '#1A237E', text: '#FFFFFF', ctaBg: '#00D4FF', ctaText: '#0A0E27', border: '#00B4D8' }
-						},
-						'bitget-general': {
-							title: { ru: 'Bitget: Криптобиржа', en: 'Bitget: Crypto Exchange', es: 'Bitget: Exchange Crypto' },
-							subtitle: { ru: 'Фьючерсы, спот, копи-трейдинг', en: 'Futures, spot, copy trading', es: 'Futuros, spot, copy trading' },
-							cta: { ru: 'Регистрация', en: 'Sign up', es: 'Registrarse' },
-							link: { ru: 'https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD', en: 'https://www.bitget.com/en/referral/register?from=referral&clacCode=23EHR2VD', es: 'https://www.bitget.com/es/referral/register?from=referral&clacCode=23EHR2VD' },
-							colors: { bgStart: '#0B1E1A', bgEnd: '#051410', text: '#FFFFFF', ctaBg: '#00C9A7', ctaText: '#000000', border: '#14D0BB' }
-						},
-						'bitmex-algo': {
-							title: { ru: 'BitMEX: Криптобиржа', en: 'BitMEX: Crypto Exchange', es: 'BitMEX: Exchange Crypto' },
-							subtitle: { ru: 'Фьючерсы, низкие комиссии, высокая ликвидность', en: 'Futures, low fees, high liquidity', es: 'Futuros, bajas comisiones, alta liquidez' },
-							cta: { ru: 'Регистрация', en: 'Sign up', es: 'Registrarse' },
-							link: 'https://www.bitmex.com/app/register/LcYXS3',
-							colors: { bgStart: '#0D1117', bgEnd: '#161B22', text: '#FFFFFF', ctaBg: '#125BFF', ctaText: '#FFFFFF', border: '#125BFF' }
-						},
-						'default-academy': {
-							title: { ru: 'MarketLab Academy', en: 'MarketLab Academy', es: 'MarketLab Academy' },
-							subtitle: { ru: 'Автоматизация, сигналы, аналитика', en: 'Automation, signals, analytics', es: 'Automatización, señales, analítica' },
-							cta: { ru: 'Библиотека', en: 'Library', es: 'Biblioteca' },
-							link: '/{lang}/library/',
-							colors: { bgStart: '#2D3748', bgEnd: '#1A202C', text: '#E5E5E5', ctaBg: '#00D800', ctaText: '#1A202C', border: '#3CBCFC' }
-						}
-					};
-
 					// Логика выбора баннера по категории и языку с балансом
 					let bannerId = 'bybit-general'; // fallback
 
@@ -548,7 +497,11 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 						bannerId = 'bitget-general';
 					}
 
-					const banner = bannerTranslations[bannerId];
+					const banner = BANNER_DATA[bannerId];
+					if (!banner) {
+						console.error('[BANNER] Banner ID not found:', bannerId);
+						return null;
+					}
 					const link = typeof banner.link === 'string' ? banner.link : (banner.link[lang] || banner.link.ru);
 
 					return {
@@ -577,6 +530,10 @@ const breadcrumbItems: Array<{ label: string; href?: string }> = customBreadcrum
 				const targetH2 = h2s[h2Index];
 				const bannerData = getBannerForCategory(category, lang, slug);
 				console.log('[DEBUG] bannerData:', bannerData);
+				if (!bannerData) {
+					console.log('[DEBUG] No banner data available');
+					return;
+				}
 				
 				// Build UTM-tagged link
 				const utmParams = `?utm_source=marketlab-blog&utm_medium=referral-banner&utm_campaign=${bannerData.id}&utm_content=${slug}&utm_term=${category}`;
