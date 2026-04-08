@@ -85,6 +85,6 @@ Here's what we learned from working with Ginarea:
 2. **P&L trailing saves you.** The 4%/60% config works well in the current market, and 1%/90% has already bailed us out in critical moments.
 3. **Watch your margin.** Each new asset adds load to the initial margin. Add them gradually.
 4. **Docs are your foundation.** Ginarea keeps updating, and the official instructions have details that aren't obvious at first glance.
-5. **Analytics matter.** Check bot stats regularly — don't just launch and forget. Drawdown, number of trades, average profit per trade — all of this helps you adjust settings in time.
+5. **Analytics matter.** Check bot stats regularly — launched doesn't mean forgotten. Drawdown, number of trades, average profit per trade — all of this helps you adjust settings in time.
 
 **Further reading:** [Trading Bots for Beginners](/en/library/trading-bots-guide-2026/) — a complete guide to bot types and strategies.
