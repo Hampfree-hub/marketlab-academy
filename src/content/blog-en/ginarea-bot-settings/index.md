@@ -2,7 +2,6 @@
 title: 'Ginarea: Detailed Trading Bot Setup'
 description: 'Our experience setting up trading bots on Ginarea: Dynamic, P&L trailing, asset selection, and specific configurations.'
 pubDate: '2026-04-08'
-draft: true
 category: 'algo-trading'
 ---
 
@@ -60,7 +59,7 @@ This means that when the price moves more than 4% away — **60% of the profit**
 
 Not a silver bullet, but this flexible approach lets you control an open position quickly and conveniently. In critical moments we switched to **1%/90%** — it bailed us out of deep drawdown a couple of times.
 
-![P&L trailing settings in Ginarea with 4% distance and 60% trailing](./assets/P&L-tracking-settings.png)
+![P&L trailing settings in Ginarea with 4% distance and 60% trailing](./assets/pnl-tracking-settings.png)
 
 ## Current Configuration
 
