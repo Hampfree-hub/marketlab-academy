@@ -36,6 +36,7 @@ export const REFERRAL_LINKS = {
   bingx: 'https://bingxdao.com/invite/CUBDBG/',
   veles: 'https://veles.finance/invite/washmallay',
   finbazar: 'https://finbazar.ru/profile/Hampfree/?ref=9483974260',
+  bitmex: 'https://www.bitmex.com/app/register/LcYXS3',
 };
 
 export function getReferralLink(platform: keyof typeof REFERRAL_LINKS, lang: string = 'ru'): string {
@@ -274,6 +275,23 @@ export const BANNER_TRANSLATIONS: Record<string, {
     link: { ru: 'https://www.bitget.com/ru/referral/register?from=referral&clacCode=23EHR2VD', en: 'https://www.bitget.com/en/referral/register?from=referral&clacCode=23EHR2VD', es: 'https://www.bitget.com/es/referral/register?from=referral&clacCode=23EHR2VD' },
     colors: { bgStart: '#0B1E1A', bgEnd: '#051410', text: '#FFFFFF', ctaBg: '#00C9A7', ctaText: '#000000', border: '#14D0BB' }
   },
+
+  // BitMEX — для Ginarea-статей (фьючерсы, мультибиржа)
+  'bitmex-algo': {
+    title: { ru: 'BitMEX: Криптобиржа', en: 'BitMEX: Crypto Exchange', es: 'BitMEX: Exchange Crypto' },
+    subtitle: { ru: 'Фьючерсы, низкие комиссии, высокая ликвидность', en: 'Futures, low fees, high liquidity', es: 'Futuros, bajas comisiones, alta liquidez' },
+    cta: { ru: 'Регистрация', en: 'Sign up', es: 'Registrarse' },
+    link: 'https://www.bitmex.com/app/register/LcYXS3',
+    colors: {
+      bgStart: '#0D1117',     // Тёмный серо-синий (близко к чёрному)
+      bgEnd: '#161B22',       // Тёмный угольно-синий
+      text: '#FFFFFF',        // Белый текст
+      ctaBg: '#125BFF',       // Фирменный синий BitMEX
+      ctaText: '#FFFFFF',     // Белый текст на синем
+      border: '#125BFF',      // Синяя рамка (бренд BitMEX)
+    }
+  },
+
   'default-academy': {
     title: { ru: 'MarketLab Academy', en: 'MarketLab Academy', es: 'MarketLab Academy' },
     subtitle: { ru: 'Автоматизация, сигналы, аналитика', en: 'Automation, signals, analytics', es: 'Automatización, señales, analítica' },
@@ -292,9 +310,9 @@ export function getBannerForArticle(category: string, lang: string, slug: string
   let bannerId = 'bybit-general'; // fallback
 
   if (category === 'algo-trading') {
-    // Исключаем статью Ginarea (там Bybit), Veles оставляем с баннером Veles
+    // Ginarea-статьи → BitMEX (они упоминают BitMEX как одну из бирж), Veles → Veles
     const isGinarea = slug.includes('ginarea');
-    bannerId = isGinarea ? 'bybit-general' : 'veles-algo';
+    bannerId = isGinarea ? 'bitmex-algo' : 'veles-algo';
   } else if (category === 'fundamental-analysis' && lang === 'ru') {
     bannerId = 'finbazar-fundamental'; // Только для RU!
   } else if (category === 'fundamental-analysis' && (lang === 'en' || lang === 'es')) {
@@ -320,9 +338,11 @@ export function getBannerForArticle(category: string, lang: string, slug: string
     return getBannerForArticle('algo-trading', lang, slug); // fallback к algo-trading
   }
 
-  const link = typeof banner.link === 'string'
-    ? banner.link
-    : (banner.link[lang as 'ru' | 'en' | 'es'] || banner.link.ru);
+  const link = banner.link
+    ? (typeof banner.link === 'string'
+      ? banner.link
+      : (banner.link[lang as 'ru' | 'en' | 'es'] || banner.link.ru))
+    : '#';
 
   return {
     id: bannerId,
