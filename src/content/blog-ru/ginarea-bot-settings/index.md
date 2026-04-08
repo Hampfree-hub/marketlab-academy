@@ -64,11 +64,11 @@ category: 'algo-trading'
 
 ## Текущие настройки
 
+![Публичная статистика бота With_God dynamic ETH на платформе Ginarea](./assets/with-god-dynamic-eth.png)
+
 Одна из конфигураций, которая работает в данный момент на одном из аккаунтов (статистика есть в [нашем открытом дневнике](https://tradermake.money/ru/trader/Marketlab)):
 
 - [With_God dynamic ADA](https://ginarea.org/bots/6330385602?tab=share)
-
-![Публичная статистика бота With_God dynamic ETH на платформе Ginarea](./assets/with-god-dynamic-eth.png)
 
 > 💡 **Совет:** Изучите чужие публичные настройки — это отличный способ понять логику работы и найти идеи для своих ботов.
 

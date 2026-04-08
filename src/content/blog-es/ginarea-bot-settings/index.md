@@ -64,11 +64,11 @@ No es una solución mágica, pero este enfoque flexible permite controlar una po
 
 ## Configuración Actual
 
+![Estadísticas públicas del bot With_God dynamic ETH en Ginarea](./assets/with-god-dynamic-eth.png)
+
 Una de las configuraciones que funciona actualmente en una de las cuentas (las estadísticas están en nuestro [diario de trading abierto](https://tradermake.money/es/trader/Marketlab)):
 
 - [With_God dynamic ADA](https://ginarea.org/bots/6330385602?tab=share)
-
-![Estadísticas públicas del bot With_God dynamic ETH en Ginarea](./assets/with-god-dynamic-eth.png)
 
 > 💡 **Consejo:** Estudiar configuraciones públicas de otros bots es una excelente forma de entender la lógica y encontrar ideas para los propios.
 
