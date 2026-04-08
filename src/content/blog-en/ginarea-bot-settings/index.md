@@ -12,7 +12,7 @@ category: 'algo-trading'
 
 ## Our Journey with the Platform
 
-We first encountered Ginarea a few years ago, but returned to it more seriously in 2026. The test deposit was modest — around **$300 on a Bybit sub-account** (after [a liquidation on one of the accounts](https://t.me/hampfree_market_lab/26)). Later, as we scaled up the direction, we added another ~$100.
+We first encountered Ginarea a few years ago, but returned to it more seriously in 2026. The test deposit was modest — around **$300 on a Bybit sub-account** (after [a liquidation on one of the accounts](https://t.me/hampfree_market_lab_global/21)). Later, as we scaled up the direction, we added another ~$100.
 
 Testing on BitMEX ran on an even smaller deposit — **$50–60**.
 
@@ -32,7 +32,7 @@ This is not a general recommendation — just what we started with ourselves. Be
 | **1000PEPE/USDT** | Caused the most trouble — memecoin with sharp swings |
 | **TIA/USDT** | In a slight drawdown at the time of writing |
 | **UMA/USDT** | Least expected performance, went into drawdown — likely due to initial calibration. Chart evened out later |
-| **SOL/USDT** | Added as one of the last, when we [shared market updates](https://t.me/hampfree_market_lab/38) |
+| **SOL/USDT** | Added as one of the last, when we [shared market updates](https://t.me/hampfree_market_lab_global/33) |
 
 ### BitMEX
 

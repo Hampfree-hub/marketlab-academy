@@ -12,7 +12,7 @@ category: 'algo-trading'
 
 ## Nuestra Experiencia con la Plataforma
 
-Conocimos Ginarea hace unos años, pero volvimos a ella de forma más seria en 2026. El depósito de prueba fue modesto — unos **$300 en una subcuenta de Bybit** (tras [una liquidación en una de las cuentas](https://t.me/hampfree_market_lab/26)). Más tarde, al escalar la dirección, añadimos otros ~$100.
+Conocimos Ginarea hace unos años, pero volvimos a ella de forma más seria en 2026. El depósito de prueba fue modesto — unos **$300 en una subcuenta de Bybit** (tras [una liquidación en una de las cuentas](https://t.me/hampfree_market_lab_global/21)). Más tarde, al escalar la dirección, añadimos otros ~$100.
 
 Las pruebas en BitMEX se hicieron con un depósito aún menor — **$50–60**.
 
@@ -32,7 +32,7 @@ Esto no es una recomendación general — simplemente por lo que empezamos nosot
 | **1000PEPE/USDT** | Causó más problemas — memecoin con oscilaciones bruscas |
 | **TIA/USDT** | En ligero drawdown al momento de escribir |
 | **UMA/USDT** | Rendimiento menos esperado, entró en drawdown — probablemente por calibración inicial. El gráfico se estabilizó después |
-| **SOL/USDT** | Añadido de los últimos, cuando [compartimos actualizaciones del mercado](https://t.me/hampfree_market_lab/38) |
+| **SOL/USDT** | Añadido de los últimos, cuando [compartimos actualizaciones del mercado](https://t.me/hampfree_market_lab_global/33) |
 
 ### BitMEX
 
