@@ -89,7 +89,7 @@ category: 'algo-trading'
 - **Рекомендуется:** TOP-20 по капитализации (SOL, BNB, XRP, ADA и т.д.)
 - **Избегать:** Монеты с объёмом < $1 млн/сутки
 
-#.# Бэктесты ELDER 2.0
+## Бэктесты ELDER 2.0
 
 ![Годовой бэктест ELDER 2.0 BB SPOT LONG INJ](./assets/inj-elder-strategy.png)
 
