@@ -67,7 +67,7 @@ category: 'algo-trading'
 
 Одна из конфигураций, которая работает в данный момент на одном из аккаунтов (статистика есть в [нашем открытом дневнике](https://tradermake.money/ru/trader/Marketlab)):
 
-- [With_God dynamic ADA](https://ginarea.org/bots/6330385602?tab=share)
+- [With_God dynamic ADA](https://ginarea.org/bots/6330385602?tab=share) *(ред. от 17.04)*
 
 > 💡 **Совет:** Изучите чужие публичные настройки — это отличный способ понять логику работы и найти идеи для своих ботов.
 
